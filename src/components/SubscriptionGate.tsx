@@ -1,62 +1,72 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { Lock } from "lucide-react";
 
-const STORAGE_KEY = "huntscout-free-preview";
-
 export function SubscriptionGate({ children }: { children: React.ReactNode }) {
-  const [dismissed, setDismissed] = useState(true);
+  const { data: session, status } = useSession();
 
-  useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    setDismissed(stored === "true");
-  }, []);
-
-  function handleDismiss() {
-    localStorage.setItem(STORAGE_KEY, "true");
-    setDismissed(true);
-  }
-
-  if (dismissed) {
-    return <>{children}</>;
-  }
-
-  return (
-    <div className="relative">
-      {/* Blurred content preview */}
-      <div className="blur-sm pointer-events-none select-none" aria-hidden="true">
-        {children}
+  if (status === "loading") {
+    return (
+      <div className="flex items-center justify-center min-h-[200px]">
+        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-amber-500" />
       </div>
+    );
+  }
 
-      {/* Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center bg-foreground/40 backdrop-blur-sm rounded-xl">
-        <div className="bg-card rounded-2xl shadow-2xl p-8 sm:p-10 max-w-md mx-4 text-center">
-          <div className="mx-auto w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-5">
-            <Lock className="w-7 h-7 text-gold" />
+  const isPro = (session?.user as Record<string, unknown>)?.isPro;
+
+  if (!session) {
+    return (
+      <div className="relative">
+        <div className="pointer-events-none select-none blur-sm opacity-50">
+          {children}
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center bg-background/60 backdrop-blur-sm rounded-2xl">
+          <div className="text-center px-6 py-8">
+            <Lock className="w-8 h-8 mx-auto mb-3 text-amber-500" />
+            <h3 className="text-lg font-bold mb-2">Sign In Required</h3>
+            <p className="text-sm text-muted-foreground mb-4 max-w-xs">
+              Sign in and subscribe to HuntScout Pro to access this data.
+            </p>
+            <Link
+              href="/signin"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
+            >
+              Sign In
+            </Link>
           </div>
-          <h3 className="text-xl font-bold text-foreground mb-2">
-            Unlock Full Access
-          </h3>
-          <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
-            Get draw odds, harvest data, and point analysis for every hunt unit
-            across all 50 states with a HuntScout Pro subscription.
-          </p>
-          <Link
-            href="/pricing"
-            className="inline-flex items-center justify-center w-full px-6 py-3 rounded-lg text-sm font-semibold gradient-gold text-gold-foreground shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-200 mb-3"
-          >
-            Subscribe — 50% Off
-          </Link>
-          <button
-            onClick={handleDismiss}
-            className="text-xs text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-          >
-            Continue with Free Preview
-          </button>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  if (!isPro) {
+    return (
+      <div className="relative">
+        <div className="pointer-events-none select-none blur-sm opacity-50">
+          {children}
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center bg-background/60 backdrop-blur-sm rounded-2xl">
+          <div className="text-center px-6 py-8">
+            <Lock className="w-8 h-8 mx-auto mb-3 text-amber-500" />
+            <h3 className="text-lg font-bold mb-2">Pro Members Only</h3>
+            <p className="text-sm text-muted-foreground mb-4 max-w-xs">
+              Unlock full access to draw odds, harvest data, point analysis &amp;
+              more for all 50 states.
+            </p>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
+            >
+              Unlock Pro \u2014 $14.99
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return <>{children}</>;
 }
