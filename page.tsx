@@ -14,6 +14,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { CountdownTimer } from "@/components/CountdownTimer";
+import { CheckoutButton } from "@/components/CheckoutButton";
 
 /* ------------------------------------------------------------------ */
 /*  DATA                                                               */
@@ -258,9 +259,7 @@ export default function PricingPage() {
               </ul>
 
               {/* CTA */}
-              <button className="w-full px-6 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-xl hover:brightness-110 transition-all duration-200 cursor-pointer mb-3">
-                Start Your Subscription
-              </button>
+              <CheckoutButton />
 
               <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                 <Shield className="w-3.5 h-3.5" />
@@ -415,9 +414,7 @@ export default function PricingPage() {
           <div className="mb-8">
             <CountdownTimer />
           </div>
-          <button className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-xl hover:brightness-110 transition-all duration-200 cursor-pointer">
-            Start Your Subscription — $14.99/year
-          </button>
+          <CheckoutButton />
           <p className="text-xs text-white/40 mt-4">
             30-day money-back guarantee &middot; Cancel anytime
           </p>
