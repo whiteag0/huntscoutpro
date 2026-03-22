@@ -27,6 +27,8 @@ import {
 import { getAllStates, getStateBySlug, getSpeciesUnits } from "@/data/hunt-data";
 import type { HuntUnit } from "@/data/types";
 import Link from "next/link";
+import { DemoGate } from "@/components/DemoGate";
+import { DataDisclaimer } from "@/components/DataDisclaimer";
 
 const ALL_SPECIES: Species[] = [
   "elk",
