@@ -157,6 +157,8 @@ export interface HuntUnit {
   sex: Sex;
   huntCode: string;
   years: YearData[];
+  /** Whether this unit's data comes from verified official sources or is estimated */
+  dataSource: "verified" | "estimated";
 }
 
 // --- Turkey-Specific Data ---
