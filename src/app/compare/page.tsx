@@ -12,6 +12,7 @@ import {
   StateConfig,
 } from "@/data/types";
 import { getAllStates, getStateBySlug } from "@/data/hunt-data";
+import { DemoGate } from "@/components/DemoGate";
 
 // Fallback: try importing huntUnits for backward compat
 let huntUnitsCompat: { huntCode: string; species: string; gmu: string; season: string; sex: string; region: string; years: { year: number; totalTags: number; totalApplicants: number; minPointsResident: number; minPointsNonresident: number; drawOddsByPoint: Record<number, { resident: number; nonresident: number }>; successRate: number; totalHarvest: number; huntersAfield: number; licensesIssued: number }[] }[] = [];
@@ -175,6 +176,7 @@ function CompareContent() {
       </div>
 
       {/* Comparison Table */}
+      <DemoGate feature="unit comparison data">
       <div className="bg-card border border-border rounded-xl overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
@@ -267,6 +269,7 @@ function CompareContent() {
           </table>
         </div>
       </div>
+      </DemoGate>
     </div>
   );
 }
