@@ -6,10 +6,10 @@ import { useRouter } from "next/navigation";
 
 interface CheckoutButtonProps {
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-export function CheckoutButton({ className, children }: CheckoutButtonProps) {
+export function CheckoutButton({ className, children = "Upgrade to Pro" }: CheckoutButtonProps) {
   const { data: session } = useSession();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
