@@ -396,9 +396,9 @@ export default function CalendarPage() {
           </div>
         </div>
 
+        <DemoGate feature="the full season calendar">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-      <DemoGate feature="the full season calendar">
-          {/* Ã¢ÂÂÃ¢ÂÂ Timeline (desktop) / Card list (mobile) Ã¢ÂÂÃ¢ÂÂ */}
+          {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Timeline (desktop) / Card list (mobile) ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
           <div className="lg:col-span-3">
             {/* Desktop timeline */}
             <div className="hidden md:block bg-card border border-border rounded-xl overflow-hidden">
@@ -526,7 +526,7 @@ export default function CalendarPage() {
             </div>
           </div>
 
-          {/* Ã¢ÂÂÃ¢ÂÂ Key Dates Sidebar Ã¢ÂÂÃ¢ÂÂ */}
+          {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Key Dates Sidebar ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
           <div className="lg:col-span-1">
             <div className="bg-card border border-border rounded-xl overflow-hidden sticky top-20">
               <div className="px-5 py-3 bg-muted/50 border-b border-border">
@@ -605,8 +605,8 @@ export default function CalendarPage() {
             </div>
           </div>
         </div>
+        </DemoGate>
       </div>
-      </DemoGate>
     </div>
   );
 }
