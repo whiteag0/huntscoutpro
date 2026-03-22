@@ -23,6 +23,8 @@ import { SpeciesCard } from "@/components/SpeciesCard";
 import { FilterPanel } from "@/components/FilterPanel";
 import { ResultsTable } from "@/components/ResultsTable";
 import { DrawOddsLegend } from "@/components/DrawOddsLegend";
+import { DemoGate } from "@/components/DemoGate";
+import { DataDisclaimer } from "@/components/DataDisclaimer";
 
 const DRAW_SYSTEM_LABELS: Record<string, string> = {
   preference: "Preference Points",
@@ -248,84 +250,92 @@ export default function StateExplorerPage() {
         </div>
       )}
 
-      {/* Summary Stats */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-        <div className="bg-card border border-border rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-foreground">
-            {filteredUnits.length}
-          </div>
-          <div className="text-sm text-muted-foreground">Hunt Codes</div>
-        </div>
-        <div className="bg-success/10 border border-success/30 rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-success">{drawableCount}</div>
-          <div className="text-sm text-muted-foreground">Drawable (80%+)</div>
-        </div>
-        <div className="bg-warning/10 border border-warning/30 rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-warning">
-            {competitiveCount}
-          </div>
-          <div className="text-sm text-muted-foreground">Competitive</div>
-        </div>
-        <div className="bg-card border border-border rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-foreground">{points}</div>
-          <div className="text-sm text-muted-foreground">Your Points</div>
-        </div>
-      </div>
+      {/* Data Source Disclaimer */}
+      <DataDisclaimer state={slug} species={species} />
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-        {/* Filter Panel */}
-        <div className="lg:col-span-1">
-          <FilterPanel
-            species={species}
-            season={season}
-            sex={sex}
-            residency={residency}
-            points={points}
-            onSeasonChange={setSeason}
-            onSexChange={setSex}
-            onResidencyChange={setResidency}
-            onPointsChange={setPoints}
-            stateSlug={slug}
-            availableSeasons={currentSeasons}
-            availableSexOptions={currentSexOptions}
-            drawSystem={stateConfig.drawSystem}
-          />
-
-          {compareList.length > 0 && (
-            <div className="mt-4 bg-accent/10 border border-accent/30 rounded-lg p-4">
-              <div className="font-bold text-sm mb-2">
-                {compareList.length}/4 selected for comparison
+      {/* Gated Content: Stats, Filters, Results */}
+      <DemoGate
+        feature="draw odds and harvest data"
+        preview={
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+            <div className="bg-card border border-border rounded-lg p-4 text-center">
+              <div className="text-2xl font-bold text-foreground">
+                {filteredUnits.length}
               </div>
-              <Link
-                href={`/compare?codes=${compareList.join(",")}&species=${species}&residency=${residency}&points=${points}&state=${slug}`}
-                className="block text-center bg-accent text-accent-foreground px-4 py-2 rounded font-medium hover:opacity-90 transition"
-              >
-                Compare Selected
-              </Link>
-              <button
-                onClick={() => setCompareList([])}
-                className="block w-full text-center text-sm text-muted-foreground mt-2 hover:text-foreground cursor-pointer"
-              >
-                Clear selection
-              </button>
+              <div className="text-sm text-muted-foreground">Hunt Codes</div>
             </div>
-          )}
-        </div>
+            <div className="bg-success/10 border border-success/30 rounded-lg p-4 text-center">
+              <div className="text-2xl font-bold text-success">{drawableCount}</div>
+              <div className="text-sm text-muted-foreground">Drawable (80%+)</div>
+            </div>
+            <div className="bg-warning/10 border border-warning/30 rounded-lg p-4 text-center">
+              <div className="text-2xl font-bold text-warning">
+                {competitiveCount}
+              </div>
+              <div className="text-sm text-muted-foreground">Competitive</div>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-4 text-center">
+              <div className="text-2xl font-bold text-foreground">{points}</div>
+              <div className="text-sm text-muted-foreground">Your Points</div>
+            </div>
+          </div>
+        }
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          {/* Filter Panel */}
+          <div className="lg:col-span-1">
+            <FilterPanel
+              species={species}
+              season={season}
+              sex={sex}
+              residency={residency}
+              points={points}
+              onSeasonChange={setSeason}
+              onSexChange={setSex}
+              onResidencyChange={setResidency}
+              onPointsChange={setPoints}
+              stateSlug={slug}
+              availableSeasons={currentSeasons}
+              availableSexOptions={currentSexOptions}
+              drawSystem={stateConfig.drawSystem}
+            />
 
-        {/* Results */}
-        <div className="lg:col-span-3 space-y-4">
-          <DrawOddsLegend />
-          <ResultsTable
-            units={filteredUnits}
-            residency={residency}
-            points={points}
-            compareList={compareList}
-            onToggleCompare={toggleCompare}
-            stateSlug={slug}
-            unitSystemName={stateConfig.unitSystemName}
-          />
+            {compareList.length > 0 && (
+              <div className="mt-4 bg-accent/10 border border-accent/30 rounded-lg p-4">
+                <div className="font-bold text-sm mb-2">
+                  {compareList.length}/4 selected for comparison
+                </div>
+                <Link
+                  href={`/compare?codes=${compareList.join(",")}&species=${species}&residency=${residency}&points=${points}&state=${slug}`}
+                  className="block text-center bg-accent text-accent-foreground px-4 py-2 rounded font-medium hover:opacity-90 transition"
+                >
+                  Compare Selected
+                </Link>
+                <button
+                  onClick={() => setCompareList([])}
+                  className="block w-full text-center text-sm text-muted-foreground mt-2 hover:text-foreground cursor-pointer"
+                >
+                  Clear selection
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Results */}
+          <div className="lg:col-span-3 space-y-4">
+            <DrawOddsLegend />
+            <ResultsTable
+              units={filteredUnits}
+              residency={residency}
+              points={points}
+              compareList={compareList}
+              onToggleCompare={toggleCompare}
+              stateSlug={slug}
+              unitSystemName={stateConfig.unitSystemName}
+            />
+          </div>
         </div>
-      </div>
+      </DemoGate>
     </div>
   );
 }
