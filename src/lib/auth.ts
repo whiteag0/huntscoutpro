@@ -35,8 +35,8 @@ export const authConfig: NextAuthConfig = {
     },
     async session({ session, token }) {
       if (session.user) {
-        (session.user as Record<string, unknown>).isPro = token.isPro ?? false;
-        (session.user as Record<string, unknown>).id = token.id;
+        (session.user as unknown as Record<string, unknown>).isPro = token.isPro ?? false;
+        (session.user as unknown as Record<string, unknown>).id = token.id;
       }
       return session;
     },
