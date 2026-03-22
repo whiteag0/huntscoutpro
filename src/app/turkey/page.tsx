@@ -3,6 +3,8 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { getAllStates, getTurkeyData } from "@/data/hunt-data";
+import { DemoGate } from "@/components/DemoGate";
+import { DataDisclaimer } from "@/components/DataDisclaimer";
 import type { StateConfig } from "@/data/types";
 import { TURKEY_SUBSPECIES_ALL, type TurkeySubspecies } from "@/data/types";
 
@@ -316,7 +318,7 @@ export default function TurkeyPage() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
-        {/* ── Subspecies Section ── */}
+        {/* ââ Subspecies Section ââ */}
         <section>
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
             Wild Turkey Subspecies
@@ -378,7 +380,12 @@ export default function TurkeyPage() {
           </div>
         </section>
 
-        {/* ── State-by-State Turkey Data ── */}
+
+        {/* Data Disclaimer */}
+        <DataDisclaimer />
+
+        {/* State-by-State Turkey Data — gated */}
+        <DemoGate feature="state-by-state turkey data">
         <section>
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
             State-by-State Turkey Data
@@ -467,7 +474,7 @@ export default function TurkeyPage() {
           )}
         </section>
 
-        {/* ── Grand Slam Tracker ── */}
+        {/* ââ Grand Slam Tracker ââ */}
         <section>
           <div className="bg-gradient-to-br from-[#1a3a1a] via-[#0f2a0f] to-[#1c1917] rounded-2xl p-6 sm:p-10 text-white">
             <h2 className="text-2xl sm:text-3xl font-bold mb-2">
@@ -543,7 +550,7 @@ export default function TurkeyPage() {
                     {SLAM_SUGGESTIONS[sub.name].map((sug) => (
                       <div key={sug.state} className="text-sm">
                         <span className="font-medium text-white/80">{sug.state}</span>
-                        <span className="text-white/40"> — {sug.notes}</span>
+                        <span className="text-white/40"> â {sug.notes}</span>
                       </div>
                     ))}
                   </div>
@@ -553,7 +560,7 @@ export default function TurkeyPage() {
           </div>
         </section>
 
-        {/* ── Top Turkey States Ranking ── */}
+        {/* ââ Top Turkey States Ranking ââ */}
         <section>
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
             Top 10 Turkey States
@@ -619,6 +626,8 @@ export default function TurkeyPage() {
           </div>
         </section>
 
+
+        </DemoGate>
         {/* CTA */}
         <section className="text-center py-8">
           <p className="text-muted-foreground mb-4">
