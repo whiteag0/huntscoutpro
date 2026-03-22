@@ -1,5 +1,5 @@
 // ============================================================
-// HuntScout Pro — Data Layer
+// HuntScout Pro â Data Layer
 // All 50 states, 10 species, dynamic generation via seeded RNG
 // ============================================================
 
@@ -96,7 +96,7 @@ function getRealDataShare(
   const totalHunters = real.totalHunters;
   const baseSuccessRate = real.successRate;
 
-  // Season share — normalized so all seasons sum to 1.0
+  // Season share â normalized so all seasons sum to 1.0
   const seasonWeight = SEASON_HARVEST_SHARE[season] ?? 0.33;
   let totalSeasonWeight = 0;
   const uniqueSeasons = Object.keys(seasonCounts);
@@ -106,7 +106,7 @@ function getRealDataShare(
   if (totalSeasonWeight === 0) totalSeasonWeight = 1;
   const normalizedSeasonShare = seasonWeight / totalSeasonWeight;
 
-  // Sex share — normalized so all sex options sum to 1.0 for each season
+  // Sex share â normalized so all sex options sum to 1.0 for each season
   const numSexOptions = Object.keys(sexCounts).length || 1;
   let normalizedSexShare = 1.0 / numSexOptions;
 
@@ -122,12 +122,12 @@ function getRealDataShare(
     } else if (sex === 'cow' || sex === 'doe' || sex === 'hen') {
       normalizedSexShare = (cows + calves) / totalBySex;
     } else if (sex === 'either' || sex === 'either-sex') {
-      // Either-sex tags are a subset — they produce harvest counted in the bull/cow totals
+      // Either-sex tags are a subset â they produce harvest counted in the bull/cow totals
       // Give either-sex a small share since it's an alternative access to same animals
       normalizedSexShare = 0.15;
     }
     // Normalize so all sex shares sum to ~1.0
-    // With bull/cow/either: typically bull(0.7) + cow(0.25) + either(0.15) ≈ 1.1
+    // With bull/cow/either: typically bull(0.7) + cow(0.25) + either(0.15) â 1.1
     // Close enough for realistic distribution
   }
 
@@ -135,7 +135,7 @@ function getRealDataShare(
   // Season share * sex share = fraction of total
   const comboShare = normalizedSeasonShare * normalizedSexShare;
 
-  // Add slight random variation (+/- 5%) — small so totals stay close
+  // Add slight random variation (+/- 5%) â small so totals stay close
   const variation = 0.95 + rand() * 0.1;
   const harvest = Math.max(0, Math.round(totalHarvest * comboShare * variation));
   const hunters = totalHunters > 0
@@ -392,7 +392,7 @@ function generateCalibratedYearData(
     return generateYearDataWithSuccess(year, unitSuccessRate, baseDifficulty, seed, anchor);
   }
 
-  // No usable anchor data for this year — fall through to caller for pure random
+  // No usable anchor data for this year â fall through to caller for pure random
   return null as unknown as YearData;
 }
 
@@ -602,7 +602,7 @@ const STATE_CONFIGS: StateConfigInternal[] = [
   },
   {
     name: 'Hawaii', abbrev: 'HI', slug: 'hawaii', region: 'pacific',
-    species: ['whitetail'], // very limited — axis deer, feral goat, etc. simplified
+    species: ['whitetail'], // very limited â axis deer, feral goat, etc. simplified
     drawSystem: 'otc', unitSystemName: 'Area', unitCount: 15,
     applicationDeadline: 'Year-round', baseDifficultyMod: 0.0,
     turkeySubspecies: [],
@@ -931,7 +931,7 @@ const REMAINING_STATES: StateConfigInternal[] = [
   },
 ];
 
-// Combine and deduplicate — build final 50 state list
+// Combine and deduplicate â build final 50 state list
 const ALL_STATE_CONFIGS_RAW: StateConfigInternal[] = [...STATE_CONFIGS];
 
 // Add any states we missed
@@ -1158,7 +1158,7 @@ function generateUnitsForState(state: StateConfigInternal): UnitGenConfig[] {
         });
       }
     } else {
-      // No real data — generate random GMU numbers (original behavior)
+      // No real data â generate random GMU numbers (original behavior)
       const unitCount = Math.max(2, Math.round(state.unitCount * params.unitFraction));
       const numUnits = Math.min(unitCount, 40);
 
@@ -1216,7 +1216,7 @@ function buildStateHuntUnits(state: StateConfigInternal): HuntUnit[] {
   let seedCounter = hashSeed(state.slug + '-build');
 
   // Pre-compute anchor distributions for each species in this state
-  // Count total hunt codes (unit × season × sex combos) per species, not just units
+  // Count total hunt codes (unit Ã season Ã sex combos) per species, not just units
   const speciesUnitCounts = new Map<string, number>();
   const speciesHuntCodeCounts = new Map<string, number>();
   for (const config of unitConfigs) {
@@ -1284,7 +1284,7 @@ function buildStateHuntUnits(state: StateConfigInternal): HuntUnit[] {
         let years: YearData[];
 
         if (hasAnyRealData) {
-          // Priority 1: Real per-GMU data — distribute GMU totals across season/sex combos
+          // Priority 1: Real per-GMU data â distribute GMU totals across season/sex combos
           years = YEARS.map(year => {
             const realKey = `${state.slug}-${config.species}-${config.gmu}-${year}`;
             const realData = REAL_GMU_LOOKUP.get(realKey);
@@ -1334,6 +1334,7 @@ function buildStateHuntUnits(state: StateConfigInternal): HuntUnit[] {
           sex,
           huntCode,
           years,
+          dataSource: hasAnyRealData ? "verified" : "estimated",
         });
       }
     }
@@ -1405,7 +1406,7 @@ function generateTurkeyData(state: StateConfigInternal): TurkeyUnitData[] {
     const regionIdx = Math.floor(rand() * state.regionNames.length);
     const region = state.regionNames[regionIdx];
 
-    // Determine subspecies present in this unit — pick 1-2 from state list
+    // Determine subspecies present in this unit â pick 1-2 from state list
     const subCount = Math.min(state.turkeySubspecies.length, 1 + Math.floor(rand() * 2));
     const subs: TurkeySubspecies[] = [];
     const shuffled = [...state.turkeySubspecies].sort(() => rand() - 0.5);
@@ -1558,7 +1559,7 @@ function generateSeasonCalendar(state: StateConfigInternal): SeasonCalendarEntry
 }
 
 // ============================================================
-// 8. Public API — Export Functions
+// 8. Public API â Export Functions
 // ============================================================
 
 /** Returns all 50 state configs (without internal generation params) */
@@ -1607,6 +1608,7 @@ export function getSpeciesUnits(stateSlug: string, species: Species): HuntUnit[]
       sex: t.sex,
       huntCode: t.huntCode,
       years: t.years,
+      dataSource: (t.state === 'wisconsin' ? 'verified' : 'estimated') as 'verified' | 'estimated',
     }));
   }
 
@@ -1673,7 +1675,7 @@ export function getTurkeyData(stateSlug: string): TurkeyUnitData[] {
 // 9. Legacy / Convenience Exports
 // ============================================================
 
-/** Flat list of all hunt units across all states (use sparingly — expensive) */
+/** Flat list of all hunt units across all states (use sparingly â expensive) */
 export function getAllHuntUnits(): HuntUnit[] {
   const all: HuntUnit[] = [];
   for (const state of ALL_STATES) {
@@ -1688,6 +1690,7 @@ export function getAllHuntUnits(): HuntUnit[] {
       sex: t.sex,
       huntCode: t.huntCode,
       years: t.years,
+      dataSource: (t.state === 'wisconsin' ? 'verified' : 'estimated') as 'verified' | 'estimated',
     })));
   }
   return all;
