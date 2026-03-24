@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Crosshair,
   TrendingUp,
@@ -13,8 +14,62 @@ import {
   Star,
   Check,
   ArrowRight,
+  MapPin,
+  Shield,
 } from "lucide-react";
 import { CountdownTimer } from "@/components/CountdownTimer";
+
+/* ------------------------------------------------------------------ */
+/*  SCROLL ANIMATION HOOK                                              */
+/* ------------------------------------------------------------------ */
+
+function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.12 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return { ref, visible };
+}
+
+function RevealSection({
+  children,
+  className = "",
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+}) {
+  const { ref, visible } = useScrollReveal();
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ease-out ${
+        visible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-8"
+      } ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  );
+}
 
 /* ------------------------------------------------------------------ */
 /*  STATE DATA                                                         */
@@ -97,6 +152,48 @@ const REGIONS: {
 ];
 
 /* ------------------------------------------------------------------ */
+/*  SPECIES DATA                                                       */
+/* ------------------------------------------------------------------ */
+
+const SPECIES = [
+  {
+    name: "Elk",
+    image: "https://images.unsplash.com/photo-1633356984559-9877a6896ba8?w=1920&q=80",
+    stats: "15 states \u2022 12,000+ units",
+  },
+  {
+    name: "Deer",
+    image: "https://images.unsplash.com/photo-1700244909533-b7ab4e4bd9ae?w=1920&q=80",
+    stats: "50 states \u2022 45,000+ units",
+  },
+  {
+    name: "Turkey",
+    image: "https://images.unsplash.com/photo-1649532716965-c798cda4b153?w=1920&q=80",
+    stats: "49 states \u2022 8,500+ units",
+  },
+  {
+    name: "Moose",
+    image: "https://images.unsplash.com/photo-1707079139889-1b8f7648fd38?w=1920&q=80",
+    stats: "8 states \u2022 2,200+ units",
+  },
+  {
+    name: "Bear",
+    image: "https://images.unsplash.com/photo-1724937954901-cc4721a7670e?w=1920&q=80",
+    stats: "32 states \u2022 6,400+ units",
+  },
+  {
+    name: "Pronghorn",
+    image: "https://images.unsplash.com/photo-1702338520328-ea01c36f08e8?w=1920&q=80",
+    stats: "12 states \u2022 3,800+ units",
+  },
+  {
+    name: "Sheep",
+    image: "https://images.unsplash.com/photo-1562811931-fbf7e9a79245?w=1920&q=80",
+    stats: "10 states \u2022 1,200+ units",
+  },
+];
+
+/* ------------------------------------------------------------------ */
 /*  FEATURES                                                           */
 /* ------------------------------------------------------------------ */
 
@@ -106,42 +203,36 @@ const FEATURES = [
     title: "Draw Odds Intelligence",
     description:
       "Real draw odds by preference point level for every unit across every state.",
-    color: "bg-primary/10 text-primary",
   },
   {
     icon: TrendingUp,
     title: "Point Creep Analysis",
     description:
       "Track how competition changes year over year so you never waste a point.",
-    color: "bg-accent/10 text-accent",
   },
   {
     icon: BarChart3,
     title: "Harvest & Success Data",
     description:
       "Know which units produce before you apply. Success rates, harvest totals, and more.",
-    color: "bg-success/10 text-success",
   },
   {
     icon: Calendar,
     title: "Hunt Planner",
     description:
       "Plan your season with application deadlines, checklists, and reminders.",
-    color: "bg-gold/10 text-gold",
   },
   {
     icon: Feather,
     title: "Turkey Intelligence",
     description:
       "Spring and fall turkey data with subspecies tracking across every state.",
-    color: "bg-primary-light/10 text-primary-light",
   },
   {
     icon: Columns3,
     title: "Compare & Decide",
     description:
       "Side-by-side unit comparison across states to find your best opportunity.",
-    color: "bg-accent/10 text-accent",
   },
 ];
 
@@ -274,7 +365,7 @@ function StateCard({
     <Link
       href={`/states/${name.toLowerCase().replace(/\s+/g, "-")}`}
       className={`group relative rounded-lg p-2.5 sm:p-3 text-center transition-all duration-200 hover:scale-105 hover:shadow-md ${intensity}`}
-      title={`${name} — ${species} species`}
+      title={`${name} \u2014 ${species} species`}
     >
       <div className="text-sm sm:text-base font-bold">{abbr}</div>
       <div className="text-[10px] opacity-70">{species} spp</div>
@@ -292,60 +383,68 @@ export default function LandingPage() {
       {/* ============================================================ */}
       {/*  HERO                                                        */}
       {/* ============================================================ */}
-      <section className="relative gradient-hero text-white overflow-hidden">
-        {/* Decorative background shapes */}
-        <div className="absolute inset-0 opacity-[0.04]">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 20% 50%, rgba(212,165,55,0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(196,101,26,0.2) 0%, transparent 40%)",
-            }}
-          />
-        </div>
+      <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+        {/* Background photo */}
+        <Image
+          src="https://images.unsplash.com/photo-1758163462432-3c704d8d43d9?w=2400&q=80"
+          alt="Bull elk standing in a grassy field with mountain range in background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36 w-full">
           {/* Promo badge */}
           <div className="animate-fade-in-up flex justify-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/15 border border-gold/30 text-sm">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black/40 border border-gold/40 text-sm backdrop-blur-md">
               <span className="animate-pulse-soft inline-block w-2 h-2 rounded-full bg-gold" />
               <span className="text-gold font-medium">
-                Limited Time: 50% off + second year FREE through April 30th
+                Limited Time: 50% off + 2nd year FREE through April 30th
               </span>
             </div>
           </div>
 
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="animate-fade-in-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6">
+            <h1
+              className="animate-fade-in-up text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.05] mb-6"
+              style={{ textShadow: "0 4px 24px rgba(0,0,0,0.5)" }}
+            >
               Know Before{" "}
               <span className="text-gradient-gold">You Draw</span>
             </h1>
 
-            <p className="animate-fade-in-up delay-200 text-lg sm:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p
+              className="animate-fade-in-up delay-200 text-lg sm:text-xl md:text-2xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed"
+              style={{ textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}
+            >
               Draw odds, harvest data, and point analysis for every hunt unit
-              across all 50 states. Make smarter applications, fill more tags.
+              across all 50 states. Real data. Smarter applications. More tags.
             </p>
 
-            <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
               <Link
                 href="/states"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold border-2 border-white/30 text-white hover:bg-white/10 transition-all duration-200"
+                className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold border-2 border-white/40 text-white hover:bg-white/15 hover:border-white/60 backdrop-blur-sm transition-all duration-300"
               >
-                Explore Free Preview
-                <ArrowRight className="w-4 h-4" />
+                Explore States
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold gradient-gold text-gold-foreground shadow-lg hover:shadow-xl hover:brightness-110 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300"
               >
-                Subscribe — 50% Off
+                Subscribe &mdash; $14.99/yr
               </Link>
             </div>
           </div>
 
           {/* Stats bar */}
           <div className="animate-fade-in-up delay-400 max-w-3xl mx-auto">
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 py-5 px-6 rounded-2xl bg-white/[0.06] border border-white/10">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-10 gap-y-3 py-5 px-6 rounded-2xl bg-black/30 border border-white/10 backdrop-blur-md">
               {[
                 "50 States",
                 "9+ Species",
@@ -354,10 +453,10 @@ export default function LandingPage() {
               ].map((stat, i) => (
                 <span
                   key={stat}
-                  className="text-sm sm:text-base font-medium text-white/80"
+                  className="flex items-center text-sm sm:text-base font-semibold text-white/90"
                 >
                   {i > 0 && (
-                    <span className="hidden sm:inline text-white/20 mr-8">
+                    <span className="hidden sm:inline text-white/25 mr-6 sm:mr-10">
                       |
                     </span>
                   )}
@@ -367,42 +466,100 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+
+        {/* Bottom fade into next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
       </section>
 
       {/* ============================================================ */}
-      {/*  FEATURES                                                    */}
+      {/*  SPECIES SHOWCASE                                            */}
       {/* ============================================================ */}
-      <section className="py-20 sm:py-24 gradient-subtle">
+      <section className="py-20 sm:py-28 gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Everything You Need to Plan Your Hunt
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              From draw odds to harvest data, one platform gives you the edge.
-            </p>
-          </div>
+          <RevealSection>
+            <div className="text-center mb-14">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                Real Data for the Species You Hunt
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Comprehensive intelligence for every major game species across America.
+              </p>
+            </div>
+          </RevealSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {FEATURES.map((f) => {
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+            {SPECIES.map((species, i) => (
+              <RevealSection key={species.name} delay={i * 80}>
+                <div className="group relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer">
+                  <Image
+                    src={species.image}
+                    alt={`${species.name} in natural habitat`}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+                    <h3 className="text-white text-lg sm:text-xl font-bold mb-1">
+                      {species.name}
+                    </h3>
+                    <p className="text-white/70 text-xs sm:text-sm">
+                      {species.stats}
+                    </p>
+                  </div>
+                </div>
+              </RevealSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/*  WHY HUNTSCOUT PRO (Photo background)                        */}
+      {/* ============================================================ */}
+      <section className="relative py-24 sm:py-32 overflow-hidden">
+        {/* Parallax-style background */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1685208509027-f81d05e41cdf?w=2400&q=80"
+            alt="Mountain silhouettes at sunset with vibrant orange and purple sky"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: "center 40%" }}
+          />
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <RevealSection>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+                Why HuntScout Pro?
+              </h2>
+              <p className="text-white/60 max-w-2xl mx-auto text-lg">
+                Everything you need to make smarter applications and fill more tags.
+              </p>
+            </div>
+          </RevealSection>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {FEATURES.map((f, i) => {
               const Icon = f.icon;
               return (
-                <div
-                  key={f.title}
-                  className="group bg-card border border-border rounded-2xl p-6 sm:p-7 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
-                >
-                  <div
-                    className={`w-12 h-12 rounded-xl ${f.color} flex items-center justify-center mb-5`}
-                  >
-                    <Icon className="w-6 h-6" />
+                <RevealSection key={f.title} delay={i * 100}>
+                  <div className="group bg-white/[0.07] backdrop-blur-md border border-white/10 rounded-2xl p-6 sm:p-7 hover:-translate-y-1 hover:bg-white/[0.12] transition-all duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-gold/20 text-gold flex items-center justify-center mb-5">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2">
+                      {f.title}
+                    </h3>
+                    <p className="text-sm text-white/60 leading-relaxed">
+                      {f.description}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    {f.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {f.description}
-                  </p>
-                </div>
+                </RevealSection>
               );
             })}
           </div>
@@ -414,27 +571,31 @@ export default function LandingPage() {
       {/* ============================================================ */}
       <section className="py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              All 50 States. One Platform.
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Select a state to explore draw odds, harvest data, and unit
-              intelligence.
-            </p>
-          </div>
+          <RevealSection>
+            <div className="text-center mb-14">
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+                All 50 States. One Platform.
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Select a state to explore draw odds, harvest data, and unit
+                intelligence.
+              </p>
+            </div>
+          </RevealSection>
 
           {REGIONS.map((region) => (
-            <div key={region.name} className="mb-10 last:mb-0">
-              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-                {region.name}
-              </h3>
-              <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-13 gap-2">
-                {region.states.map((s) => (
-                  <StateCard key={s.abbr} {...s} />
-                ))}
+            <RevealSection key={region.name}>
+              <div className="mb-10 last:mb-0">
+                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                  {region.name}
+                </h3>
+                <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-13 gap-2">
+                  {region.states.map((s) => (
+                    <StateCard key={s.abbr} {...s} />
+                  ))}
+                </div>
               </div>
-            </div>
+            </RevealSection>
           ))}
 
           {/* Legend */}
@@ -462,46 +623,68 @@ export default function LandingPage() {
       {/* ============================================================ */}
       {/*  HOW IT WORKS                                                */}
       {/* ============================================================ */}
-      <section className="py-20 sm:py-24 bg-card border-y border-border">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              How It Works
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto text-lg">
-              Three simple steps to smarter hunting applications.
-            </p>
-          </div>
+      <section className="relative py-20 sm:py-28 overflow-hidden">
+        {/* Subtle background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1557616974-db27bfcf6f6d?w=2400&q=80"
+            alt="Grass meadow with mountains in background"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-[0.06]"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <RevealSection>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                How It Works
+              </h2>
+              <p className="text-muted-foreground max-w-xl mx-auto text-lg">
+                Three simple steps to smarter hunting applications.
+              </p>
+            </div>
+          </RevealSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
+            {/* Connecting line (desktop only) */}
+            <div className="hidden md:block absolute top-7 left-[calc(16.67%+28px)] right-[calc(16.67%+28px)] h-0.5 bg-gradient-to-r from-gold/40 via-gold to-gold/40" />
+
             {[
               {
                 step: "1",
                 title: "Choose Your State",
                 desc: "Select from all 50 states and pick your target species. We have data for elk, deer, pronghorn, moose, bear, sheep, goat, turkey, and more.",
+                icon: MapPin,
               },
               {
                 step: "2",
                 title: "Filter & Compare",
                 desc: "Narrow by species, season type, and your preference points. Compare units side by side to find hidden gems.",
+                icon: BarChart3,
               },
               {
                 step: "3",
                 title: "Apply With Confidence",
                 desc: "Make data-driven application decisions. Know your real odds before you spend money and points.",
+                icon: Shield,
               },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
-                <div className="w-14 h-14 rounded-full gradient-gold text-gold-foreground flex items-center justify-center text-xl font-bold mx-auto mb-5 shadow-md">
-                  {item.step}
+            ].map((item, i) => (
+              <RevealSection key={item.step} delay={i * 150}>
+                <div className="text-center relative">
+                  <div className="w-14 h-14 rounded-full gradient-gold text-gold-foreground flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-lg ring-4 ring-background relative z-10">
+                    {item.step}
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-xs mx-auto">
+                    {item.desc}
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
+              </RevealSection>
             ))}
           </div>
         </div>
@@ -510,111 +693,140 @@ export default function LandingPage() {
       {/* ============================================================ */}
       {/*  PRICING                                                     */}
       {/* ============================================================ */}
-      <section id="pricing" className="py-20 sm:py-24 gradient-hero text-white">
-        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/[0.06] border border-white/10 rounded-3xl p-8 sm:p-10 text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-gold/20 text-gold text-xs font-semibold uppercase tracking-wider mb-6">
-              Early Bird Special
-            </div>
+      <section id="pricing" className="relative py-20 sm:py-28 overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1760715659986-75c7207cac61?w=2400&q=80"
+            alt="Mountain peaks bathed in golden hour light"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/75" />
+        </div>
 
-            {/* Price */}
-            <div className="mb-2">
-              <span className="text-lg text-white/40 line-through mr-2">
-                $29.99
-              </span>
-              <span className="text-5xl sm:text-6xl font-extrabold text-white">
-                $14.99
-              </span>
-              <span className="text-white/60 ml-1">/year</span>
-            </div>
-            <p className="text-gold font-semibold text-sm mb-6">
-              Save 50% + Get Year 2 FREE
-            </p>
+        <div className="relative z-10 max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <RevealSection>
+            <div className="bg-white/[0.08] backdrop-blur-lg border border-white/15 rounded-3xl p-8 sm:p-10 text-center shadow-2xl shadow-black/30">
+              {/* Badge */}
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-gold/20 text-gold text-xs font-semibold uppercase tracking-wider mb-6">
+                Early Bird Special
+              </div>
 
-            {/* Countdown */}
-            <div className="mb-8">
-              <p className="text-xs text-white/50 uppercase tracking-wider mb-3">
-                Offer ends April 30, 2026
+              {/* Price */}
+              <div className="mb-2">
+                <span className="text-lg text-white/40 line-through mr-2">
+                  $29.99
+                </span>
+                <span className="text-5xl sm:text-6xl font-extrabold text-white">
+                  $14.99
+                </span>
+                <span className="text-white/60 ml-1">/year</span>
+              </div>
+              <p className="text-gold font-semibold text-sm mb-6">
+                Save 50% + Get Year 2 FREE
               </p>
-              <CountdownTimer />
-            </div>
 
-            {/* Feature checklist */}
-            <ul className="text-left space-y-3 mb-8">
-              {PRICING_FEATURES.map((feat) => (
-                <li
-                  key={feat}
-                  className="flex items-start gap-3 text-sm text-white/80"
-                >
-                  <Check className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-                  {feat}
-                </li>
-              ))}
-            </ul>
+              {/* Countdown */}
+              <div className="mb-8">
+                <p className="text-xs text-white/50 uppercase tracking-wider mb-3">
+                  Offer ends April 30, 2026
+                </p>
+                <CountdownTimer />
+              </div>
 
-            {/* CTA */}
-            <Link
-              href="/pricing"
-              className="inline-flex items-center justify-center w-full px-6 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-xl hover:brightness-110 transition-all duration-200 mb-4"
-            >
-              Start Your Subscription
-            </Link>
-            <p className="text-xs text-white/40">
-              30-day money-back guarantee
-            </p>
+              {/* Feature checklist */}
+              <ul className="text-left space-y-3 mb-8">
+                {PRICING_FEATURES.map((feat) => (
+                  <li
+                    key={feat}
+                    className="flex items-start gap-3 text-sm text-white/80"
+                  >
+                    <Check className="w-4 h-4 text-green-400 shrink-0 mt-0.5" />
+                    {feat}
+                  </li>
+                ))}
+              </ul>
 
-            {/* Trust */}
-            <div className="mt-6 pt-6 border-t border-white/10">
-              <p className="text-sm text-white/50">
-                Join{" "}
-                <span className="text-white font-semibold">12,000+</span>{" "}
-                hunters already using HuntScout Pro
+              {/* CTA */}
+              <Link
+                href="/pricing"
+                className="inline-flex items-center justify-center w-full px-6 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300 mb-4"
+              >
+                Start Your Subscription
+              </Link>
+              <p className="text-xs text-white/40">
+                30-day money-back guarantee
               </p>
+
+              {/* Trust */}
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <p className="text-sm text-white/50">
+                  Join{" "}
+                  <span className="text-white font-semibold">12,000+</span>{" "}
+                  hunters already using HuntScout Pro
+                </p>
+              </div>
             </div>
-          </div>
+          </RevealSection>
         </div>
       </section>
 
       {/* ============================================================ */}
       {/*  TESTIMONIALS                                                */}
       {/* ============================================================ */}
-      <section className="py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              What Hunters Are Saying
-            </h2>
-          </div>
+      <section className="relative py-20 sm:py-28 bg-[#111] overflow-hidden">
+        {/* Subtle photo accent */}
+        <div className="absolute inset-0 opacity-[0.08]">
+          <Image
+            src="https://images.unsplash.com/photo-1557616974-db27bfcf6f6d?w=2400&q=80"
+            alt="Mountain landscape"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <RevealSection>
+            <div className="text-center mb-14">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+                What Hunters Are Saying
+              </h2>
+              <p className="text-white/50 text-lg">
+                Real stories from hunters who draw more tags.
+              </p>
+            </div>
+          </RevealSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t) => (
-              <div
-                key={t.name}
-                className="bg-card border border-border rounded-2xl p-7 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
-              >
-                {/* Stars */}
-                <div className="flex items-center gap-0.5 mb-4">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 fill-gold text-gold"
-                    />
-                  ))}
+            {TESTIMONIALS.map((t, i) => (
+              <RevealSection key={t.name} delay={i * 120}>
+                <div className="bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:-translate-y-1 hover:bg-white/[0.10] transition-all duration-300">
+                  {/* Stars */}
+                  <div className="flex items-center gap-0.5 mb-4">
+                    {Array.from({ length: 5 }).map((_, j) => (
+                      <Star
+                        key={j}
+                        className="w-4 h-4 fill-gold text-gold"
+                      />
+                    ))}
+                  </div>
+                  <blockquote className="text-sm text-white/80 leading-relaxed mb-5">
+                    &ldquo;{t.quote}&rdquo;
+                  </blockquote>
+                  <div className="text-sm">
+                    <span className="font-semibold text-white">
+                      {t.name}
+                    </span>
+                    <span className="text-white/50">
+                      {" "}
+                      &mdash; {t.location}
+                    </span>
+                  </div>
                 </div>
-                <blockquote className="text-sm text-foreground leading-relaxed mb-5">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <div className="text-sm">
-                  <span className="font-semibold text-foreground">
-                    {t.name}
-                  </span>
-                  <span className="text-muted-foreground">
-                    {" "}
-                    &mdash; {t.location}
-                  </span>
-                </div>
-              </div>
+              </RevealSection>
             ))}
           </div>
         </div>
@@ -625,11 +837,13 @@ export default function LandingPage() {
       {/* ============================================================ */}
       <section id="faq" className="py-20 sm:py-24 bg-card border-t border-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Frequently Asked Questions
-            </h2>
-          </div>
+          <RevealSection>
+            <div className="text-center mb-14">
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+                Frequently Asked Questions
+              </h2>
+            </div>
+          </RevealSection>
 
           <div className="space-y-3">
             {FAQS.map((faq) => (
@@ -642,29 +856,47 @@ export default function LandingPage() {
       {/* ============================================================ */}
       {/*  FINAL CTA                                                   */}
       {/* ============================================================ */}
-      <section className="py-20 sm:py-24 gradient-hero text-white text-center">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Ready to Fill More Tags?
-          </h2>
-          <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-            Stop guessing. Start drawing. Join thousands of hunters making
-            smarter application decisions with HuntScout Pro.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/states"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold border-2 border-white/30 text-white hover:bg-white/10 transition-all duration-200"
+      <section className="relative py-24 sm:py-32 text-white text-center overflow-hidden">
+        {/* Background photo */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1563730212-61510cf2d704?w=1920&q=80"
+            alt="Camping tents at dawn with warm golden light"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <RevealSection>
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5"
+              style={{ textShadow: "0 2px 16px rgba(0,0,0,0.4)" }}
             >
-              Explore Free Preview
-            </Link>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold gradient-gold text-gold-foreground shadow-lg hover:shadow-xl hover:brightness-110 transition-all duration-200"
-            >
-              Subscribe — 50% Off
-            </Link>
-          </div>
+              Start Planning Your Next Hunt
+            </h2>
+            <p className="text-white/70 text-lg sm:text-xl mb-10 max-w-xl mx-auto">
+              Stop guessing. Start drawing. Join thousands of hunters making
+              smarter application decisions with HuntScout Pro.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/states"
+                className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold border-2 border-white/40 text-white hover:bg-white/15 hover:border-white/60 backdrop-blur-sm transition-all duration-300"
+              >
+                Explore States
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/pricing"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300"
+              >
+                Subscribe &mdash; 50% Off
+              </Link>
+            </div>
+          </RevealSection>
         </div>
       </section>
     </div>

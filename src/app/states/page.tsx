@@ -2,8 +2,11 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { StateConfig, Species, SPECIES_LABELS } from "@/data/types";
 import { getAllStates } from "@/data/hunt-data";
+
+const HERO_BG = "https://images.unsplash.com/photo-1641113994135-a9f230b1f9b0?w=2400&q=80";
 
 const SPECIES_ICONS: Record<Species, string> = {
   elk: "\ud83e\udece",
@@ -16,6 +19,17 @@ const SPECIES_ICONS: Record<Species, string> = {
   goat: "\ud83d\udc10",
   lion: "\ud83e\udd81",
   turkey: "\ud83e\udd83",
+};
+
+const SPECIES_PHOTOS: Partial<Record<Species, string>> = {
+  elk: "https://images.unsplash.com/photo-1633356984559-9877a6896ba8?w=1920&q=80",
+  "mule-deer": "https://images.unsplash.com/photo-1700244909533-b7ab4e4bd9ae?w=1920&q=80",
+  whitetail: "https://images.unsplash.com/photo-1700244909533-b7ab4e4bd9ae?w=1920&q=80",
+  turkey: "https://images.unsplash.com/photo-1649532716965-c798cda4b153?w=1920&q=80",
+  moose: "https://images.unsplash.com/photo-1657582889588-1496762caac1?w=1920&q=80",
+  bear: "https://images.unsplash.com/photo-1754534139545-7b733823a01a?w=1920&q=80",
+  pronghorn: "https://images.unsplash.com/photo-1702338520328-ea01c36f08e8?w=1920&q=80",
+  sheep: "https://images.unsplash.com/photo-1562811931-fbf7e9a79245?w=1920&q=80",
 };
 
 const DRAW_SYSTEM_LABELS: Record<string, string> = {
@@ -32,6 +46,15 @@ const DRAW_SYSTEM_COLORS: Record<string, string> = {
   random: "bg-sky-100 text-sky-800 border-sky-200",
   otc: "bg-stone-100 text-stone-700 border-stone-200",
   hybrid: "bg-violet-100 text-violet-800 border-violet-200",
+};
+
+const REGION_COLORS: Record<string, string> = {
+  west: "border-l-amber-500",
+  pacific: "border-l-blue-500",
+  plains: "border-l-yellow-600",
+  midwest: "border-l-green-600",
+  southeast: "border-l-orange-500",
+  northeast: "border-l-indigo-500",
 };
 
 const REGIONS = [
@@ -78,41 +101,52 @@ export default function StatesPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero */}
-      <div className="bg-gradient-to-b from-primary/5 to-background border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight">
-            Explore All 50 States
-          </h1>
-          <p className="mt-3 text-lg text-muted-foreground max-w-2xl">
-            Comprehensive draw odds, harvest data, and point analysis for every
-            state in the nation. Select a state to dive into unit-level
-            intelligence.
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-card border border-border rounded-full">
-              <span className="w-2 h-2 rounded-full bg-success" />
-              {allStates.length} States
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-card border border-border rounded-full">
-              <span className="w-2 h-2 rounded-full bg-warning" />
-              {allStates.reduce(
-                (sum: number, s: StateConfig) => sum + s.species.length,
-                0
-              )}{" "}
-              Species Listings
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-card border border-border rounded-full">
-              <span className="w-2 h-2 rounded-full bg-primary" />
-              {allStates.reduce(
-                (sum: number, s: StateConfig) => sum + s.unitCount,
-                0
-              ).toLocaleString()}{" "}
-              Hunt Units
-            </span>
+      {/* Hero with mountain photo */}
+      <section className="relative h-[320px] sm:h-[380px] overflow-hidden">
+        <Image
+          src={HERO_BG}
+          alt="Layered mountain range at sunset"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+        <div className="relative z-10 h-full flex items-end pb-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight drop-shadow-lg">
+              Explore All 50 States
+            </h1>
+            <p className="mt-3 text-lg text-white/80 max-w-2xl drop-shadow">
+              Comprehensive draw odds, harvest data, and point analysis for every
+              state in the nation. Select a state to dive into unit-level
+              intelligence.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-3 text-sm">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90">
+                <span className="w-2 h-2 rounded-full bg-green-400" />
+                {allStates.length} States
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90">
+                <span className="w-2 h-2 rounded-full bg-amber-400" />
+                {allStates.reduce(
+                  (sum: number, s: StateConfig) => sum + s.species.length,
+                  0
+                )}{" "}
+                Species Listings
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90">
+                <span className="w-2 h-2 rounded-full bg-blue-400" />
+                {allStates.reduce(
+                  (sum: number, s: StateConfig) => sum + s.unitCount,
+                  0
+                ).toLocaleString()}{" "}
+                Hunt Units
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Search + Region Filters */}
@@ -191,58 +225,90 @@ export default function StatesPage() {
               <Link
                 key={state.slug}
                 href={`/states/${state.slug}`}
-                className="group block bg-card border border-border rounded-xl p-5 transition-all duration-200 hover:shadow-lg hover:border-primary/50 hover:-translate-y-0.5"
+                className={`group block bg-card border border-border border-l-4 ${
+                  REGION_COLORS[state.region] || "border-l-gray-400"
+                } rounded-xl overflow-hidden transition-all duration-200 hover:shadow-lg hover:border-primary/50 hover:-translate-y-0.5`}
               >
-                {/* Header */}
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <h2 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                      {state.name}
-                    </h2>
-                    <span className="inline-block mt-0.5 px-1.5 py-0.5 text-xs font-mono font-semibold text-muted-foreground bg-muted rounded">
-                      {state.abbrev}
+                <div className="p-5">
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <h2 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                        {state.name}
+                      </h2>
+                      <span className="inline-block mt-0.5 px-1.5 py-0.5 text-xs font-mono font-semibold text-muted-foreground bg-muted rounded">
+                        {state.abbrev}
+                      </span>
+                    </div>
+                    <span className="text-sm font-semibold text-primary">
+                      {state.species.length} Species
                     </span>
                   </div>
-                  <span className="text-sm font-semibold text-primary">
-                    {state.species.length} Species
-                  </span>
-                </div>
 
-                {/* Draw System Badge */}
-                <div className="mb-3">
-                  <span
-                    className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${
-                      DRAW_SYSTEM_COLORS[state.drawSystem] ||
-                      "bg-muted text-muted-foreground border-border"
-                    }`}
-                  >
-                    {DRAW_SYSTEM_LABELS[state.drawSystem] || state.drawSystem}
-                  </span>
-                </div>
-
-                {/* Stats Row */}
-                <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
-                  <span>{state.unitCount.toLocaleString()} {state.unitSystemName}s</span>
-                  <span className="text-border">|</span>
-                  <span>Deadline: {state.applicationDeadline}</span>
-                </div>
-
-                {/* Species Dots */}
-                <div className="flex flex-wrap gap-1.5">
-                  {state.species.map((sp: Species) => (
+                  {/* Draw System Badge */}
+                  <div className="mb-3">
                     <span
-                      key={sp}
-                      className="inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-muted rounded text-xs"
-                      title={SPECIES_LABELS[sp]}
+                      className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${
+                        DRAW_SYSTEM_COLORS[state.drawSystem] ||
+                        "bg-muted text-muted-foreground border-border"
+                      }`}
                     >
-                      <span className="text-sm leading-none">
-                        {SPECIES_ICONS[sp]}
-                      </span>
-                      <span className="text-muted-foreground hidden sm:inline">
-                        {SPECIES_LABELS[sp]}
-                      </span>
+                      {DRAW_SYSTEM_LABELS[state.drawSystem] || state.drawSystem}
                     </span>
-                  ))}
+                  </div>
+
+                  {/* Stats Row */}
+                  <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
+                    <span>{state.unitCount.toLocaleString()} {state.unitSystemName}s</span>
+                    <span className="text-border">|</span>
+                    <span>Deadline: {state.applicationDeadline}</span>
+                  </div>
+
+                  {/* Species photo thumbnails */}
+                  <div className="flex gap-1.5 mb-3">
+                    {state.species.slice(0, 4).map((sp: Species) => {
+                      const photo = SPECIES_PHOTOS[sp];
+                      if (!photo) return null;
+                      return (
+                        <div
+                          key={sp}
+                          className="relative w-10 h-10 rounded-lg overflow-hidden border border-border"
+                          title={SPECIES_LABELS[sp]}
+                        >
+                          <Image
+                            src={photo}
+                            alt={SPECIES_LABELS[sp]}
+                            fill
+                            sizes="40px"
+                            className="object-cover"
+                          />
+                        </div>
+                      );
+                    })}
+                    {state.species.length > 4 && (
+                      <div className="w-10 h-10 rounded-lg bg-muted border border-border flex items-center justify-center text-xs font-semibold text-muted-foreground">
+                        +{state.species.length - 4}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Species labels */}
+                  <div className="flex flex-wrap gap-1.5">
+                    {state.species.map((sp: Species) => (
+                      <span
+                        key={sp}
+                        className="inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-muted rounded text-xs"
+                        title={SPECIES_LABELS[sp]}
+                      >
+                        <span className="text-sm leading-none">
+                          {SPECIES_ICONS[sp]}
+                        </span>
+                        <span className="text-muted-foreground hidden sm:inline">
+                          {SPECIES_LABELS[sp]}
+                        </span>
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </Link>
             ))}
