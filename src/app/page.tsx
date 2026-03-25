@@ -364,11 +364,11 @@ function StateCard({
   return (
     <Link
       href={`/states/${name.toLowerCase().replace(/\s+/g, "-")}`}
-      className={`group relative rounded-lg p-2.5 sm:p-3 text-center transition-all duration-200 hover:scale-105 hover:shadow-md ${intensity}`}
+      className={`group relative rounded-lg p-3 sm:p-3.5 text-center transition-all duration-200 hover:scale-105 hover:shadow-md ${intensity}`}
       title={`${name} \u2014 ${species} species`}
     >
-      <div className="text-sm sm:text-base font-bold">{abbr}</div>
-      <div className="text-[10px] opacity-70">{species} spp</div>
+      <div className="text-sm sm:text-base font-bold leading-none">{abbr}</div>
+      <div className="text-[10px] sm:text-xs opacity-70 mt-1">{species} spp</div>
     </Link>
   );
 }
@@ -379,7 +379,7 @@ function StateCard({
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen -mt-16">
       {/* ============================================================ */}
       {/*  HERO                                                        */}
       {/* ============================================================ */}
@@ -397,10 +397,10 @@ export default function LandingPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36 w-full">
-          {/* Promo badge */}
-          <div className="animate-fade-in-up flex justify-center mb-8">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black/40 border border-gold/40 text-sm backdrop-blur-md">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28 w-full">
+          {/* Promo badge -- top-left aligned */}
+          <div className="animate-fade-in-up mb-5">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/40 border border-gold/40 text-sm backdrop-blur-md">
               <span className="animate-pulse-soft inline-block w-2 h-2 rounded-full bg-gold" />
               <span className="text-gold font-medium">
                 Limited Time: 50% off + 2nd year FREE through April 30th
@@ -408,9 +408,9 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="max-w-4xl">
             <h1
-              className="animate-fade-in-up text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.05] mb-6"
+              className="animate-fade-in-up text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.05] mb-5"
               style={{ textShadow: "0 4px 24px rgba(0,0,0,0.5)" }}
             >
               Know Before{" "}
@@ -418,33 +418,33 @@ export default function LandingPage() {
             </h1>
 
             <p
-              className="animate-fade-in-up delay-200 text-lg sm:text-xl md:text-2xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed"
+              className="animate-fade-in-up delay-200 text-lg sm:text-xl md:text-2xl text-white/80 max-w-2xl mb-8 leading-relaxed"
               style={{ textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}
             >
               Draw odds, harvest data, and point analysis for every hunt unit
               across all 50 states. Real data. Smarter applications. More tags.
             </p>
 
-            <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+            <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row items-start gap-3 mb-12">
               <Link
                 href="/states"
-                className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold border-2 border-white/40 text-white hover:bg-white/15 hover:border-white/60 backdrop-blur-sm transition-all duration-300"
+                className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold border-2 border-white/40 text-white hover:bg-white/15 hover:border-white/60 backdrop-blur-sm transition-all duration-300"
               >
                 Explore States
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300"
               >
                 Subscribe &mdash; $14.99/yr
               </Link>
             </div>
           </div>
 
-          {/* Stats bar */}
-          <div className="animate-fade-in-up delay-400 max-w-3xl mx-auto">
-            <div className="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-10 gap-y-3 py-5 px-6 rounded-2xl bg-black/30 border border-white/10 backdrop-blur-md">
+          {/* Stats bar -- compact */}
+          <div className="animate-fade-in-up delay-400 max-w-2xl">
+            <div className="flex flex-wrap items-center gap-x-5 sm:gap-x-8 gap-y-2 py-3.5 px-5 rounded-xl bg-black/30 border border-white/10 backdrop-blur-md">
               {[
                 "50 States",
                 "9+ Species",
@@ -453,10 +453,10 @@ export default function LandingPage() {
               ].map((stat, i) => (
                 <span
                   key={stat}
-                  className="flex items-center text-sm sm:text-base font-semibold text-white/90"
+                  className="flex items-center text-sm font-semibold text-white/90"
                 >
                   {i > 0 && (
-                    <span className="hidden sm:inline text-white/25 mr-6 sm:mr-10">
+                    <span className="hidden sm:inline text-white/25 mr-5 sm:mr-8">
                       |
                     </span>
                   )}
@@ -474,23 +474,33 @@ export default function LandingPage() {
       {/* ============================================================ */}
       {/*  SPECIES SHOWCASE                                            */}
       {/* ============================================================ */}
-      <section className="py-20 sm:py-28 gradient-subtle">
+      <section className="py-16 sm:py-20 lg:py-24 gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <RevealSection>
-            <div className="text-center mb-14">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight text-foreground">
                 Real Data for the Species You Hunt
               </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              <p className="text-lg text-muted-foreground mt-3 max-w-2xl mx-auto">
                 Comprehensive intelligence for every major game species across America.
               </p>
             </div>
           </RevealSection>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+          {/* Bento grid: first item spans 2 rows */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 auto-rows-fr">
             {SPECIES.map((species, i) => (
-              <RevealSection key={species.name} delay={i * 80}>
-                <div className="group relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer">
+              <RevealSection
+                key={species.name}
+                delay={i * 80}
+                className={i === 0 ? "row-span-2" : ""}
+              >
+                <Link
+                  href={`/species/${species.name.toLowerCase()}`}
+                  className={`group relative overflow-hidden rounded-xl cursor-pointer block h-full ${
+                    i === 0 ? "aspect-auto" : "aspect-[4/5]"
+                  }`}
+                >
                   <Image
                     src={species.image}
                     alt={`${species.name} in natural habitat`}
@@ -499,15 +509,18 @@ export default function LandingPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
-                    <h3 className="text-white text-lg sm:text-xl font-bold mb-1">
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <h3 className="text-white text-lg sm:text-xl font-bold mb-0.5">
                       {species.name}
                     </h3>
                     <p className="text-white/70 text-xs sm:text-sm">
                       {species.stats}
                     </p>
+                    <span className="inline-flex items-center gap-1 text-xs text-white/0 group-hover:text-white/70 transition-colors duration-300 mt-1.5">
+                      Explore <ArrowRight className="w-3 h-3" />
+                    </span>
                   </div>
-                </div>
+                </Link>
               </RevealSection>
             ))}
           </div>
@@ -517,7 +530,7 @@ export default function LandingPage() {
       {/* ============================================================ */}
       {/*  WHY HUNTSCOUT PRO (Photo background)                        */}
       {/* ============================================================ */}
-      <section className="relative py-24 sm:py-32 overflow-hidden">
+      <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
         {/* Parallax-style background */}
         <div className="absolute inset-0">
           <Image
@@ -533,31 +546,34 @@ export default function LandingPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <RevealSection>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight text-white">
                 Why HuntScout Pro?
               </h2>
-              <p className="text-white/60 max-w-2xl mx-auto text-lg">
+              <p className="text-white/60 mt-3 max-w-2xl mx-auto text-lg">
                 Everything you need to make smarter applications and fill more tags.
               </p>
             </div>
           </RevealSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Horizontal icon+text layout in 2 cols */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {FEATURES.map((f, i) => {
               const Icon = f.icon;
               return (
-                <RevealSection key={f.title} delay={i * 100}>
-                  <div className="group bg-white/[0.07] backdrop-blur-md border border-white/10 rounded-2xl p-6 sm:p-7 hover:-translate-y-1 hover:bg-white/[0.12] transition-all duration-300">
-                    <div className="w-12 h-12 rounded-xl bg-gold/20 text-gold flex items-center justify-center mb-5">
-                      <Icon className="w-6 h-6" />
+                <RevealSection key={f.title} delay={i * 80}>
+                  <div className="group flex items-start gap-4 bg-white/[0.07] backdrop-blur-md border border-white/10 rounded-xl p-5 hover:bg-white/[0.12] transition-all duration-300">
+                    <div className="w-10 h-10 rounded-lg bg-gold/20 text-gold flex items-center justify-center shrink-0">
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      {f.title}
-                    </h3>
-                    <p className="text-sm text-white/60 leading-relaxed">
-                      {f.description}
-                    </p>
+                    <div>
+                      <h3 className="text-base font-semibold text-white mb-1">
+                        {f.title}
+                      </h3>
+                      <p className="text-sm text-white/60 leading-relaxed">
+                        {f.description}
+                      </p>
+                    </div>
                   </div>
                 </RevealSection>
               );
@@ -569,14 +585,14 @@ export default function LandingPage() {
       {/* ============================================================ */}
       {/*  STATE MAP GRID                                              */}
       {/* ============================================================ */}
-      <section className="py-20 sm:py-24">
+      <section className="py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <RevealSection>
-            <div className="text-center mb-14">
-              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight text-foreground">
                 All 50 States. One Platform.
               </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              <p className="text-lg text-muted-foreground mt-3 max-w-2xl mx-auto">
                 Select a state to explore draw odds, harvest data, and unit
                 intelligence.
               </p>
@@ -585,11 +601,16 @@ export default function LandingPage() {
 
           {REGIONS.map((region) => (
             <RevealSection key={region.name}>
-              <div className="mb-10 last:mb-0">
-                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-                  {region.name}
-                </h3>
-                <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-13 gap-2">
+              <div className="mb-8 last:mb-0">
+                <div className="flex items-baseline gap-2 mb-3">
+                  <h3 className="text-base font-bold text-foreground tracking-wide">
+                    {region.name}
+                  </h3>
+                  <span className="text-xs font-medium text-muted-foreground">
+                    {region.states.length} states
+                  </span>
+                </div>
+                <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-13 gap-2.5">
                   {region.states.map((s) => (
                     <StateCard key={s.abbr} {...s} />
                   ))}
@@ -623,7 +644,7 @@ export default function LandingPage() {
       {/* ============================================================ */}
       {/*  HOW IT WORKS                                                */}
       {/* ============================================================ */}
-      <section className="relative py-20 sm:py-28 overflow-hidden">
+      <section className="relative py-16 sm:py-20 overflow-hidden">
         {/* Subtle background image */}
         <div className="absolute inset-0">
           <Image
@@ -638,49 +659,50 @@ export default function LandingPage() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <RevealSection>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight text-foreground">
                 How It Works
               </h2>
-              <p className="text-muted-foreground max-w-xl mx-auto text-lg">
+              <p className="text-lg text-muted-foreground mt-3 max-w-xl mx-auto">
                 Three simple steps to smarter hunting applications.
               </p>
             </div>
           </RevealSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
+          {/* Horizontal steps on desktop */}
+          <div className="flex flex-col md:flex-row gap-6 md:gap-4 relative items-stretch">
             {/* Connecting line (desktop only) */}
-            <div className="hidden md:block absolute top-7 left-[calc(16.67%+28px)] right-[calc(16.67%+28px)] h-0.5 bg-gradient-to-r from-gold/40 via-gold to-gold/40" />
+            <div className="hidden md:block absolute top-6 left-[calc(16.67%+24px)] right-[calc(16.67%+24px)] h-0.5 bg-gradient-to-r from-gold/40 via-gold to-gold/40" />
 
             {[
               {
                 step: "1",
                 title: "Choose Your State",
-                desc: "Select from all 50 states and pick your target species. We have data for elk, deer, pronghorn, moose, bear, sheep, goat, turkey, and more.",
+                desc: "Select from all 50 states and pick your target species.",
                 icon: MapPin,
               },
               {
                 step: "2",
                 title: "Filter & Compare",
-                desc: "Narrow by species, season type, and your preference points. Compare units side by side to find hidden gems.",
+                desc: "Narrow by species, season type, and points. Compare units side by side.",
                 icon: BarChart3,
               },
               {
                 step: "3",
                 title: "Apply With Confidence",
-                desc: "Make data-driven application decisions. Know your real odds before you spend money and points.",
+                desc: "Make data-driven decisions. Know your real odds before you apply.",
                 icon: Shield,
               },
             ].map((item, i) => (
-              <RevealSection key={item.step} delay={i * 150}>
+              <RevealSection key={item.step} delay={i * 120} className="flex-1">
                 <div className="text-center relative">
-                  <div className="w-14 h-14 rounded-full gradient-gold text-gold-foreground flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-lg ring-4 ring-background relative z-10">
+                  <div className="w-12 h-12 rounded-full gradient-gold text-gold-foreground flex items-center justify-center text-lg font-bold mx-auto mb-4 shadow-lg ring-4 ring-background relative z-10">
                     {item.step}
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-lg font-semibold text-foreground mb-1.5">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-xs mx-auto">
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-[240px] mx-auto">
                     {item.desc}
                   </p>
                 </div>
@@ -693,7 +715,7 @@ export default function LandingPage() {
       {/* ============================================================ */}
       {/*  PRICING                                                     */}
       {/* ============================================================ */}
-      <section id="pricing" className="relative py-20 sm:py-28 overflow-hidden">
+      <section id="pricing" className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
           <Image
@@ -708,14 +730,14 @@ export default function LandingPage() {
 
         <div className="relative z-10 max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           <RevealSection>
-            <div className="bg-white/[0.08] backdrop-blur-lg border border-white/15 rounded-3xl p-8 sm:p-10 text-center shadow-2xl shadow-black/30">
+            <div className="bg-white/[0.08] backdrop-blur-lg border border-white/15 rounded-3xl p-7 sm:p-9 text-center shadow-2xl shadow-black/30">
               {/* Badge */}
-              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-gold/20 text-gold text-xs font-semibold uppercase tracking-wider mb-6">
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-gold/20 text-gold text-xs font-semibold uppercase tracking-wider mb-5">
                 Early Bird Special
               </div>
 
               {/* Price */}
-              <div className="mb-2">
+              <div className="mb-1.5">
                 <span className="text-lg text-white/40 line-through mr-2">
                   $29.99
                 </span>
@@ -724,24 +746,30 @@ export default function LandingPage() {
                 </span>
                 <span className="text-white/60 ml-1">/year</span>
               </div>
-              <p className="text-gold font-semibold text-sm mb-6">
+              <p className="text-gold font-semibold text-sm mb-5">
                 Save 50% + Get Year 2 FREE
               </p>
 
-              {/* Countdown */}
-              <div className="mb-8">
-                <p className="text-xs text-white/50 uppercase tracking-wider mb-3">
-                  Offer ends April 30, 2026
-                </p>
+              {/* Countdown -- prominent with urgency indicator */}
+              <div className="mb-6 bg-white/[0.06] border border-white/10 rounded-xl p-4">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500" />
+                  </span>
+                  <p className="text-xs text-white/70 uppercase tracking-wider font-semibold">
+                    Offer ends April 30, 2026
+                  </p>
+                </div>
                 <CountdownTimer />
               </div>
 
-              {/* Feature checklist */}
-              <ul className="text-left space-y-3 mb-8">
+              {/* Feature checklist -- two columns */}
+              <ul className="text-left grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2.5 mb-7">
                 {PRICING_FEATURES.map((feat) => (
                   <li
                     key={feat}
-                    className="flex items-start gap-3 text-sm text-white/80"
+                    className="flex items-start gap-2.5 text-sm text-white/80"
                   >
                     <Check className="w-4 h-4 text-green-400 shrink-0 mt-0.5" />
                     {feat}
@@ -752,7 +780,7 @@ export default function LandingPage() {
               {/* CTA */}
               <Link
                 href="/pricing"
-                className="inline-flex items-center justify-center w-full px-6 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300 mb-4"
+                className="inline-flex items-center justify-center w-full px-6 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300 mb-3"
               >
                 Start Your Subscription
               </Link>
@@ -761,7 +789,7 @@ export default function LandingPage() {
               </p>
 
               {/* Trust */}
-              <div className="mt-6 pt-6 border-t border-white/10">
+              <div className="mt-5 pt-5 border-t border-white/10">
                 <p className="text-sm text-white/50">
                   Join{" "}
                   <span className="text-white font-semibold">12,000+</span>{" "}
@@ -776,7 +804,7 @@ export default function LandingPage() {
       {/* ============================================================ */}
       {/*  TESTIMONIALS                                                */}
       {/* ============================================================ */}
-      <section className="relative py-20 sm:py-28 bg-[#111] overflow-hidden">
+      <section className="relative py-16 sm:py-20 lg:py-24 bg-[#111] overflow-hidden">
         {/* Subtle photo accent */}
         <div className="absolute inset-0 opacity-[0.08]">
           <Image
@@ -790,30 +818,26 @@ export default function LandingPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <RevealSection>
-            <div className="text-center mb-14">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight text-white">
                 What Hunters Are Saying
               </h2>
-              <p className="text-white/50 text-lg">
+              <p className="text-white/50 text-lg mt-3">
                 Real stories from hunters who draw more tags.
               </p>
             </div>
           </RevealSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {TESTIMONIALS.map((t, i) => (
-              <RevealSection key={t.name} delay={i * 120}>
-                <div className="bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:-translate-y-1 hover:bg-white/[0.10] transition-all duration-300">
-                  {/* Stars */}
-                  <div className="flex items-center gap-0.5 mb-4">
-                    {Array.from({ length: 5 }).map((_, j) => (
-                      <Star
-                        key={j}
-                        className="w-4 h-4 fill-gold text-gold"
-                      />
-                    ))}
+              <RevealSection key={t.name} delay={i * 100}>
+                <div className="bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/[0.10] transition-all duration-300">
+                  {/* Compact star indicator */}
+                  <div className="flex items-center gap-1 mb-3">
+                    <Star className="w-3.5 h-3.5 fill-gold text-gold" />
+                    <span className="text-xs text-gold/70 font-medium">5.0</span>
                   </div>
-                  <blockquote className="text-sm text-white/80 leading-relaxed mb-5">
+                  <blockquote className="text-sm text-white/80 leading-relaxed mb-4">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
                   <div className="text-sm">
@@ -835,11 +859,11 @@ export default function LandingPage() {
       {/* ============================================================ */}
       {/*  FAQ                                                         */}
       {/* ============================================================ */}
-      <section id="faq" className="py-20 sm:py-24 bg-card border-t border-border">
+      <section id="faq" className="py-16 sm:py-20 lg:py-24 bg-card border-t border-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <RevealSection>
-            <div className="text-center mb-14">
-              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight text-foreground">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -856,7 +880,7 @@ export default function LandingPage() {
       {/* ============================================================ */}
       {/*  FINAL CTA                                                   */}
       {/* ============================================================ */}
-      <section className="relative py-24 sm:py-32 text-white text-center overflow-hidden">
+      <section className="relative py-16 sm:py-20 text-white text-center overflow-hidden">
         {/* Background photo */}
         <div className="absolute inset-0">
           <Image
@@ -869,29 +893,29 @@ export default function LandingPage() {
           <div className="absolute inset-0 bg-black/60" />
         </div>
 
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <RevealSection>
             <h2
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5"
+              className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight mb-4"
               style={{ textShadow: "0 2px 16px rgba(0,0,0,0.4)" }}
             >
               Start Planning Your Next Hunt
             </h2>
-            <p className="text-white/70 text-lg sm:text-xl mb-10 max-w-xl mx-auto">
+            <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
               Stop guessing. Start drawing. Join thousands of hunters making
-              smarter application decisions with HuntScout Pro.
+              smarter decisions with HuntScout Pro.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
                 href="/states"
-                className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold border-2 border-white/40 text-white hover:bg-white/15 hover:border-white/60 backdrop-blur-sm transition-all duration-300"
+                className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold border-2 border-white/40 text-white hover:bg-white/15 hover:border-white/60 backdrop-blur-sm transition-all duration-300"
               >
                 Explore States
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300"
               >
                 Subscribe &mdash; 50% Off
               </Link>
