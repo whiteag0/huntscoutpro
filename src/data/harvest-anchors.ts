@@ -45,11 +45,46 @@ export const HARVEST_ANCHORS: Record<string, StateHarvestAnchor[]> = {
     },
     {
       species: 'mule-deer',
-      statewideTotalHarvest: {},
+      statewideTotalHarvest: {
+        2020: 38899,
+        2021: 40561,
+        2022: 38049,
+        2023: 31590,
+        2024: 33205,
+      },
       statewideHunters: {},
       statewideSuccessRate: {},
       notes:
         'Pop 384,100 (2024), 375,710 (2023). ~95% mule deer statewide.',
+    },
+    {
+      species: 'pronghorn',
+      statewideTotalHarvest: {
+        2020: 11206,
+        2021: 10256,
+        2022: 9844,
+        2023: 7639,
+        2024: 7949,
+      },
+      statewideHunters: {},
+      statewideSuccessRate: {},
+      notes:
+        'CPW pronghorn harvest reports. Declining trend 2020-2023, slight recovery 2024.',
+    },
+    {
+      species: 'turkey',
+      statewideTotalHarvest: {
+        2020: 6479,
+        2021: 5782,
+        2022: 5423,
+        2023: 5694,
+        2024: 5903,
+        2025: 7331,
+      },
+      statewideHunters: {},
+      statewideSuccessRate: {},
+      notes:
+        'Spring turkey harvest. Increase in 2025 due to expanded OTC opportunities.',
     },
     {
       species: 'sheep',
@@ -76,7 +111,26 @@ export const HARVEST_ANCHORS: Record<string, StateHarvestAnchor[]> = {
       statewideSuccessRate: {},
       avgTagsIssued: 685,
       notes:
-        '~659 permits (2024), ~712 permits (2025).',
+        '~659 permits (2024), ~712 permits (2025). 664 licenses, 59,864 applicants (2024).',
+    },
+    {
+      species: 'bear',
+      statewideTotalHarvest: {},
+      statewideHunters: {},
+      statewideSuccessRate: {},
+      avgTagsIssued: 20006,
+      notes:
+        '20,006 licenses (2024). Success ~15-20%. Quota-based system.',
+    },
+    {
+      species: 'lion',
+      statewideTotalHarvest: {
+        2024: 500,
+      },
+      statewideHunters: {},
+      statewideSuccessRate: {},
+      notes:
+        'Statewide quota 674. ~500 harvest (2023-24). Reported by DAU regions.',
     },
   ],
 

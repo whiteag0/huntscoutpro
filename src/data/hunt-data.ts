@@ -24,7 +24,17 @@ import {
 import { HARVEST_ANCHORS, StateHarvestAnchor } from './harvest-anchors';
 
 // Real per-GMU data imports
-import { COLORADO_ELK_DATA } from './states/colorado';
+import {
+  COLORADO_ELK_DATA,
+  COLORADO_DEER_DATA,
+  COLORADO_PRONGHORN_DATA,
+  COLORADO_TURKEY_DATA,
+  COLORADO_MOOSE_DATA,
+  COLORADO_SHEEP_DATA,
+  COLORADO_GOAT_DATA,
+  COLORADO_BEAR_DATA,
+  COLORADO_LION_DATA,
+} from './states/colorado';
 import { WYOMING_ELK_DATA, WYOMING_MOOSE_DATA } from './states/wyoming';
 import { IDAHO_ELK_DATA } from './states/idaho';
 import { MONTANA_ELK_DATA } from './states/montana';
@@ -61,6 +71,14 @@ const REAL_GMU_LOOKUP = new Map<string, RealGMUData>();
 
 function buildRealGMULookup() {
   for (const d of COLORADO_ELK_DATA) REAL_GMU_LOOKUP.set(`colorado-elk-${d.gmu}-${d.year}`, d);
+  for (const d of COLORADO_DEER_DATA) REAL_GMU_LOOKUP.set(`colorado-mule-deer-${d.gmu}-${d.year}`, d);
+  for (const d of COLORADO_PRONGHORN_DATA) REAL_GMU_LOOKUP.set(`colorado-pronghorn-${d.gmu}-${d.year}`, d);
+  for (const d of COLORADO_TURKEY_DATA) REAL_GMU_LOOKUP.set(`colorado-turkey-${d.gmu}-${d.year}`, d);
+  for (const d of COLORADO_MOOSE_DATA) REAL_GMU_LOOKUP.set(`colorado-moose-${d.gmu}-${d.year}`, d);
+  for (const d of COLORADO_SHEEP_DATA) REAL_GMU_LOOKUP.set(`colorado-sheep-${d.gmu}-${d.year}`, d);
+  for (const d of COLORADO_GOAT_DATA) REAL_GMU_LOOKUP.set(`colorado-goat-${d.gmu}-${d.year}`, d);
+  for (const d of COLORADO_BEAR_DATA) REAL_GMU_LOOKUP.set(`colorado-bear-${d.gmu}-${d.year}`, d);
+  for (const d of COLORADO_LION_DATA) REAL_GMU_LOOKUP.set(`colorado-lion-${d.gmu}-${d.year}`, d);
   for (const d of WYOMING_ELK_DATA) REAL_GMU_LOOKUP.set(`wyoming-elk-${d.gmu}-${d.year}`, d);
   for (const d of IDAHO_ELK_DATA) REAL_GMU_LOOKUP.set(`idaho-elk-${d.gmu}-${d.year}`, d);
   for (const d of MONTANA_ELK_DATA) REAL_GMU_LOOKUP.set(`montana-elk-${d.gmu}-${d.year}`, d);
