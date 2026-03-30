@@ -11,8 +11,8 @@ interface DataDisclaimerProps {
 
 // States/species combos with real, verified data
 const VERIFIED_DATA: Record<string, string[]> = {
-  colorado: ["elk"],
-  wyoming: ["elk", "moose"],
+  colorado: ["elk", "mule-deer", "pronghorn", "turkey", "moose", "bear", "sheep", "goat", "lion"],
+  wyoming: ["elk", "mule-deer", "whitetail", "pronghorn", "moose"],
   idaho: ["elk"],
   montana: ["elk"],
   wisconsin: ["whitetail", "turkey", "bear"],
