@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { CheckoutButton } from "@/components/CheckoutButton";
+import { PROMO } from "@/lib/promo";
 
 /* ------------------------------------------------------------------ */
 /*  DATA                                                               */
@@ -168,7 +169,7 @@ function BillingFAQItem({
       </button>
       <div
         className={`transition-all duration-300 ease-in-out ${
-          open ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden`}
       >
         <div className="px-6 pb-5 text-sm text-muted-foreground leading-relaxed">
@@ -226,15 +227,15 @@ export default function PricingPage() {
               {/* Price */}
               <div className="mb-2">
                 <span className="text-lg text-muted-foreground line-through mr-2">
-                  $29.99
+                  ${PROMO.originalPrice}
                 </span>
                 <span className="text-5xl sm:text-6xl font-extrabold text-foreground">
-                  $14.99
+                  ${PROMO.salePrice}
                 </span>
                 <span className="text-muted-foreground ml-1">/year</span>
               </div>
               <p className="text-gold font-semibold text-sm mb-8">
-                Save 50% + Get Year 2 FREE
+                Save {PROMO.percentOff}% + Get Year 2 FREE
               </p>
 
               {/* Countdown */}
@@ -259,7 +260,11 @@ export default function PricingPage() {
               </ul>
 
               {/* CTA */}
-              <CheckoutButton />
+              <CheckoutButton
+                className="inline-flex items-center justify-center w-full px-6 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300 mb-3 cursor-pointer disabled:opacity-50"
+              >
+                Start Your Subscription
+              </CheckoutButton>
 
               <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                 <Shield className="w-3.5 h-3.5" />
@@ -271,7 +276,7 @@ export default function PricingPage() {
           {/* Trust */}
           <p className="text-center text-sm text-muted-foreground mt-6">
             Join{" "}
-            <span className="font-semibold text-foreground">12,000+</span>{" "}
+            <span className="font-semibold text-foreground">{PROMO.socialProofCount}</span>{" "}
             hunters already using HuntScout Pro
           </p>
         </div>
@@ -414,7 +419,11 @@ export default function PricingPage() {
           <div className="mb-8">
             <CountdownTimer />
           </div>
-          <CheckoutButton />
+          <CheckoutButton
+            className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300 cursor-pointer disabled:opacity-50"
+          >
+            Start Your Subscription
+          </CheckoutButton>
           <p className="text-xs text-white/40 mt-4">
             30-day money-back guarantee &middot; Cancel anytime
           </p>

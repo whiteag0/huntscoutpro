@@ -9,6 +9,7 @@ import {
   SEASON_LABELS,
   SPECIES_SEASONS,
 } from "@/data/types";
+import { DemoGate } from "@/components/DemoGate";
 
 // ============================================================
 // Types
@@ -422,8 +423,81 @@ export default function PlannerPage() {
     );
   }
 
+  const plannerPreview = (
+    <div className="bg-background">
+      {/* Header */}
+      <section className="bg-gradient-to-br from-[#1a3a1a] via-[#0f2a0f] to-[#1c1917] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">
+                Hunt Planner
+              </h1>
+              <p className="text-white/60 max-w-xl">
+                Organize your applications and hunts across all 50 states.
+                Track deadlines, budget, and gear checklists in one place.
+              </p>
+            </div>
+            <div className="flex gap-2">
+              <span className="px-4 py-2 rounded-lg border border-white/20 text-white/40 text-sm font-medium">
+                Export JSON
+              </span>
+              <span className="px-4 py-2 rounded-lg border border-white/20 text-white/40 text-sm font-medium">
+                Import
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Preview tabs */}
+        <div className="flex gap-1 border-b border-border mb-8">
+          {["My Hunts", "Timeline", "Budget", "Gear Checklist"].map((tab, i) => (
+            <span
+              key={tab}
+              className={`px-4 py-3 text-sm font-medium border-b-2 whitespace-nowrap ${
+                i === 0
+                  ? "border-primary text-primary"
+                  : "border-transparent text-muted-foreground"
+              }`}
+            >
+              {tab}
+              <span className="ml-1.5 text-xs opacity-60">{i === 0 ? "3" : "0"}</span>
+            </span>
+          ))}
+        </div>
+
+        {/* Sample hunt cards */}
+        <div className="space-y-3">
+          {[
+            { state: "Colorado", species: "Elk", unit: "61", status: "Applied", deadline: "Apr 1, 2026", color: "bg-amber-100 text-amber-800 border-amber-300" },
+            { state: "Montana", species: "Mule Deer", unit: "270", status: "Planning", deadline: "Jun 1, 2026", color: "bg-blue-100 text-blue-800 border-blue-300" },
+            { state: "Wyoming", species: "Pronghorn", unit: "66", status: "Drawn", deadline: "--", color: "bg-green-100 text-green-800 border-green-300" },
+          ].map((hunt) => (
+            <div key={hunt.unit} className="border border-border rounded-xl p-4 bg-card flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <div>
+                  <div className="font-semibold text-foreground">{hunt.state} - Unit {hunt.unit}</div>
+                  <div className="text-sm text-muted-foreground">{hunt.species}</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-xs text-muted-foreground">{hunt.deadline}</span>
+                <span className={`text-xs font-medium px-2 py-0.5 rounded-full border ${hunt.color}`}>
+                  {hunt.status}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-background">
+      <DemoGate feature="the Hunt Planner" preview={plannerPreview}>
       {/* Header */}
       <section className="bg-gradient-to-br from-[#1a3a1a] via-[#0f2a0f] to-[#1c1917] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
@@ -1078,6 +1152,7 @@ export default function PlannerPage() {
           </div>
         )}
       </div>
+      </DemoGate>
     </div>
   );
 }

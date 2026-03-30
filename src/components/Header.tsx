@@ -119,6 +119,14 @@ export function Header() {
                 <User className="h-4 w-4" />
                 {session.user?.name?.split(" ")[0]}
               </span>
+              {!(session.user as Record<string, unknown>)?.isPro && (
+                <Link
+                  href="/pricing"
+                  className="px-3 py-1.5 text-xs font-bold rounded-lg gradient-gold text-gold-foreground shadow-sm hover:shadow-md transition-shadow"
+                >
+                  Upgrade
+                </Link>
+              )}
               <button
                 onClick={() => signOut()}
                 className="flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-lg border border-border hover:bg-muted transition-colors cursor-pointer"
@@ -193,6 +201,15 @@ export function Header() {
                   <User className="h-4 w-4" />
                   {session.user?.name || session.user?.email}
                 </span>
+                {!(session.user as Record<string, unknown>)?.isPro && (
+                  <Link
+                    href="/pricing"
+                    onClick={() => setMobileOpen(false)}
+                    className="px-3 py-2 text-sm font-bold rounded-lg gradient-gold text-gold-foreground text-center"
+                  >
+                    Upgrade to Pro
+                  </Link>
+                )}
                 <button
                   onClick={() => signOut()}
                   className="flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg border border-border hover:bg-muted transition-colors cursor-pointer"

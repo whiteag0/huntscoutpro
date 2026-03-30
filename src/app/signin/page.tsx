@@ -1,10 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { signIn } from "next-auth/react";
+import { useSearchParams } from "next/navigation";
 import { Crosshair, Mail, Lock, AlertCircle } from "lucide-react";
 
-export default function SignInPage() {
+function SignInForm() {
+  const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get("callbackUrl") || "/states";
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -25,7 +29,7 @@ export default function SignInPage() {
       setError("Invalid email or password.");
       setLoading(false);
     } else {
-      window.location.href = "/";
+      window.location.href = callbackUrl;
     }
   }
 
@@ -109,7 +113,7 @@ export default function SignInPage() {
 
           {/* Google sign-in */}
           <button
-            onClick={() => signIn("google", { callbackUrl: "/" })}
+            onClick={() => signIn("google", { callbackUrl })}
             className="w-full flex items-center justify-center gap-3 px-4 py-2.5 rounded-xl border border-border bg-background hover:bg-muted transition-colors font-medium text-sm cursor-pointer"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -127,5 +131,19 @@ export default function SignInPage() {
         </p>
       </div>
     </div>
+  );
+}
+
+export default function SignInPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-amber-500" />
+        </div>
+      }
+    >
+      <SignInForm />
+    </Suspense>
   );
 }

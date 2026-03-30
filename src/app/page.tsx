@@ -18,6 +18,7 @@ import {
   Shield,
 } from "lucide-react";
 import { CountdownTimer } from "@/components/CountdownTimer";
+import { PROMO } from "@/lib/promo";
 
 /* ------------------------------------------------------------------ */
 /*  SCROLL ANIMATION HOOK                                              */
@@ -332,7 +333,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
       </button>
       <div
         className={`transition-all duration-300 ease-in-out ${
-          open ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden`}
       >
         <div className="px-6 pb-5 text-sm text-muted-foreground leading-relaxed">
@@ -403,7 +404,7 @@ export default function LandingPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/40 border border-gold/40 text-sm backdrop-blur-md">
               <span className="animate-pulse-soft inline-block w-2 h-2 rounded-full bg-gold" />
               <span className="text-gold font-medium">
-                Limited Time: 50% off + 2nd year FREE through April 30th
+                {PROMO.tagline} through {PROMO.expiresLabel}
               </span>
             </div>
           </div>
@@ -427,17 +428,17 @@ export default function LandingPage() {
 
             <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row items-start gap-3 mb-12">
               <Link
+                href="/pricing"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300"
+              >
+                {PROMO.ctaText}
+              </Link>
+              <Link
                 href="/states"
                 className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold border-2 border-white/40 text-white hover:bg-white/15 hover:border-white/60 backdrop-blur-sm transition-all duration-300"
               >
                 Explore States
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/pricing"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300"
-              >
-                Subscribe &mdash; $14.99/yr
               </Link>
             </div>
           </div>
@@ -496,7 +497,7 @@ export default function LandingPage() {
                 className={i === 0 ? "row-span-2" : ""}
               >
                 <Link
-                  href={`/species/${species.name.toLowerCase()}`}
+                  href="/states"
                   className={`group relative overflow-hidden rounded-xl cursor-pointer block h-full ${
                     i === 0 ? "aspect-auto" : "aspect-[4/5]"
                   }`}
@@ -739,15 +740,15 @@ export default function LandingPage() {
               {/* Price */}
               <div className="mb-1.5">
                 <span className="text-lg text-white/40 line-through mr-2">
-                  $29.99
+                  ${PROMO.originalPrice}
                 </span>
                 <span className="text-5xl sm:text-6xl font-extrabold text-white">
-                  $14.99
+                  ${PROMO.salePrice}
                 </span>
                 <span className="text-white/60 ml-1">/year</span>
               </div>
               <p className="text-gold font-semibold text-sm mb-5">
-                Save 50% + Get Year 2 FREE
+                Save {PROMO.percentOff}% + Get Year 2 FREE
               </p>
 
               {/* Countdown -- prominent with urgency indicator */}
@@ -792,7 +793,7 @@ export default function LandingPage() {
               <div className="mt-5 pt-5 border-t border-white/10">
                 <p className="text-sm text-white/50">
                   Join{" "}
-                  <span className="text-white font-semibold">12,000+</span>{" "}
+                  <span className="text-white font-semibold">{PROMO.socialProofCount}</span>{" "}
                   hunters already using HuntScout Pro
                 </p>
               </div>

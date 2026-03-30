@@ -23,15 +23,12 @@ const stateLinks = [
 
 const resourceLinks = [
   { href: "/#faq", label: "FAQ" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact Us" },
   { href: "/about", label: "About" },
 ];
 
 const legalLinks = [
   { href: "/terms", label: "Terms of Service" },
   { href: "/privacy", label: "Privacy Policy" },
-  { href: "/refund", label: "Refund Policy" },
 ];
 
 function FooterColumn({

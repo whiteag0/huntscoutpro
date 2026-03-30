@@ -15,12 +15,16 @@ export function CountdownTimer() {
     minutes: number;
     seconds: number;
   } | null>(null);
+  const [expired, setExpired] = useState(false);
 
   useEffect(() => {
     function calc() {
       const now = Date.now();
       const diff = TARGET_DATE - now;
-      if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+      if (diff <= 0) {
+        setExpired(true);
+        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+      }
       return {
         days: Math.floor(diff / (1000 * 60 * 60 * 24)),
         hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
@@ -28,10 +32,16 @@ export function CountdownTimer() {
         seconds: Math.floor((diff / 1000) % 60),
       };
     }
-    setTimeLeft(calc());
-    const interval = setInterval(() => setTimeLeft(calc()), 1000);
-    return () => clearInterval(interval);
-  }, []);
+    const result = calc();
+    setTimeLeft(result);
+    if (!expired) {
+      const interval = setInterval(() => {
+        const t = calc();
+        setTimeLeft(t);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [expired]);
 
   if (!timeLeft) {
     return (
@@ -40,6 +50,16 @@ export function CountdownTimer() {
         <div className="w-16 h-14 rounded-lg bg-white/5 animate-pulse" />
         <div className="w-16 h-14 rounded-lg bg-white/5 animate-pulse" />
         <div className="w-16 h-14 rounded-lg bg-white/5 animate-pulse" />
+      </div>
+    );
+  }
+
+  if (expired) {
+    return (
+      <div className="flex items-center justify-center py-3">
+        <p className="text-base sm:text-lg font-semibold text-gold">
+          Offer Extended &mdash; Subscribe Today
+        </p>
       </div>
     );
   }
