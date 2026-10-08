@@ -1,18 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
-import Stripe from "stripe";
+import type Stripe from "stripe";
+import { stripe } from "@/lib/stripe";
+import { sendOnboardingEmails, cancelOnboardingForPayment } from "@/lib/onboarding";
 
-const stripe = process.env.STRIPE_SECRET_KEY
-  ? new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2026-02-25.clover" })
-  : null;
-
-const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET || '';
+const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET || "";
 
 export async function POST(req: NextRequest) {
-  if (!stripe) {
+  if (!stripe || !webhookSecret) {
     return NextResponse.json({ error: "Stripe not configured." }, { status: 503 });
   }
   const body = await req.text();
-  const sig = req.headers.get("stripe-signature")!;
+  const sig = req.headers.get("stripe-signature") || "";
   let event: Stripe.Event;
   try {
     event = stripe.webhooks.constructEvent(body, sig, webhookSecret);
@@ -20,19 +18,26 @@ export async function POST(req: NextRequest) {
     console.error("Webhook signature verification failed:", err);
     return NextResponse.json({ error: "Webhook signature verification failed." }, { status: 400 });
   }
-  switch (event.type) {
-    case "checkout.session.completed": {
-      const session = event.data.object as Stripe.Checkout.Session;
-      console.log(`Payment successful for ${session.metadata?.userEmail || session.customer_email}`);
-      break;
+
+  // This Stripe account is shared with other products; sendOnboardingEmails
+  // ignores anything that isn't a paid HuntScout checkout.
+  if (event.type === "checkout.session.completed" || event.type === "checkout.session.async_payment_succeeded") {
+    const session = event.data.object as Stripe.Checkout.Session;
+    try {
+      const result = await sendOnboardingEmails(session);
+      if (result === "sent") console.log(`Onboarding emails queued for checkout ${session.id}`);
+    } catch (err) {
+      // Non-2xx makes Stripe retry; idempotency keys prevent duplicate emails.
+      console.error(`Onboarding emails failed for checkout ${session.id}:`, err);
+      return NextResponse.json({ error: "Onboarding email failed." }, { status: 500 });
     }
-    case "payment_intent.succeeded": {
-      const paymentIntent = event.data.object as Stripe.PaymentIntent;
-      console.log(`PaymentIntent succeeded: ${paymentIntent.id}`);
-      break;
-    }
-    default:
-      console.log(`Unhandled event type: ${event.type}`);
   }
+
+  if (event.type === "charge.refunded" || event.type === "charge.dispute.created") {
+    const obj = event.data.object as Stripe.Charge | Stripe.Dispute;
+    const pi = typeof obj.payment_intent === "string" ? obj.payment_intent : obj.payment_intent?.id;
+    if (pi) await cancelOnboardingForPayment(pi).catch((err) => console.error("Cancel onboarding failed:", err));
+  }
+
   return NextResponse.json({ received: true });
 }

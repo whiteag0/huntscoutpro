@@ -62,7 +62,7 @@ export const authConfig: NextAuthConfig = {
     signIn: "/signin",
   },
   callbacks: {
-    async jwt({ token, user, trigger }) {
+    async jwt({ token, user, trigger, session }) {
       if (user) {
         token.id = user.id;
       }
@@ -87,11 +87,19 @@ export const authConfig: NextAuthConfig = {
           token.isPro = ent.isPro;
           token.proExpiresAt = ent.expiresAt;
           token.proSource = ent.source;
+          token.paymentIntentId = ent.paymentIntentId ?? null;
+          token.onboarded = token.onboarded === true || ent.onboarded === true;
           token.entCheckedAt = Date.now();
         } else {
           // Back off for one interval rather than hammering a struggling Stripe.
           token.entCheckedAt = Date.now();
         }
+      }
+
+      // The /welcome form tells the session it's done. UX flag only; the
+      // durable record is on the PaymentIntent.
+      if (trigger === "update" && (session as { onboarded?: unknown } | undefined)?.onboarded === true) {
+        token.onboarded = true;
       }
 
       return token;
@@ -102,6 +110,7 @@ export const authConfig: NextAuthConfig = {
         session.user.isPro = token.isPro === true;
         session.user.isSuperAdmin = token.isSuperAdmin === true;
         session.user.proExpiresAt = (token.proExpiresAt as string | null | undefined) ?? null;
+        session.user.onboarded = token.onboarded === true;
       }
       return session;
     },

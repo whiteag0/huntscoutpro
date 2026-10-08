@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { useSession } from "next-auth/react";
 import {
+  ArrowRight,
   Check,
   X,
   ChevronDown,
@@ -175,7 +178,82 @@ function BillingFAQItem({
 /*  PAGE                                                               */
 /* ------------------------------------------------------------------ */
 
+function formatLongDate(iso: string | null | undefined) {
+  if (!iso) return null;
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return null;
+  return d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+}
+
+/** Shown instead of the sales page to anyone who already has Pro. */
+function ProMemberPanel({
+  isSuperAdmin,
+  proExpiresAt,
+}: {
+  isSuperAdmin: boolean;
+  proExpiresAt: string | null;
+}) {
+  const until = formatLongDate(proExpiresAt);
+  return (
+    <div className="min-h-screen gradient-subtle px-4 py-16 sm:py-24">
+      <div className="max-w-lg mx-auto bg-card border border-border rounded-2xl p-6 sm:p-8 text-center">
+        <div className="mx-auto w-14 h-14 rounded-full bg-green-500/15 flex items-center justify-center mb-5">
+          <Check className="w-7 h-7 text-green-600" aria-hidden="true" />
+        </div>
+        <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
+          You&apos;re a Pro member
+        </h1>
+        <p className="text-muted-foreground mt-3">
+          {isSuperAdmin
+            ? "Your admin account has full access to every state and species."
+            : until
+            ? `Your access to every state and species is active through ${until}.`
+            : "Your access to every state and species is active."}
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center mt-7">
+          <Link
+            href="/states"
+            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
+          >
+            Explore states <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
+          <Link
+            href="/account"
+            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold border border-border hover:bg-muted transition-all"
+          >
+            My account
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PricingPage() {
+  const { data: session, status } = useSession();
+
+  // Don't flash the sales page at a member while the session loads, but keep
+  // it in the server HTML (invisible) so crawlers still get the pricing copy.
+  // Same wrapper element once the session resolves, so nothing remounts.
+  const pending = status === "loading" && !session;
+
+  if (session?.user?.isPro) {
+    return (
+      <ProMemberPanel
+        isSuperAdmin={Boolean(session.user.isSuperAdmin)}
+        proExpiresAt={session.user.proExpiresAt ?? null}
+      />
+    );
+  }
+
+  return (
+    <div className={pending ? "invisible" : undefined} aria-busy={pending || undefined}>
+      <PricingMarketing />
+    </div>
+  );
+}
+
+function PricingMarketing() {
   return (
     <div className="min-h-screen">
       {/* ============================================================ */}

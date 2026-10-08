@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 import { Crosshair } from "lucide-react";
 
 const productLinks = [
@@ -23,6 +26,13 @@ const stateLinks = [
 
 const resourceLinks = [
   { href: "/#faq", label: "FAQ" },
+  { href: "/about", label: "About" },
+];
+
+// Pro members don't get the marketing FAQ (prices, refunds, sign-up pitch).
+const memberResourceLinks = [
+  { href: "/account", label: "My Account" },
+  { href: "/welcome", label: "Hunting Preferences" },
   { href: "/about", label: "About" },
 ];
 
@@ -60,6 +70,9 @@ function FooterColumn({
 }
 
 export function Footer() {
+  const { data: session } = useSession();
+  const isPro = Boolean(session?.user?.isPro);
+
   return (
     <footer className="text-white" style={{ backgroundColor: "#161311" }}>
       {/* Mountain silhouette decorative element */}
@@ -82,7 +95,10 @@ export function Footer() {
         <div className="py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
           <FooterColumn title="Product" links={productLinks} />
           <FooterColumn title="Popular States" links={stateLinks} />
-          <FooterColumn title="Resources" links={resourceLinks} />
+          <FooterColumn
+            title="Resources"
+            links={isPro ? memberResourceLinks : resourceLinks}
+          />
           <FooterColumn title="Legal" links={legalLinks} />
         </div>
 

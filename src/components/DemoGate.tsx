@@ -21,7 +21,9 @@ interface DemoGateProps {
 export function DemoGate({ children, preview, feature = "this data" }: DemoGateProps) {
   const { data: session, status } = useSession();
 
-  if (status === "loading") {
+  // Only block on the very first load. A refetch via update() also reports
+  // "loading" but keeps the session, and must not unmount a member's content.
+  if (status === "loading" && !session) {
     return (
       <div className="flex items-center justify-center min-h-[200px]">
         <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-amber-500" />

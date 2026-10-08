@@ -1,7 +1,14 @@
+"use client";
+
 import { Crosshair } from "lucide-react";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 export default function AboutPage() {
+  const { data: session, status } = useSession();
+  const isPro = Boolean(session?.user?.isPro);
+  const sessionPending = status === "loading" && !session;
+
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
@@ -48,13 +55,24 @@ export default function AboutPage() {
             </p>
           </section>
 
-          <div className="pt-4">
-            <Link
-              href="/pricing"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
-            >
-              Get Started with HuntScout Pro
-            </Link>
+          {/* Members get a way back into the tools; everyone else gets the sign-up CTA.
+              While the session loads, the sign-up link stays in the HTML but invisible. */}
+          <div className={sessionPending ? "pt-4 invisible" : "pt-4"}>
+            {isPro ? (
+              <Link
+                href="/states"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
+              >
+                Explore states
+              </Link>
+            ) : (
+              <Link
+                href="/pricing"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
+              >
+                Get Started with HuntScout Pro
+              </Link>
+            )}
           </div>
         </div>
       </div>
