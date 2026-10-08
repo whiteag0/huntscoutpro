@@ -1,22 +1,50 @@
 import { NextRequest, NextResponse } from "next/server";
-import Stripe from "stripe";
+import { auth } from "@/lib/auth";
+import { stripe } from "@/lib/stripe";
+import { getEntitlement, isHuntScoutSession, normalizeEmail, sessionAccessEnd } from "@/lib/entitlement";
 
-const stripe = process.env.STRIPE_SECRET_KEY
-  ? new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2026-02-25.clover" })
-  : null;
+export const dynamic = "force-dynamic";
 
+/**
+ * Membership status for the signed-in user only.
+ * With ?session_id=cs_..., also confirms that Checkout Session was a paid
+ * HuntScout purchase by this user (used by /success).
+ */
 export async function GET(req: NextRequest) {
-  const email = req.nextUrl.searchParams.get("email");
-  if (!email || !stripe) { return NextResponse.json({ isPro: false }); }
-  try {
-    const customers = await stripe.customers.list({ email, limit: 1 });
-    if (customers.data.length === 0) { return NextResponse.json({ isPro: false }); }
-    const customer = customers.data[0];
-    const payments = await stripe.paymentIntents.list({ customer: customer.id, limit: 10 });
-    const hasPaid = payments.data.some((p) => p.status === "succeeded");
-    return NextResponse.json({ isPro: hasPaid });
-  } catch (error) {
-    console.error("Subscription check error:", error);
-    return NextResponse.json({ isPro: false });
+  const session = await auth();
+  const email = session?.user?.email;
+  if (!email) {
+    return NextResponse.json({ error: "Not signed in." }, { status: 401 });
   }
+
+  const sessionId = req.nextUrl.searchParams.get("session_id");
+  let checkout: { paid: boolean } | undefined;
+
+  if (sessionId) {
+    if (!stripe || !/^cs_(test|live)_[A-Za-z0-9]+$/.test(sessionId)) {
+      checkout = { paid: false };
+    } else {
+      try {
+        const cs = await stripe.checkout.sessions.retrieve(sessionId, {
+          expand: ["payment_intent.latest_charge"],
+        });
+        const buyer = cs.customer_details?.email || cs.customer_email || cs.metadata?.userEmail || "";
+        checkout = {
+          paid:
+            isHuntScoutSession(cs) &&
+            !!sessionAccessEnd(cs) &&
+            normalizeEmail(buyer) === normalizeEmail(email),
+        };
+      } catch {
+        checkout = { paid: false };
+      }
+    }
+  }
+
+  const ent = await getEntitlement(email);
+  return NextResponse.json({
+    isPro: ent.isPro,
+    expiresAt: ent.expiresAt,
+    ...(checkout ? { checkout } : {}),
+  });
 }

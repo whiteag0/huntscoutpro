@@ -29,7 +29,7 @@ export function DemoGate({ children, preview, feature = "this data" }: DemoGateP
     );
   }
 
-  const isPro = (session?.user as Record<string, unknown>)?.isPro;
+  const isPro = session?.user?.isPro;
 
   // Pro users see everything
   if (session && isPro) {
@@ -76,7 +76,7 @@ export function DemoGate({ children, preview, feature = "this data" }: DemoGateP
                   Sign in to unlock {feature}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-5">
-                  Create a free account to see sample data, or upgrade to Pro for full access to all 50 states.
+                  Create a free account to see sample data, or upgrade to Pro for full access.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-3 justify-center">
                   <Link
@@ -101,7 +101,7 @@ export function DemoGate({ children, preview, feature = "this data" }: DemoGateP
                   Unlock full access to {feature}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-5">
-                  You&apos;re seeing a preview. Upgrade to Pro for complete draw odds, harvest data, and point analysis across all 50 states.
+                  You&apos;re seeing a preview. Upgrade to Pro for complete draw odds estimates, harvest data, and point analysis.
                 </p>
                 <Link
                   href="/pricing"

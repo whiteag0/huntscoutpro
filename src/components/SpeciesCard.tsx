@@ -12,11 +12,11 @@ const SPECIES_IMAGES: Record<Species, string> = {
   pronghorn:
     "https://images.unsplash.com/photo-1619923123687-57ccb74549ce?w=400&q=80&fit=crop&crop=faces",
   moose:
-    "https://images.unsplash.com/photo-1695246040798-cfa890a50377?w=400&q=80&fit=crop&crop=faces",
-  bear: "https://images.unsplash.com/photo-1730466576978-1691316fe296?w=400&q=80&fit=crop&crop=faces",
+    "https://images.unsplash.com/photo-1657582889588-1496762caac1?w=400&q=80&fit=crop&crop=faces",
+  bear: "https://images.unsplash.com/photo-1759082044349-597d61427e49?w=400&q=80&fit=crop&crop=faces",
   sheep:
     "https://images.unsplash.com/photo-1564846930470-4b034d717347?w=400&q=80&fit=crop&crop=faces",
-  goat: "https://images.unsplash.com/photo-1598662325033-aa44604e889e?w=400&q=80&fit=crop&crop=faces",
+  goat: "https://images.unsplash.com/photo-1676322108596-8b68d81208e8?w=400&q=80&fit=crop&crop=faces",
   lion: "https://images.unsplash.com/photo-1605235900483-2cb72b54c19f?w=400&q=80&fit=crop&crop=faces",
   turkey:
     "https://images.unsplash.com/photo-1606157705364-e70c37cec460?w=400&q=80&fit=crop&crop=faces",

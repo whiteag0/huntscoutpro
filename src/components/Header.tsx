@@ -115,11 +115,19 @@ export function Header() {
             <div className="h-8 w-20 rounded-lg bg-muted animate-pulse" />
           ) : session ? (
             <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground flex items-center gap-1.5">
+              <Link
+                href="/account"
+                className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-muted transition-colors"
+              >
                 <User className="h-4 w-4" />
-                {session.user?.name?.split(" ")[0]}
-              </span>
-              {!(session.user as Record<string, unknown>)?.isPro && (
+                {session.user?.name?.split(" ")[0] || "Account"}
+                {session.user?.isPro && (
+                  <span className="text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-500 leading-none">
+                    Pro
+                  </span>
+                )}
+              </Link>
+              {!session.user?.isPro && (
                 <Link
                   href="/pricing"
                   className="px-3 py-1.5 text-xs font-bold rounded-lg gradient-gold text-gold-foreground shadow-sm hover:shadow-md transition-shadow"
@@ -147,7 +155,7 @@ export function Header() {
                 href="/pricing"
                 className="relative px-4 py-2 text-sm font-bold rounded-lg gradient-gold text-gold-foreground shadow-sm hover:shadow-md transition-shadow"
               >
-                Subscribe — 50% Off
+                Get Pro — $14.99
               </Link>
             </>
           )}
@@ -197,11 +205,21 @@ export function Header() {
           <div className="mt-3 pt-3 border-t border-border flex flex-col gap-2">
             {session ? (
               <>
-                <span className="text-sm text-muted-foreground px-3 flex items-center gap-1.5">
+                <Link
+                  href="/account"
+                  onClick={() => setMobileOpen(false)}
+                  className="text-sm text-muted-foreground px-3 py-2 rounded-lg hover:bg-muted flex items-center gap-1.5"
+                >
                   <User className="h-4 w-4" />
                   {session.user?.name || session.user?.email}
-                </span>
-                {!(session.user as Record<string, unknown>)?.isPro && (
+                  {session.user?.isPro && (
+                    <span className="text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-500 leading-none">
+                      Pro
+                    </span>
+                  )}
+                  <span className="ml-auto text-xs">My account</span>
+                </Link>
+                {!session.user?.isPro && (
                   <Link
                     href="/pricing"
                     onClick={() => setMobileOpen(false)}
@@ -232,7 +250,7 @@ export function Header() {
                   onClick={() => setMobileOpen(false)}
                   className="px-3 py-2 text-sm font-bold rounded-lg gradient-gold text-gold-foreground text-center"
                 >
-                  Subscribe — 50% Off
+                  Get Pro — $14.99
                 </Link>
               </>
             )}

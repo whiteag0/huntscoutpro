@@ -23,11 +23,11 @@ const SPECIES_ICONS: Record<Species, string> = {
 
 const SPECIES_PHOTOS: Partial<Record<Species, string>> = {
   elk: "https://images.unsplash.com/photo-1633356984559-9877a6896ba8?w=1920&q=80",
-  "mule-deer": "https://images.unsplash.com/photo-1700244909533-b7ab4e4bd9ae?w=1920&q=80",
-  whitetail: "https://images.unsplash.com/photo-1700244909533-b7ab4e4bd9ae?w=1920&q=80",
+  "mule-deer": "https://images.unsplash.com/photo-1604869632600-7137337c2ad5?w=1920&q=80",
+  whitetail: "https://images.unsplash.com/photo-1606936405812-1bdddbd08fd5?w=1920&q=80",
   turkey: "https://images.unsplash.com/photo-1649532716965-c798cda4b153?w=1920&q=80",
   moose: "https://images.unsplash.com/photo-1657582889588-1496762caac1?w=1920&q=80",
-  bear: "https://images.unsplash.com/photo-1754534139545-7b733823a01a?w=1920&q=80",
+  bear: "https://images.unsplash.com/photo-1759082044349-597d61427e49?w=1920&q=80",
   pronghorn: "https://images.unsplash.com/photo-1702338520328-ea01c36f08e8?w=1920&q=80",
   sheep: "https://images.unsplash.com/photo-1562811931-fbf7e9a79245?w=1920&q=80",
 };
