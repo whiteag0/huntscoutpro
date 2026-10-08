@@ -7,7 +7,6 @@ import { signIn, useSession } from "next-auth/react";
 import {
   Check,
   ArrowRight,
-  MapPin,
   SlidersHorizontal,
   Columns3,
   Crosshair,
@@ -16,12 +15,13 @@ import {
   Calendar,
   Feather,
   Mail,
+  ListChecks,
 } from "lucide-react";
 
 function SuccessContent() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get("session_id");
-  const { status: authStatus, update } = useSession();
+  const { data: session, status: authStatus, update } = useSession();
   const [status, setStatus] = useState<"loading" | "success" | "pending" | "signin" | "error">(
     "loading"
   );
@@ -135,6 +135,10 @@ function SuccessContent() {
     );
   }
 
+  // Admins and members who already answered the hunting-profile questions go
+  // straight to the app; everyone else is pointed at /welcome first.
+  const onboarded = !!session?.user?.onboarded || !!session?.user?.isSuperAdmin;
+
   const INCLUDED_FEATURES = [
     { icon: Crosshair, label: "Draw odds estimates by unit" },
     { icon: TrendingUp, label: "Point creep analysis" },
@@ -172,68 +176,64 @@ function SuccessContent() {
             Get Started in 3 Steps
           </h2>
 
-          <div className="space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full gradient-gold text-gold-foreground flex items-center justify-center text-sm font-bold shrink-0">
-                1
+          <ol className="space-y-6">
+            <li className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-full gradient-gold text-gold-foreground flex items-center justify-center text-sm font-bold shrink-0" aria-hidden="true">
+                {onboarded ? <Check className="w-5 h-5" /> : 1}
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-1 flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-gold" />
-                  Choose Your State
+                  <ListChecks className="w-4 h-4 text-gold" aria-hidden="true" />
+                  Tell Us About Your Hunts
                 </h3>
                 <p className="text-sm text-muted-foreground mb-2">
-                  Browse the states and pick the ones you plan to apply in this
-                  season.
+                  {onboarded
+                    ? "Done. You can update your states, species, units and points anytime."
+                    : "Six quick questions (about 2 minutes) on your states, species, units and points, so HuntScout opens on what matters to you."}
                 </p>
                 <Link
-                  href="/states"
+                  href="/welcome"
                   className="inline-flex items-center gap-1 text-sm text-gold font-medium hover:underline"
                 >
-                  Browse states <ArrowRight className="w-3 h-3" />
+                  {onboarded ? "Edit your hunting profile" : "Start the 2-minute setup"}{" "}
+                  <ArrowRight className="w-3 h-3" aria-hidden="true" />
                 </Link>
               </div>
-            </div>
+            </li>
 
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full gradient-gold text-gold-foreground flex items-center justify-center text-sm font-bold shrink-0">
+            <li className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-full gradient-gold text-gold-foreground flex items-center justify-center text-sm font-bold shrink-0" aria-hidden="true">
                 2
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-1 flex items-center gap-2">
-                  <SlidersHorizontal className="w-4 h-4 text-gold" />
-                  Set Your Preference Points
+                  <SlidersHorizontal className="w-4 h-4 text-gold" aria-hidden="true" />
+                  Dial In Your Draw Odds
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Use the preference point filter on any state page to see draw
-                  odds specific to your point level. This helps you find units
-                  where you have a realistic chance of drawing.
+                  Open one of your states and set the preference point filter to
+                  your point level to see units where you have a realistic chance
+                  of drawing.
                 </p>
               </div>
-            </div>
+            </li>
 
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full gradient-gold text-gold-foreground flex items-center justify-center text-sm font-bold shrink-0">
+            <li className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-full gradient-gold text-gold-foreground flex items-center justify-center text-sm font-bold shrink-0" aria-hidden="true">
                 3
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-1 flex items-center gap-2">
-                  <Columns3 className="w-4 h-4 text-gold" />
-                  Compare Units
+                  <Columns3 className="w-4 h-4 text-gold" aria-hidden="true" />
+                  Compare Your Short List
                 </h3>
-                <p className="text-sm text-muted-foreground mb-2">
+                <p className="text-sm text-muted-foreground">
                   Put your top units side by side to compare draw odds, harvest
                   rates, and success data before you apply.
                 </p>
-                <Link
-                  href="/compare"
-                  className="inline-flex items-center gap-1 text-sm text-gold font-medium hover:underline"
-                >
-                  Open comparison tool <ArrowRight className="w-3 h-3" />
-                </Link>
               </div>
-            </div>
-          </div>
+            </li>
+          </ol>
         </div>
 
         {/* What you have access to */}
@@ -259,18 +259,29 @@ function SuccessContent() {
 
         {/* Quick actions */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
-          <Link
-            href="/states"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
-          >
-            Explore States <ArrowRight className="w-4 h-4" />
-          </Link>
-          <Link
-            href="/planner"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold border border-border hover:bg-muted transition-all"
-          >
-            Open Hunt Planner
-          </Link>
+          {onboarded ? (
+            <>
+              <Link
+                href="/states"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
+              >
+                Start Scouting <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+              <Link
+                href="/planner"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold border border-border hover:bg-muted transition-all"
+              >
+                Open Hunt Planner
+              </Link>
+            </>
+          ) : (
+            <Link
+              href="/welcome"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
+            >
+              Tailor HuntScout to your hunts (2 min) <ArrowRight className="w-4 h-4" aria-hidden="true" />
+            </Link>
+          )}
         </div>
 
         {/* Need help */}

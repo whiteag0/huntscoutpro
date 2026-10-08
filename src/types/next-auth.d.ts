@@ -7,6 +7,8 @@ declare module "next-auth" {
       isPro: boolean;
       isSuperAdmin: boolean;
       proExpiresAt: string | null;
+      /** Pro member has completed (or skipped) the /welcome hunting-preferences form. */
+      onboarded: boolean;
     } & DefaultSession["user"];
   }
 }
@@ -19,5 +21,7 @@ declare module "@auth/core/jwt" {
     proExpiresAt?: string | null;
     proSource?: string;
     entCheckedAt?: number;
+    onboarded?: boolean;
+    paymentIntentId?: string | null;
   }
 }

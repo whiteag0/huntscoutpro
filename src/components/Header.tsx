@@ -33,7 +33,10 @@ export function Header() {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const { data: session, status } = useSession();
   const pathname = usePathname();
-  const isLanding = pathname === "/";
+  const isPro = Boolean(session?.user?.isPro);
+  // Pro members get a member home at "/" (no full-bleed hero), so keep the
+  // header solid there for them.
+  const isLanding = pathname === "/" && !isPro;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,10 +47,13 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
+  // Close mobile menu on route change (adjusting state during render rather
+  // than in an effect avoids an extra render pass).
+  const [menuPath, setMenuPath] = useState(pathname);
+  if (menuPath !== pathname) {
+    setMenuPath(pathname);
     setMobileOpen(false);
-  }, [pathname]);
+  }
 
   const showSolid = !isLanding || scrolled || mobileOpen;
 
@@ -111,7 +117,7 @@ export function Header() {
 
         {/* Auth buttons (desktop) */}
         <div className="hidden lg:flex items-center gap-2">
-          {status === "loading" ? (
+          {status === "loading" && !session ? (
             <div className="h-8 w-20 rounded-lg bg-muted animate-pulse" />
           ) : session ? (
             <div className="flex items-center gap-2">
@@ -121,13 +127,16 @@ export function Header() {
               >
                 <User className="h-4 w-4" />
                 {session.user?.name?.split(" ")[0] || "Account"}
-                {session.user?.isPro && (
-                  <span className="text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-500 leading-none">
-                    Pro
+                {isPro && (
+                  <span
+                    className="text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-700 leading-none"
+                    title="Pro member"
+                  >
+                    Pro<span className="sr-only"> member</span>
                   </span>
                 )}
               </Link>
-              {!session.user?.isPro && (
+              {!isPro && (
                 <Link
                   href="/pricing"
                   className="px-3 py-1.5 text-xs font-bold rounded-lg gradient-gold text-gold-foreground shadow-sm hover:shadow-md transition-shadow"
@@ -203,23 +212,26 @@ export function Header() {
             ))}
           </nav>
           <div className="mt-3 pt-3 border-t border-border flex flex-col gap-2">
-            {session ? (
+            {status === "loading" && !session ? (
+              // Don't show sign-up CTAs to a member while the session loads.
+              <div className="h-9 rounded-lg bg-muted animate-pulse" aria-hidden="true" />
+            ) : session ? (
               <>
                 <Link
                   href="/account"
                   onClick={() => setMobileOpen(false)}
                   className="text-sm text-muted-foreground px-3 py-2 rounded-lg hover:bg-muted flex items-center gap-1.5"
                 >
-                  <User className="h-4 w-4" />
-                  {session.user?.name || session.user?.email}
-                  {session.user?.isPro && (
-                    <span className="text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-500 leading-none">
-                      Pro
+                  <User className="h-4 w-4 shrink-0" />
+                  <span className="min-w-0 truncate">{session.user?.name || session.user?.email}</span>
+                  {isPro && (
+                    <span className="shrink-0 text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-700 leading-none">
+                      Pro member
                     </span>
                   )}
-                  <span className="ml-auto text-xs">My account</span>
+                  <span className="ml-auto shrink-0 text-xs">My account</span>
                 </Link>
-                {!session.user?.isPro && (
+                {!isPro && (
                   <Link
                     href="/pricing"
                     onClick={() => setMobileOpen(false)}

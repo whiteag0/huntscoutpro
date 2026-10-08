@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AuthProvider } from "@/components/AuthProvider";
+import { OnboardingGate } from "@/components/OnboardingGate";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -34,6 +35,7 @@ export default function RootLayout({
         style={{ "--font-heading": "var(--font-sans)" } as React.CSSProperties}
       >
         <AuthProvider>
+          <OnboardingGate />
           <Header />
           <main className="pt-16">{children}</main>
           <Footer />

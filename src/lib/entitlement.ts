@@ -7,6 +7,10 @@ export interface Entitlement {
   isPro: boolean;
   expiresAt: string | null;
   source: EntitlementSource;
+  /** PaymentIntent of the purchase granting access; member preferences live in its metadata. */
+  paymentIntentId?: string | null;
+  /** Member has completed or skipped the /welcome form (stored on the PaymentIntent). */
+  onboarded?: boolean;
 }
 
 // Hosts our legacy (pre-tag) Checkout Sessions redirected back to.
@@ -87,6 +91,7 @@ async function stripeEntitlement(email: string, rawEmail: string): Promise<Entit
   // guest checkouts that never create a Customer object.
   const emails = Array.from(new Set([email, rawEmail.trim()]));
   let best: Date | null = null;
+  let bestPi: Stripe.PaymentIntent | null = null;
   for (const e of emails) {
     const sessions = await stripe.checkout.sessions.list({
       customer_details: { email: e },
@@ -97,12 +102,21 @@ async function stripeEntitlement(email: string, rawEmail: string): Promise<Entit
     for (const s of sessions.data) {
       if (!isHuntScoutSession(s)) continue;
       const end = sessionAccessEnd(s);
-      if (end && (!best || end > best)) best = end;
+      if (end && (!best || end > best)) {
+        best = end;
+        bestPi = s.payment_intent && typeof s.payment_intent === "object" ? s.payment_intent : null;
+      }
     }
   }
 
   if (best && best.getTime() > Date.now()) {
-    return { isPro: true, expiresAt: best.toISOString(), source: "stripe" };
+    return {
+      isPro: true,
+      expiresAt: best.toISOString(),
+      source: "stripe",
+      paymentIntentId: bestPi?.id ?? null,
+      onboarded: !!bestPi?.metadata?.hs_onboarded_at,
+    };
   }
   return { isPro: false, expiresAt: best ? best.toISOString() : null, source: "none" };
 }

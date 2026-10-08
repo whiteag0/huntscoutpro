@@ -1,7 +1,8 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import { auth } from "@/lib/auth";
 import { stripe } from "@/lib/stripe";
 import { getEntitlement, isHuntScoutSession, normalizeEmail, sessionAccessEnd } from "@/lib/entitlement";
+import { sendOnboardingEmails } from "@/lib/onboarding";
 
 export const dynamic = "force-dynamic";
 
@@ -35,6 +36,15 @@ export async function GET(req: NextRequest) {
             !!sessionAccessEnd(cs) &&
             normalizeEmail(buyer) === normalizeEmail(email),
         };
+        // Backup trigger in case the Stripe webhook isn't delivering.
+        // Idempotent with the webhook, so buyers never get duplicates.
+        if (checkout.paid) {
+          after(() =>
+            sendOnboardingEmails(cs).catch((err) =>
+              console.error(`Onboarding emails failed for checkout ${cs.id}:`, err)
+            )
+          );
+        }
       } catch {
         checkout = { paid: false };
       }
