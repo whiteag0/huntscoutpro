@@ -1,94 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
-const TARGET_DATE = new Date("2026-04-30T23:59:59").getTime();
-
-function pad(n: number): string {
-  return String(n).padStart(2, "0");
-}
-
+// The launch promo this timer counted down to ended 2026-04-30 and there is
+// no current deadline. It intentionally renders nothing so no page shows a
+// fake or expired deadline. Kept as an export only because src/app/page.tsx
+// still imports it; remove the usage there, then delete this file.
 export function CountdownTimer() {
-  const [timeLeft, setTimeLeft] = useState<{
-    days: number;
-    hours: number;
-    minutes: number;
-    seconds: number;
-  } | null>(null);
-  const [expired, setExpired] = useState(false);
-
-  useEffect(() => {
-    function calc() {
-      const now = Date.now();
-      const diff = TARGET_DATE - now;
-      if (diff <= 0) {
-        setExpired(true);
-        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-      }
-      return {
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / (1000 * 60)) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
-      };
-    }
-    const result = calc();
-    setTimeLeft(result);
-    if (!expired) {
-      const interval = setInterval(() => {
-        const t = calc();
-        setTimeLeft(t);
-      }, 1000);
-      return () => clearInterval(interval);
-    }
-  }, [expired]);
-
-  if (!timeLeft) {
-    return (
-      <div className="flex items-center justify-center gap-3 py-3">
-        <div className="w-16 h-14 rounded-lg bg-white/5 animate-pulse" />
-        <div className="w-16 h-14 rounded-lg bg-white/5 animate-pulse" />
-        <div className="w-16 h-14 rounded-lg bg-white/5 animate-pulse" />
-        <div className="w-16 h-14 rounded-lg bg-white/5 animate-pulse" />
-      </div>
-    );
-  }
-
-  if (expired) {
-    return (
-      <div className="flex items-center justify-center py-3">
-        <p className="text-base sm:text-lg font-semibold text-gold">
-          Offer Extended &mdash; Subscribe Today
-        </p>
-      </div>
-    );
-  }
-
-  const isUrgent = timeLeft.days < 7;
-
-  return (
-    <div className="flex items-center justify-center gap-2 sm:gap-3">
-      {[
-        { value: timeLeft.days, label: "Days" },
-        { value: timeLeft.hours, label: "Hours" },
-        { value: timeLeft.minutes, label: "Min" },
-        { value: timeLeft.seconds, label: "Sec" },
-      ].map((unit) => (
-        <div key={unit.label} className="flex flex-col items-center">
-          <div
-            className={`w-14 sm:w-16 h-12 sm:h-14 rounded-lg flex items-center justify-center text-xl sm:text-2xl font-bold tabular-nums ${
-              isUrgent
-                ? "bg-danger/20 text-red-300 animate-pulse-soft"
-                : "bg-white/10 text-gold"
-            }`}
-          >
-            {pad(unit.value)}
-          </div>
-          <span className="text-[10px] sm:text-xs text-white/50 mt-1 uppercase tracking-wider">
-            {unit.label}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
+  return null;
 }

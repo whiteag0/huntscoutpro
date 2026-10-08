@@ -8,7 +8,7 @@ export default function TermsPage() {
 
         <div className="prose prose-sm text-muted-foreground space-y-6">
           <p className="text-sm text-muted-foreground">
-            Last updated: March 29, 2026
+            Last updated: October 8, 2026
           </p>
 
           <section className="space-y-3">
@@ -21,42 +21,50 @@ export default function TermsPage() {
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-foreground">2. Description of Service</h2>
             <p>
-              HuntScout Pro provides hunting draw odds data, harvest statistics, point analysis, and planning tools aggregated from publicly available state wildlife agency data across all 50 U.S. states.
+              HuntScout Pro provides estimated draw odds, harvest statistics, point analysis, and planning tools for hunts in all 50 U.S. states. Draw odds, minimum points, and tag and applicant counts are estimates produced by our own model; they are not official draw results. Harvest and success figures use state wildlife agency harvest reports where available and are otherwise estimated. State pages label which harvest figures come from agency reports.
             </p>
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">3. Subscription and Billing</h2>
+            <h2 className="text-lg font-semibold text-foreground">3. Payment and Access Term</h2>
             <p>
-              HuntScout Pro is offered as an annual subscription. By subscribing, you authorize us to charge the applicable fee to your payment method on a recurring annual basis until you cancel. You may cancel your subscription at any time from your account settings.
+              HuntScout Pro is sold as a one-time payment, currently $14.99, processed by Stripe. Each purchase includes 24 months of Pro access starting on the purchase date. This is not a subscription: your payment method is charged once and is not charged again automatically, so there is nothing to cancel. When your access term ends, Pro features end and you are not charged.
             </p>
           </section>
 
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-foreground">4. Refund Policy</h2>
             <p>
-              We offer a 30-day money-back guarantee on all new subscriptions. If you are not satisfied with HuntScout Pro within the first 30 days of your subscription, contact us for a full refund.
+              We offer a 30-day money-back guarantee. If you are not satisfied with HuntScout Pro, email{" "}
+              <a href="mailto:support@huntscoutpro.com" className="text-foreground underline underline-offset-2">
+                support@huntscoutpro.com
+              </a>{" "}
+              within 30 days of your purchase for a full refund.
             </p>
           </section>
 
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-foreground">5. Data Accuracy</h2>
             <p>
-              While we strive to provide accurate and up-to-date data sourced from official state wildlife agencies, HuntScout Pro does not guarantee the accuracy, completeness, or timeliness of the data. Always verify critical information directly with the relevant state wildlife agency before making application decisions.
+              Draw odds, minimum points, tag and applicant counts, and any figures labeled as estimates are modeled approximations, not official agency data, and can differ substantially from actual draw results. Figures attributed to state wildlife agency reports are reproduced as compiled and may contain errors or be superseded by later agency revisions. HuntScout Pro does not guarantee the accuracy, completeness, or timeliness of any data. Always confirm draw odds, quotas, season dates, deadlines, and regulations directly with the relevant state wildlife agency before applying or hunting.
             </p>
           </section>
 
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-foreground">6. User Accounts</h2>
             <p>
-              You are responsible for maintaining the confidentiality of your account credentials. You agree to accept responsibility for all activities that occur under your account.
+              You sign in to HuntScout Pro with your Google account, and Pro access is tied to the email address on that account. You are responsible for keeping your Google account secure and for activity that occurs under your HuntScout Pro account.
             </p>
           </section>
 
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-foreground">7. Contact</h2>
             <p>
-              If you have any questions about these Terms of Service, please reach out to us via the FAQ section on our website.
+              If you have any questions about these Terms of Service, email{" "}
+              <a href="mailto:support@huntscoutpro.com" className="text-foreground underline underline-offset-2">
+                support@huntscoutpro.com
+              </a>
+              .
             </p>
           </section>
         </div>

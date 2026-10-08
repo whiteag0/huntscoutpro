@@ -11,13 +11,11 @@ import {
   Feather,
   Columns3,
   ChevronDown,
-  Star,
   Check,
   ArrowRight,
   MapPin,
   Shield,
 } from "lucide-react";
-import { CountdownTimer } from "@/components/CountdownTimer";
 import { PROMO } from "@/lib/promo";
 
 /* ------------------------------------------------------------------ */
@@ -160,37 +158,37 @@ const SPECIES = [
   {
     name: "Elk",
     image: "https://images.unsplash.com/photo-1633356984559-9877a6896ba8?w=1920&q=80",
-    stats: "15 states \u2022 12,000+ units",
+    stats: "15 states \u2022 5,700+ hunt codes",
   },
   {
     name: "Deer",
     image: "https://images.unsplash.com/photo-1700244909533-b7ab4e4bd9ae?w=1920&q=80",
-    stats: "50 states \u2022 45,000+ units",
+    stats: "50 states \u2022 16,000+ hunt codes",
   },
   {
     name: "Turkey",
     image: "https://images.unsplash.com/photo-1649532716965-c798cda4b153?w=1920&q=80",
-    stats: "49 states \u2022 8,500+ units",
+    stats: "48 states \u2022 8,200+ hunt codes",
   },
   {
     name: "Moose",
     image: "https://images.unsplash.com/photo-1707079139889-1b8f7648fd38?w=1920&q=80",
-    stats: "8 states \u2022 2,200+ units",
+    stats: "12 states \u2022 880+ hunt codes",
   },
   {
     name: "Bear",
-    image: "https://images.unsplash.com/photo-1724937954901-cc4721a7670e?w=1920&q=80",
-    stats: "32 states \u2022 6,400+ units",
+    image: "https://images.unsplash.com/photo-1781088172575-479cf75858e5?w=1920&q=80",
+    stats: "36 states \u2022 1,400+ hunt codes",
   },
   {
     name: "Pronghorn",
     image: "https://images.unsplash.com/photo-1702338520328-ea01c36f08e8?w=1920&q=80",
-    stats: "12 states \u2022 3,800+ units",
+    stats: "13 states \u2022 2,900+ hunt codes",
   },
   {
     name: "Sheep",
     image: "https://images.unsplash.com/photo-1562811931-fbf7e9a79245?w=1920&q=80",
-    stats: "10 states \u2022 1,200+ units",
+    stats: "13 states \u2022 120+ hunt codes",
   },
 ];
 
@@ -203,7 +201,7 @@ const FEATURES = [
     icon: Crosshair,
     title: "Draw Odds Intelligence",
     description:
-      "Real draw odds by preference point level for every unit across every state.",
+      "Estimated draw odds by preference point level, unit by unit, so you can shortlist before you apply.",
   },
   {
     icon: TrendingUp,
@@ -221,7 +219,7 @@ const FEATURES = [
     icon: Calendar,
     title: "Hunt Planner",
     description:
-      "Plan your season with application deadlines, checklists, and reminders.",
+      "Plan your season with application deadlines, budgets, gear checklists, and a timeline.",
   },
   {
     icon: Feather,
@@ -244,15 +242,15 @@ const FEATURES = [
 const FAQS = [
   {
     q: "Where does the data come from?",
-    a: "All data is sourced directly from state wildlife agencies, official harvest reports, and published draw results. We aggregate and normalize it so you can compare across states.",
+    a: "Harvest and success figures come from state wildlife agency reports where available (each state page labels its source). Draw odds, minimum points, and tag counts are modeled estimates, not official draw results, so always confirm with the state agency before you apply.",
   },
   {
     q: "How often is data updated?",
-    a: "Data is updated annually after each state completes its draw cycle and publishes results. Some states with multiple seasons may see mid-year updates.",
+    a: "We add agency reports as states publish them, typically once a year after harvest and draw results are released.",
   },
   {
     q: "Can I access data for all 50 states?",
-    a: "Yes. One subscription gives you full access to draw odds, harvest data, and point analysis for every state with a controlled hunt draw.",
+    a: "Yes. One $14.99 payment gives you 2 years of full access to draw odds estimates, harvest data, and point analysis for every state. No auto-renewal.",
   },
   {
     q: "What's your refund policy?",
@@ -269,44 +267,18 @@ const FAQS = [
 ];
 
 /* ------------------------------------------------------------------ */
-/*  TESTIMONIALS                                                       */
-/* ------------------------------------------------------------------ */
-
-const TESTIMONIALS = [
-  {
-    quote:
-      "I drew my dream elk tag in Montana after 6 years of applying blind. HuntScout showed me units with better odds that I never knew about.",
-    name: "Jake M.",
-    location: "Montana",
-  },
-  {
-    quote:
-      "The point creep analysis saved me from wasting another year on a unit that's gotten way too competitive. Drew a great mule deer tag instead.",
-    name: "Sarah K.",
-    location: "Colorado",
-  },
-  {
-    quote:
-      "Finally, turkey data that actually helps. Found an incredible spring hunt in Kansas I would have never discovered on my own.",
-    name: "Marcus R.",
-    location: "Texas",
-  },
-];
-
-/* ------------------------------------------------------------------ */
 /*  PRICING FEATURES                                                   */
 /* ------------------------------------------------------------------ */
 
 const PRICING_FEATURES = [
-  "Draw odds for all 50 states",
-  "9+ species covered",
-  "6 years of historical data",
+  "Draw odds estimates by unit",
+  "10 species covered",
+  "Multi-year trend charts",
   "Point creep analysis",
   "Harvest & success rates",
   "Unit comparison tools",
   "Hunt planner & calendar",
   "Turkey subspecies data",
-  "Application deadline alerts",
   "New states added as available",
 ];
 
@@ -404,7 +376,7 @@ export default function LandingPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/40 border border-gold/40 text-sm backdrop-blur-md">
               <span className="animate-pulse-soft inline-block w-2 h-2 rounded-full bg-gold" />
               <span className="text-gold font-medium">
-                {PROMO.tagline} through {PROMO.expiresLabel}
+                {PROMO.tagline}
               </span>
             </div>
           </div>
@@ -422,8 +394,8 @@ export default function LandingPage() {
               className="animate-fade-in-up delay-200 text-lg sm:text-xl md:text-2xl text-white/80 max-w-2xl mb-8 leading-relaxed"
               style={{ textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}
             >
-              Draw odds, harvest data, and point analysis for every hunt unit
-              across all 50 states. Real data. Smarter applications. More tags.
+              Draw odds estimates, agency harvest data, and point analysis
+              across all 50 states. Research smarter before you apply.
             </p>
 
             <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row items-start gap-3 mb-12">
@@ -449,8 +421,8 @@ export default function LandingPage() {
               {[
                 "50 States",
                 "9+ Species",
-                "15,000+ Hunt Units",
-                "6 Years of Data",
+                "35,000+ Hunt Codes",
+                "Agency Harvest Data",
               ].map((stat, i) => (
                 <span
                   key={stat}
@@ -734,36 +706,19 @@ export default function LandingPage() {
             <div className="bg-white/[0.08] backdrop-blur-lg border border-white/15 rounded-3xl p-7 sm:p-9 text-center shadow-2xl shadow-black/30">
               {/* Badge */}
               <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-gold/20 text-gold text-xs font-semibold uppercase tracking-wider mb-5">
-                Early Bird Special
+                HuntScout Pro
               </div>
 
               {/* Price */}
               <div className="mb-1.5">
-                <span className="text-lg text-white/40 line-through mr-2">
-                  ${PROMO.originalPrice}
-                </span>
                 <span className="text-5xl sm:text-6xl font-extrabold text-white">
                   ${PROMO.salePrice}
                 </span>
-                <span className="text-white/60 ml-1">/year</span>
+                <span className="text-white/60 ml-1">one-time</span>
               </div>
               <p className="text-gold font-semibold text-sm mb-5">
-                Save {PROMO.percentOff}% + Get Year 2 FREE
+                2 years of Pro access · No auto-renewal
               </p>
-
-              {/* Countdown -- prominent with urgency indicator */}
-              <div className="mb-6 bg-white/[0.06] border border-white/10 rounded-xl p-4">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <span className="relative flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500" />
-                  </span>
-                  <p className="text-xs text-white/70 uppercase tracking-wider font-semibold">
-                    Offer ends April 30, 2026
-                  </p>
-                </div>
-                <CountdownTimer />
-              </div>
 
               {/* Feature checklist -- two columns */}
               <ul className="text-left grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2.5 mb-7">
@@ -783,77 +738,14 @@ export default function LandingPage() {
                 href="/pricing"
                 className="inline-flex items-center justify-center w-full px-6 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300 mb-3"
               >
-                Start Your Subscription
+                Get Pro — $14.99
               </Link>
               <p className="text-xs text-white/40">
                 30-day money-back guarantee
               </p>
 
-              {/* Trust */}
-              <div className="mt-5 pt-5 border-t border-white/10">
-                <p className="text-sm text-white/50">
-                  Join{" "}
-                  <span className="text-white font-semibold">{PROMO.socialProofCount}</span>{" "}
-                  hunters already using HuntScout Pro
-                </p>
-              </div>
             </div>
           </RevealSection>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/*  TESTIMONIALS                                                */}
-      {/* ============================================================ */}
-      <section className="relative py-16 sm:py-20 lg:py-24 bg-[#111] overflow-hidden">
-        {/* Subtle photo accent */}
-        <div className="absolute inset-0 opacity-[0.08]">
-          <Image
-            src="https://images.unsplash.com/photo-1557616974-db27bfcf6f6d?w=2400&q=80"
-            alt="Mountain landscape"
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <RevealSection>
-            <div className="text-center mb-10">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight text-white">
-                What Hunters Are Saying
-              </h2>
-              <p className="text-white/50 text-lg mt-3">
-                Real stories from hunters who draw more tags.
-              </p>
-            </div>
-          </RevealSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {TESTIMONIALS.map((t, i) => (
-              <RevealSection key={t.name} delay={i * 100}>
-                <div className="bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/[0.10] transition-all duration-300">
-                  {/* Compact star indicator */}
-                  <div className="flex items-center gap-1 mb-3">
-                    <Star className="w-3.5 h-3.5 fill-gold text-gold" />
-                    <span className="text-xs text-gold/70 font-medium">5.0</span>
-                  </div>
-                  <blockquote className="text-sm text-white/80 leading-relaxed mb-4">
-                    &ldquo;{t.quote}&rdquo;
-                  </blockquote>
-                  <div className="text-sm">
-                    <span className="font-semibold text-white">
-                      {t.name}
-                    </span>
-                    <span className="text-white/50">
-                      {" "}
-                      &mdash; {t.location}
-                    </span>
-                  </div>
-                </div>
-              </RevealSection>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -918,7 +810,7 @@ export default function LandingPage() {
                 href="/pricing"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300"
               >
-                Subscribe &mdash; 50% Off
+                Get Pro &mdash; $14.99
               </Link>
             </div>
           </RevealSection>

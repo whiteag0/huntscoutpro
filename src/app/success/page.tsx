@@ -1,8 +1,9 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { signIn, useSession } from "next-auth/react";
 import {
   Check,
   ArrowRight,
@@ -14,30 +15,44 @@ import {
   BarChart3,
   Calendar,
   Feather,
-  Globe,
   Mail,
 } from "lucide-react";
 
 function SuccessContent() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get("session_id");
-  const [status, setStatus] = useState<"loading" | "success" | "error">(
+  const { status: authStatus, update } = useSession();
+  const [status, setStatus] = useState<"loading" | "success" | "pending" | "signin" | "error">(
     "loading"
   );
+  const [expiresAt, setExpiresAt] = useState<string | null>(null);
+  const ranFor = useRef<string | null>(null);
 
   useEffect(() => {
-    if (!sessionId) {
-      setStatus("error");
+    if (authStatus === "loading") return;
+    if (authStatus === "unauthenticated") {
+      setStatus("signin");
       return;
     }
+    // Verify once per checkout session. update() below flips authStatus to
+    // "loading" and back, which would otherwise re-run this effect forever.
+    const key = sessionId ?? "";
+    if (ranFor.current === key) return;
+    ranFor.current = key;
 
     async function verifyPayment() {
       try {
-        const res = await fetch(
-          `/api/subscription?session_id=${encodeURIComponent(sessionId!)}`
-        );
-        if (res.ok) {
+        const qs = sessionId ? `?session_id=${encodeURIComponent(sessionId)}` : "";
+        const res = await fetch(`/api/subscription${qs}`, { cache: "no-store" });
+        if (!res.ok) throw new Error(String(res.status));
+        const data = await res.json();
+        if (data.isPro) {
+          // Refresh the login session so every page unlocks immediately.
+          await update({ refresh: "entitlement" });
+          setExpiresAt(data.expiresAt ?? null);
           setStatus("success");
+        } else if (data.checkout?.paid) {
+          setStatus("pending");
         } else {
           setStatus("error");
         }
@@ -47,7 +62,7 @@ function SuccessContent() {
     }
 
     verifyPayment();
-  }, [sessionId]);
+  }, [sessionId, authStatus, update]);
 
   if (status === "loading") {
     return (
@@ -60,41 +75,73 @@ function SuccessContent() {
     );
   }
 
-  if (status === "error") {
+  if (status === "signin") {
+    const callbackUrl = `/success${sessionId ? `?session_id=${encodeURIComponent(sessionId)}` : ""}`;
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
         <div className="text-center max-w-md">
-          <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
+          <h1 className="text-2xl font-bold mb-4">Sign in to activate Pro</h1>
           <p className="text-muted-foreground mb-6">
-            We couldn&apos;t verify your payment. If you believe this is an
-            error, please contact support at{" "}
+            Sign in with the same Google account you used at checkout and your
+            membership will be linked automatically.
+          </p>
+          <button
+            onClick={() => signIn("google", { callbackUrl })}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold gradient-gold text-gold-foreground cursor-pointer"
+          >
+            Sign in with Google
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (status === "pending" || status === "error") {
+    return (
+      <div className="min-h-screen flex items-center justify-center px-4">
+        <div className="text-center max-w-md">
+          <h1 className="text-2xl font-bold mb-4">
+            {status === "pending" ? "Payment received \u2014 activating your account" : "We couldn\u2019t confirm your membership yet"}
+          </h1>
+          <p className="text-muted-foreground mb-6">
+            {status === "pending"
+              ? "Your payment went through. Activation usually takes a moment; try refreshing this page. "
+              : "If you just paid, give it a minute and refresh. Make sure you\u2019re signed in with the same Google account you used at checkout. "}
+            Still stuck? Email{" "}
             <a
               href="mailto:support@huntscoutpro.com"
               className="text-gold underline"
             >
               support@huntscoutpro.com
-            </a>
-            .
+            </a>{" "}
+            and we&apos;ll unlock your account right away.
           </p>
-          <Link
-            href="/pricing"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold gradient-gold text-gold-foreground"
-          >
-            Back to Pricing
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <button
+              onClick={() => window.location.reload()}
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold gradient-gold text-gold-foreground cursor-pointer"
+            >
+              Refresh
+            </button>
+            <Link
+              href="/account"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold border border-border hover:bg-muted transition-all"
+            >
+              My Account
+            </Link>
+          </div>
         </div>
       </div>
     );
   }
 
   const INCLUDED_FEATURES = [
-    { icon: Crosshair, label: "Draw odds for all 50 states" },
+    { icon: Crosshair, label: "Draw odds estimates by unit" },
     { icon: TrendingUp, label: "Point creep analysis" },
     { icon: BarChart3, label: "Harvest & success rates" },
     { icon: Calendar, label: "Hunt planner & calendar" },
     { icon: Feather, label: "Turkey subspecies data" },
     { icon: Columns3, label: "Side-by-side unit comparison" },
-    { icon: Globe, label: "15,000+ hunt units" },
   ];
 
   return (
@@ -109,9 +156,13 @@ function SuccessContent() {
             Welcome to HuntScout Pro!
           </h1>
           <p className="text-muted-foreground text-lg">
-            Your membership is now active. You have full access to draw odds,
-            harvest data, point analysis, and everything else across all 50
-            states.
+            Your membership is active
+            {expiresAt
+              ? ` through ${new Date(expiresAt).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}`
+              : ""}
+            . You have full access to draw odds estimates, harvest data, point
+            analysis, and the hunt planner. It&apos;s a one-time payment, so
+            nothing renews automatically.
           </p>
         </div>
 
@@ -132,8 +183,8 @@ function SuccessContent() {
                   Choose Your State
                 </h3>
                 <p className="text-sm text-muted-foreground mb-2">
-                  Browse all 50 states and select the ones you plan to apply in
-                  this season.
+                  Browse the states and pick the ones you plan to apply in this
+                  season.
                 </p>
                 <Link
                   href="/states"
