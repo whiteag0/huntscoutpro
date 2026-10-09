@@ -39,6 +39,22 @@ import { WYOMING_ELK_DATA, WYOMING_MOOSE_DATA } from './states/wyoming';
 import { IDAHO_ELK_DATA } from './states/idaho';
 import { MONTANA_ELK_DATA } from './states/montana';
 import { WISCONSIN_DEER_DATA, WISCONSIN_TURKEY_SPRING_DATA, WISCONSIN_BEAR_DATA } from './states/wisconsin';
+import {
+  UT_ELK_DATA, UT_MULE_DEER_DATA, UT_PRONGHORN_DATA, UT_MOOSE_DATA, UT_SHEEP_DATA, UT_GOAT_DATA, UT_BEAR_DATA, UT_LION_DATA,
+  UT_UNIT_REGIONS, UT_META,
+} from './states/utah';
+import {
+  NV_ELK_DATA, NV_MULE_DEER_DATA, NV_PRONGHORN_DATA, NV_SHEEP_DATA, NV_GOAT_DATA, NV_MOOSE_DATA, NV_BEAR_DATA,
+  NV_UNIT_REGIONS, NV_META,
+} from './states/nevada';
+import {
+  NM_ELK_DATA, NM_MULE_DEER_DATA, NM_WHITETAIL_DATA, NM_PRONGHORN_DATA, NM_BEAR_DATA, NM_LION_DATA,
+  NM_UNIT_REGIONS, NM_META,
+} from './states/new-mexico';
+import {
+  AZ_ELK_DATA, AZ_MULE_DEER_DATA, AZ_WHITETAIL_DATA, AZ_PRONGHORN_DATA, AZ_SHEEP_DATA, AZ_BEAR_DATA, AZ_LION_DATA,
+  AZ_UNIT_REGIONS, AZ_META,
+} from './states/arizona';
 import type { RealGMUData } from './states/wyoming';
 
 // ============================================================
@@ -86,7 +102,30 @@ function buildRealGMULookup() {
   for (const d of WISCONSIN_TURKEY_SPRING_DATA) REAL_GMU_LOOKUP.set(`wisconsin-turkey-${d.gmu}-${d.year}`, d);
   for (const d of WISCONSIN_BEAR_DATA) REAL_GMU_LOOKUP.set(`wisconsin-bear-${d.gmu}-${d.year}`, d);
   for (const d of WYOMING_MOOSE_DATA) REAL_GMU_LOOKUP.set(`wyoming-moose-${d.gmu}-${d.year}`, d);
+
+  // Agency unit-level harvest data for the Southwest states (see each file's header for sources).
+  const southwest: Array<[string, RealGMUData[]]> = [
+    ['utah', UT_ELK_DATA], ['utah', UT_MULE_DEER_DATA], ['utah', UT_PRONGHORN_DATA], ['utah', UT_MOOSE_DATA],
+    ['utah', UT_SHEEP_DATA], ['utah', UT_GOAT_DATA], ['utah', UT_BEAR_DATA], ['utah', UT_LION_DATA],
+    ['nevada', NV_ELK_DATA], ['nevada', NV_MULE_DEER_DATA], ['nevada', NV_PRONGHORN_DATA], ['nevada', NV_SHEEP_DATA],
+    ['nevada', NV_GOAT_DATA], ['nevada', NV_MOOSE_DATA], ['nevada', NV_BEAR_DATA],
+    ['new-mexico', NM_ELK_DATA], ['new-mexico', NM_MULE_DEER_DATA], ['new-mexico', NM_WHITETAIL_DATA],
+    ['new-mexico', NM_PRONGHORN_DATA], ['new-mexico', NM_BEAR_DATA], ['new-mexico', NM_LION_DATA],
+    ['arizona', AZ_ELK_DATA], ['arizona', AZ_MULE_DEER_DATA], ['arizona', AZ_WHITETAIL_DATA], ['arizona', AZ_PRONGHORN_DATA],
+    ['arizona', AZ_SHEEP_DATA], ['arizona', AZ_BEAR_DATA], ['arizona', AZ_LION_DATA],
+  ];
+  for (const [state, rows] of southwest) {
+    for (const d of rows) REAL_GMU_LOOKUP.set(`${state}-${d.species}-${d.gmu}-${d.year}`, d);
+  }
 }
+
+/** Real unit -> area names, used instead of a random region for agency units. */
+const UNIT_REGIONS: Record<string, Record<string, string>> = {
+  utah: UT_UNIT_REGIONS,
+  nevada: NV_UNIT_REGIONS,
+  'new-mexico': NM_UNIT_REGIONS,
+  arizona: AZ_UNIT_REGIONS,
+};
 buildRealGMULookup();
 
 /** Season harvest share weights */
@@ -525,7 +564,7 @@ const STATE_CONFIGS: StateConfigInternal[] = [
     name: 'Colorado', abbrev: 'CO', slug: 'colorado', region: 'west',
     species: ['elk', 'mule-deer', 'whitetail', 'pronghorn', 'moose', 'bear', 'sheep', 'goat', 'lion', 'turkey'],
     drawSystem: 'preference', unitSystemName: 'GMU', unitCount: 200,
-    applicationDeadline: 'April 1', baseDifficultyMod: 0.15,
+    applicationDeadline: 'Primary big game draw: April 7 (2026; 2027 TBA)', baseDifficultyMod: 0.15,
     turkeySubspecies: ["Merriam's", 'Rio Grande'],
     regionNames: ['North Park', 'Upper Colorado River', 'Eagle Valley', 'Gore Range', 'Flat Tops', 'White River', 'Piceance Basin', 'Bookcliffs', 'Grand Mesa', 'Gunnison Basin', 'San Juan', 'Weminuche', 'Sangre de Cristo', 'South Park', 'South Platte', 'Upper Arkansas', 'Wet Mountains', 'Greenhorn', 'Laramie River', 'Purgatoire'],
   },
@@ -533,7 +572,7 @@ const STATE_CONFIGS: StateConfigInternal[] = [
     name: 'Montana', abbrev: 'MT', slug: 'montana', region: 'west',
     species: ['elk', 'mule-deer', 'whitetail', 'pronghorn', 'moose', 'bear', 'sheep', 'goat', 'lion', 'turkey'],
     drawSystem: 'bonus', unitSystemName: 'HD', unitCount: 170,
-    applicationDeadline: 'March 15', baseDifficultyMod: 0.12,
+    applicationDeadline: 'Deer & elk permits: April 1 (2026; 2027 TBA)', baseDifficultyMod: 0.12,
     turkeySubspecies: ["Merriam's"],
     regionNames: ['Bitterroot', 'Flathead', 'Missouri Breaks', 'Absaroka', 'Gallatin', 'Madison', 'Beartooth', 'Yellowstone', 'Big Belt', 'Crazy Mountains', 'Elkhorn', 'Highwood', 'Little Belt', 'Snowy Mountains', 'Pryor Mountains'],
   },
@@ -555,35 +594,40 @@ const STATE_CONFIGS: StateConfigInternal[] = [
   },
   {
     name: 'Utah', abbrev: 'UT', slug: 'utah', region: 'west',
-    species: ['elk', 'mule-deer', 'whitetail', 'pronghorn', 'moose', 'bear', 'sheep', 'goat', 'lion', 'turkey'],
-    drawSystem: 'bonus', unitSystemName: 'Unit', unitCount: 120,
-    applicationDeadline: 'February 28', baseDifficultyMod: 0.20,
+    // Species with agency unit data (src/data/states/utah.ts) plus turkey; Utah has no whitetail season.
+    species: ['elk', 'mule-deer', 'pronghorn', 'moose', 'bear', 'sheep', 'goat', 'lion', 'turkey'],
+    drawSystem: UT_META.drawSystem, unitSystemName: 'Unit', unitCount: 120,
+    applicationDeadline: UT_META.applicationDeadline, baseDifficultyMod: 0.20,
     turkeySubspecies: ["Merriam's", 'Rio Grande'],
-    regionNames: ['Wasatch', 'Uinta', 'Book Cliffs', 'La Sal', 'Manti', 'Fishlake', 'Boulder', 'Paunsaugunt', 'Monroe', 'Oquirrh', 'Cache'],
+    regionNames: UT_META.regionNames,
   },
   {
     name: 'Nevada', abbrev: 'NV', slug: 'nevada', region: 'west',
-    species: ['elk', 'mule-deer', 'whitetail', 'pronghorn', 'bear', 'sheep', 'lion', 'turkey'],
-    drawSystem: 'bonus', unitSystemName: 'Unit', unitCount: 110,
-    applicationDeadline: 'April 15', baseDifficultyMod: 0.25,
+    // Species with NDOW unit data (src/data/states/nevada.ts) plus turkey. No whitetail season in Nevada;
+    // lion is left out because NDOW publishes no unit-level lion harvest.
+    species: ['elk', 'mule-deer', 'pronghorn', 'moose', 'bear', 'sheep', 'goat', 'turkey'],
+    drawSystem: NV_META.drawSystem, unitSystemName: 'Unit', unitCount: 110,
+    applicationDeadline: NV_META.applicationDeadline, baseDifficultyMod: 0.25,
     turkeySubspecies: ["Merriam's"],
-    regionNames: ['Ruby Mountains', 'Elko', 'Humboldt', 'Jarbidge', 'Schell Creek', 'Monitor', 'Toiyabe', 'Spring Mountains', 'Snake Range', 'Santa Rosa'],
+    regionNames: NV_META.regionNames,
   },
   {
     name: 'New Mexico', abbrev: 'NM', slug: 'new-mexico', region: 'west',
-    species: ['elk', 'mule-deer', 'whitetail', 'pronghorn', 'bear', 'sheep', 'lion', 'turkey'],
-    drawSystem: 'random', unitSystemName: 'GMU', unitCount: 130,
-    applicationDeadline: 'March 20', baseDifficultyMod: 0.14,
+    // Species with NMDGF unit data (src/data/states/new-mexico.ts) plus turkey; sheep harvest is statewide only.
+    species: ['elk', 'mule-deer', 'whitetail', 'pronghorn', 'bear', 'lion', 'turkey'],
+    drawSystem: NM_META.drawSystem, unitSystemName: 'GMU', unitCount: 130,
+    applicationDeadline: NM_META.applicationDeadline, baseDifficultyMod: 0.14,
     turkeySubspecies: ["Merriam's", "Gould's", 'Rio Grande'],
-    regionNames: ['Gila', 'Sangre de Cristo', 'Jemez', 'Sandia', 'Sacramento', 'San Mateo', 'Pecos', 'Carson', 'Cimarron', 'Raton', 'Lincoln'],
+    regionNames: NM_META.regionNames,
   },
   {
     name: 'Arizona', abbrev: 'AZ', slug: 'arizona', region: 'west',
+    // Species with AZGFD unit data (src/data/states/arizona.ts) plus turkey.
     species: ['elk', 'mule-deer', 'whitetail', 'pronghorn', 'bear', 'sheep', 'lion', 'turkey'],
-    drawSystem: 'bonus', unitSystemName: 'Unit', unitCount: 95,
-    applicationDeadline: 'June 10', baseDifficultyMod: 0.22,
+    drawSystem: AZ_META.drawSystem, unitSystemName: 'Unit', unitCount: 95,
+    applicationDeadline: AZ_META.applicationDeadline, baseDifficultyMod: 0.22,
     turkeySubspecies: ["Merriam's", "Gould's"],
-    regionNames: ['Kaibab', 'Coconino', 'Apache', 'White Mountains', 'Tonto', 'Prescott', 'Mogollon Rim', 'Chiricahua', 'Santa Rita', 'Hualapai'],
+    regionNames: AZ_META.regionNames,
   },
   // ---- PACIFIC ----
   {
@@ -1152,7 +1196,7 @@ function generateUnitsForState(state: StateConfigInternal): UnitGenConfig[] {
       // Use REAL GMU numbers from harvest data
       for (const gmu of realGMUs) {
         const regionIdx = Math.floor(rand() * state.regionNames.length);
-        const region = state.regionNames[regionIdx];
+        const region = UNIT_REGIONS[state.slug]?.[gmu] ?? state.regionNames[regionIdx];
 
         const diffRange = params.baseDiffRange;
         const baseDifficulty = diffRange[0] + rand() * (diffRange[1] - diffRange[0]) + state.baseDifficultyMod;
@@ -1307,8 +1351,13 @@ function buildStateHuntUnits(state: StateConfigInternal): HuntUnit[] {
             const realKey = `${state.slug}-${config.species}-${config.gmu}-${year}`;
             const realData = REAL_GMU_LOOKUP.get(realKey);
             if (realData && (realData.totalHunters > 0 || realData.totalHarvest > 0)) {
+              // Some agencies publish harvest but no hunter counts (successRate 0). Use the
+              // species' modeled success rate there instead of deriving a near-zero rate.
+              const withSuccess = realData.totalHunters > 0
+                ? realData
+                : { ...realData, successRate: Math.round(adjustedSuccess * 1000) / 10 };
               return generateFromRealData(
-                realData, season, sex, totalCombos, seasonCounts, sexCounts,
+                withSuccess, season, sex, totalCombos, seasonCounts, sexCounts,
                 adjustedDifficulty, seed
               );
             }
