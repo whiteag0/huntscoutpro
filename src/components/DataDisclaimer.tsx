@@ -58,6 +58,42 @@ const AGENCY_HARVEST: Record<string, Record<string, HarvestSource>> = {
     turkey: { agency: "Wisconsin DNR", years: "2024", confirmed: false, huntersReported: true, scope: "spring season, by zone" },
     bear: { agency: "Wisconsin DNR", years: "2024", confirmed: false, huntersReported: false, scope: "by zone" },
   },
+  utah: {
+    elk: { agency: "Utah Division of Wildlife Resources", years: "2021–2024", confirmed: true, huntersReported: true },
+    "mule-deer": { agency: "Utah Division of Wildlife Resources", years: "2021–2024", confirmed: true, huntersReported: true },
+    pronghorn: { agency: "Utah Division of Wildlife Resources", years: "2021–2024", confirmed: true, huntersReported: true },
+    moose: { agency: "Utah Division of Wildlife Resources", years: "2021–2024", confirmed: true, huntersReported: true },
+    sheep: { agency: "Utah Division of Wildlife Resources", years: "2021–2024", confirmed: true, huntersReported: true },
+    goat: { agency: "Utah Division of Wildlife Resources", years: "2021–2024", confirmed: true, huntersReported: true },
+    bear: { agency: "Utah Division of Wildlife Resources", years: "2021–2025", confirmed: true, huntersReported: false },
+    lion: { agency: "Utah Division of Wildlife Resources", years: "2021–2025", confirmed: true, huntersReported: false },
+  },
+  nevada: {
+    elk: { agency: "Nevada Department of Wildlife", years: "2022–2025", confirmed: true, huntersReported: true, scope: "draw hunts, by unit group" },
+    "mule-deer": { agency: "Nevada Department of Wildlife", years: "2022–2025", confirmed: true, huntersReported: true, scope: "draw hunts, by unit group" },
+    pronghorn: { agency: "Nevada Department of Wildlife", years: "2022–2025", confirmed: true, huntersReported: true, scope: "draw hunts, by unit group" },
+    sheep: { agency: "Nevada Department of Wildlife", years: "2022–2025", confirmed: true, huntersReported: true, scope: "by unit group" },
+    goat: { agency: "Nevada Department of Wildlife", years: "2022–2025", confirmed: true, huntersReported: true },
+    moose: { agency: "Nevada Department of Wildlife", years: "2024–2025", confirmed: true, huntersReported: true },
+    bear: { agency: "Nevada Department of Wildlife", years: "2022–2025", confirmed: true, huntersReported: true },
+  },
+  "new-mexico": {
+    elk: { agency: "New Mexico Department of Game & Fish", years: "2021–2025", confirmed: true, huntersReported: true, scope: "hunters = licenses sold" },
+    "mule-deer": { agency: "New Mexico Department of Game & Fish", years: "2021–2025", confirmed: true, huntersReported: true, scope: "all deer hunts except whitetail-only" },
+    whitetail: { agency: "New Mexico Department of Game & Fish", years: "2021–2025", confirmed: true, huntersReported: true, scope: "whitetail-only hunts" },
+    pronghorn: { agency: "New Mexico Department of Game & Fish", years: "2022–2025", confirmed: true, huntersReported: true, scope: "hunters = licenses sold" },
+    bear: { agency: "New Mexico Department of Game & Fish", years: "2021–2025", confirmed: true, huntersReported: false, scope: "by bear zone" },
+    lion: { agency: "New Mexico Department of Game & Fish", years: "2021–2025", confirmed: true, huntersReported: false, scope: "by cougar zone" },
+  },
+  arizona: {
+    elk: { agency: "Arizona Game and Fish Department", years: "2023–2025", confirmed: true, huntersReported: true },
+    "mule-deer": { agency: "Arizona Game and Fish Department", years: "2024–2025", confirmed: true, huntersReported: true },
+    whitetail: { agency: "Arizona Game and Fish Department", years: "2024–2025", confirmed: true, huntersReported: true, scope: "Coues whitetail" },
+    pronghorn: { agency: "Arizona Game and Fish Department", years: "2023–2025", confirmed: true, huntersReported: true },
+    sheep: { agency: "Arizona Game and Fish Department", years: "2023–2025", confirmed: true, huntersReported: true },
+    bear: { agency: "Arizona Game and Fish Department", years: "2023–2025", confirmed: true, huntersReported: false },
+    lion: { agency: "Arizona Game and Fish Department", years: "2023–2025", confirmed: true, huntersReported: false, scope: "by management zone" },
+  },
 };
 
 export function getHarvestSource(stateSlug: string, species?: string): HarvestSource | undefined {
