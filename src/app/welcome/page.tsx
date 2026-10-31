@@ -534,7 +534,7 @@ export default function WelcomePage() {
               <>
                 <Question
                   title="Where will you hunt?"
-                  hint="Pick every state you hunt or plan to apply in. Western draw states are listed first."
+                  hint={"Pick every state you hunt or plan to apply in, even ones we don\u2019t cover yet. HuntScout Pro has agency data for the live western draw states; your picks help us decide which state to add next."}
                 >
                   {prefs.states.length > 0 && (
                     <div className="rounded-xl bg-muted/60 p-3">

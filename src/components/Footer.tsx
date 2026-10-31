@@ -3,25 +3,22 @@
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { Crosshair } from "lucide-react";
+import { LIVE_STATES } from "@/lib/agency-format";
 
 const productLinks = [
-  { href: "/states", label: "Draw Odds Explorer" },
-  { href: "/compare", label: "Unit Comparison" },
+  { href: "/states", label: "State Draw & Harvest Data" },
+  { href: "/compare", label: "Hunt Comparison" },
   { href: "/trends", label: "Point Creep Trends" },
   { href: "/planner", label: "Hunt Planner" },
-  { href: "/turkey", label: "Turkey Intelligence" },
-  { href: "/calendar", label: "Season Calendar" },
+  { href: "/turkey", label: "Turkey" },
+  { href: "/calendar", label: "Key Dates Calendar" },
 ];
 
+// Only states with published agency data, plus a way to ask for the rest.
 const stateLinks = [
-  { href: "/states/colorado", label: "Colorado" },
-  { href: "/states/montana", label: "Montana" },
-  { href: "/states/wyoming", label: "Wyoming" },
-  { href: "/states/arizona", label: "Arizona" },
-  { href: "/states/nevada", label: "Nevada" },
-  { href: "/states/new-mexico", label: "New Mexico" },
-  { href: "/states/idaho", label: "Idaho" },
-  { href: "/states/utah", label: "Utah" },
+  ...LIVE_STATES.slice(0, 8).map((s) => ({ href: `/states/${s.slug}`, label: s.name })),
+  ...(LIVE_STATES.length > 8 ? [{ href: "/states", label: "All live states" }] : []),
+  { href: "/request-state", label: "Request a state" },
 ];
 
 const resourceLinks = [
@@ -94,7 +91,7 @@ export function Footer() {
         {/* Main footer */}
         <div className="py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
           <FooterColumn title="Product" links={productLinks} />
-          <FooterColumn title="Popular States" links={stateLinks} />
+          <FooterColumn title="States" links={stateLinks} />
           <FooterColumn
             title="Resources"
             links={isPro ? memberResourceLinks : resourceLinks}

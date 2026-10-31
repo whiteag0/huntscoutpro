@@ -1,0 +1,3104 @@
+{
+ "slug": "wyoming",
+ "name": "Wyoming",
+ "abbrev": "WY",
+ "agency": {
+  "name": "Wyoming Game and Fish Department",
+  "shortName": "WGFD",
+  "url": "https://wgfd.wyo.gov"
+ },
+ "unitTerm": "Hunt Area",
+ "lastReviewed": "2026-10-31",
+ "overview": "Wyoming issues big game licenses by hunt area and license type through online initial drawings, followed by a leftover drawing and first-come, first-served sales. Preference points are used for resident and nonresident moose and full-price bighorn sheep and for nonresident elk, deer and antelope: 75% of each hunt's licenses go to the applicants with the most points and the remaining 25% to a random drawing of all unsuccessful applicants. Resident elk, deer and antelope, mountain goat, reduced-price and turkey licenses are drawn randomly, and 40% of nonresident elk, deer and antelope licenses are reserved as higher-priced Special licenses with their own drawing.",
+ "species": [
+  {
+   "species": "elk",
+   "displayName": "Elk",
+   "drawSystem": "hybrid",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Limited-quota and nonresident region-general elk licenses are drawn. For nonresidents, 75% of each hunt's licenses go to a preference-point drawing (highest points first) and the remaining 25% to a random drawing of all unsuccessful applicants; 40% of nonresident elk licenses are set aside as higher-priced Special licenses drawn separately.",
+   "residentNote": "Residents do not use preference points for elk; resident limited-quota elk licenses are drawn randomly. Resident general elk licenses go on sale over the counter July 16.",
+   "nonresidentNote": "Nonresidents apply Jan. 2 - Feb. 2 for a region general or a limited-quota hunt. Points count only for the first choice and are lost when the first choice is drawn. Party applications use the group's average points (to the 4th decimal). Nonresidents may not hunt big or trophy game in designated wilderness areas unless accompanied by a licensed professional guide or a resident guide (one guide per two nonresident hunters).",
+   "otcSummary": "Resident general elk licenses (over the counter from July 16); leftover licenses first come, first served from July 16.",
+   "keyDates": [
+    {
+     "label": "Nonresident application period",
+     "start": "2026-01-02",
+     "end": "2026-02-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Nonresident modify/withdraw deadline",
+     "date": "2026-05-08",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Nonresident drawing results",
+     "date": "2026-05-21",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Resident application period",
+     "start": "2026-01-02",
+     "end": "2026-06-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Resident drawing results",
+     "date": "2026-06-18",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Preference point only purchase period",
+     "start": "2026-07-01",
+     "end": "2026-11-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31; Nonresident full-price elk points only"
+    },
+    {
+     "label": "Leftover elk/deer/antelope drawing application period",
+     "start": "2026-06-22",
+     "end": "2026-06-26",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover drawing results",
+     "date": "2026-07-08",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Remaining licenses on sale first come, first served",
+     "date": "2026-07-16",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    }
+   ],
+   "sourceIds": [
+    "d-wy-2026-application-booklet",
+    "d-wy-application-dates-page",
+    "d-wy-draw-odds-index",
+    "d-wy-2026-black-bear-brochure",
+    "d-wy-2027-nr-preference-point-prices"
+   ]
+  },
+  {
+   "species": "mule-deer",
+   "displayName": "Mule deer (Wyoming deer licenses)",
+   "drawSystem": "hybrid",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Wyoming issues deer licenses (not species-specific unless the hunt limitation says so). Nonresident full-price deer licenses are drawn 75% by preference points and 25% at random; 40% are set aside as Special licenses drawn separately. Resident limited-quota deer licenses are drawn randomly.",
+   "residentNote": "Residents do not use preference points for deer. Resident general deer licenses go on sale over the counter July 16.",
+   "nonresidentNote": "Nonresidents apply for a region general deer license (by region letter) or a limited-quota hunt; region general licenses are valid in any hunt area in the region not totally limited in quota. Nonresidents may not hunt big or trophy game in designated wilderness areas unless accompanied by a licensed professional guide or a resident guide (one guide per two nonresident hunters).",
+   "otcSummary": "Resident general deer licenses (over the counter from July 16); leftover licenses first come, first served from July 16.",
+   "keyDates": [
+    {
+     "label": "Initial drawing application period (resident and nonresident)",
+     "start": "2026-01-02",
+     "end": "2026-06-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Modify/withdraw deadline",
+     "date": "2026-06-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Initial drawing results",
+     "date": "2026-06-18",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Preference point only purchase period",
+     "start": "2026-07-01",
+     "end": "2026-11-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31; Nonresident full-price deer points only"
+    },
+    {
+     "label": "Leftover elk/deer/antelope drawing application period",
+     "start": "2026-06-22",
+     "end": "2026-06-26",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover drawing results",
+     "date": "2026-07-08",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Remaining licenses on sale first come, first served",
+     "date": "2026-07-16",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    }
+   ],
+   "sourceIds": [
+    "d-wy-2026-application-booklet",
+    "d-wy-application-dates-page",
+    "d-wy-draw-odds-index",
+    "d-wy-2026-black-bear-brochure",
+    "d-wy-2027-nr-preference-point-prices"
+   ]
+  },
+  {
+   "species": "whitetail",
+   "displayName": "White-tailed deer (Wyoming deer licenses)",
+   "drawSystem": "hybrid",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "White-tailed-only hunts (e.g. Type 3 any white-tailed deer, Type 8 doe/fawn white-tailed deer) are drawn in the same deer drawing: nonresident full-price licenses 75% by preference points and 25% at random, with a separate Special-license drawing. Reduced-price doe/fawn licenses use no points.",
+   "residentNote": "Residents do not use preference points for deer.",
+   "nonresidentNote": "A second full-price deer license is available only after the initial drawing and only if at least one is a limited-quota Type 3 any white-tailed deer license (leftover drawing or first come, first served). Nonresidents may not hunt big or trophy game in designated wilderness areas unless accompanied by a licensed professional guide or a resident guide (one guide per two nonresident hunters).",
+   "otcSummary": "In some hunt areas, after the initial and leftover drawings, unlimited reduced-price doe/fawn white-tailed deer licenses may be purchased.",
+   "keyDates": [
+    {
+     "label": "Initial drawing application period (resident and nonresident)",
+     "start": "2026-01-02",
+     "end": "2026-06-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Modify/withdraw deadline",
+     "date": "2026-06-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Initial drawing results",
+     "date": "2026-06-18",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Preference point only purchase period",
+     "start": "2026-07-01",
+     "end": "2026-11-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31; Nonresident full-price deer points only"
+    },
+    {
+     "label": "Leftover elk/deer/antelope drawing application period",
+     "start": "2026-06-22",
+     "end": "2026-06-26",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover drawing results",
+     "date": "2026-07-08",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Remaining licenses on sale first come, first served",
+     "date": "2026-07-16",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    }
+   ],
+   "sourceIds": [
+    "d-wy-2026-application-booklet",
+    "d-wy-application-dates-page",
+    "d-wy-draw-odds-index",
+    "d-wy-2026-black-bear-brochure",
+    "d-wy-2027-nr-preference-point-prices"
+   ]
+  },
+  {
+   "species": "pronghorn",
+   "displayName": "Pronghorn (antelope)",
+   "drawSystem": "hybrid",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "All antelope licenses are limited quota; there are no general antelope licenses. Nonresident full-price licenses are drawn 75% by preference points and 25% at random, with 40% set aside as Special licenses drawn separately; resident licenses are drawn randomly.",
+   "residentNote": "Residents do not use preference points for antelope.",
+   "nonresidentNote": "In the initial drawing an applicant may apply for one full-price and up to two reduced-price doe/fawn antelope licenses. Nonresidents may not hunt big or trophy game in designated wilderness areas unless accompanied by a licensed professional guide or a resident guide (one guide per two nonresident hunters).",
+   "otcSummary": "No general antelope licenses are offered; leftover limited-quota licenses go on sale first come, first served from July 16.",
+   "keyDates": [
+    {
+     "label": "Initial drawing application period (resident and nonresident)",
+     "start": "2026-01-02",
+     "end": "2026-06-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Modify/withdraw deadline",
+     "date": "2026-06-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Initial drawing results",
+     "date": "2026-06-18",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Preference point only purchase period",
+     "start": "2026-07-01",
+     "end": "2026-11-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31; Nonresident full-price antelope points only"
+    },
+    {
+     "label": "Leftover elk/deer/antelope drawing application period",
+     "start": "2026-06-22",
+     "end": "2026-06-26",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover drawing results",
+     "date": "2026-07-08",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Remaining licenses on sale first come, first served",
+     "date": "2026-07-16",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    }
+   ],
+   "sourceIds": [
+    "d-wy-2026-application-booklet",
+    "d-wy-application-dates-page",
+    "d-wy-draw-odds-index",
+    "d-wy-2026-black-bear-brochure",
+    "d-wy-2027-nr-preference-point-prices"
+   ]
+  },
+  {
+   "species": "moose",
+   "displayName": "Moose",
+   "drawSystem": "hybrid",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Resident and nonresident moose licenses are drawn 75% by preference points and 25% at random. An applicant may list only one hunt area choice. Licenses are allocated 90% resident / 10% nonresident by statute.",
+   "residentNote": "Type 1 moose is once in a lifetime; a successful Type 4 applicant must wait five years to apply again or buy a point.",
+   "nonresidentNote": "Nonresidents must elect a preference point when applying; unsuccessful applicants who elected it have the $150 point fee deducted from the refund. Nonresidents may not hunt big or trophy game in designated wilderness areas unless accompanied by a licensed professional guide or a resident guide (one guide per two nonresident hunters).",
+   "keyDates": [
+    {
+     "label": "Application period (resident and nonresident)",
+     "start": "2026-01-02",
+     "end": "2026-04-30",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Modify/withdraw deadline",
+     "date": "2026-04-30",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Drawing results",
+     "date": "2026-05-21",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Preference point only purchase period",
+     "start": "2026-07-01",
+     "end": "2026-11-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31; Resident and nonresident moose points"
+    }
+   ],
+   "sourceIds": [
+    "d-wy-2026-application-booklet",
+    "d-wy-application-dates-page",
+    "d-wy-draw-odds-index",
+    "d-wy-2026-black-bear-brochure"
+   ]
+  },
+  {
+   "species": "sheep",
+   "displayName": "Bighorn sheep",
+   "drawSystem": "hybrid",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Full-price (Type 1/2) bighorn sheep licenses are drawn 75% by preference points and 25% at random for residents and nonresidents, with one hunt area choice. Reduced-price Type 6/7 ewe/lamb licenses are drawn without points. Licenses are allocated 90% resident / 10% nonresident by statute.",
+   "residentNote": "A Type 1 or Type 2 bighorn sheep license is once in a lifetime (applicants who drew after 2017 may not apply again).",
+   "nonresidentNote": "Nonresidents must elect a preference point when applying; the $150 point fee is deducted from the refund if unsuccessful. Nonresidents may not hunt big or trophy game in designated wilderness areas unless accompanied by a licensed professional guide or a resident guide (one guide per two nonresident hunters).",
+   "keyDates": [
+    {
+     "label": "Application period (resident and nonresident)",
+     "start": "2026-01-02",
+     "end": "2026-04-30",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Modify/withdraw deadline",
+     "date": "2026-04-30",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Drawing results",
+     "date": "2026-05-21",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Preference point only purchase period",
+     "start": "2026-07-01",
+     "end": "2026-11-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31; Full-price bighorn sheep points, residents and nonresidents"
+    }
+   ],
+   "sourceIds": [
+    "d-wy-2026-application-booklet",
+    "d-wy-application-dates-page",
+    "d-wy-draw-odds-index",
+    "d-wy-2026-black-bear-brochure"
+   ]
+  },
+  {
+   "species": "goat",
+   "displayName": "Mountain goat",
+   "drawSystem": "random",
+   "pointsMatter": false,
+   "drawSystemSummary": "Mountain goat licenses are drawn by random draw for a specific hunt area; there are no mountain goat preference points. Licenses are allocated 90% resident / 10% nonresident by statute.",
+   "residentNote": "Type 1 or Type 2 is once in a lifetime (no reapplying if drawn after 1995); since 2019 prior Type 1/2 holders may apply for Type A licenses.",
+   "nonresidentNote": "Nonresidents may not hunt big or trophy game in designated wilderness areas unless accompanied by a licensed professional guide or a resident guide (one guide per two nonresident hunters).",
+   "keyDates": [
+    {
+     "label": "Application period (resident and nonresident)",
+     "start": "2026-01-02",
+     "end": "2026-04-30",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Modify/withdraw deadline",
+     "date": "2026-04-30",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Drawing results",
+     "date": "2026-05-21",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    }
+   ],
+   "sourceIds": [
+    "d-wy-2026-application-booklet",
+    "d-wy-application-dates-page",
+    "d-wy-draw-odds-index",
+    "d-wy-2026-black-bear-brochure"
+   ]
+  },
+  {
+   "species": "turkey",
+   "displayName": "Wild turkey (spring and fall)",
+   "drawSystem": "random",
+   "pointsMatter": false,
+   "drawSystemSummary": "Spring and fall wild turkey licenses (for 2026 fall / 2027 spring: Area 1 general and Area 1 Type 3 limited quota) are applied for in separate spring and fall drawings without preference points. One spring and one fall license per person in the initial drawing.",
+   "residentNote": "After the initial drawing a person may receive up to three turkey licenses per season, provided at least two are limited-quota Type 3 licenses.",
+   "otcSummary": "Additional licenses after the initial drawing as allowed by Chapter 20; see the WGFD turkey regulation.",
+   "keyDates": [
+    {
+     "label": "Spring turkey application period",
+     "start": "2026-01-02",
+     "end": "2026-02-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Spring turkey drawing results",
+     "date": "2026-02-12",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Fall turkey application period",
+     "start": "2026-04-01",
+     "end": "2026-06-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Fall turkey drawing results",
+     "date": "2026-06-18",
+     "cycle": 2026,
+     "status": "tentative",
+     "sourceId": "d-wy-2026-application-booklet",
+     "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    }
+   ],
+   "sourceIds": [
+    "d-wy-2026-application-booklet",
+    "d-wy-application-dates-page",
+    "d-wy-ch20-wild-turkey",
+    "d-wy-draw-odds-index"
+   ]
+  },
+  {
+   "species": "bear",
+   "displayName": "Black bear",
+   "drawSystem": "otc",
+   "pointsMatter": false,
+   "drawSystemSummary": "Black bear licenses are not part of the WGFD drawings (no draw application or odds are published). Each hunt area or group of areas closes when its female mortality limit is reached, otherwise on the regulation's closing date; spring overages are subtracted from the fall limit.",
+   "residentNote": "Hunters must confirm an area is open (closure hotline 1-800-264-1280). Bait sites are registered separately.",
+   "nonresidentNote": "Nonresidents may not hunt big or trophy game in designated wilderness areas unless accompanied by a licensed professional guide or a resident guide (one guide per two nonresident hunters).",
+   "otcSummary": "Resident black bear license $47; nonresident $373 (2026 fee list). No drawing.",
+   "keyDates": [],
+   "sourceIds": [
+    "d-wy-ch3-black-bear",
+    "d-wy-2026-black-bear-brochure",
+    "d-wy-license-fee-list"
+   ]
+  },
+  {
+   "species": "lion",
+   "displayName": "Mountain lion",
+   "drawSystem": "otc",
+   "pointsMatter": false,
+   "drawSystemSummary": "Mountain lion licenses are not part of the WGFD drawings. Each hunt area closes when its mortality limit is reached (separate resident and nonresident limits in designated areas), otherwise on the regulation's closing date. A person may hold one full-price and one reduced-price lion license per calendar year.",
+   "residentNote": "Reduced-price licenses are valid only in designated hunt areas and require a current full-price license.",
+   "nonresidentNote": "Nonresidents may not hunt big or trophy game in designated wilderness areas unless accompanied by a licensed professional guide or a resident guide (one guide per two nonresident hunters).",
+   "otcSummary": "Resident mountain lion license $32 (reduced price $20); nonresident $373 (reduced price $92). No drawing.",
+   "keyDates": [],
+   "sourceIds": [
+    "d-wy-ch42-mountain-lion",
+    "d-wy-2026-black-bear-brochure",
+    "d-wy-license-fee-list"
+   ]
+  }
+ ],
+ "fees": [
+  {
+   "species": null,
+   "item": "Resident application fee (big game and wild bison drawings)",
+   "residency": "resident",
+   "amountUsd": 5.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Nonrefundable"
+  },
+  {
+   "species": null,
+   "item": "Nonresident application fee (big game and wild bison drawings)",
+   "residency": "nonresident",
+   "amountUsd": 15.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Nonrefundable"
+  },
+  {
+   "species": "elk",
+   "item": "Resident elk",
+   "residency": "resident",
+   "amountUsd": 57.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $5 resident application fee"
+  },
+  {
+   "species": "elk",
+   "item": "Resident cow/calf elk",
+   "residency": "resident",
+   "amountUsd": 43.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $5 resident application fee"
+  },
+  {
+   "species": "elk",
+   "item": "Nonresident elk & fishing privilege",
+   "residency": "nonresident",
+   "amountUsd": 692.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "elk",
+   "item": "Nonresident elk special & fishing privilege",
+   "residency": "nonresident",
+   "amountUsd": 1950.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "elk",
+   "item": "Nonresident cow/calf elk",
+   "residency": "nonresident",
+   "amountUsd": 288.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "elk",
+   "item": "Nonresident elk preference point",
+   "residency": "nonresident",
+   "amountUsd": 52.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "No application fee for a point-only purchase; rises to $75 on January 1, 2027 (Commission vote, April 21, 2026)"
+  },
+  {
+   "species": "elk",
+   "item": "Nonresident elk preference point",
+   "residency": "nonresident",
+   "amountUsd": 75.0,
+   "licenseYear": 2027,
+   "sourceId": "d-wy-2027-nr-preference-point-prices",
+   "note": "Commission voted April 21, 2026 to raise the price to $75 effective January 1, 2027 (was $52)"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Resident deer",
+   "residency": "resident",
+   "amountUsd": 42.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $5 resident application fee; Wyoming deer license"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Resident doe/fawn deer",
+   "residency": "resident",
+   "amountUsd": 22.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $5 resident application fee"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Nonresident deer",
+   "residency": "nonresident",
+   "amountUsd": 374.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee; Wyoming deer license"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Nonresident deer special",
+   "residency": "nonresident",
+   "amountUsd": 1200.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Nonresident doe/fawn deer",
+   "residency": "nonresident",
+   "amountUsd": 34.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Nonresident deer preference point",
+   "residency": "nonresident",
+   "amountUsd": 41.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "No application fee for a point-only purchase; rises to $75 on January 1, 2027 (Commission vote, April 21, 2026)"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Nonresident deer preference point",
+   "residency": "nonresident",
+   "amountUsd": 75.0,
+   "licenseYear": 2027,
+   "sourceId": "d-wy-2027-nr-preference-point-prices",
+   "note": "Commission voted April 21, 2026 to raise the price to $75 effective January 1, 2027 (was $41)"
+  },
+  {
+   "species": "whitetail",
+   "item": "Resident deer",
+   "residency": "resident",
+   "amountUsd": 42.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $5 resident application fee; Wyoming deer license"
+  },
+  {
+   "species": "whitetail",
+   "item": "Resident doe/fawn deer",
+   "residency": "resident",
+   "amountUsd": 22.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $5 resident application fee"
+  },
+  {
+   "species": "whitetail",
+   "item": "Nonresident deer",
+   "residency": "nonresident",
+   "amountUsd": 374.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee; Wyoming deer license"
+  },
+  {
+   "species": "whitetail",
+   "item": "Nonresident deer special",
+   "residency": "nonresident",
+   "amountUsd": 1200.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "whitetail",
+   "item": "Nonresident doe/fawn deer",
+   "residency": "nonresident",
+   "amountUsd": 34.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "whitetail",
+   "item": "Nonresident deer preference point",
+   "residency": "nonresident",
+   "amountUsd": 41.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "No application fee for a point-only purchase; rises to $75 on January 1, 2027 (Commission vote, April 21, 2026)"
+  },
+  {
+   "species": "whitetail",
+   "item": "Nonresident deer preference point",
+   "residency": "nonresident",
+   "amountUsd": 75.0,
+   "licenseYear": 2027,
+   "sourceId": "d-wy-2027-nr-preference-point-prices",
+   "note": "Commission voted April 21, 2026 to raise the price to $75 effective January 1, 2027 (was $41)"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Resident antelope",
+   "residency": "resident",
+   "amountUsd": 37.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $5 resident application fee"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Resident doe/fawn antelope",
+   "residency": "resident",
+   "amountUsd": 22.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $5 resident application fee"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Nonresident antelope",
+   "residency": "nonresident",
+   "amountUsd": 326.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Nonresident antelope special",
+   "residency": "nonresident",
+   "amountUsd": 1200.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Nonresident doe/fawn antelope",
+   "residency": "nonresident",
+   "amountUsd": 34.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Nonresident antelope preference point",
+   "residency": "nonresident",
+   "amountUsd": 31.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "No application fee for a point-only purchase; rises to $75 on January 1, 2027 (Commission vote, April 21, 2026)"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Nonresident antelope preference point",
+   "residency": "nonresident",
+   "amountUsd": 75.0,
+   "licenseYear": 2027,
+   "sourceId": "d-wy-2027-nr-preference-point-prices",
+   "note": "Commission voted April 21, 2026 to raise the price to $75 effective January 1, 2027 (was $31)"
+  },
+  {
+   "species": "moose",
+   "item": "Resident moose",
+   "residency": "resident",
+   "amountUsd": 152.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $5 resident application fee"
+  },
+  {
+   "species": "moose",
+   "item": "Nonresident moose",
+   "residency": "nonresident",
+   "amountUsd": 2752.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "moose",
+   "item": "Resident moose preference point",
+   "residency": "resident",
+   "amountUsd": 7.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "moose",
+   "item": "Nonresident moose preference point",
+   "residency": "nonresident",
+   "amountUsd": 150.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "sheep",
+   "item": "Resident bighorn sheep",
+   "residency": "resident",
+   "amountUsd": 152.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $5 resident application fee"
+  },
+  {
+   "species": "sheep",
+   "item": "Resident ewe/lamb bighorn sheep",
+   "residency": "resident",
+   "amountUsd": 36.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $5 resident application fee"
+  },
+  {
+   "species": "sheep",
+   "item": "Nonresident bighorn sheep",
+   "residency": "nonresident",
+   "amountUsd": 3002.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "sheep",
+   "item": "Nonresident ewe/lamb bighorn sheep",
+   "residency": "nonresident",
+   "amountUsd": 240.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "sheep",
+   "item": "Resident bighorn sheep preference point",
+   "residency": "resident",
+   "amountUsd": 7.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "sheep",
+   "item": "Nonresident bighorn sheep preference point",
+   "residency": "nonresident",
+   "amountUsd": 150.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "goat",
+   "item": "Resident mountain goat",
+   "residency": "resident",
+   "amountUsd": 152.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $5 resident application fee"
+  },
+  {
+   "species": "goat",
+   "item": "Nonresident mountain goat",
+   "residency": "nonresident",
+   "amountUsd": 2752.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list",
+   "note": "Draw applicants also pay the $15 nonresident application fee"
+  },
+  {
+   "species": "turkey",
+   "item": "Resident turkey spring",
+   "residency": "resident",
+   "amountUsd": 16.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "turkey",
+   "item": "Resident turkey fall",
+   "residency": "resident",
+   "amountUsd": 16.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "turkey",
+   "item": "Nonresident turkey spring",
+   "residency": "nonresident",
+   "amountUsd": 74.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "turkey",
+   "item": "Nonresident turkey fall",
+   "residency": "nonresident",
+   "amountUsd": 74.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "bear",
+   "item": "Resident black bear",
+   "residency": "resident",
+   "amountUsd": 47.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "bear",
+   "item": "Nonresident black bear",
+   "residency": "nonresident",
+   "amountUsd": 373.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "lion",
+   "item": "Resident mountain lion",
+   "residency": "resident",
+   "amountUsd": 32.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "lion",
+   "item": "Resident reduced price mountain lion",
+   "residency": "resident",
+   "amountUsd": 20.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "lion",
+   "item": "Nonresident mountain lion",
+   "residency": "nonresident",
+   "amountUsd": 373.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  },
+  {
+   "species": "lion",
+   "item": "Nonresident reduced price mountain lion",
+   "residency": "nonresident",
+   "amountUsd": 92.0,
+   "licenseYear": 2026,
+   "sourceId": "d-wy-license-fee-list"
+  }
+ ],
+ "seasons": [
+  {
+   "species": "turkey",
+   "label": "Fall general, Area 1 (archery only)",
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "Any wild turkey, archery only",
+   "sourceId": "d-wy-ch20-wild-turkey"
+  },
+  {
+   "species": "turkey",
+   "label": "Fall general, Area 1",
+   "start": "2026-10-01",
+   "end": "2027-01-31",
+   "year": 2026,
+   "note": "Any wild turkey",
+   "sourceId": "d-wy-ch20-wild-turkey"
+  },
+  {
+   "species": "turkey",
+   "label": "Fall limited quota Area 1 Type 3 (archery only)",
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "Quota 1200; valid within Converse, Natrona, Campbell, Johnson and Sheridan counties and on private land in Big Horn, Crook, Hot Springs, Park, Washakie and Weston counties",
+   "sourceId": "d-wy-ch20-wild-turkey"
+  },
+  {
+   "species": "turkey",
+   "label": "Fall limited quota Area 1 Type 3",
+   "start": "2026-10-01",
+   "end": "2027-01-31",
+   "year": 2026,
+   "note": "Any wild turkey valid within Converse, Natrona, Campbell, Johnson and Sheridan counties; also valid on private land in Big Horn, Crook, Hot Springs, Park, Washakie and Weston counties",
+   "sourceId": "d-wy-ch20-wild-turkey"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring general, Area 1",
+   "start": "2027-04-20",
+   "end": "2027-05-31",
+   "year": 2027,
+   "note": "Any male wild turkey or any wild turkey with a visible beard",
+   "sourceId": "d-wy-ch20-wild-turkey"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring limited quota Area 1 Type 3",
+   "start": "2027-04-01",
+   "end": "2027-05-31",
+   "year": 2027,
+   "note": "Quota 800; valid within Converse, Natrona, Campbell, Johnson and Sheridan counties",
+   "sourceId": "d-wy-ch20-wild-turkey"
+  }
+ ],
+ "coverage": [
+  {
+   "species": "elk",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Includes full-price, cow/calf (Types 6-8), nonresident region general (GEN before 2026; E/S/W etc. as published) and resident GEN rows. Nonresident Special licenses are separate rows with huntCode suffix ' (NR Special)'. Source: WGFD initial-drawing 'Demand Reports' (first-choice applicants). Landowner and leftover drawings are not included. WGFD random-draw tables publish quota and 1st/2nd/3rd-choice applicants but not the number drawn, so drawn and odds are null except where every first-choice applicant drew (oddsComputed). Quota for point-drawn hunts = preference-draw quota + random-draw quota as published (both shown in each row's note). byPoints lists whole-point levels with applicants; WGFD's '< N' rows (party applications averaging between N-1 and N) and the bottom catch-all row are summarised in the note. Quotas printed as 7999 or more (general licenses, Type 8 counters) are set to null with the printed value in the note."
+  },
+  {
+   "species": "mule-deer",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "WGFD reports deer as one species. Rows here are every deer hunt whose description is not white-tailed only (ANY DEER, ANTLERED DEER, ANTLERED MULE DEER, DOE OR FAWN, region general); those licenses may also be valid for white-tailed deer per the hunt limitations. NR Special rows use the ' (NR Special)' suffix. Source: WGFD initial-drawing 'Demand Reports' (first-choice applicants). Landowner and leftover drawings are not included. WGFD random-draw tables publish quota and 1st/2nd/3rd-choice applicants but not the number drawn, so drawn and odds are null except where every first-choice applicant drew (oddsComputed). Quota for point-drawn hunts = preference-draw quota + random-draw quota as published (both shown in each row's note). byPoints lists whole-point levels with applicants; WGFD's '< N' rows (party applications averaging between N-1 and N) and the bottom catch-all row are summarised in the note. Quotas printed as 7999 or more (general licenses, Type 8 counters) are set to null with the printed value in the note."
+  },
+  {
+   "species": "whitetail",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Deer hunts whose WGFD description is white-tailed only (ANY WHITE-TAILED DEER, DOE OR FAWN WHITE-TAILED, LIMITED QUOTA, ANY WH...). General/any-deer hunts are in mule-deer.json. NR Special rows use the ' (NR Special)' suffix. Source: WGFD initial-drawing 'Demand Reports' (first-choice applicants). Landowner and leftover drawings are not included. WGFD random-draw tables publish quota and 1st/2nd/3rd-choice applicants but not the number drawn, so drawn and odds are null except where every first-choice applicant drew (oddsComputed). Quota for point-drawn hunts = preference-draw quota + random-draw quota as published (both shown in each row's note). byPoints lists whole-point levels with applicants; WGFD's '< N' rows (party applications averaging between N-1 and N) and the bottom catch-all row are summarised in the note. Quotas printed as 7999 or more (general licenses, Type 8 counters) are set to null with the printed value in the note."
+  },
+  {
+   "species": "pronghorn",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "WGFD 'Antelope'. Includes doe/fawn reduced-price hunts. NR Special rows use the ' (NR Special)' suffix. Source: WGFD initial-drawing 'Demand Reports' (first-choice applicants). Landowner and leftover drawings are not included. WGFD random-draw tables publish quota and 1st/2nd/3rd-choice applicants but not the number drawn, so drawn and odds are null except where every first-choice applicant drew (oddsComputed). Quota for point-drawn hunts = preference-draw quota + random-draw quota as published (both shown in each row's note). byPoints lists whole-point levels with applicants; WGFD's '< N' rows (party applications averaging between N-1 and N) and the bottom catch-all row are summarised in the note. Quotas printed as 7999 or more (general licenses, Type 8 counters) are set to null with the printed value in the note."
+  },
+  {
+   "species": "moose",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Resident and nonresident preference-point and random tables. Two rows (2022 034-4, 2026 025-4 resident) have WGFD tables that differ by one applicant; both values are in the note. Source: WGFD initial-drawing 'Demand Reports' (first-choice applicants). Landowner and leftover drawings are not included. WGFD random-draw tables publish quota and 1st/2nd/3rd-choice applicants but not the number drawn, so drawn and odds are null except where every first-choice applicant drew (oddsComputed). Quota for point-drawn hunts = preference-draw quota + random-draw quota as published (both shown in each row's note). byPoints lists whole-point levels with applicants; WGFD's '< N' rows (party applications averaging between N-1 and N) and the bottom catch-all row are summarised in the note. Quotas printed as 7999 or more (general licenses, Type 8 counters) are set to null with the printed value in the note."
+  },
+  {
+   "species": "sheep",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Includes reduced-price ewe/lamb (Types 6/7, random, no points). Source: WGFD initial-drawing 'Demand Reports' (first-choice applicants). Landowner and leftover drawings are not included. WGFD random-draw tables publish quota and 1st/2nd/3rd-choice applicants but not the number drawn, so drawn and odds are null except where every first-choice applicant drew (oddsComputed). Quota for point-drawn hunts = preference-draw quota + random-draw quota as published (both shown in each row's note). byPoints lists whole-point levels with applicants; WGFD's '< N' rows (party applications averaging between N-1 and N) and the bottom catch-all row are summarised in the note. Quotas printed as 7999 or more (general licenses, Type 8 counters) are set to null with the printed value in the note."
+  },
+  {
+   "species": "goat",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Random draw only. The index page's 2022 goat links open the 2020 report; the 2022 reports (dated 4/25/2022, media 22160/22171) were used instead. Source: WGFD initial-drawing 'Demand Reports' (first-choice applicants). Landowner and leftover drawings are not included. WGFD random-draw tables publish quota and 1st/2nd/3rd-choice applicants but not the number drawn, so drawn and odds are null except where every first-choice applicant drew (oddsComputed). Quota for point-drawn hunts = preference-draw quota + random-draw quota as published (both shown in each row's note). byPoints lists whole-point levels with applicants; WGFD's '< N' rows (party applications averaging between N-1 and N) and the bottom catch-all row are summarised in the note. Quotas printed as 7999 or more (general licenses, Type 8 counters) are set to null with the printed value in the note."
+  },
+  {
+   "species": "turkey",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Spring and fall drawings share hunt codes, so huntCode carries ' (Spring)' or ' (Fall)'. The index lists no 2022 fall report; 2022 is spring only. Source: WGFD initial-drawing 'Demand Reports' (first-choice applicants). Landowner and leftover drawings are not included. WGFD random-draw tables publish quota and 1st/2nd/3rd-choice applicants but not the number drawn, so drawn and odds are null except where every first-choice applicant drew (oddsComputed). Quota for point-drawn hunts = preference-draw quota + random-draw quota as published (both shown in each row's note). byPoints lists whole-point levels with applicants; WGFD's '< N' rows (party applications averaging between N-1 and N) and the bottom catch-all row are summarised in the note. Quotas printed as 7999 or more (general licenses, Type 8 counters) are set to null with the printed value in the note."
+  },
+  {
+   "species": "bear",
+   "years": [],
+   "notes": "No WGFD drawing for black bear; no draw data exists."
+  },
+  {
+   "species": "lion",
+   "years": [],
+   "notes": "No WGFD drawing for mountain lion; no draw data exists."
+  }
+ ],
+ "sources": [
+  {
+   "id": "d-wy-draw-odds-index",
+   "title": "Draw Results & Odds",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "retrieved": "2026-10-31",
+   "notes": "Index of WGFD initial-draw and leftover-draw demand reports, 2021-2026"
+  },
+  {
+   "id": "d-wy-2026-application-booklet",
+   "title": "2026 Hunting License Application Information",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/31721/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Application dates, amounts to remit, preference-point and license rules for the 2026 drawings"
+  },
+  {
+   "id": "d-wy-application-dates-page",
+   "title": "Application Dates & Deadlines",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/licenses-applications/application-dates-deadlines",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Page lists dates without a year; they match the 2026 application booklet. No 2027 dates posted as of 2026-10-31"
+  },
+  {
+   "id": "d-wy-license-fee-list",
+   "title": "License Fee List",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/licenses-applications/license-fee-list",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Undated web table; each license price plus the application fee equals the 2026 booklet's amount to remit"
+  },
+  {
+   "id": "d-wy-ch3-black-bear",
+   "title": "Chapter 3 - Black Bear Hunting Seasons",
+   "publisher": "Wyoming Game and Fish Commission",
+   "url": "https://wgfd.wyo.gov/media/33353/download",
+   "pageUrl": "https://wgfd.wyo.gov/regulations",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Commission regulation dated January 13, 2026"
+  },
+  {
+   "id": "d-wy-2026-black-bear-brochure",
+   "title": "2026 Black Bear Regulations",
+   "publisher": "Wyoming Game and Fish Commission",
+   "url": "https://wgfd.wyo.gov/media/33578/download",
+   "pageUrl": "https://wgfd.wyo.gov/regulations",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-wy-ch42-mountain-lion",
+   "title": "Chapter 42 - Mountain Lion Hunting Seasons",
+   "publisher": "Wyoming Game and Fish Commission",
+   "url": "https://wgfd.wyo.gov/media/32904/download",
+   "pageUrl": "https://wgfd.wyo.gov/regulations",
+   "retrieved": "2026-10-31",
+   "notes": "Commission regulation dated July 16, 2025"
+  },
+  {
+   "id": "d-wy-ch20-wild-turkey",
+   "title": "Chapter 20 - Wild Turkey Hunting Seasons (2026/2027)",
+   "publisher": "Wyoming Game and Fish Commission",
+   "url": "https://wgfd.wyo.gov/media/33701/download",
+   "pageUrl": "https://wgfd.wyo.gov/regulations",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Commission regulation dated April 22, 2026; 2026 fall and 2027 spring seasons"
+  },
+  {
+   "id": "d-wy-2027-nr-preference-point-prices",
+   "title": "Commissioners vote to increase non-resident preference point prices",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/news-events/commissioners-vote-increase-non-resident-preference-point-prices",
+   "dataYear": 2027,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD news release posted April 21, 2026: nonresident antelope $31 to $75, deer $41 to $75, elk $52 to $75, effective January 1, 2027; moose and sheep points were already raised to the statutory maximum on January 1, 2018"
+  },
+  {
+   "id": "d-wy-2026-antelope-random-draw-nonresident",
+   "title": "2026 Demand Report - Nonresident Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33870/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-antelope-random-draw-nonresident-special",
+   "title": "2026 Demand Report - Nonresident Special Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33872/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-antelope-random-draw-resident",
+   "title": "2026 Demand Report - Resident Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33874/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-antelope-preference-points-nonresident",
+   "title": "2026 Demand Report - Nonresident Antelope (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33869/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-antelope-preference-points-nonresident-special",
+   "title": "2026 Demand Report - Nonresident Special Antelope (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33871/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-antelope-doe-fawn-nonresident",
+   "title": "2026 Demand Report - Nonresident Antelope (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33864/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-antelope-doe-fawn-resident",
+   "title": "2026 Demand Report - Resident Antelope (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33866/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-deer-random-draw-nonresident",
+   "title": "2026 Demand Report - Nonresident Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33883/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-deer-random-draw-nonresident-special",
+   "title": "2026 Demand Report - Nonresident Special Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33885/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-deer-random-draw-resident",
+   "title": "2026 Demand Report - Resident Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33886/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-deer-preference-points-nonresident",
+   "title": "2026 Demand Report - Nonresident Deer (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33882/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-deer-preference-points-nonresident-special",
+   "title": "2026 Demand Report - Nonresident Special Deer (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33884/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-deer-doe-fawn-nonresident",
+   "title": "2026 Demand Report - Nonresident Deer (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33877/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-deer-doe-fawn-resident",
+   "title": "2026 Demand Report - Resident Deer (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33879/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-elk-random-draw-nonresident",
+   "title": "2026 Demand Report - Nonresident Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33779/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/19/2026"
+  },
+  {
+   "id": "d-wy-2026-elk-random-draw-nonresident-special",
+   "title": "2026 Demand Report - Nonresident Special Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33778/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/19/2026"
+  },
+  {
+   "id": "d-wy-2026-elk-random-draw-resident",
+   "title": "2026 Demand Report - Resident Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33894/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-elk-preference-points-nonresident",
+   "title": "2026 Demand Report - Nonresident Elk (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33777/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/19/2026"
+  },
+  {
+   "id": "d-wy-2026-elk-preference-points-nonresident-special",
+   "title": "2026 Demand Report - Nonresident Special Elk (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33776/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/19/2026"
+  },
+  {
+   "id": "d-wy-2026-elk-cow-calf-nonresident",
+   "title": "2026 Demand Report - Nonresident Elk (Cow/Calf)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33772/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-elk-cow-calf-resident",
+   "title": "2026 Demand Report - Resident Elk (Cow/Calf)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33892/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-sheep-random-draw-nonresident",
+   "title": "2026 Demand Report - Nonresident Bighorn Sheep (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33784/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-sheep-random-draw-resident",
+   "title": "2026 Demand Report - Resident Bighorn Sheep (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33785/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-sheep-preference-points-nonresident",
+   "title": "2026 Demand Report - Nonresident Bighorn Sheep (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33782/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-sheep-preference-points-resident",
+   "title": "2026 Demand Report - Resident Bighorn Sheep (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33783/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-sheep-ewe-lamb-nonresident",
+   "title": "2026 Demand Report - Nonresident Bighorn Sheep (Ewe/Lamb)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33781/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-sheep-ewe-lamb-resident",
+   "title": "2026 Demand Report - Resident Bighorn Sheep (Ewe/Lamb)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33780/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-moose-random-draw-nonresident",
+   "title": "2026 Demand Report - Nonresident Moose (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33790/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-moose-random-draw-resident",
+   "title": "2026 Demand Report - Resident Moose (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33791/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-moose-preference-points-nonresident",
+   "title": "2026 Demand Report - Nonresident Moose (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33788/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-moose-preference-points-resident",
+   "title": "2026 Demand Report - Resident Moose (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33789/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-goat-all-nonresident",
+   "title": "2026 Demand Report - Nonresident Mountain Goat",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33786/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-goat-all-resident",
+   "title": "2026 Demand Report - Resident Mountain Goat",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33787/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2026"
+  },
+  {
+   "id": "d-wy-2026-turkey-spring-nonresident",
+   "title": "2026 Demand Report - Nonresident Wild Turkey (Spring)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33450/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 2/10/2026"
+  },
+  {
+   "id": "d-wy-2026-turkey-spring-resident",
+   "title": "2026 Demand Report - Resident Wild Turkey (Spring)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33449/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 2/10/2026"
+  },
+  {
+   "id": "d-wy-2026-turkey-fall-nonresident",
+   "title": "2026 Demand Report - Nonresident Wild Turkey (Fall)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33888/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2026-turkey-fall-resident",
+   "title": "2026 Demand Report - Resident Wild Turkey (Fall)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/33890/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/15/2026"
+  },
+  {
+   "id": "d-wy-2025-antelope-random-draw-nonresident",
+   "title": "2025 Demand Report - Nonresident Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32690/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-antelope-random-draw-nonresident-special",
+   "title": "2025 Demand Report - Nonresident Special Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32692/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-antelope-random-draw-resident",
+   "title": "2025 Demand Report - Resident Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32694/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-antelope-preference-points-nonresident",
+   "title": "2025 Demand Report - Nonresident Antelope (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32689/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-antelope-preference-points-nonresident-special",
+   "title": "2025 Demand Report - Nonresident Special Antelope (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32691/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-antelope-doe-fawn-nonresident",
+   "title": "2025 Demand Report - Nonresident Antelope (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32693/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-antelope-doe-fawn-resident",
+   "title": "2025 Demand Report - Resident Antelope (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32696/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-deer-random-draw-nonresident",
+   "title": "2025 Demand Report - Nonresident Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32699/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-deer-random-draw-nonresident-special",
+   "title": "2025 Demand Report - Nonresident Special Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32701/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-deer-random-draw-resident",
+   "title": "2025 Demand Report - Resident Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32706/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-deer-preference-points-nonresident",
+   "title": "2025 Demand Report - Nonresident Deer (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32698/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-deer-preference-points-nonresident-special",
+   "title": "2025 Demand Report - Nonresident Special Deer (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32700/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-deer-doe-fawn-nonresident",
+   "title": "2025 Demand Report - Nonresident Deer (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32702/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/18/2025"
+  },
+  {
+   "id": "d-wy-2025-deer-doe-fawn-resident",
+   "title": "2025 Demand Report - Resident Deer (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32707/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/18/2025"
+  },
+  {
+   "id": "d-wy-2025-elk-random-draw-nonresident",
+   "title": "2025 Demand Report - Nonresident Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32449/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2025"
+  },
+  {
+   "id": "d-wy-2025-elk-random-draw-nonresident-special",
+   "title": "2025 Demand Report - Nonresident Special Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32450/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2025"
+  },
+  {
+   "id": "d-wy-2025-elk-random-draw-resident",
+   "title": "2025 Demand Report - Resident Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32697/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-elk-preference-points-nonresident",
+   "title": "2025 Demand Report - Nonresident Elk (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32451/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2025"
+  },
+  {
+   "id": "d-wy-2025-elk-preference-points-nonresident-special",
+   "title": "2025 Demand Report - Nonresident Special Elk (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32452/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2025"
+  },
+  {
+   "id": "d-wy-2025-elk-cow-calf-nonresident",
+   "title": "2025 Demand Report - Nonresident Elk (Cow/Calf)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32453/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2025"
+  },
+  {
+   "id": "d-wy-2025-elk-cow-calf-resident",
+   "title": "2025 Demand Report - Resident Elk (Cow/Calf)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32695/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-sheep-random-draw-nonresident",
+   "title": "2025 Demand Report - Nonresident Bighorn Sheep (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32421/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/6/2025"
+  },
+  {
+   "id": "d-wy-2025-sheep-random-draw-resident",
+   "title": "2025 Demand Report - Resident Bighorn Sheep (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32423/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/6/2025"
+  },
+  {
+   "id": "d-wy-2025-sheep-preference-points-nonresident",
+   "title": "2025 Demand Report - Nonresident Bighorn Sheep (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32411/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/6/2025"
+  },
+  {
+   "id": "d-wy-2025-sheep-preference-points-resident",
+   "title": "2025 Demand Report - Resident Bighorn Sheep (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32416/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/6/2025"
+  },
+  {
+   "id": "d-wy-2025-sheep-ewe-lamb-nonresident",
+   "title": "2025 Demand Report - Nonresident Bighorn Sheep (Ewe/Lamb)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32412/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/6/2025"
+  },
+  {
+   "id": "d-wy-2025-sheep-ewe-lamb-resident",
+   "title": "2025 Demand Report - Resident Bighorn Sheep (Ewe/Lamb)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32417/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/6/2025"
+  },
+  {
+   "id": "d-wy-2025-moose-random-draw-nonresident",
+   "title": "2025 Demand Report - Nonresident Moose (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32422/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/6/2025"
+  },
+  {
+   "id": "d-wy-2025-moose-random-draw-resident",
+   "title": "2025 Demand Report - Resident Moose (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32424/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/6/2025"
+  },
+  {
+   "id": "d-wy-2025-moose-preference-points-nonresident",
+   "title": "2025 Demand Report - Nonresident Moose (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32414/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/6/2025"
+  },
+  {
+   "id": "d-wy-2025-moose-preference-points-resident",
+   "title": "2025 Demand Report - Resident Moose (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32419/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/6/2025"
+  },
+  {
+   "id": "d-wy-2025-goat-all-nonresident",
+   "title": "2025 Demand Report - Nonresident Mountain Goat",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32413/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/6/2025"
+  },
+  {
+   "id": "d-wy-2025-goat-all-resident",
+   "title": "2025 Demand Report - Resident Mountain Goat",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32418/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/6/2025"
+  },
+  {
+   "id": "d-wy-2025-turkey-spring-nonresident",
+   "title": "2025 Demand Report - Nonresident Wild Turkey (Spring)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/31975/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 2/5/2025"
+  },
+  {
+   "id": "d-wy-2025-turkey-spring-resident",
+   "title": "2025 Demand Report - Resident Wild Turkey (Spring)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/31976/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 2/5/2025"
+  },
+  {
+   "id": "d-wy-2025-turkey-fall-nonresident",
+   "title": "2025 Demand Report - Nonresident Wild Turkey (Fall)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32710/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2025-turkey-fall-resident",
+   "title": "2025 Demand Report - Resident Wild Turkey (Fall)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/32711/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/10/2025"
+  },
+  {
+   "id": "d-wy-2024-antelope-random-draw-nonresident",
+   "title": "2024 Demand Report - Nonresident Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30432/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-antelope-random-draw-nonresident-special",
+   "title": "2024 Demand Report - Nonresident Special Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30431/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-antelope-random-draw-resident",
+   "title": "2024 Demand Report - Resident Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30436/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-antelope-preference-points-nonresident",
+   "title": "2024 Demand Report - Nonresident Antelope (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30433/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-antelope-preference-points-nonresident-special",
+   "title": "2024 Demand Report - Nonresident Special Antelope (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30437/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-antelope-doe-fawn-nonresident",
+   "title": "2024 Demand Report - Nonresident Antelope (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30434/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-antelope-doe-fawn-resident",
+   "title": "2024 Demand Report - Resident Antelope (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30435/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-deer-random-draw-nonresident",
+   "title": "2024 Demand Report - Nonresident Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30443/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-deer-random-draw-nonresident-special",
+   "title": "2024 Demand Report - Nonresident Special Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30439/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-deer-random-draw-resident",
+   "title": "2024 Demand Report - Resident Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30445/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-deer-preference-points-nonresident",
+   "title": "2024 Demand Report - Nonresident Deer (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30442/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-deer-preference-points-nonresident-special",
+   "title": "2024 Demand Report - Nonresident Special Deer (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30438/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-deer-doe-fawn-nonresident",
+   "title": "2024 Demand Report - Nonresident Deer (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30444/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-deer-doe-fawn-resident",
+   "title": "2024 Demand Report - Resident Deer (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30449/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-elk-random-draw-nonresident",
+   "title": "2024 Demand Report - Nonresident Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30129/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/15/2024"
+  },
+  {
+   "id": "d-wy-2024-elk-random-draw-nonresident-special",
+   "title": "2024 Demand Report - Nonresident Special Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30127/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/15/2024"
+  },
+  {
+   "id": "d-wy-2024-elk-random-draw-resident",
+   "title": "2024 Demand Report - Resident Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30448/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-elk-preference-points-nonresident",
+   "title": "2024 Demand Report - Nonresident Elk (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30130/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/15/2024"
+  },
+  {
+   "id": "d-wy-2024-elk-preference-points-nonresident-special",
+   "title": "2024 Demand Report - Nonresident Special Elk (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30128/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/15/2024"
+  },
+  {
+   "id": "d-wy-2024-elk-cow-calf-nonresident",
+   "title": "2024 Demand Report - Nonresident Elk (Cow/Calf)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30131/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/15/2024"
+  },
+  {
+   "id": "d-wy-2024-elk-cow-calf-resident",
+   "title": "2024 Demand Report - Resident Elk (Cow/Calf)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30446/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-sheep-random-draw-nonresident",
+   "title": "2024 Demand Report - Nonresident Bighorn Sheep (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30109/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/7/2024"
+  },
+  {
+   "id": "d-wy-2024-sheep-random-draw-resident",
+   "title": "2024 Demand Report - Resident Bighorn Sheep (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30101/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/7/2024"
+  },
+  {
+   "id": "d-wy-2024-sheep-preference-points-nonresident",
+   "title": "2024 Demand Report - Nonresident Bighorn Sheep (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30110/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/7/2024"
+  },
+  {
+   "id": "d-wy-2024-sheep-preference-points-resident",
+   "title": "2024 Demand Report - Resident Bighorn Sheep (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30102/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/7/2024"
+  },
+  {
+   "id": "d-wy-2024-sheep-ewe-lamb-nonresident",
+   "title": "2024 Demand Report - Nonresident Bighorn Sheep (Ewe/Lamb)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30107/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/7/2024"
+  },
+  {
+   "id": "d-wy-2024-sheep-ewe-lamb-resident",
+   "title": "2024 Demand Report - Resident Bighorn Sheep (Ewe/Lamb)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30100/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/7/2024"
+  },
+  {
+   "id": "d-wy-2024-moose-random-draw-nonresident",
+   "title": "2024 Demand Report - Nonresident Moose (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30105/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/7/2024"
+  },
+  {
+   "id": "d-wy-2024-moose-random-draw-resident",
+   "title": "2024 Demand Report - Resident Moose (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30099/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF)"
+  },
+  {
+   "id": "d-wy-2024-moose-preference-points-nonresident",
+   "title": "2024 Demand Report - Nonresident Moose (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30104/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/7/2024"
+  },
+  {
+   "id": "d-wy-2024-moose-preference-points-resident",
+   "title": "2024 Demand Report - Resident Moose (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30098/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/7/2024"
+  },
+  {
+   "id": "d-wy-2024-goat-all-nonresident",
+   "title": "2024 Demand Report - Nonresident Mountain Goat",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30106/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/7/2024"
+  },
+  {
+   "id": "d-wy-2024-goat-all-resident",
+   "title": "2024 Demand Report - Resident Mountain Goat",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30108/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/7/2024"
+  },
+  {
+   "id": "d-wy-2024-turkey-spring-nonresident",
+   "title": "2024 Demand Report - Nonresident Wild Turkey (Spring)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/31076/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 2/7/2024"
+  },
+  {
+   "id": "d-wy-2024-turkey-spring-resident",
+   "title": "2024 Demand Report - Resident Wild Turkey (Spring)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/31075/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 2/7/2024"
+  },
+  {
+   "id": "d-wy-2024-turkey-fall-nonresident",
+   "title": "2024 Demand Report - Nonresident Wild Turkey (Fall)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/31083/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2024-turkey-fall-resident",
+   "title": "2024 Demand Report - Resident Wild Turkey (Fall)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/31084/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/14/2024"
+  },
+  {
+   "id": "d-wy-2023-antelope-random-draw-nonresident",
+   "title": "2023 Demand Report - Nonresident Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24487/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-antelope-random-draw-nonresident-special",
+   "title": "2023 Demand Report - Nonresident Special Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/27415/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-antelope-random-draw-resident",
+   "title": "2023 Demand Report - Resident Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24479/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-antelope-preference-points-nonresident",
+   "title": "2023 Demand Report - Nonresident Antelope (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24486/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-antelope-preference-points-nonresident-special",
+   "title": "2023 Demand Report - Nonresident Special Antelope (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24488/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-antelope-doe-fawn-nonresident",
+   "title": "2023 Demand Report - Nonresident Antelope (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24478/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-antelope-doe-fawn-resident",
+   "title": "2023 Demand Report - Resident Antelope (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24477/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-deer-random-draw-nonresident",
+   "title": "2023 Demand Report - Nonresident Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24489/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-deer-random-draw-nonresident-special",
+   "title": "2023 Demand Report - Nonresident Special Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24490/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-deer-random-draw-resident",
+   "title": "2023 Demand Report - Resident Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24482/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-deer-preference-points-nonresident",
+   "title": "2023 Demand Report - Nonresident Deer (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24491/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-deer-preference-points-nonresident-special",
+   "title": "2023 Demand Report - Nonresident Special Deer (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/27416/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-deer-doe-fawn-nonresident",
+   "title": "2023 Demand Report - Nonresident Deer (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/27417/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-deer-doe-fawn-resident",
+   "title": "2023 Demand Report - Resident Deer (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24483/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-elk-random-draw-nonresident",
+   "title": "2023 Demand Report - Nonresident Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23994/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/15/2023"
+  },
+  {
+   "id": "d-wy-2023-elk-random-draw-nonresident-special",
+   "title": "2023 Demand Report - Nonresident Special Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23995/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/15/2023"
+  },
+  {
+   "id": "d-wy-2023-elk-random-draw-resident",
+   "title": "2023 Demand Report - Resident Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24480/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-elk-preference-points-nonresident",
+   "title": "2023 Demand Report - Nonresident Elk (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23996/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/15/2023"
+  },
+  {
+   "id": "d-wy-2023-elk-preference-points-nonresident-special",
+   "title": "2023 Demand Report - Nonresident Special Elk (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23997/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/15/2023"
+  },
+  {
+   "id": "d-wy-2023-elk-cow-calf-nonresident",
+   "title": "2023 Demand Report - Nonresident Elk (Cow/Calf)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23998/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/15/2023"
+  },
+  {
+   "id": "d-wy-2023-elk-cow-calf-resident",
+   "title": "2023 Demand Report - Resident Elk (Cow/Calf)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24481/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2023"
+  },
+  {
+   "id": "d-wy-2023-sheep-random-draw-nonresident",
+   "title": "2023 Demand Report - Nonresident Bighorn Sheep (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23949/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/26/2023"
+  },
+  {
+   "id": "d-wy-2023-sheep-random-draw-resident",
+   "title": "2023 Demand Report - Resident Bighorn Sheep (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23938/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/26/2023"
+  },
+  {
+   "id": "d-wy-2023-sheep-preference-points-nonresident",
+   "title": "2023 Demand Report - Nonresident Bighorn Sheep (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23950/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/26/2023"
+  },
+  {
+   "id": "d-wy-2023-sheep-preference-points-resident",
+   "title": "2023 Demand Report - Resident Bighorn Sheep (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23939/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/26/2023"
+  },
+  {
+   "id": "d-wy-2023-sheep-ewe-lamb-nonresident",
+   "title": "2023 Demand Report - Nonresident Bighorn Sheep (Ewe/Lamb)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23951/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/26/2023"
+  },
+  {
+   "id": "d-wy-2023-sheep-ewe-lamb-resident",
+   "title": "2023 Demand Report - Resident Bighorn Sheep (Ewe/Lamb)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23944/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/26/2023"
+  },
+  {
+   "id": "d-wy-2023-moose-random-draw-nonresident",
+   "title": "2023 Demand Report - Nonresident Moose (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30058/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/26/2023"
+  },
+  {
+   "id": "d-wy-2023-moose-random-draw-resident",
+   "title": "2023 Demand Report - Resident Moose (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30056/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/26/2023"
+  },
+  {
+   "id": "d-wy-2023-moose-preference-points-nonresident",
+   "title": "2023 Demand Report - Nonresident Moose (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30059/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/26/2023"
+  },
+  {
+   "id": "d-wy-2023-moose-preference-points-resident",
+   "title": "2023 Demand Report - Resident Moose (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/30057/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/26/2023"
+  },
+  {
+   "id": "d-wy-2023-goat-all-nonresident",
+   "title": "2023 Demand Report - Nonresident Mountain Goat",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23947/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/26/2023"
+  },
+  {
+   "id": "d-wy-2023-goat-all-resident",
+   "title": "2023 Demand Report - Resident Mountain Goat",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/23943/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/26/2023"
+  },
+  {
+   "id": "d-wy-2023-turkey-spring-nonresident",
+   "title": "2023 Demand Report - Nonresident Wild Turkey (Spring)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/28795/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 2/10/2023"
+  },
+  {
+   "id": "d-wy-2023-turkey-spring-resident",
+   "title": "2023 Demand Report - Resident Wild Turkey (Spring)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/28796/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 2/10/2023"
+  },
+  {
+   "id": "d-wy-2023-turkey-fall-nonresident",
+   "title": "2023 Demand Report - Nonresident Wild Turkey (Fall)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24538/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/20/2023"
+  },
+  {
+   "id": "d-wy-2023-turkey-fall-resident",
+   "title": "2023 Demand Report - Resident Wild Turkey (Fall)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/24540/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/20/2023"
+  },
+  {
+   "id": "d-wy-2022-antelope-random-draw-nonresident",
+   "title": "2022 Demand Report - Nonresident Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22319/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-antelope-random-draw-nonresident-special",
+   "title": "2022 Demand Report - Nonresident Special Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22318/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-antelope-random-draw-resident",
+   "title": "2022 Demand Report - Resident Antelope (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22317/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-antelope-preference-points-nonresident",
+   "title": "2022 Demand Report - Nonresident Antelope (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22316/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-antelope-preference-points-nonresident-special",
+   "title": "2022 Demand Report - Nonresident Special Antelope (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22315/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-antelope-doe-fawn-nonresident",
+   "title": "2022 Demand Report - Nonresident Antelope (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22314/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-antelope-doe-fawn-resident",
+   "title": "2022 Demand Report - Resident Antelope (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22313/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-deer-random-draw-nonresident",
+   "title": "2022 Demand Report - Nonresident Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22326/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-deer-random-draw-nonresident-special",
+   "title": "2022 Demand Report - Nonresident Special Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22327/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-deer-random-draw-resident",
+   "title": "2022 Demand Report - Resident Deer (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22328/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-deer-preference-points-nonresident",
+   "title": "2022 Demand Report - Nonresident Deer (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22329/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-deer-preference-points-nonresident-special",
+   "title": "2022 Demand Report - Nonresident Special Deer (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22330/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-deer-doe-fawn-nonresident",
+   "title": "2022 Demand Report - Nonresident Deer (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22331/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-deer-doe-fawn-resident",
+   "title": "2022 Demand Report - Resident Deer (Doe/Fawn)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22332/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-elk-random-draw-nonresident",
+   "title": "2022 Demand Report - Nonresident Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22216/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2022"
+  },
+  {
+   "id": "d-wy-2022-elk-random-draw-nonresident-special",
+   "title": "2022 Demand Report - Nonresident Special Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22218/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2022"
+  },
+  {
+   "id": "d-wy-2022-elk-random-draw-resident",
+   "title": "2022 Demand Report - Resident Elk (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22334/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-elk-preference-points-nonresident",
+   "title": "2022 Demand Report - Nonresident Elk (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22215/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2022"
+  },
+  {
+   "id": "d-wy-2022-elk-preference-points-nonresident-special",
+   "title": "2022 Demand Report - Nonresident Special Elk (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22213/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2022"
+  },
+  {
+   "id": "d-wy-2022-elk-cow-calf-nonresident",
+   "title": "2022 Demand Report - Nonresident Elk (Cow/Calf)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22217/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 5/13/2022"
+  },
+  {
+   "id": "d-wy-2022-elk-cow-calf-resident",
+   "title": "2022 Demand Report - Resident Elk (Cow/Calf)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22333/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 6/13/2022"
+  },
+  {
+   "id": "d-wy-2022-sheep-random-draw-nonresident",
+   "title": "2022 Demand Report - Nonresident Bighorn Sheep (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22165/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/25/2022"
+  },
+  {
+   "id": "d-wy-2022-sheep-random-draw-resident",
+   "title": "2022 Demand Report - Resident Bighorn Sheep (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22168/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/25/2022"
+  },
+  {
+   "id": "d-wy-2022-sheep-preference-points-nonresident",
+   "title": "2022 Demand Report - Nonresident Bighorn Sheep (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22164/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/25/2022"
+  },
+  {
+   "id": "d-wy-2022-sheep-preference-points-resident",
+   "title": "2022 Demand Report - Resident Bighorn Sheep (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22167/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/25/2022"
+  },
+  {
+   "id": "d-wy-2022-sheep-ewe-lamb-nonresident",
+   "title": "2022 Demand Report - Nonresident Bighorn Sheep (Ewe/Lamb)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22176/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/25/2022"
+  },
+  {
+   "id": "d-wy-2022-sheep-ewe-lamb-resident",
+   "title": "2022 Demand Report - Resident Bighorn Sheep (Ewe/Lamb)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22175/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/25/2022"
+  },
+  {
+   "id": "d-wy-2022-moose-random-draw-nonresident",
+   "title": "2022 Demand Report - Nonresident Moose (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22162/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/25/2022"
+  },
+  {
+   "id": "d-wy-2022-moose-random-draw-resident",
+   "title": "2022 Demand Report - Resident Moose (Random Draw)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22172/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/25/2022"
+  },
+  {
+   "id": "d-wy-2022-moose-preference-points-nonresident",
+   "title": "2022 Demand Report - Nonresident Moose (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22163/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/25/2022"
+  },
+  {
+   "id": "d-wy-2022-moose-preference-points-resident",
+   "title": "2022 Demand Report - Resident Moose (Preference Points)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22173/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 4/25/2022"
+  },
+  {
+   "id": "d-wy-2022-turkey-spring-nonresident",
+   "title": "2022 Demand Report - Nonresident Wild Turkey (Spring)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/21839/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 2/8/2022"
+  },
+  {
+   "id": "d-wy-2022-turkey-spring-resident",
+   "title": "2022 Demand Report - Resident Wild Turkey (Spring)",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/21840/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF), report dated 2/8/2022"
+  },
+  {
+   "id": "d-wy-2022-goat-all-nonresident",
+   "title": "2022 Demand Report - Nonresident Mountain Goat",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22160/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF); not linked from the index page (its 2022 goat links open the 2020 report), report dated 4/25/2022"
+  },
+  {
+   "id": "d-wy-2022-goat-all-resident",
+   "title": "2022 Demand Report - Resident Mountain Goat",
+   "publisher": "Wyoming Game and Fish Department",
+   "url": "https://wgfd.wyo.gov/media/22171/download",
+   "pageUrl": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "WGFD initial-draw demand report (PDF); not linked from the index page (its 2022 goat links open the 2020 report), report dated 4/25/2022"
+  }
+ ]
+}

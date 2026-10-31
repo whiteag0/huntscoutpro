@@ -1,0 +1,496 @@
+{
+ "unitNames": {
+  "elk": {
+   "2": "Jicarilla/San Juan Herd Unit",
+   "5A": "Lindrith Herd Unit",
+   "9": "Mt. Taylor Herd Unit",
+   "10": "Zuni Herd Unit",
+   "12": "Fence Lake Herd",
+   "13": "Datil Herd Unit",
+   "17": "San Mateo Herd Unit",
+   "34": "Sacramento Herd Unit",
+   "36": "Ruidoso Herd Unit",
+   "45": "Pecos Herd Unit",
+   "48": "White Peak Herd Unit",
+   "49": "Penasco Herd Unit",
+   "53": "Ute Herd Unit",
+   "6A": "Jemez Mountains Herd Unit",
+   "6B": "Jemez Mountains Herd Unit",
+   "6C": "Jemez Mountains Herd Unit",
+   "7": "Jemez Mountains Herd Unit",
+   "15": "Greater Gila Herd Unit",
+   "16A": "Greater Gila Herd Unit",
+   "16B": "Greater Gila Herd Unit",
+   "16C": "Greater Gila Herd Unit",
+   "16D": "Greater Gila Herd Unit",
+   "16E": "Greater Gila Herd Unit",
+   "21A": "Lesser Gila Herd Unit",
+   "21B": "Lesser Gila Herd Unit",
+   "23": "Lesser Gila Herd Unit",
+   "24": "Lesser Gila Herd Unit"
+  },
+  "bear": {
+   "Zone 1": "GMUs 4 - 7, 51, 52",
+   "Zone 2": "GMUs 2",
+   "Zone 3": "GMUs 49, 50, 53",
+   "Zone 4": "GMUs 45, 46, 48",
+   "Zone 5": "GMUs 54, 55, 57",
+   "Zone 6": "GMUs 41 - 43, 47, 56, 58, 59",
+   "Zone 7": "GMUs 56, 57, 58",
+   "Zone 8": "GMUs 8",
+   "Zone 9": "GMUs 9, 10",
+   "Zone 10": "GMUs 12, 13, 15-18, 20-24, 26, 27",
+   "Zone 11": "GMUs 37, 38",
+   "Zone 12": "GMUs 34",
+   "Zone 13": "GMUs 36",
+   "Zone 14": "GMUs 14"
+  },
+  "lion": {
+   "Zone A": "GMUs 2, 7",
+   "Zone B": "GMUs 5, 6, 50, 51",
+   "Zone C": "GMUs 43,45,46, 48, 49, 53",
+   "Zone D": "GMUs 41, 42, 47, 59",
+   "Zone E": "GMUs 9, 10",
+   "Zone G": "GMUs 13, 17, 18",
+   "Zone H": "GMUs 19, 20",
+   "Zone I": "GMUs 36-38",
+   "Zone J": "GMUs 15, 16, 21",
+   "Zone K": "GMUs 22-24",
+   "Zone L": "GMUs 25-27",
+   "Zone M": "GMUs 31-33, 39, 40",
+   "Zone N": "GMUs 4, 52",
+   "Zone O": "GMUs 12",
+   "Zone P": "GMUs 56-58",
+   "Zone Q": "GMUs 28-30, 34",
+   "Zone R": "GMUs 54, 55",
+   "Zone S": "GMUs 8, 14"
+  }
+ },
+ "coverage": [
+  {
+   "species": "elk",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "2020-2025 license years from the NMDGF Elk Hunter Harvest Reports: one row per hunt code (public draw) and per private-land authorization line, plus the published GMU/herd-unit totals (method 'all') and the STATEWIDE TOTALS line. hunters is null: the report gives licenses sold and # hunters reporting, not an estimate of hunters afield; successPct is the agency's own success rate. harvest = estimated bulls + estimated cows (the report prints the two columns, not their sum). Average days hunted and satisfaction are not loaded (averages). GMU ids kept as the report prints them (16B/22, 29/30 [GMU 30 in 2020-2022], 39/43 [GMU 43 in 2020-2022], 57/58); private rows carrying a sub-unit prefix (16B, 22, 29, 30, 39, 43, 55A, 55B, 57, 58) use that sub-unit. The 2024-2025 'GMU 42/47/59' block repeats the private rows of GMUs 42, 47 and 59, so only its public hunt codes are loaded and its block total is omitted; the agency's statewide licenses line counts those rows twice. Not loaded: multi-GMU herd aggregates (Greater/Lesser Gila, region totals), Special Authorizations (auction/raffle/enhancement, statewide) and Population Management hunts, and a few hunts with no harvest report (Na). Hunt rows sum to the GMU totals within +/-2 animals (agency rounding); the STATEWIDE TOTALS harvest is the agency's own statewide estimate and does not equal the sum of GMU totals (e.g. 2025: statewide 7,644 bulls / 6,666 cows vs GMU sum 8,431 / 6,793)."
+  },
+  {
+   "species": "mule-deer",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "2020-2025 from the NMDGF Deer Harvest Reports. NMDGF does not split deer harvest by species: most licenses are FAD (fork-antlered deer, mule OR white-tailed), so this file holds every hunt that is not whitetail-only (bags FAD and FAMD) plus the published GMU totals and Statewide Totals, which cover ALL deer in the GMU including whitetail-only hunts. Hunt rows are split Public/Private land as printed (methodLabel); GMU 55 WMA / Valle Vidal hunts show the area name instead. hunters = agency Estimated Hunters (2021-2025; the 2020 report has no such column, so hunters is null for 2020); harvest = estimated bucks + does; successPct as published (from license holders reporting they went afield). Named sub-areas are kept as their own units when the report totals them separately (23 Burros, 55 ES Barker / Urraca / Valle Vidal, 57 Sugarite in 2024-2025); otherwise rows sit under the GMU total that covers them (e.g. 23 Burro Mountain / Excluding Burro Mountain under 23 in 2020-2023). Not loaded: Special Hunts (enhancement, premium statewide, auction tags) and hunt rows where nobody reported hunting (all cells N/A). Cross-check: GMU totals + Special Hunts equal the agency Statewide Totals licenses exactly in 2020, 2021 and 2024, and fall short by 61 (2022), 3 (2023) and 72 (2025) licenses (agency figures)."
+  },
+  {
+   "species": "whitetail",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "2020-2025 hunt-code rows whose bag limit is white-tailed deer only (FAWTD fork-antlered whitetail, ESWTD either-sex whitetail), from the NMDGF Deer Harvest Reports. Many Coues whitetail are also taken on FAD (any fork-antlered deer) licenses, which are in mule-deer.json because the agency does not report species. There are no whitetail-only GMU totals: GMU totals in mule-deer.json include these hunts."
+  },
+  {
+   "species": "pronghorn",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "2020 and 2022-2025 hunt-code rows (Public/Private land as printed) plus published GMU-group totals and Statewide Totals from the NMDGF Pronghorn Harvest Reports; units are the agency's GMU groups exactly as printed ('2, 7, 9, 10', '25, 26, 27'). hunters = Estimated Hunters only in 2024-2025 (older reports have no such column). The 2020 report also lists ANT-1-600 / 'Unit NN' private (ranch) licenses inside GMU groups; they are kept. Not loaded: special-hunt blocks (PCRP, ranch-wide, enhancement, auction, Melrose AFR, female-immature) which are not reported by GMU. 2021: NMDGF lists no 2021-22 pronghorn harvest report; only a statewide row (6,857 licenses, 4,655 bucks, 282 does, 70% reported success) quoted in the agency's 2023-2024 Pronghorn Hunting Forecast is included. The file titled '2023-2023' is the agency's 2022-2023 report (listed as such)."
+  },
+  {
+   "species": "sheep",
+   "years": [
+    2020,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "2020 and 2022-2025 from the NMDGF Bighorn Sheep Harvest Results (Rocky Mountain and desert bighorn combined; the agency reports by statewide hunt code, not by GMU, so unit is 'Statewide', or the Pecos / Rio Grande Gorge area breakdown printed under the 2020 and 2022 ewe hunts). Hunt codes normalized to the BHS-1-201 form (some years print 'BHS 1-201'). Public, private-land, auction and raffle licenses are separate rows (methodLabel). hunters null (only # sold / # reporting printed); success rate applies to hunters that went afield. No 2021-2022 bighorn harvest report is listed by NMDGF."
+  },
+  {
+   "species": "bear",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "2020-2025 license years (April 1 - March 31) by bear management zone from the 2025-2026 'Annual Bear Mortality by Zone' tables, plus a statewide row per year from the statewide mortality table. harvest = SPORT harvest only (female + male + unknown sex); depredation and road-kill/other deaths are excluded. Zone boundaries changed in 2024 (zone 7 merged into zones 5 and 6): each row's unitName gives that year's GMU list. NMDGF does not publish bear hunter numbers or success by zone, so hunters and successPct are null. Zone sums equal the published statewide line for every year."
+  },
+  {
+   "species": "lion",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "2020-2025 license years by cougar zone (A-S) from the 2025-2026 'Annual Cougar Mortality by Zone' tables, plus a statewide row per year from the statewide table. harvest = SPORT harvest only (female + male + unknown); depredation, road-kill/other and bighorn-sheep-protection removals are excluded. No hunter or success figures are published by zone. Cross-check: zone sums match the statewide line in every year except 2020-21, where the statewide table shows 150 males vs 149 in the zone table (noted on that row)."
+  },
+  {
+   "species": "turkey",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "2020-2025 spring and fall seasons (methodLabel) from the NMDGF Turkey Harvest Results. GMU rows are REPORTED counts from mandatory harvest reports (not expanded): hunters, total days hunted, harvest and the agency success rate (spring = success on first turkey; spring harvest includes second birds); fall rows add hens (harvestFemale) and gobblers (harvestMale). GMU hunter counts can add up to more than the agency's TOTAL line (hunters who hunted several GMUs); GMU harvest sums equal the TOTAL line in every year. One 'Statewide' row per season gives licenses sold, estimated hunters and estimated harvest stated in that year's report text (expanded to non-reporting license holders). GMUs flagged * (Reservation) or ** (closed season) are kept with the agency's caveat in the note. Note: the 2025 report's Table 1 revises some earlier estimates (e.g. 2023 fall harvest 983 vs 1,003 in the 2023 report); each year uses its own report."
+  }
+ ],
+ "sources": [
+  {
+   "id": "h-elk-2020",
+   "title": "2020 New Mexico Elk Hunter Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2020_2021-elk-harvest-report/?wpdmdl=44855",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt-code and GMU totals; harvest columns are agency estimates (bulls, cows)."
+  },
+  {
+   "id": "h-elk-2021",
+   "title": "2021 New Mexico Elk Hunter Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2021-2022-elk-harvest-report/?wpdmdl=50328",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt-code and GMU totals; harvest columns are agency estimates (bulls, cows)."
+  },
+  {
+   "id": "h-elk-2022",
+   "title": "2022 New Mexico Elk Hunter Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2022-2023-elk-harvest-report/?wpdmdl=48473",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt-code and GMU totals; harvest columns are agency estimates (bulls, cows)."
+  },
+  {
+   "id": "h-elk-2023",
+   "title": "2023 New Mexico Elk Hunter Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2023-2024-elk-harvest-report/?wpdmdl=48482",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt-code and GMU totals; harvest columns are agency estimates (bulls, cows)."
+  },
+  {
+   "id": "h-elk-2024",
+   "title": "2024 New Mexico Elk Hunter Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2024-2025-elk-harvest-report/?wpdmdl=51252",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt-code and GMU totals; harvest columns are agency estimates (bulls, cows)."
+  },
+  {
+   "id": "h-elk-2025",
+   "title": "2025 New Mexico Elk Hunter Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2025-2026-elk-harvest-report/?wpdmdl=55155",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt-code and GMU totals; harvest columns are agency estimates (bulls, cows)."
+  },
+  {
+   "id": "h-deer-2020",
+   "title": "2020 - 2021 Deer Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2020_2021-deer-harvest-report/?wpdmdl=44854",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt-code and GMU totals; this year's report has no Estimated Hunters column."
+  },
+  {
+   "id": "h-deer-2021",
+   "title": "2021 - 2022 Deer Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2021-2022-deer-harvest-report/?wpdmdl=50327",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt-code and GMU totals; Estimated Hunters and Estimated Harvest are agency estimates."
+  },
+  {
+   "id": "h-deer-2022",
+   "title": "2022-2023 Deer Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2022-2023-deer-harvest-report/?wpdmdl=48472",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt-code and GMU totals; Estimated Hunters and Estimated Harvest are agency estimates."
+  },
+  {
+   "id": "h-deer-2023",
+   "title": "2023-2024 Deer Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2023-2024-deer-harvest-report/?wpdmdl=48481",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt-code and GMU totals; Estimated Hunters and Estimated Harvest are agency estimates."
+  },
+  {
+   "id": "h-deer-2024",
+   "title": "2024-2025 Deer Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2024-2025-deer-harvest-report/?wpdmdl=51251",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt-code and GMU totals; Estimated Hunters and Estimated Harvest are agency estimates."
+  },
+  {
+   "id": "h-deer-2025",
+   "title": "2025-2026 Deer Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2025-2026-deer-harvest-report/?wpdmdl=55156",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt-code and GMU totals; Estimated Hunters and Estimated Harvest are agency estimates."
+  },
+  {
+   "id": "h-pronghorn-2020",
+   "title": "2020-2021 Pronghorn Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2020_2021-pronghorn-harvest-report/?wpdmdl=44860",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "No Estimated Hunters column in this year's report."
+  },
+  {
+   "id": "h-pronghorn-2022",
+   "title": "2022-2023 Pronghorn Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2022-2023-pronghorn-harvest-report/?wpdmdl=48478",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Listed by NMDGF as the 2022-2023 Pronghorn Harvest Report; the PDF title line is misprinted '2023-2023'. No Estimated Hunters column in this year's report."
+  },
+  {
+   "id": "h-pronghorn-2023",
+   "title": "2023-2024 Pronghorn Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2023-2024-pronghorn-harvest-report/?wpdmdl=48486",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "No Estimated Hunters column in this year's report."
+  },
+  {
+   "id": "h-pronghorn-2024",
+   "title": "2024-2025 Pronghorn Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2024-2025-pronghorn-harvest-report/?wpdmdl=51256",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "h-pronghorn-2025",
+   "title": "2025-2026 Pronghorn Harvest Report",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2025-2026-pronghorn-harvest-report/?wpdmdl=55149",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "h-pronghorn-2021-statewide",
+   "title": "2023-2024 Pronghorn Hunting Forecast",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/2023-2024-pronghorn-hunting-forecast/",
+   "pageUrl": "https://wildlife.dgf.nm.gov/2023-2024-pronghorn-hunting-forecast/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Agency web article (published 2023-01-16) quoting 2021 statewide pronghorn license and harvest figures; no 2021-2022 unit-level pronghorn harvest report is listed by NMDGF."
+  },
+  {
+   "id": "h-sheep-2020",
+   "title": "Bighorn Sheep Harvest Results 2020-2021",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2020_2021-bighorn-sheep-harvest-report/?wpdmdl=44852",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Statewide hunt codes (Rocky Mountain and desert bighorn); success rate applies to hunters that went afield."
+  },
+  {
+   "id": "h-sheep-2022",
+   "title": "Bighorn Sheep Harvest Results 2022-2023",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2022-2023-bighorn-sheep-harvest-report/?wpdmdl=48471",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Statewide hunt codes (Rocky Mountain and desert bighorn); success rate applies to hunters that went afield."
+  },
+  {
+   "id": "h-sheep-2023",
+   "title": "Bighorn Sheep Harvest Results 2023-2024",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2023-2024-bighorn-sheep-harvest-report/?wpdmdl=50139",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Statewide hunt codes (Rocky Mountain and desert bighorn); success rate applies to hunters that went afield."
+  },
+  {
+   "id": "h-sheep-2024",
+   "title": "Bighorn Sheep Harvest Results 2024-2025",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2024-2025-bighorn-sheep-harvest-report/?wpdmdl=51249",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Statewide hunt codes (Rocky Mountain and desert bighorn); success rate applies to hunters that went afield."
+  },
+  {
+   "id": "h-sheep-2025",
+   "title": "Bighorn Sheep Harvest Results 2025-2026",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2025-2026-bighorn-sheep-harvest-report/?wpdmdl=57079",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Statewide hunt codes (Rocky Mountain and desert bighorn); success rate applies to hunters that went afield."
+  },
+  {
+   "id": "h-turkey-2020",
+   "title": "2020 New Mexico Turkey Harvest Results",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2020-turkey-harvest-results/?wpdmdl=44862",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "GMU tables are reported (not expanded) counts from mandatory harvest reports; statewide estimates are in the report text."
+  },
+  {
+   "id": "h-turkey-2021",
+   "title": "2021 New Mexico Turkey Harvest Results",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2021-turkey-harvest-report/?wpdmdl=50285",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "GMU tables are reported (not expanded) counts from mandatory harvest reports; statewide estimates are in the report text."
+  },
+  {
+   "id": "h-turkey-2022",
+   "title": "2022 New Mexico Turkey Harvest Results",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2022-turkey-harvest-report/?wpdmdl=50288",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "GMU tables are reported (not expanded) counts from mandatory harvest reports; statewide estimates are in the report text."
+  },
+  {
+   "id": "h-turkey-2023",
+   "title": "2023 New Mexico Turkey Harvest Results",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2023-turkey-harvest-report/?wpdmdl=50290",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "GMU tables are reported (not expanded) counts from mandatory harvest reports; statewide estimates are in the report text."
+  },
+  {
+   "id": "h-turkey-2024",
+   "title": "2024 New Mexico Turkey Harvest Results",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2024-turkey-harvest-report/?wpdmdl=52673",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "GMU tables are reported (not expanded) counts from mandatory harvest reports; statewide estimates are in the report text."
+  },
+  {
+   "id": "h-turkey-2025",
+   "title": "2025 New Mexico Turkey Harvest Results",
+   "publisher": "New Mexico Department of Game and Fish",
+   "url": "https://wildlife.dgf.nm.gov/download/2025-turkey-harvest-report/?wpdmdl=56963",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "GMU tables are reported (not expanded) counts from mandatory harvest reports; statewide estimates are in the report text."
+  },
+  {
+   "id": "h-bear-zone-2025",
+   "title": "Annual Bear Mortality by Zone 2025-2026",
+   "publisher": "New Mexico Department of Wildlife (formerly NM Department of Game and Fish)",
+   "url": "https://wildlife.dgf.nm.gov/download/annual-bear-mortality-by-zone-2025-2026/?wpdmdl=56275",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Tables 1-14 'Black Bear Mortality in New Mexico' by zone, 2012-2025 license years (April 1 - March 31); dated 8/3/2026."
+  },
+  {
+   "id": "h-bear-state-2025",
+   "title": "Annual Bear Mortality Statewide 2025-2026",
+   "publisher": "New Mexico Department of Wildlife (formerly NM Department of Game and Fish)",
+   "url": "https://wildlife.dgf.nm.gov/download/annual-bear-mortality-statewide-2025-2026/?wpdmdl=56274",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Table 1 'Annual Black Bear Mortality Statistics 2001-2025' (statewide)."
+  },
+  {
+   "id": "h-lion-zone-2025",
+   "title": "Annual Cougar Mortality by Zone 2025-2026",
+   "publisher": "New Mexico Department of Wildlife (formerly NM Department of Game and Fish)",
+   "url": "https://wildlife.dgf.nm.gov/download/annual-cougar-mortality-by-zone-2025-2026/?wpdmdl=56273",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Tables 1-14 'Cougar Mortality in New Mexico' by zone, 2012-2025 license years (April 1 - March 31); dated 8/3/2026 and 8/5/2026."
+  },
+  {
+   "id": "h-lion-state-2025",
+   "title": "Annual Cougar Mortality Statewide 2025-2026",
+   "publisher": "New Mexico Department of Wildlife (formerly NM Department of Game and Fish)",
+   "url": "https://wildlife.dgf.nm.gov/download/annual-cougar-mortality-statewide-2025-2026/?wpdmdl=56272",
+   "pageUrl": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Table 1 'Annual Cougar Mortality Statistics 2001-2025' (statewide)."
+  }
+ ]
+}

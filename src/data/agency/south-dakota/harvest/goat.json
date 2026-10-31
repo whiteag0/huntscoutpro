@@ -1,0 +1,5 @@
+[
+{"species":"goat","year":2020,"unit":"Black Hills","unitName":"Black Hills","methodLabel":"Mountain Goat — Black Hills","hunters":null,"harvest":2,"harvestMale":2,"harvestFemale":0,"successPct":100,"licenses":2,"daysHunted":8,"note":"3970 applications. Harvest = GFP billies + nannies.","sourceId":"h-gfp-mountain-goat-and-bighorn-2025"},
+{"species":"goat","year":2021,"unit":"Black Hills","unitName":"Black Hills","methodLabel":"Mountain Goat — Black Hills","hunters":null,"harvest":2,"harvestMale":1,"harvestFemale":1,"successPct":100,"licenses":2,"daysHunted":4,"note":"3983 applications. Harvest = GFP billies + nannies.","sourceId":"h-gfp-mountain-goat-and-bighorn-2025"},
+{"species":"goat","year":2022,"unit":"Black Hills","unitName":"Black Hills","methodLabel":"Mountain Goat — Black Hills","hunters":null,"harvest":2,"harvestMale":2,"harvestFemale":0,"successPct":100,"licenses":2,"daysHunted":11.5,"note":"4359 applications. Harvest = GFP billies + nannies.","sourceId":"h-gfp-mountain-goat-and-bighorn-2025"}
+]

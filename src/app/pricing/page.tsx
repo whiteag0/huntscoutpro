@@ -17,43 +17,49 @@ import {
 } from "lucide-react";
 import { CheckoutButton } from "@/components/CheckoutButton";
 import { PRICE } from "@/lib/promo";
+import { LIVE_STATES } from "@/lib/agency-format";
 
 /* ------------------------------------------------------------------ */
 /*  DATA                                                               */
 /* ------------------------------------------------------------------ */
 
-// Only list features that exist in the app today. Draw odds, points, and
-// tag/applicant counts are modeled estimates — say so.
+// Only list features that exist in the app today. Every figure on the site is
+// published state wildlife agency data, cited to its source; nothing is modeled.
+const coverageLine =
+  LIVE_STATES.length > 0
+    ? `${LIVE_STATES.length} western draw state${LIVE_STATES.length === 1 ? "" : "s"}: ${LIVE_STATES.map((s) => s.name).join(", ")}`
+    : "Western draw states, each added once its agency data is checked";
+
 const FEATURE_CATEGORIES = [
   {
-    category: "Draw Odds (Estimates)",
+    category: "Draw Results",
     icon: Zap,
     features: [
-      "Modeled draw odds by preference/bonus point level",
-      "Estimated minimum points to draw",
-      "Point creep trends over time",
-      "Resident vs non-resident breakdowns",
-      "Draw system explainer for each state",
+      "Quota, applicants, and drawn for each hunt code",
+      "Applicants and drawn by point level, where the agency publishes it",
+      "Minimum points drawn, year over year",
+      "Resident and nonresident results, where published",
+      "How each state's draw works, by species",
     ],
   },
   {
     category: "Harvest & Success",
     icon: BarChart3,
     features: [
-      "Harvest totals and success rates by unit",
-      "Agency harvest report figures where available (select species in CO, WY, ID, MT, WI)",
-      "Hunter participation figures",
-      "Clear labels on what is agency data vs. estimated",
+      "Hunters, harvest, and success rate by unit",
+      "Taken from each agency's harvest reports",
+      "Multi-year history for each unit",
+      "Source link on every table",
     ],
   },
   {
     category: "Planning Tools",
     icon: Calendar,
     features: [
-      "Season & application date calendar",
+      "Calendar of agency application and draw dates",
+      "Agency license and application fees",
       "Hunt planner with application timeline",
-      "Hunt budget calculator",
-      "Gear checklist",
+      "Hunt budget tracker and gear checklist",
       "Export/import your plan (saved in your browser)",
     ],
   },
@@ -61,18 +67,19 @@ const FEATURE_CATEGORIES = [
     category: "Coverage",
     icon: Globe,
     features: [
-      "All 50 states",
-      "10 species: elk, mule deer, whitetail, pronghorn, moose, bear, bighorn sheep, mountain goat, mountain lion, turkey",
-      "Turkey subspecies guide",
+      coverageLine,
+      "Elk, deer, pronghorn, moose, bear, bighorn sheep, mountain goat, mountain lion, and turkey, where each agency publishes them",
+      "More states coming soon. Request yours anytime",
     ],
   },
   {
     category: "Analysis & Comparison",
     icon: TrendingUp,
     features: [
-      "Side-by-side unit comparison",
-      "Filters by residency, season, sex, and your points",
-      "Sort units by odds, success rate, tags, or harvest",
+      "Side-by-side hunt comparison",
+      "Resident or nonresident view at your point level",
+      "Sort draws by quota, applicants, odds, or minimum points",
+      "Sort harvest by hunters, harvest, or success rate",
     ],
   },
 ];
@@ -85,8 +92,8 @@ const COMPARISON = {
     "Losing track of application dates",
   ],
   with: [
-    "Units, odds estimates, and harvest figures in one place",
-    "Agency harvest numbers clearly labeled where we have them",
+    "Agency draw results and harvest by unit in one place",
+    "Every number cited to the agency report it came from",
     "Side-by-side unit comparison",
     "Planner and calendar to keep applications organized",
   ],
@@ -110,12 +117,12 @@ const BILLING_FAQS = [
     a: "We offer a 30-day money-back guarantee. If HuntScout Pro isn't for you, email support@huntscoutpro.com within 30 days of purchase for a full refund.",
   },
   {
-    q: "Are the draw odds official?",
-    a: "No. Draw odds, minimum points, and tag and applicant counts are estimates from our model, not official draw results. Harvest and success figures use state agency reports where available and are labeled on each page. Always confirm with the state wildlife agency before applying.",
+    q: "Where do the numbers come from?",
+    a: "Every figure comes from a state wildlife agency's own published reports: draw results, harvest reports, application dates, and license fees. Each table links to its source. Nothing is modeled or estimated. These are past results, not predictions, so confirm dates and rules with the agency before applying.",
   },
   {
     q: "Is there a free trial?",
-    a: "You can preview select data before buying, and the 30-day money-back guarantee covers your purchase.",
+    a: "You can see a short preview of each state's tables before buying, and the 30-day money-back guarantee covers your purchase.",
   },
   {
     q: "Do you offer group or family pricing?",
@@ -124,14 +131,15 @@ const BILLING_FAQS = [
 ];
 
 const PLAN_FEATURES = [
-  "Modeled draw odds for all 50 states",
-  "10 species covered",
-  "Point creep trends",
-  "Harvest & success rates",
-  "Side-by-side unit comparison",
-  "Hunt planner & budget calculator",
-  "Season & application calendar",
-  "Turkey subspecies guide",
+  "Agency draw results by hunt code",
+  "Applicants & drawn by point level (where published)",
+  "Minimum points drawn, year over year",
+  "Harvest & success by unit",
+  "Side-by-side hunt comparison",
+  "Calendar of agency dates",
+  "Hunt planner & budget tracker",
+  "Source link on every table",
+  "New states as they go live",
 ];
 
 /* ------------------------------------------------------------------ */
@@ -205,10 +213,10 @@ function ProMemberPanel({
         </h1>
         <p className="text-muted-foreground mt-3">
           {isSuperAdmin
-            ? "Your admin account has full access to every state and species."
+            ? "Your admin account has full access to everything on HuntScout Pro."
             : until
-            ? `Your access to every state and species is active through ${until}.`
-            : "Your access to every state and species is active."}
+            ? `Your full access to HuntScout Pro is active through ${until}.`
+            : "Your full access to HuntScout Pro is active."}
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center mt-7">
           <Link
@@ -266,8 +274,8 @@ function PricingMarketing() {
             <span className="text-gradient-gold">Serious Data.</span>
           </h1>
           <p className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto">
-            One price. Every state. Every species. Pay once &mdash; no
-            subscription, no auto-renewal.
+            One price. Every live state and species, with every number taken
+            from agency reports. Pay once &mdash; no subscription, no auto-renewal.
           </p>
         </div>
       </section>
@@ -333,9 +341,9 @@ function PricingMarketing() {
           </div>
 
           <p className="text-center text-xs text-muted-foreground mt-6 max-w-sm mx-auto">
-            Draw odds, minimum points, and tag &amp; applicant counts are
-            modeled estimates, not official draw results. Confirm with the
-            state wildlife agency before applying.
+            Every figure is a state wildlife agency&apos;s published result,
+            cited to its source. Past draws don&apos;t guarantee future odds.
+            Confirm dates and rules with the agency before applying.
           </p>
         </div>
       </section>

@@ -53,7 +53,7 @@ export async function POST() {
             product_data: {
               name: "HuntScout Pro — 2-Year Access",
               description:
-                "One-time payment. 24 months of full access to draw odds estimates, harvest data, point analysis and the hunt planner. No auto-renewal.",
+                "One-time payment. 24 months of full access to state wildlife agency draw results, harvest data, comparison tools and the hunt planner. No auto-renewal.",
             },
             unit_amount: 1499,
           },

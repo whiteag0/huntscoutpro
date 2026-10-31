@@ -214,10 +214,17 @@ export default function PlannerPage() {
   const [customCategory, setCustomCategory] = useState(CHECKLIST_CATEGORIES[0]);
   const [customLabel, setCustomLabel] = useState("");
 
-  // Load from localStorage
+  // Load from localStorage after mount (the server render has no storage).
   useEffect(() => {
-    setData(loadData());
-    setLoaded(true);
+    let cancelled = false;
+    Promise.resolve().then(() => {
+      if (cancelled) return;
+      setData(loadData());
+      setLoaded(true);
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Persist on change
@@ -434,8 +441,8 @@ export default function PlannerPage() {
                 Hunt Planner
               </h1>
               <p className="text-white/60 max-w-xl">
-                Organize your applications and hunts across all 50 states.
-                Track deadlines, budget, and gear checklists in one place.
+                Organize your applications and hunts in one place. Track the
+                deadlines you enter, your budget, and a gear checklist.
               </p>
             </div>
             <div className="flex gap-2">
@@ -468,11 +475,14 @@ export default function PlannerPage() {
           ))}
         </div>
 
-        {/* Sample hunt cards */}
+        {/* Example hunt cards: illustrative entries, not real deadlines or results */}
+        <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-3">
+          Example plan (sample entries you&apos;d add yourself)
+        </p>
         <div className="space-y-3">
           {[
-            { state: "Colorado", species: "Elk", unit: "61", status: "Applied", deadline: "Apr 1, 2026", color: "bg-amber-100 text-amber-800 border-amber-300" },
-            { state: "Montana", species: "Mule Deer", unit: "270", status: "Planning", deadline: "Jun 1, 2026", color: "bg-blue-100 text-blue-800 border-blue-300" },
+            { state: "Colorado", species: "Elk", unit: "61", status: "Applied", deadline: "Your deadline", color: "bg-amber-100 text-amber-800 border-amber-300" },
+            { state: "Montana", species: "Mule Deer", unit: "270", status: "Planning", deadline: "Your deadline", color: "bg-blue-100 text-blue-800 border-blue-300" },
             { state: "Wyoming", species: "Pronghorn", unit: "66", status: "Drawn", deadline: "--", color: "bg-green-100 text-green-800 border-green-300" },
           ].map((hunt) => (
             <div key={hunt.unit} className="border border-border rounded-xl p-4 bg-card flex items-center justify-between">
@@ -507,7 +517,7 @@ export default function PlannerPage() {
                 Hunt Planner
               </h1>
               <p className="text-white/60 max-w-xl">
-                Organize your applications and hunts across all 50 states.
+                Organize your applications and hunts in one place.
                 Everything saves automatically to your browser.
               </p>
             </div>

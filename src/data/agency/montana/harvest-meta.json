@@ -1,0 +1,690 @@
+{
+  "unitNames": {
+    "turkey": {
+      "Beaverhead": "Beaverhead County",
+      "Bighorn": "Big Horn County",
+      "Blaine": "Blaine County",
+      "Broadwater": "Broadwater County",
+      "Carbon": "Carbon County",
+      "Carter": "Carter County",
+      "Cascade": "Cascade County",
+      "Choteau": "Chouteau County",
+      "Custer": "Custer County",
+      "Daniels": "Daniels County",
+      "Dawson": "Dawson County",
+      "Deer_Lodge": "Deer Lodge County",
+      "Fallon": "Fallon County",
+      "Fergus": "Fergus County",
+      "Flathead": "Flathead County",
+      "Gallatin": "Gallatin County",
+      "Garfield": "Garfield County",
+      "Glacier": "Glacier County",
+      "Golden_Valley": "Golden Valley County",
+      "Granite": "Granite County",
+      "Hill": "Hill County",
+      "Jefferson": "Jefferson County",
+      "Judith_Basin": "Judith Basin County",
+      "Lake": "Lake County",
+      "Lewis_and_Clark": "Lewis and Clark County",
+      "Liberty": "Liberty County",
+      "Lincoln": "Lincoln County",
+      "Madison": "Madison County",
+      "McCone": "McCone County",
+      "Meagher": "Meagher County",
+      "Mineral": "Mineral County",
+      "Missoula": "Missoula County",
+      "Musselshell": "Musselshell County",
+      "Park": "Park County",
+      "Petroleum": "Petroleum County",
+      "Phillips": "Phillips County",
+      "Pondera": "Pondera County",
+      "Powder_River": "Powder River County",
+      "Powell": "Powell County",
+      "Prairie": "Prairie County",
+      "Ravalli": "Ravalli County",
+      "Richland": "Richland County",
+      "Roosevelt": "Roosevelt County",
+      "Rosebud": "Rosebud County",
+      "Sanders": "Sanders County",
+      "Sheridan": "Sheridan County",
+      "Silver_Bow": "Silver Bow County",
+      "Stillwater": "Stillwater County",
+      "Sweetgrass": "Sweet Grass County",
+      "Teton": "Teton County",
+      "Toole": "Toole County",
+      "Treasure": "Treasure County",
+      "Valley": "Valley County",
+      "Wheatland": "Wheatland County",
+      "Wibaux": "Wibaux County",
+      "Yellowstone": "Yellowstone County"
+    }
+  },
+  "coverage": [
+    {
+      "species": "elk",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Unit-level rows are FWP hunting districts (ids as published, e.g. '411E', '580N'); FWP regional roll-ups (Reg_1..Reg_7), unknown-district rows (XXX, 1XX..7XX) are omitted, so district sums fall short of the 'Statewide' row by the harvest FWP could not assign to a district. Rows are given for residency all (FWP 'SUM'), resident and nonresident. Success % is not published by FWP for this species; it is computed as harvest / hunters (1 decimal, successComputed) and is harvest per hunter, not the share of hunters who filled a tag (some hunters hold more than one license). Archery/rifle rows carry harvest only (FWP does not publish hunters by weapon). Hunters are not additive across districts (one hunter can hunt several). District-level hunters and days were published for [2020, 2022, 2024]; in the other years FWP reports them as 0 at district level, so they are null (harvest only); statewide hunters are present every year. Bull antler-class counts (spike / <6 / 6+ points) are in each row's note."
+    },
+    {
+      "species": "mule-deer",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Unit-level rows are FWP hunting districts (ids as published, e.g. '411E', '580N'); FWP regional roll-ups (Reg_1..Reg_7), unknown-district rows (XXX, 1XX..7XX) are omitted, so district sums fall short of the 'Statewide' row by the harvest FWP could not assign to a district. Rows are given for residency all (FWP 'SUM'), resident and nonresident. Success % is not published by FWP for this species; it is not computed for deer. Archery/rifle rows carry harvest only (FWP does not publish hunters by weapon). Hunters are not additive across districts (one hunter can hunt several). FWP's deer survey reports mule deer harvest separately but hunters and days only for deer hunters of both species combined; that count is given in each row's note (district level only in [2021, 2023, 2025]; statewide every year) and 'hunters' is null. Buck antler-class counts (<4 / 4+ points) are in each row's note."
+    },
+    {
+      "species": "whitetail",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Unit-level rows are FWP hunting districts (ids as published, e.g. '411E', '580N'); FWP regional roll-ups (Reg_1..Reg_7), unknown-district rows (XXX, 1XX..7XX) are omitted, so district sums fall short of the 'Statewide' row by the harvest FWP could not assign to a district. Rows are given for residency all (FWP 'SUM'), resident and nonresident. Success % is not published by FWP for this species; it is not computed for deer. Archery/rifle rows carry harvest only (FWP does not publish hunters by weapon). Hunters are not additive across districts (one hunter can hunt several). FWP's deer survey reports white-tailed deer harvest separately but hunters and days only for deer hunters of both species combined; that count is given in each row's note (district level only in [2021, 2023, 2025]; statewide every year) and 'hunters' is null. Buck antler-class counts (<4 / 4+ points) are in each row's note."
+    },
+    {
+      "species": "pronghorn",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Unit-level rows are FWP hunting districts (ids as published, e.g. '411E', '580N'); FWP regional roll-ups (Reg_1..Reg_7), unknown-district rows (XXX, 1XX..7XX) are omitted, so district sums fall short of the 'Statewide' row by the harvest FWP could not assign to a district. Rows are given for residency all (FWP 'SUM'), resident and nonresident. Success % is not published by FWP for this species; it is computed as harvest / hunters (1 decimal, successComputed) and is harvest per hunter, not the share of hunters who filled a tag (some hunters hold more than one license). Hunters are not additive across districts (one hunter can hunt several). FWP calls the species antelope. District hunters/days published for [2020, 2022, 2024]; other years harvest only at district level (statewide hunters every year, statewide days null where FWP printed 0). FWP's antelope output has no weapon split."
+    },
+    {
+      "species": "moose",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Unit-level rows are FWP hunting districts (ids as published, e.g. '411E', '580N'); FWP regional roll-ups (Reg_1..Reg_7), unknown-district rows (XXX, 1XX..7XX) are omitted, so district sums fall short of the 'Statewide' row by the harvest FWP could not assign to a district. Rows are given for residency all (FWP 'SUM'), resident and nonresident. Success % is not published by FWP for this species; it is computed as harvest / hunters (1 decimal, successComputed) and is harvest per hunter, not the share of hunters who filled a tag (some hunters hold more than one license). Hunters are not additive across districts (one hunter can hunt several). Limited-license moose hunting; hunters and days are published every year for every district. Small samples: one or two hunters per district is common. FWP publishes no weapon split for moose."
+    },
+    {
+      "species": "sheep",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Unit-level rows are FWP hunting districts (ids as published, e.g. '411E', '580N'); FWP regional roll-ups (Reg_1..Reg_7), unknown-district rows (XXX, 1XX..7XX) are omitted, so district sums fall short of the 'Statewide' row by the harvest FWP could not assign to a district. Rows are given for residency all (FWP 'SUM'), resident and nonresident. Success % is not published by FWP for this species; it is computed as harvest / hunters (1 decimal, successComputed) and is harvest per hunter, not the share of hunters who filled a tag (some hunters hold more than one license). Hunters are not additive across districts (one hunter can hunt several). Limited-license bighorn sheep hunting; hunters and days are published every year for every district. Small samples: one or two hunters per district is common. FWP publishes no weapon split for bighorn sheep. Montana has Rocky Mountain bighorn sheep only."
+    },
+    {
+      "species": "goat",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Unit-level rows are FWP hunting districts (ids as published, e.g. '411E', '580N'); FWP regional roll-ups (Reg_1..Reg_7), unknown-district rows (XXX, 1XX..7XX) are omitted, so district sums fall short of the 'Statewide' row by the harvest FWP could not assign to a district. Rows are given for residency all (FWP 'SUM'), resident and nonresident. Success % is not published by FWP for this species; it is computed as harvest / hunters (1 decimal, successComputed) and is harvest per hunter, not the share of hunters who filled a tag (some hunters hold more than one license). Hunters are not additive across districts (one hunter can hunt several). Limited-license mountain goat hunting; hunters and days are published every year for every district. Small samples: one or two hunters per district is common. FWP publishes no weapon split for mountain goat."
+    },
+    {
+      "species": "bear",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Black bear harvest counts by bear management unit/hunting district from FWP's annual black bear harvest reports (mandatory harvest reporting). Rows per season (methodLabel 'Spring & Fall seasons', 'Spring season', 'Fall season') and residency. FWP does not publish hunter numbers by district, so hunters and success are null; statewide license sales are given as licenses on the Statewide combined-season rows. Regional and BMU-area (Central/East/Northwest/Southwest/West) roll-ups are omitted; 2025 lists '700 With Hounds' as its own area (kept as its own unit, not part of '700'). Rows FWP listed with unknown or unlabeled residency (2020, 2023) are omitted from resident/nonresident but are included in FWP's Sum rows."
+    },
+    {
+      "species": "lion",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Reported mountain lion harvest (mandatory reporting) by hunting district (2020-2023) and by lion management unit (2024-2025, FWP 'Area/LMU'; ids are similar 3-digit numbers but boundaries changed, so compare across that break with care). FWP publishes no lion hunter numbers by area; hunters and success are null; statewide license sales are given as licenses on Statewide rows. 2024-2025 rows note harvest with/without hounds. Regional, ecoregion and unknown ('2**', '6**', '7**') rows are omitted."
+    },
+    {
+      "species": "turkey",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "FWP reports turkey harvest by county (unit = county as FWP writes it, e.g. 'Lewis_and_Clark'; unitNames gives the county name), not by hunting district. Survey estimates are published with decimals and copied unrounded. Rows per season (combined/spring/fall) with hunters and days from FWP's effort sheet, plus harvest by license/permit type (hunt = FWP LPT code such as '799-00', or General_License / Regional_License) where hunters are not published. Success % is published statewide only (percent of license holders who hunted that harvested at least one turkey); county success is null because turkey licenses allow more than one bird, so harvest/hunters would not be a success rate. Fall harvest includes birds FWP did not classify by sex, so harvestMale + harvestFemale can be less than harvest. Regional and county-unknown rows omitted, so county sums fall short of Statewide. FWP's hunter_success sheet definition mentions 'pronghorn' (a template typo in FWP's workbook); it is the turkey success figure."
+    }
+  ],
+  "sources": [
+    {
+      "id": "h-bear-2020",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2020 Black Bear Harvest",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=103066",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2020,
+      "notes": "FWP black bear harvest report (spring and fall seasons). Counts from mandatory harvest reporting; FWP does not publish bear hunter numbers by district."
+    },
+    {
+      "id": "h-bear-2021",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2021 Black Bear Harvest Report",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=106594",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2021,
+      "notes": "FWP black bear harvest report (spring and fall seasons). Counts from mandatory harvest reporting; FWP does not publish bear hunter numbers by district."
+    },
+    {
+      "id": "h-bear-2022",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2022 BB harvest",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=110285",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2022,
+      "notes": "FWP black bear harvest report (spring and fall seasons). Counts from mandatory harvest reporting; FWP does not publish bear hunter numbers by district."
+    },
+    {
+      "id": "h-bear-2023",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2023 Black Bear Harvest Report",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=112156",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2023,
+      "notes": "FWP black bear harvest report (spring and fall seasons). Counts from mandatory harvest reporting; FWP does not publish bear hunter numbers by district."
+    },
+    {
+      "id": "h-bear-2024",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2024 Black Bear Harvest Report",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=113505",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2024,
+      "notes": "FWP black bear harvest report (spring and fall seasons). Counts from mandatory harvest reporting; FWP does not publish bear hunter numbers by district."
+    },
+    {
+      "id": "h-bear-2025",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2025 Black Bear Harvest Report",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=117272",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2025,
+      "notes": "FWP black bear harvest report (spring and fall seasons). Counts from mandatory harvest reporting; FWP does not publish bear hunter numbers by district."
+    },
+    {
+      "id": "h-lion-2020",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2020 Mountain Lion Harvest Report",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=103068",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2020,
+      "notes": "FWP reported mountain lion harvest (mandatory reporting) by hunting district; FWP does not publish lion hunter numbers by area."
+    },
+    {
+      "id": "h-lion-2021",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2021 Mountain Lion Harvest Reports",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=106593",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2021,
+      "notes": "FWP reported mountain lion harvest (mandatory reporting) by hunting district; FWP does not publish lion hunter numbers by area."
+    },
+    {
+      "id": "h-lion-2022",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2022 Mountain Lion Harvest",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=110286",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2022,
+      "notes": "FWP reported mountain lion harvest (mandatory reporting) by hunting district; FWP does not publish lion hunter numbers by area."
+    },
+    {
+      "id": "h-lion-2023",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2023 Mountain Lion Harvest Report",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=112158",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2023,
+      "notes": "FWP reported mountain lion harvest (mandatory reporting) by hunting district; FWP does not publish lion hunter numbers by area."
+    },
+    {
+      "id": "h-lion-2024",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2024 Mountain Lion Harvest Report",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=113504",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2024,
+      "notes": "FWP reported mountain lion harvest (mandatory reporting) by lion management unit (LMU); FWP does not publish lion hunter numbers by area."
+    },
+    {
+      "id": "h-lion-2025",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2025 Mountain Lion Harvest Report",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=117273",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2025,
+      "notes": "FWP reported mountain lion harvest (mandatory reporting) by lion management unit (LMU); FWP does not publish lion hunter numbers by area."
+    },
+    {
+      "id": "h-search-bs-2020",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Sheep Harvest Estimates - 2020 - 2020",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2020,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Sheep, Start Year=2020, End Year=2020, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-bs-2021",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Sheep Harvest Estimates - 2021 - 2021",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2021,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Sheep, Start Year=2021, End Year=2021, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-bs-2022",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Sheep Harvest Estimates - 2022 - 2022",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2022,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Sheep, Start Year=2022, End Year=2022, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-bs-2023",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Sheep Harvest Estimates - 2023 - 2023",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2023,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Sheep, Start Year=2023, End Year=2023, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-bs-2024",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Sheep Harvest Estimates - 2024 - 2024",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2024,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Sheep, Start Year=2024, End Year=2024, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-bs-2025",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Sheep Harvest Estimates - 2025 - 2025",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2025,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Sheep, Start Year=2025, End Year=2025, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-de-2020",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Deer Harvest Estimates - 2020 - 2020",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2020,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Deer, Start Year=2020, End Year=2020, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-de-2021",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Deer Harvest Estimates - 2021 - 2021",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2021,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Deer, Start Year=2021, End Year=2021, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-de-2022",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Deer Harvest Estimates - 2022 - 2022",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2022,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Deer, Start Year=2022, End Year=2022, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-de-2023",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Deer Harvest Estimates - 2023 - 2023",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2023,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Deer, Start Year=2023, End Year=2023, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-de-2024",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Deer Harvest Estimates - 2024 - 2024",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2024,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Deer, Start Year=2024, End Year=2024, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-de-2025",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Deer Harvest Estimates - 2025 - 2025",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2025,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Deer, Start Year=2025, End Year=2025, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-el-2020",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Elk Harvest Estimates - 2020 - 2020",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2020,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Elk, Start Year=2020, End Year=2020, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-el-2021",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Elk Harvest Estimates - 2021 - 2021",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2021,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Elk, Start Year=2021, End Year=2021, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-el-2022",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Elk Harvest Estimates - 2022 - 2022",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2022,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Elk, Start Year=2022, End Year=2022, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-el-2023",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Elk Harvest Estimates - 2023 - 2023",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2023,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Elk, Start Year=2023, End Year=2023, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-el-2024",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Elk Harvest Estimates - 2024 - 2024",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2024,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Elk, Start Year=2024, End Year=2024, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-el-2025",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Elk Harvest Estimates - 2025 - 2025",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2025,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Elk, Start Year=2025, End Year=2025, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-mg-2020",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Mountain Goat Harvest Estimates - 2020 - 2020",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2020,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Mountain Goat, Start Year=2020, End Year=2020, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-mg-2021",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Mountain Goat Harvest Estimates - 2021 - 2021",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2021,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Mountain Goat, Start Year=2021, End Year=2021, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-mg-2022",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Mountain Goat Harvest Estimates - 2022 - 2022",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2022,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Mountain Goat, Start Year=2022, End Year=2022, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-mg-2023",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Mountain Goat Harvest Estimates - 2023 - 2023",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2023,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Mountain Goat, Start Year=2023, End Year=2023, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-mg-2024",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Mountain Goat Harvest Estimates - 2024 - 2024",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2024,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Mountain Goat, Start Year=2024, End Year=2024, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-mg-2025",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Mountain Goat Harvest Estimates - 2025 - 2025",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2025,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Mountain Goat, Start Year=2025, End Year=2025, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-mo-2020",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Moose Harvest Estimates - 2020 - 2020",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2020,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Moose, Start Year=2020, End Year=2020, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-mo-2021",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Moose Harvest Estimates - 2021 - 2021",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2021,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Moose, Start Year=2021, End Year=2021, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-mo-2022",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Moose Harvest Estimates - 2022 - 2022",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2022,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Moose, Start Year=2022, End Year=2022, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-mo-2023",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Moose Harvest Estimates - 2023 - 2023",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2023,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Moose, Start Year=2023, End Year=2023, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-mo-2024",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Moose Harvest Estimates - 2024 - 2024",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2024,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Moose, Start Year=2024, End Year=2024, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-mo-2025",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Moose Harvest Estimates - 2025 - 2025",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2025,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Moose, Start Year=2025, End Year=2025, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-pa-2020",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Antelope Harvest Estimates - 2020 - 2020",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2020,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Antelope, Start Year=2020, End Year=2020, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-pa-2021",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Antelope Harvest Estimates - 2021 - 2021",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2021,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Antelope, Start Year=2021, End Year=2021, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-pa-2022",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Antelope Harvest Estimates - 2022 - 2022",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2022,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Antelope, Start Year=2022, End Year=2022, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-pa-2023",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Antelope Harvest Estimates - 2023 - 2023",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2023,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Antelope, Start Year=2023, End Year=2023, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-pa-2024",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Antelope Harvest Estimates - 2024 - 2024",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2024,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Antelope, Start Year=2024, End Year=2024, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-search-pa-2025",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "Antelope Harvest Estimates - 2025 - 2025",
+      "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2025,
+      "notes": "FWP Harvest Estimates Search (myfwp.mt.gov): Species=Antelope, Start Year=2025, End Year=2025, District=ALL, 'Generate CSV' (also checked against the 'Generate PDF' output). Survey-based estimates; FWP reports whole numbers."
+    },
+    {
+      "id": "h-turkey-2020",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2020 Turkey Harvest Report",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=103167",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2020,
+      "notes": "FWP turkey harvest estimates workbook (sheets turkey_harvest_total, turkey_effort, hunter_success). Survey estimates by county; values copied unrounded as published."
+    },
+    {
+      "id": "h-turkey-2021",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2021 turkey harvest report",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=106575",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2021,
+      "notes": "FWP turkey harvest estimates workbook (sheets turkey_harvest_total, turkey_effort, hunter_success). Survey estimates by county; values copied unrounded as published."
+    },
+    {
+      "id": "h-turkey-2022",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2022 Turkey Harvest Estimates",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=110288",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2022,
+      "notes": "FWP turkey harvest estimates workbook (sheets turkey_harvest_total, turkey_effort, hunter_success). Survey estimates by county; values copied unrounded as published."
+    },
+    {
+      "id": "h-turkey-2023",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2023 Turkey Harvest Report",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=112159",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2023,
+      "notes": "FWP turkey harvest estimates workbook (sheets turkey_harvest_total, turkey_effort, hunter_success). Survey estimates by county; values copied unrounded as published."
+    },
+    {
+      "id": "h-turkey-2024",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2024 Turkey Harvest",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=113444",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2024,
+      "notes": "FWP turkey harvest estimates workbook (sheets turkey_harvest_total, turkey_effort, hunter_success). Survey estimates by county; values copied unrounded as published."
+    },
+    {
+      "id": "h-turkey-2025",
+      "publisher": "Montana Fish, Wildlife & Parks",
+      "retrieved": "2026-10-31",
+      "title": "2025 Turkey Harvest Report",
+      "url": "https://myfwp.mt.gov/getRepositoryFile?objectID=117175",
+      "pageUrl": "https://myfwp.mt.gov/fwpPub/harvestReports",
+      "dataYear": 2025,
+      "notes": "FWP turkey harvest estimates workbook (sheets turkey_harvest_total, turkey_effort, hunter_success). Survey estimates by county; values copied unrounded as published."
+    }
+  ]
+}

@@ -14,7 +14,7 @@ interface DemoGateProps {
 
 /**
  * DemoGate — shows a preview of the content with a fade-to-blur paywall.
- * - Not signed in: shows preview + sign-in CTA
+ * - Not signed in: shows preview + sign-in / Pro CTA
  * - Signed in but not pro: shows preview + upgrade CTA
  * - Pro user: shows full content
  */
@@ -69,16 +69,16 @@ export function DemoGate({ children, preview, feature = "this data" }: DemoGateP
           <div className="relative z-10 text-center px-8 py-8 max-w-md">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-medium mb-4">
               <Eye className="w-3.5 h-3.5" />
-              Demo Preview
+              Preview
             </div>
 
             {!session ? (
               <>
                 <h3 className="text-xl font-bold mb-2 text-foreground">
-                  Sign in to unlock {feature}
+                  Unlock {feature}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-5">
-                  Create a free account to see sample data, or upgrade to Pro for full access.
+                  You&apos;re seeing a short preview. Pro unlocks the full agency tables, with every figure cited to its source. Sign in with Google, then get Pro.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-3 justify-center">
                   <Link
@@ -93,7 +93,7 @@ export function DemoGate({ children, preview, feature = "this data" }: DemoGateP
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-muted-foreground hover:text-foreground border border-border hover:border-amber-500/30 transition-all"
                   >
                     <Lock className="w-3.5 h-3.5" />
-                    View Pro Plans
+                    See Pro Pricing
                   </Link>
                 </div>
               </>
@@ -103,7 +103,7 @@ export function DemoGate({ children, preview, feature = "this data" }: DemoGateP
                   Unlock full access to {feature}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-5">
-                  You&apos;re seeing a preview. Upgrade to Pro for complete draw odds estimates, harvest data, and point analysis.
+                  You&apos;re seeing a short preview. Pro unlocks the full agency draw and harvest tables, with every figure cited to its source.
                 </p>
                 <Link
                   href="/pricing"
