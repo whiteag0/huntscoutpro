@@ -1,0 +1,743 @@
+{
+ "unitNames": {
+  "goat": {
+   "101": "East Humboldt Range",
+   "102": "Ruby Mountains",
+   "103": "Pearl Peak Area, Southern Ruby Mountains"
+  }
+ },
+ "coverage": [
+  {
+   "species": "mule-deer",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Per-hunt rows (hunt type x residency x weapon x unit group x season) exactly as NDOW publishes them, 2020-2025. Includes junior, nonresident-guided, landowner damage compensation, PIW, Dream, Silver State and Heritage tags (flagged in note). Nevada has no separate whitetail hunt. 2020: Hunters Afield not published (hunters = null; tag holders in licenses)."
+  },
+  {
+   "species": "elk",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Per-hunt rows 2020-2025 as published, incl. antlered/antlerless/spike plus depredation, incentive and private-lands hunts (flagged in note). 2020: Hunters Afield not published."
+  },
+  {
+   "species": "pronghorn",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Per-hunt rows 2020-2025 ('Horns Longer/Shorter Than Ears', junior, damage-comp and special tags). 2020: Hunters Afield not published."
+  },
+  {
+   "species": "sheep",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Desert, California and Rocky Mountain bighorn combined; the hunt name says which. Per-hunt rows 2020-2025. Some special tags use 'Any Open Unit' or 'Unit restrictions see CR ...' as the unit, as published."
+  },
+  {
+   "species": "goat",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Per-hunt rows 2020-2025 (units 101-103). Small samples (1-14 tags per hunt)."
+  },
+  {
+   "species": "moose",
+   "years": [
+    2024,
+    2025
+   ],
+   "notes": "Nevada's first moose season was 2024; one resident antlered hunt (2 tags) in 2024 and 2025."
+  },
+  {
+   "species": "bear",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Two row types: (1) per-hunt rows from the hunt-data workbooks (one unit group, resident/nonresident, hunters afield, success) 2020-2025; (2) per-unit harvest by sex from the Status Book 'Black Bear Harvest by Unit' tables 2020-2025 (hunters per unit not published). 2025 unit table transcribed from an image table."
+  },
+  {
+   "species": "lion",
+   "years": [
+    2021,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Statewide only (single statewide harvest limit; NDOW publishes no unit-level lion harvest). Delivered: 2021-22, 2023-24, 2024-25, 2025-26 license years (year = start year). Omitted 2020-21 and 2022-23: the latest edition (2025-2026 Status Book, Table 31) revised those seasons but prints them in a low-resolution image whose bold digits cannot be read with certainty, and earlier editions' figures are superseded (2020-21 also duplicated the 2018-19 row there). Hunters afield not published; licenses = tag sales."
+  },
+  {
+   "species": "turkey",
+   "years": [],
+   "notes": "No NDOW turkey harvest report (statewide or by unit) was found on ndow.org for 2020-2025; no rows delivered."
+  },
+  {
+   "species": "whitetail",
+   "years": [],
+   "notes": "Nevada has no white-tailed deer season."
+  }
+ ],
+ "sources": [
+  {
+   "id": "h-nv-hunt-data-2020",
+   "title": "2020 Nevada Big Game Hunt Data (Hunt Summary)",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/01/2020-Nevada-Big-Game-Hunt-Data-ADA-3.xlsx",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "NDOW marks these statistics 'Preliminary - Subject to Revision'. Same rows as the '<Species> Harvest by Unit Group' PDFs for that year."
+  },
+  {
+   "id": "h-nv-hunt-data-2021",
+   "title": "2021 Nevada Big Game Hunt Data (Hunt Summary)",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/03/2021-Nevada-Big-Game-Hunt-Data.xlsx",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "NDOW marks these statistics 'Preliminary - Subject to Revision'. Same rows as the '<Species> Harvest by Unit Group' PDFs for that year."
+  },
+  {
+   "id": "h-nv-hunt-data-2022",
+   "title": "2022 Nevada Big Game Hunt Data (Hunt Summary)",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2023/02/2022-Nevada-Big-Game-Hunt-Data.xlsx",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "NDOW marks these statistics 'Preliminary - Subject to Revision'. Same rows as the '<Species> Harvest by Unit Group' PDFs for that year."
+  },
+  {
+   "id": "h-nv-hunt-data-2023",
+   "title": "2023 Nevada Big Game Hunt Data (Hunt Summary)",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2024/02/2023-Nevada-Big-Game-Hunt-Data.xlsx",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "NDOW marks these statistics 'Preliminary - Subject to Revision'. Same rows as the '<Species> Harvest by Unit Group' PDFs for that year."
+  },
+  {
+   "id": "h-nv-hunt-data-2024",
+   "title": "2024 Nevada Big Game Hunt Data (Hunt Summary)",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2025/06/2024-Nevada-Big-Game-Hunt-Data.xlsx",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "NDOW marks these statistics 'Preliminary - Subject to Revision'. Same rows as the '<Species> Harvest by Unit Group' PDFs for that year."
+  },
+  {
+   "id": "h-nv-hunt-data-2025",
+   "title": "2025 Nevada Big Game Hunt Data (Hunt Summary)",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/03/2025-Nevada-Big-Game-Hunt-Data.xlsx",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "NDOW marks these statistics 'Preliminary - Subject to Revision'. Same rows as the '<Species> Harvest by Unit Group' PDFs for that year."
+  },
+  {
+   "id": "h-nv-status-2020-21",
+   "title": "2020-2021 Nevada Big Game Status",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/04/2020-21-BIG-GAME-STATUS-BOOK-COMPLETE1.pdf",
+   "pageUrl": "https://www.ndow.org/publications/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Big Game Status Book; black bear harvest by unit and mountain lion tag sales/harvest tables."
+  },
+  {
+   "id": "h-nv-status-2021-22",
+   "title": "2021-2022 Nevada Big Game Status",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/07/2021-2022-Big-Game-Status-Book.pdf",
+   "pageUrl": "https://www.ndow.org/publications/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Big Game Status Book; black bear harvest by unit and mountain lion tag sales/harvest tables."
+  },
+  {
+   "id": "h-nv-status-2022-23",
+   "title": "2022-2023 Nevada Big Game Status",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2023/08/2022-23-Big-Game-Status-Book-1.pdf",
+   "pageUrl": "https://www.ndow.org/publications/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Big Game Status Book; black bear harvest by unit and mountain lion tag sales/harvest tables."
+  },
+  {
+   "id": "h-nv-status-2023-24",
+   "title": "2023-2024 Nevada Big Game Status",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2024/08/Big-Game-Status-Book_2024_web.pdf",
+   "pageUrl": "https://www.ndow.org/publications/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Big Game Status Book; black bear harvest by unit and mountain lion tag sales/harvest tables."
+  },
+  {
+   "id": "h-nv-status-2024-25",
+   "title": "2024-2025 Nevada Big Game Status",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2025/09/Big-Game-Status-Book-2025.pdf",
+   "pageUrl": "https://www.ndow.org/publications/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Big Game Status Book; black bear harvest by unit and mountain lion tag sales/harvest tables."
+  },
+  {
+   "id": "h-nv-status-2025-26",
+   "title": "2025-2026 Nevada Big Game Status",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/10/Big-Game-Status-Book_2026_10.2.26.pdf",
+   "pageUrl": "https://www.ndow.org/publications/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Big Game Status Book; black bear harvest by unit and mountain lion tag sales/harvest tables. Appendix tables are printed as images."
+  },
+  {
+   "id": "h-nv-pdf-2020-mule-deer-harvest-by-unit-group-ada",
+   "title": "2020 Mule Deer Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/01/2020-Mule-Deer-Harvest-by-Unit-Group-ADA.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2020-elk-harvest-by-unit-group-ada",
+   "title": "2020 Elk Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/01/2020-Elk-Harvest-by-Unit-Group-ADA.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2020-antelope-harvest-by-unit-group-ada",
+   "title": "2020 Antelope Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/01/2020-Antelope-Harvest-by-Unit-Group-ADA.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2020-black-bear-harvest-by-unit-group-ada",
+   "title": "2020 Black Bear Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/01/2020-Black-Bear-Harvest-by-Unit-Group-ADA.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2020-desert-bighorn-harvest-by-unit-group-ada",
+   "title": "2020 Desert Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/01/2020-Desert-Bighorn-Harvest-by-Unit-Group-ADA.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2020-california-bighorn-harvest-by-unit-group-ada",
+   "title": "2020 California Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/01/2020-California-Bighorn-Harvest-by-Unit-Group-ADA.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2020-rocky-bighorn-harvest-by-unit-group-ada",
+   "title": "2020 Rocky Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/01/2020-Rocky-Bighorn-Harvest-by-Unit-Group-ADA.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2020-mountain-goat-harvest-by-unit-group-ada",
+   "title": "2020 Mountain Goat Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/01/2020-Mountain-Goat-Harvest-by-Unit-Group-ADA.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2021-mule-deer-harvest-by-unit-group",
+   "title": "2021 Mule Deer Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/03/2021-Mule-Deer-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2021-elk-harvest-by-unit-group",
+   "title": "2021 Elk Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/03/2021-Elk-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2021-antelope-harvest-by-unit-group",
+   "title": "2021 Antelope Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/03/2021-Antelope-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2021-black-bear-harvest-by-unit-group",
+   "title": "2021 Black Bear Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/03/2021-Black-Bear-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2021-desert-bighorn-harvest-by-unit-group",
+   "title": "2021 Desert Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/03/2021-Desert-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2021-california-bighorn-harvest-by-unit-group",
+   "title": "2021 California Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/03/2021-California-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2021-rocky-bighorn-harvest-by-unit-group",
+   "title": "2021 Rocky Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/03/2021-Rocky-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2021-mountain-goat-harvest-by-unit-group",
+   "title": "2021 Mountain Goat Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2022/03/2021-Mountain-Goat-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/publications/?phrase=&category=other-hunt-statistics&orderby=",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2022-mule-deer-harvest-by-unit-group",
+   "title": "2022 Mule Deer Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2023/02/2022-Mule-Deer-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2022-elk-harvest-by-unit-group",
+   "title": "2022 Elk Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2023/02/2022-Elk-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2022-antelope-harvest-by-unit-group",
+   "title": "2022 Antelope Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2023/02/2022-Antelope-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2022-black-bear-harvest-by-unit-group",
+   "title": "2022 Black Bear Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2023/02/2022-Black-Bear-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2022-desert-bighorn-harvest-by-unit-group",
+   "title": "2022 Desert Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2023/02/2022-Desert-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2022-california-bighorn-harvest-by-unit-group",
+   "title": "2022 California Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2023/02/2022-California-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2022-mountain-goat-harvest-by-unit-group",
+   "title": "2022 Mountain Goat Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2023/02/2022-Mountain-Goat-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2023-mule-deer-harvest-by-unit-group",
+   "title": "2023 Mule Deer Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2024/02/2023-Mule-Deer-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2023-elk-harvest-by-unit-group",
+   "title": "2023 Elk Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2024/02/2023-Elk-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2023-antelope-harvest-by-unit-group",
+   "title": "2023 Antelope Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2024/02/2023-Antelope-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2023-black-bear-harvest-by-unit-group",
+   "title": "2023 Black Bear Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2024/02/2023-Black-Bear-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2023-desert-bighorn-harvest-by-unit-group",
+   "title": "2023 Desert Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2024/02/2023-Desert-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2023-california-bighorn-harvest-by-unit-group",
+   "title": "2023 California Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2024/02/2023-California-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2023-rocky-bighorn-harvest-by-unit-group",
+   "title": "2023 Rocky Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2024/02/2023-Rocky-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2023-mountain-goat-harvest-by-unit-group",
+   "title": "2023 Mountain Goat Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2024/03/2023-Mountain-Goat-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2024-mule-deer-harvest-by-unit-group",
+   "title": "2024 Mule Deer Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://ndow-production-media.s3-us-gov-west-1.amazonaws.com/wp-content/uploads/2025/07/2024-Mule-Deer-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2024-elk-harvest-by-unit-group",
+   "title": "2024 Elk Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://ndow-production-media.s3-us-gov-west-1.amazonaws.com/wp-content/uploads/2025/06/2024-Elk-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2024-antelope-harvest-by-unit-group",
+   "title": "2024 Antelope Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://ndow-production-media.s3-us-gov-west-1.amazonaws.com/wp-content/uploads/2025/06/2024-Antelope-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2024-black-bear-harvest-by-unit-group",
+   "title": "2024 Black Bear Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://ndow-production-media.s3-us-gov-west-1.amazonaws.com/wp-content/uploads/2025/06/2024-Black-Bear-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2024-desert-bighorn-harvest-by-unit-group",
+   "title": "2024 Desert Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://ndow-production-media.s3-us-gov-west-1.amazonaws.com/wp-content/uploads/2025/06/2024-Desert-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2024-california-bighorn-harvest-by-unit-group",
+   "title": "2024 California Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://ndow-production-media.s3-us-gov-west-1.amazonaws.com/wp-content/uploads/2025/06/2024-California-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2024-rocky-bighorn-harvest-by-unit-group",
+   "title": "2024 Rocky Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://ndow-production-media.s3-us-gov-west-1.amazonaws.com/wp-content/uploads/2025/06/2024-Rocky-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2024-mountain-goat-harvest-by-unit-group",
+   "title": "2024 Mountain Goat Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://ndow-production-media.s3-us-gov-west-1.amazonaws.com/wp-content/uploads/2025/06/2024-Mountain-Goat-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2024-moose-harvest-by-unit-group",
+   "title": "2024 Moose Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://ndow-production-media.s3-us-gov-west-1.amazonaws.com/wp-content/uploads/2025/06/2024-Moose-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2024-nr-guided-mule-deer-harvest-by-unit-group",
+   "title": "2024 NR Guided Mule Deer Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://ndow-production-media.s3-us-gov-west-1.amazonaws.com/wp-content/uploads/2025/06/2024-NR-Guided-Mule-Deer-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2024-junior-mule-deer-harvest-by-units",
+   "title": "2024 Junior Mule Deer Harvest by Units",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2025/09/2024-Junior-Mule-Deer-Harvest-by-Units.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2025-mule-deer-harvest-by-unit-group",
+   "title": "2025 Mule Deer Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/03/2025-Mule-Deer-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2025-elk-harvest-by-unit-group",
+   "title": "2025 Elk Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/03/2025-Elk-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2025-antelope-harvest-by-unit-group",
+   "title": "2025 Antelope Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/03/2025-Antelope-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2025-bear-harvest-by-unit-group",
+   "title": "2025 Bear Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/03/2025-Bear-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2025-desert-bighorn-harvest-by-unit-group",
+   "title": "2025 Desert Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/03/2025-Desert-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2025-california-bighorn-harvest-by-unit-group",
+   "title": "2025 California Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/03/2025-California-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2025-rocky-bighorn-harvest-by-unit-group",
+   "title": "2025 Rocky Bighorn Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/03/2025-Rocky-Bighorn-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2025-mountain-goat-harvest-by-unit-group",
+   "title": "2025 Mountain Goat Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/03/2025-Mountain-Goat-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  },
+  {
+   "id": "h-nv-pdf-2025-moose-harvest-by-unit-group",
+   "title": "2025 Moose Harvest by Unit Group",
+   "publisher": "Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/03/2025-Moose-Harvest-by-Unit-Group.pdf",
+   "pageUrl": "https://www.ndow.org/blog/hunt-statistics/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "PDF edition of the hunt-data workbook rows; used to verify the parsed workbook values."
+  }
+ ]
+}

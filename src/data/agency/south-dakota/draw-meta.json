@@ -1,0 +1,1898 @@
+{
+ "slug": "south-dakota",
+ "name": "South Dakota",
+ "abbrev": "SD",
+ "agency": {
+  "name": "South Dakota Game, Fish and Parks",
+  "shortName": "GFP",
+  "url": "https://gfp.sd.gov"
+ },
+ "unitTerm": "Unit",
+ "lastReviewed": "2026-10-31",
+ "overview": "South Dakota GFP issues limited big game and turkey licenses through season-by-season online lottery drawings, with first, second and later draws followed by first-come leftover sales. Unsuccessful first-choice applicants earn (elk, sheep, goat) or may buy ($5 resident, $20 nonresident) one preference point per season per year, and GFP cubes the number of entries an applicant receives before each draw. Licenses are allocated through ordered pools - landowner, then preference-point tiers (e.g. 2+, 1+, 0+ for deer, antelope and turkey; 10+, 2+, 0+ for elk), then second choices. Elk, bighorn sheep and mountain lion are resident-only.",
+ "species": [
+  {
+   "species": "elk",
+   "displayName": "Elk (residents only)",
+   "drawSystem": "hybrid",
+   "drawSystemSummary": "Only South Dakota residents may apply for elk, and a person may hold one elk license per year; seasons are drawn in order (CSP Firearms, CSP Early Archery, Black Hills Firearms, Prairie Firearms, Black Hills Archery, CSP Special Antlerless). For Black Hills firearms, archery and prairie drawings 50% of a unit's licenses go to approved landowners, then 30% to a 10+ preference pool, 15% to a 2+ pool and 5% to a 0+ pool (Custer State Park: 34% 15+, 33% 10+, 33% 0+); GFP cubes the number of entries per applicant, so points improve but do not guarantee odds.",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "residentNote": "Unsuccessful first-choice elk applicants receive one preference point per season automatically. Successful applicants who used points lose them and cannot apply in the first draw for that season (or buy points for it) for nine years; CSP Early Archery and CSP Firearms elk are once in a lifetime. There are no second choices in the first elk draw; maximum group size is 2; a $10 non-refundable application fee is charged per season.",
+   "nonresidentNote": "Nonresidents are not eligible to apply for or receive a South Dakota elk license.",
+   "otcSummary": "No over-the-counter elk license. GFP's 2026 elk application lists Unlimited any-elk (type 21) licenses for Prairie unit PRE-ERA, and a Prairie Elk landowner-own-land license is applied for separately (2026: Jul 14 - Dec 31).",
+   "keyDates": [
+    {
+     "label": "Elk first draw application period",
+     "start": "2026-04-15",
+     "end": "2026-05-19",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Closes 8:00 AM CDT. GFP's Key Dates page lists Apr 22 - May 19, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-elk-2026"
+    },
+    {
+     "label": "Elk first draw results available",
+     "date": "2026-05-27",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-elk-2026"
+    },
+    {
+     "label": "Elk second draw application period",
+     "start": "2026-05-28",
+     "end": "2026-06-11",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-06-15. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-elk-2026"
+    },
+    {
+     "label": "Elk landowner preference application period",
+     "start": "2026-03-12",
+     "end": "2026-04-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-keydates"
+    },
+    {
+     "label": "Elk license return deadline",
+     "date": "2026-08-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "$10 return fee. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-elk-2026"
+    }
+   ],
+   "sourceIds": [
+    "d-sd-drawstats-2022",
+    "d-sd-drawstats-2023",
+    "d-sd-drawstats-2024",
+    "d-sd-drawstats-2025",
+    "d-sd-drawstats-2026",
+    "d-sd-prefpoints",
+    "d-sd-prefpoints-fees",
+    "d-sd-elk-2026",
+    "d-sd-elk-page",
+    "d-sd-keydates"
+   ]
+  },
+  {
+   "species": "mule-deer",
+   "displayName": "Mule deer (any-deer licenses)",
+   "drawSystem": "hybrid",
+   "drawSystemSummary": "Deer licenses are drawn season by season (West River, East River, Black Hills, Custer State Park, Muzzleloader, National Wildlife Refuge, Special Buck and others) in a combined deer draw that limits how many applications a person may submit. In the first draw, 50% of a unit's licenses are offered to qualifying landowners with preference, then a 2+ preference pool receives 50% plus any landowner leftovers, then 1+ and 0+ pools (no 0+ applicant draws until every 1+ applicant has a license), then second choices; within each pool GFP cubes the number of times an applicant's name is entered, which improves but does not guarantee odds.",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "residentNote": "Residents are eligible for all units with some exceptions. Unsuccessful first-choice applicants may buy one preference point per season per year ($5 resident); points must be used for the first choice in the first draw and are lost when a license is drawn with them. Residents who held a Custer State Park buck license in the preceding nine years may not apply for CSP deer.",
+   "nonresidentNote": "Nonresidents may apply for West River, Black Hills, Muzzleloader (antlerless whitetail only), Refuge and West River Special Buck deer; East River deer licenses are resident-only until the leftover period, and the East River Special Buck is resident-only. Nonresident archery deer for public and private land (ADNP-ST1) is a draw (2,200 licenses in 2026); preference points are $20 for nonresidents. Nonresident quotas are printed per unit in each season's application (e.g. 2026 West River unit 02A type 01: 400 resident, 32 nonresident).",
+   "otcSummary": "Resident archery deer licenses (ST1, ER1, WR1, LM1) are unlimited and sold over the counter from 2026-06-10; nonresident private-land-only archery buck (ADN-ST1) and antlerless whitetail archery (ADNP-LM1) licenses are unlimited over the counter; muzzleloader antlerless whitetail (LM1-13) is unlimited over the counter from 2026-09-03; leftover rifle licenses are first-come, first-served after the fourth draw.",
+   "sourceIds": [
+    "d-sd-drawstats-2022",
+    "d-sd-drawstats-2023",
+    "d-sd-drawstats-2024",
+    "d-sd-drawstats-2025",
+    "d-sd-drawstats-2026",
+    "d-sd-prefpoints",
+    "d-sd-prefpoints-fees",
+    "d-sd-wrdeer-2026",
+    "d-sd-erdeer-2026",
+    "d-sd-bhdeer-2026",
+    "d-sd-muzzdeer-2026",
+    "d-sd-refugedeer-2026",
+    "d-sd-specialbuck-2026",
+    "d-sd-nrarchdeer-2026",
+    "d-sd-resarchdeer-2026",
+    "d-sd-keydates"
+   ],
+   "keyDates": [
+    {
+     "label": "West River, East River, Black Hills & CSP, Muzzleloader and Refuge deer - first draw application period",
+     "start": "2026-05-27",
+     "end": "2026-06-23",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Closes 8:00 AM CDT. GFP's Key Dates page lists Jun 3 - Jun 23, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-wrdeer-2026"
+    },
+    {
+     "label": "Deer first draw results available",
+     "date": "2026-07-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-wrdeer-2026"
+    },
+    {
+     "label": "Deer second draw application period",
+     "start": "2026-07-08",
+     "end": "2026-07-22",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-07-27. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-wrdeer-2026"
+    },
+    {
+     "label": "Deer third draw application period",
+     "start": "2026-07-29",
+     "end": "2026-08-12",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-08-14. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-wrdeer-2026"
+    },
+    {
+     "label": "Deer fourth draw application period",
+     "start": "2026-08-18",
+     "end": "2026-09-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-09-04. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-wrdeer-2026"
+    },
+    {
+     "label": "West River deer leftover licenses (first-come, first-served)",
+     "start": "2026-09-09",
+     "end": "2026-11-29",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-wrdeer-2026"
+    },
+    {
+     "label": "Special Buck first draw application period (East River ESD, West River WSD)",
+     "start": "2026-03-11",
+     "end": "2026-04-14",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-04-15. GFP's Key Dates page lists Mar 18/19 - Apr 14, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-specialbuck-2026"
+    },
+    {
+     "label": "Nonresident archery deer (public/private land, ADNP-ST1) application period",
+     "start": "2026-05-13",
+     "end": "2026-06-09",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-06-12. GFP's Key Dates page lists May 20 - Jun 9, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-nrarchdeer-2026"
+    },
+    {
+     "label": "Archery deer access permit application period",
+     "start": "2026-06-10",
+     "end": "2026-07-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-07-03. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-resarchdeer-2026"
+    },
+    {
+     "label": "Preference point purchase period (in lieu of an application)",
+     "start": "2026-09-15",
+     "end": "2026-12-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "GFP lists September 15 - December 15 without a year; shown for the 2026 window. Some limited-license seasons only (not elk, sheep or goat, which award points automatically). 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-prefpoints"
+    }
+   ]
+  },
+  {
+   "species": "whitetail",
+   "displayName": "White-tailed deer",
+   "drawSystem": "hybrid",
+   "drawSystemSummary": "Deer licenses are drawn season by season (West River, East River, Black Hills, Custer State Park, Muzzleloader, National Wildlife Refuge, Special Buck and others) in a combined deer draw that limits how many applications a person may submit. In the first draw, 50% of a unit's licenses are offered to qualifying landowners with preference, then a 2+ preference pool receives 50% plus any landowner leftovers, then 1+ and 0+ pools (no 0+ applicant draws until every 1+ applicant has a license), then second choices; within each pool GFP cubes the number of times an applicant's name is entered, which improves but does not guarantee odds.",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "residentNote": "Residents are eligible for all units with some exceptions. Unsuccessful first-choice applicants may buy one preference point per season per year ($5 resident); points must be used for the first choice in the first draw and are lost when a license is drawn with them. Residents who held a Custer State Park buck license in the preceding nine years may not apply for CSP deer.",
+   "nonresidentNote": "Nonresidents may apply for West River, Black Hills, Muzzleloader (antlerless whitetail only), Refuge and West River Special Buck deer; East River deer licenses are resident-only until the leftover period, and the East River Special Buck is resident-only. Nonresident archery deer for public and private land (ADNP-ST1) is a draw (2,200 licenses in 2026); preference points are $20 for nonresidents. Nonresident quotas are printed per unit in each season's application (e.g. 2026 West River unit 02A type 01: 400 resident, 32 nonresident).",
+   "otcSummary": "Resident archery deer licenses (ST1, ER1, WR1, LM1) are unlimited and sold over the counter from 2026-06-10; nonresident private-land-only archery buck (ADN-ST1) and antlerless whitetail archery (ADNP-LM1) licenses are unlimited over the counter; muzzleloader antlerless whitetail (LM1-13) is unlimited over the counter from 2026-09-03; leftover rifle licenses are first-come, first-served after the fourth draw.",
+   "sourceIds": [
+    "d-sd-drawstats-2022",
+    "d-sd-drawstats-2023",
+    "d-sd-drawstats-2024",
+    "d-sd-drawstats-2025",
+    "d-sd-drawstats-2026",
+    "d-sd-prefpoints",
+    "d-sd-prefpoints-fees",
+    "d-sd-wrdeer-2026",
+    "d-sd-erdeer-2026",
+    "d-sd-bhdeer-2026",
+    "d-sd-muzzdeer-2026",
+    "d-sd-refugedeer-2026",
+    "d-sd-specialbuck-2026",
+    "d-sd-nrarchdeer-2026",
+    "d-sd-resarchdeer-2026",
+    "d-sd-keydates"
+   ],
+   "keyDates": [
+    {
+     "label": "West River, East River, Black Hills & CSP, Muzzleloader and Refuge deer - first draw application period",
+     "start": "2026-05-27",
+     "end": "2026-06-23",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Closes 8:00 AM CDT. GFP's Key Dates page lists Jun 3 - Jun 23, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-wrdeer-2026"
+    },
+    {
+     "label": "Deer first draw results available",
+     "date": "2026-07-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-wrdeer-2026"
+    },
+    {
+     "label": "Deer second draw application period",
+     "start": "2026-07-08",
+     "end": "2026-07-22",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-07-27. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-wrdeer-2026"
+    },
+    {
+     "label": "Deer third draw application period",
+     "start": "2026-07-29",
+     "end": "2026-08-12",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-08-14. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-wrdeer-2026"
+    },
+    {
+     "label": "Deer fourth draw application period",
+     "start": "2026-08-18",
+     "end": "2026-09-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-09-04. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-wrdeer-2026"
+    },
+    {
+     "label": "West River deer leftover licenses (first-come, first-served)",
+     "start": "2026-09-09",
+     "end": "2026-11-29",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-wrdeer-2026"
+    },
+    {
+     "label": "Special Buck first draw application period (East River ESD, West River WSD)",
+     "start": "2026-03-11",
+     "end": "2026-04-14",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-04-15. GFP's Key Dates page lists Mar 18/19 - Apr 14, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-specialbuck-2026"
+    },
+    {
+     "label": "Nonresident archery deer (public/private land, ADNP-ST1) application period",
+     "start": "2026-05-13",
+     "end": "2026-06-09",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-06-12. GFP's Key Dates page lists May 20 - Jun 9, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-nrarchdeer-2026"
+    },
+    {
+     "label": "Archery deer access permit application period",
+     "start": "2026-06-10",
+     "end": "2026-07-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-07-03. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-resarchdeer-2026"
+    },
+    {
+     "label": "Preference point purchase period (in lieu of an application)",
+     "start": "2026-09-15",
+     "end": "2026-12-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "GFP lists September 15 - December 15 without a year; shown for the 2026 window. Some limited-license seasons only (not elk, sheep or goat, which award points automatically). 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-prefpoints"
+    }
+   ]
+  },
+  {
+   "species": "pronghorn",
+   "displayName": "Pronghorn (antelope)",
+   "drawSystem": "hybrid",
+   "drawSystemSummary": "Firearms antelope (prairie units), Custer State Park antelope, Special Antelope (private land) and nonresident archery antelope are drawn with the same preference pools as deer: landowners with preference (50%), then 2+, 1+ and 0+ preference pools and second choices, with GFP cubing each applicant's entries.",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "residentNote": "Unsuccessful first-choice applicants may buy a preference point ($5). Successful Custer State Park antelope applicants cannot reapply for nine years. Two firearms draws in 2026.",
+   "nonresidentNote": "Nonresidents may apply for prairie firearms units (small nonresident quotas, e.g. 2026 unit 27A: 350 resident / 7 nonresident), Special Antelope (2026: 50 resident / 50 nonresident) and the nonresident archery public & private land draw; CSP antelope is resident-only. Preference points $20.",
+   "otcSummary": "GFP's draw statistics include no resident archery antelope drawing; GFP Key Dates lists the archery antelope application/purchase window as Jul 22 - Oct 31, 2026. Eligible nonresident landowners may buy a landowner-own-land firearm antelope license.",
+   "keyDates": [
+    {
+     "label": "Firearms antelope first draw application period",
+     "start": "2026-06-16",
+     "end": "2026-07-07",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Closes 8:00 AM CDT; results 2026-07-08. GFP's Key Dates page lists Jun 23 - Jul 7, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-antelope-2026"
+    },
+    {
+     "label": "Firearms antelope second draw application period",
+     "start": "2026-07-09",
+     "end": "2026-07-23",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-07-27. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-antelope-2026"
+    },
+    {
+     "label": "Nonresident archery antelope (public/private land) application period",
+     "start": "2026-06-23",
+     "end": "2026-07-07",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-keydates"
+    },
+    {
+     "label": "Preference point purchase period (in lieu of an application)",
+     "start": "2026-09-15",
+     "end": "2026-12-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "GFP lists September 15 - December 15 without a year; shown for the 2026 window. Some limited-license seasons only (not elk, sheep or goat, which award points automatically). 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-prefpoints"
+    }
+   ],
+   "sourceIds": [
+    "d-sd-drawstats-2022",
+    "d-sd-drawstats-2023",
+    "d-sd-drawstats-2024",
+    "d-sd-drawstats-2025",
+    "d-sd-drawstats-2026",
+    "d-sd-prefpoints",
+    "d-sd-prefpoints-fees",
+    "d-sd-antelope-2026",
+    "d-sd-keydates",
+    "d-sd-nonres-info"
+   ]
+  },
+  {
+   "species": "sheep",
+   "displayName": "Bighorn sheep (Rocky Mountain; residents only)",
+   "drawSystem": "hybrid",
+   "drawSystemSummary": "Ram-only bighorn licenses for the Black Hills (BHS, units BH2 and BH4) and Custer State Park (CBS, CU1) are drawn for residents; GFP's draw results show 10+, 2+ and 0+ preference pools, and every bighorn season and unit is once in a lifetime.",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "residentNote": "Only South Dakota residents who have never received a South Dakota bighorn sheep license may apply; unsuccessful applicants receive a preference point automatically; no group applications; $10 non-refundable application fee; successful hunters must attend an orientation. 2026 quotas: BH2 3, BH4 2, CU1 2.",
+   "nonresidentNote": "No nonresident bighorn sheep licenses.",
+   "otcSummary": "None.",
+   "keyDates": [
+    {
+     "label": "Bighorn sheep application period",
+     "start": "2026-04-15",
+     "end": "2026-05-19",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Closes 8:00 AM CDT. GFP's Key Dates page lists Apr 22 - May 19, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-sheep-2026"
+    },
+    {
+     "label": "Bighorn sheep draw results available",
+     "date": "2026-05-27",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-sheep-2026"
+    }
+   ],
+   "sourceIds": [
+    "d-sd-drawstats-2022",
+    "d-sd-drawstats-2023",
+    "d-sd-drawstats-2024",
+    "d-sd-drawstats-2025",
+    "d-sd-drawstats-2026",
+    "d-sd-sheep-2026",
+    "d-sd-prefpoints-fees",
+    "d-sd-applicant-info"
+   ]
+  },
+  {
+   "species": "goat",
+   "displayName": "Mountain goat",
+   "drawSystem": "none",
+   "drawSystemSummary": "GFP lists the mountain goat hunting season as closed. The last mountain goat drawing in GFP's draw statistics is 2022 (license BG155, one any mountain goat, Black Hills), shown here as history only.",
+   "pointsMatter": false,
+   "residentNote": "Season closed; historically residents only.",
+   "nonresidentNote": "Season closed.",
+   "otcSummary": "None (season closed).",
+   "keyDates": [],
+   "sourceIds": [
+    "d-sd-goat-page",
+    "d-sd-drawstats-2022"
+   ]
+  },
+  {
+   "species": "lion",
+   "displayName": "Mountain lion (residents only)",
+   "drawSystem": "otc",
+   "drawSystemSummary": "Resident mountain lion licenses ($30) are unlimited and sold over the counter; the Black Hills Fire Protection District season closes early when 60 lions or 40 females are taken. Access permits to hunt with dogs in a designated part of the Black Hills Fire Protection District are issued by random drawing for set hunting intervals (3 permits per interval in 2026); GFP's draw statistics title this drawing 'Custer State Park Mountain Lion Access Permit' for 2023-2025 and 'Mountain Lion Access Permit' for 2026.",
+   "pointsMatter": false,
+   "residentNote": "One mountain lion per person per season; access permit required only to hunt with dogs inside the designated Black Hills area.",
+   "nonresidentNote": "No nonresident mountain lion license (GFP fee table lists N/A).",
+   "otcSummary": "Resident license over the counter, unlimited: 2026 season purchases opened 2025-11-26.",
+   "keyDates": [
+    {
+     "label": "Mountain lion dog-hunting access permit application period (2026 season)",
+     "start": "2025-11-06",
+     "end": "2025-12-03",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Closes 8:00 AM CDT; results 2025-12-05. The 2027-season (Dec 2026) access permit dates were not found on GFP's site as of 2026-10-31. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-lion-2026"
+    }
+   ],
+   "sourceIds": [
+    "d-sd-drawstats-2023",
+    "d-sd-drawstats-2024",
+    "d-sd-drawstats-2025",
+    "d-sd-drawstats-2026",
+    "d-sd-lion-2026",
+    "d-sd-license-types"
+   ]
+  },
+  {
+   "species": "turkey",
+   "displayName": "Wild turkey",
+   "drawSystem": "hybrid",
+   "drawSystemSummary": "Prairie spring and prairie fall turkey licenses, nonresident Black Hills spring, Custer State Park spring and archery access permits are drawn with GFP's landowner and 2+/1+/0+ preference pools (cubed entries); in the third prairie spring draw remaining licenses are pooled for residents and nonresidents.",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "residentNote": "Residents may apply for all prairie units; Black Hills spring (BST) and archery (AST) licenses are unlimited over the counter for residents; Custer State Park spring (100 licenses in 2026) and archery access permits are resident-only draws.",
+   "nonresidentNote": "Nonresidents may apply for prairie units west of the Missouri River and East River licenses remaining after the second drawing; the nonresident Black Hills spring license is a limited draw (2,225 licenses in 2026); archery turkey is unlimited for nonresidents.",
+   "otcSummary": "Spring archery (statewide except CSP), resident Black Hills spring and mentored licenses over the counter; leftover prairie licenses first-come, first-served.",
+   "keyDates": [
+    {
+     "label": "Prairie spring turkey first draw application period",
+     "start": "2026-01-14",
+     "end": "2026-02-11",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Closes 8:00 AM CDT; results 2026-02-13. GFP's Key Dates page also lists Jan 14 - Feb 11, 2026 for Spring Prairie. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-springturkey-prairie-2026"
+    },
+    {
+     "label": "Prairie spring turkey second draw application period",
+     "start": "2026-02-18",
+     "end": "2026-03-04",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-03-06. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-springturkey-prairie-2026"
+    },
+    {
+     "label": "Prairie spring turkey third draw application period",
+     "start": "2026-03-10",
+     "end": "2026-03-24",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-03-26. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-springturkey-prairie-2026"
+    },
+    {
+     "label": "Nonresident Black Hills and Custer State Park spring turkey application period",
+     "start": "2026-01-14",
+     "end": "2026-02-11",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Closes 8:00 AM CDT; results 2026-02-13. GFP's Key Dates page lists Jan 21 - Feb 11, 2026 for these seasons; the 2026 application PDF date is used. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-springturkey-bh-2026"
+    },
+    {
+     "label": "Fall turkey first draw application period",
+     "start": "2026-08-11",
+     "end": "2026-09-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Closes 8:00 AM CDT; results 2026-09-09. GFP's Key Dates page lists Aug 18 - Sep 2, 2026; the 2026 application PDF date is used. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-fallturkey-2026"
+    },
+    {
+     "label": "Fall turkey second draw application period",
+     "start": "2026-09-11",
+     "end": "2026-09-22",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-09-25. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-fallturkey-2026"
+    },
+    {
+     "label": "Fall turkey third draw application period",
+     "start": "2026-09-29",
+     "end": "2026-10-13",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Results 2026-10-14. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-fallturkey-2026"
+    },
+    {
+     "label": "Preference point purchase period (in lieu of an application)",
+     "start": "2026-09-15",
+     "end": "2026-12-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "GFP lists September 15 - December 15 without a year; shown for the 2026 window. Some limited-license seasons only (not elk, sheep or goat, which award points automatically). 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "sourceId": "d-sd-prefpoints"
+    }
+   ],
+   "sourceIds": [
+    "d-sd-drawstats-2022",
+    "d-sd-drawstats-2023",
+    "d-sd-drawstats-2024",
+    "d-sd-drawstats-2025",
+    "d-sd-drawstats-2026",
+    "d-sd-prefpoints",
+    "d-sd-springturkey-prairie-2026",
+    "d-sd-springturkey-bh-2026",
+    "d-sd-fallturkey-2026",
+    "d-sd-keydates"
+   ]
+  },
+  {
+   "species": "moose",
+   "displayName": "Moose",
+   "drawSystem": "none",
+   "pointsMatter": false,
+   "drawSystemSummary": "South Dakota has no moose hunting season; moose is not among GFP's big game species.",
+   "keyDates": [],
+   "sourceIds": [
+    "d-sd-hunt"
+   ]
+  },
+  {
+   "species": "bear",
+   "displayName": "Black bear",
+   "drawSystem": "none",
+   "pointsMatter": false,
+   "drawSystemSummary": "South Dakota has no black bear hunting season; black bear is not among GFP's big game species.",
+   "keyDates": [],
+   "sourceIds": [
+    "d-sd-hunt"
+   ]
+  }
+ ],
+ "fees": [
+  {
+   "species": null,
+   "item": "Habitat Stamp (age 18+, once per license year)",
+   "residency": "resident",
+   "amountUsd": 10,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-prefpoints-fees"
+  },
+  {
+   "species": null,
+   "item": "Habitat Stamp (age 18+, once per license year)",
+   "residency": "nonresident",
+   "amountUsd": 25,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-prefpoints-fees"
+  },
+  {
+   "species": null,
+   "item": "Preference point",
+   "residency": "resident",
+   "amountUsd": 5,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-prefpoints-fees",
+   "note": "Purchasable seasons only; elk, sheep and goat points are automatic."
+  },
+  {
+   "species": null,
+   "item": "Preference point",
+   "residency": "nonresident",
+   "amountUsd": 20,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-prefpoints-fees",
+   "note": "Purchasable seasons only."
+  },
+  {
+   "species": null,
+   "item": "License return fee (returned by the deadline)",
+   "residency": "resident",
+   "amountUsd": 10,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-prefpoints"
+  },
+  {
+   "species": null,
+   "item": "License return fee (returned by the deadline)",
+   "residency": "nonresident",
+   "amountUsd": 30,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-prefpoints"
+  },
+  {
+   "species": "elk",
+   "item": "Elk application fee (per season applied for, non-refundable)",
+   "residency": "resident",
+   "amountUsd": 10,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "elk",
+   "item": "Elk (Archery, Black Hills, Prairie) - Any Elk",
+   "residency": "resident",
+   "amountUsd": 195,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "elk",
+   "item": "Elk (Archery, Black Hills, Prairie) - Antlerless Elk",
+   "residency": "resident",
+   "amountUsd": 127,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "elk",
+   "item": "Elk | Custer State Park - Any Elk",
+   "residency": "resident",
+   "amountUsd": 306,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "elk",
+   "item": "Custer State Park antlerless elk (23 - one antlerless elk)",
+   "residency": "resident",
+   "amountUsd": 206,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "sheep",
+   "item": "Bighorn Sheep",
+   "residency": "resident",
+   "amountUsd": 300,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "sheep",
+   "item": "Custer Bighorn Sheep",
+   "residency": "resident",
+   "amountUsd": 506,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "sheep",
+   "item": "Bighorn sheep application fee (non-refundable)",
+   "residency": "resident",
+   "amountUsd": 10,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-sheep-2026"
+  },
+  {
+   "species": "lion",
+   "item": "Mountain Lion",
+   "residency": "resident",
+   "amountUsd": 30,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Antelope | Firearms - Buck Antelope",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Antelope | Firearms - Buck Antelope",
+   "residency": "nonresident",
+   "amountUsd": 375,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Antelope | Archery - Buck Antelope",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Antelope | Archery - Buck Antelope",
+   "residency": "nonresident",
+   "amountUsd": 375,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Antelope | Special",
+   "residency": "resident",
+   "amountUsd": 200,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Antelope | Special",
+   "residency": "nonresident",
+   "amountUsd": 650,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Custer State Park antelope (42 - one buck antelope)",
+   "residency": "resident",
+   "amountUsd": 156,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-antelope-2026"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Prairie Spring - 1 Male Turkey",
+   "residency": "resident",
+   "amountUsd": 28,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Prairie Spring - 1 Male Turkey",
+   "residency": "nonresident",
+   "amountUsd": 121,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Prairie Spring - 2 Male Turkeys",
+   "residency": "resident",
+   "amountUsd": 40,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Prairie Spring - 2 Male Turkeys",
+   "residency": "nonresident",
+   "amountUsd": 151,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Black Hills Spring",
+   "residency": "resident",
+   "amountUsd": 28,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Black Hills Spring",
+   "residency": "nonresident",
+   "amountUsd": 121,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Custer State Park Spring",
+   "residency": "resident",
+   "amountUsd": 28,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Archery",
+   "residency": "resident",
+   "amountUsd": 28,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Archery",
+   "residency": "nonresident",
+   "amountUsd": 121,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Prairie Fall - 1 Any Turkey",
+   "residency": "resident",
+   "amountUsd": 20,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Prairie Fall - 1 Any Turkey",
+   "residency": "nonresident",
+   "amountUsd": 106,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Prairie Fall - 2 Any Turkey",
+   "residency": "resident",
+   "amountUsd": 25,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey | Prairie Fall - 2 Any Turkey",
+   "residency": "nonresident",
+   "amountUsd": 131,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | West River / East River - 1 Any Deer/Any Whitetail Deer",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | West River / East River - 1 Any Deer/Any Whitetail Deer",
+   "residency": "nonresident",
+   "amountUsd": 375,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types",
+   "note": "East River: nonresidents only in the leftover period."
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | West River / East River - 1 Any Deer + 1 Antlerless Deer",
+   "residency": "resident",
+   "amountUsd": 60,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | West River / East River - 1 Any Deer + 1 Antlerless Deer",
+   "residency": "nonresident",
+   "amountUsd": 425,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | West River / East River - 1 Antlerless Deer",
+   "residency": "resident",
+   "amountUsd": 24,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | West River / East River - 1 Antlerless Deer",
+   "residency": "nonresident",
+   "amountUsd": 100,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | West River / East River - 2 Antlerless Deer",
+   "residency": "resident",
+   "amountUsd": 36,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | West River / East River - 2 Antlerless Deer",
+   "residency": "nonresident",
+   "amountUsd": 150,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | Black Hills - 1 Any Deer/Any Whitetail",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | Black Hills - 1 Any Deer/Any Whitetail",
+   "residency": "nonresident",
+   "amountUsd": 375,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | Custer State Park - Any Deer/Any Whitetail Deer",
+   "residency": "resident",
+   "amountUsd": 156,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | Muzzleloader - 1 Any Deer",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | National Wildlife Refuge - 1 Any Deer",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | National Wildlife Refuge - 1 Any Deer",
+   "residency": "nonresident",
+   "amountUsd": 375,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | Archery - 1 Any Deer",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | Archery - 1 Any Deer",
+   "residency": "nonresident",
+   "amountUsd": 375,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | Special Buck East River",
+   "residency": "resident",
+   "amountUsd": 200,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | Special Buck West River",
+   "residency": "resident",
+   "amountUsd": 200,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer | Special Buck West River",
+   "residency": "nonresident",
+   "amountUsd": 650,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | West River / East River - 1 Any Deer/Any Whitetail Deer",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | West River / East River - 1 Any Deer/Any Whitetail Deer",
+   "residency": "nonresident",
+   "amountUsd": 375,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types",
+   "note": "East River: nonresidents only in the leftover period."
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | West River / East River - 1 Any Deer + 1 Antlerless Deer",
+   "residency": "resident",
+   "amountUsd": 60,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | West River / East River - 1 Any Deer + 1 Antlerless Deer",
+   "residency": "nonresident",
+   "amountUsd": 425,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | West River / East River - 1 Antlerless Deer",
+   "residency": "resident",
+   "amountUsd": 24,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | West River / East River - 1 Antlerless Deer",
+   "residency": "nonresident",
+   "amountUsd": 100,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | West River / East River - 2 Antlerless Deer",
+   "residency": "resident",
+   "amountUsd": 36,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | West River / East River - 2 Antlerless Deer",
+   "residency": "nonresident",
+   "amountUsd": 150,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | Black Hills - 1 Any Deer/Any Whitetail",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | Black Hills - 1 Any Deer/Any Whitetail",
+   "residency": "nonresident",
+   "amountUsd": 375,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | Custer State Park - Any Deer/Any Whitetail Deer",
+   "residency": "resident",
+   "amountUsd": 156,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | Muzzleloader - 1 Any Deer",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | National Wildlife Refuge - 1 Any Deer",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | National Wildlife Refuge - 1 Any Deer",
+   "residency": "nonresident",
+   "amountUsd": 375,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | Archery - 1 Any Deer",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | Archery - 1 Any Deer",
+   "residency": "nonresident",
+   "amountUsd": 375,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | Special Buck East River",
+   "residency": "resident",
+   "amountUsd": 200,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | Special Buck West River",
+   "residency": "resident",
+   "amountUsd": 200,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | Special Buck West River",
+   "residency": "nonresident",
+   "amountUsd": 650,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | Archery / Black Hills / Muzzleloader - 1 Antlerless Whitetail Deer",
+   "residency": "resident",
+   "amountUsd": 24,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | Archery / Black Hills / Muzzleloader - 1 Antlerless Whitetail Deer",
+   "residency": "nonresident",
+   "amountUsd": 100,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer | Custer State Park - Antlerless Whitetail Deer",
+   "residency": "resident",
+   "amountUsd": 30,
+   "licenseYear": 2026,
+   "sourceId": "d-sd-license-types"
+  }
+ ],
+ "seasons": [
+  {
+   "species": "elk",
+   "label": "Black Hills Archery Elk (AEE)",
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Prairie Firearms Elk (PRE)",
+   "start": "2026-09-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Black Hills Firearms Elk - H1A, H2A, H3A, H4A, H5A, H7A, H9A",
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Black Hills Firearms Elk - H4B (first interval)",
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026",
+   "note": "Also December 1-16, 2026."
+  },
+  {
+   "species": "elk",
+   "label": "Black Hills Firearms Elk - H4B (second interval)",
+   "start": "2026-12-01",
+   "end": "2026-12-16",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Black Hills Firearms Elk - H1B, H7B, H9B (first interval)",
+   "start": "2026-10-15",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026",
+   "note": "Also December 1-16, 2026."
+  },
+  {
+   "species": "elk",
+   "label": "Black Hills Firearms Elk - H1B, H7B, H9B (second interval)",
+   "start": "2026-12-01",
+   "end": "2026-12-16",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Black Hills Firearms Elk - H2B, H2E, H2H, H3B, H3E",
+   "start": "2026-10-15",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Black Hills Firearms Elk - H2C, H2F, H2I, H3C, H3F",
+   "start": "2026-12-01",
+   "end": "2026-12-16",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Black Hills Firearms Elk - H2G, H2J, H3D, H3G",
+   "start": "2026-12-17",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Custer State Park Early Archery Elk (CEE)",
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Custer State Park Firearms Elk (CUE)",
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "elk",
+   "label": "CSP Special Antlerless Elk - CU1",
+   "start": "2026-10-15",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "elk",
+   "label": "CSP Special Antlerless Elk - CU2",
+   "start": "2026-12-01",
+   "end": "2026-12-16",
+   "year": 2026,
+   "sourceId": "d-sd-elk-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Firearms antelope (prairie units, Special Antelope)",
+   "start": "2026-10-03",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-sd-antelope-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Custer State Park antelope",
+   "start": "2026-10-03",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-sd-keydates"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Archery antelope",
+   "start": "2026-08-15",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-sd-keydates",
+   "note": "Closed during the firearms season."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep (Black Hills and Custer State Park)",
+   "start": "2026-09-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-sd-sheep-2026"
+  },
+  {
+   "species": "lion",
+   "label": "Mountain lion - Black Hills Fire Protection District",
+   "start": "2025-12-26",
+   "end": "2026-04-30",
+   "year": 2026,
+   "sourceId": "d-sd-lion-2026",
+   "note": "Closes early if 60 lions or 40 females are harvested."
+  },
+  {
+   "species": "lion",
+   "label": "Mountain lion - statewide outside the Black Hills Fire Protection District",
+   "start": "2025-12-26",
+   "end": "2026-12-25",
+   "year": 2026,
+   "sourceId": "d-sd-lion-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Prairie spring turkey",
+   "start": "2026-04-11",
+   "end": "2026-05-31",
+   "year": 2026,
+   "sourceId": "d-sd-springturkey-prairie-2026",
+   "note": "Exceptions for units 08A, 08B, 44A, 44B and 58B; state parks and recreation areas close after April 30 unless specified."
+  },
+  {
+   "species": "turkey",
+   "label": "Black Hills spring turkey (BH1)",
+   "start": "2026-04-25",
+   "end": "2026-05-31",
+   "year": 2026,
+   "sourceId": "d-sd-springturkey-bh-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Custer State Park spring turkey (CU1)",
+   "start": "2026-04-25",
+   "end": "2026-05-17",
+   "year": 2026,
+   "sourceId": "d-sd-springturkey-bh-2026",
+   "note": "Dates from the 2026 application PDF; GFP's Key Dates page lists Apr 25 - May 23, 2026."
+  },
+  {
+   "species": "turkey",
+   "label": "Spring archery turkey (ST1)",
+   "start": "2026-04-11",
+   "end": "2026-05-31",
+   "year": 2026,
+   "sourceId": "d-sd-springturkey-bh-2026",
+   "note": "Archery hunters cannot hunt the Black Hills unit until April 25."
+  },
+  {
+   "species": "turkey",
+   "label": "Prairie fall turkey",
+   "start": "2026-11-01",
+   "end": "2027-01-31",
+   "year": 2026,
+   "sourceId": "d-sd-fallturkey-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "West River deer",
+   "start": "2026-11-14",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-sd-wrdeer-2026",
+   "note": "Unit 30A: Nov 7-10 and Nov 23-29; 58D: Nov 21-22."
+  },
+  {
+   "species": "mule-deer",
+   "label": "East River deer",
+   "start": "2026-11-21",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-sd-erdeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Antlerless-only deer season (East and West River antlerless tags)",
+   "start": "2026-12-12",
+   "end": "2026-12-20",
+   "year": 2026,
+   "sourceId": "d-sd-wrdeer-2026",
+   "note": "Only tags designated antlerless; any deer/any buck/any whitetail tags are not valid."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Black Hills deer",
+   "start": "2026-11-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-sd-bhdeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Custer State Park deer",
+   "start": "2026-11-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-sd-keydates"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Muzzleloader deer",
+   "start": "2026-12-01",
+   "end": "2027-01-01",
+   "year": 2026,
+   "sourceId": "d-sd-muzzdeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Archery deer",
+   "start": "2026-09-01",
+   "end": "2027-01-01",
+   "year": 2026,
+   "sourceId": "d-sd-resarchdeer-2026",
+   "note": "Nonresident archery on public land (ADNP licenses) opens October 1, 2026; private land opens September 1."
+  },
+  {
+   "species": "mule-deer",
+   "label": "West River Special Buck",
+   "start": "2026-11-14",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-sd-specialbuck-2026",
+   "note": "Gregory County: Nov 7-10 and 14-29."
+  },
+  {
+   "species": "mule-deer",
+   "label": "East River Special Buck",
+   "start": "2026-11-21",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-sd-specialbuck-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "West River deer",
+   "start": "2026-11-14",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-sd-wrdeer-2026",
+   "note": "Unit 30A: Nov 7-10 and Nov 23-29; 58D: Nov 21-22."
+  },
+  {
+   "species": "whitetail",
+   "label": "East River deer",
+   "start": "2026-11-21",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-sd-erdeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "Antlerless-only deer season (East and West River antlerless tags)",
+   "start": "2026-12-12",
+   "end": "2026-12-20",
+   "year": 2026,
+   "sourceId": "d-sd-wrdeer-2026",
+   "note": "Only tags designated antlerless; any deer/any buck/any whitetail tags are not valid."
+  },
+  {
+   "species": "whitetail",
+   "label": "Black Hills deer",
+   "start": "2026-11-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-sd-bhdeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "Custer State Park deer",
+   "start": "2026-11-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-sd-keydates"
+  },
+  {
+   "species": "whitetail",
+   "label": "Muzzleloader deer",
+   "start": "2026-12-01",
+   "end": "2027-01-01",
+   "year": 2026,
+   "sourceId": "d-sd-muzzdeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "Archery deer",
+   "start": "2026-09-01",
+   "end": "2027-01-01",
+   "year": 2026,
+   "sourceId": "d-sd-resarchdeer-2026",
+   "note": "Nonresident archery on public land (ADNP licenses) opens October 1, 2026; private land opens September 1."
+  },
+  {
+   "species": "whitetail",
+   "label": "West River Special Buck",
+   "start": "2026-11-14",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-sd-specialbuck-2026",
+   "note": "Gregory County: Nov 7-10 and 14-29."
+  },
+  {
+   "species": "whitetail",
+   "label": "East River Special Buck",
+   "start": "2026-11-21",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-sd-specialbuck-2026"
+  }
+ ],
+ "coverage": [
+  {
+   "species": "elk",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "GFP's draw statistics tool has no 2022 first-draw elk statistics (only the 2022 Second Application Period), so 2022 elk rows are second-draw only. All elk drawings in GFP's draw statistics (Black Hills Firearms, Black Hills Archery, Prairie, CSP Firearms and Early Archery from 2023, CSP Special Antlerless 2026), first through later application periods, 2022-2026. Counts are first-choice applicants from GFP's Draw Preference Breakdown; resident = general resident pool; landowner-pool results are in each row note; quota = licenses issued + remaining in GFP's Draw Results table."
+  },
+  {
+   "species": "mule-deer",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Deer licenses valid for mule deer (any deer, any buck, antlerless deer, access permits for any deer) from every GFP deer drawing (West River, East River, Black Hills, Custer State Park, Muzzleloader, Refuge, East/West River Special Buck, East River Nonresident Landowner-Own-Land, Nonresident Archery, archery access permits, Municipal Archery) except the Returned Deer License re-issue drawing, 2022-2026; GFP licenses are not mule-deer-only, so every row here also appears in whitetail.json. Units = GFP unit id taken from the license code (e.g. 02A01 -> 02A); statewide/permit-area licenses have no unit."
+  },
+  {
+   "species": "whitetail",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "All white-tailed-only deer licenses (any whitetail, antlerless whitetail, buck whitetail) plus every either-species deer license (also in mule-deer.json), all GFP deer drawings except the Returned Deer License re-issue drawing, 2022-2026."
+  },
+  {
+   "species": "pronghorn",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Prairie firearms antelope, Custer State Park antelope (2025-2026), Special Antelope (2022-2025), nonresident archery antelope (2023-2026) and archery antelope access permits, 2022-2026."
+  },
+  {
+   "species": "sheep",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Black Hills (BH2, BH4) and Custer State Park (CU1) ram licenses, 2022-2026."
+  },
+  {
+   "species": "goat",
+   "years": [
+    2022
+   ],
+   "notes": "Single 2022 drawing (BG155); season closed since. By-point counts are in the row note because GFP lists the season as closed (pointsMatter false)."
+  },
+  {
+   "species": "lion",
+   "years": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Mountain lion dog-hunting access permit drawings (Custer State Park 2023-2025; designated Black Hills area 2026). The license itself is over the counter; by-point counts are in row notes."
+  },
+  {
+   "species": "turkey",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Prairie spring and fall turkey, Custer State Park spring, nonresident Black Hills spring (2025-2026) and archery access permits, 2022-2026. GFP's 2022 Prairie Spring Turkey Draw Results tables list 0 licenses for every pool, so 2022 prairie spring quotas are null (applicants and successful applicants are from the preference breakdown)."
+  },
+  {
+   "species": "moose",
+   "years": [],
+   "notes": "No season in South Dakota; no draw data exists."
+  },
+  {
+   "species": "bear",
+   "years": [],
+   "notes": "No season in South Dakota; no draw data exists."
+  }
+ ],
+ "sources": [
+  {
+   "id": "d-sd-drawstats-2022",
+   "title": "Draw Statistics (2022): Draw Results and Draw Preference Breakdown by season, application period and license",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://license.gooutdoorssouthdakota.com/License/DrawStatistics",
+   "pageUrl": "https://gfp.sd.gov/draw-stats/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "GFP Go Outdoors South Dakota licensing system; one query per Year / Season / Application Period / License (AJAX endpoints GetDrawResults and GetDrawPreferences)."
+  },
+  {
+   "id": "d-sd-drawstats-2023",
+   "title": "Draw Statistics (2023): Draw Results and Draw Preference Breakdown by season, application period and license",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://license.gooutdoorssouthdakota.com/License/DrawStatistics",
+   "pageUrl": "https://gfp.sd.gov/draw-stats/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "GFP Go Outdoors South Dakota licensing system; one query per Year / Season / Application Period / License (AJAX endpoints GetDrawResults and GetDrawPreferences)."
+  },
+  {
+   "id": "d-sd-drawstats-2024",
+   "title": "Draw Statistics (2024): Draw Results and Draw Preference Breakdown by season, application period and license",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://license.gooutdoorssouthdakota.com/License/DrawStatistics",
+   "pageUrl": "https://gfp.sd.gov/draw-stats/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "GFP Go Outdoors South Dakota licensing system; one query per Year / Season / Application Period / License (AJAX endpoints GetDrawResults and GetDrawPreferences)."
+  },
+  {
+   "id": "d-sd-drawstats-2025",
+   "title": "Draw Statistics (2025): Draw Results and Draw Preference Breakdown by season, application period and license",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://license.gooutdoorssouthdakota.com/License/DrawStatistics",
+   "pageUrl": "https://gfp.sd.gov/draw-stats/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "GFP Go Outdoors South Dakota licensing system; one query per Year / Season / Application Period / License (AJAX endpoints GetDrawResults and GetDrawPreferences)."
+  },
+  {
+   "id": "d-sd-drawstats-2026",
+   "title": "Draw Statistics (2026): Draw Results and Draw Preference Breakdown by season, application period and license",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://license.gooutdoorssouthdakota.com/License/DrawStatistics",
+   "pageUrl": "https://gfp.sd.gov/draw-stats/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "GFP Go Outdoors South Dakota licensing system; one query per Year / Season / Application Period / License (AJAX endpoints GetDrawResults and GetDrawPreferences)."
+  },
+  {
+   "id": "d-sd-prefpoints",
+   "title": "Preference Points",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/preference-points",
+   "retrieved": "2026-10-31",
+   "notes": "Includes cubed preference points and the drawing procedures (preference pools) for deer, antelope, turkey and elk."
+  },
+  {
+   "id": "d-sd-prefpoints-fees",
+   "title": "Preference Points and Fees Reference (General Application Information)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/images/Licensing/Preference%20Points%20and%20Fees%20Reference.pdf",
+   "pageUrl": "https://gfp.sd.gov/hunt-fish-license/",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-applicant-info",
+   "title": "Applicant Information Reference (Application Information)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/images/Licensing/Applicant%20Information%20Reference.pdf",
+   "pageUrl": "https://gfp.sd.gov/hunt-fish-license/",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-license-types",
+   "title": "License Types & Costs",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/license-types/",
+   "retrieved": "2026-10-31",
+   "notes": "Current fee table as posted on 2026-10-31 (2026 license year)."
+  },
+  {
+   "id": "d-sd-keydates",
+   "title": "Key Dates",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/events/keydates",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Season and online application dates; all entries are 2026 seasons."
+  },
+  {
+   "id": "d-sd-hunt",
+   "title": "Hunt (big game species list)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/hunt/",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-elk-page",
+   "title": "Elk",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/elk/",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-goat-page",
+   "title": "Mountain Goat",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/mountain-goat/",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-nonres-info",
+   "title": "Nonresident License Information",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/nonresident-license-information",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-elk-2026",
+   "title": "2026 Elk (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/userdocs/docs/2026elk.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-wrdeer-2026",
+   "title": "2026 West River Deer (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/UserDocs/2026westriverdeer-app.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-erdeer-2026",
+   "title": "2026 East River Deer (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/UserDocs/nav/2026eastriverdeer-app.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-bhdeer-2026",
+   "title": "2026 Black Hills & CSP Deer (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/UserDocs/nav/2026blackhills-CSPdeer-app.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-muzzdeer-2026",
+   "title": "2026 Muzzleloader Deer (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/UserDocs/nav/2026muzzleloaderdeer-app.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-refugedeer-2026",
+   "title": "2026 National Wildlife Refuge Deer (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/UserDocs/2026refugedeer-app.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-specialbuck-2026",
+   "title": "2026 Special Buck (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/UserDocs/nav/2026specialbuck-app.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-nrarchdeer-2026",
+   "title": "2026 Nonresident Archery Deer (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/userdocs/docs/nonresident-archery-deer-app.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-resarchdeer-2026",
+   "title": "2026 Resident Archery Deer (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/UserDocs/docs/resident-archery-deer-app.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-antelope-2026",
+   "title": "2026 Firearms Antelope (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/userdocs/docs/firearmsantelope.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-sheep-2026",
+   "title": "2026 Bighorn Sheep (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/userdocs/docs/2026bhsheep.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-springturkey-prairie-2026",
+   "title": "2026 Spring Turkey - Prairie (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/userdocs/docs/2026springturkey-prairie-app.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-springturkey-bh-2026",
+   "title": "2026 Spring Turkey - Archery, Black Hills, Custer State Park, and Mentored (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/userdocs/docs/2026springturkey-AST_BST_CST_MST-app.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-fallturkey-2026",
+   "title": "2026 Fall Turkey (application)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/UserDocs/docs/fallturkey-app.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-sd-lion-2026",
+   "title": "2026 Mountain Lion (application / season)",
+   "publisher": "South Dakota Game, Fish and Parks",
+   "url": "https://gfp.sd.gov/userdocs/docs/2026mountainlion.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  }
+ ]
+}

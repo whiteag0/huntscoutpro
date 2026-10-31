@@ -1,0 +1,693 @@
+{
+  "unitNames": {},
+  "coverage": [
+    {
+      "species": "elk",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Source: CPW annual Big Game Harvest Survey reports (survey-based estimates, not mandatory counts). 2020-2024: per-GMU rows from the tables 'All Manners of Take' (method all), 'All Rifle Seasons', 'All Archery Seasons', 'All Muzzleloader Seasons' and 'First'-'Fourth Rifle Seasons' (sex all; harvestMale = bulls, harvestFemale = cows; calves are counted in harvest only), plus the 'Percent Success' tables for All/First-Fourth Rifle and All Muzzleloader as sex male (antlered licenses) and female (antlerless licenses) rows; CPW notes those tables exclude either-sex hunt codes. unit 'Statewide' rows are CPW's printed Total lines. 2025: CPW published only a by-hunt-code table (hunts with sufficient responses) plus a DAU table; rows carry hunt (CPW hunt code) and unit = the GMU digits in the code (code 000 = multi-unit/OTC hunt, not a GMU); per-GMU totals for 2025 are not published and were not summed. DAU-level tables, limited-license season tables, PLO/RFW/late/early season tables were not imported. GMU ids are written 3-digit (CPW prints '1' in 2020-2021 reports and '001' later). 2025 is the most recent season published."
+    },
+    {
+      "species": "mule-deer",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "CPW's deer harvest reports do NOT separate mule deer from white-tailed deer: every row in this file is ALL deer combined (mostly mule deer) as CPW publishes it. 2020-2024: per-GMU rows from 'All Manners of Take', 'All Rifle Seasons', 'All Archery Seasons', 'All Muzzleloader Seasons' and '2nd'/'3rd'/'4th Rifle Seasons' (harvestMale = bucks, harvestFemale = does; fawns only in harvest), plus antlered/antlerless rows (sex male/female) from the 'Percent Success' tables for 2nd-4th Rifle (CPW: does not include PLOs) and All Muzzleloader. 2025: by-hunt-code table only (unit = GMU digits of the hunt code); hunt codes listed in the 2025 big game brochure's white-tailed-deer-only table are in whitetail.json instead, so 2025 rows here are every other deer hunt code, plus the Statewide 'All hunt codes' row, which is CPW's Total for the whole table (white-tailed-only codes included). Survey-based estimates. GMU ids written 3-digit. Unit rows sum to CPW's printed Total within a few animals (rounding) except 2021 '2nd Rifle Seasons', where CPW's units sum to 13,128 harvest / 27,608 hunters but its Total line prints 13,016 / 27,333 (both kept as published)."
+    },
+    {
+      "species": "whitetail",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "From CPW's 'All Whitetail Only Seasons' tables (and its Archery/Muzzleloader/Rifle splits) in the deer harvest reports, 2020-2024: whitetail-only licenses only. 2025: CPW's deer report is by hunt code only; rows here are the 79 of the 84 hunt codes in the 'Limited Licenses — White-tailed Deer Only' table of CPW's 2025 big game brochure (h-co-brochure-biggame-2025, PDF page 43) that appear in that report (unit = GMU digits of the hunt code; 5 have no row in the report). CPW publishes no 2025 whitetail-only total; its 2025 deer Total line (in mule-deer.json) covers all deer hunt codes. White-tailed deer taken on regular deer licenses are inside the deer rows in mule-deer.json and cannot be separated."
+    },
+    {
+      "species": "pronghorn",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "2020-2024: per-GMU rows from 'All Manners of Take', 'All Rifle Seasons', 'All Archery Seasons' and 'All Muzzleloader Seasons' (harvestMale = bucks, harvestFemale = does; fawns only in harvest). 2025: by-hunt-code table only. Survey-based estimates. GMU ids written 3-digit. The previous repo pronghorn rows (estimated) are fully replaced by these CPW figures."
+    },
+    {
+      "species": "moose",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "2020-2024: per-GMU 'All Manners of Take' table (mandatory harvest reporting): one sex 'all' row (licenses issued incl. reissues, hunters, harvest with bulls/cows split, success) plus male and female rows (bull / antlerless licenses). CPW's 'Average # Days' is an average, not total days, so it is not stored. Antlerless by-season and Season Choice tables were not imported. 2025: by-hunt-code table (hunt code letter X = CPW method letter, left unmapped). 2021 and 2022 PDFs have unreadable text layers; values decoded glyph-by-glyph and checked against the rendered pages and male+female=total arithmetic."
+    },
+    {
+      "species": "bear",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "2020-2024: per-GMU harvest (boars, sows, total) and recreation days from 'All Manners of Take' and the 'September Archery', 'September Muzzleloader', 'September Regular Rifle' and 'Concurrent Regular Rifle' season tables. CPW prints hunters and success only on the statewide Total line, so per-GMU rows have hunters/successPct null. 2025: by-hunt-code table with licenses sold; CPW's 2025 Percent Success = harvest / licenses sold (hunters not published). The 2022 PDF's text layer is unreadable (Type 3 fonts); its values were decoded glyph-by-glyph and checked against the rendered pages."
+    },
+    {
+      "species": "sheep",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Rocky Mountain and desert bighorn are both in this file; methodLabel starts with 'Rocky Mountain Bighorn Sheep:' or 'Desert Bighorn Sheep:' and each has its own Statewide row. Units are CPW sheep hunt units (S01...). 2020-2024: 'All Manners of Take' table with sex all/male(ram)/female(ewe) rows; 'Average # Days' not stored. 2025: by-hunt-code tables. The 2021 Rocky Mountain table has one unlabelled all-zero row that was skipped. 2020 PDFs read with pdftotext (pdfminer merged adjacent digit columns); checked against the rendered page."
+    },
+    {
+      "species": "goat",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Units are CPW goat hunt units (G01...). 2020-2024: 'All Manners of Take' table (licenses, hunters, harvest billies/nannies). CPW's 2021 Percent Success column equals harvest / licenses issued (noted per row where it differs from harvest / hunters). 2025: by-hunt-code table. The 2022 PDF text layer is unreadable; values decoded glyph-by-glyph and checked against the rendered page."
+    },
+    {
+      "species": "lion",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Lion license year runs April 1 - March 31; year = first year of the license year (2024 = CPW's '2024-2025' report, which covers the April 2024 and Nov 2024-Mar 2025 seasons). 2020-2024: per-GMU harvest (males/females) and recreation days from the 'All Seasons' table; hunters and success are printed only on the statewide Total line (CPW: hunters cannot be calculated per season/unit). Year 2025 is CPW's report titled '2025' (rows are hunts identified by their list of valid GMUs; CPW's Percent Success = harvest / licenses sold); the report gives no season dates, so treat 2025 as the most recent license year."
+    },
+    {
+      "species": "turkey",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Spring season only (CPW posts no fall turkey harvest reports). Rows: limited-license hunts by hunt code (estimates of hunters, days and harvest; unit = GMU digits of the hunt code), the unlimited OTC table by county for 2020-2023 (CPW dropped county estimates from 2024), and a Statewide row from the report narrative (estimated hunters, combined limited + OTC harvest, days). CPW publishes no success rate, so successPct = harvest / hunters, computed (successComputed). Survey-based estimates with wide confidence intervals for small hunts. County hunter estimates sum to more than the OTC total because hunters can hunt several counties. CPW's 2020 county harvest rows sum to 6,477 while its OTC Total line prints 5,873 (both kept as published). CPW's 2025 report text gives an OTC confidence interval (6,807-7,897) that does not contain its own OTC estimate (6,746); only point estimates are stored."
+    }
+  ],
+  "sources": [
+    {
+      "id": "h-co-elk-2025",
+      "title": "2025 Colorado Elk Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/8uno656mtu",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-elk/elk-statistics",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-elk-2024",
+      "title": "2024 Colorado Elk Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/wkisb2j1f4",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-elk/elk-statistics",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-elk-2023",
+      "title": "2023 Colorado Elk Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/bkxcl778b8/2023-statewide-elk-hunting-harvest-estimates",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-elk/elk-statistics",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-elk-2022",
+      "title": "2022 Colorado Elk Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/fcwvtcdpbp/2022statewideelkharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-elk/elk-statistics",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-elk-2021",
+      "title": "2021 Colorado Elk Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/dttxdcqhsb/2021statewideelkharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-elk/elk-statistics",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-elk-2020",
+      "title": "2020 Colorado Elk Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/lxptlfrppg/2020statewideelkharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-elk/elk-statistics",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-deer-2025",
+      "title": "2025 Colorado Deer Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/wp8zjwayji",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-deer/deer-statistics",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-deer-2024",
+      "title": "2024 Colorado Deer Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/pdnoekykc6",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-deer/deer-statistics",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-deer-2023",
+      "title": "2023 Colorado Deer Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/vczl7tkhxr/2023statewidedeerhuntingharvestestimates",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-deer/deer-statistics",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-deer-2022",
+      "title": "2022 Colorado Deer Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/lkpnmjwk9m/2022statewidedeerharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-deer/deer-statistics",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-deer-2021",
+      "title": "2021 Colorado Deer Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/zskvhjdmq5/2021statewidedeerharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-deer/deer-statistics",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-deer-2020",
+      "title": "2020 Colorado Deer Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/8hx8lnprk6/2020statewidedeerharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-deer/deer-statistics",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-pronghorn-2025",
+      "title": "2025 Colorado Pronghorn Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/exyzeatjnh",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-pronghorn/pronghorn-statistics",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-pronghorn-2024",
+      "title": "2024 Colorado Pronghorn Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/ywuvhfvvyu",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-pronghorn/pronghorn-statistics",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-pronghorn-2023",
+      "title": "2023 Colorado Pronghorn Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/78sxm8rwcw/2023-statewide-pronghorn-harvest-estimates",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-pronghorn/pronghorn-statistics",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-pronghorn-2022",
+      "title": "2022 Colorado Pronghorn Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/fsrhvlm5vd/2022statewidepronghornharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-pronghorn/pronghorn-statistics",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-pronghorn-2021",
+      "title": "2021 Colorado Pronghorn Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/2ltdvbr8pd/2021statewidepronghornharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-pronghorn/pronghorn-statistics",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-pronghorn-2020",
+      "title": "2020 Colorado Pronghorn Harvest Estimates",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/mvblb2pwg2/2020statewidepronghornharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-pronghorn/pronghorn-statistics",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-bear-2025",
+      "title": "2025 Bear Harvest, Hunters, and Recreation Days by Hunt Code",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/zo6ot9djn9",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bear/bear-statistics",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-bear-2024",
+      "title": "2024 Bear Harvest, Hunters and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/pfhyjmli5a",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bear/bear-statistics",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-bear-2023",
+      "title": "2023 Bear Harvest, Hunters and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/jcpgp25hxv/2023-statewide-bear-harvest-estimates",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bear/bear-statistics",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-bear-2022",
+      "title": "2022 Bear Harvest, Hunters and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/gr7snlxqmq/2022statewidebearharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bear/bear-statistics",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "PDF text layer uses unmapped Type 3 fonts; values decoded glyph-by-glyph and checked against the rendered pages (see scripts/agency/colorado/harvest_pdftext.py)"
+    },
+    {
+      "id": "h-co-bear-2021",
+      "title": "2021 Bear Harvest, Hunters and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/rmjfsxrwqq/2021statewidebearharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bear/bear-statistics",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-bear-2020",
+      "title": "2020 Bear Harvest, Hunters and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/cxffvtn7xj/2020statewidebearharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bear/bear-statistics",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-moose-2025",
+      "title": "2025 Moose Harvest, Hunters, and Recreation Days by Hunt Code",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/ys5s9jfslu",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-moose/moose-statistics",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-moose-2024",
+      "title": "2024 Moose Licenses, Hunters, Harvest & Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/90ugmdzsch",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-moose/moose-statistics",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-moose-2023",
+      "title": "2023 Moose Licenses, Hunters, Harvest & Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/jp9brj2hgn/2023-statewide-moose-hunting-estimated-harvest-statistics",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-moose/moose-statistics",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-moose-2022",
+      "title": "2022 Moose Licenses, Hunters, Harvest & Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/bbchtc96s8/2022statewidemooseharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-moose/moose-statistics",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "PDF text layer uses unmapped Type 3 fonts; values decoded glyph-by-glyph and checked against the rendered pages (see scripts/agency/colorado/harvest_pdftext.py)"
+    },
+    {
+      "id": "h-co-moose-2021",
+      "title": "2021 Moose Licenses, Hunters, Harvest & Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/wqnw8hxlvf/2021statewidemooseharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-moose/moose-statistics",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "PDF text layer uses unmapped Type 3 fonts; values decoded glyph-by-glyph and checked against the rendered pages (see scripts/agency/colorado/harvest_pdftext.py)"
+    },
+    {
+      "id": "h-co-moose-2020",
+      "title": "2020 Moose Licenses, Hunters, Harvest & Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/xbxsz6xq7z/2020statewidemooseharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-moose/moose-statistics",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-sheep-2025-rm",
+      "title": "2025 Rocky Mountain Bighorn Sheep Harvest, Hunters, and Recreation",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/ldjmdouboz",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-sheep-2024-rm",
+      "title": "2024 Rocky Mtn. Bighorn Sheep Harvest, Hunters,and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/z2tdm4qrj9",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-sheep-2023-rm",
+      "title": "2023 Rocky Mtn. Bighorn Sheep Harvest, Hunters,and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/n7wbl8jfhx/2023-statewide-rocky-mountain-bighorn-sheep-hunting-harvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-sheep-2022-rm",
+      "title": "2022 Rocky Mtn. Bighorn Sheep Harvest, Hunters,and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/s9pk6hxnjn/2022statewiderockymtnbighornsheepharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-sheep-2021-rm",
+      "title": "2021 Rocky Mtn. Bighorn Sheep Harvest, Hunters,and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/8bgqjjmjlr/2021statewiderockymtnbighornsheepharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-sheep-2020-rm",
+      "title": "2020 Rocky Mtn Bighorn Sheep Licenses, Hunters, Harvest & Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/rdxmhd9fn5/2020statewiderockymtnbighornsheepharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-sheep-2025-desert",
+      "title": "2025 Desert Bighorn Sheep Harvest, Hunters, and Recreation Days by",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/u7pzqsklsh",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-sheep-2024-desert",
+      "title": "2024 Desert Bighorn Sheep Harvest, Hunters,and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/r0f1qkaskr",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-sheep-2023-desert",
+      "title": "2023 Desert Bighorn Sheep Harvest, Hunters,and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/hn5r7nhnfz/2023-statewide-desert-bighorn-sheep-harvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-sheep-2022-desert",
+      "title": "2022 Desert Bighorn Sheep Harvest, Hunters,and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/sgx6hgkfbx/2022-statewide-desert-bighorn-sheep-harvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-sheep-2021-desert",
+      "title": "2021 Desert Bighorn Sheep Licenses, Hunters, Harvest & Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/mlcq7bxsbj/2021-statewide-desert-bighorn-sheep-harvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-sheep-2020-desert",
+      "title": "2020 Desert Bighorn Sheep Licenses, Hunters, Harvest & Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/lbr69fw6mg/2020-statewide-desert-bighorn-sheep-harvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-goat-2025",
+      "title": "2025 Mountain Goat Harvest, Hunters, and Recreation Days by Hunt Code",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/y9rdtyrc0i",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-goat/mountain-goat-statistics",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-goat-2024",
+      "title": "2024 Mountain Goat Harvest, Hunters,and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/pimil8fdht",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-goat/mountain-goat-statistics",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-goat-2023",
+      "title": "2023 Mountain Goat Harvest, Hunters,and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/nkm8xmtnpm/2023-statewide-mountain-goat-hunting-harvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-goat/mountain-goat-statistics",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-goat-2022",
+      "title": "2022 Mountain Goat Harvest, Hunters,and Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/dwzpzp2dvz/2022statewidemountaingoatharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-goat/mountain-goat-statistics",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "PDF text layer uses unmapped Type 3 fonts; values decoded glyph-by-glyph and checked against the rendered pages (see scripts/agency/colorado/harvest_pdftext.py)"
+    },
+    {
+      "id": "h-co-goat-2021",
+      "title": "2021 Mountain Goat Licenses, Hunters, Harvest & Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/d2k6j9rnqk/2021statewidemountaingoatharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-goat/mountain-goat-statistics",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-goat-2020",
+      "title": "2020 Mountain Goat Licenses, Hunters, Harvest & Recreation Days for All Manners of Take",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/ns5pqbldzw/2020statewidemountaingoatharvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-goat/mountain-goat-statistics",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-co-lion-2025",
+      "title": "2025 Lion Harvest, Hunters, and Recreation Days by Hunt Code",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/bgvhbxb8vm/2025-statewide-lion-harvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-lion/mountain-lion-statistics",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "Season 2025 as labelled on CPW's statistics page"
+    },
+    {
+      "id": "h-co-lion-2024-2025",
+      "title": "2024-2025 Lion Harvest, Hunters and Recreation Days for All Seasons",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/vezhlgwckg",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-lion/mountain-lion-statistics",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "Season 2024-2025 as labelled on CPW's statistics page"
+    },
+    {
+      "id": "h-co-lion-2023-2024",
+      "title": "2023-2024 Lion Harvest, Hunters and Recreation Days for All Seasons",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/zzpplvsnfz/2023-statewide-lion-harvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-lion/mountain-lion-statistics",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "Season 2023-2024 as labelled on CPW's statistics page"
+    },
+    {
+      "id": "h-co-lion-2022-2023",
+      "title": "2022-2023 Lion Harvest, Hunters and Recreation Days for All Seasons",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/dzrrpdvncv/2022-2023-statewide-lion-harvest-statistics",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-lion/mountain-lion-statistics",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "Season 2022-2023 as labelled on CPW's statistics page"
+    },
+    {
+      "id": "h-co-lion-2021-2022",
+      "title": "2021-2022 Lion Harvest, Hunters and Recreation Days for All Seasons",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/wxdpdhtgzj/2021-2022-statewide-lion-harvest-statistics",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-lion/mountain-lion-statistics",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "Season 2021-2022 as labelled on CPW's statistics page"
+    },
+    {
+      "id": "h-co-lion-2020-2021",
+      "title": "2020-2021 Lion Harvest, Hunters and Recreation Days for All Seasons",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/gq5snxdgmw/2020-2021-statewide-lion-harvest-statistics",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-lion/mountain-lion-statistics",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "Season 2020-2021 as labelled on CPW's statistics page"
+    },
+    {
+      "id": "h-co-turkey-2025",
+      "title": "2025 Spring Turkey Harvest Report",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/5dlsawcp5f",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "Spring season"
+    },
+    {
+      "id": "h-co-turkey-2024",
+      "title": "2024 Spring Turkey Harvest Report",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widencollective.com/assets/share/asset/q7wqqiy6cc",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "Spring season"
+    },
+    {
+      "id": "h-co-turkey-2023",
+      "title": "2023 Spring Turkey Harvest Report",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/nvhczcfqsl/2023-spring-turkey-harvest-report",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "Spring season"
+    },
+    {
+      "id": "h-co-turkey-2022",
+      "title": "2022 Spring Turkey Harvest Report",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/ncmdxsmpbn/2022-spring-turkey-harvest-report",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "Spring season"
+    },
+    {
+      "id": "h-co-turkey-2021",
+      "title": "2021 Spring Turkey Harvest Report",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/tldw5zh9cp/2021-spring-turkey-hunting-harvest",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "Spring season"
+    },
+    {
+      "id": "h-co-turkey-2020",
+      "title": "2020 Spring Turkey Harvest Report",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "https://cpw.widen.net/s/v7k59dfsjc/2020-spring-turkey-harvest-report",
+      "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "Spring season"
+    },
+    {
+      "id": "h-co-brochure-biggame-2025",
+      "title": "2025 Colorado Big Game (brochure)",
+      "publisher": "Colorado Parks and Wildlife",
+      "url": "http://web.archive.org/web/20250214170715/https://cpw.widen.net/s/5wvx7rggrd/colorado-big-game-hunting-brochure",
+      "pageUrl": "https://cpw.widen.net/s/5wvx7rggrd/colorado-big-game-hunting-brochure",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "Internet Archive capture of CPW's 2025 brochure (CPW replaces the file at the same link every year). Used only for its 'Limited Licenses — White-tailed Deer Only' hunt code table, which sorts 2025 by-hunt-code deer harvest rows into whitetail.json (the same table and capture as draw-meta d-brochure-biggame-2025)."
+    }
+  ]
+}

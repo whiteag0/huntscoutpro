@@ -1,0 +1,927 @@
+{
+  "unitNames": {},
+  "coverage": [
+    {
+      "species": "elk",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Source: IDFG Hunt Planner harvest statistics (based on mandatory harvest reports, big game mortality reports and check station records). Blank IDFG cells are null/omitted, never zero-filled. Controlled hunts: hunt = IDFG hunt number, unit = IDFG hunt-area id as published (e.g. '22-1', '45-1X'), unitName = IDFG area description. method 'rifle' = IDFG 'Any Weapon'; 'other' = Short-Range Weapons / Archery or Muzzleloader; 'all' = All Weapons Combined. General season: one row per GMU per take method plus All Weapons Combined. harvestMale/harvestFemale = IDFG Antlered/Antlerless; % spikes and % 6+ points in notes. Statewide rows (2025 all/general/controlled, 2024 total) are from IDFG's 2025 harvest report. Cross-check: 2025 general GMU sum (All Weapons Combined) = 13,528 vs IDFG statewide general 13,524 (rounding). Controlled-hunt rows sum to 6,342 for 2025 vs IDFG statewide controlled 7,981 and 6,089 for 2024. IDFG does not explain the gap (its statewide controlled figure evidently includes harvest not listed hunt-by-hunt in the Hunt Planner), so do not sum controlled rows into a statewide figure. Six 2022 antlerless hunts (2280-2285) appear only on IDFG's 2023 page with Year 2022 and are stored as 2022. 2020 page: 14 blank hunt rows omitted; hunts IDFG lists more than once with identical figures are stored once (see row notes)."
+    },
+    {
+      "species": "mule-deer",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Source: IDFG Hunt Planner harvest statistics (based on mandatory harvest reports, big game mortality reports and check station records). Blank IDFG cells are null/omitted, never zero-filled. Controlled hunts: hunt = IDFG hunt number, unit = IDFG hunt-area id as published (e.g. '22-1', '45-1X'), unitName = IDFG area description. method 'rifle' = IDFG 'Any Weapon'; 'other' = Short-Range Weapons / Archery or Muzzleloader; 'all' = All Weapons Combined. IMPORTANT: IDFG publishes unit and hunt harvest for deer as one combined species (mule deer + white-tailed deer). Every GMU/hunt row here is that combined-deer figure and is identical in mule-deer.json and whitetail.json - never add the two files together. Each row note carries IDFG's '% of harvest white-tailed deer', % 4+ points (mule deer) and % 5+ points (white-tailed deer) where published. Species-specific figures exist only statewide (unit 'Statewide'): 2025 total/general/controlled with success and antlered/antlerless, and the 2024 total, from IDFG's 2025 harvest report. Cross-check: 2025 general GMU sum (All Weapons Combined) = 36,902 vs IDFG statewide general mule deer 18,655 + white-tailed deer 18,237 = 36,892 (rounding). Controlled-hunt rows sum to 7,051 for 2025 vs IDFG statewide controlled 5,933 + 1,465 = 7,398 (gap not explained by IDFG; do not sum controlled rows into a statewide figure). 2020 page: 7 blank hunt rows omitted; repeated identical hunt rows stored once."
+    },
+    {
+      "species": "whitetail",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Source: IDFG Hunt Planner harvest statistics (based on mandatory harvest reports, big game mortality reports and check station records). Blank IDFG cells are null/omitted, never zero-filled. Controlled hunts: hunt = IDFG hunt number, unit = IDFG hunt-area id as published (e.g. '22-1', '45-1X'), unitName = IDFG area description. method 'rifle' = IDFG 'Any Weapon'; 'other' = Short-Range Weapons / Archery or Muzzleloader; 'all' = All Weapons Combined. IMPORTANT: IDFG publishes unit and hunt harvest for deer as one combined species (mule deer + white-tailed deer). Every GMU/hunt row here is that combined-deer figure and is identical in mule-deer.json and whitetail.json - never add the two files together. Each row note carries IDFG's '% of harvest white-tailed deer', % 4+ points (mule deer) and % 5+ points (white-tailed deer) where published. Species-specific figures exist only statewide (unit 'Statewide'): 2025 total/general/controlled with success and antlered/antlerless, and the 2024 total, from IDFG's 2025 harvest report. Cross-check: 2025 general GMU sum (All Weapons Combined) = 36,902 vs IDFG statewide general mule deer 18,655 + white-tailed deer 18,237 = 36,892 (rounding). Controlled-hunt rows sum to 7,051 for 2025 vs IDFG statewide controlled 5,933 + 1,465 = 7,398 (gap not explained by IDFG; do not sum controlled rows into a statewide figure). 2020 page: 7 blank hunt rows omitted; repeated identical hunt rows stored once."
+    },
+    {
+      "species": "pronghorn",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Source: IDFG Hunt Planner harvest statistics (based on mandatory harvest reports, big game mortality reports and check station records). Blank IDFG cells are null/omitted, never zero-filled. Controlled hunts: hunt = IDFG hunt number, unit = IDFG hunt-area id as published (e.g. '22-1', '45-1X'), unitName = IDFG area description. method 'rifle' = IDFG 'Any Weapon'; 'other' = Short-Range Weapons / Archery or Muzzleloader; 'all' = All Weapons Combined. Controlled hunts only: IDFG's Hunt Planner general-season pronghorn statistics end in 2008, so there are no general pronghorn rows for 2020-2025. harvestMale/harvestFemale = Horned/Hornless; average horn length in notes."
+    },
+    {
+      "species": "moose",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Source: IDFG Hunt Planner harvest statistics (based on mandatory harvest reports, big game mortality reports and check station records). Blank IDFG cells are null/omitted, never zero-filled. Controlled hunts: hunt = IDFG hunt number, unit = IDFG hunt-area id as published (e.g. '22-1', '45-1X'), unitName = IDFG area description. IDFG: hunter numbers and success rates for moose, sheep and goat are based on permits issued. Controlled hunts only (Idaho has no general moose season). harvestMale/harvestFemale = Bulls/Cows; average antler spread in notes. Where IDFG publishes Success% above 100 (harvest above permits, e.g. rain checks) the value is kept in the note and successPct is null."
+    },
+    {
+      "species": "bear",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Source: IDFG Hunt Planner harvest statistics (based on mandatory harvest reports, big game mortality reports and check station records). Blank IDFG cells are null/omitted, never zero-filled. General season: per-GMU harvest only - IDFG publishes no hunter numbers or success rate for general black bear. Per GMU: a total row (method 'all', harvestMale/harvestFemale = boars/sows), 'Spring season' and 'Fall season' harvest rows, and method-of-take rows (Bait, Hounds, Still Stalk, Incidental; method 'other'). Method rows do not always add up to the total (as published). About 24 GMUs per year that IDFG lists with every cell blank are omitted. Controlled bear hunts 2020 and 2022-2025 (IDFG shows 'No Harvest Statistics available' for 2021); controlled rows carry fall/spring/bait harvest in notes. Controlled hunts: hunt = IDFG hunt number, unit = IDFG hunt-area id as published (e.g. '22-1', '45-1X'), unitName = IDFG area description. "
+    },
+    {
+      "species": "sheep",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Source: IDFG Hunt Planner harvest statistics (based on mandatory harvest reports, big game mortality reports and check station records). Blank IDFG cells are null/omitted, never zero-filled. Controlled hunts: hunt = IDFG hunt number, unit = IDFG hunt-area id as published (e.g. '22-1', '45-1X'), unitName = IDFG area description. IDFG: hunter numbers and success rates for moose, sheep and goat are based on permits issued. Rocky Mountain bighorn and California bighorn controlled hunts (named in each row note), including auction/lottery tag rows where IDFG lists them (unit = IDFG label such as 'Auction Tag - 36A'). harvestMale/harvestFemale = Rams/Ewes; average horn length and circumference in notes."
+    },
+    {
+      "species": "goat",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Source: IDFG Hunt Planner harvest statistics (based on mandatory harvest reports, big game mortality reports and check station records). Blank IDFG cells are null/omitted, never zero-filled. Controlled hunts: hunt = IDFG hunt number, unit = IDFG hunt-area id as published (e.g. '22-1', '45-1X'), unitName = IDFG area description. IDFG: hunter numbers and success rates for moose, sheep and goat are based on permits issued. Controlled hunts only. harvestMale/harvestFemale = Billies/Nannies; average horn length/circumference in notes."
+    },
+    {
+      "species": "lion",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Source: IDFG Hunt Planner harvest statistics (based on mandatory harvest reports, big game mortality reports and check station records). Blank IDFG cells are null/omitted, never zero-filled. Per-GMU harvest with males/females only; IDFG publishes no hunter numbers or success rate for mountain lion. GMUs that IDFG lists with every cell blank (13-18 per year) are omitted rather than shown as zero."
+    },
+    {
+      "species": "turkey",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "notes": "Source: IDFG Hunt Planner harvest statistics (based on mandatory harvest reports, big game mortality reports and check station records). Blank IDFG cells are null/omitted, never zero-filled. Spring general season per GMU 2020-2025 (hunters and harvest). IDFG publishes no success % for turkey and hunters may hold more than one tag (harvest can exceed hunters), so successPct is null; IDFG's days/hunter, birds/day and days/bird are in notes. The Hunt Planner has no fall general turkey table. Controlled turkey hunts 2020-2021 only (IDFG shows no controlled turkey statistics for 2022-2025). Spring 2026 data exists on IDFG but is outside this 2020-2025 dataset."
+    }
+  ],
+  "sources": [
+    {
+      "id": "h-idfg-general-elk-2020",
+      "title": "2020 Elk General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=elk&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-elk-2021",
+      "title": "2021 Elk General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=elk&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-elk-2022",
+      "title": "2022 Elk General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=elk&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-elk-2023",
+      "title": "2023 Elk General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=elk&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-elk-2024",
+      "title": "2024 Elk General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=elk&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-elk-2025",
+      "title": "2025 Elk General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=elk&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-deer-2020",
+      "title": "2020 Deer General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=deer&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-deer-2021",
+      "title": "2021 Deer General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=deer&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-deer-2022",
+      "title": "2022 Deer General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=deer&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-deer-2023",
+      "title": "2023 Deer General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=deer&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-deer-2024",
+      "title": "2024 Deer General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=deer&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-deer-2025",
+      "title": "2025 Deer General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=deer&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-bear-2020",
+      "title": "2020 Bear General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=bear&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-bear-2021",
+      "title": "2021 Bear General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=bear&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-bear-2022",
+      "title": "2022 Bear General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=bear&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-bear-2023",
+      "title": "2023 Bear General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=bear&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-bear-2024",
+      "title": "2024 Bear General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=bear&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-bear-2025",
+      "title": "2025 Bear General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=bear&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-lion-2020",
+      "title": "2020 Lion General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=lion&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-lion-2021",
+      "title": "2021 Lion General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=lion&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-lion-2022",
+      "title": "2022 Lion General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=lion&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-lion-2023",
+      "title": "2023 Lion General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=lion&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-lion-2024",
+      "title": "2024 Lion General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=lion&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-lion-2025",
+      "title": "2025 Lion General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=lion&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-turkey-2020",
+      "title": "2020 Turkey General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=turkey&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-turkey-2021",
+      "title": "2021 Turkey General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=turkey&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-turkey-2022",
+      "title": "2022 Turkey General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=turkey&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-turkey-2023",
+      "title": "2023 Turkey General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=turkey&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-turkey-2024",
+      "title": "2024 Turkey General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=turkey&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-general-turkey-2025",
+      "title": "2025 Turkey General Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=general&game=turkey&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records."
+    },
+    {
+      "id": "h-idfg-controlled-elk-2020",
+      "title": "2020 Elk Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=elk&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-elk-2021",
+      "title": "2021 Elk Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=elk&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-elk-2022",
+      "title": "2022 Elk Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=elk&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-elk-2023",
+      "title": "2023 Elk Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=elk&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-elk-2024",
+      "title": "2024 Elk Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=elk&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-elk-2025",
+      "title": "2025 Elk Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=elk&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-deer-2020",
+      "title": "2020 Deer Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=deer&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-deer-2021",
+      "title": "2021 Deer Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=deer&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-deer-2022",
+      "title": "2022 Deer Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=deer&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-deer-2023",
+      "title": "2023 Deer Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=deer&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-deer-2024",
+      "title": "2024 Deer Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=deer&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-deer-2025",
+      "title": "2025 Deer Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=deer&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-bear-2020",
+      "title": "2020 Bear Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=bear&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-bear-2022",
+      "title": "2022 Bear Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=bear&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-bear-2023",
+      "title": "2023 Bear Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=bear&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-bear-2024",
+      "title": "2024 Bear Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=bear&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-bear-2025",
+      "title": "2025 Bear Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=bear&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-moose-2020",
+      "title": "2020 Moose Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=moose&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-moose-2021",
+      "title": "2021 Moose Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=moose&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-moose-2022",
+      "title": "2022 Moose Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=moose&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-moose-2023",
+      "title": "2023 Moose Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=moose&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-moose-2024",
+      "title": "2024 Moose Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=moose&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-moose-2025",
+      "title": "2025 Moose Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=moose&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-goat-2020",
+      "title": "2020 Goat Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=goat&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-goat-2021",
+      "title": "2021 Goat Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=goat&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-goat-2022",
+      "title": "2022 Goat Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=goat&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-goat-2023",
+      "title": "2023 Goat Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=goat&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-goat-2024",
+      "title": "2024 Goat Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=goat&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-goat-2025",
+      "title": "2025 Goat Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=goat&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-pronghorn-2020",
+      "title": "2020 Pronghorn Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=pronghorn&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-pronghorn-2021",
+      "title": "2021 Pronghorn Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=pronghorn&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-pronghorn-2022",
+      "title": "2022 Pronghorn Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=pronghorn&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-pronghorn-2023",
+      "title": "2023 Pronghorn Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=pronghorn&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-pronghorn-2024",
+      "title": "2024 Pronghorn Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=pronghorn&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-pronghorn-2025",
+      "title": "2025 Pronghorn Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=pronghorn&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-rocky-mountain-sheep-2020",
+      "title": "2020 Rocky Mountain Sheep Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=rocky%20mountain%20sheep&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-rocky-mountain-sheep-2021",
+      "title": "2021 Rocky Mountain Sheep Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=rocky%20mountain%20sheep&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-rocky-mountain-sheep-2022",
+      "title": "2022 Rocky Mountain Sheep Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=rocky%20mountain%20sheep&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-rocky-mountain-sheep-2023",
+      "title": "2023 Rocky Mountain Sheep Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=rocky%20mountain%20sheep&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-rocky-mountain-sheep-2024",
+      "title": "2024 Rocky Mountain Sheep Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=rocky%20mountain%20sheep&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-rocky-mountain-sheep-2025",
+      "title": "2025 Rocky Mountain Sheep Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=rocky%20mountain%20sheep&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-california-sheep-2020",
+      "title": "2020 California Sheep Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=california%20sheep&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-california-sheep-2021",
+      "title": "2021 California Sheep Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=california%20sheep&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-california-sheep-2022",
+      "title": "2022 California Sheep Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=california%20sheep&yr=2022",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-california-sheep-2023",
+      "title": "2023 California Sheep Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=california%20sheep&yr=2023",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-california-sheep-2024",
+      "title": "2024 California Sheep Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=california%20sheep&yr=2024",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-california-sheep-2025",
+      "title": "2025 California Sheep Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=california%20sheep&yr=2025",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-turkey-2020",
+      "title": "2020 Turkey Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=turkey&yr=2020",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-controlled-turkey-2021",
+      "title": "2021 Turkey Controlled Hunt Harvest Statistics",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/?season=controlled&game=turkey&yr=2021",
+      "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG Hunt Planner harvest statistics (HTML table). Based on mandatory harvest reports, big game mortality reports and check station records. Controlled hunts: moose, sheep and goat hunter numbers and success rates are based on permits issued; rain checks from previous years can make harvest exceed tags."
+    },
+    {
+      "id": "h-idfg-article-2025-harvest-summary",
+      "title": "Hunter Harvest Report: Elk and mule deer keep on climbing in 2025",
+      "publisher": "Idaho Department of Fish and Game",
+      "url": "https://idfg.idaho.gov/article/hunter-harvest-report-elk-and-mule-deer-keep-climbing-2025",
+      "pageUrl": "http://web.archive.org/web/20260813085134/https://idfg.idaho.gov/article/hunter-harvest-report-elk-and-mule-deer-keep-climbing-2025",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "IDFG press article published 2026-04-10; statewide 'By the numbers' totals by species (general + controlled). Read from the Internet Archive copy of 2026-08-13 because idfg.idaho.gov was offline for maintenance on 2026-10-31."
+    }
+  ]
+}

@@ -1,0 +1,780 @@
+{
+ "states": 12,
+ "species": {
+  "elk": {
+   "states": 12,
+   "huntCodes": 3786,
+   "units": 1553
+  },
+  "pronghorn": {
+   "states": 11,
+   "huntCodes": 1422,
+   "units": 686
+  },
+  "mule-deer": {
+   "states": 12,
+   "huntCodes": 3232,
+   "units": 1597
+  },
+  "whitetail": {
+   "states": 10,
+   "huntCodes": 762,
+   "units": 984
+  },
+  "sheep": {
+   "states": 11,
+   "huntCodes": 464,
+   "units": 453
+  },
+  "turkey": {
+   "states": 11,
+   "huntCodes": 356,
+   "units": 585
+  },
+  "bear": {
+   "states": 10,
+   "huntCodes": 277,
+   "units": 667
+  },
+  "lion": {
+   "states": 11,
+   "huntCodes": 53,
+   "units": 921
+  },
+  "moose": {
+   "states": 7,
+   "huntCodes": 386,
+   "units": 338
+  },
+  "goat": {
+   "states": 8,
+   "huntCodes": 140,
+   "units": 125
+  }
+ },
+ "drawYears": [
+  2020,
+  2026
+ ],
+ "harvestYears": [
+  2020,
+  2026
+ ],
+ "turkeyStatewide": {
+  "arizona": {
+   "rows": [],
+   "units": 67,
+   "drawHunts": 92
+  },
+  "colorado": {
+   "rows": [
+    {
+     "species": "turkey",
+     "year": 2025,
+     "unit": "Statewide",
+     "methodLabel": "All spring licenses (limited + OTC)",
+     "hunters": 21385,
+     "harvest": 7331,
+     "successPct": 34.3,
+     "successComputed": true,
+     "daysHunted": 96064,
+     "note": "From the report text: 'nearly 21,385 hunters'; statewide harvest estimate (limited + OTC) 7,331; days 96,064",
+     "sourceId": "h-co-turkey-2025"
+    },
+    {
+     "species": "turkey",
+     "year": 2024,
+     "unit": "Statewide",
+     "methodLabel": "All spring licenses (limited + OTC)",
+     "hunters": 19259,
+     "harvest": 5903,
+     "successPct": 30.7,
+     "successComputed": true,
+     "daysHunted": 86000,
+     "note": "From the report text: 'nearly 19,259 hunters'; statewide harvest estimate (limited + OTC) 5,903; days 86,000",
+     "sourceId": "h-co-turkey-2024"
+    },
+    {
+     "species": "turkey",
+     "year": 2023,
+     "unit": "Statewide",
+     "methodLabel": "All spring licenses (limited + OTC)",
+     "hunters": 20100,
+     "harvest": 5694,
+     "successPct": 28.3,
+     "successComputed": true,
+     "daysHunted": 91000,
+     "note": "From the report text: 'nearly 20,100 hunters'; statewide harvest estimate (limited + OTC) 5,694; days 'nearly 91,000'",
+     "sourceId": "h-co-turkey-2023"
+    },
+    {
+     "species": "turkey",
+     "year": 2022,
+     "unit": "Statewide",
+     "methodLabel": "All spring licenses (limited + OTC)",
+     "hunters": 20202,
+     "harvest": 5423,
+     "successPct": 26.8,
+     "successComputed": true,
+     "daysHunted": 105000,
+     "note": "From the report text: 'nearly 20,202 hunters'; statewide harvest estimate (limited + OTC) 5,423; days 'nearly 105,000'",
+     "sourceId": "h-co-turkey-2022"
+    },
+    {
+     "species": "turkey",
+     "year": 2021,
+     "unit": "Statewide",
+     "methodLabel": "All spring licenses (limited + OTC)",
+     "hunters": 22408,
+     "harvest": 5782,
+     "successPct": 25.8,
+     "successComputed": true,
+     "daysHunted": 113000,
+     "note": "From the report text: 'nearly 22,408 hunters'; statewide harvest estimate (limited + OTC) 5,782; days 'nearly 113,000'",
+     "sourceId": "h-co-turkey-2021"
+    },
+    {
+     "species": "turkey",
+     "year": 2020,
+     "unit": "Statewide",
+     "methodLabel": "All spring licenses (limited + OTC)",
+     "hunters": 24000,
+     "harvest": 6479,
+     "successPct": 27,
+     "successComputed": true,
+     "daysHunted": 133000,
+     "note": "From the report text: 'nearly 24,000 hunters'; statewide harvest estimate (limited + OTC) 6,479; days 'nearly 133,000'. CPW's 2020 text labels this figure 'the 2019 statewide harvest estimate' (apparent typo; it is the 2020 report)",
+     "sourceId": "h-co-turkey-2020"
+    }
+   ],
+   "units": 88,
+   "drawHunts": 68
+  },
+  "idaho": {
+   "rows": [],
+   "units": 69,
+   "drawHunts": 18
+  },
+  "kansas": {
+   "rows": [
+    {
+     "species": "turkey",
+     "year": 2026,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Spring season",
+     "residency": "all",
+     "hunters": 27214,
+     "harvest": 15942,
+     "successPct": 58.6,
+     "licenses": 30694,
+     "sourceId": "h-kdwp-turkey-2026",
+     "note": "From the 2026 report text: 88.7% of 30,694 permit buyers hunted = 27,214 active hunters (18,795 residents, 8,745 non-residents as published; KDWP's resident and non-resident figures do not sum exactly to the total), harvest 15,942, 58.6% of hunters filled their permit; average 3.5 days afield. The 2026 report's Table 2 lists 30,694 permits & game tags, harvest 15,942 and 59% success."
+    },
+    {
+     "species": "turkey",
+     "year": 2025,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Spring season",
+     "residency": "all",
+     "hunters": 25852,
+     "harvest": 13862,
+     "successPct": 53.6,
+     "licenses": 29155,
+     "sourceId": "h-kdwp-turkey-2025",
+     "note": "From the 2025 report text: 88.7% of 29,155 permit buyers hunted = 25,852 active hunters (17,021 residents, 8,967 non-residents as published; KDWP's resident and non-resident figures do not sum exactly to the total), harvest 13,862, 53.6% of hunters filled their permit; average 3.4 days afield. The 2026 report's Table 2 lists 29,155 permits & game tags, harvest 13,862 and 54% success."
+    },
+    {
+     "species": "turkey",
+     "year": 2024,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Spring season",
+     "residency": "all",
+     "hunters": null,
+     "harvest": 11144,
+     "successPct": 41,
+     "licenses": 26986,
+     "sourceId": "h-kdwp-turkey-2026",
+     "note": "Table 2 of the 2026 report (KDWP's current figures): 'Permits & Game Tags' = licenses; success as published. The original 2024 report text gave 24,834 permit buyers, 21,737 active hunters, harvest 11,134 and 51.0% success; KDWP later revised the season figures, so active hunters are left null rather than mixing editions."
+    },
+    {
+     "species": "turkey",
+     "year": 2023,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Spring season",
+     "residency": "all",
+     "hunters": null,
+     "harvest": 14989,
+     "successPct": 45,
+     "licenses": 39123,
+     "sourceId": "h-kdwp-turkey-2026",
+     "note": "Table 2 of the 2026 report (KDWP's current figures): 'Permits & Game Tags' = licenses; success as published."
+    },
+    {
+     "species": "turkey",
+     "year": 2022,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season",
+     "residency": "all",
+     "hunters": null,
+     "harvest": 318,
+     "successPct": 16,
+     "licenses": 2984,
+     "note": "Fall turkey season, statewide (Table 2 of the 2026 report). Hens were 44% of the fall harvest. No fall season has been held since 2022.",
+     "sourceId": "h-kdwp-turkey-2026"
+    },
+    {
+     "species": "turkey",
+     "year": 2021,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season",
+     "residency": "all",
+     "hunters": null,
+     "harvest": 313,
+     "successPct": 16,
+     "licenses": 2779,
+     "note": "Fall turkey season, statewide (Table 2 of the 2026 report). Hens were 51% of the fall harvest. No fall season has been held since 2022.",
+     "sourceId": "h-kdwp-turkey-2026"
+    },
+    {
+     "species": "turkey",
+     "year": 2020,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season",
+     "residency": "all",
+     "hunters": null,
+     "harvest": 506,
+     "successPct": 20,
+     "licenses": 3459,
+     "note": "Fall turkey season, statewide (Table 2 of the 2026 report). Hens were 45% of the fall harvest. No fall season has been held since 2022.",
+     "sourceId": "h-kdwp-turkey-2026"
+    }
+   ],
+   "units": 6,
+   "drawHunts": 8
+  },
+  "montana": {
+   "rows": [
+    {
+     "species": "turkey",
+     "year": 2025,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season",
+     "residency": "all",
+     "hunters": 4599.1,
+     "harvest": 2411,
+     "harvestMale": 1437.3,
+     "harvestFemale": 781.9,
+     "successPct": null,
+     "daysHunted": 22215.1,
+     "licenses": 47513,
+     "sourceId": "h-turkey-2025"
+    },
+    {
+     "species": "turkey",
+     "year": 2024,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season",
+     "residency": "all",
+     "hunters": 5409.3,
+     "harvest": 2961.3,
+     "harvestMale": 1586.9,
+     "harvestFemale": 1234.7,
+     "successPct": null,
+     "daysHunted": 26442.4,
+     "licenses": 45717,
+     "sourceId": "h-turkey-2024"
+    },
+    {
+     "species": "turkey",
+     "year": 2023,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season",
+     "residency": "all",
+     "hunters": 5123.9,
+     "harvest": 2841.3,
+     "harvestMale": 1452.1,
+     "harvestFemale": 1109.1,
+     "successPct": null,
+     "daysHunted": 23582.6,
+     "licenses": 42014,
+     "sourceId": "h-turkey-2023"
+    },
+    {
+     "species": "turkey",
+     "year": 2022,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season",
+     "residency": "all",
+     "hunters": 5304.1,
+     "harvest": 3032.4,
+     "harvestMale": 1684.4,
+     "harvestFemale": 1132.5,
+     "successPct": null,
+     "daysHunted": 26124.9,
+     "licenses": 40346,
+     "sourceId": "h-turkey-2022"
+    },
+    {
+     "species": "turkey",
+     "year": 2021,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season",
+     "residency": "all",
+     "hunters": 5050.8,
+     "harvest": 2468.8,
+     "harvestMale": 1377.2,
+     "harvestFemale": 916.8,
+     "successPct": null,
+     "daysHunted": 23271.8,
+     "licenses": 38718,
+     "sourceId": "h-turkey-2021"
+    },
+    {
+     "species": "turkey",
+     "year": 2020,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season",
+     "residency": "all",
+     "hunters": 4317.6,
+     "harvest": 2333.4,
+     "harvestMale": 1244.9,
+     "harvestFemale": 882.6,
+     "successPct": null,
+     "daysHunted": 21847.3,
+     "licenses": 26964,
+     "sourceId": "h-turkey-2020"
+    }
+   ],
+   "units": 56,
+   "drawHunts": 0
+  },
+  "new-mexico": {
+   "rows": [
+    {
+     "species": "turkey",
+     "year": 2025,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season (statewide estimate)",
+     "hunters": 3156,
+     "harvest": 593,
+     "licenses": 4702,
+     "sourceId": "h-turkey-2025",
+     "note": "Licenses sold, estimated hunters and estimated harvest as stated in the report text (estimates expand reports to non-reporting license holders); no comparable statewide success % is published.",
+     "harvestFemale": 327,
+     "harvestMale": 266,
+     "successPct": null
+    },
+    {
+     "species": "turkey",
+     "year": 2024,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season (statewide estimate)",
+     "hunters": 2946,
+     "harvest": 473,
+     "licenses": 4409,
+     "sourceId": "h-turkey-2024",
+     "note": "Licenses sold, estimated hunters and estimated harvest as stated in the report text (estimates expand reports to non-reporting license holders); no comparable statewide success % is published.",
+     "harvestFemale": 258,
+     "harvestMale": 214,
+     "successPct": null
+    },
+    {
+     "species": "turkey",
+     "year": 2023,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season (statewide estimate)",
+     "hunters": 3570,
+     "harvest": 1003,
+     "licenses": 5125,
+     "sourceId": "h-turkey-2023",
+     "note": "Licenses sold, estimated hunters and estimated harvest as stated in the report text (estimates expand reports to non-reporting license holders); no comparable statewide success % is published.",
+     "harvestFemale": 658,
+     "harvestMale": 345,
+     "successPct": null
+    },
+    {
+     "species": "turkey",
+     "year": 2022,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season (statewide estimate)",
+     "hunters": 2779,
+     "harvest": 544,
+     "licenses": 4237,
+     "sourceId": "h-turkey-2022",
+     "note": "Licenses sold, estimated hunters and estimated harvest as stated in the report text (estimates expand reports to non-reporting license holders); no comparable statewide success % is published.",
+     "harvestFemale": 334,
+     "harvestMale": 210,
+     "successPct": null
+    },
+    {
+     "species": "turkey",
+     "year": 2021,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season (statewide estimate)",
+     "hunters": 3483,
+     "harvest": 661,
+     "licenses": 4946,
+     "sourceId": "h-turkey-2021",
+     "note": "Licenses sold, estimated hunters and estimated harvest as stated in the report text (estimates expand reports to non-reporting license holders); no comparable statewide success % is published.",
+     "harvestFemale": 409,
+     "harvestMale": 252,
+     "successPct": null
+    },
+    {
+     "species": "turkey",
+     "year": 2020,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season (statewide estimate)",
+     "hunters": 4258,
+     "harvest": 837,
+     "licenses": 5780,
+     "sourceId": "h-turkey-2020",
+     "note": "Licenses sold, estimated hunters and estimated harvest as stated in the report text (estimates expand reports to non-reporting license holders); no comparable statewide success % is published.",
+     "harvestFemale": 476,
+     "harvestMale": 361,
+     "successPct": null
+    }
+   ],
+   "units": 60,
+   "drawHunts": 10
+  },
+  "oregon": {
+   "rows": [
+    {
+     "species": "turkey",
+     "year": 2025,
+     "unit": "Statewide",
+     "methodLabel": "Spring Turkey",
+     "hunters": 13706,
+     "harvest": 7514,
+     "successPct": 54.8,
+     "successComputed": true,
+     "daysHunted": 54670,
+     "note": "ODFW statewide 'Spring Turkey' line; ODFW publishes 0.55 birds per hunter, not percent of hunters successful; successPct here is harvest / hunters; ODFW: an error in the mandatory reporting system impacted 2025 harvest data and likely inflated this estimate",
+     "sourceId": "h-odfw-gamebird-staff-summary-2026"
+    },
+    {
+     "species": "turkey",
+     "year": 2024,
+     "unit": "Statewide",
+     "methodLabel": "Spring Turkey",
+     "hunters": 12563,
+     "harvest": 5112,
+     "successPct": 40.7,
+     "successComputed": true,
+     "daysHunted": 51397,
+     "note": "ODFW statewide 'Spring Turkey' line; ODFW publishes 0.41 birds per hunter, not percent of hunters successful; successPct here is harvest / hunters",
+     "sourceId": "h-odfw-gamebird-staff-summary-2025"
+    },
+    {
+     "species": "turkey",
+     "year": 2023,
+     "unit": "Statewide",
+     "methodLabel": "Spring Turkey",
+     "hunters": 12721,
+     "harvest": 4815,
+     "successPct": 37.9,
+     "successComputed": true,
+     "daysHunted": 52945,
+     "note": "ODFW statewide 'Spring Turkey' line; ODFW publishes 0.38 birds per hunter, not percent of hunters successful; successPct here is harvest / hunters",
+     "sourceId": "h-odfw-gamebird-staff-summary-2024"
+    }
+   ],
+   "units": 68,
+   "drawHunts": 0
+  },
+  "south-dakota": {
+   "rows": [
+    {
+     "species": "turkey",
+     "year": 2026,
+     "unit": "Statewide",
+     "method": "archery",
+     "methodLabel": "Spring Archery Turkey (statewide license)",
+     "hunters": null,
+     "harvest": 1489,
+     "successPct": 30,
+     "licenses": 4954,
+     "daysHunted": 3.3,
+     "note": "Licenses sold 4116 resident + 838 nonresident.",
+     "sourceId": "h-gfp-spring-archery-turkey-2026"
+    },
+    {
+     "species": "turkey",
+     "year": 2025,
+     "unit": "Statewide",
+     "methodLabel": "Fall Mentored Youth Turkey (statewide license)",
+     "hunters": null,
+     "harvest": 104,
+     "harvestMale": 67,
+     "harvestFemale": 38,
+     "successPct": 18,
+     "licenses": 579,
+     "daysHunted": 1.72,
+     "sourceId": "h-gfp-fall-mentored-youth-turkey-2025"
+    },
+    {
+     "species": "turkey",
+     "year": 2024,
+     "unit": "Statewide",
+     "methodLabel": "Fall Mentored Youth Turkey (statewide license)",
+     "hunters": null,
+     "harvest": 103,
+     "harvestMale": 60,
+     "harvestFemale": 43,
+     "successPct": 18,
+     "licenses": 567,
+     "daysHunted": 1.94,
+     "sourceId": "h-gfp-fall-mentored-youth-turkey-2025"
+    },
+    {
+     "species": "turkey",
+     "year": 2023,
+     "unit": "Statewide",
+     "methodLabel": "Fall Mentored Youth Turkey (statewide license)",
+     "hunters": null,
+     "harvest": 127,
+     "harvestMale": 84,
+     "harvestFemale": 44,
+     "successPct": 23,
+     "licenses": 558,
+     "daysHunted": 1.82,
+     "sourceId": "h-gfp-fall-mentored-youth-turkey-2025"
+    },
+    {
+     "species": "turkey",
+     "year": 2022,
+     "unit": "Statewide",
+     "methodLabel": "Fall Mentored Youth Turkey (statewide license)",
+     "hunters": null,
+     "harvest": 125,
+     "harvestMale": 89,
+     "harvestFemale": 36,
+     "successPct": 28,
+     "licenses": 444,
+     "daysHunted": 1.62,
+     "sourceId": "h-gfp-fall-mentored-youth-turkey-2025"
+    },
+    {
+     "species": "turkey",
+     "year": 2021,
+     "unit": "Statewide",
+     "methodLabel": "Fall Mentored Youth Turkey (statewide license)",
+     "hunters": null,
+     "harvest": 56,
+     "harvestMale": 42,
+     "harvestFemale": 13,
+     "successPct": 19,
+     "licenses": 300,
+     "daysHunted": 1.8,
+     "sourceId": "h-gfp-fall-mentored-youth-turkey-2025"
+    },
+    {
+     "species": "turkey",
+     "year": 2020,
+     "unit": "Statewide",
+     "methodLabel": "Fall Mentored Youth Turkey (statewide license)",
+     "hunters": null,
+     "harvest": 62,
+     "harvestMale": 48,
+     "harvestFemale": 14,
+     "successPct": 12,
+     "licenses": 501,
+     "daysHunted": 1.75,
+     "sourceId": "h-gfp-fall-mentored-youth-turkey-2025"
+    }
+   ],
+   "units": 66,
+   "drawHunts": 205
+  },
+  "utah": {
+   "rows": [
+    {
+     "species": "turkey",
+     "year": 2025,
+     "method": "all",
+     "methodLabel": "Fall management hunt (by hunt)",
+     "hunters": 1276,
+     "harvest": 769,
+     "harvestMale": 284,
+     "harvestFemale": 476,
+     "licenses": 2517,
+     "sourceId": "h-upland2025-26",
+     "successPct": null,
+     "unit": "Statewide",
+     "unitName": "Statewide",
+     "note": "Survey sample n=1085; total days afield 6001; 26% juveniles; 8 of unknown sex; UDWR publishes no success rate for this table (fall hunters may take more than one bird)"
+    },
+    {
+     "species": "turkey",
+     "year": 2024,
+     "unit": "Statewide",
+     "unitName": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall management hunt (statewide summary)",
+     "hunters": 1585,
+     "harvest": 1123,
+     "successPct": 70.9,
+     "licenses": 2808,
+     "sourceId": "h-upland2024-25"
+    },
+    {
+     "species": "turkey",
+     "year": 2023,
+     "unit": "Statewide",
+     "unitName": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall management hunt (statewide summary)",
+     "hunters": 1838,
+     "harvest": 898,
+     "successPct": 48.9,
+     "licenses": 2625,
+     "sourceId": "h-upland2024-25"
+    },
+    {
+     "species": "turkey",
+     "year": 2022,
+     "unit": "Statewide",
+     "unitName": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall management hunt (statewide summary)",
+     "hunters": 2116,
+     "harvest": 1255,
+     "successPct": 59.3,
+     "licenses": 2843,
+     "sourceId": "h-upland2024-25"
+    },
+    {
+     "species": "turkey",
+     "year": 2021,
+     "unit": "Statewide",
+     "unitName": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall management hunt (statewide summary)",
+     "hunters": 3517,
+     "harvest": 1652,
+     "successPct": 47,
+     "licenses": 4619,
+     "sourceId": "h-upland2024-25"
+    },
+    {
+     "species": "turkey",
+     "year": 2020,
+     "unit": "Statewide",
+     "unitName": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall management hunt (statewide summary)",
+     "hunters": 5904,
+     "harvest": 2964,
+     "successPct": 50.2,
+     "licenses": 7710,
+     "sourceId": "h-upland2024-25"
+    }
+   ],
+   "units": 89,
+   "drawHunts": 7
+  },
+  "washington": {
+   "rows": [
+    {
+     "species": "turkey",
+     "year": 2025,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "All seasons (spring + fall + permit)",
+     "hunters": null,
+     "harvest": 9312,
+     "successPct": null,
+     "note": "WDFW statewide 'Total' (spring, fall and permit hunts)",
+     "sourceId": "h-2025-turkey-statewide"
+    },
+    {
+     "species": "turkey",
+     "year": 2024,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "All seasons (spring + fall + permit)",
+     "hunters": null,
+     "harvest": 8885,
+     "successPct": null,
+     "note": "WDFW statewide 'Total' (spring, fall and permit hunts)",
+     "sourceId": "h-2024-turkey-statewide"
+    },
+    {
+     "species": "turkey",
+     "year": 2023,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "All seasons (spring + fall + permit)",
+     "hunters": null,
+     "harvest": 8685,
+     "successPct": null,
+     "note": "WDFW statewide 'Total' (spring, fall and permit hunts)",
+     "sourceId": "h-2023-turkey-statewide"
+    },
+    {
+     "species": "turkey",
+     "year": 2022,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "All seasons (spring + fall + permit)",
+     "hunters": null,
+     "harvest": 9096,
+     "successPct": null,
+     "note": "WDFW statewide 'Total' (spring, fall and permit hunts)",
+     "sourceId": "h-2022-turkey-statewide"
+    },
+    {
+     "species": "turkey",
+     "year": 2021,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "All seasons (spring + fall + permit)",
+     "hunters": null,
+     "harvest": 10152,
+     "successPct": null,
+     "note": "WDFW statewide 'Total' (spring, fall and permit hunts)",
+     "sourceId": "h-2021-turkey-statewide"
+    },
+    {
+     "species": "turkey",
+     "year": 2020,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "All seasons (spring + fall + permit)",
+     "hunters": null,
+     "harvest": 7913,
+     "successPct": null,
+     "note": "WDFW statewide 'Total' (spring, fall and permit hunts)",
+     "sourceId": "h-2020-turkey-statewide"
+    }
+   ],
+   "units": 7,
+   "drawHunts": 2
+  },
+  "wyoming": {
+   "rows": [],
+   "units": 9,
+   "drawHunts": 9
+  }
+ }
+}

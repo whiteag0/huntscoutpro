@@ -1,0 +1,225 @@
+{
+  "unitNames": {
+    "turkey": {
+      "1": "Northwest",
+      "2": "Northcentral",
+      "3": "Northeast",
+      "4": "Southwest",
+      "5": "Southcentral",
+      "6": "Southeast"
+    }
+  },
+  "coverage": [
+    {
+      "species": "whitetail",
+      "years": [
+        2023,
+        2022,
+        2021,
+        2020
+      ],
+      "notes": "Season year = the year the season opened (2020 = 2020-21). Unit (Deer Management Unit 01-19) harvest by species, sex, age and permit type is published only for 2020-21 and 2021-22 (Appendix 1 of the full reports); 2022-23 and 2023-24 were published as a statewide table only, and no 2024-25 deer harvest report or table is posted on ksoutdoors.gov as of 2026-10-31. KDWP does not publish hunter numbers or success by unit. Statewide rows carry permits issued (licenses) and hunter success by permit type, which KDWP reports for deer of either species. Species harvest totals are the sum of the published antlered and antlerless columns. Harvest by weapon (rifle, bow, crossbow...), hunters by season and days afield are published only for both species combined, so they are not attributed to a species here. DMU 19 counts only extra antlerless harvest (see row notes). Cross-check: the 19 unit totals sum to within 40 deer of the statewide whitetail total (81,314 vs 81,354 in 2020-21; 82,323 vs 82,283 in 2021-22) and within 5 of the mule deer total; KDWP notes unit estimates may not match the statewide estimate due to rounding. The sex/age split differs more: unit tables sum to about 520-760 more antlered whitetail bucks and 490-780 fewer adult does than the statewide table, so use statewide rows for statewide composition."
+    },
+    {
+      "species": "mule-deer",
+      "years": [
+        2023,
+        2022,
+        2021,
+        2020
+      ],
+      "notes": "Season year = the year the season opened (2020 = 2020-21). Unit (Deer Management Unit 01-19) harvest by species, sex, age and permit type is published only for 2020-21 and 2021-22 (Appendix 1 of the full reports); 2022-23 and 2023-24 were published as a statewide table only, and no 2024-25 deer harvest report or table is posted on ksoutdoors.gov as of 2026-10-31. KDWP does not publish hunter numbers or success by unit. Statewide rows carry permits issued (licenses) and hunter success by permit type, which KDWP reports for deer of either species. Species harvest totals are the sum of the published antlered and antlerless columns. Harvest by weapon (rifle, bow, crossbow...), hunters by season and days afield are published only for both species combined, so they are not attributed to a species here. DMU 19 counts only extra antlerless harvest (see row notes). Cross-check: the 19 unit totals sum to within 40 deer of the statewide whitetail total (81,314 vs 81,354 in 2020-21; 82,323 vs 82,283 in 2021-22) and within 5 of the mule deer total; KDWP notes unit estimates may not match the statewide estimate due to rounding. The sex/age split differs more: unit tables sum to about 520-760 more antlered whitetail bucks and 490-780 fewer adult does than the statewide table, so use statewide rows for statewide composition. Mule deer rows are omitted for whitetail-only permit types when KDWP shows zero mule deer for them; where the table shows mule deer taken on a whitetail permit (e.g. statewide Whitetail Either Sex 2021-22), the row is kept as published."
+    },
+    {
+      "species": "elk",
+      "years": [
+        2024,
+        2023,
+        2022,
+        2021,
+        2020
+      ],
+      "notes": "Statewide figures stated in each report's text (2024 = 2024-25 season). KDWP reports harvest as reported by respondents with no nonrespondent correction (each statewide note gives the agency's expansion figure). Elk harvest by management unit is shown only as a chart without numbers; the only sub-state numbers are the Fort Riley draw permits (Fort Riley lies in elk Unit 2) and the county list in the statewide note. The 2024-25 report's any-elk permit count ('782') conflicts with the 229 permits sold, so it is left null."
+    },
+    {
+      "species": "pronghorn",
+      "years": [
+        2024,
+        2023,
+        2022,
+        2021,
+        2020
+      ],
+      "notes": "Statewide harvest and buck count only. KDWP's pronghorn reports show permits, harvest and success by unit (2, 17, 18) and by weapon only as charts without numbers, so no unit rows are possible. No 2025 pronghorn harvest report is posted as of 2026-10-31."
+    },
+    {
+      "species": "turkey",
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020
+      ],
+      "notes": "Spring season 2020-2026 (2026 report published August 2026) plus the fall season 2020-2022 (no fall season since). Statewide permits, harvest and success use the 2026 report's Table 2 (KDWP revised 2024: the 2024 report said 24,834 permits, 11,135 harvest, 51% success; the 2026 table says 26,986, 11,144, 41%). Active hunters come from the 2025 and 2026 report text. By unit, KDWP publishes resident hunter success for all six units (Table 3) and, in the text, the highest- and lowest-success unit for all hunters in 2024-2026; unit hunters and harvest are charts only. Reports for spring 2020-2023 are not posted on ksoutdoors.gov; those years come from the 2026 report's tables."
+    }
+  ],
+  "sources": [
+    {
+      "id": "h-kdwp-deer-2020-21",
+      "title": "2020-21 Kansas Deer Harvest Report",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/1374",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-deer-2021-22",
+      "title": "2021-22 Kansas Deer Harvest Report",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/1376",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-deer-2022-23",
+      "title": "2022-23 Kansas Deer Harvest Table",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/1378",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "Statewide table only; no unit-level appendix was published for this season. Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-deer-2023-24",
+      "title": "2023-24 Kansas Deer Harvest Table",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/1380",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "Statewide table only; no unit-level appendix was published for this season. Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-elk-2020-21",
+      "title": "2020-21 Kansas Elk Harvest Report",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/1388",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-elk-2021-22",
+      "title": "2021-22 Kansas Elk Harvest Report",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/1390",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-elk-2022-23",
+      "title": "2022-23 Kansas Elk Harvest Report",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/1392",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-elk-2023-24",
+      "title": "2023-24 Kansas Elk Harvest Report",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/1394",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-elk-2024-25",
+      "title": "2024-25 Kansas Elk Harvest Report",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/1396",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-pronghorn-2020",
+      "title": "2020 Kansas Pronghorn Harvest Report",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/952",
+      "dataYear": 2020,
+      "retrieved": "2026-10-31",
+      "notes": "Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-pronghorn-2021",
+      "title": "2021 Kansas Pronghorn Harvest Report",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/956",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-pronghorn-2022",
+      "title": "2022 Kansas Pronghorn Harvest Report",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/962",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-pronghorn-2023",
+      "title": "2023 Kansas Pronghorn Harvest Report",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/964",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-pronghorn-2024",
+      "title": "2024 Kansas Pronghorn Harvest Report",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/968",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "Served from the KDWP document library on ksoutdoors.gov; the big-game section of the current Research page reads 'Coming soon', so this report is not linked there."
+    },
+    {
+      "id": "h-kdwp-turkey-2024",
+      "title": "Spring Turkey Harvest Report - 2024",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/2208/639045894482030000",
+      "pageUrl": "https://www.ksoutdoors.gov/programs-services/research",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-kdwp-turkey-2025",
+      "title": "Spring Turkey Harvest Report - 2025",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/2210/639045894484500000",
+      "pageUrl": "https://www.ksoutdoors.gov/programs-services/research",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "h-kdwp-turkey-2026",
+      "title": "Spring Turkey Harvest Report - 2026",
+      "publisher": "Kansas Department of Wildlife and Parks",
+      "url": "https://www.ksoutdoors.gov/home/showpublisheddocument/2508/639232536438570000",
+      "pageUrl": "https://www.ksoutdoors.gov/programs-services/research",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "Prepared August 2026. Tables 2 and 3 carry KDWP's current (revised) figures for 2019-2026."
+    }
+  ]
+}

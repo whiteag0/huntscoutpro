@@ -1,0 +1,1491 @@
+{
+ "slug": "oregon",
+ "name": "Oregon",
+ "abbrev": "OR",
+ "agency": {
+  "name": "Oregon Department of Fish and Wildlife",
+  "shortName": "ODFW",
+  "url": "https://myodfw.com"
+ },
+ "unitTerm": "WMU",
+ "lastReviewed": "2026-10-31",
+ "overview": "Oregon's controlled hunts for deer, elk, pronghorn and spring bear use preference points: 75% of each hunt's tags go to first-choice applicants with the most points and 25% are drawn at random among all other first-choice applicants, so everyone has some chance. Bighorn sheep, Rocky Mountain goat and Premium hunts are pure random draws with no points. Applications (up to five choices per series, $10 per series) are due May 15 (Feb. 10 for spring bear), with results by June 12 (Feb. 20 for spring bear). Nonresidents can receive at most 5% of tags in deer, elk and bear hunts, 3% in pronghorn hunts and 5-10% of sheep and goat tags; starting in 2026, Eastern Oregon deer hunts are organized by Deer Hunt Areas instead of WMUs.",
+ "species": [
+  {
+   "species": "elk",
+   "displayName": "Elk",
+   "drawSystem": "hybrid",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Preference-point draw: for each hunt, 75% of tags go to first-choice applicants with the most preference points; the other 25% are drawn at random among all remaining first-choice applicants. Leftover tags then go to 2nd-5th choices at random (points do not count). Applicants who do not draw their first choice, or buy a Point Saver, gain one point for the series. Controlled elk is the 200 series.",
+   "residentNote": "Residents hold at least 95% of tags in each controlled elk hunt. Drawing a first choice resets points to zero (Pioneer and 65+ resident disabled veteran licensees reset to one).",
+   "nonresidentNote": "A maximum of 5% of tags in controlled deer, elk and bear hunts can go to nonresidents; nonresidents get no preference other than their points. Guides and Outfitters Program tags (equal to half the nonresident tags drawn the previous year) reduce nonresident tags available in the draw. Nonresidents may apply for Premium hunts with equal odds.",
+   "otcSummary": "General-season elk tags are sold over the counter: general archery (Aug. 29 - Sept. 27, 2026), West Cascade (Nov. 7-13), Coast 1st (Nov. 14-17) and 2nd (Nov. 21-27) seasons, and the Eastern Oregon Rocky Mountain 2nd season (spike only, listed units, Nov. 7-15). A General Season Antlerless Elk Damage tag is also sold. Premium elk (M series) is a separate random draw for one extra tag per unit. For 2027 (adopted Sept. 18, 2026): the any-legal-weapon coast elk spike-only bag limit moves from the second to the first period, and antlerless elk are removed from the General Archery Season Tag bag limit in the West Cascades hunt.",
+   "keyDates": [
+    {
+     "label": "Controlled hunt application deadline (11:59 p.m. PT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-how-apply",
+     "date": "2026-05-15",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Draw results available",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-06-12",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Online application changes allowed through",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-05-25",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Point Saver purchase period (after the draw)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "start": "2026-07-01",
+     "end": "2026-11-30",
+     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Leftover controlled tags on sale online (10 a.m. PT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-07-01",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    }
+   ],
+   "sourceIds": [
+    "d-or-regs-2026",
+    "d-or-how-apply",
+    "d-or-points",
+    "d-or-premium",
+    "d-or-how-read",
+    "d-or-news-2027-regs-adopted"
+   ]
+  },
+  {
+   "species": "mule-deer",
+   "displayName": "Deer (mule deer; black-tailed deer in western Oregon)",
+   "drawSystem": "hybrid",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Preference-point draw: for each hunt, 75% of tags go to first-choice applicants with the most preference points; the other 25% are drawn at random among all remaining first-choice applicants. Leftover tags then go to 2nd-5th choices at random (points do not count). Applicants who do not draw their first choice, or buy a Point Saver, gain one point for the series. Controlled buck deer is the 100 series and antlerless deer the 600 series (separate points for each).",
+   "residentNote": "Residents hold at least 95% of tags in each controlled deer hunt. A 600 series antlerless tag can be held in addition to one 100 series (general or controlled) buck tag.",
+   "nonresidentNote": "A maximum of 5% of tags in controlled deer, elk and bear hunts can go to nonresidents; nonresidents get no preference other than their points. Guides and Outfitters Program tags (equal to half the nonresident tags drawn the previous year) reduce nonresident tags available in the draw. Nonresidents may apply for Premium hunts with equal odds.",
+   "otcSummary": "Starting in 2026 all Eastern Oregon deer hunting, rifle and archery, is by controlled hunt in Deer Hunt Areas. Over-the-counter general tags remain for Western Oregon (units 10-30): any legal weapon buck season Oct. 3 - Nov. 6, 2026 and general archery from Aug. 29. Premium deer (L series) is a separate random draw.",
+   "keyDates": [
+    {
+     "label": "Controlled hunt application deadline (11:59 p.m. PT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-how-apply",
+     "date": "2026-05-15",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Draw results available",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-06-12",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Online application changes allowed through",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-05-25",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Point Saver purchase period (after the draw)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "start": "2026-07-01",
+     "end": "2026-11-30",
+     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Leftover controlled tags on sale online (10 a.m. PT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-07-01",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    }
+   ],
+   "sourceIds": [
+    "d-or-regs-2026",
+    "d-or-how-apply",
+    "d-or-points",
+    "d-or-premium",
+    "d-or-how-read",
+    "d-or-news-2027-regs-adopted"
+   ]
+  },
+  {
+   "species": "whitetail",
+   "displayName": "White-tailed deer",
+   "drawSystem": "hybrid",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Preference-point draw: for each hunt, 75% of tags go to first-choice applicants with the most preference points; the other 25% are drawn at random among all remaining first-choice applicants. Leftover tags then go to 2nd-5th choices at random (points do not count). Applicants who do not draw their first choice, or buy a Point Saver, gain one point for the series. White-tailed deer hunts are part of the 100 (buck) and 600 (antlerless) deer series and use the same deer points.",
+   "residentNote": "Same deer series rules as other controlled deer hunts.",
+   "nonresidentNote": "A maximum of 5% of tags in controlled deer, elk and bear hunts can go to nonresidents; nonresidents get no preference other than their points. Guides and Outfitters Program tags (equal to half the nonresident tags drawn the previous year) reduce nonresident tags available in the draw. Nonresidents may apply for Premium hunts with equal odds.",
+   "otcSummary": "No over-the-counter whitetail-specific tag. White-tailed deer are illegal to harvest in all Western Oregon units except Melrose Unit (23) controlled hunts that list white-tailed deer in the bag limit; Eastern Oregon whitetail hunts are controlled.",
+   "keyDates": [
+    {
+     "label": "Controlled hunt application deadline (11:59 p.m. PT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-how-apply",
+     "date": "2026-05-15",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Draw results available",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-06-12",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Online application changes allowed through",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-05-25",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Point Saver purchase period (after the draw)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "start": "2026-07-01",
+     "end": "2026-11-30",
+     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Leftover controlled tags on sale online (10 a.m. PT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-07-01",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    }
+   ],
+   "sourceIds": [
+    "d-or-regs-2026",
+    "d-or-how-apply",
+    "d-or-points",
+    "d-or-news-2027-regs-adopted"
+   ]
+  },
+  {
+   "species": "pronghorn",
+   "displayName": "Pronghorn antelope",
+   "drawSystem": "hybrid",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Preference-point draw: for each hunt, 75% of tags go to first-choice applicants with the most preference points; the other 25% are drawn at random among all remaining first-choice applicants. Leftover tags then go to 2nd-5th choices at random (points do not count). Applicants who do not draw their first choice, or buy a Point Saver, gain one point for the series. Controlled pronghorn is the 400 series; one controlled pronghorn tag per person per year through the draw.",
+   "residentNote": "Residents hold at least 97% of tags in each controlled pronghorn hunt.",
+   "nonresidentNote": "A maximum of 3% of pronghorn tags can go to nonresidents. Nonresidents may apply for Premium pronghorn (N series) with equal odds.",
+   "otcSummary": "None. All pronghorn hunting is by controlled hunt; Premium pronghorn (N series) is a separate random draw.",
+   "keyDates": [
+    {
+     "label": "Controlled hunt application deadline (11:59 p.m. PT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-how-apply",
+     "date": "2026-05-15",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Draw results available",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-06-12",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Online application changes allowed through",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-05-25",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Point Saver purchase period (after the draw)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "start": "2026-07-01",
+     "end": "2026-11-30",
+     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Leftover controlled tags on sale online (10 a.m. PT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-07-01",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    }
+   ],
+   "sourceIds": [
+    "d-or-regs-2026",
+    "d-or-how-apply",
+    "d-or-points",
+    "d-or-premium",
+    "d-or-news-2027-regs-adopted"
+   ]
+  },
+  {
+   "species": "bear",
+   "displayName": "Black bear",
+   "drawSystem": "hybrid",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Spring black bear (700 series) is a preference-point draw: 75% of tags to first-choice applicants with the most points, 25% at random among the rest of the first-choice applicants. Fall bear is a general season with over-the-counter tags.",
+   "residentNote": "A hunter may hold one Controlled Spring Bear tag, one General Season Fall tag and one Additional Fall tag per year.",
+   "nonresidentNote": "A maximum of 5% of controlled bear tags can go to nonresidents. Bear tags cost the same for nonresidents ($16.50).",
+   "otcSummary": "General Season Fall Black Bear tag and an Additional Fall tag are sold over the counter; statewide season Aug. 1 - Dec. 31, 2026 (tag sale deadline Oct. 2).",
+   "keyDates": [
+    {
+     "label": "Spring bear controlled hunt application deadline",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-02-10",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Spring bear draw results available",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-02-20",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Leftover spring bear tags on sale online (10 a.m. PT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-03-15",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Spring bear controlled tag sale deadline",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-03-31",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Point Saver purchase period (after the draw)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "start": "2026-07-01",
+     "end": "2026-11-30",
+     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "General season fall bear tag sale deadline",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-10-02"
+    }
+   ],
+   "sourceIds": [
+    "d-or-regs-2026",
+    "d-or-how-apply",
+    "d-or-points",
+    "d-or-how-read",
+    "d-or-news-2027-regs-adopted"
+   ]
+  },
+  {
+   "species": "sheep",
+   "displayName": "Bighorn sheep (California & Rocky Mountain)",
+   "drawSystem": "random",
+   "pointsMatter": false,
+   "drawSystemSummary": "500 series: random draw with no preference points. A person may draw only one controlled bighorn ram tag in a lifetime (ewe hunts excluded). No party applications.",
+   "residentNote": "Residents receive 90-95% of bighorn tags.",
+   "nonresidentNote": "No less than 5% and no more than 10% of all bighorn sheep tags go to nonresidents; most individual hunts have no nonresident tag (see each hunt's tag numbers).",
+   "otcSummary": "None. Auction and raffle tags are sold separately (not part of the draw).",
+   "keyDates": [
+    {
+     "label": "Controlled hunt application deadline (11:59 p.m. PT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-how-apply",
+     "date": "2026-05-15",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Draw results available",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-06-12",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Online application changes allowed through",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-05-25",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    }
+   ],
+   "sourceIds": [
+    "d-or-regs-2026",
+    "d-or-how-apply",
+    "d-or-news-2027-regs-adopted"
+   ]
+  },
+  {
+   "species": "goat",
+   "displayName": "Rocky Mountain goat",
+   "drawSystem": "random",
+   "pointsMatter": false,
+   "drawSystemSummary": "900 series: random draw with no preference points. Once-in-a-lifetime tag; online orientation required; no party applications.",
+   "residentNote": "Residents receive 90-95% of mountain goat tags.",
+   "nonresidentNote": "No less than 5% and no more than 10% of all Rocky Mountain goat tags go to nonresidents; most individual hunts have no nonresident tag.",
+   "otcSummary": "None. Auction and raffle tags are sold separately.",
+   "keyDates": [
+    {
+     "label": "Controlled hunt application deadline (11:59 p.m. PT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-how-apply",
+     "date": "2026-05-15",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Draw results available",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-06-12",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Online application changes allowed through",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-05-25",
+     "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    }
+   ],
+   "sourceIds": [
+    "d-or-regs-2026",
+    "d-or-how-apply",
+    "d-or-news-2027-regs-adopted"
+   ]
+  },
+  {
+   "species": "lion",
+   "displayName": "Cougar",
+   "drawSystem": "otc",
+   "pointsMatter": false,
+   "drawSystemSummary": "No draw. General Season Cougar tags (and one Additional tag) are sold over the counter; the statewide season runs all year and zones close if their mortality quota is reached.",
+   "residentNote": "Resident cougar tag $16.50.",
+   "nonresidentNote": "Nonresident cougar tag $16.50 (same price as residents).",
+   "otcSummary": "General season tag + Additional tag, statewide Jan. 1 - Dec. 31, 2026; general tag sale deadline Oct. 2. Using dogs is prohibited. 2026 zone quotas total 970 (A 180, B 200, C 80, D 100, E 270, F 140).",
+   "keyDates": [
+    {
+     "label": "General season cougar tag sale deadline",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-or-regs-2026",
+     "date": "2026-10-02"
+    }
+   ],
+   "sourceIds": [
+    "d-or-regs-2026"
+   ]
+  },
+  {
+   "species": "turkey",
+   "displayName": "Wild turkey",
+   "drawSystem": "otc",
+   "pointsMatter": false,
+   "drawSystemSummary": "No draw. Spring and fall turkey tags and beardless turkey permits are sold over the counter.",
+   "residentNote": "Resident turkey tag $26.50; youth turkey tag $10.50.",
+   "nonresidentNote": "Nonresident turkey tag $90.00.",
+   "otcSummary": "Spring 2027 season Apr. 15 - May 31 statewide (up to three spring tags, one bearded turkey each). Fall 2026-27 seasons in listed WMUs (up to two fall tags, only one usable in eastern Oregon units).",
+   "keyDates": [],
+   "sourceIds": [
+    "d-or-gamebird-2026"
+   ]
+  }
+ ],
+ "fees": [
+  {
+   "species": null,
+   "item": "Hunting license",
+   "residency": "resident",
+   "amountUsd": 39.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": null,
+   "item": "Hunting license",
+   "residency": "nonresident",
+   "amountUsd": 193.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": null,
+   "item": "Sports Pac (hunting/angling/shellfish licenses + deer, elk, cougar, bear and turkey tags)",
+   "residency": "resident",
+   "amountUsd": 253.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": null,
+   "item": "Controlled Hunt Application - Big Game (per series; also Premium hunts)",
+   "residency": "resident",
+   "amountUsd": 10.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": null,
+   "item": "Controlled Hunt Application - Big Game (per series; also Premium hunts)",
+   "residency": "nonresident",
+   "amountUsd": 10.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer tag",
+   "residency": "resident",
+   "amountUsd": 33.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer tag",
+   "residency": "nonresident",
+   "amountUsd": 500.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer tag",
+   "residency": "resident",
+   "amountUsd": 33.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer tag",
+   "residency": "nonresident",
+   "amountUsd": 500.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "elk",
+   "item": "Elk tag",
+   "residency": "resident",
+   "amountUsd": 56.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "elk",
+   "item": "Elk tag",
+   "residency": "nonresident",
+   "amountUsd": 660.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "pronghorn",
+   "item": "Pronghorn Antelope tag",
+   "residency": "resident",
+   "amountUsd": 58.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "pronghorn",
+   "item": "Pronghorn Antelope tag",
+   "residency": "nonresident",
+   "amountUsd": 443.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "sheep",
+   "item": "Bighorn Sheep tag",
+   "residency": "resident",
+   "amountUsd": 159.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "sheep",
+   "item": "Bighorn Sheep tag",
+   "residency": "nonresident",
+   "amountUsd": 1695.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "goat",
+   "item": "Rocky Mountain Goat tag",
+   "residency": "resident",
+   "amountUsd": 159.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "goat",
+   "item": "Rocky Mountain Goat tag",
+   "residency": "nonresident",
+   "amountUsd": 1695.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "bear",
+   "item": "Black Bear tag (also Additional Bear tag)",
+   "residency": "resident",
+   "amountUsd": 16.5,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "bear",
+   "item": "Black Bear tag (also Additional Bear tag)",
+   "residency": "nonresident",
+   "amountUsd": 16.5,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "lion",
+   "item": "Cougar tag (also Additional Cougar tag)",
+   "residency": "resident",
+   "amountUsd": 16.5,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "lion",
+   "item": "Cougar tag (also Additional Cougar tag)",
+   "residency": "nonresident",
+   "amountUsd": 16.5,
+   "licenseYear": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Matches the 'Effective 2026' column of ODFW's fee schedule (d-or-fees), whose next change is effective 2028."
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey tag (spring or fall)",
+   "residency": "resident",
+   "amountUsd": 26.5,
+   "licenseYear": 2026,
+   "sourceId": "d-or-gamebird-2026",
+   "note": "2026-27 game bird season."
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey tag (spring or fall)",
+   "residency": "nonresident",
+   "amountUsd": 90.0,
+   "licenseYear": 2026,
+   "sourceId": "d-or-gamebird-2026",
+   "note": "2026-27 game bird season."
+  }
+ ],
+ "seasons": [
+  {
+   "species": "elk",
+   "label": "General archery elk (Western & Eastern Oregon, listed units)",
+   "start": "2026-08-29",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026"
+  },
+  {
+   "species": "elk",
+   "label": "General West Cascade elk (any legal weapon, one bull)",
+   "start": "2026-11-07",
+   "end": "2026-11-13",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Units 16, 19, 21, 22, 29, 30."
+  },
+  {
+   "species": "elk",
+   "label": "General Western Oregon Coast elk 1st season",
+   "start": "2026-11-14",
+   "end": "2026-11-17",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "One bull; units 11, 12, 14, 15, 17, 18, 20, 23, 28."
+  },
+  {
+   "species": "elk",
+   "label": "General Western Oregon Coast elk 2nd season",
+   "start": "2026-11-21",
+   "end": "2026-11-27",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "One bull (spike only in units 12, 14, 20)."
+  },
+  {
+   "species": "elk",
+   "label": "General Eastern Oregon Rocky Mountain elk 2nd season (spike only)",
+   "start": "2026-11-07",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Listed units only (49, 50, 52, 53, 61-63 and parts of 48 and 51)."
+  },
+  {
+   "species": "elk",
+   "label": "Premium elk hunts (M series)",
+   "start": "2026-08-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Western Oregon general buck deer, any legal weapon",
+   "start": "2026-10-03",
+   "end": "2026-11-06",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Units 10-30 (black-tailed deer). Youth 12-17 extension Nov. 7-8."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Western Oregon general archery deer",
+   "start": "2026-08-29",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Some western units add a late archery period (Nov. 14 - Dec. 6 or Nov. 21 - Dec. 13). Eastern Oregon deer archery is controlled only."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Premium deer hunts (L series)",
+   "start": "2026-08-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Premium pronghorn hunts (N series)",
+   "start": "2026-08-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026"
+  },
+  {
+   "species": "bear",
+   "label": "Controlled spring black bear (700 series)",
+   "start": "2026-04-01",
+   "end": "2026-05-31",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026"
+  },
+  {
+   "species": "bear",
+   "label": "General fall black bear (statewide)",
+   "start": "2026-08-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026"
+  },
+  {
+   "species": "lion",
+   "label": "General cougar season (statewide)",
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Zones close when their mortality quota is reached."
+  },
+  {
+   "species": "turkey",
+   "label": "Fall wild turkey, WMUs 14-30",
+   "start": "2026-09-01",
+   "end": "2027-01-31",
+   "year": 2026,
+   "sourceId": "d-or-gamebird-2026",
+   "note": "Two turkeys of either sex."
+  },
+  {
+   "species": "turkey",
+   "label": "Spring wild turkey (statewide)",
+   "start": "2027-04-15",
+   "end": "2027-05-31",
+   "year": 2027,
+   "sourceId": "d-or-gamebird-2026",
+   "note": "Youth also Apr. 10-11, 2027."
+  }
+ ],
+ "coverage": [
+  {
+   "species": "elk",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "200 series controlled elk (Preference Point Draw Report, first choice, resident/nonresident, by point class) plus Premium elk M series (first-choice applicants only)."
+  },
+  {
+   "species": "mule-deer",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "100 series buck deer and 600 series antlerless deer hunts that are not white-tailed-deer-only (by hunt name or regulations bag limit), plus Premium deer L series (first-choice applicants only). Includes western Oregon black-tailed deer hunts. Buck hunt 158 (2022-2024): ODFW's point-class table double-counts applicants, so point rows are omitted."
+  },
+  {
+   "species": "whitetail",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "White-tailed-deer-only controlled hunts: hunts ODFW names 'Whitetail' plus hunts whose regulations bag limit is white-tailed deer only (e.g. 151M Baker Muzzleloader, 152M Grande Ronde Muzzleloader, 157A Lower Wallowa Valley, 649B, 657A Flora, 660A Upper Wallowa Valley; 10 hunts in 2022-2023, 11 in 2024-2025, 29 in 2026 after the switch to Eastern Oregon Deer Hunt Areas). 2025 hunts are classified from the 2024 regulations when the 2025 report lists the same code and name, because the 2025 booklet was not retrieved."
+  },
+  {
+   "species": "pronghorn",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "400 series controlled pronghorn plus Premium pronghorn N series (first-choice applicants only). 2026 hunt 470C prints 0 nonresident applicants with 1 nonresident drawn; that count is left blank."
+  },
+  {
+   "species": "bear",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "700 series controlled spring bear only (fall bear is general season)."
+  },
+  {
+   "species": "sheep",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "500 series. ODFW publishes only first-choice applicant totals (no drawn counts). Resident/nonresident tag numbers come from the 2022, 2023, 2024 and 2026 regulations; the 2025 booklet was not retrieved, so 2025 tag numbers are missing. Resident/nonresident first-choice applicants exist for 2023 and 2025 only (from the next year's booklet)."
+  },
+  {
+   "species": "goat",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "900 series; same limitations as sheep."
+  },
+  {
+   "species": "lion",
+   "years": [],
+   "notes": "No draw: cougar tags are over the counter."
+  },
+  {
+   "species": "turkey",
+   "years": [],
+   "notes": "No draw: turkey tags are over the counter."
+  }
+ ],
+ "sources": [
+  {
+   "id": "d-or-2026-buck-points",
+   "title": "2026 Buck Deer Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2026-07/2026%20Buck%20Deer%20Preference%20Point%20Draw%20Report.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2026-07/2026%20Buck%20Deer%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-2025-buck-points",
+   "title": "2025 Buck Deer Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-11/2025_buck_points.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-11/Preference-Point-Draw-Report-Buck-Deer2.pdf (2025 file names as posted: generic names under /2025-11/)"
+  },
+  {
+   "id": "d-or-2024-buck-points",
+   "title": "2024 Buck Deer Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2024%20Preference%20Point%20Draw%20Report%20Buck%20Deer.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2024%20Preference%20Point%20Draw%20Report%20Buck%20Deer.pdf"
+  },
+  {
+   "id": "d-or-2023-buck-points",
+   "title": "2023 Buck Deer Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2023%20Buck%20Deer%20Preference%20Point%20Draw%20Report.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2023%20Buck%20Deer%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-2022-buck-points",
+   "title": "2022 Buck Deer Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2022%20Buck%20Deer%20Preference%20Point%20Draw%20Report.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2023-05/2022%20Buck%20Deer%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-2026-elk-points",
+   "title": "2026 Elk Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2026-07/2026%20Elk%20Preference%20Point%20Draw%20Report.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2026-07/2026%20Elk%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-2025-elk-points",
+   "title": "2025 Elk Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-11/2025_elk_points.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-11/Preference-Point-Draw-Report-Elk.pdf (2025 file names as posted: generic names under /2025-11/)"
+  },
+  {
+   "id": "d-or-2024-elk-points",
+   "title": "2024 Elk Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2024%20Preference%20Point%20Draw%20Report%20Elk.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2024%20Preference%20Point%20Draw%20Report%20Elk.pdf"
+  },
+  {
+   "id": "d-or-2023-elk-points",
+   "title": "2023 Elk Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2023%20Elk%20Preference%20Point%20Draw%20Report.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2023%20Elk%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-2022-elk-points",
+   "title": "2022 Elk Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2022-12/2022%20Elk%20Preference%20Point%20Draw%20Report.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2023-05/2022%20Elk%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-2026-pronghorn-points",
+   "title": "2026 Pronghorn Antelope Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2026-07/2026%20Pronghorn%20Antelope%20Preference%20Point%20Draw%20Report.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2026-07/2026%20Pronghorn%20Antelope%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-2025-pronghorn-points",
+   "title": "2025 Pronghorn Antelope Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-11/2025_pronghorn_points.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-11/Preference-Point-Draw-Report-Pronghorn-Antelope.pdf (2025 file names as posted: generic names under /2025-11/)"
+  },
+  {
+   "id": "d-or-2024-pronghorn-points",
+   "title": "2024 Pronghorn Antelope Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2024%20Preference%20Point%20Draw%20Report%20Pronghorn.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2024%20Preference%20Point%20Draw%20Report%20Pronghorn.pdf"
+  },
+  {
+   "id": "d-or-2023-pronghorn-points",
+   "title": "2023 Pronghorn Antelope Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2023%20Pronghorn%20Antelope%20Preference%20Point%20Draw%20Report.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2023%20Pronghorn%20Antelope%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-2022-pronghorn-points",
+   "title": "2022 Pronghorn Antelope Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/media/5547/download",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2023-05/2022_Pronghorn_Antelope_Preference_Point_Draw_Report.pdf"
+  },
+  {
+   "id": "d-or-2026-antlerless-points",
+   "title": "2026 Antlerless Deer Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2026-08/2026%20Antlerless%20Deer%20Preference%20Point%20Draw%20Report_0.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2026-07/2026%20Antlerless%20Deer%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-2025-antlerless-points",
+   "title": "2025 Antlerless Deer Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-11/2025_anterless_points.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-11/Preference-Point-Draw-Report-Anterless-Deer.pdf (2025 file names as posted: generic names under /2025-11/)"
+  },
+  {
+   "id": "d-or-2024-antlerless-points",
+   "title": "2024 Antlerless Deer Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2024%20Preference%20Point%20Draw%20Report%20Antlerless%20Deer.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2024%20Preference%20Point%20Draw%20Report%20Antlerless%20Deer.pdf"
+  },
+  {
+   "id": "d-or-2023-antlerless-points",
+   "title": "2023 Antlerless Deer Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2023%20Antlerless%20Deer%20Preference%20Point%20Draw%20Report.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2023%20Antlerless%20Deer%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-2022-antlerless-points",
+   "title": "2022 Antlerless Deer Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/media/5142/download",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2023-05/2022_Antlerless_Deer_Preference_Point_Draw_Report.pdf"
+  },
+  {
+   "id": "d-or-2026-premium_buck-choice",
+   "title": "2026 Premium Buck Deer Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2026-07/2026%20Premium%20Buck%20Deer%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2026-07/2026%20Premium%20Buck%20Deer%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2026-premium_elk-choice",
+   "title": "2026 Premium Elk Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2026-07/2026%20Premium%20Elk%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2026-07/2026%20Premium%20Elk%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2026-premium_pronghorn-choice",
+   "title": "2026 Premium Pronghorn Antelope Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2026-07/2026%20Premium%20Pronghorn%20Antelope%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2026-07/2026%20Premium%20Pronghorn%20Antelope%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2025-premium_buck-choice",
+   "title": "2025 Premium Buck Deer Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-11/2025%20Premium%20Buck%20Deer%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-11/2025%20Premium%20Buck%20Deer%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2025-premium_elk-choice",
+   "title": "2025 Premium Elk Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-11/2025%20Premium%20Elk%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-11/2025%20Premium%20Elk%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2025-premium_pronghorn-choice",
+   "title": "2025 Premium Pronghorn Antelope Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-11/2025%20Premium%20Pronghorn%20Antelope%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-11/2025%20Premium%20Pronghorn%20Antelope%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2024-premium_buck-choice",
+   "title": "2024 Premium Buck Deer Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2024%20Applicants%20by%20Hunt%20Choice%20Premium%20Buck%20Deer.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2024%20Applicants%20by%20Hunt%20Choice%20Premium%20Buck%20Deer.pdf"
+  },
+  {
+   "id": "d-or-2024-premium_elk-choice",
+   "title": "2024 Premium Elk Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2024%20Applicants%20by%20Hunt%20Choice%20Premium%20Elk%20%281%29.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2024%20Applicants%20by%20Hunt%20Choice%20Premium%20Elk.pdf"
+  },
+  {
+   "id": "d-or-2024-premium_pronghorn-choice",
+   "title": "2024 Premium Pronghorn Antelope Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2024%20Applicants%20by%20Hunt%20Choice%20Premium%20Pronghorn.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2024%20Applicants%20by%20Hunt%20Choice%20Premium%20Pronghorn.pdf"
+  },
+  {
+   "id": "d-or-2023-premium_buck-choice",
+   "title": "2023 Premium Buck Deer Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2023%20Premium%20Buck%20Deer%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2023%20Premium%20Buck%20Deer%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2023-premium_elk-choice",
+   "title": "2023 Premium Elk Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2023%20Premium%20Elk%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2023%20Premium%20Elk%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2023-premium_pronghorn-choice",
+   "title": "2023 Premium Pronghorn Antelope Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-09/2023%20Premium%20Pronghorn%20Antelope%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-09/2023%20Premium%20Pronghorn%20Antelope%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2022-premium_buck-choice",
+   "title": "2022 Premium Buck Deer Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/media/5148/download",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2023-05/2022_Premium_Buck_Deer_Applicants_by_Hunt_Choice.pdf"
+  },
+  {
+   "id": "d-or-2022-premium_elk-choice",
+   "title": "2022 Premium Elk Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/media/5149/download",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2023-05/2022_Premium_Elk_Applicants_by_Hunt_Choice.pdf"
+  },
+  {
+   "id": "d-or-2022-premium_pronghorn-choice",
+   "title": "2022 Premium Pronghorn Antelope Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/media/5150/download",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2023-05/2022_Premium_Pronghorn_Applicants_by_Hunt_Choice.pdf"
+  },
+  {
+   "id": "d-or-2026-sheep-choice",
+   "title": "2026 Bighorn Sheep Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2026-07/2026%20Bighorn%20Sheep%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2026-07/2026%20Bighorn%20Sheep%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2025-sheep-choice",
+   "title": "2025 Bighorn Sheep Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-11/2025%20Bighorn%20Sheep%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-11/2025%20Bighorn%20Sheep%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2024-sheep-choice",
+   "title": "2024 Bighorn Sheep Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2024/2024%20Applicants%20by%20Hunt%20Choice%20Bighorn%20Sheep.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2024/2024%20Applicants%20by%20Hunt%20Choice%20Bighorn%20Sheep.pdf"
+  },
+  {
+   "id": "d-or-2023-sheep-choice",
+   "title": "2023 Bighorn Sheep Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2023/2023%20Bighorn%20Sheep%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2023/2023%20Bighorn%20Sheep%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2022-sheep-choice",
+   "title": "2022 Bighorn Sheep Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/media/5143/download",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2023-05/2022_Bighorn_Sheep_Applicants_by_Hunt_Choice.pdf"
+  },
+  {
+   "id": "d-or-2026-goat-choice",
+   "title": "2026 Rocky Mountain Goat Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2026-07/2026%20Rocky%20Mountain%20Goat%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2026-07/2026%20Rocky%20Mountain%20Goat%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2025-goat-choice",
+   "title": "2025 Rocky Mountain Goat Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-11/2025%20Rocky%20Mountain%20Goat%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-11/2025%20Rocky%20Mountain%20Goat%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2024-goat-choice",
+   "title": "2024 Rocky Mountain Goat Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2024/2024%20Applicants%20by%20Hunt%20Choice%20Rocky%20Mountain%20Goat.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2024/2024%20Applicants%20by%20Hunt%20Choice%20Rocky%20Mountain%20Goat.pdf"
+  },
+  {
+   "id": "d-or-2023-goat-choice",
+   "title": "2023 Rocky Mountain Goat Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2023/2023%20Rocky%20Mountain%20Goat%20Applicants%20by%20Hunt%20Choice.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2023/2023%20Rocky%20Mountain%20Goat%20Applicants%20by%20Hunt%20Choice.pdf"
+  },
+  {
+   "id": "d-or-2022-goat-choice",
+   "title": "2022 Rocky Mountain Goat Applicants by Hunt Choice",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/media/5153/download",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2023-05/2022_Rocky_Mt_Goat_Applicants_by_Hunt_Choice.pdf"
+  },
+  {
+   "id": "d-or-2026-springbear-points",
+   "title": "2026 Spring Bear Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2026-07/2026%20Spring%20Bear%20Preference%20Point%20Draw%20Report.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2026-07/2026%20Spring%20Bear%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-2025-springbear-points",
+   "title": "2025 Spring Bear Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-11/2025_springbear_points.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2025-11/Preference-Point-Draw-Report-Spring-Bear.pdf (2025 file names as posted: generic names under /2025-11/)"
+  },
+  {
+   "id": "d-or-2024-springbear-points",
+   "title": "2024 Spring Bear Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2024/2024%20Preference%20Point%20Draw%20Report%20Spring%20Bear.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2024/2024%20Preference%20Point%20Draw%20Report%20Spring%20Bear.pdf"
+  },
+  {
+   "id": "d-or-2023-springbear-points",
+   "title": "2023 Spring Bear Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2023/2023%20Spring%20Bear%20Preference%20Point%20Draw%20Report.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2023/2023%20Spring%20Bear%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-2022-springbear-points",
+   "title": "2022 Spring Bear Preference Point Draw Report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/reports/docs/2022/2022%20Spring%20Bear%20Preference%20Point%20Draw%20Report.xlsx",
+   "pageUrl": "https://myodfw.com/articles/point-summary-reports",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "XLSX parsed; PDF version https://myodfw.com/sites/default/files/2023-05/2022%20Spring%20Bear%20Preference%20Point%20Draw%20Report.pdf"
+  },
+  {
+   "id": "d-or-regs-2026",
+   "title": "2026 Oregon Big Game Hunting Regulations",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://www.eregulations.com/assets/docs/resources/OR/26ORHD_LR3.pdf",
+   "pageUrl": "https://myodfw.com/articles/oregon-fishing-hunting-regulations-and-updates",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Official booklet PDF hosted on eregulations.com, linked from ODFW's regulations page. Fees p.8-9, draw rules p.12-14, seasons and hunt tables p.30-69."
+  },
+  {
+   "id": "d-or-regs-2024",
+   "title": "2024 Oregon Big Game Hunting Regulations",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://www.eregulations.com/assets/docs/resources/OR/24ORHD_LR.pdf",
+   "pageUrl": "https://myodfw.com/articles/oregon-fishing-hunting-regulations-and-updates",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Archived booklet; used for 2024 hunt names, sheep/goat tag numbers, seasons and '2023 applications' columns."
+  },
+  {
+   "id": "d-or-regs-2023",
+   "title": "2023 Oregon Big Game Hunting Regulations",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://www.eregulations.com/assets/docs/resources/OR/23ORHD_LR4.pdf",
+   "pageUrl": "https://myodfw.com/articles/oregon-fishing-hunting-regulations-and-updates",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Archived booklet; used for 2023 hunt names, sheep/goat tag numbers and seasons."
+  },
+  {
+   "id": "d-or-regs-2022",
+   "title": "2022 Oregon Big Game Hunting Regulations",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://www.eregulations.com/assets/docs/resources/OR/22ORHD_LR6.pdf",
+   "pageUrl": "https://myodfw.com/articles/oregon-fishing-hunting-regulations-and-updates",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Archived booklet; used for 2022 hunt names, sheep/goat tag numbers and seasons."
+  },
+  {
+   "id": "d-or-gamebird-2026",
+   "title": "2026-27 Oregon Game Bird Hunting Regulations",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://www.eregulations.com/oregon/hunting/game-bird/pdf",
+   "pageUrl": "https://myodfw.com/articles/oregon-fishing-hunting-regulations-and-updates",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Turkey tags, fees and seasons (fall 2026-27, spring 2027)."
+  },
+  {
+   "id": "d-or-fees",
+   "title": "Oregon Department of Fish and Wildlife Recreational Fee Schedule",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/sites/default/files/2025-11/Rec_License_Fee_Schedule.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Columns: Current / Effective 2026 / Effective 2028 / Effective 2030; costs include agent fee."
+  },
+  {
+   "id": "d-or-how-apply",
+   "title": "How to apply for a controlled hunt",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/articles/how-apply-controlled-hunt",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-or-points",
+   "title": "How to check (and earn) preference points",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/articles/how-check-and-earn-preference-points",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-or-premium",
+   "title": "Premium big game hunts",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/articles/premium-big-game-hunts",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-or-point-summary",
+   "title": "Point summary reports",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/articles/point-summary-reports",
+   "retrieved": "2026-10-31",
+   "notes": "Index of all draw reports; states Point Savers are available until November 30, 2026."
+  },
+  {
+   "id": "d-or-how-read",
+   "title": "How to read a point summary report",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/articles/how-read-point-summary-reports",
+   "retrieved": "2026-10-31",
+   "notes": "Defines the report columns: Section A first-choice stats (75% point draw + 25% equal-chance draw); Section B point-class stats for the 75% phase."
+  },
+  {
+   "id": "d-or-news-2027-regs-adopted",
+   "title": "Commission adopts 2027 Big Game Regulations, approves cougar target area",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/news/commission-adopts-2027-big-game-regulations-approves-cougar-target-area",
+   "dataYear": 2027,
+   "retrieved": "2026-10-31",
+   "notes": "ODFW news release dated Sept. 18, 2026: 2027 Big Game Regulations adopted; printed regulations available in late November; 2027 western Oregon elk changes (any-legal-weapon coast elk spike-only bag limit moves from the second to the first period; antlerless elk removed from the General Archery Season Tag bag limit in the West Cascades hunt)."
+  },
+  {
+   "id": "d-or-draft-2026-goat",
+   "title": "Proposed 2026 900 Series Rocky Mountain Goat Controlled Tags (DRAFT)",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://dfw.state.or.us/news/docs/2025/2026%20Rocky%20Mtn%20Goat%20DRAFT.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Draft proposal; used only for the name of 2025 hunt 916A (Central Cascades)."
+  }
+ ]
+}

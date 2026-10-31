@@ -1,0 +1,741 @@
+{
+ "unitNames": {
+  "lion": {
+   "A": "Zone A (Units 13A/13B)",
+   "B": "Zone B (Units 12A/12B)",
+   "C": "Zone C (Units 15A/15B/15C/15D)",
+   "D": "Zone D (Units 7/9/10/11M)",
+   "E": "Zone E (Units 16A/16B/18A/18B)",
+   "F": "Zone F (Units 17A/17B/19B/20A/20B/20C)",
+   "G1": "Zone G1 (Units 4A/4B/5A/5B)",
+   "G2": "Zone G2 (Units 6A/6B/8/19A)",
+   "H": "Zone H (Units 2A/2B/2C/3A/3B/3C)",
+   "I": "Zone I (Units 42/44A)",
+   "J": "Zone J (Units 21/22/23/24A/24B/25M/26M)",
+   "K": "Zone K (Units 1/27)",
+   "L": "Zone L (Units 39/41/43A/43B/44B/45A/45B/45C)",
+   "M": "Zone M (28/31/32/33/37A/37B/38M)",
+   "N": "Zone N (Units 40A/40B/46A/46B)",
+   "P": "Zone P (Units 29/30A/30B/34A/34B/35A/35B/36A/36B/36C)"
+  }
+ },
+ "coverage": [
+  {
+   "species": "elk",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Draw hunts 2020-2025, one row per AZGFD hunt number (hunt) with the unit text AZGFD prints for that hunt (unit), which may list several units or a named hunt area; AZGFD's formatting of multi-unit labels changes between years (e.g. '1/2B/2C' in 2020-21, '1, 2B, and 2C' later). The 2025 report is marked PRELIMINARY. hunters, harvest (Total), successPct (% Success), daysHunted (Hunter Days) and licenses (Permits Issued) are as printed; these are AZGFD's questionnaire-based figures (the reports print questionnaire returns and 90% confidence intervals). harvestMale = Bull + Spike columns; harvestFemale = Cow column (calves are not in either); the 2024 report prints a single Antlerless column, so harvestFemale is null for 2024. Where AZGFD's printed % success differs from harvest / hunters, the row has a note and both values are kept as printed; one 2020 hunt printed 120% success and its successPct is null. method: AZGFD 'General' (any legal weapon) and CHAMP hunts are tagged rifle, HAM (handgun/archery/muzzleloader) hunts are other; methodLabel is the AZGFD section heading. 2023: AZGFD printed hunt 3005 twice (as Unit 5B and Unit 9, identical numbers); the 5B row is kept (the 2023 Pronghorn and Elk Hunt Draw Information lists 3005 as Unit 5B bull elk), so the report's grand total is 24 hunters / 16 elk higher than the sum of rows. AZGFD's multi-unit breakdown pages are not used (rows would double count). Rows omitted because AZGFD printed no hunters, harvest or % success for the hunt (permits issued, no returns): elk-2021: 7, elk-2022: 6, elk-2024: 7, elk-2025: 5."
+  },
+  {
+   "species": "mule-deer",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Draw deer hunts 2020-2025 (one row per hunt number) plus over-the-counter (OTC) archery deer by unit 2020-2025 and a Statewide OTC row per year. AZGFD's deer report gives one hunter count per hunt and splits harvest into mule deer and white-tailed deer. A draw hunt is in this file when mule deer were legal on it per the same season's Arizona Hunting Regulations (Legal Animal column; for every year, each hunt's permit count in the regulations matched the harvest report). harvest = Mule Deer Buck + Antlerless columns; harvestMale = Buck, harvestFemale = Antlerless. successPct is AZGFD's % success only on mule-deer-only hunts; on hunts where either species was legal, and on OTC rows, successPct is null because AZGFD does not publish a species-specific success rate (the row note gives AZGFD's combined-deer success) and hunters/days are all deer hunters on that hunt or unit. Hopi-land (18xx), Camp Navajo and Fort Huachuca (19xx) deer hunts have no legal animal in the regulations, so they appear in both deer files with null success. OTC archery: hunters who hunted more than one unit are counted in each unit (AZGFD footnote), so unit hunters do not add up to the statewide figure; for 2024-2025 AZGFD states harvest comes from mandatory harvest reporting while hunters and % success come from voluntary questionnaires. Statewide OTC row: hunters = AZGFD 'Actual Hunters' total, licenses = OTC archery deer tag sales. On some hunts AZGFD's Total Harvest column differs by a few animals from the sum of its species columns; those rows carry a note. Rows omitted because AZGFD printed no hunters, harvest or % success for the hunt (permits issued, no returns): deer-2025: 1."
+  },
+  {
+   "species": "whitetail",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "White-tailed deer here are Arizona's Coues white-tailed deer. Same structure as mule-deer: draw hunts 2020-2025 placed here when white-tailed deer were legal per the same season's Arizona Hunting Regulations (every hunt's permit count matched the harvest report), plus OTC archery by unit and a Statewide OTC row. harvest = White-tailed Buck + Antlerless columns; harvestMale = Buck, harvestFemale = Antlerless. successPct is AZGFD's % success only on whitetail-only hunts; null on either-species hunts and OTC rows (combined-deer success is in the row note; hunters are all deer hunters on the hunt/unit). Hopi-land, Camp Navajo and Fort Huachuca hunts appear in both deer files with null success. OTC unit hunters double count multi-unit hunters (AZGFD footnote); 2024-2025 OTC harvest is from mandatory reporting, hunters/success from voluntary questionnaires. On some hunts AZGFD's Total Harvest column differs by a few animals from the sum of its species columns; those rows carry a note. Rows omitted because AZGFD printed no hunters, harvest or % success for the hunt (permits issued, no returns): deer-2025: 1."
+  },
+  {
+   "species": "pronghorn",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Draw hunts 2020-2025, one row per hunt number with AZGFD's unit text; sections General (tagged rifle), Muzzleloader and Archery-only. hunters, harvest (Total Harvest), successPct, daysHunted and licenses (Permits Issued) as printed. Rows where AZGFD's % success differs from harvest / hunters carry a note. Multi-unit breakdown pages are not used. Rows omitted because AZGFD printed no hunters, harvest or % success for the hunt (permits issued, no returns): pronghorn-2020: 2, pronghorn-2021: 1, pronghorn-2022: 4, pronghorn-2023: 3, pronghorn-2024: 2."
+  },
+  {
+   "species": "bear",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Mandatory black bear check-in counts 2020-2025: 2020-2021 by unit, 2022-2025 by the hunt areas AZGFD prints (often several units together). harvest = hunter harvest only (AZGFD's 'Other' - roadkill, illegal take, nuisance - and depredation are excluded); harvestMale/harvestFemale = sex of hunter harvest. AZGFD does not publish hunters by area (bear tags are statewide), so hunters and successPct are null. One Statewide row per year is AZGFD's published total, with licenses = tag sales (2025: AZGFD says tag sales not yet available). In the 2024-2025 tables '-' means none and is carried as 0 (sums reconcile with the published totals). 2025: hunt-area rows sum to 422 hunter-harvested bears (210 male, 209 female) while AZGFD's printed total is 431 (214/214); rows and total are kept exactly as printed."
+  },
+  {
+   "species": "sheep",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Desert and Rocky Mountain bighorn draw hunts 2020-2025, one row per hunt number; the subspecies (and 2025 One-Horned hunts) is in the row note. hunters, harvest, successPct and daysHunted as printed; AZGFD prints Permits Authorized (not issued), so licenses is omitted. Where AZGFD printed '-' for harvest (no ram reported) harvest is carried as 0 and successPct is null; sums reconcile with AZGFD's totals. Auction and raffle special tags (statewide tags) are excluded; the 2021 published total includes one special-tag hunter/ram, which is why it is 1 higher than the sum of hunt rows. The successful-hunter lists in the reports are not used."
+  },
+  {
+   "species": "lion",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Mountain lion harvest 2020-2025: 2020-2021 reported by unit, 2022-2025 by mountain lion management zone (unit = zone letter; unitNames.lion lists each zone's units as printed in the 2025-26 Arizona Hunting Regulations; the zone-unit lists are identical in the 2022-23, 2023-24 and 2024-25 regulations). Each report covers the calendar year. harvest = hunter harvest only (Other and depredation excluded); harvestMale/harvestFemale = sex of hunter harvest. hunters and successPct are not published (tags are statewide) and are null. One Statewide row per year = AZGFD's published total, licenses = tag sales where printed (2025: not yet available; the 2022 and 2023 reports both print 10,054). In 2024-2025 tables '-' is carried as 0 (sums reconcile with totals)."
+  },
+  {
+   "species": "turkey",
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "notes": "Spring and fall permit-tag (draw) turkey hunts 2020-2025 in one file; methodLabel starts with 'Spring turkey' or 'Fall turkey' followed by AZGFD's section heading (Limited Weapon-Shotgun Shooting Shot = shotgun, Archery-Only = archery). The 2020-2021 spring and fall reports print no weapon sections, so method is null except for their Archery section. hunters, harvest, successPct, daysHunted and licenses (Permits Issued) as printed; AZGFD's printed % success sometimes differs from harvest / hunters (row note). 2025 spring: AZGFD printed hunts 4032 and 4033 twice (once as '20A (West)'/'20A (East)' and once as '20A' with 0 permits authorized, identical results); the East/West rows are kept, so the report's grand total is 13 hunters / 11 birds higher than the sum of rows. Over-the-counter (nonpermit) archery turkey and multi-unit breakdown pages are not included. Rows omitted because AZGFD printed no hunters, harvest or % success for the hunt (permits issued, no returns): turkey-fall-2025: 1, turkey-spring-2020: 3, turkey-spring-2021: 1, turkey-spring-2022: 2, turkey-spring-2023: 8, turkey-spring-2024: 1, turkey-spring-2025: 1."
+  },
+  {
+   "species": "moose",
+   "years": [],
+   "notes": "Arizona has no moose hunting season."
+  },
+  {
+   "species": "goat",
+   "years": [],
+   "notes": "Arizona has no mountain goat hunting season."
+  }
+ ],
+ "sources": [
+  {
+   "id": "h-elk-2020",
+   "title": "2020 Arizona Elk Harvest Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2020-AZ-Elk-Harvest-Summary_2.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2020 ARIZONA ELK HARVEST QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-elk-2021",
+   "title": "2021 Arizona Elk Harvest Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2021-AZ-Elk-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2021 ARIZONA ELK HARVEST QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-elk-2022",
+   "title": "2022 Arizona Elk Harvest Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/04/28090707/2022-AZ-Elk-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2022 ARIZONA ELK HARVEST QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-elk-2023",
+   "title": "2023 Arizona Elk Harvest Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/05/09100641/2023-AZ-Elk-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2023 ARIZONA ELK HARVEST QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-elk-2024",
+   "title": "2024 Arizona Elk Harvest Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/05/08163736/2024-AZ-Elk-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2024 ARIZONA ELK HARVEST QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-elk-2025",
+   "title": "2025 Arizona Elk Harvest Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/01/23102434/2025-AZ-Elk-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Preliminary — subject to revision. Document heading: \"PRELIMINARY RESULTS OF THE 2025 ARIZONA ELK HARVEST QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-pronghorn-2020",
+   "title": "2020 Arizona Pronghorn Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2020-AZ-Pronghorn-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2020 ARIZONA PRONGHORN QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-pronghorn-2021",
+   "title": "2021 Arizona Pronghorn Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2021-AZ-Pronghorn-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2021 ARIZONA PRONGHORN QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-pronghorn-2022",
+   "title": "2022 Arizona Pronghorn Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/04/28090721/2022-AZ-Pronghorn-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2022 ARIZONA PRONGHORN QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-pronghorn-2023",
+   "title": "2023 Arizona Pronghorn Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/04/24090926/2023-AZ-Pronghorn-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2023 ARIZONA PRONGHORN QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-pronghorn-2024",
+   "title": "2024 Arizona Pronghorn Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/07/03111807/2024-AZ-Pronghorn-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2024 ARIZONA PRONGHORN QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-pronghorn-2025",
+   "title": "2025 Arizona Pronghorn Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/01/23144004/2025-AZ-Pronghorn-Harvest-Summary-1.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2025 ARIZONA PRONGHORN QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-deer-2020",
+   "title": "2020 Arizona Deer Harvest Questionnaire (Draw Hunts Only) — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2020-AZ-Draw-Deer-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2020 ARIZONA DEER HARVEST QUESTIONNAIRE (DRAW HUNTS ONLY)\"."
+  },
+  {
+   "id": "h-deer-2021",
+   "title": "2021 Arizona Deer Harvest Questionnaire (Draw Hunts Only) — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2021-AZ-Deer-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2021 ARIZONA DEER HARVEST QUESTIONNAIRE (DRAW HUNTS ONLY)\"."
+  },
+  {
+   "id": "h-deer-2022",
+   "title": "2022 Arizona Deer Harvest Questionnaire (Draw Hunts Only) — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/09/22155134/2022-AZ-Deer-Harvest-Summary_092223.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2022 ARIZONA DEER HARVEST QUESTIONNAIRE (DRAW HUNTS ONLY)\"."
+  },
+  {
+   "id": "h-deer-2023",
+   "title": "2023 Arizona Deer Harvest Questionnaire (Draw Hunts Only) — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/05/09100638/2023-AZ-Deer-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2023 ARIZONA DEER HARVEST QUESTIONNAIRE (DRAW HUNTS ONLY)\"."
+  },
+  {
+   "id": "h-deer-2024",
+   "title": "2024 Arizona Deer Harvest Questionnaire (Draw Hunts Only) — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/04/10154252/2024-AZ-Deer-Harvest-Summary-1.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2024 ARIZONA DEER HARVEST QUESTIONNAIRE (DRAW HUNTS ONLY)\"."
+  },
+  {
+   "id": "h-deer-2025",
+   "title": "2025 Arizona Deer Harvest Questionnaire (Draw Hunts Only) — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/03/09102113/2025-AZ-Deer-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2025 ARIZONA DEER HARVEST QUESTIONNAIRE (DRAW HUNTS ONLY)\"."
+  },
+  {
+   "id": "h-otcdeer-2020",
+   "title": "2020 Arizona Over-the-Counter Archery Deer Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2020-AZ-OTC-Archery-Deer-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2020 ARIZONA ARCHERY DEER QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-otcdeer-2021",
+   "title": "2021 Arizona Over-the-Counter Archery Deer Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2021-AZ-OTC-Archery-Deer-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2021 ARIZONA ARCHERY DEER QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-otcdeer-2022",
+   "title": "2022 Arizona Over-the-Counter Archery Deer Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/04/28090717/2022-AZ-OTC-Archery-Deer-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2022 ARIZONA OVER-THE-COUNTER ARCHERY DEER QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-otcdeer-2023",
+   "title": "2023 Arizona Over-the-Counter Archery Deer Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/04/24093338/2023-AZ-OTC-Archery-Deer-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2023 ARIZONA OVER-THE-COUNTER ARCHERY DEER QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-otcdeer-2024",
+   "title": "2024 Arizona Over-the-Counter Archery Deer Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/04/21101505/2024-AZ-OTC-Archery-Deer-Harvest-Summary-2.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2024 ARIZONA OVER-THE-COUNTER ARCHERY DEER QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-otcdeer-2025",
+   "title": "2025 Arizona Over-the-Counter Archery Deer Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/05/07154756/2025-AZ-OTC-Archery-Deer-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2025 ARIZONA OVER-THE-COUNTER ARCHERY DEER QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-sheep-2020",
+   "title": "2020 Arizona Bighorn Sheep Hunt — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2020-AZ-Bighorn-Sheep-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2020 ARIZONA BIGHORN SHEEP HUNT\"."
+  },
+  {
+   "id": "h-sheep-2021",
+   "title": "2021 Arizona Bighorn Sheep Hunt — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2021-AZ-Bighorn-Sheep-Harvest-Summary_2.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2021 ARIZONA BIGHORN SHEEP HUNT\"."
+  },
+  {
+   "id": "h-sheep-2022",
+   "title": "2022 Arizona Bighorn Sheep Hunt — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/04/28090656/2022-AZ-Bighorn-Sheep-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2022 ARIZONA BIGHORN SHEEP HUNT\"."
+  },
+  {
+   "id": "h-sheep-2023",
+   "title": "2023 Arizona Bighorn Sheep Hunt — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/04/24090919/2023-AZ-Bighorn-Sheep-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2023 ARIZONA BIGHORN SHEEP HUNT\"."
+  },
+  {
+   "id": "h-sheep-2024",
+   "title": "2024 Arizona Bighorn Sheep Hunt — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/05/20105831/2024-AZ-Bighorn-Sheep-Harvest-Summary-2.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2024 ARIZONA BIGHORN SHEEP HUNT\"."
+  },
+  {
+   "id": "h-sheep-2025",
+   "title": "2025 Arizona Bighorn Sheep Hunt — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/01/21131544/2025-AZ-Bighorn-Sheep-Harvest-Summary-2.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2025 ARIZONA BIGHORN SHEEP HUNT\"."
+  },
+  {
+   "id": "h-bear-2020",
+   "title": "2020 Arizona Black Bear Harvest (Mandatory Check-In) Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2020-AZ-Black-Bear-Harvest-Summary-1.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"2020 ARIZONA BLACK BEAR HARVEST\"."
+  },
+  {
+   "id": "h-bear-2021",
+   "title": "2021 Arizona Black Bear Harvest (Mandatory Check-In) Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2022/08/17142419/2021-AZ-Bear-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"2021 ARIZONA BLACK BEAR HARVEST\"."
+  },
+  {
+   "id": "h-bear-2022",
+   "title": "2022 Arizona Black Bear Harvest (Mandatory Check-In) Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/07/14134603/2022-AZ-Black-Bear-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"2022 ARIZONA BLACK BEAR HARVEST\"."
+  },
+  {
+   "id": "h-bear-2023",
+   "title": "2023 Arizona Black Bear Harvest (Mandatory Check-In) Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/09/04134323/2023-AZ-Black-Bear-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"2023 ARIZONA BLACK BEAR HARVEST\"."
+  },
+  {
+   "id": "h-bear-2024",
+   "title": "2024 Arizona Black Bear Harvest (Mandatory Check-In) Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/05/16092732/bear-harvest-summary-2024-20250515225425.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"Final Results of the 2024 Mandatory Black Bear Check-In\"."
+  },
+  {
+   "id": "h-bear-2025",
+   "title": "2025 Arizona Black Bear Harvest (Mandatory Check-In) Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/02/20095944/2025-AZ-Black-Bear-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"Final Results of the 2025 Mandatory Black Bear Check-In\"."
+  },
+  {
+   "id": "h-lion-2020",
+   "title": "2020 Arizona Mountain Lion Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2020-AZ-Mountain-Lion-Harvest-Summary-1.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"2020 ARIZONA MOUNTAIN LION HARVEST\"."
+  },
+  {
+   "id": "h-lion-2021",
+   "title": "2021 Arizona Mountain Lion Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2022/08/17142416/2021-AZ-Mountain-Lion-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"2021 ARIZONA MOUNTAIN LION HARVEST\"."
+  },
+  {
+   "id": "h-lion-2022",
+   "title": "2022 Arizona Mountain Lion Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/07/14134559/2022-AZ-Mountain-Lion-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"2022 MOUNTAIN LION HARVEST\"."
+  },
+  {
+   "id": "h-lion-2023",
+   "title": "2023 Arizona Mountain Lion Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/09/04134326/2023-AZ-Mountain-Lion-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"2023 MOUNTAIN LION HARVEST\"."
+  },
+  {
+   "id": "h-lion-2024",
+   "title": "2024 Arizona Mountain Lion Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/06/10152202/2024-AZ-Mountain-Lion-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"2024 Mountain Lion Harvest Summary\"."
+  },
+  {
+   "id": "h-lion-2025",
+   "title": "2025 Arizona Mountain Lion Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/02/02142230/2025-AZ-Mountain-Lion-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"2025 Mountain Lion Harvest Summary\"."
+  },
+  {
+   "id": "h-turkey-spring-2020",
+   "title": "2020 Arizona Spring Turkey Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2020-AZ-Spring-Turkey-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2020 ARIZONA SPRING TURKEY QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-turkey-spring-2021",
+   "title": "2021 Arizona Spring Turkey Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2021-AZ-Spring-Turkey-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2021 ARIZONA SPRING TURKEY QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-turkey-spring-2022",
+   "title": "2022 Arizona Spring Turkey Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/04/28090728/2022-AZ-Spring-Turkey-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2022 ARIZONA SPRING TURKEY QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-turkey-spring-2023",
+   "title": "2023 Arizona Spring Turkey Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/10/05095348/2023-AZ-Spring-Turkey-Harvest-Summary_oct5.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2023 ARIZONA SPRING TURKEY QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-turkey-spring-2024",
+   "title": "2024 Arizona Spring Turkey Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/05/23150651/2024-AZ-Spring-Turkey-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2024 ARIZONA SPRING TURKEY QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-turkey-spring-2025",
+   "title": "2025 Arizona Spring Turkey Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/07/20090641/2025-AZ-Spring-Turkey-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2025 ARIZONA SPRING TURKEY QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-turkey-fall-2020",
+   "title": "2020 Arizona Fall Turkey Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2020-AZ-Fall-Turkey-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2020 ARIZONA FALL TURKEY QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-turkey-fall-2021",
+   "title": "2021 Arizona Fall Turkey Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2021-AZ-Fall-Turkey-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2021 ARIZONA FALL TURKEY QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-turkey-fall-2022",
+   "title": "2022 Arizona Fall Turkey Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/04/28090714/2022-AZ-Fall-Turkey-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2022 ARIZONA FALL TURKEY QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-turkey-fall-2023",
+   "title": "2023 Arizona Fall Turkey Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/04/24090515/2023-AZ-Fall-Turkey-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2023 ARIZONA FALL TURKEY QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-turkey-fall-2024",
+   "title": "2024 Arizona Fall Turkey Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/05/23150647/2024-AZ-Fall-Turkey-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2024 ARIZONA FALL TURKEY QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-turkey-fall-2025",
+   "title": "2025 Arizona Fall Turkey Questionnaire — Harvest Summary",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/04/07134547/2025-AZ-Fall-Turkey-Harvest-Summary.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Document heading: \"FINAL RESULTS OF THE 2025 ARIZONA FALL TURKEY QUESTIONNAIRE\"."
+  },
+  {
+   "id": "h-regs-2020",
+   "title": "2020-21 Arizona Hunting Regulations (amended 10/06/2020)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2020-21-Arizona-Hunting-Regulations_amended-201006.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/regulations/",
+   "dataYear": 2020,
+   "retrieved": "2026-10-31",
+   "notes": "Used only for the Legal Animal of each deer draw hunt (mule deer only / white-tailed only / either), to place deer hunt rows in the right species file."
+  },
+  {
+   "id": "h-regs-2021",
+   "title": "2021-22 Arizona Hunting Regulations (10/12/2021 revision)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2021-22-Arizona-Hunting-Regulations_211012.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/regulations/",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Used only for the Legal Animal of each deer draw hunt (mule deer only / white-tailed only / either), to place deer hunt rows in the right species file."
+  },
+  {
+   "id": "h-regs-2022",
+   "title": "2022-23 Arizona Hunting Regulations (02/06/2023 revision)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2022-Arizona-Hunting-Regulations_230206.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/regulations/",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Used only for the Legal Animal of each deer draw hunt (mule deer only / white-tailed only / either), to place deer hunt rows in the right species file."
+  },
+  {
+   "id": "h-regs-2023",
+   "title": "2023-24 Arizona Hunting Regulations (10/23/2023 revision)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://web.archive.org/web/20240104162335id_/https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/10/24104400/2023-24-Arizona-Hunting-Regulations_231023.pdf",
+   "pageUrl": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/10/24104400/2023-24-Arizona-Hunting-Regulations_231023.pdf",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Used only for the Legal Animal of each deer draw hunt (mule deer only / white-tailed only / either), to place deer hunt rows in the right species file. The booklet is no longer in AZGFD's document bucket; this is the Internet Archive capture (2024-01-04) of the AZGFD URL in pageUrl."
+  },
+  {
+   "id": "h-regs-2024",
+   "title": "2024-25 Arizona Hunting Regulations (12/09/2024 revision)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/12/09112338/2024-25-Arizona-Hunting-Regulations_241209.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/regulations/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Used only for the Legal Animal of each deer draw hunt (mule deer only / white-tailed only / either), to place deer hunt rows in the right species file."
+  },
+  {
+   "id": "h-regs-2025",
+   "title": "2025-26 Arizona Hunting Regulations (12/23/2025 revision)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/12/23103956/2025-26-Arizona-Hunting-Regulations_251223.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/regulations/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Used only for the Legal Animal of each deer draw hunt (mule deer only / white-tailed only / either), to place deer hunt rows in the right species file. Also the source of the mountain lion management zone unit lists in unitNames.lion."
+  },
+  {
+   "id": "h-elk-draw-2023",
+   "title": "2023 Pronghorn and Elk Hunt Draw Information",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2023-Pronghorn-and-Elk-Regulations_230120.pdf",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Used only to confirm that elk hunt 3005 (printed twice in the 2023 elk harvest summary, as Unit 5B and Unit 9) is the Unit 5B bull elk hunt."
+  }
+ ]
+}

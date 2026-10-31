@@ -140,12 +140,12 @@ function SuccessContent() {
   const onboarded = !!session?.user?.onboarded || !!session?.user?.isSuperAdmin;
 
   const INCLUDED_FEATURES = [
-    { icon: Crosshair, label: "Draw odds estimates by unit" },
-    { icon: TrendingUp, label: "Point creep analysis" },
-    { icon: BarChart3, label: "Harvest & success rates" },
-    { icon: Calendar, label: "Hunt planner & calendar" },
-    { icon: Feather, label: "Turkey subspecies data" },
-    { icon: Columns3, label: "Side-by-side unit comparison" },
+    { icon: Crosshair, label: "Agency draw results by hunt code" },
+    { icon: TrendingUp, label: "Minimum points drawn, year over year" },
+    { icon: BarChart3, label: "Harvest & success by unit" },
+    { icon: Calendar, label: "Agency dates calendar & hunt planner" },
+    { icon: Feather, label: "Turkey licensing, dates & harvest" },
+    { icon: Columns3, label: "Side-by-side hunt comparison" },
   ];
 
   return (
@@ -164,8 +164,8 @@ function SuccessContent() {
             {expiresAt
               ? ` through ${new Date(expiresAt).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}`
               : ""}
-            . You have full access to draw odds estimates, harvest data, point
-            analysis, and the hunt planner. It&apos;s a one-time payment, so
+            . You have full access to agency draw results, harvest data, and the
+            hunt planner. It&apos;s a one-time payment, so
             nothing renews automatically.
           </p>
         </div>
@@ -208,12 +208,12 @@ function SuccessContent() {
               <div>
                 <h3 className="font-semibold text-foreground mb-1 flex items-center gap-2">
                   <SlidersHorizontal className="w-4 h-4 text-gold" aria-hidden="true" />
-                  Dial In Your Draw Odds
+                  Check Results at Your Points
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Open one of your states and set the preference point filter to
-                  your point level to see units where you have a realistic chance
-                  of drawing.
+                  Open one of your states, pick a species, and enter your points to
+                  see how applicants at your level did in past draws, where the
+                  agency publishes results by point level.
                 </p>
               </div>
             </li>
@@ -228,8 +228,8 @@ function SuccessContent() {
                   Compare Your Short List
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Put your top units side by side to compare draw odds, harvest
-                  rates, and success data before you apply.
+                  Put your top hunts side by side to compare draw results,
+                  harvest, and success rates before you apply.
                 </p>
               </div>
             </li>

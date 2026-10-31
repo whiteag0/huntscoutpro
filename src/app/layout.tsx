@@ -17,10 +17,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_DESCRIPTION =
+  "Draw results and harvest by unit for western draw states, taken straight from state wildlife agency reports, with every number cited to its source.";
+
 export const metadata: Metadata = {
   title: "HuntScout Pro \u2014 Know Before You Draw",
-  description:
-    "Nationwide hunting intelligence: draw odds, harvest data, point analysis, and hunt planning for every unit across all 50 states. Make smarter applications, fill more tags.",
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    title: "HuntScout Pro \u2014 Know Before You Draw",
+    description: SITE_DESCRIPTION,
+    siteName: "HuntScout Pro",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "HuntScout Pro \u2014 Know Before You Draw",
+    description: SITE_DESCRIPTION,
+  },
 };
 
 export default function RootLayout({

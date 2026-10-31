@@ -1,0 +1,2113 @@
+{
+ "slug": "colorado",
+ "name": "Colorado",
+ "abbrev": "CO",
+ "agency": {
+  "name": "Colorado Parks and Wildlife",
+  "shortName": "CPW",
+  "url": "https://cpw.state.co.us"
+ },
+ "unitTerm": "GMU",
+ "lastReviewed": "2026-10-31",
+ "overview": "Colorado Parks and Wildlife issues most limited deer, elk, pronghorn, moose, bear, bighorn sheep, mountain goat and turkey licenses through a primary draw in which each applicant lists up to four hunt codes per species, and preference points count only for the first choice. Deer, elk, pronghorn, bear and turkey are drawn by preference points (with a random hybrid draw for up to 20% of licenses in select high-demand deer, elk, pronghorn and bear hunts), while moose, Rocky Mountain bighorn sheep and mountain goat switch to weighted-random preference once an applicant holds three points, and desert bighorn is a pure random draw. Applicants must first buy a qualifying license and Habitat Stamp; licenses left after the primary draw go to a secondary draw without points and then to over-the-counter leftover sales, and CPW has approved draw changes taking effect in 2028.",
+ "species": [
+  {
+   "species": "elk",
+   "displayName": "Elk",
+   "drawSystem": "preference",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Limited elk licenses are awarded in CPW's primary draw by preference points: applicants with the most points for their first-choice hunt code draw first. In hunt codes that need 10+ resident preference points to draw (three-year rolling average, one-year lag), up to 20% of licenses may be issued by a random 'hybrid' draw among first-choice applicants with at least 5 points (p.19).",
+   "residentNote": "Applicants must first buy a current qualifying license (e.g., annual small game: resident $38.49, nonresident $104.86) and, ages 18–64, a $12.76 Habitat Stamp; the application fee is $8.93 resident / $11.49 nonresident per species. Preference points are used only in the primary draw and only for first choices; an applicant who does not draw a first-choice license gains one point, and all points for the species reset to zero when a first-choice license is drawn (p.9).",
+   "nonresidentNote": "Nonresidents may receive up to 20% of the licenses in hunt codes that needed 6+ points for an adult resident to draw (marked '+' in the brochure) and up to 25% in others; the cap can rise if licenses remain after all resident first choices are drawn, and it does not apply to private-land-only or Ranching for Wildlife licenses (p.4). Nonresidents can no longer buy over-the-counter archery elk licenses west of I-25 or in GMU 140; limited nonresident archery hunt codes are offered in the draw instead (2026 brochure p.1).",
+   "otcSummary": "2026: unlimited OTC archery licenses for either-sex (E-E-000-U1-A) and antlerless (E-F-000-U1-A) elk are resident-only in the listed GMUs; nonresidents may hunt OTC archery only east of I-25 (E-E-087-U1-A, E-F-133-U1-A). Unlimited OTC bull licenses for the 2nd and 3rd rifle seasons (E-M-000-U2-R, E-M-000-U3-R) in listed GMUs, plus OTC plains either-sex rifle and GMU 128 bull rifle licenses. OTC sales opened Aug. 4, 2026. CPW's Commission approved draw-process changes that take effect in 2028 (cpw.state.co.us/2028-draw).",
+   "keyDates": [
+    {
+     "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Preference-point-only application (enter E-P-999-99-P as first choice in the primary draw)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Primary draw results posted to CPW accounts",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-05-26",
+     "end": "2026-05-29"
+    },
+    {
+     "label": "Primary draw surrender deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-01"
+    },
+    {
+     "label": "Primary draw license payment deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-12"
+    },
+    {
+     "label": "Secondary draw application period (no preference points)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-06-18",
+     "end": "2026-06-30"
+    },
+    {
+     "label": "Secondary draw results posted",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-07"
+    },
+    {
+     "label": "Leftover limited and over-the-counter licenses on sale (9 a.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-08-04"
+    }
+   ],
+   "sourceIds": [
+    "d-brochure-biggame-2026",
+    "d-recap-elk-2022",
+    "d-recap-elk-2023",
+    "d-recap-elk-2024",
+    "d-recap-elk-2025",
+    "d-recap-elk-2026"
+   ]
+  },
+  {
+   "species": "mule-deer",
+   "displayName": "Deer (all limited deer hunt codes except white-tailed-only)",
+   "drawSystem": "preference",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Most Colorado deer licenses are limited and issued through the primary draw by preference points (most points first, first choice only). In hunt codes that need 10+ resident preference points to draw (three-year rolling average, one-year lag), up to 20% of licenses may be issued by a random 'hybrid' draw among first-choice applicants with at least 5 points (p.19).",
+   "residentNote": "Applicants must first buy a current qualifying license (e.g., annual small game: resident $38.49, nonresident $104.86) and, ages 18–64, a $12.76 Habitat Stamp; the application fee is $8.93 resident / $11.49 nonresident per species. Preference points are used only in the primary draw and only for first choices; an applicant who does not draw a first-choice license gains one point, and all points for the species reset to zero when a first-choice license is drawn (p.9).",
+   "nonresidentNote": "Nonresidents may receive up to 20% of the licenses in hunt codes that needed 6+ points for an adult resident to draw (marked '+' in the brochure) and up to 25% in others; the cap can rise if licenses remain after all resident first choices are drawn, and it does not apply to private-land-only or Ranching for Wildlife licenses (p.4).",
+   "otcSummary": "No over-the-counter mule deer licenses; CPW states most deer licenses are limited and available only through the draw(s). Leftover limited licenses go on sale Aug. 4. CPW's Commission approved draw-process changes that take effect in 2028 (cpw.state.co.us/2028-draw).",
+   "keyDates": [
+    {
+     "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Preference-point-only application (enter D-P-999-99-P as first choice in the primary draw)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Primary draw results posted to CPW accounts",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-05-26",
+     "end": "2026-05-29"
+    },
+    {
+     "label": "Primary draw surrender deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-01"
+    },
+    {
+     "label": "Primary draw license payment deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-12"
+    },
+    {
+     "label": "Secondary draw application period (no preference points)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-06-18",
+     "end": "2026-06-30"
+    },
+    {
+     "label": "Secondary draw results posted",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-07"
+    },
+    {
+     "label": "Leftover limited and over-the-counter licenses on sale (9 a.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-08-04"
+    }
+   ],
+   "sourceIds": [
+    "d-brochure-biggame-2026",
+    "d-recap-deer-2022",
+    "d-recap-deer-2023",
+    "d-recap-deer-2024",
+    "d-recap-deer-2025",
+    "d-recap-deer-2026"
+   ]
+  },
+  {
+   "species": "whitetail",
+   "displayName": "White-tailed deer (white-tailed-only hunt codes)",
+   "drawSystem": "preference",
+   "pointsMatter": true,
+   "pointName": "preference point (shared deer point)",
+   "drawSystemSummary": "White-tailed-deer-only hunt codes are part of CPW's deer primary draw and use the same deer preference points (most points first, first choice only). This file holds the hunt codes CPW lists in each year's 'Limited Licenses — White-tailed (deer) only' table.",
+   "residentNote": "Applicants must first buy a current qualifying license (e.g., annual small game: resident $38.49, nonresident $104.86) and, ages 18–64, a $12.76 Habitat Stamp; the application fee is $8.93 resident / $11.49 nonresident per species. Preference points are used only in the primary draw and only for first choices; an applicant who does not draw a first-choice license gains one point, and all points for the species reset to zero when a first-choice license is drawn (p.9).",
+   "nonresidentNote": "Nonresidents may receive up to 20% of the licenses in hunt codes that needed 6+ points for an adult resident to draw (marked '+' in the brochure) and up to 25% in others; the cap can rise if licenses remain after all resident first choices are drawn, and it does not apply to private-land-only or Ranching for Wildlife licenses (p.4).",
+   "otcSummary": "CPW also sells over-the-counter white-tailed-deer-only late rifle licenses in certain units where mule deer are the main management species (2026 brochure p.33).",
+   "keyDates": [
+    {
+     "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Preference-point-only application (enter D-P-999-99-P as first choice in the primary draw)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Primary draw results posted to CPW accounts",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-05-26",
+     "end": "2026-05-29"
+    },
+    {
+     "label": "Primary draw surrender deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-01"
+    },
+    {
+     "label": "Primary draw license payment deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-12"
+    },
+    {
+     "label": "Secondary draw application period (no preference points)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-06-18",
+     "end": "2026-06-30"
+    },
+    {
+     "label": "Secondary draw results posted",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-07"
+    },
+    {
+     "label": "Leftover limited and over-the-counter licenses on sale (9 a.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-08-04"
+    }
+   ],
+   "sourceIds": [
+    "d-brochure-biggame-2026",
+    "d-brochure-biggame-2022",
+    "d-brochure-biggame-2023",
+    "d-brochure-biggame-2024",
+    "d-brochure-biggame-2025",
+    "d-recap-deer-2022",
+    "d-recap-deer-2023",
+    "d-recap-deer-2024",
+    "d-recap-deer-2025",
+    "d-recap-deer-2026"
+   ]
+  },
+  {
+   "species": "pronghorn",
+   "displayName": "Pronghorn",
+   "drawSystem": "preference",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Limited pronghorn licenses are issued in CPW's primary draw by preference points (most points first, first choice only). In hunt codes that need 10+ resident preference points to draw (three-year rolling average, one-year lag), up to 20% of licenses may be issued by a random 'hybrid' draw among first-choice applicants with at least 5 points (p.19).",
+   "residentNote": "Applicants must first buy a current qualifying license (e.g., annual small game: resident $38.49, nonresident $104.86) and, ages 18–64, a $12.76 Habitat Stamp; the application fee is $8.93 resident / $11.49 nonresident per species. Preference points are used only in the primary draw and only for first choices; an applicant who does not draw a first-choice license gains one point, and all points for the species reset to zero when a first-choice license is drawn (p.9).",
+   "nonresidentNote": "Nonresidents may receive up to 20% of the licenses in hunt codes that needed 6+ points for an adult resident to draw (marked '+' in the brochure) and up to 25% in others; the cap can rise if licenses remain after all resident first choices are drawn, and it does not apply to private-land-only or Ranching for Wildlife licenses (p.4).",
+   "otcSummary": "2026: unlimited OTC either-sex archery licenses (A-E-000-U1-A), Aug. 15–Sept. 20 (bucks only Aug. 15–31), valid in the GMUs listed in the brochure (p.54).",
+   "keyDates": [
+    {
+     "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Preference-point-only application (enter A-P-999-99-P as first choice in the primary draw)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Primary draw results posted to CPW accounts",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-05-26",
+     "end": "2026-05-29"
+    },
+    {
+     "label": "Primary draw surrender deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-01"
+    },
+    {
+     "label": "Primary draw license payment deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-12"
+    },
+    {
+     "label": "Secondary draw application period (no preference points)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-06-18",
+     "end": "2026-06-30"
+    },
+    {
+     "label": "Secondary draw results posted",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-07"
+    },
+    {
+     "label": "Leftover limited and over-the-counter licenses on sale (9 a.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-08-04"
+    }
+   ],
+   "sourceIds": [
+    "d-brochure-biggame-2026",
+    "d-recap-pronghorn-2022",
+    "d-recap-pronghorn-2023",
+    "d-recap-pronghorn-2024",
+    "d-recap-pronghorn-2025",
+    "d-recap-pronghorn-2026"
+   ]
+  },
+  {
+   "species": "moose",
+   "displayName": "Moose",
+   "drawSystem": "preference",
+   "pointsMatter": true,
+   "pointName": "preference point / weighted preference point",
+   "drawSystemSummary": "Moose licenses are draw-only. Applicants accumulate up to three preference points; once an applicant has three points and fails to draw a first choice, they gain weighted points, and the draw among 3-point applicants is weighted-random (application number divided by weighted points + 1), not strict preference (p.9).",
+   "residentNote": "Resident preference/weighted point fee $50 (age 18+), charged when applying for a point code or not drawing a first choice; fee can be opted out of (no point is then gained). Applicants must first buy a current qualifying license (e.g., annual small game: resident $38.49, nonresident $104.86) and, ages 18–64, a $12.76 Habitat Stamp; the application fee is $8.93 resident / $11.49 nonresident per species.",
+   "nonresidentNote": "Nonresident preference/weighted point fee $100 (age 18+). Hunt-level resident and nonresident quotas are published in the draw recap (quota fields).",
+   "otcSummary": "None; moose licenses are available only by draw (plus auction/raffle licenses). In 2026 some moose quota was reserved for 2025 license holders affected by the 2025 fires ('G' season hunt codes).",
+   "keyDates": [
+    {
+     "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Preference-point-only application (enter M-P-999-99-P as first choice in the primary draw)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Primary draw results posted to CPW accounts",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-05-26",
+     "end": "2026-05-29"
+    },
+    {
+     "label": "Primary draw surrender deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-01"
+    },
+    {
+     "label": "Primary draw license payment deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-12"
+    },
+    {
+     "label": "Leftover limited and over-the-counter licenses on sale (9 a.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-08-04"
+    }
+   ],
+   "sourceIds": [
+    "d-brochure-biggame-2026",
+    "d-recap-moose-2022",
+    "d-recap-moose-2023",
+    "d-recap-moose-2024",
+    "d-recap-moose-2025",
+    "d-recap-moose-2026"
+   ]
+  },
+  {
+   "species": "bear",
+   "displayName": "Black bear",
+   "drawSystem": "preference",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Limited bear licenses (e.g., September rifle) are issued in CPW's primary draw by preference points (most points first, first choice only). In hunt codes that need 10+ resident preference points to draw (three-year rolling average, one-year lag), up to 20% of licenses may be issued by a random 'hybrid' draw among first-choice applicants with at least 5 points (p.19).",
+   "residentNote": "Applicants must first buy a current qualifying license (e.g., annual small game: resident $38.49, nonresident $104.86) and, ages 18–64, a $12.76 Habitat Stamp; the application fee is $8.93 resident / $11.49 nonresident per species. Preference points are used only in the primary draw and only for first choices; an applicant who does not draw a first-choice license gains one point, and all points for the species reset to zero when a first-choice license is drawn (p.9).",
+   "nonresidentNote": "Nonresidents may receive up to 20% of the licenses in hunt codes that needed 6+ points for an adult resident to draw (marked '+' in the brochure) and up to 25% in others; the cap can rise if licenses remain after all resident first choices are drawn, and it does not apply to private-land-only or Ranching for Wildlife licenses (p.4).",
+   "otcSummary": "2026: OTC bear licenses include add-on archery and muzzleloader licenses for holders of a deer or elk license for the same method with an overlapping GMU, an add-on rifle license for E-E-061-E1-R holders, OTC September plains rifle (Sept. 2–Nov. 22) and private-land-only rifle hunts, and OTC rifle licenses during the regular rifle seasons in listed units (p.62–66).",
+   "keyDates": [
+    {
+     "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Preference-point-only application (enter B-P-999-99-P as first choice in the primary draw)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Primary draw results posted to CPW accounts",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-05-26",
+     "end": "2026-05-29"
+    },
+    {
+     "label": "Primary draw surrender deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-01"
+    },
+    {
+     "label": "Primary draw license payment deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-12"
+    },
+    {
+     "label": "Secondary draw application period (no preference points)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-06-18",
+     "end": "2026-06-30"
+    },
+    {
+     "label": "Secondary draw results posted",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-07"
+    },
+    {
+     "label": "Leftover limited and over-the-counter licenses on sale (9 a.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-08-04"
+    }
+   ],
+   "sourceIds": [
+    "d-brochure-biggame-2026",
+    "d-recap-bear-2022",
+    "d-recap-bear-2023",
+    "d-recap-bear-2024",
+    "d-recap-bear-2025",
+    "d-recap-bear-2026"
+   ]
+  },
+  {
+   "species": "sheep",
+   "displayName": "Bighorn sheep (Rocky Mountain & desert)",
+   "drawSystem": "preference",
+   "pointsMatter": true,
+   "pointName": "preference point / weighted preference point (Rocky Mountain bighorn)",
+   "drawSystemSummary": "Rocky Mountain bighorn sheep use the same three-point preference plus weighted-random system as moose and mountain goat. Desert bighorn sheep are drawn at random; CPW states preference points do not apply, and a desert bighorn harvest is once in a lifetime. You cannot apply for Rocky Mountain and desert bighorn in the same year.",
+   "residentNote": "Resident license $385.66 (Rocky Mountain or desert); preference/weighted point fee $50 (age 18+); application fee $8.93; qualifying license and Habitat Stamp required. After harvesting a Rocky Mountain bighorn ram you must wait five years before applying for another ram license.",
+   "nonresidentNote": "CPW allocates 10% of limited sheep and goat licenses to nonresidents. Nonresident license/fishing combo $2,823.53; point fee $100; application fee $11.49.",
+   "otcSummary": "None; draw only (plus auction/raffle licenses).",
+   "keyDates": [
+    {
+     "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Preference-point-only application (enter S-P-999-99-P as first choice)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Draw results posted to CPW accounts",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-04-23"
+    },
+    {
+     "label": "Surrender deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-04-27"
+    },
+    {
+     "label": "License / preference point payment deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-05-07"
+    }
+   ],
+   "sourceIds": [
+    "d-brochure-sheepgoat-2026",
+    "d-recap-rmsheep-2022",
+    "d-recap-rmsheep-2023",
+    "d-recap-rmsheep-2024",
+    "d-recap-rmsheep-2025",
+    "d-recap-rmsheep-2026",
+    "d-recap-dsheep-2022",
+    "d-recap-dsheep-2023",
+    "d-recap-dsheep-2024",
+    "d-recap-dsheep-2025",
+    "d-recap-dsheep-2026"
+   ]
+  },
+  {
+   "species": "goat",
+   "displayName": "Mountain goat",
+   "drawSystem": "preference",
+   "pointsMatter": true,
+   "pointName": "preference point / weighted preference point",
+   "drawSystemSummary": "Mountain goat licenses are draw-only and use CPW's three-point preference plus weighted-random system (as for moose and Rocky Mountain bighorn).",
+   "residentNote": "Resident license $385.66; preference/weighted point fee $50 (age 18+); application fee $8.93; qualifying license and Habitat Stamp required. After harvesting a mountain goat you must wait five years before applying again.",
+   "nonresidentNote": "CPW allocates 10% of limited sheep and goat licenses to nonresidents. Nonresident license/fishing combo $2,823.53; point fee $100; application fee $11.49.",
+   "otcSummary": "None; draw only (plus auction/raffle licenses).",
+   "keyDates": [
+    {
+     "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Preference-point-only application (enter G-P-999-99-P as first choice)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-03-01",
+     "end": "2026-04-07"
+    },
+    {
+     "label": "Draw results posted to CPW accounts",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-04-23"
+    },
+    {
+     "label": "Surrender deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-04-27"
+    },
+    {
+     "label": "License / preference point payment deadline (11:59 p.m. MT)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-05-07"
+    }
+   ],
+   "sourceIds": [
+    "d-brochure-sheepgoat-2026",
+    "d-recap-goat-2022",
+    "d-recap-goat-2023",
+    "d-recap-goat-2024",
+    "d-recap-goat-2025",
+    "d-recap-goat-2026"
+   ]
+  },
+  {
+   "species": "lion",
+   "displayName": "Mountain lion",
+   "drawSystem": "otc",
+   "pointsMatter": false,
+   "drawSystemSummary": "Mountain lion licenses are not drawn: annual licenses are sold over the counter and hunting is managed with harvest limits per group of GMUs; a group closes when its limit is reached, so hunters must check the Available Lion Harvest Limit Report.",
+   "residentNote": "Resident license $64.02; hunter education plus CPW's mountain lion education course and test are required.",
+   "nonresidentNote": "Nonresident license $845.16.",
+   "otcSummary": "Annual licenses went on sale March 25, 2026; season Nov. 23, 2026–March 31, 2027 (no April season in 2027); one lion per license year.",
+   "keyDates": [
+    {
+     "label": "Annual mountain lion licenses on sale",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-lion-2026",
+     "note": "2026–27 license year; the 2027–28 brochure was not yet published by Colorado Parks and Wildlife as of 2026-10-31.",
+     "date": "2026-03-25"
+    }
+   ],
+   "sourceIds": [
+    "d-brochure-lion-2026"
+   ]
+  },
+  {
+   "species": "turkey",
+   "displayName": "Wild turkey (spring & fall)",
+   "drawSystem": "preference",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "drawSystemSummary": "Limited spring and fall turkey licenses are drawn separately by preference points (most points first, first choice only; groups use the member with the fewest points). Up to two points can be gained per year by applying in both seasons; point-only codes are T-M-999-99-P (spring) and T-E-999-99-P (fall).",
+   "residentNote": "Resident spring license $38.49, fall $32.11, youth $20.62; application fee $8.93; Habitat Stamp required ages 18–64.",
+   "nonresidentNote": "Nonresident spring or fall license $194.21, youth $130.39; application fee $11.49.",
+   "otcSummary": "OTC spring licenses (on sale March 1, 2026; Apr. 11–May 31) and OTC fall/late licenses (on sale June 18, 2026; fall code T-E-000-U2-R) are sold for the units shown on CPW's maps.",
+   "keyDates": [
+    {
+     "label": "Spring limited draw application period (8 p.m. MT deadline)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-01-02",
+     "end": "2026-02-03"
+    },
+    {
+     "label": "Spring draw results posted (by)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-02-11"
+    },
+    {
+     "label": "Spring license payment deadline",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-02-25"
+    },
+    {
+     "label": "Fall limited draw application period (8 p.m. MT deadline)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-05-01",
+     "end": "2026-05-29"
+    },
+    {
+     "label": "Fall draw results posted (by)",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-04"
+    },
+    {
+     "label": "Fall license payment deadline",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-18"
+    }
+   ],
+   "sourceIds": [
+    "d-brochure-turkey-2026",
+    "d-recap-sturkey-2022",
+    "d-recap-sturkey-2023",
+    "d-recap-sturkey-2024",
+    "d-recap-sturkey-2025",
+    "d-recap-sturkey-2026",
+    "d-recap-fturkey-2022",
+    "d-recap-fturkey-2023",
+    "d-recap-fturkey-2024",
+    "d-recap-fturkey-2025",
+    "d-recap-fturkey-2026"
+   ]
+  }
+ ],
+ "fees": [
+  {
+   "species": null,
+   "item": "Application processing fee (per species, per draw, nonrefundable)",
+   "residency": "resident",
+   "amountUsd": 8.93,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": null,
+   "item": "Annual small game license (qualifying license for the big game draws)",
+   "residency": "resident",
+   "amountUsd": 38.49,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Resident youth $2.53; other qualifying licenses listed on p.5."
+  },
+  {
+   "species": null,
+   "item": "2026 Habitat Stamp (ages 18–64, required to apply or buy)",
+   "residency": "resident",
+   "amountUsd": 12.76,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": null,
+   "item": "Application processing fee (per species, per draw, nonrefundable)",
+   "residency": "nonresident",
+   "amountUsd": 11.49,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": null,
+   "item": "Annual small game license (qualifying license for the big game draws)",
+   "residency": "nonresident",
+   "amountUsd": 104.86,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Youth $2.53."
+  },
+  {
+   "species": null,
+   "item": "2026 Habitat Stamp (ages 18–64, required to apply or buy)",
+   "residency": "nonresident",
+   "amountUsd": 12.76,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer license — resident adult",
+   "residency": "resident",
+   "amountUsd": 51.25,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer license — resident youth",
+   "residency": "resident",
+   "amountUsd": 20.3,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer license — nonresident adult/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 506.92,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer license — nonresident youth/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 130.07,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer license — resident adult",
+   "residency": "resident",
+   "amountUsd": 51.25,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer license — resident youth",
+   "residency": "resident",
+   "amountUsd": 20.3,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer license — nonresident adult/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 506.92,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer license — nonresident youth/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 130.07,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "elk",
+   "item": "Elk license — resident adult",
+   "residency": "resident",
+   "amountUsd": 70.4,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "elk",
+   "item": "Elk license — resident youth",
+   "residency": "resident",
+   "amountUsd": 20.3,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "elk",
+   "item": "Elk license — nonresident bull/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 845.16,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "elk",
+   "item": "Elk license — nonresident either-sex/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 845.16,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "elk",
+   "item": "Elk license — nonresident cow/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 845.16,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "elk",
+   "item": "Elk license — nonresident youth/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 130.07,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Pronghorn license — resident adult",
+   "residency": "resident",
+   "amountUsd": 51.25,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Pronghorn license — resident youth",
+   "residency": "resident",
+   "amountUsd": 20.3,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Pronghorn license — nonresident adult/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 506.92,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Pronghorn license — nonresident youth/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 130.07,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "moose",
+   "item": "Moose license — resident",
+   "residency": "resident",
+   "amountUsd": 385.66,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "moose",
+   "item": "Moose license — nonresident/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 2823.53,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "moose",
+   "item": "Preference & weighted point fee (age 18+)",
+   "residency": "resident",
+   "amountUsd": 50,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "moose",
+   "item": "Preference & weighted point fee (age 18+)",
+   "residency": "nonresident",
+   "amountUsd": 100,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "bear",
+   "item": "Bear license — resident",
+   "residency": "resident",
+   "amountUsd": 64.01,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "bear",
+   "item": "Bear license — resident youth",
+   "residency": "resident",
+   "amountUsd": 19.93,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "bear",
+   "item": "Bear license — nonresident adult/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 302.56,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "bear",
+   "item": "Bear license — nonresident youth/fishing combo",
+   "residency": "nonresident",
+   "amountUsd": 64.1,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "sheep",
+   "item": "Rocky Mountain bighorn sheep license — resident",
+   "residency": "resident",
+   "amountUsd": 385.66,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-sheepgoat-2026"
+  },
+  {
+   "species": "sheep",
+   "item": "Desert bighorn sheep license — resident",
+   "residency": "resident",
+   "amountUsd": 385.66,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-sheepgoat-2026"
+  },
+  {
+   "species": "sheep",
+   "item": "Rocky Mountain bighorn sheep/fishing combo — nonresident",
+   "residency": "nonresident",
+   "amountUsd": 2823.53,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-sheepgoat-2026"
+  },
+  {
+   "species": "sheep",
+   "item": "Desert bighorn sheep/fishing combo — nonresident",
+   "residency": "nonresident",
+   "amountUsd": 2823.53,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-sheepgoat-2026"
+  },
+  {
+   "species": "sheep",
+   "item": "Preference & weighted point fee (age 18+, Rocky Mountain bighorn)",
+   "residency": "resident",
+   "amountUsd": 50,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-sheepgoat-2026"
+  },
+  {
+   "species": "sheep",
+   "item": "Preference & weighted point fee (age 18+, Rocky Mountain bighorn)",
+   "residency": "nonresident",
+   "amountUsd": 100,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-sheepgoat-2026"
+  },
+  {
+   "species": "goat",
+   "item": "Mountain goat license — resident",
+   "residency": "resident",
+   "amountUsd": 385.66,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-sheepgoat-2026"
+  },
+  {
+   "species": "goat",
+   "item": "Mountain goat/fishing combo — nonresident",
+   "residency": "nonresident",
+   "amountUsd": 2823.53,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-sheepgoat-2026"
+  },
+  {
+   "species": "goat",
+   "item": "Preference & weighted point fee (age 18+)",
+   "residency": "resident",
+   "amountUsd": 50,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-sheepgoat-2026"
+  },
+  {
+   "species": "goat",
+   "item": "Preference & weighted point fee (age 18+)",
+   "residency": "nonresident",
+   "amountUsd": 100,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-sheepgoat-2026"
+  },
+  {
+   "species": "turkey",
+   "item": "Spring turkey license — resident",
+   "residency": "resident",
+   "amountUsd": 38.49,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-turkey-2026"
+  },
+  {
+   "species": "turkey",
+   "item": "Fall turkey license — resident",
+   "residency": "resident",
+   "amountUsd": 32.11,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-turkey-2026"
+  },
+  {
+   "species": "turkey",
+   "item": "Youth spring or fall turkey license — resident",
+   "residency": "resident",
+   "amountUsd": 20.62,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-turkey-2026"
+  },
+  {
+   "species": "turkey",
+   "item": "Spring or fall turkey license — nonresident",
+   "residency": "nonresident",
+   "amountUsd": 194.21,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-turkey-2026"
+  },
+  {
+   "species": "turkey",
+   "item": "Youth spring or fall turkey license — nonresident",
+   "residency": "nonresident",
+   "amountUsd": 130.39,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-turkey-2026"
+  },
+  {
+   "species": "lion",
+   "item": "Mountain lion license — resident",
+   "residency": "resident",
+   "amountUsd": 64.02,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-lion-2026"
+  },
+  {
+   "species": "lion",
+   "item": "Mountain lion license — nonresident",
+   "residency": "nonresident",
+   "amountUsd": 845.16,
+   "licenseYear": 2026,
+   "sourceId": "d-brochure-lion-2026"
+  }
+ ],
+ "seasons": [
+  {
+   "species": "elk",
+   "label": "Archery",
+   "start": "2026-09-02",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "elk",
+   "label": "Muzzleloader",
+   "start": "2026-09-12",
+   "end": "2026-09-20",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Archery",
+   "start": "2026-09-02",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Muzzleloader",
+   "start": "2026-09-12",
+   "end": "2026-09-20",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "bear",
+   "label": "Archery",
+   "start": "2026-09-02",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "bear",
+   "label": "Muzzleloader",
+   "start": "2026-09-12",
+   "end": "2026-09-20",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "elk",
+   "label": "First rifle season",
+   "start": "2026-10-14",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Second rifle season",
+   "start": "2026-10-24",
+   "end": "2026-11-01",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Third rifle season",
+   "start": "2026-11-07",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Fourth rifle season",
+   "start": "2026-11-18",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "First rifle season",
+   "start": "2026-10-14",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Deer: in select GMUs (see rifle hunt code tables)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Second rifle season",
+   "start": "2026-10-24",
+   "end": "2026-11-01",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Third rifle season",
+   "start": "2026-11-07",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fourth rifle season",
+   "start": "2026-11-18",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "bear",
+   "label": "First rifle season",
+   "start": "2026-10-14",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "bear",
+   "label": "Second rifle season",
+   "start": "2026-10-24",
+   "end": "2026-11-01",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "bear",
+   "label": "Third rifle season",
+   "start": "2026-11-07",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "bear",
+   "label": "Fourth rifle season",
+   "start": "2026-11-18",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Plains rifle",
+   "start": "2026-10-24",
+   "end": "2026-11-03",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "bear",
+   "label": "September rifle (limited)",
+   "start": "2026-09-02",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "bear",
+   "label": "September plains rifle (over-the-counter)",
+   "start": "2026-09-02",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Archery",
+   "start": "2026-08-15",
+   "end": "2026-09-20",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Muzzleloader",
+   "start": "2026-09-21",
+   "end": "2026-09-29",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Rifle",
+   "start": "2026-10-03",
+   "end": "2026-10-11",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Unless otherwise noted in the hunt code tables. Some hunts have early or late rifle dates."
+  },
+  {
+   "species": "moose",
+   "label": "Archery",
+   "start": "2026-09-12",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "moose",
+   "label": "Muzzleloader",
+   "start": "2026-09-12",
+   "end": "2026-09-20",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "moose",
+   "label": "Rifle",
+   "start": "2026-10-01",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "turkey",
+   "label": "Spring season",
+   "start": "2026-04-11",
+   "end": "2026-05-31",
+   "year": 2026,
+   "sourceId": "d-brochure-turkey-2026",
+   "note": "Some limited hunt codes have shorter dates (see hunt code table)."
+  },
+  {
+   "species": "turkey",
+   "label": "Fall season",
+   "start": "2026-09-01",
+   "end": "2026-10-23",
+   "year": 2026,
+   "sourceId": "d-brochure-turkey-2026",
+   "note": "West of I-25 and GMU 140: Sept. 1–Oct. 4; east of I-25 except GMU 140: Sept. 1–Oct. 23."
+  },
+  {
+   "species": "turkey",
+   "label": "Late season",
+   "start": "2026-12-15",
+   "end": "2027-01-15",
+   "year": 2026,
+   "sourceId": "d-brochure-turkey-2026"
+  },
+  {
+   "species": "lion",
+   "label": "Mountain lion season (2026–27 license year)",
+   "start": "2026-11-23",
+   "end": "2027-03-31",
+   "year": 2026,
+   "sourceId": "d-brochure-lion-2026",
+   "note": "Units close when their harvest-limit group reaches its limit."
+  }
+ ],
+ "coverage": [
+  {
+   "species": "elk",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "4917 hunt-code rows (2022: 862, 2023: 1003, 2024: 990, 2025: 1023, 2026: 1039). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included."
+  },
+  {
+   "species": "mule-deer",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "4430 hunt-code rows (2022: 864, 2023: 876, 2024: 882, 2025: 901, 2026: 907). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included. Contains every limited deer hunt code except those listed in that year's 'White-tailed deer only' brochure table; CPW deer licenses are not species-specific unless so listed."
+  },
+  {
+   "species": "whitetail",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "419 hunt-code rows (2022: 83, 2023: 84, 2024: 84, 2025: 84, 2026: 84). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included. Hunt codes listed in each year's brochure 'Limited Licenses — White-tailed (deer) only' table (2022–2025 brochures read from Internet Archive captures of CPW's URL). Season-choice deer codes with a white-tailed-only December window stay in mule-deer."
+  },
+  {
+   "species": "pronghorn",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "1520 hunt-code rows (2022: 314, 2023: 316, 2024: 293, 2025: 295, 2026: 302). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included."
+  },
+  {
+   "species": "moose",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "446 hunt-code rows (2022: 75, 2023: 80, 2024: 86, 2025: 98, 2026: 107). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included. byPoints.points = preference points + weighted points as CPW lists them; above 3 points the draw is weighted-random. Many moose hunt codes are float groups (archery/muzzleloader/rifle codes sharing one quota). Hunt-level resident/nonresident quotas are CPW-published. A few hunts have point-level rows summing 1 below CPW's Total Choice 1 (noted per row)."
+  },
+  {
+   "species": "bear",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "644 hunt-code rows (2022: 129, 2023: 127, 2024: 129, 2025: 129, 2026: 130). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included."
+  },
+  {
+   "species": "sheep",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "642 hunt-code rows (2022: 127, 2023: 126, 2024: 133, 2025: 128, 2026: 128). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included. Rocky Mountain bighorn (S...) and desert bighorn (C...) in one file. RM: byPoints.points = preference + weighted points; desert: random draw, no byPoints/minPoints. Several RM hunts have point-level rows summing 1–2 below CPW's Total Choice 1 (noted per row)."
+  },
+  {
+   "species": "goat",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "239 hunt-code rows (2022: 47, 2023: 48, 2024: 48, 2025: 48, 2026: 48). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included. byPoints.points = preference + weighted points; above 3 points the draw is weighted-random. GEG08O1A 2025/2026 point rows sum 1 below CPW's total (noted)."
+  },
+  {
+   "species": "lion",
+   "years": [],
+   "notes": "No draw: mountain lion licenses are sold over the counter with harvest limits; no draw statistics exist."
+  },
+  {
+   "species": "turkey",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "332 hunt-code rows (2022: 68, 2023: 66, 2024: 66, 2025: 66, 2026: 66). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included. Spring (TM...) and fall (TE...) limited draws in one file; each year has both."
+  }
+ ],
+ "sources": [
+  {
+   "id": "d-brochure-biggame-2026",
+   "title": "2026 Colorado Big Game Hunting (brochure)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/5wvx7rggrd/colorado-big-game-hunting-brochure",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Online version with corrections (PDF created 2026-05-27). Fees p.5, dates p.2/4/8, preference & weighted points p.9, hunt codes p.10, hybrid draw p.19, season dates p.20/35/53/58/62, white-tailed-only table p.34."
+  },
+  {
+   "id": "d-brochure-sheepgoat-2026",
+   "title": "2026 Colorado Bighorn Sheep & Mountain Goat Hunting (brochure)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/n87kwmkzbt/colorado-sheep-and-goat-brochure",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Fees, application/draw/payment dates, weighted points; states desert bighorn draw is random."
+  },
+  {
+   "id": "d-brochure-turkey-2026",
+   "title": "2026 Colorado Turkey Hunting (brochure)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/dm7sggcmdk/colorado-turkey-hunting-brochure",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Fees p.1, preference points and deadlines p.8, important dates back cover."
+  },
+  {
+   "id": "d-brochure-lion-2026",
+   "title": "2026–2027 Colorado Mountain Lion Hunting (brochure)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/wdhnb9pcvs/colorado-mountain-lion-hunting-brochure",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-lion",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "License fees, season dates and harvest-limit groups for the April 2026–March 2027 license year."
+  },
+  {
+   "id": "d-brochure-biggame-2022",
+   "title": "2022 Colorado Big Game (brochure)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "http://web.archive.org/web/20220328164312/https://cpw.state.co.us/Documents/RulesRegs/Brochure/BigGame/biggame.pdf",
+   "pageUrl": "https://cpw.state.co.us/Documents/RulesRegs/Brochure/BigGame/biggame.pdf",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Internet Archive capture of CPW's 2022 brochure (CPW replaces the file at the same link every year). Used only for the 2022 'Limited Licenses — White-tailed (deer) only' hunt code table that sorts deer hunt codes into the whitetail file."
+  },
+  {
+   "id": "d-brochure-biggame-2023",
+   "title": "2023 Colorado Big Game (brochure)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "http://web.archive.org/web/20230329171230/https://cpw.state.co.us/Documents/RulesRegs/Brochure/BigGame/biggame.pdf",
+   "pageUrl": "https://cpw.state.co.us/Documents/RulesRegs/Brochure/BigGame/biggame.pdf",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Internet Archive capture of CPW's 2023 brochure (CPW replaces the file at the same link every year). Used only for the 2023 'Limited Licenses — White-tailed (deer) only' hunt code table that sorts deer hunt codes into the whitetail file."
+  },
+  {
+   "id": "d-brochure-biggame-2024",
+   "title": "2024 Colorado Big Game (brochure)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "http://web.archive.org/web/20240317142907/https://cpw.state.co.us/Documents/RulesRegs/Brochure/BigGame/biggame.pdf",
+   "pageUrl": "https://cpw.state.co.us/Documents/RulesRegs/Brochure/BigGame/biggame.pdf",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Internet Archive capture of CPW's 2024 brochure (CPW replaces the file at the same link every year). Used only for the 2024 'Limited Licenses — White-tailed (deer) only' hunt code table that sorts deer hunt codes into the whitetail file."
+  },
+  {
+   "id": "d-brochure-biggame-2025",
+   "title": "2025 Colorado Big Game (brochure)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "http://web.archive.org/web/20250214170715/https://cpw.widen.net/s/5wvx7rggrd/colorado-big-game-hunting-brochure",
+   "pageUrl": "https://cpw.widen.net/s/5wvx7rggrd/colorado-big-game-hunting-brochure",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Internet Archive capture of CPW's 2025 brochure (CPW replaces the file at the same link every year). Used only for the 2025 'Limited Licenses — White-tailed (deer) only' hunt code table that sorts deer hunt codes into the whitetail file."
+  },
+  {
+   "id": "d-recap-elk-2022",
+   "title": "2022 Primary Elk Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/pnpsrnqpvr/2022elkdrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-elk/elk-statistics",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "\"2022 Draw Recap Report\" link on the CPW statistics page; file 2022ElkDrawRecap.pdf, report run 5/23/2022 9:48:25 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-elk-2023",
+   "title": "2023 Primary Elk Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/slgqfqbwtl/2023elkdrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-elk/elk-statistics",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "\"2023 Draw Recap Report\" link on the CPW statistics page; file 2023ElkDrawRecap.pdf, report run 5/19/2023 11:37:30 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-elk-2024",
+   "title": "2024 Primary Elk Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/gvtppdkdcr/2024-primary-elk-post-draw-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-elk/elk-statistics",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "\"2024 Draw Recap Report\" link on the CPW statistics page; file 2024-Primary-ELK-Post-Draw-Report.pdf, report run 5/16/2024 2:22:53 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-elk-2025",
+   "title": "2025 Primary Elk Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/qh6nqttnnz/postdrawrecapreport_elk-25_05172025_0612",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-elk/elk-statistics",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "\"2025 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_ELK-25_05172025_0612.pdf, report run 5/17/2025 6:13:13 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-elk-2026",
+   "title": "2026 Primary Elk Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/jzvr7hzzl8/postdrawrecapreport_elk-26_05142026_1426",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-elk/elk-statistics",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "\"2026 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_ELK-26_05142026_1426.pdf, report run 5/14/2026 2:26:15 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-deer-2022",
+   "title": "2022 Primary Deer Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/srqhwvssqn/2022deerdrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-deer/deer-statistics",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "\"2022 Draw Recap Report\" link on the CPW statistics page; file 2022DeerDrawRecap.pdf, report run 5/18/2022 1:33:43 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-deer-2023",
+   "title": "2023 Primary Deer Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/7bcmqkddrn/2023deerdrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-deer/deer-statistics",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "\"2023 Draw Recap Report\" link on the CPW statistics page; file 2023DeerDrawRecap.pdf, report run 5/12/2023 7:43:15 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-deer-2024",
+   "title": "2024 Primary Deer Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/drbww92qtk/2024-primary-deer-post-draw-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-deer/deer-statistics",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "\"2024 Draw Recap Report\" link on the CPW statistics page; file 2024-Primary-DEER-Post-Draw-Report.pdf, report run 5/10/2024 10:42:10 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-deer-2025",
+   "title": "2025 Primary Deer Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/r9bjfnqlbc/postdrawrecapreport_deer-25_05102025_1540",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-deer/deer-statistics",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "\"2025 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_DEER-25_05102025_1540.pdf, report run 5/10/2025 3:40:43 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-deer-2026",
+   "title": "2026 Primary Deer Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/5j2x8x6fdd/postdrawrecapreport_deer-26_05112026_1505",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-deer/deer-statistics",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "\"2026 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_DEER-26_05112026_1505.pdf, report run 5/11/2026 3:05:35 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-pronghorn-2022",
+   "title": "2022 Primary Pronghorn Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/zbt6xfg6kt/2022pronghorndrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-pronghorn/pronghorn-statistics",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "\"2022 Draw Recap Report\" link on the CPW statistics page; file 2022PronghornDrawRecap.pdf, report run 5/25/2022 12:46:22 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-pronghorn-2023",
+   "title": "2023 Primary Pronghorn Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/fhjrczc2bk/2023pronghorndrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-pronghorn/pronghorn-statistics",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "\"2023 Draw Recap Report\" link on the CPW statistics page; file 2023PronghornDrawRecap.pdf, report run 5/24/2023 12:16:00 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-pronghorn-2024",
+   "title": "2024 Primary Pronghorn Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/vrpbwpdjb2/2024-primary-pronghorn-post-draw-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-pronghorn/pronghorn-statistics",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "\"2024 Draw Recap Report\" link on the CPW statistics page; file 2024-Primary-PRONGHORN-Post-Draw-Report.pdf, report run 5/23/2024 11:53:09 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-pronghorn-2025",
+   "title": "2025 Primary Pronghorn Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/t6tnqjg55q/postdrawrecapreport_prong-25_05222025_0816",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-pronghorn/pronghorn-statistics",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "\"2025 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_PRONG-25_05222025_0816.pdf, report run 5/22/2025 8:16:29 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-pronghorn-2026",
+   "title": "2026 Primary Pronghorn Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/vtght5qc8p/postdrawrecapreport_prong-26_05212026_1006",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-pronghorn/pronghorn-statistics",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "\"2026 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_PRONG-26_05212026_1006.pdf, report run 5/21/2026 10:06:34 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-moose-2022",
+   "title": "2022 Primary Moose Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/tnwsqssglk/2022moosedrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-moose/moose-statistics",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "\"2022 Draw Recap Report\" link on the CPW statistics page; file 2022MooseDrawRecap.pdf, report run 5/5/2022 11:10:58 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-moose-2023",
+   "title": "2023 Primary Moose Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/mhzqtxkszs/2023moosedrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-moose/moose-statistics",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "\"2023 Draw Recap Report\" link on the CPW statistics page; file 2023MooseDrawRecap.pdf, report run 5/4/2023 10:50:18 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-moose-2024",
+   "title": "2024 Primary Moose Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/lpffzbvzgc/2024-primary-moose-post-draw-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-moose/moose-statistics",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "\"2024 Draw Recap Report\" link on the CPW statistics page; file 2024-Primary-MOOSE-Post-Draw-Report.pdf, report run 5/2/2024 11:31:38 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-moose-2025",
+   "title": "2025 Primary Moose Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/7qvlbxgdl7/postdrawrecapreport_moose-25_05072025_1354",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-moose/moose-statistics",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "\"2025 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_MOOSE-25_05072025_1354.pdf, report run 5/7/2025 1:54:22 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-moose-2026",
+   "title": "2026 Primary Moose Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/dkxmt8qrsd/postdrawrecapreport_moose-26_05062026_1222",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-moose/moose-statistics",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "\"2026 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_MOOSE-26_05062026_1222.pdf, report run 5/6/2026 12:22:09 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-bear-2022",
+   "title": "2022 Primary Bear Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/m6vqw2jctl/2022beardrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bear/bear-statistics",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "\"2022 Draw Recap Report\" link on the CPW statistics page; file 2022BearDrawRecap.pdf, report run 05/05/2022 02:47:01 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-bear-2023",
+   "title": "2023 Primary Bear Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/dvwvpclrd5/2023beardrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bear/bear-statistics",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "\"2023 Draw Recap Report\" link on the CPW statistics page; file 2023BearDrawRecap.pdf, report run 5/4/2023 3:21:37 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-bear-2024",
+   "title": "2024 Primary Bear Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/zjbcxkchlh/2024-primary-bear-post-draw-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bear/bear-statistics",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "\"2024 Draw Recap Report\" link on the CPW statistics page; file 2024-Primary-BEAR-Post-Draw-Report.pdf, report run 5/2/2024 2:51:44 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-bear-2025",
+   "title": "2025 Primary Bear Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/szwnfghlfp/postdrawrecapreport_bear-25_05072025_1542",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bear/bear-statistics",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "\"2025 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_BEAR-25_05072025_1542.pdf, report run 5/7/2025 3:42:39 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-bear-2026",
+   "title": "2026 Primary Bear Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/txgf2r8x9r/postdrawrecapreport_bear-26_05062026_1346",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bear/bear-statistics",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "\"2026 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_BEAR-26_05062026_1346.pdf, report run 5/6/2026 1:46:37 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-rmsheep-2022",
+   "title": "2022 Primary Rocky Mountain Bighorn Sheep Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/79qgtllbf7/2022rmsheepdrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "\"2022 Draw Recap Report\" link on the CPW statistics page; file 2022RMSheepDrawRecap.pdf, report run 4/15/2022 10:10:59 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-rmsheep-2023",
+   "title": "2023 Primary Rocky Mountain Bighorn Sheep Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/s98zwwxqqr/2023rmsheepdrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "\"2023 Draw Recap Report\" link on the CPW statistics page; file 2023RMSheepDrawRecap.pdf, report run 4/14/2023 1:44:40 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-rmsheep-2024",
+   "title": "2024 Primary Rocky Mountain Bighorn Sheep Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/vxbkdwwgzj/2024-primary-rm-bighorn-sheep-post-draw-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "\"2024 Draw Recap Report\" link on the CPW statistics page; file 2024-Primary-RM-Bighorn-Sheep-Post-Draw-Report.pdf, report run 4/12/2024 8:46:01 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-rmsheep-2025",
+   "title": "2025 Primary Rocky Mountain Bighorn Sheep Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/v7c5wv87dp/postdrawrecapreport_sheep-25_04142025_1550",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "\"2025 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_SHEEP-25_04142025_1550.pdf, report run 4/14/2025 3:50:02 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-rmsheep-2026",
+   "title": "2026 Primary Rocky Mountain Bighorn Sheep Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/qwws66r5ps/postdrawrecapreport_sheep-26_04222026_1349_wcoversheet",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "\"2026 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_SHEEP-26_04222026_1349_wCoverSheet.pdf, report run 4/22/2026 1:49:39 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-dsheep-2022",
+   "title": "2022 Primary Desert Bighorn Sheep Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/ldmdfq2shp/2022-primary-desert-sheep-post-draw-recap-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "\"2022 Draw Recap Report\" link on the CPW statistics page; file 2022-Primary-Desert-Sheep-Post-Draw-Recap-Report.pdf, report run 4/15/2022 2:35:40 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-dsheep-2023",
+   "title": "2023 Primary Desert Bighorn Sheep Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/wsgxt2rvs8/2023-primary-desert-sheep-post-draw-recap-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "\"2023 Draw Recap Report\" link on the CPW statistics page; file 2023-Primary-Desert-Sheep-Post-Draw-Recap-Report.pdf, report run 4/14/2023 3:40:01 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-dsheep-2024",
+   "title": "2024 Primary Desert Bighorn Sheep Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/hclt8776gj/2024-primary-desert-sheep-post-draw-recap-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "\"2024 Draw Recap Report\" link on the CPW statistics page; file 2024-Primary-Desert-Sheep-Post-Draw-Recap-Report.pdf, report run 4/12/2024 12:08:17 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-dsheep-2025",
+   "title": "2025 Primary Desert Bighorn Sheep Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/zmdgsqxd5d/postdrawrecapreport_deser-25_04142025_1409",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "\"2025 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_DESER-25_04142025_1409.pdf, report run 4/14/2025 2:09:57 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-dsheep-2026",
+   "title": "2026 Primary Desert Bighorn Sheep Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/fm5vnxshp6/postdrawrecapreport_deser-26_04212026_1115",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "\"2026 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_DESER-26_04212026_1115.pdf, report run 4/21/2026 11:15:55 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-goat-2022",
+   "title": "2022 Primary Mountain Goat Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/pjsczqjclg/2022goatdrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-goat/mountain-goat-statistics",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "\"2022 Draw Recap Report\" link on the CPW statistics page; file 2022GoatDrawRecap.pdf, report run 4/15/2022 5:22:52 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-goat-2023",
+   "title": "2023 Primary Mountain Goat Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/8p9f9wpphz/2023goatdrawrecap",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-goat/mountain-goat-statistics",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "\"2023 Draw Recap Report\" link on the CPW statistics page; file 2023GoatDrawRecap.pdf, report run 4/14/2023 10:19:34 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-goat-2024",
+   "title": "2024 Primary Mountain Goat Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/bqwxb5qdnw/2024-primary-goat-post-draw-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-goat/mountain-goat-statistics",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "\"2024 Draw Recap Report\" link on the CPW statistics page; file 2024-Primary-GOAT-Post-Draw-Report.pdf, report run 4/12/2024 10:48:55 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-goat-2025",
+   "title": "2025 Primary Mountain Goat Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/hsljtqnxzv/postdrawrecapreport_goat-25_04142025_1712",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-goat/mountain-goat-statistics",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "\"2025 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_GOAT-25_04142025_1712.pdf, report run 4/14/2025 5:12:23 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-goat-2026",
+   "title": "2026 Primary Mountain Goat Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/wmsnf8w6tx/postdrawrecapreport_goat-26_04222026_1507",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-goat/mountain-goat-statistics",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "\"2026 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_GOAT-26_04222026_1507.pdf, report run 4/22/2026 3:07:38 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-sturkey-2022",
+   "title": "2022 Primary Spring Turkey Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/d9rnvcxzkp/2022-primary-spring-turkey-post-draw-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "\"2022 Draw Recap Report\" link on the CPW statistics page; file 2022-Primary-Spring-Turkey-Post-Draw-Report.pdf, report run 2/14/2022 12:11:50 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-sturkey-2023",
+   "title": "2023 Primary Spring Turkey Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/ghbf7vjcqf/2023-primary-spring-turkey-post-draw-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "\"2023 Draw Recap Report\" link on the CPW statistics page; file 2023-Primary-Spring-Turkey-Post-Draw-Report.pdf, report run 2/13/2023 11:12:48 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-sturkey-2024",
+   "title": "2024 Primary Spring Turkey Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/qf6ds5rvqg/2024-primary-spring-turkey-post-draw-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "\"2024 Draw Recap Report\" link on the CPW statistics page; file 2024-Primary-Spring-Turkey-Post-Draw-Report.pdf, report run 2/12/2024 9:55:21 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-sturkey-2025",
+   "title": "2025 Primary Spring Turkey Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/mpjzm2qjb9/postdrawrecapreport_sturk-25_02072025_0834",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "\"2025 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_STURK-25_02072025_0834.pdf, report run 2/7/2025 8:34:24 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-sturkey-2026",
+   "title": "2026 Primary Spring Turkey Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widencollective.com/assets/share/asset/gbejmpkp3f",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "\"2026 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_STURK-26_02092026_0855.pdf, report run 2/9/2026 8:55:33 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-fturkey-2022",
+   "title": "2022 Primary Fall Turkey Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/bcpwvzjtwg/2022-fall-turkey-hunting-post-draw-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "\"2022 Draw Recap Report\" link on the CPW statistics page; file 2022-Fall-Turkey-Hunting-Post-Draw-Report.pdf, report run 6/3/2022 9:10:20 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-fturkey-2023",
+   "title": "2023 Primary Fall Turkey Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/mfsvzsfnxw/2023-fall-turkey-hunting-post-draw-report",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "\"2023 Draw Recap Report\" link on the CPW statistics page; file 2023-Fall-Turkey-Hunting-Post-Draw-Report.pdf, report run 6/2/2023 1:23:54 PM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-fturkey-2024",
+   "title": "2024 Primary Fall Turkey Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/rj7ggxhjfm/postdrawrecapreport_fturk-24_06042024_1048",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "\"2024 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_FTURK-24_06042024_1048.pdf, report run 6/4/2024 10:48:27 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-fturkey-2025",
+   "title": "2025 Primary Fall Turkey Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/pkdt5qwn6d/postdrawrecapreport_fturk-25_06042025_0914",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "\"2025 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_FTURK-25_06042025_0914.pdf, report run 6/4/2025 9:14:02 AM. Primary draw; HuntScout uses first-choice figures."
+  },
+  {
+   "id": "d-recap-fturkey-2026",
+   "title": "2026 Primary Fall Turkey Post Draw Report (Draw Recap)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/lrqz7kqfxc/postdrawrecapreport_fturk-26_06032026_0929",
+   "pageUrl": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "\"2026 Draw Recap Report\" link on the CPW statistics page; file PostDrawRecapReport_FTURK-26_06032026_0929.pdf, report run 6/3/2026 9:29:04 AM. Primary draw; HuntScout uses first-choice figures."
+  }
+ ]
+}

@@ -1,0 +1,1534 @@
+{
+ "slug": "arizona",
+ "name": "Arizona",
+ "abbrev": "AZ",
+ "agency": {
+  "name": "Arizona Game and Fish Department",
+  "shortName": "AZGFD",
+  "url": "https://www.azgfd.com/"
+ },
+ "unitTerm": "Unit",
+ "lastReviewed": "2026-10-31",
+ "overview": "Arizona issues limited big-game permits through three computer draws a year: Pronghorn & Elk (applications due in February), Fall (deer, fall turkey, fall javelina, bighorn sheep, fall bison, sandhill crane; due in June) and Spring (spring turkey, javelina and bison; due in October for the next year's hunts). Applicants list up to five hunt choices per species; up to 20% of each hunt's permits go first to 1st/2nd-choice applicants with the most bonus points, and the rest are drawn at random with one extra random-number entry per bonus point. Nonresidents are limited to 10% of the permits in most hunts, and unissued permits are sold first-come after the draw.",
+ "species": [
+  {
+   "species": "elk",
+   "displayName": "Elk",
+   "drawSystem": "bonus",
+   "pointsMatter": true,
+   "pointName": "bonus point",
+   "drawSystemSummary": "Elk permits are drawn in the Pronghorn & Elk (Midwinter) draw. Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points).",
+   "residentNote": "A bonus point is earned for an unsuccessful application or by applying with the elk bonus-point-only hunt number (3000); accumulated points are expended when an elk permit-tag is issued in a computer draw.",
+   "nonresidentNote": "Under R12-4-114(E)(2) as printed in the 2026-27 Arizona Hunting Regulations, nonresidents may receive no more than 10% (rounded down) of the permits in any hunt number for antlerless deer, antlerless elk, antlered deer, any deer, any elk, bull elk, javelina, pronghorn, Sandhill crane or turkey. For antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts with 10 or fewer permits, at most one permit is available to nonresidents, and a one-permit hunt is resident-only. No more than half of the nonresident allotment may be issued in the bonus pass (R12-4-114(G)). The 2025-26 regulations printed the earlier rule, whose 10% cap listed only antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts.",
+   "otcSummary": "Elk nonpermit-tags (resident $135, nonresident $650) are sold over the counter only for the General or Archery-Only Nonpermit-Tag seasons listed in the elk Commission Order; all other elk hunts require a draw permit.",
+   "keyDates": [
+    {
+     "label": "Pronghorn & elk draw application deadline (11:59 p.m. Arizona time)",
+     "date": "2026-02-03",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-pe2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31; applications are accepted from early to mid-January."
+    },
+    {
+     "label": "Pronghorn & elk hunt permit-tags mailed out by",
+     "date": "2026-04-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-pe2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover (first-come) pronghorn & elk applications accepted by mail",
+     "date": "2026-03-16",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-pe2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover (first-come) pronghorn & elk permits at Department offices",
+     "date": "2026-03-23",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-pe2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    }
+   ],
+   "sourceIds": [
+    "d-az-regs-pe2026",
+    "d-az-regs-hunt2026",
+    "d-az-regs-hunt2025",
+    "d-az-bonus-point-page"
+   ]
+  },
+  {
+   "species": "pronghorn",
+   "displayName": "Pronghorn",
+   "drawSystem": "bonus",
+   "pointsMatter": true,
+   "pointName": "bonus point",
+   "drawSystemSummary": "Pronghorn permits are drawn in the Pronghorn & Elk (Midwinter) draw. Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points).",
+   "residentNote": "Bonus-point-only hunt number for pronghorn is 2000; accumulated points are expended when a pronghorn permit-tag is issued in a computer draw.",
+   "nonresidentNote": "Under R12-4-114(E)(2) as printed in the 2026-27 Arizona Hunting Regulations, nonresidents may receive no more than 10% (rounded down) of the permits in any hunt number for antlerless deer, antlerless elk, antlered deer, any deer, any elk, bull elk, javelina, pronghorn, Sandhill crane or turkey. For antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts with 10 or fewer permits, at most one permit is available to nonresidents, and a one-permit hunt is resident-only. No more than half of the nonresident allotment may be issued in the bonus pass (R12-4-114(G)). The 2025-26 regulations printed the earlier rule, whose 10% cap listed only antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts.",
+   "otcSummary": "None: every pronghorn season requires a draw hunt permit-tag.",
+   "keyDates": [
+    {
+     "label": "Pronghorn & elk draw application deadline (11:59 p.m. Arizona time)",
+     "date": "2026-02-03",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-pe2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31; applications are accepted from early to mid-January."
+    },
+    {
+     "label": "Pronghorn & elk hunt permit-tags mailed out by",
+     "date": "2026-04-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-pe2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover (first-come) pronghorn & elk applications accepted by mail",
+     "date": "2026-03-16",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-pe2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover (first-come) pronghorn & elk permits at Department offices",
+     "date": "2026-03-23",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-pe2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    }
+   ],
+   "sourceIds": [
+    "d-az-regs-pe2026",
+    "d-az-regs-hunt2026",
+    "d-az-regs-hunt2025",
+    "d-az-bonus-point-page"
+   ]
+  },
+  {
+   "species": "mule-deer",
+   "displayName": "Mule deer",
+   "drawSystem": "bonus",
+   "pointsMatter": true,
+   "pointName": "bonus point",
+   "drawSystemSummary": "Deer permits are drawn in the Fall draw (one deer genus for mule deer and white-tailed deer). Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points).",
+   "residentNote": "Many Arizona deer hunts are 'Any antlered deer' (either species); this file holds those plus mule-deer-only hunts. Bonus-point-only hunt number for deer is 1000.",
+   "nonresidentNote": "Under R12-4-114(E)(2) as printed in the 2026-27 Arizona Hunting Regulations, nonresidents may receive no more than 10% (rounded down) of the permits in any hunt number for antlerless deer, antlerless elk, antlered deer, any deer, any elk, bull elk, javelina, pronghorn, Sandhill crane or turkey. For antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts with 10 or fewer permits, at most one permit is available to nonresidents, and a one-permit hunt is resident-only. No more than half of the nonresident allotment may be issued in the bonus pass (R12-4-114(G)). The 2025-26 regulations printed the earlier rule, whose 10% cap listed only antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts.",
+   "otcSummary": "Archery-only deer nonpermit-tags (resident $45, nonresident $300) are sold over the counter for unit-specific archery seasons with harvest limits; nonresident tags are capped and sold online only.",
+   "keyDates": [
+    {
+     "label": "Fall draw application deadline (deer, fall turkey, fall javelina, bighorn sheep, fall bison, sandhill crane; 11:59 p.m. Arizona time)",
+     "date": "2026-06-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31; applications are accepted from early to mid-May."
+    },
+    {
+     "label": "Fall draw hunt permit-tags mailed out by",
+     "date": "2026-07-24",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover (first-come) fall applications accepted by mail",
+     "date": "2026-07-06",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover (first-come) fall permits at Department offices",
+     "date": "2026-07-13",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Archery-only deer nonpermit-tags on sale (nonresidents online only at otcarchery.azgfd.com, 8:00 a.m. Arizona time)",
+     "date": "2026-11-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "Resident tags at AZGFD offices from this date and at license dealers from 2026-11-23."
+    }
+   ],
+   "sourceIds": [
+    "d-az-regs-hunt2026",
+    "d-az-regs-hunt2025",
+    "d-az-bonus-point-page"
+   ]
+  },
+  {
+   "species": "whitetail",
+   "displayName": "White-tailed deer (Coues)",
+   "drawSystem": "bonus",
+   "pointsMatter": true,
+   "pointName": "bonus point",
+   "drawSystemSummary": "White-tailed deer permits are drawn in the Fall draw under the same deer genus as mule deer. Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points).",
+   "residentNote": "This file holds hunts whose legal wildlife is white-tailed deer only; 'Any antlered deer' hunts (either species) are filed under mule deer.",
+   "nonresidentNote": "Under R12-4-114(E)(2) as printed in the 2026-27 Arizona Hunting Regulations, nonresidents may receive no more than 10% (rounded down) of the permits in any hunt number for antlerless deer, antlerless elk, antlered deer, any deer, any elk, bull elk, javelina, pronghorn, Sandhill crane or turkey. For antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts with 10 or fewer permits, at most one permit is available to nonresidents, and a one-permit hunt is resident-only. No more than half of the nonresident allotment may be issued in the bonus pass (R12-4-114(G)). The 2025-26 regulations printed the earlier rule, whose 10% cap listed only antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts.",
+   "otcSummary": "Archery-only deer nonpermit-tags (resident $45, nonresident $300) are sold over the counter for unit-specific archery seasons with harvest limits.",
+   "keyDates": [
+    {
+     "label": "Fall draw application deadline (deer, fall turkey, fall javelina, bighorn sheep, fall bison, sandhill crane; 11:59 p.m. Arizona time)",
+     "date": "2026-06-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31; applications are accepted from early to mid-May."
+    },
+    {
+     "label": "Fall draw hunt permit-tags mailed out by",
+     "date": "2026-07-24",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover (first-come) fall applications accepted by mail",
+     "date": "2026-07-06",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover (first-come) fall permits at Department offices",
+     "date": "2026-07-13",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    }
+   ],
+   "sourceIds": [
+    "d-az-regs-hunt2026",
+    "d-az-regs-hunt2025",
+    "d-az-bonus-point-page"
+   ]
+  },
+  {
+   "species": "sheep",
+   "displayName": "Bighorn sheep (desert & Rocky Mountain)",
+   "drawSystem": "bonus",
+   "pointsMatter": true,
+   "pointName": "bonus point",
+   "drawSystemSummary": "Bighorn sheep permits are drawn in the Fall draw. Up to 20% of all bighorn permits statewide (not per hunt) go to applicants with the most bonus points; the rest are drawn at random with one extra entry per bonus point. Bag limit is one desert and one Rocky Mountain bighorn in a lifetime.",
+   "residentNote": "Applicants who have taken their lifetime bighorn of a subspecies may not apply for that subspecies.",
+   "nonresidentNote": "Nonresidents may receive no more than one permit or 10% of all bighorn permits in the draw, whichever is greater, and no more than 50% or more than two of the permits in any hunt number (R12-4-114).",
+   "otcSummary": "None: bighorn sheep require a draw hunt permit-tag.",
+   "keyDates": [
+    {
+     "label": "Fall draw application deadline (deer, fall turkey, fall javelina, bighorn sheep, fall bison, sandhill crane; 11:59 p.m. Arizona time)",
+     "date": "2026-06-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31; applications are accepted from early to mid-May."
+    },
+    {
+     "label": "Fall draw hunt permit-tags mailed out by",
+     "date": "2026-07-24",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover (first-come) fall applications accepted by mail",
+     "date": "2026-07-06",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover (first-come) fall permits at Department offices",
+     "date": "2026-07-13",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    }
+   ],
+   "sourceIds": [
+    "d-az-regs-hunt2026",
+    "d-az-bonus-point-page"
+   ]
+  },
+  {
+   "species": "turkey",
+   "displayName": "Wild turkey (Merriam's & Gould's)",
+   "drawSystem": "bonus",
+   "pointsMatter": true,
+   "pointName": "bonus point",
+   "drawSystemSummary": "Spring turkey permits are drawn in the Spring draw (applications in October of the prior year) and fall turkey permits in the Fall draw. Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points).",
+   "residentNote": "Bag limit is one turkey per calendar year.",
+   "nonresidentNote": "Under R12-4-114(E)(2) as printed in the 2026-27 Arizona Hunting Regulations, nonresidents may receive no more than 10% (rounded down) of the permits in any hunt number for antlerless deer, antlerless elk, antlered deer, any deer, any elk, bull elk, javelina, pronghorn, Sandhill crane or turkey. For antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts with 10 or fewer permits, at most one permit is available to nonresidents, and a one-permit hunt is resident-only. No more than half of the nonresident allotment may be issued in the bonus pass (R12-4-114(G)). The 2025-26 regulations printed the earlier rule, whose 10% cap listed only antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts.",
+   "otcSummary": "Archery turkey nonpermit-tags (resident $25, nonresident $90) and youth-only turkey nonpermit-tags ($10) are sold over the counter for the archery-only nonpermit-tag seasons.",
+   "keyDates": [
+    {
+     "label": "Spring draw application deadline (spring turkey, spring javelina, spring bison; 11:59 p.m. Arizona time)",
+     "date": "2025-10-07",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-spring2026",
+     "note": "For 2026 spring hunts."
+    },
+    {
+     "label": "Spring draw hunt permit-tags mailed out by",
+     "date": "2025-11-26",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-spring2026",
+     "note": "For 2026 spring hunts."
+    },
+    {
+     "label": "Leftover (first-come) spring applications accepted by mail",
+     "date": "2025-11-03",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-spring2026",
+     "note": "For 2026 spring hunts."
+    },
+    {
+     "label": "Leftover (first-come) spring permits at Department offices",
+     "date": "2025-11-10",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-spring2026",
+     "note": "For 2026 spring hunts."
+    },
+    {
+     "label": "Spring draw application deadline (spring turkey, spring javelina, spring bison, raptor capture; 11:59 p.m. Arizona time)",
+     "date": "2026-10-06",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-spring2027",
+     "note": "For 2027 spring hunts; online applications only, accepted from early to mid-September 2026. Draw results are posted to the applicant's AZGFD portal account; the booklet gives no separate results date."
+    },
+    {
+     "label": "Spring draw hunt permit-tags mailed out by",
+     "date": "2026-11-25",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-spring2027",
+     "note": "For 2027 spring hunts."
+    },
+    {
+     "label": "Leftover (first-come) spring applications accepted by mail (after 8:00 a.m. Arizona time)",
+     "date": "2026-11-02",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-spring2027",
+     "note": "For 2027 spring hunts; first-come results are not posted."
+    },
+    {
+     "label": "Leftover (first-come) spring permits at Department offices (after 8:00 a.m. Arizona time)",
+     "date": "2026-11-09",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-spring2027",
+     "note": "For 2027 spring hunts."
+    },
+    {
+     "label": "Fall draw application deadline (deer, fall turkey, fall javelina, bighorn sheep, fall bison, sandhill crane; 11:59 p.m. Arizona time)",
+     "date": "2026-06-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31; applications are accepted from early to mid-May."
+    },
+    {
+     "label": "Fall draw hunt permit-tags mailed out by",
+     "date": "2026-07-24",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover (first-come) fall applications accepted by mail",
+     "date": "2026-07-06",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Leftover (first-come) fall permits at Department offices",
+     "date": "2026-07-13",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-regs-hunt2026",
+     "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    }
+   ],
+   "sourceIds": [
+    "d-az-regs-spring2026",
+    "d-az-regs-spring2027",
+    "d-az-regs-hunt2026",
+    "d-az-regs-hunt2025",
+    "d-az-bonus-point-page"
+   ]
+  },
+  {
+   "species": "bear",
+   "displayName": "Black bear",
+   "drawSystem": "otc",
+   "pointsMatter": false,
+   "drawSystemSummary": "No 2026 bear hunt numbers appear in AZGFD's 2026 draw reports: bear hunting in every 2026 season uses a nonpermit-tag bought from a license dealer or AZGFD office. Seasons carry unit female-harvest limits, and hunters must confirm a unit is still open before hunting.",
+   "otcSummary": "Bear nonpermit-tag: resident $25, nonresident $150. Hunters must check that a unit is still open (azgfd.gov/harvestreports), report harvest within 48 hours and present the skull and hide within 10 days.",
+   "keyDates": [],
+   "sourceIds": [
+    "d-az-regs-hunt2026"
+   ]
+  },
+  {
+   "species": "lion",
+   "displayName": "Mountain lion",
+   "drawSystem": "otc",
+   "pointsMatter": false,
+   "drawSystemSummary": "Mountain lion is hunted with an over-the-counter nonpermit-tag (no draw). Bag limit is one lion per calendar year; harvest is managed by zone harvest thresholds.",
+   "otcSummary": "Mountain lion nonpermit-tag: resident $15, nonresident $75; pursuit-only permit: resident $20, nonresident $100.",
+   "keyDates": [],
+   "sourceIds": [
+    "d-az-regs-hunt2026"
+   ]
+  }
+ ],
+ "fees": [
+  {
+   "species": null,
+   "item": "General Hunting license",
+   "residency": "resident",
+   "amountUsd": 37,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Nonresidents: not available — see Combination Hunt and Fish license"
+  },
+  {
+   "species": null,
+   "item": "Combination Hunt and Fish license",
+   "residency": "resident",
+   "amountUsd": 57,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4)"
+  },
+  {
+   "species": null,
+   "item": "Combination Hunt and Fish license",
+   "residency": "nonresident",
+   "amountUsd": 160,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4)"
+  },
+  {
+   "species": null,
+   "item": "Youth Combination Hunt and Fish license (ages 10-17)",
+   "residency": "resident",
+   "amountUsd": 5,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4)"
+  },
+  {
+   "species": null,
+   "item": "Youth Combination Hunt and Fish license (ages 10-17)",
+   "residency": "nonresident",
+   "amountUsd": 5,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4)"
+  },
+  {
+   "species": null,
+   "item": "Bonus Point (application fee per applicant)",
+   "residency": "resident",
+   "amountUsd": 13,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Hunt permit-tag prices below include this $13 resident / $15 nonresident application fee"
+  },
+  {
+   "species": null,
+   "item": "Bonus Point (application fee per applicant)",
+   "residency": "nonresident",
+   "amountUsd": 15,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Hunt permit-tag prices below include this $13 resident / $15 nonresident application fee"
+  },
+  {
+   "species": null,
+   "item": "PointGuard (per species, per applicant)",
+   "residency": "resident",
+   "amountUsd": 10,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Optional; purchased with an online application"
+  },
+  {
+   "species": null,
+   "item": "PointGuard (per species, per applicant)",
+   "residency": "nonresident",
+   "amountUsd": 10,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Optional; purchased with an online application"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Pronghorn Hunt Permit-tag",
+   "residency": "resident",
+   "amountUsd": 103,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee"
+  },
+  {
+   "species": "pronghorn",
+   "item": "Pronghorn Hunt Permit-tag",
+   "residency": "nonresident",
+   "amountUsd": 565,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee"
+  },
+  {
+   "species": "elk",
+   "item": "Elk Hunt Permit-tag",
+   "residency": "resident",
+   "amountUsd": 148,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee"
+  },
+  {
+   "species": "elk",
+   "item": "Elk Hunt Permit-tag",
+   "residency": "nonresident",
+   "amountUsd": 665,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer Hunt Permit-tag",
+   "residency": "resident",
+   "amountUsd": 58,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee; one deer permit-tag covers mule deer and white-tailed deer hunts"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Deer Hunt Permit-tag",
+   "residency": "nonresident",
+   "amountUsd": 315,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee; one deer permit-tag covers mule deer and white-tailed deer hunts"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer Hunt Permit-tag",
+   "residency": "resident",
+   "amountUsd": 58,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee; one deer permit-tag covers mule deer and white-tailed deer hunts"
+  },
+  {
+   "species": "whitetail",
+   "item": "Deer Hunt Permit-tag",
+   "residency": "nonresident",
+   "amountUsd": 315,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee; one deer permit-tag covers mule deer and white-tailed deer hunts"
+  },
+  {
+   "species": "sheep",
+   "item": "Bighorn Sheep & Pioneer One-Horned Bighorn Sheep Hunt Permit-tag",
+   "residency": "resident",
+   "amountUsd": 313,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee"
+  },
+  {
+   "species": "sheep",
+   "item": "Bighorn Sheep & Pioneer One-Horned Bighorn Sheep Hunt Permit-tag",
+   "residency": "nonresident",
+   "amountUsd": 1815,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey Hunt Permit-tag",
+   "residency": "resident",
+   "amountUsd": 38,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee"
+  },
+  {
+   "species": "turkey",
+   "item": "Turkey Hunt Permit-tag",
+   "residency": "nonresident",
+   "amountUsd": 105,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee"
+  },
+  {
+   "species": "bear",
+   "item": "Bear Hunt Permit-tag",
+   "residency": "resident",
+   "amountUsd": 38,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee"
+  },
+  {
+   "species": "bear",
+   "item": "Bear Hunt Permit-tag",
+   "residency": "nonresident",
+   "amountUsd": 165,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Includes application fee"
+  },
+  {
+   "species": "turkey",
+   "item": "Archery Turkey Nonpermit-tag",
+   "residency": "resident",
+   "amountUsd": 25,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Over the counter"
+  },
+  {
+   "species": "turkey",
+   "item": "Archery Turkey Nonpermit-tag",
+   "residency": "nonresident",
+   "amountUsd": 90,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Over the counter"
+  },
+  {
+   "species": "bear",
+   "item": "Bear Nonpermit-tag",
+   "residency": "resident",
+   "amountUsd": 25,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Over the counter"
+  },
+  {
+   "species": "bear",
+   "item": "Bear Nonpermit-tag",
+   "residency": "nonresident",
+   "amountUsd": 150,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Over the counter"
+  },
+  {
+   "species": "lion",
+   "item": "Mountain Lion Nonpermit-tag",
+   "residency": "resident",
+   "amountUsd": 15,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Over the counter"
+  },
+  {
+   "species": "lion",
+   "item": "Mountain Lion Nonpermit-tag",
+   "residency": "nonresident",
+   "amountUsd": 75,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Over the counter"
+  },
+  {
+   "species": "lion",
+   "item": "Mountain Lion Pursuit-only Permit",
+   "residency": "resident",
+   "amountUsd": 20,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4)"
+  },
+  {
+   "species": "lion",
+   "item": "Mountain Lion Pursuit-only Permit",
+   "residency": "nonresident",
+   "amountUsd": 100,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4)"
+  },
+  {
+   "species": "elk",
+   "item": "Elk Nonpermit-tag",
+   "residency": "resident",
+   "amountUsd": 135,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Over the counter, nonpermit-tag seasons only"
+  },
+  {
+   "species": "elk",
+   "item": "Elk Nonpermit-tag",
+   "residency": "nonresident",
+   "amountUsd": 650,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Over the counter, nonpermit-tag seasons only"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Archery Deer Nonpermit-tag",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Over the counter; nonresident tag not available at license dealers"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Archery Deer Nonpermit-tag",
+   "residency": "nonresident",
+   "amountUsd": 300,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Over the counter; nonresident tag not available at license dealers"
+  },
+  {
+   "species": "whitetail",
+   "item": "Archery Deer Nonpermit-tag",
+   "residency": "resident",
+   "amountUsd": 45,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Over the counter; nonresident tag not available at license dealers"
+  },
+  {
+   "species": "whitetail",
+   "item": "Archery Deer Nonpermit-tag",
+   "residency": "nonresident",
+   "amountUsd": 300,
+   "licenseYear": 2026,
+   "sourceId": "d-az-regs-hunt2026",
+   "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4); Over the counter; nonresident tag not available at license dealers"
+  }
+ ],
+ "seasons": [
+  {
+   "species": "lion",
+   "label": "General (daylight shooting hours) mountain lion — statewide with listed exclusions",
+   "start": "2026-08-21",
+   "end": "2027-05-31",
+   "year": 2026,
+   "note": "Excludes most National Wildlife Refuges, Mohave County Park Lands and Units 11M, 25M, 26M, 38M; zones close at harvest thresholds",
+   "sourceId": "d-az-regs-hunt2026"
+  },
+  {
+   "species": "lion",
+   "label": "Archery-only mountain lion — Units 11M, 25M, 26M and 38M",
+   "start": "2026-08-21",
+   "end": "2027-05-31",
+   "year": 2026,
+   "sourceId": "d-az-regs-hunt2026"
+  }
+ ],
+ "coverage": [
+  {
+   "species": "elk",
+   "years": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Midwinter (Pronghorn & Elk) draws 2023-2026. Counts are from AZGFD draw reports: quota = authorized permits; applicants = 1st-choice applicants (Bonus Pass report); drawn = 1st-choice permits from the bonus pass plus the 1st/2nd-choice pass; odds are drawn/applicants (oddsComputed). byPoints are AZGFD's Bonus Point Report rows (1st+2nd-choice applicants and permits issued in bonus + 1-2 passes, by group bonus points), so they include 2nd-choice draws and do not sum to the 1st-choice totals; the per-point rows also sum to slightly different applicant totals (typically 0-5) than the Bonus Pass report. AZGFD's separate draw-odds summaries (2023-2025) are quoted in each row's note and can differ slightly from the draw-report figures. 2022 draws are not included: AZGFD's 2022 reports list hunt numbers only (hunt numbers are re-assigned each year) and the 2022 Bonus Point Report has rows where totals do not equal resident + nonresident. Draw year = hunt year as labelled by AZGFD."
+  },
+  {
+   "species": "pronghorn",
+   "years": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Midwinter (Pronghorn & Elk) draws 2023-2026. Counts are from AZGFD draw reports: quota = authorized permits; applicants = 1st-choice applicants (Bonus Pass report); drawn = 1st-choice permits from the bonus pass plus the 1st/2nd-choice pass; odds are drawn/applicants (oddsComputed). byPoints are AZGFD's Bonus Point Report rows (1st+2nd-choice applicants and permits issued in bonus + 1-2 passes, by group bonus points), so they include 2nd-choice draws and do not sum to the 1st-choice totals; the per-point rows also sum to slightly different applicant totals (typically 0-5) than the Bonus Pass report. AZGFD's separate draw-odds summaries (2023-2025) are quoted in each row's note and can differ slightly from the draw-report figures. 2022 draws are not included: AZGFD's 2022 reports list hunt numbers only (hunt numbers are re-assigned each year) and the 2022 Bonus Point Report has rows where totals do not equal resident + nonresident. Draw year = hunt year as labelled by AZGFD."
+  },
+  {
+   "species": "mule-deer",
+   "years": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Fall draws 2023-2026. Includes 'Any antlered deer'/'Antlerless deer' hunts (either species legal) as well as mule-deer-only hunts. 2026 hunts 1801-1803 and 1901-1906 (special-area hunts printed without hunt numbers in the 2026 regulations) are omitted because their deer species cannot be confirmed. Counts are from AZGFD draw reports: quota = authorized permits; applicants = 1st-choice applicants (Bonus Pass report); drawn = 1st-choice permits from the bonus pass plus the 1st/2nd-choice pass; odds are drawn/applicants (oddsComputed). byPoints are AZGFD's Bonus Point Report rows (1st+2nd-choice applicants and permits issued in bonus + 1-2 passes, by group bonus points), so they include 2nd-choice draws and do not sum to the 1st-choice totals; the per-point rows also sum to slightly different applicant totals (typically 0-5) than the Bonus Pass report. AZGFD's separate draw-odds summaries (2023-2025) are quoted in each row's note and can differ slightly from the draw-report figures. 2022 draws are not included: AZGFD's 2022 reports list hunt numbers only (hunt numbers are re-assigned each year) and the 2022 Bonus Point Report has rows where totals do not equal resident + nonresident. Draw year = hunt year as labelled by AZGFD."
+  },
+  {
+   "species": "whitetail",
+   "years": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Fall draws 2023-2026; only hunts whose legal wildlife is white-tailed deer. Counts are from AZGFD draw reports: quota = authorized permits; applicants = 1st-choice applicants (Bonus Pass report); drawn = 1st-choice permits from the bonus pass plus the 1st/2nd-choice pass; odds are drawn/applicants (oddsComputed). byPoints are AZGFD's Bonus Point Report rows (1st+2nd-choice applicants and permits issued in bonus + 1-2 passes, by group bonus points), so they include 2nd-choice draws and do not sum to the 1st-choice totals; the per-point rows also sum to slightly different applicant totals (typically 0-5) than the Bonus Pass report. AZGFD's separate draw-odds summaries (2023-2025) are quoted in each row's note and can differ slightly from the draw-report figures. 2022 draws are not included: AZGFD's 2022 reports list hunt numbers only (hunt numbers are re-assigned each year) and the 2022 Bonus Point Report has rows where totals do not equal resident + nonresident. Draw year = hunt year as labelled by AZGFD."
+  },
+  {
+   "species": "sheep",
+   "years": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Fall draws 2023-2026 (desert and Rocky Mountain bighorn, incl. Pioneer one-horned ram hunts). AZGFD's draw-odds summaries print 2024 hunt 6054 and 2025 hunts 6028/6029 twice with different units; the unit kept matches that year's Arizona Hunting Regulations (46BE, 39E, 39W). Counts are from AZGFD draw reports: quota = authorized permits; applicants = 1st-choice applicants (Bonus Pass report); drawn = 1st-choice permits from the bonus pass plus the 1st/2nd-choice pass; odds are drawn/applicants (oddsComputed). byPoints are AZGFD's Bonus Point Report rows (1st+2nd-choice applicants and permits issued in bonus + 1-2 passes, by group bonus points), so they include 2nd-choice draws and do not sum to the 1st-choice totals; the per-point rows also sum to slightly different applicant totals (typically 0-5) than the Bonus Pass report. AZGFD's separate draw-odds summaries (2023-2025) are quoted in each row's note and can differ slightly from the draw-report figures. 2022 draws are not included: AZGFD's 2022 reports list hunt numbers only (hunt numbers are re-assigned each year) and the 2022 Bonus Point Report has rows where totals do not equal resident + nonresident. Draw year = hunt year as labelled by AZGFD."
+  },
+  {
+   "species": "turkey",
+   "years": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Spring draws 2023-2026 (year = hunt year; the spring draw is held in the preceding Oct-Nov) and Fall draws 2023-2026. Spring season dates for 2023-2025 come from that year's spring regulation booklet, because AZGFD's draw-odds summaries print only the first window of split seasons. 2025 hunts 4032, 4033 and 4062 are printed twice in the 2025 summary, so they are described from the 2025 spring booklet (20A West, 20A East, 35B). Counts are from AZGFD draw reports: quota = authorized permits; applicants = 1st-choice applicants (Bonus Pass report); drawn = 1st-choice permits from the bonus pass plus the 1st/2nd-choice pass; odds are drawn/applicants (oddsComputed). byPoints are AZGFD's Bonus Point Report rows (1st+2nd-choice applicants and permits issued in bonus + 1-2 passes, by group bonus points), so they include 2nd-choice draws and do not sum to the 1st-choice totals; the per-point rows also sum to slightly different applicant totals (typically 0-5) than the Bonus Pass report. AZGFD's separate draw-odds summaries (2023-2025) are quoted in each row's note and can differ slightly from the draw-report figures. 2022 draws are not included: AZGFD's 2022 reports list hunt numbers only (hunt numbers are re-assigned each year) and the 2022 Bonus Point Report has rows where totals do not equal resident + nonresident. Draw year = hunt year as labelled by AZGFD."
+  },
+  {
+   "species": "bear",
+   "years": [],
+   "notes": "No bear hunt numbers in AZGFD's 2023-2026 draw reports; bear is over-the-counter (nonpermit-tag)."
+  },
+  {
+   "species": "lion",
+   "years": [],
+   "notes": "Over-the-counter nonpermit-tag; no draw."
+  }
+ ],
+ "sources": [
+  {
+   "id": "d-az-2023f-bonus",
+   "title": "2023 Fall Draw — Draw Report - Bonus Pass",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/08/17094622/2023-Fall-Draw-Report-Bonus-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2023f-p12",
+   "title": "2023 Fall Draw — Draw Report - 1st/2nd Choice Pass (1-2 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/08/17094615/2023-Fall-Draw-Report-1-2-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2023f-p345",
+   "title": "2023 Fall Draw — Draw Report - 3rd/4th/5th Choice Pass (3-4-5 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/08/17094618/2023-Fall-Draw-Report-3-4-5-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2023f-bpr",
+   "title": "2023 Fall Draw — Bonus Point Report",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/08/17094611/2023-Fall-Draw-Bonus-Point-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2023m-bonus",
+   "title": "2023 Elk/Pronghorn (Midwinter) Draw — Draw Report - Bonus Pass",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/05093917/2023_Mid_Draw-Report_Bonus-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2023m-p12",
+   "title": "2023 Elk/Pronghorn (Midwinter) Draw — Draw Report - 1st/2nd Choice Pass (1-2 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/05093908/2023_Mid_Draw-Report_1-2-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2023m-p345",
+   "title": "2023 Elk/Pronghorn (Midwinter) Draw — Draw Report - 3rd/4th/5th Choice Pass (3-4-5 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/05093913/2023_Mid_Draw-Report_3-4-5-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2023m-bpr",
+   "title": "2023 Elk/Pronghorn (Midwinter) Draw — Bonus Point Report",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/05093904/2023_Mid_Bonus-Point-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2023s-bonus",
+   "title": "2023 Spring Draw — Draw Report - Bonus Pass",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/04/12150754/2023_Spring_Draw-Report_Bonus-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2023s-p12",
+   "title": "2023 Spring Draw — Draw Report - 1st/2nd Choice Pass (1-2 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/04/12150746/2023_Spring_Draw-Report_1-2-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2023s-p345",
+   "title": "2023 Spring Draw — Draw Report - 3rd/4th/5th Choice Pass (3-4-5 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/04/12150750/2023_Spring_Draw-Report_3-4-5-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2023s-bpr",
+   "title": "2023 Spring Draw — Bonus Point Report",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/04/12151943/2023_Spring_Bonus-Point-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2024f-bonus",
+   "title": "2024 Fall Draw — Draw Report - Bonus Pass",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/07/17132558/2024-Fall-Draw-Report-Bonus-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2024f-p12",
+   "title": "2024 Fall Draw — Draw Report - 1st/2nd Choice Pass (1-2 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/07/17132550/2024-Fall-Draw-Report-1-2-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2024f-p345",
+   "title": "2024 Fall Draw — Draw Report - 3rd/4th/5th Choice Pass (3-4-5 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/07/17132553/2024-Fall-Draw-Report-3-4-5-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2024f-bpr",
+   "title": "2024 Fall Draw — Bonus Point Report",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/09/03155509/2024-Fall-Bonus-Point-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2024m-bonus",
+   "title": "2024 Elk/Pronghorn (Midwinter) Draw — Draw Report - Bonus Pass",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/03/28135136/2024-Elk-Pronghorn-Draw-Report-Bonus-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2024m-p12",
+   "title": "2024 Elk/Pronghorn (Midwinter) Draw — Draw Report - 1st/2nd Choice Pass (1-2 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/03/28135129/2024-Elk-Pronghorn-Draw-Report-1-2-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2024m-p345",
+   "title": "2024 Elk/Pronghorn (Midwinter) Draw — Draw Report - 3rd/4th/5th Choice Pass (3-4-5 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/03/28135132/2024-Elk-Pronghorn-Draw-Report-3-4-5-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2024m-bpr",
+   "title": "2024 Elk/Pronghorn (Midwinter) Draw — Bonus Point Report",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/03/28135125/2024-Elk-Pronghorn-Bonus-Point-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2024s-bonus",
+   "title": "2024 Spring Draw — Draw Report - Bonus Pass",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/03/28135741/2024-Spring-Bonus-Pass-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2024s-p12",
+   "title": "2024 Spring Draw — Draw Report - 1st/2nd Choice Pass (1-2 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/03/28135735/2024-Spring-1-2-Pass-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2024s-p345",
+   "title": "2024 Spring Draw — Draw Report - 3rd/4th/5th Choice Pass (3-4-5 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/03/28135738/2024-Spring-3-4-5-Pass-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2024s-bpr",
+   "title": "2024 Spring Draw — Bonus Point Report",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/03/28135745/2024-Spring-Bonus-Point-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2025f-bonus",
+   "title": "2025 Fall Draw — Draw Report - Bonus Pass",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/07/17111321/2025-Fall-Draw-Bonus-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2025f-p12",
+   "title": "2025 Fall Draw — Draw Report - 1st/2nd Choice Pass (1-2 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/07/17111306/2025-Fall-Draw-1-2-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2025f-p345",
+   "title": "2025 Fall Draw — Draw Report - 3rd/4th/5th Choice Pass (3-4-5 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/07/17112118/2025-Fall-Draw-3-4-5-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2025f-bpr",
+   "title": "2025 Fall Draw — Bonus Point Report",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/07/17111316/2025-Fall-Bonus-Point-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2025m-bonus",
+   "title": "2025 Elk/Pronghorn (Midwinter) Draw — Draw Report - Bonus Pass",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/05/15151934/2025-Elk-Pronghorn-Draw-Report-Bonus-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2025m-p12",
+   "title": "2025 Elk/Pronghorn (Midwinter) Draw — Draw Report - 1st/2nd Choice Pass (1-2 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/05/15151926/2025-Elk-Pronghorn-Draw-Report-1-2-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2025m-p345",
+   "title": "2025 Elk/Pronghorn (Midwinter) Draw — Draw Report - 3rd/4th/5th Choice Pass (3-4-5 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/05/15151930/2025-Elk-Pronghorn-Draw-Report-3-4-5-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2025m-bpr",
+   "title": "2025 Elk/Pronghorn (Midwinter) Draw — Bonus Point Report",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/05/15151918/2025-Bonus-Point-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2025s-bonus",
+   "title": "2025 Spring Draw — Draw Report - Bonus Pass",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/02/27112811/2025-Spring-Bonus-Pass-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2025s-p12",
+   "title": "2025 Spring Draw — Draw Report - 1st/2nd Choice Pass (1-2 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/02/27112802/2025-Spring-1-2-Pass-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2025s-p345",
+   "title": "2025 Spring Draw — Draw Report - 3rd/4th/5th Choice Pass (3-4-5 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/02/27112806/2025-Spring-3-4-5-Pass-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2025s-bpr",
+   "title": "2025 Spring Draw — Bonus Point Report",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/02/27112814/2025-Spring-Bonus-Point-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2026f-bonus",
+   "title": "2026 Fall Draw — Draw Report - Bonus Pass",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/08/05153620/2026-F-Draw-Report-Bonus-Point-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2026f-p12",
+   "title": "2026 Fall Draw — Draw Report - 1st/2nd Choice Pass (1-2 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/08/05153607/2026-F-Draw-Report-1-2-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2026f-p345",
+   "title": "2026 Fall Draw — Draw Report - 3rd/4th/5th Choice Pass (3-4-5 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/08/05153613/2026-F-Draw-Report-3-4-5-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2026f-bpr",
+   "title": "2026 Fall Draw — Bonus Point Report",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/08/16185459/2026-F-Bonus-Point-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2026m-bonus",
+   "title": "2026 Elk/Pronghorn (Midwinter) Draw — Draw Report - Bonus Pass",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/03/27091637/2026-M-Draw-Report-Bonus-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2026m-p12",
+   "title": "2026 Elk/Pronghorn (Midwinter) Draw — Draw Report - 1st/2nd Choice Pass (1-2 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/03/27091608/2026-M-Draw-Report-1-2-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2026m-p345",
+   "title": "2026 Elk/Pronghorn (Midwinter) Draw — Draw Report - 3rd/4th/5th Choice Pass (3-4-5 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/03/27091644/2026-M-Draw-Report-3-4-5-Pass.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2026m-bpr",
+   "title": "2026 Elk/Pronghorn (Midwinter) Draw — Bonus Point Report",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/03/27091508/2026-M-Bonus-Point-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2026s-bonus",
+   "title": "2026 Spring Draw — Draw Report - Bonus Pass",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/11/21105428/2026-S-Bonus-Pass-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2026s-p12",
+   "title": "2026 Spring Draw — Draw Report - 1st/2nd Choice Pass (1-2 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/11/21105523/2026-S-Pass-1-2-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2026s-p345",
+   "title": "2026 Spring Draw — Draw Report - 3rd/4th/5th Choice Pass (3-4-5 Pass)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/11/21105529/2026-S-Pass-3-4-5-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2026s-bpr",
+   "title": "2026 Spring Draw — Bonus Point Report",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/11/21105537/2026-Spring-Bonus-Point-Report.pdf",
+   "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-2023-odds-deer",
+   "title": "2023 AZ Deer Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/01/03130748/2023-AZ-Deer-Draw-Odds.pdf",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2023-odds-elk",
+   "title": "2023 AZ Elk Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/01/03130751/2023-AZ-Elk-Draw-Odds.pdf",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2023-odds-fall-turkey",
+   "title": "2023 AZ Fall Turkey Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/01/03130758/2023-AZ-Fall-Turkey-Draw-Odds.pdf",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2023-odds-pronghorn",
+   "title": "2023 AZ Pronghorn Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/01/03130802/2023-AZ-Pronghorn-Draw-Odds.pdf",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2023-odds-sheep",
+   "title": "2023 AZ Bighorn Sheep Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/01/03130741/2023-AZ-Bighorn-Sheep-Draw-Odds.pdf",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2023-odds-spring-turkey",
+   "title": "2023 AZ Spring Turkey Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/01/03130812/2023-AZ-Spring-Turkey-Draw-Odds.pdf",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2024-odds-deer",
+   "title": "2024 AZ Deer Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/12/02085502/2024-AZ-Deer-Draw-Odds.pdf",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2024-odds-elk",
+   "title": "2024 AZ Elk Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/12/02085505/2024-AZ-Elk-Draw-Odds.pdf",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2024-odds-fall-turkey",
+   "title": "2024 AZ Fall Turkey Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/12/02085512/2024-AZ-Fall-Turkey-Draw-Odds.pdf",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2024-odds-pronghorn",
+   "title": "2024 AZ Pronghorn Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/12/02085516/2024-AZ-Pronghorn-Draw-Odds.pdf",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2024-odds-sheep",
+   "title": "2024 AZ Bighorn Sheep Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/12/02085454/2024-AZ-Bighorn-Sheep-Draw-Odds.pdf",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2024-odds-spring-turkey",
+   "title": "2024 AZ Spring Turkey Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/12/02085525/2024-AZ-Spring-Turkey-Draw-Odds.pdf",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2025-odds-deer",
+   "title": "2025 AZ Deer Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/08/22144535/2025-AZ-Deer-Draw-Odds.pdf",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2025-odds-elk",
+   "title": "2025 AZ Elk Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/08/22144539/2025-AZ-Elk-Draw-Odds.pdf",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2025-odds-fall-turkey",
+   "title": "2025 AZ Fall Turkey Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/08/22144548/2025-AZ-Fall-Turkey-Draw-Odds.pdf",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2025-odds-pronghorn",
+   "title": "2025 AZ Pronghorn Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/08/22144552/2025-AZ-Pronghorn-Draw-Odds.pdf",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2025-odds-sheep",
+   "title": "2025 AZ Bighorn Sheep Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/08/22144528/2025-AZ-Bighorn-Sheep-Draw-Odds.pdf",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-2025-odds-spring-turkey",
+   "title": "2025 AZ Spring Turkey Draw Odds",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/08/22144602/2025-AZ-Spring-Turkey-Draw-Odds.pdf",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "AZGFD draw-odds summary (odds = chance of drawing first-choice hunt). Used for hunt unit, method, season dates and hunt type."
+  },
+  {
+   "id": "d-az-regs-pe2026",
+   "title": "2026 Pronghorn and Elk Hunt Draw Regulations",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/12/23143704/2026-Pronghorn-and-Elk-Regulations_251223.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-regs-hunt2026",
+   "title": "2026-2027 Arizona Hunting Regulations",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/05/04081122/2026-27-Arizona-Hunting-Regulations.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-regs-spring2026",
+   "title": "2026 Spring Hunt Draw Regulations (Turkey, Javelina, Bison, Bear and Raptor Capture)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/09/05122248/2026-Spring-Regulations_250908.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-regs-spring2023",
+   "title": "2023 Spring Turkey, Javelina, Bison, Bear and Raptor Capture Hunt Draw Information",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2023-Spring-Regulations_220901.pdf",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-regs-spring2024",
+   "title": "2024 Spring Turkey, Javelina, Bison, Bear and Raptor Capture Hunt Draw Information",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/03/26133333/2024-Spring-Regulations_240326.pdf",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-regs-spring2025",
+   "title": "2025 Spring Turkey, Javelina, Bison, Bear and Raptor Capture Hunt Draw Information",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/10/04094101/2025-Spring-Regulations_240930.pdf",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-regs-pe2023",
+   "title": "2023 Pronghorn and Elk Hunt Draw Information",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/archive/2023-Pronghorn-and-Elk-Regulations_230120.pdf",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-regs-hunt2023",
+   "title": "2023-2024 Arizona Hunting Regulations",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://web.archive.org/web/20240104162335id_/https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/10/24104400/2023-24-Arizona-Hunting-Regulations_231023.pdf",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "No longer in AZGFD's document store; read from the Internet Archive capture."
+  },
+  {
+   "id": "d-az-regs-hunt2024",
+   "title": "2024-2025 Arizona Hunting Regulations",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2024/12/09112338/2024-25-Arizona-Hunting-Regulations_241209.pdf",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-regs-hunt2025",
+   "title": "2025-2026 Arizona Hunting Regulations",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2025/12/23103956/2025-26-Arizona-Hunting-Regulations_251223.pdf",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-az-regs-spring2027",
+   "title": "2027 Spring Turkey, Javelina, Bison, Bear and Raptor Capture Hunt Draw Information",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://azgfd-live-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/09/08084903/2027-Spring-Regulations.pdf",
+   "dataYear": 2027,
+   "retrieved": "2026-10-31",
+   "notes": "Dates from the 'Hunt Permit-tag Application Schedule – Spring 2027' table (booklet p. 1)."
+  },
+  {
+   "id": "d-az-bonus-point-page",
+   "title": "How Arizona Bonus Points Work for the Hunt Draw Process (Bonus Point and Draw Reports page)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+   "retrieved": "2026-10-31",
+   "notes": "azgfd.com returned a bot challenge on 2026-10-31; page content and report links read from the Internet Archive snapshot of 2026-02-16 and the AZGFD public document store."
+  }
+ ]
+}

@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# gzipped agency tables, rebuilt by scripts/agency/build-index.mjs
+/.agency-gz/

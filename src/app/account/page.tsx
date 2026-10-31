@@ -12,6 +12,7 @@ import {
   type HuntingPreferences,
 } from "@/lib/preferences-schema";
 import { stateByAbbrev, stateBySlug } from "@/data/state-list";
+import { isLiveState } from "@/lib/agency-format";
 
 function formatDate(iso: string | null | undefined) {
   if (!iso) return null;
@@ -29,8 +30,11 @@ const RESIDENCY_LABELS: Record<string, string> = {
   both: "Resident and nonresident",
 };
 
+// States without published agency data yet are marked so we don't imply we cover them.
 function stateName(slug: string) {
-  return stateBySlug(slug)?.name ?? slug;
+  const st = stateBySlug(slug);
+  if (!st) return slug;
+  return isLiveState(st.slug) ? st.name : `${st.name} (coming soon)`;
 }
 
 function labelFor(options: readonly { id: string; label: string }[], id: string) {

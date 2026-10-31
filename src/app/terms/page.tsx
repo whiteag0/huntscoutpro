@@ -8,7 +8,7 @@ export default function TermsPage() {
 
         <div className="prose prose-sm text-muted-foreground space-y-6">
           <p className="text-sm text-muted-foreground">
-            Last updated: October 8, 2026
+            Last updated: October 31, 2026
           </p>
 
           <section className="space-y-3">
@@ -21,7 +21,7 @@ export default function TermsPage() {
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-foreground">2. Description of Service</h2>
             <p>
-              HuntScout Pro provides estimated draw odds, harvest statistics, point analysis, and planning tools for hunts in all 50 U.S. states. Draw odds, minimum points, and tag and applicant counts are estimates produced by our own model; they are not official draw results. Harvest and success figures use state wildlife agency harvest reports where available and are otherwise estimated. State pages label which harvest figures come from agency reports.
+              HuntScout Pro compiles draw results, harvest statistics, application dates, license fees, and related information published by state wildlife agencies, and provides research and planning tools around that data. Data is published for the states listed as live on the site; other states are shown as coming soon. Each figure is cited to the agency publication it came from. HuntScout Pro does not model, estimate, or predict draw odds or harvest; draw figures describe past draws as reported by the agency.
             </p>
           </section>
 
@@ -46,7 +46,7 @@ export default function TermsPage() {
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-foreground">5. Data Accuracy</h2>
             <p>
-              Draw odds, minimum points, tag and applicant counts, and any figures labeled as estimates are modeled approximations, not official agency data, and can differ substantially from actual draw results. Figures attributed to state wildlife agency reports are reproduced as compiled and may contain errors or be superseded by later agency revisions. HuntScout Pro does not guarantee the accuracy, completeness, or timeliness of any data. Always confirm draw odds, quotas, season dates, deadlines, and regulations directly with the relevant state wildlife agency before applying or hunting.
+              Figures on HuntScout Pro are reproduced from state wildlife agency publications as compiled. They may contain transcription errors, may be preliminary, and may be superseded by later agency revisions. Past draw results and harvest statistics do not predict or guarantee future draw outcomes or hunting success. HuntScout Pro does not guarantee the accuracy, completeness, or timeliness of any data. Always confirm draw odds, quotas, season dates, deadlines, and regulations directly with the relevant state wildlife agency before applying or hunting.
             </p>
           </section>
 

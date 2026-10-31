@@ -1,6 +1,7 @@
-// Lightweight list of the 50 states for client-side forms.
-// Mirrors the slug/name/abbrev fields of the state configs in hunt-data.ts,
-// without pulling the whole generated dataset into the bundle.
+// Names, slugs and abbreviations of the 50 U.S. states, for client-side forms,
+// links and the "Request a state" flow. This is only a list of states; it says
+// nothing about coverage. Which states have published agency data comes from
+// LIVE_STATE_SLUGS / isLiveState() in src/lib/agency-format.ts.
 
 export interface StateListItem {
   slug: string;

@@ -97,11 +97,11 @@ ${button(`${SITE}/signin?callbackUrl=%2Fstates`, "Sign in to HuntScout Pro")}
 <p style="margin-top:22px;"><b style="color:${DARK};font-size:16px;">Where to start</b></p>
 <ul style="padding-left:20px;margin:8px 0;">
 <li style="margin:0 0 8px 0;"><a href="${SITE}/states" style="color:${LINK};">Explore states</a> and pick the ones you plan to apply in.</li>
-<li style="margin:0 0 8px 0;">Set your preference points on any state page to see odds at your point level.</li>
+<li style="margin:0 0 8px 0;">Pick a species on a state page and enter your points to see how applicants at your level did in past draws, where the agency publishes results by point level.</li>
 <li style="margin:0 0 8px 0;"><a href="${SITE}/compare" style="color:${LINK};">Compare units</a> side by side, and plan your season in the <a href="${SITE}/planner" style="color:${LINK};">Hunt Planner</a>.</li>
 </ul>
 <p>It's a one-time payment, so nothing renews and you won't be charged again. If HuntScout Pro isn't what you expected, you can get a full refund within 30 days. Just reply to this email.</p>
-<p style="background:#faf7ef;border-left:3px solid ${GOLD};padding:10px 14px;font-size:14px;">A tip as you research: harvest and success numbers come from state agency reports, and draw odds are our estimates. Please confirm odds and deadlines with the state agency before you apply.</p>
+<p style="background:#faf7ef;border-left:3px solid ${GOLD};padding:10px 14px;font-size:14px;">A tip as you research: every number on HuntScout Pro comes from the state wildlife agency's own reports, and each table links to its source. Draw results describe past draws, so please confirm dates and rules with the agency before you apply.</p>
 <p>Questions, or anything still locked? Reply here and I'll take care of it personally.</p>`
   );
 
@@ -116,12 +116,12 @@ HOW TO SIGN IN
 
 WHERE TO START
 - Explore states: ${SITE}/states
-- Set your preference points on any state page to see odds at your point level.
+- Pick a species on a state page and enter your points to see how applicants at your level did in past draws, where the agency publishes results by point level.
 - Compare units: ${SITE}/compare  |  Hunt Planner: ${SITE}/planner
 
 It's a one-time payment, so nothing renews and you won't be charged again. If HuntScout Pro isn't what you expected, you can get a full refund within 30 days. Just reply to this email.
 
-A tip as you research: harvest and success numbers come from state agency reports, and draw odds are our estimates. Please confirm odds and deadlines with the state agency before you apply.
+A tip as you research: every number on HuntScout Pro comes from the state wildlife agency's own reports, and each table links to its source. Draw results describe past draws, so please confirm dates and rules with the agency before you apply.
 
 Questions, or anything still locked? Reply here and I'll take care of it personally.
 
@@ -152,9 +152,9 @@ ${button(`${SITE}/welcome`, "Tell us about your hunts")}
 <ol style="padding-left:20px;margin:12px 0;">
 ${QUESTIONS.map(([q, d]) => `<li style="margin:0 0 8px 0;"><b>${q}</b> ${d}</li>`).join("\n")}
 </ol>
-<p>What you tell us shapes the work that follows. The HuntScout Pro team will <b>gather data specific to your pursuits</b>, and as our member base grows we'll add data to the website to fill gaps for the units and species you care about.</p>
+<p>What you tell us shapes the work that follows. We'll <b>point you to the agency numbers that matter for your hunts</b>, and we use members' answers to decide which states and species to add next, always from official agency reports.</p>
 <p>We also want your honest feedback, good or bad: what's helping, what's missing, and what you'd change. Your input directly shapes what we build next.</p>
-<p>Thank you for trusting us with your hunt planning, ${esc(first)}. We look forward to helping you draw more tags and make the most of every season.</p>
+<p>Thank you for trusting us with your hunt planning, ${esc(first)}. We look forward to helping you apply smarter and make the most of every season.</p>
 <p style="margin:24px 0 4px 0;">Sincerely,</p>`
   );
 
@@ -167,11 +167,11 @@ Answer six quick questions at ${SITE}/welcome (about 2 minutes), or just reply t
 
 ${QUESTIONS.map(([q, d], i) => `${i + 1}. ${q} ${d}`).join("\n")}
 
-What you tell us shapes the work that follows. The HuntScout Pro team will gather data specific to your pursuits, and as our member base grows we'll add data to the website to fill gaps for the units and species you care about.
+What you tell us shapes the work that follows. We'll point you to the agency numbers that matter for your hunts, and we use members' answers to decide which states and species to add next, always from official agency reports.
 
 We also want your honest feedback, good or bad: what's helping, what's missing, and what you'd change. Your input directly shapes what we build next.
 
-Thank you for trusting us with your hunt planning, ${first}. We look forward to helping you draw more tags and make the most of every season.
+Thank you for trusting us with your hunt planning, ${first}. We look forward to helping you apply smarter and make the most of every season.
 
 Sincerely,
 
@@ -196,5 +196,42 @@ export function preferencesNotification(opts: {
 <table role="presentation" cellpadding="0" cellspacing="0">${rows}</table>
 </div>`;
   const text = `${who} completed the HuntScout Pro onboarding form.\n\n${opts.lines.map(([k, v]) => `${k}: ${v || "-"}`).join("\n")}`;
+  return { subject, html, text };
+}
+
+/** Internal: a visitor asked us to add hunting data for a state that isn't live yet. */
+export function stateRequestNotification(opts: {
+  stateName: string;
+  name: string;
+  email: string;
+  lines: [string, string][];
+}): RenderedEmail {
+  const subject = `State data request: ${opts.stateName}, from ${opts.name}`;
+  const rows = opts.lines
+    .map(
+      ([k, v]) =>
+        `<tr><td valign="top" style="padding:7px 14px 7px 0;color:#555;white-space:nowrap;border-bottom:1px solid #eee;"><b>${esc(k)}</b></td><td style="padding:7px 0;border-bottom:1px solid #eee;">${esc(v || "—")}</td></tr>`
+    )
+    .join("\n");
+  const html = `<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HuntScout Pro</title></head>
+<body style="margin:0;padding:0;background:#f4f2ee;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f2ee;"><tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;font-family:Arial,Helvetica,sans-serif;color:#2b2f33;font-size:15px;line-height:1.55;">
+<tr><td style="background:${DARK};padding:20px 28px;">
+<img src="${SITE}/apple-icon.png" width="24" height="24" alt="" style="vertical-align:middle;border:0;margin-right:6px;border-radius:5px;"><span style="color:#ffffff;font-size:20px;font-weight:bold;vertical-align:middle;">HuntScout</span>
+<span style="background:${GOLD};color:${DARK};font-size:11px;font-weight:bold;padding:2px 7px;margin-left:6px;vertical-align:middle;">PRO</span>
+<div style="color:${GOLD};font-size:12px;letter-spacing:1.5px;margin-top:6px;">NEW STATE DATA REQUEST</div>
+</td></tr>
+<tr><td style="background:#ffffff;border:1px solid #e3e3e3;border-top:3px solid ${GOLD};padding:24px 28px;">
+<p style="margin:0 0 6px 0;font-size:18px;"><b style="color:${DARK};">${esc(opts.stateName)}</b></p>
+<p style="margin:0 0 16px 0;color:#555;">${esc(opts.name)} &lt;<a href="mailto:${esc(opts.email)}" style="color:${LINK};">${esc(opts.email)}</a>&gt; asked us to add hunting data for ${esc(opts.stateName)}. Reply to this email to answer them directly.</p>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%">${rows}</table>
+</td></tr>
+<tr><td style="padding:14px 28px;font-size:12px;color:#8a8a8a;text-align:center;">Sent by the "Request this state" form on <a href="${SITE}/states" style="color:#8a8a8a;">huntscoutpro.com/states</a></td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+  const text = `NEW STATE DATA REQUEST: ${opts.stateName}\n\n${opts.name} <${opts.email}> asked us to add hunting data for ${opts.stateName}. Reply to this email to answer them directly.\n\n${opts.lines.map(([k, v]) => `${k}: ${v || "-"}`).join("\n")}`;
   return { subject, html, text };
 }

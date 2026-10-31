@@ -1,0 +1,1639 @@
+{
+  "slug": "utah",
+  "name": "Utah",
+  "abbrev": "UT",
+  "agency": {
+    "name": "Utah Division of Wildlife Resources",
+    "shortName": "UDWR",
+    "url": "https://wildlife.utah.gov"
+  },
+  "unitTerm": "Hunt Unit",
+  "lastReviewed": "2026-10-31",
+  "overview": "Utah draws limited-entry, once-in-a-lifetime and CWMU big game, black bear and spring turkey permits with bonus points: half of each hunt's permits go to the applicants with the most points and the rest are drawn randomly, with an extra random number per point. General-season buck deer, antlerless deer, antlerless elk and doe pronghorn are drawn by preference point, so the applicants with the most points draw first. Each hunt is identified by a hunt number (e.g. EB3006), and published odds count first-choice applications only. General-season bull elk, bear harvest-objective and spring general-season turkey permits are sold over the counter, and cougar needs only a hunting license.",
+  "species": [
+    {
+      "species": "elk",
+      "displayName": "Elk (limited-entry bull, general-season bull, antlerless)",
+      "drawSystem": "hybrid",
+      "drawSystemSummary": "Limited-entry and once-in-a-lifetime permits use bonus points: 50% of each hunt's permits go to the applicants with the most bonus points (first choice), and the rest are drawn randomly, with an extra random number for each bonus point held. Antlerless elk permits are drawn by preference point. General-season any-bull, spike-bull and archery elk permits are sold over the counter, not drawn.",
+      "pointsMatter": true,
+      "pointName": "bonus point (limited-entry bull elk); preference point (antlerless elk)",
+      "residentNote": "Residents may apply for one limited-entry permit (or bonus point) and one once-in-a-lifetime permit (or bonus point) each year; bull elk waiting period after drawing is five years.",
+      "nonresidentNote": "Nonresidents may apply for limited-entry bull elk but not for CWMU permits through the big game drawing; resident and nonresident quotas are set per hunt.",
+      "otcSummary": "General-season archery elk (July 7, 2026), any bull elk (July 9, 2026) and spike bull elk (July 16, 2026) permits went on sale over the counter; remaining antlerless permits from July 28, 2026.",
+      "keyDates": [
+        {
+          "label": "Big game draw application period (permits and bonus/preference points)",
+          "start": "2026-03-19",
+          "end": "2026-04-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. 2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Big game draw results available",
+          "date": "2026-05-31",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Results by email on or by May 31, 2026.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Second chance to apply for big game bonus/preference points only",
+          "start": "2026-06-09",
+          "end": "2026-06-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Held during the antlerless application period.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Antlerless draw application period",
+          "start": "2026-06-09",
+          "end": "2026-06-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "sourceId": "d-antlerless-guide-2026"
+        },
+        {
+          "label": "Antlerless draw results available",
+          "date": "2026-07-08",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Results by email on or by July 8, 2026.",
+          "sourceId": "d-antlerless-guide-2026"
+        },
+        {
+          "label": "General-season archery elk permits on sale (OTC)",
+          "date": "2026-07-07",
+          "cycle": 2026,
+          "status": "confirmed",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "General-season any bull elk permits on sale (OTC)",
+          "date": "2026-07-09",
+          "cycle": 2026,
+          "status": "confirmed",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "General-season spike bull elk permits on sale (OTC)",
+          "date": "2026-07-16",
+          "cycle": 2026,
+          "status": "confirmed",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "2027 sportsman permit drawing application period (bull elk)",
+          "start": "2026-10-20",
+          "end": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "sourceId": "d-news-sportsman-2027"
+        },
+        {
+          "label": "2027 sportsman permit drawing results available (bull elk)",
+          "date": "2026-11-19",
+          "cycle": 2027,
+          "status": "confirmed",
+          "sourceId": "d-news-sportsman-2027"
+        }
+      ],
+      "sourceIds": [
+        "d-bg-guide-2026",
+        "d-antlerless-guide-2026",
+        "d-rule-r657-62",
+        "d-points",
+        "d-fees",
+        "d-news-sportsman-2027"
+      ]
+    },
+    {
+      "species": "mule-deer",
+      "displayName": "Mule deer (general-season buck, limited-entry/premium buck, antlerless)",
+      "drawSystem": "preference",
+      "drawSystemSummary": "General-season buck deer permits are drawn by preference point (applicants with the most points draw first; points are lost when a permit is drawn), with 20% of general-season permits allocated to youth. Limited-entry and premium limited-entry buck deer permits use bonus points: 50% of each hunt's permits go to the applicants with the most bonus points (first choice), and the rest are drawn randomly, with an extra random number for each bonus point held. Antlerless deer are drawn by preference point.",
+      "pointsMatter": true,
+      "pointName": "preference point (general-season buck deer, antlerless deer); bonus point (limited-entry buck deer)",
+      "residentNote": "Applicants may apply for a general-season buck permit/point or a Dedicated Hunter COR/point, not both; limited-entry buck deer waiting period is five years.",
+      "nonresidentNote": "Nonresidents may apply for general-season and limited-entry buck deer but not for CWMU permits through the big game drawing.",
+      "otcSummary": "Remaining general-season deer permits (if any) went on sale July 7, 2026; buying one forfeits general-season deer preference points.",
+      "keyDates": [
+        {
+          "label": "Big game draw application period (permits and bonus/preference points)",
+          "start": "2026-03-19",
+          "end": "2026-04-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. 2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Big game draw results available",
+          "date": "2026-05-31",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Results by email on or by May 31, 2026.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Second chance to apply for big game bonus/preference points only",
+          "start": "2026-06-09",
+          "end": "2026-06-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Held during the antlerless application period.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Antlerless draw application period",
+          "start": "2026-06-09",
+          "end": "2026-06-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "sourceId": "d-antlerless-guide-2026"
+        },
+        {
+          "label": "Antlerless draw results available",
+          "date": "2026-07-08",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Results by email on or by July 8, 2026.",
+          "sourceId": "d-antlerless-guide-2026"
+        },
+        {
+          "label": "Remaining general-season deer permits on sale",
+          "date": "2026-07-07",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "If available.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "2027 sportsman permit drawing application period (buck deer)",
+          "start": "2026-10-20",
+          "end": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "sourceId": "d-news-sportsman-2027"
+        },
+        {
+          "label": "2027 sportsman permit drawing results available (buck deer)",
+          "date": "2026-11-19",
+          "cycle": 2027,
+          "status": "confirmed",
+          "sourceId": "d-news-sportsman-2027"
+        }
+      ],
+      "sourceIds": [
+        "d-bg-guide-2026",
+        "d-antlerless-guide-2026",
+        "d-rule-r657-62",
+        "d-points",
+        "d-fees",
+        "d-news-sportsman-2027"
+      ]
+    },
+    {
+      "species": "pronghorn",
+      "displayName": "Pronghorn (limited-entry buck, doe)",
+      "drawSystem": "hybrid",
+      "drawSystemSummary": "Limited-entry buck pronghorn permits use bonus points: 50% of each hunt's permits go to the applicants with the most bonus points (first choice), and the rest are drawn randomly, with an extra random number for each bonus point held. Doe pronghorn permits are drawn by preference point.",
+      "pointsMatter": true,
+      "pointName": "bonus point (buck pronghorn); preference point (doe pronghorn)",
+      "residentNote": "Buck pronghorn waiting period after drawing is two years.",
+      "nonresidentNote": "Nonresidents may apply for limited-entry buck pronghorn but not for CWMU permits through the big game drawing.",
+      "otcSummary": "No general-season buck pronghorn; remaining limited-entry permits (if any) from July 7, 2026 and antlerless from July 28, 2026.",
+      "keyDates": [
+        {
+          "label": "Big game draw application period (permits and bonus/preference points)",
+          "start": "2026-03-19",
+          "end": "2026-04-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. 2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Big game draw results available",
+          "date": "2026-05-31",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Results by email on or by May 31, 2026.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Second chance to apply for big game bonus/preference points only",
+          "start": "2026-06-09",
+          "end": "2026-06-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Held during the antlerless application period.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Antlerless draw application period",
+          "start": "2026-06-09",
+          "end": "2026-06-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "sourceId": "d-antlerless-guide-2026"
+        },
+        {
+          "label": "Antlerless draw results available",
+          "date": "2026-07-08",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Results by email on or by July 8, 2026.",
+          "sourceId": "d-antlerless-guide-2026"
+        },
+        {
+          "label": "2027 sportsman permit drawing application period (buck pronghorn)",
+          "start": "2026-10-20",
+          "end": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "sourceId": "d-news-sportsman-2027"
+        },
+        {
+          "label": "2027 sportsman permit drawing results available (buck pronghorn)",
+          "date": "2026-11-19",
+          "cycle": 2027,
+          "status": "confirmed",
+          "sourceId": "d-news-sportsman-2027"
+        }
+      ],
+      "sourceIds": [
+        "d-bg-guide-2026",
+        "d-antlerless-guide-2026",
+        "d-rule-r657-62",
+        "d-points",
+        "d-fees",
+        "d-news-sportsman-2027"
+      ]
+    },
+    {
+      "species": "moose",
+      "displayName": "Moose (once-in-a-lifetime bull, antlerless)",
+      "drawSystem": "hybrid",
+      "drawSystemSummary": "Once-in-a-lifetime bull moose permits use bonus points: 50% of each hunt's permits go to the applicants with the most bonus points (first choice), and the rest are drawn randomly, with an extra random number for each bonus point held. Antlerless moose permits are also drawn with bonus points.",
+      "pointsMatter": true,
+      "pointName": "bonus point",
+      "residentNote": "Bull moose is once-in-a-lifetime: drawing a permit forfeits bull moose bonus points.",
+      "nonresidentNote": "Nonresidents may apply for once-in-a-lifetime species; resident and nonresident quotas are set per hunt.",
+      "keyDates": [
+        {
+          "label": "Big game draw application period (permits and bonus/preference points)",
+          "start": "2026-03-19",
+          "end": "2026-04-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. 2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Big game draw results available",
+          "date": "2026-05-31",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Results by email on or by May 31, 2026.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Second chance to apply for big game bonus/preference points only",
+          "start": "2026-06-09",
+          "end": "2026-06-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Held during the antlerless application period.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Antlerless draw application period",
+          "start": "2026-06-09",
+          "end": "2026-06-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "sourceId": "d-antlerless-guide-2026"
+        },
+        {
+          "label": "Antlerless draw results available",
+          "date": "2026-07-08",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Results by email on or by July 8, 2026.",
+          "sourceId": "d-antlerless-guide-2026"
+        },
+        {
+          "label": "2027 sportsman permit drawing application period (bull moose)",
+          "start": "2026-10-20",
+          "end": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "sourceId": "d-news-sportsman-2027"
+        },
+        {
+          "label": "2027 sportsman permit drawing results available (bull moose)",
+          "date": "2026-11-19",
+          "cycle": 2027,
+          "status": "confirmed",
+          "sourceId": "d-news-sportsman-2027"
+        }
+      ],
+      "sourceIds": [
+        "d-bg-guide-2026",
+        "d-antlerless-guide-2026",
+        "d-rule-r657-62",
+        "d-points",
+        "d-fees",
+        "d-news-sportsman-2027"
+      ]
+    },
+    {
+      "species": "sheep",
+      "displayName": "Bighorn sheep (desert and Rocky Mountain; Rocky Mountain ewe)",
+      "drawSystem": "hybrid",
+      "drawSystemSummary": "Once-in-a-lifetime desert and Rocky Mountain bighorn permits use bonus points: 50% of each hunt's permits go to the applicants with the most bonus points (first choice), and the rest are drawn randomly, with an extra random number for each bonus point held. Desert and Rocky Mountain bighorn bonus points are separate. Rocky Mountain ewe permits are drawn in the antlerless draw with bonus points.",
+      "pointsMatter": true,
+      "pointName": "bonus point",
+      "nonresidentNote": "Nonresidents may apply for once-in-a-lifetime species; resident and nonresident quotas are set per hunt.",
+      "keyDates": [
+        {
+          "label": "Big game draw application period (permits and bonus/preference points)",
+          "start": "2026-03-19",
+          "end": "2026-04-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. 2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Big game draw results available",
+          "date": "2026-05-31",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Results by email on or by May 31, 2026.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Second chance to apply for big game bonus/preference points only",
+          "start": "2026-06-09",
+          "end": "2026-06-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Held during the antlerless application period.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Antlerless draw application period",
+          "start": "2026-06-09",
+          "end": "2026-06-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "sourceId": "d-antlerless-guide-2026"
+        },
+        {
+          "label": "Antlerless draw results available",
+          "date": "2026-07-08",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Results by email on or by July 8, 2026.",
+          "sourceId": "d-antlerless-guide-2026"
+        },
+        {
+          "label": "2027 sportsman permit drawing application period (desert bighorn sheep and Rocky Mountain bighorn sheep, one permit each)",
+          "start": "2026-10-20",
+          "end": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "sourceId": "d-news-sportsman-2027"
+        },
+        {
+          "label": "2027 sportsman permit drawing results available (desert bighorn sheep and Rocky Mountain bighorn sheep, one permit each)",
+          "date": "2026-11-19",
+          "cycle": 2027,
+          "status": "confirmed",
+          "sourceId": "d-news-sportsman-2027"
+        }
+      ],
+      "sourceIds": [
+        "d-bg-guide-2026",
+        "d-antlerless-guide-2026",
+        "d-rule-r657-62",
+        "d-points",
+        "d-fees",
+        "d-news-sportsman-2027"
+      ]
+    },
+    {
+      "species": "goat",
+      "displayName": "Rocky Mountain goat (once-in-a-lifetime)",
+      "drawSystem": "hybrid",
+      "drawSystemSummary": "Once-in-a-lifetime mountain goat permits use bonus points: 50% of each hunt's permits go to the applicants with the most bonus points (first choice), and the rest are drawn randomly, with an extra random number for each bonus point held.",
+      "pointsMatter": true,
+      "pointName": "bonus point",
+      "nonresidentNote": "Nonresidents may apply for once-in-a-lifetime species; resident and nonresident quotas are set per hunt.",
+      "keyDates": [
+        {
+          "label": "Big game draw application period (permits and bonus/preference points)",
+          "start": "2026-03-19",
+          "end": "2026-04-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. 2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Big game draw results available",
+          "date": "2026-05-31",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Results by email on or by May 31, 2026.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "Second chance to apply for big game bonus/preference points only",
+          "start": "2026-06-09",
+          "end": "2026-06-23",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Held during the antlerless application period.",
+          "sourceId": "d-bg-guide-2026"
+        },
+        {
+          "label": "2027 sportsman permit drawing application period (mountain goat)",
+          "start": "2026-10-20",
+          "end": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "sourceId": "d-news-sportsman-2027"
+        },
+        {
+          "label": "2027 sportsman permit drawing results available (mountain goat)",
+          "date": "2026-11-19",
+          "cycle": 2027,
+          "status": "confirmed",
+          "sourceId": "d-news-sportsman-2027"
+        }
+      ],
+      "sourceIds": [
+        "d-bg-guide-2026",
+        "d-rule-r657-62",
+        "d-points",
+        "d-fees",
+        "d-news-sportsman-2027"
+      ]
+    },
+    {
+      "species": "bear",
+      "displayName": "Black bear",
+      "drawSystem": "hybrid",
+      "drawSystemSummary": "Limited-entry bear permits (spring, summer, fall, multiseason) are drawn with bonus points under the same rule as big game: 50% of each hunt's permits go to applicants with the most bonus points, the rest randomly. Harvest-objective permits are sold over the counter.",
+      "pointsMatter": true,
+      "pointName": "bonus point",
+      "otcSummary": "Bear harvest-objective permits (any legal weapon, one bear on any harvest-objective unit until the unit closes) went on sale March 10, 2026.",
+      "keyDates": [
+        {
+          "label": "Black bear draw application period",
+          "start": "2026-02-10",
+          "end": "2026-02-24",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "Closed 11 p.m. MST Feb. 24. 2027 black bear draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "sourceId": "d-bear-guide-2026"
+        },
+        {
+          "label": "Black bear draw results available",
+          "date": "2026-03-05",
+          "cycle": 2026,
+          "status": "confirmed",
+          "sourceId": "d-bear-guide-2026"
+        },
+        {
+          "label": "Harvest-objective and remaining bear permits on sale",
+          "date": "2026-03-10",
+          "cycle": 2026,
+          "status": "confirmed",
+          "sourceId": "d-bear-guide-2026"
+        },
+        {
+          "label": "2027 sportsman permit drawing application period (black bear)",
+          "start": "2026-10-20",
+          "end": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "sourceId": "d-news-sportsman-2027"
+        },
+        {
+          "label": "2027 sportsman permit drawing results available (black bear)",
+          "date": "2026-11-19",
+          "cycle": 2027,
+          "status": "confirmed",
+          "sourceId": "d-news-sportsman-2027"
+        }
+      ],
+      "sourceIds": [
+        "d-bear-guide-2026",
+        "d-rule-r657-62",
+        "d-fees",
+        "d-news-sportsman-2027"
+      ]
+    },
+    {
+      "species": "lion",
+      "displayName": "Cougar (mountain lion)",
+      "drawSystem": "otc",
+      "drawSystemSummary": "No draw or permit: residents and nonresidents with a valid Utah hunting or combination license may hunt or pursue cougar year-round with any legal weapon, with no annual limit; each cougar must be checked in within 48 hours. Utah ended limited-entry cougar drawings in 2023; earlier bonus points stay on record but have no use.",
+      "pointsMatter": false,
+      "otcSummary": "Hunting or combination license only (no separate cougar permit); a trap registration license is also needed to trap cougars.",
+      "keyDates": [],
+      "sourceIds": [
+        "d-bear-guide-2026",
+        "d-cougar-odds-2021-22",
+        "d-cougar-odds-2022-23"
+      ]
+    },
+    {
+      "species": "turkey",
+      "displayName": "Wild turkey",
+      "drawSystem": "hybrid",
+      "drawSystemSummary": "Spring limited-entry turkey permits are drawn with bonus points: 50% of each unit's permits (rounded up) are reserved for applicants with the most bonus points, the rest drawn randomly with an extra random number per point. Spring general-season and fall management permits are sold over the counter.",
+      "pointsMatter": true,
+      "pointName": "bonus point",
+      "otcSummary": "Spring general-season turkey permits go on sale March 11, 2027 (spring general season May 3-31, 2027); fall management harvest permits went on sale Sept. 10, 2026. Buying a general-season permit does not cost bonus points.",
+      "keyDates": [
+        {
+          "label": "Limited-entry turkey draw application period",
+          "start": "2026-12-15",
+          "end": "2026-12-29",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Opens 8 a.m. MDT Dec. 15, closes 11 p.m. MDT Dec. 29, 2026.",
+          "sourceId": "d-turkey-guide-2026-27"
+        },
+        {
+          "label": "Limited-entry turkey draw results available",
+          "date": "2027-01-07",
+          "cycle": 2027,
+          "status": "confirmed",
+          "sourceId": "d-turkey-guide-2026-27"
+        },
+        {
+          "label": "Remaining limited-entry and spring general-season turkey permits on sale",
+          "date": "2027-03-11",
+          "cycle": 2027,
+          "status": "confirmed",
+          "sourceId": "d-turkey-guide-2026-27"
+        },
+        {
+          "label": "2027 sportsman permit drawing application period (wild turkey, a two-bird permit)",
+          "start": "2026-10-20",
+          "end": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "sourceId": "d-news-sportsman-2027"
+        },
+        {
+          "label": "2027 sportsman permit drawing results available (wild turkey, a two-bird permit)",
+          "date": "2026-11-19",
+          "cycle": 2027,
+          "status": "confirmed",
+          "sourceId": "d-news-sportsman-2027"
+        }
+      ],
+      "sourceIds": [
+        "d-turkey-guide-2026-27",
+        "d-fees",
+        "d-news-sportsman-2027"
+      ]
+    }
+  ],
+  "fees": [
+    {
+      "species": null,
+      "item": "Resident 1-year basic hunting license (age 18-64)",
+      "residency": "resident",
+      "amountUsd": 40.0,
+      "licenseYear": 2026,
+      "note": "Required to apply. Multiyear at $39 per year.",
+      "sourceId": "d-fees"
+    },
+    {
+      "species": null,
+      "item": "Nonresident 1-year basic hunting license (age 18 and older)",
+      "residency": "nonresident",
+      "amountUsd": 144.0,
+      "licenseYear": 2026,
+      "note": "Required to apply.",
+      "sourceId": "d-fees"
+    },
+    {
+      "species": null,
+      "item": "Resident draw application fee",
+      "residency": "resident",
+      "amountUsd": 10.0,
+      "licenseYear": 2026,
+      "note": "Per species; also the cost of a bonus or preference point only application.",
+      "sourceId": "d-fees"
+    },
+    {
+      "species": null,
+      "item": "Nonresident draw application fee",
+      "residency": "nonresident",
+      "amountUsd": 21.0,
+      "licenseYear": 2026,
+      "note": "Per species; also the cost of a bonus or preference point only application.",
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "mule-deer",
+      "item": "Resident general-season buck deer",
+      "residency": "resident",
+      "amountUsd": 46.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "mule-deer",
+      "item": "Nonresident general-season buck deer (includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 599.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "mule-deer",
+      "item": "Resident limited-entry buck deer",
+      "residency": "resident",
+      "amountUsd": 94.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "mule-deer",
+      "item": "Nonresident limited-entry buck deer (includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 1070.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "mule-deer",
+      "item": "Resident premium limited-entry buck deer",
+      "residency": "resident",
+      "amountUsd": 185.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "mule-deer",
+      "item": "Nonresident premium limited-entry buck deer (includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 1398.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "mule-deer",
+      "item": "Resident antlerless deer",
+      "residency": "resident",
+      "amountUsd": 35.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "mule-deer",
+      "item": "Nonresident antlerless deer",
+      "residency": "nonresident",
+      "amountUsd": 236.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "elk",
+      "item": "Resident general-season bull elk (all weapon types)",
+      "residency": "resident",
+      "amountUsd": 56.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "elk",
+      "item": "Nonresident general-season bull elk (includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 849.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "elk",
+      "item": "Resident archery elk (hunter's choice)",
+      "residency": "resident",
+      "amountUsd": 56.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "elk",
+      "item": "Nonresident archery elk (hunter's choice, includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 849.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "elk",
+      "item": "Resident limited-entry bull elk",
+      "residency": "resident",
+      "amountUsd": 314.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "elk",
+      "item": "Nonresident limited-entry bull elk (includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 1950.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "elk",
+      "item": "Resident limited-entry multiseason bull elk",
+      "residency": "resident",
+      "amountUsd": 564.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "elk",
+      "item": "Nonresident limited-entry multiseason bull elk (includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 2655.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "elk",
+      "item": "Resident antlerless elk",
+      "residency": "resident",
+      "amountUsd": 56.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "elk",
+      "item": "Nonresident antlerless elk",
+      "residency": "nonresident",
+      "amountUsd": 649.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "pronghorn",
+      "item": "Resident limited-entry buck pronghorn",
+      "residency": "resident",
+      "amountUsd": 63.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "pronghorn",
+      "item": "Nonresident limited-entry buck pronghorn (includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 571.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "pronghorn",
+      "item": "Resident doe pronghorn",
+      "residency": "resident",
+      "amountUsd": 35.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "pronghorn",
+      "item": "Nonresident doe pronghorn",
+      "residency": "nonresident",
+      "amountUsd": 236.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "moose",
+      "item": "Resident bull moose",
+      "residency": "resident",
+      "amountUsd": 454.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "moose",
+      "item": "Nonresident bull moose (includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 3488.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "moose",
+      "item": "Resident antlerless moose",
+      "residency": "resident",
+      "amountUsd": 249.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "moose",
+      "item": "Nonresident antlerless moose",
+      "residency": "nonresident",
+      "amountUsd": 2200.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "sheep",
+      "item": "Resident desert bighorn sheep",
+      "residency": "resident",
+      "amountUsd": 564.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "sheep",
+      "item": "Nonresident desert bighorn sheep (includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 3988.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "sheep",
+      "item": "Resident Rocky Mountain bighorn sheep",
+      "residency": "resident",
+      "amountUsd": 564.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "sheep",
+      "item": "Nonresident Rocky Mountain bighorn sheep (includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 3988.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "sheep",
+      "item": "Resident Rocky Mountain ewe bighorn sheep",
+      "residency": "resident",
+      "amountUsd": 110.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "sheep",
+      "item": "Nonresident Rocky Mountain ewe bighorn sheep (includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 2100.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "goat",
+      "item": "Resident mountain goat",
+      "residency": "resident",
+      "amountUsd": 454.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "goat",
+      "item": "Nonresident mountain goat (includes 365-day fishing license)",
+      "residency": "nonresident",
+      "amountUsd": 3488.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "bear",
+      "item": "Resident bear (limited-entry or harvest-objective permit)",
+      "residency": "resident",
+      "amountUsd": 93.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "bear",
+      "item": "Nonresident bear (limited-entry or harvest-objective)",
+      "residency": "nonresident",
+      "amountUsd": 600.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "bear",
+      "item": "Resident bear multiseason limited-entry",
+      "residency": "resident",
+      "amountUsd": 183.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "bear",
+      "item": "Nonresident bear multiseason limited-entry",
+      "residency": "nonresident",
+      "amountUsd": 889.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "turkey",
+      "item": "Resident wild turkey (limited-entry or general-season)",
+      "residency": "resident",
+      "amountUsd": 40.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    },
+    {
+      "species": "turkey",
+      "item": "Nonresident wild turkey (limited-entry or general-season)",
+      "residency": "nonresident",
+      "amountUsd": 175.0,
+      "licenseYear": 2026,
+      "sourceId": "d-fees"
+    }
+  ],
+  "seasons": [
+    {
+      "species": "mule-deer",
+      "label": "General-season buck deer: archery",
+      "start": "2026-08-15",
+      "end": "2026-09-11",
+      "year": 2026,
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "mule-deer",
+      "label": "General-season buck deer: muzzleloader (and restricted muzzleloader)",
+      "start": "2026-09-23",
+      "end": "2026-10-01",
+      "year": 2026,
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "mule-deer",
+      "label": "General-season buck deer: early any legal weapon (rifle)",
+      "start": "2026-10-07",
+      "end": "2026-10-11",
+      "year": 2026,
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "mule-deer",
+      "label": "General-season buck deer: any legal weapon (rifle) (and restricted rifle)",
+      "start": "2026-10-17",
+      "end": "2026-10-25",
+      "year": 2026,
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "elk",
+      "label": "General-season any bull elk units: archery",
+      "start": "2026-08-15",
+      "end": "2026-09-16",
+      "year": 2026,
+      "note": "No general-season archery elk hunt on the Paunsaugunt unit.",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "elk",
+      "label": "General-season any bull elk units: early any legal weapon (rifle)",
+      "start": "2026-10-03",
+      "end": "2026-10-09",
+      "year": 2026,
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "elk",
+      "label": "General-season any bull elk units: late any legal weapon (rifle)",
+      "start": "2026-10-10",
+      "end": "2026-10-16",
+      "year": 2026,
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "elk",
+      "label": "General-season any bull elk units: muzzleloader",
+      "start": "2026-10-28",
+      "end": "2026-11-05",
+      "year": 2026,
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "elk",
+      "label": "General-season spike elk units: archery",
+      "start": "2026-08-15",
+      "end": "2026-09-04",
+      "year": 2026,
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "elk",
+      "label": "General-season spike elk units: any legal weapon (rifle)",
+      "start": "2026-10-03",
+      "end": "2026-10-15",
+      "year": 2026,
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "elk",
+      "label": "General-season spike elk units: muzzleloader",
+      "start": "2026-10-28",
+      "end": "2026-11-05",
+      "year": 2026,
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "elk",
+      "label": "Draw-only youth any bull/hunter's choice elk",
+      "start": "2026-09-12",
+      "end": "2026-09-22",
+      "year": 2026,
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "turkey",
+      "label": "Fall management harvest turkey hunts",
+      "start": "2026-10-01",
+      "end": "2027-02-28",
+      "year": 2026,
+      "sourceId": "d-turkey-guide-2026-27"
+    },
+    {
+      "species": "turkey",
+      "label": "Spring limited-entry turkey hunts",
+      "start": "2027-04-10",
+      "end": "2027-04-29",
+      "year": 2027,
+      "sourceId": "d-turkey-guide-2026-27"
+    },
+    {
+      "species": "turkey",
+      "label": "Spring general-season turkey hunts",
+      "start": "2027-05-03",
+      "end": "2027-05-31",
+      "year": 2027,
+      "sourceId": "d-turkey-guide-2026-27"
+    }
+  ],
+  "coverage": [
+    {
+      "species": "bear",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "notes": "Limited-entry black bear draws (spring/summer/fall/multiseason/spot-and-stalk), 2022-2026. Restricted pursuit (no-harvest) draws are excluded. Harvest-objective permits are OTC and not drawn."
+    },
+    {
+      "species": "elk",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "notes": "Limited-entry/CWMU bull elk and antlerless elk draws, 2022-2026 (2022-2025 from UDWR PDF reports, 2026 from UDWR's online draw-odds system). First-choice counts only. Youth draw-only elk, sportsman/conservation permits and OTC general-season elk are not included. Quotas are only available for 2026 (the PDF reports do not print them)."
+    },
+    {
+      "species": "goat",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "notes": "Once-in-a-lifetime mountain goat draws, 2022-2026."
+    },
+    {
+      "species": "lion",
+      "years": [
+        2021,
+        2022
+      ],
+      "notes": "Historical only: the last two cougar draws (October 2021 for 2021-22; June 2022 for 2022-23). Utah removed cougar permits and draws in 2023. Point-level rows omitted because points no longer matter."
+    },
+    {
+      "species": "moose",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "notes": "Once-in-a-lifetime/CWMU bull moose and antlerless moose draws, 2022-2026. Two 2022 antlerless moose hunts (MA1000, MA1006) carry an agency arithmetic inconsistency, kept as printed and explained in the row note."
+    },
+    {
+      "species": "mule-deer",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "notes": "General-season buck deer (adult draw), limited-entry/premium/management/CWMU buck deer and antlerless deer draws, 2022-2026. Youth general-season deer, Dedicated Hunter and lifetime-license draws are separate UDWR reports and are not included. Quotas only for 2026."
+    },
+    {
+      "species": "pronghorn",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "notes": "Limited-entry/CWMU buck pronghorn and doe pronghorn draws, 2022-2026. Quotas only for 2026."
+    },
+    {
+      "species": "sheep",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "notes": "Once-in-a-lifetime desert bighorn and Rocky Mountain bighorn, and Rocky Mountain bighorn ewe draws, 2022-2026. Bison is out of scope."
+    },
+    {
+      "species": "turkey",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "notes": "Spring limited-entry and CWMU turkey draws (adult), 2022-2026. Youth turkey draw reported separately by UDWR and not included."
+    }
+  ],
+  "sources": [
+    {
+      "id": "d-le-odds-2022",
+      "title": "2022 Big game limited-entry & once-in-a-lifetime draw results (2022 Draw 5, Big Game Bonus Point Draw Results)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bg/2022/22_bg-odds.pdf",
+      "pageUrl": "https://wildlife.utah.gov/bg-odds.html",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "First-choice applicants and permits by bonus point level, resident and nonresident, per hunt."
+    },
+    {
+      "id": "d-gen-deer-odds-2022",
+      "title": "2022 General-season buck deer draw results (2022 Draw 5)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bg/2022/22_deer_odds.pdf",
+      "pageUrl": "https://wildlife.utah.gov/bg-odds.html",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "First-choice applicants and permits by preference point level; youth reported separately."
+    },
+    {
+      "id": "d-antlerless-odds-2022",
+      "title": "2022 Antlerless big game draw results (2022 Draw 7)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bg/2022/22_antlerless_drawing_odds_report.pdf",
+      "pageUrl": "https://wildlife.utah.gov/bg-odds.html",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "First-choice applicants and permits by point level; youth reported separately."
+    },
+    {
+      "id": "d-bear-odds-2022",
+      "title": "2022 Black bear drawing odds (2022 Draw 1)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bear/22_drawing_odds.pdf",
+      "pageUrl": "https://wildlife.utah.gov/drawing-odds-and-point-results.html",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "d-turkey-odds-2022",
+      "title": "2022 Turkey drawing results and bonus point purchase results (2022 Draw T)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/uplandgame/turkey/2022_turkey_bonus_points_draw_results.pdf",
+      "pageUrl": "https://wildlife.utah.gov/drawing-odds-and-point-results.html",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "Adult draw; youth turkey results are a separate report."
+    },
+    {
+      "id": "d-le-odds-2023",
+      "title": "2023 Big game limited-entry & once-in-a-lifetime draw results (2023 Draw 5, Big Game Bonus Point Draw Results)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bg/2023/23_bg-odds.pdf",
+      "pageUrl": "https://wildlife.utah.gov/bg-odds.html",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "First-choice applicants and permits by bonus point level, resident and nonresident, per hunt."
+    },
+    {
+      "id": "d-gen-deer-odds-2023",
+      "title": "2023 General-season buck deer draw results (2023 Draw 5)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bg/2023/23_deer_odds.pdf",
+      "pageUrl": "https://wildlife.utah.gov/bg-odds.html",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "First-choice applicants and permits by preference point level; youth reported separately."
+    },
+    {
+      "id": "d-antlerless-odds-2023",
+      "title": "2023 Antlerless big game draw results (2023 Draw 7)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bg/2023/23_antlerless_drawing_odds_report.pdf",
+      "pageUrl": "https://wildlife.utah.gov/bg-odds.html",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "First-choice applicants and permits by point level; youth reported separately."
+    },
+    {
+      "id": "d-bear-odds-2023",
+      "title": "2023 Black bear drawing odds (2023 Draw 1)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bear/23_drawing_odds.pdf",
+      "pageUrl": "https://wildlife.utah.gov/drawing-odds-and-point-results.html",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "d-turkey-odds-2023",
+      "title": "2023 Turkey drawing results and bonus point purchase results (2023 Draw T)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/uplandgame/turkey/2023_turkey_bonus_points_draw_results.pdf",
+      "pageUrl": "https://wildlife.utah.gov/drawing-odds-and-point-results.html",
+      "dataYear": 2023,
+      "retrieved": "2026-10-31",
+      "notes": "Adult draw; youth turkey results are a separate report."
+    },
+    {
+      "id": "d-le-odds-2024",
+      "title": "2024 Big game limited-entry & once-in-a-lifetime draw results (2024 Draw 5, Big Game Bonus Point Draw Results)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bg/2024/24_bg-odds.pdf",
+      "pageUrl": "https://wildlife.utah.gov/bg-odds.html",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "First-choice applicants and permits by bonus point level, resident and nonresident, per hunt."
+    },
+    {
+      "id": "d-gen-deer-odds-2024",
+      "title": "2024 General-season buck deer draw results (2024 Draw 5)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bg/2024/24_deer_odds.pdf",
+      "pageUrl": "https://wildlife.utah.gov/bg-odds.html",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "First-choice applicants and permits by preference point level; youth reported separately."
+    },
+    {
+      "id": "d-antlerless-odds-2024",
+      "title": "2024 Antlerless big game draw results (2024 Draw 7)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bg/2024/24_antlerless_drawing_odds_report.pdf",
+      "pageUrl": "https://wildlife.utah.gov/bg-odds.html",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "First-choice applicants and permits by point level; youth reported separately."
+    },
+    {
+      "id": "d-bear-odds-2024",
+      "title": "2024 Black bear drawing odds (2024 Draw 1)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bear/24_drawing_odds.pdf",
+      "pageUrl": "https://wildlife.utah.gov/drawing-odds-and-point-results.html",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "d-turkey-odds-2024",
+      "title": "2024 Turkey drawing results and bonus point purchase results (2024 Draw T)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/uplandgame/turkey/2024_turkey_bonus_points_draw_results.pdf",
+      "pageUrl": "https://wildlife.utah.gov/drawing-odds-and-point-results.html",
+      "dataYear": 2024,
+      "retrieved": "2026-10-31",
+      "notes": "Adult draw; youth turkey results are a separate report."
+    },
+    {
+      "id": "d-le-odds-2025",
+      "title": "2025 Big game limited-entry & once-in-a-lifetime draw results (2025 Draw 5, Big Game Bonus Point Draw Results)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bg/2025/25_bg-odds.pdf",
+      "pageUrl": "https://wildlife.utah.gov/bg-odds.html",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "First-choice applicants and permits by bonus point level, resident and nonresident, per hunt."
+    },
+    {
+      "id": "d-gen-deer-odds-2025",
+      "title": "2025 General-season buck deer draw results (2025 Draw 5)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bg/2025/25_deer_odds.pdf",
+      "pageUrl": "https://wildlife.utah.gov/bg-odds.html",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "First-choice applicants and permits by preference point level; youth reported separately."
+    },
+    {
+      "id": "d-antlerless-odds-2025",
+      "title": "2025 Antlerless big game draw results (2025 Draw 7)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bg/2025/25_antlerless_drawing_odds_report.pdf",
+      "pageUrl": "https://wildlife.utah.gov/bg-odds.html",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "First-choice applicants and permits by point level; youth reported separately."
+    },
+    {
+      "id": "d-bear-odds-2025",
+      "title": "2025 Black bear drawing odds (2025 Draw 1)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/bear/25_drawing_odds.pdf",
+      "pageUrl": "https://wildlife.utah.gov/drawing-odds-and-point-results.html",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "d-turkey-odds-2025",
+      "title": "2025 Turkey drawing results and bonus point purchase results (2025 Draw T)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/uplandgame/turkey/2025_turkey_bonus_points_draw_results.pdf",
+      "pageUrl": "https://wildlife.utah.gov/drawing-odds-and-point-results.html",
+      "dataYear": 2025,
+      "retrieved": "2026-10-31",
+      "notes": "Adult draw; youth turkey results are a separate report."
+    },
+    {
+      "id": "d-cougar-odds-2021-22",
+      "title": "Cougar drawing odds 2021-22 (2022 Draw R, Cougar Bonus Point Draw Results)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/cougar/2022_cougar_odds_report.pdf",
+      "pageUrl": "https://wildlife.utah.gov/drawing-odds-and-point-results.html",
+      "dataYear": 2021,
+      "retrieved": "2026-10-31",
+      "notes": "Drawn October 2021 for the 2021-22 cougar season."
+    },
+    {
+      "id": "d-cougar-odds-2022-23",
+      "title": "Cougar drawing odds 2022-23 (2022 Draw 1, Black Bear & Cougar Bonus Point Draw Results)",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/pdf/cougar/2023_cougar_odds_report.pdf",
+      "pageUrl": "https://wildlife.utah.gov/drawing-odds-and-point-results.html",
+      "dataYear": 2022,
+      "retrieved": "2026-10-31",
+      "notes": "Drawn June 2022 for the 2022-23 cougar season; last cougar draw before Utah removed cougar permits in 2023."
+    },
+    {
+      "id": "d-api-2026-general-deer",
+      "title": "UDWR Draw Odds, 2026 Big Game draw: General-Season Buck Deer",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Big%20Game&licenseYear=2026&masterHuntTypeID=5",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-le-deer",
+      "title": "UDWR Draw Odds, 2026 Big Game draw: Limited-Entry Buck Deer",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Big%20Game&licenseYear=2026&masterHuntTypeID=8",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-le-elk",
+      "title": "UDWR Draw Odds, 2026 Big Game draw: Limited-Entry Bull Elk",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Big%20Game&licenseYear=2026&masterHuntTypeID=9",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-le-pronghorn",
+      "title": "UDWR Draw Odds, 2026 Big Game draw: Limited-Entry Buck Pronghorn",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Big%20Game&licenseYear=2026&masterHuntTypeID=10",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-moose",
+      "title": "UDWR Draw Odds, 2026 Big Game draw: Bull Moose",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Big%20Game&licenseYear=2026&masterHuntTypeID=11",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-desert-sheep",
+      "title": "UDWR Draw Odds, 2026 Big Game draw: Desert Bighorn Sheep",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Big%20Game&licenseYear=2026&masterHuntTypeID=13",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-rm-sheep",
+      "title": "UDWR Draw Odds, 2026 Big Game draw: Rocky Mtn Bighorn Sheep",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Big%20Game&licenseYear=2026&masterHuntTypeID=14",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-goat",
+      "title": "UDWR Draw Odds, 2026 Big Game draw: Mountain Goat",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Big%20Game&licenseYear=2026&masterHuntTypeID=15",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-bear",
+      "title": "UDWR Draw Odds, 2026 Black Bear draw: Black Bear",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Black%20Bear&licenseYear=2026&masterHuntTypeID=1",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-turkey",
+      "title": "UDWR Draw Odds, 2026 Turkey draw: Turkey",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Turkey&licenseYear=2026&masterHuntTypeID=3",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-antlerless-deer",
+      "title": "UDWR Draw Odds, 2026 Antlerless draw: Antlerless Deer",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Antlerless&licenseYear=2026&masterHuntTypeID=17",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-antlerless-elk",
+      "title": "UDWR Draw Odds, 2026 Antlerless draw: Antlerless Elk",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Antlerless&licenseYear=2026&masterHuntTypeID=18",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-antlerless-moose",
+      "title": "UDWR Draw Odds, 2026 Antlerless draw: Antlerless Moose",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Antlerless&licenseYear=2026&masterHuntTypeID=19",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-doe-pronghorn",
+      "title": "UDWR Draw Odds, 2026 Antlerless draw: Doe Pronghorn",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Antlerless&licenseYear=2026&masterHuntTypeID=20",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-api-2026-ewe-sheep",
+      "title": "UDWR Draw Odds, 2026 Antlerless draw: Ewe Rocky Mtn Bighorn Sheep",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://www.utahdraws.com/internetsales/Home/DrawOddsData?drawName=Antlerless&licenseYear=2026&masterHuntTypeID=21",
+      "pageUrl": "https://utahdraws.com/drawodds",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR's online draw-odds system (linked from wildlife.utah.gov/biggameapp odds pages as 'the new draw odds page'); 2026 results were published here instead of a PDF. JSON fields used: HuntCode, HuntName, quotas, OddsList ParticipantCount (1st choice apps) and SuccessfulCount (1st choice permits)."
+    },
+    {
+      "id": "d-bg-guide-2026",
+      "title": "Utah Big Game Application Guidebook 2026",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/guidebooks/biggameapp.pdf",
+      "pageUrl": "https://wildlife.utah.gov/guidebooks",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "d-antlerless-guide-2026",
+      "title": "Utah Antlerless Application Guidebook 2026",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/guidebooks/antlerless_guidebook.pdf",
+      "pageUrl": "https://wildlife.utah.gov/guidebooks",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "d-bear-guide-2026",
+      "title": "Utah Black Bear, Cougar and Furbearer Guidebook 2026",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/guidebooks/black-bear-cougar-furbearer-guidebook.pdf",
+      "pageUrl": "https://wildlife.utah.gov/guidebooks",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "d-turkey-guide-2026-27",
+      "title": "Utah Waterfowl, Upland Game and Turkey Guidebook 2026-27",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/guidebooks/waterfowl-upland-game-turkey-guidebook.pdf",
+      "pageUrl": "https://wildlife.utah.gov/guidebooks",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "Includes the 2027 spring limited-entry turkey application dates."
+    },
+    {
+      "id": "d-fees",
+      "title": "Fees: licenses, permits & miscellaneous",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/fees",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "Page last updated Oct. 8, 2026. Nonresident permit fee increases took effect Sept. 1, 2025."
+    },
+    {
+      "id": "d-rule-r657-62",
+      "title": "Utah Admin. Rule R657-62: Drawing application procedures",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/rules/r657-62",
+      "retrieved": "2026-10-31"
+    },
+    {
+      "id": "d-points",
+      "title": "How bonus and preference points work",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/licenses/points",
+      "retrieved": "2026-10-31",
+      "notes": "Page last updated April 13, 2026."
+    },
+    {
+      "id": "d-news-sportsman-2027",
+      "title": "Apply for Utah's most prized hunting permits, starting Oct. 20",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/news/2026/10/13/apply-for-sportsman-hunting-permits-starting-october-20",
+      "pageUrl": "https://wildlife.utah.gov/news",
+      "dataYear": 2027,
+      "retrieved": "2026-10-31",
+      "notes": "UDWR news release published Oct. 13, 2026: 2027 sportsman permit applications Oct. 20 (8 a.m. MDT) - Nov. 10, 2026 (11 p.m. MST), results Nov. 19; Utah residents only; one statewide permit each for bison, black bear, buck deer, buck pronghorn, bull elk, bull moose, desert bighorn sheep, mountain goat, Rocky Mountain bighorn sheep and wild turkey; $10 non-refundable application fee per species; no bonus points earned or used."
+    }
+  ]
+}
