@@ -14,18 +14,22 @@ import {
   TrendingUp,
   ClipboardList,
   Calendar,
+  ListChecks,
   LogOut,
   User,
 } from "lucide-react";
 
 const navLinks = [
   { href: "/states", label: "States", icon: Map },
+  { href: "/shortlist", label: "Shortlist", icon: ListChecks },
   { href: "/turkey", label: "Turkey", icon: Bird },
   { href: "/compare", label: "Compare", icon: GitCompareArrows },
   { href: "/trends", label: "Trends", icon: TrendingUp },
   { href: "/planner", label: "Planner", icon: ClipboardList },
   { href: "/calendar", label: "Calendar", icon: Calendar },
 ];
+// Desktop nav shows the first PRIMARY_LINKS as one group, the rest after a divider.
+const PRIMARY_LINKS = 4;
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -79,7 +83,7 @@ export function Header() {
         <nav className="hidden lg:flex items-center">
           {/* Primary nav group */}
           <div className="flex items-center gap-0.5">
-            {navLinks.slice(0, 3).map((link) => (
+            {navLinks.slice(0, PRIMARY_LINKS).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -99,7 +103,7 @@ export function Header() {
 
           {/* Secondary nav group */}
           <div className="flex items-center gap-0.5">
-            {navLinks.slice(3).map((link) => (
+            {navLinks.slice(PRIMARY_LINKS).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
