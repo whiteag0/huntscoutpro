@@ -7,7 +7,8 @@
     "prebuild": "node scripts/agency/build-index.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:shortlist": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --disable-warning=ExperimentalWarning --import ./tests/register.mjs --test tests/shortlist-core.test.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
