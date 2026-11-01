@@ -73,6 +73,18 @@ test("next application deadline: soonest open one for the residency, current cyc
   const bear: Pick<SpeciesInfo, "keyDates"> = { keyDates: [kd({ label: "Spring black bear controlled hunt application period", start: "2027-01-15", end: "2027-02-15" })] };
   assert.equal(nextApplicationDeadline(bear, "resident", "2026-10-31", "Fall Black Bear Controlled Hunt — Hunt Area 1-1"), null);
   assert.equal(nextApplicationDeadline(bear, "resident", "2026-10-31", "Controlled Hunt — Hunt Area 22-1")!.end, "2027-02-15");
+  // Separate spring and fall draws (Idaho bear/turkey): a hunt whose season can't be told gets neither date,
+  // and season dates settle it when the description doesn't say.
+  const split: Pick<SpeciesInfo, "keyDates"> = {
+    keyDates: [
+      kd({ label: "Spring turkey controlled hunt application period", start: "2027-02-01", end: "2027-03-01" }),
+      kd({ label: "Fall turkey controlled hunt application period", start: "2027-05-01", end: "2027-06-05" }),
+    ],
+  };
+  assert.equal(nextApplicationDeadline(split, "resident", "2026-10-31", "Controlled Hunt — Hunt Area 54"), null);
+  assert.equal(nextApplicationDeadline(split, "resident", "2026-10-31", "Controlled Hunt — Hunt Area 54", "2026-09-15 to 2026-10-09")!.end, "2027-06-05");
+  assert.equal(nextApplicationDeadline(split, "resident", "2026-10-31", "Controlled Hunt — Hunt Area 54", "2026-04-15 to 2026-05-25")!.end, "2027-03-01");
+  assert.equal(nextApplicationDeadline(split, "resident", "2026-10-31", "Fall Controlled Hunt — Hunt Area 54")!.end, "2027-06-05");
   // Without a hunt (generic listing) every application date counts.
   assert.equal(nextApplicationDeadline(special, "resident", "2026-10-31")!.end, "2026-11-10");
 });

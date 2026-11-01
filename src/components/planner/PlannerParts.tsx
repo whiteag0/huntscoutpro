@@ -217,7 +217,8 @@ export function AgencyDetails({
         ) : (
           <div className="text-muted-foreground">
             <p>
-              {a.agencyShortName || a.agencyName} hasn&apos;t published an upcoming {SPECIES_LABELS[hunt.species].toLowerCase()} application date in our data yet.{" "}
+              No upcoming {a.agencyShortName || a.agencyName} {a.residency} {SPECIES_LABELS[hunt.species].toLowerCase()} application date in our data matches this
+              hunt yet (most agencies publish next year&apos;s dates in winter).{" "}
               <SourceLink href={a.sourceUrl}>Check the agency</SourceLink>
             </p>
             <label className="mt-2 flex flex-wrap items-center gap-2 text-xs">

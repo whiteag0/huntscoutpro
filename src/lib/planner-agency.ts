@@ -28,12 +28,41 @@ const LATER_ROUND = /\bsecond(ary)?\b/i;
 const SPRING = /\bspring\b/i;
 const FALL = /\bfall\b/i;
 
-/** Whether a key date is for the drawing a hunt with this description is applied for in. */
-function fitsHunt(label: string, huntDescription: string): boolean {
+type HuntSeason = "spring" | "fall" | null;
+
+/** The season a key-date label is limited to ("Spring turkey ... application period"), if exactly one. */
+function labelSeason(label: string): HuntSeason {
+  const sp = SPRING.test(label);
+  const fa = FALL.test(label);
+  return sp && !fa ? "spring" : fa && !sp ? "fall" : null;
+}
+
+/**
+ * The hunt's season from its description, else from its season dates' first
+ * month (Mar-Jun spring, Aug-Dec fall). Null when neither tells.
+ */
+function huntSeason(description: string, seasonDates?: string): HuntSeason {
+  const named = labelSeason(description);
+  if (named) return named;
+  const m = /^\d{4}-(\d{2})-\d{2}/.exec(seasonDates || "");
+  const month = m ? Number(m[1]) : 0;
+  if (month >= 3 && month <= 6) return "spring";
+  if (month >= 8 && month <= 12) return "fall";
+  return null;
+}
+
+/**
+ * Whether a key date is for the drawing a hunt with this description is applied for in.
+ * `seasonsInUse` = the seasons the species' application dates are split by. When the
+ * agency runs separate spring and fall draws and the hunt's season can't be told,
+ * neither date is assumed (a fall hunt must not get the spring deadline).
+ */
+function fitsHunt(label: string, huntDescription: string, seasonDates: string | undefined, seasonsInUse: ReadonlySet<HuntSeason>): boolean {
   if (LATER_ROUND.test(label)) return false;
-  // A spring application doesn't cover a hunt described as fall, and vice versa.
-  for (const [a, b] of [[SPRING, FALL], [FALL, SPRING]] as const) {
-    if (a.test(label) && !b.test(label) && b.test(huntDescription) && !a.test(huntDescription)) return false;
+  const ls = labelSeason(label);
+  if (ls) {
+    const hs = huntSeason(huntDescription, seasonDates);
+    if (hs ? hs !== ls : seasonsInUse.has(ls === "spring" ? "fall" : "spring")) return false;
   }
   return SPECIAL_DRAWINGS.every((re) => !re.test(label) || re.test(huntDescription));
 }
@@ -47,7 +76,8 @@ export function isApplicationLabel(label: string): boolean {
  * someone applying as `residency`: the soonest-ending key date whose label is
  * an application window/deadline, in this year's cycle or later, and not
  * limited to the other residency (same rules as deadline reminders).
- * With `huntDescription` (adding a specific hunt), second-round dates and
+ * With `huntDescription` (adding a specific hunt; `seasonDates` helps tell spring
+ * from fall when the description doesn't say), second-round dates and
  * separate drawings (general-season tags, sportsman/landowner/youth permits...)
  * are skipped unless the hunt's description names that drawing.
  */
@@ -55,12 +85,14 @@ export function nextApplicationDeadline(
   info: Pick<SpeciesInfo, "keyDates">,
   residency: PlannerResidency,
   today: string,
-  huntDescription?: string
+  huntDescription?: string,
+  seasonDates?: string
 ): (KeyDate & { end: string }) | null {
   let best: (KeyDate & { end: string }) | null = null;
+  const seasonsInUse = new Set(info.keyDates.filter((k) => isApplicationLabel(k.label)).map((k) => labelSeason(k.label)));
   for (const k of info.keyDates) {
     if (!isApplicationLabel(k.label)) continue;
-    if (huntDescription !== undefined && !fitsHunt(k.label, huntDescription)) continue;
+    if (huntDescription !== undefined && !fitsHunt(k.label, huntDescription, seasonDates, seasonsInUse)) continue;
     const end = openKeyDateEnd(k, residency, today);
     if (!end) continue;
     if (!best || end < best.end || (end === best.end && k.label.localeCompare(best.label) < 0)) best = { ...k, end };
@@ -147,7 +179,7 @@ export function buildAgencyHunt(opts: {
   id: string;
 }): PlannedHunt {
   const { state: st, info, row, residency, today, now, id } = opts;
-  const k = nextApplicationDeadline(info, residency, today, row.description);
+  const k = nextApplicationDeadline(info, residency, today, row.description, row.seasonDates);
   const kSrc = k ? sourceOf(st, k.sourceId) : undefined;
   const deadline: AgencyDeadline | null = k
     ? {

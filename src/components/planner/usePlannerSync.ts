@@ -18,6 +18,7 @@ import {
   type PlannerDoc,
 } from "@/lib/planner-schema";
 import { defaultChecklist } from "@/components/planner/defaults";
+import { invalidatePlannerIndex } from "@/components/planner/plannerIndex";
 
 /** Browser-only planner (non-members) and the source for the one-time move into an account. */
 const LEGACY_KEY = "huntscout-planner";
@@ -72,10 +73,20 @@ function migrated(email: string): boolean {
   const list = readJson(MIGRATED_KEY);
   return Array.isArray(list) && list.includes(email);
 }
-function markMigrated(email: string) {
+/**
+ * The browser-only planner is now in this member's account: remove it, so it
+ * isn't merged into the next account that signs in on this browser (a shared
+ * computer) and doesn't linger here as a stale copy.
+ */
+function finishMigration(email: string) {
   const list = readJson(MIGRATED_KEY);
   const next = Array.isArray(list) ? list.filter((x) => typeof x === "string") : [];
   if (!next.includes(email)) writeJson(MIGRATED_KEY, [...next, email].slice(-10));
+  try {
+    localStorage.removeItem(LEGACY_KEY);
+  } catch {
+    // Storage blocked: the migrated marker still stops a second merge into this account.
+  }
 }
 
 function withDefaults(d: PlannerData): PlannerData {
@@ -143,8 +154,10 @@ export function usePlannerSync({ ready, email, isPro }: { ready: boolean; email:
           s.baseVersion = body.version;
           if (s.rev === rev) s.dirty = false;
           persistCache();
+          // "Add to my planner" buttons re-read which hunts are in the planner.
+          invalidatePlannerIndex();
           if (s.migrating && email) {
-            markMigrated(email);
+            finishMigration(email);
             s.migrating = false;
           }
           setStatus(s.dirty ? { kind: "pending" } : { kind: "saved", at: body.updatedAt ?? null, justSaved: true });
@@ -237,7 +250,7 @@ export function usePlannerSync({ ready, email, isPro }: { ready: boolean; email:
     } else {
       s.dirty = false;
       if (s.migrating) {
-        markMigrated(email);
+        finishMigration(email);
         s.migrating = false;
       }
       persistCache();
@@ -303,10 +316,19 @@ export function usePlannerSync({ ready, email, isPro }: { ready: boolean; email:
     };
   }, [account, pull, save]);
 
+  // Leaving the page (client-side navigation) with a save still waiting: send it
+  // now. The request outlives the unmount; nothing here touches the DOM.
+  const saveRef = useRef(save);
+  useEffect(() => {
+    saveRef.current = save;
+  }, [save]);
   useEffect(() => {
     const s = r.current;
     return () => {
-      if (s.timer) clearTimeout(s.timer);
+      if (!s.timer) return;
+      clearTimeout(s.timer);
+      s.timer = null;
+      if (s.dirty) void saveRef.current();
     };
   }, []);
 

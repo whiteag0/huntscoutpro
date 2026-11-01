@@ -31,7 +31,7 @@ export function AddToPlannerButton({
   const { data: session } = useSession();
   const isPro = !!session?.user?.isPro;
   usePlannerIndex(isPro);
-  const state = plannerState(slug, row.huntCode, plannedCycle(info, residency, row.description));
+  const state = plannerState(slug, row.huntCode, plannedCycle(info, residency, row));
 
   const base =
     variant === "card"

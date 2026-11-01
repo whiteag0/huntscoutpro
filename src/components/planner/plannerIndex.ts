@@ -68,6 +68,11 @@ export function dismissToast() {
   emit();
 }
 
+/** The planner was saved elsewhere on this page's session: reload the index the next time a button mounts. */
+export function invalidatePlannerIndex() {
+  loadedAt = 0;
+}
+
 /** (Re)load the index from the account. Cheap no-op when loaded in the last 30 s. */
 export function refreshPlannerIndex(force = false): Promise<void> {
   if (inflight) return inflight;
@@ -89,8 +94,8 @@ export function refreshPlannerIndex(force = false): Promise<void> {
 }
 
 /** The planning cycle an add would get: the agency's next application date for this species/residency. */
-export function plannedCycle(info: Pick<SpeciesInfo, "keyDates">, residency: PlannerResidency, huntDescription: string): number | null {
-  return nextApplicationDeadline(info, residency, todayIso(), huntDescription)?.cycle ?? null;
+export function plannedCycle(info: Pick<SpeciesInfo, "keyDates">, residency: PlannerResidency, row: Pick<DrawRecord, "description" | "seasonDates">): number | null {
+  return nextApplicationDeadline(info, residency, todayIso(), row.description, row.seasonDates)?.cycle ?? null;
 }
 
 /** Same rule as sameAgencyHunt(): same state + hunt code, and the same cycle when both are known. */
@@ -146,7 +151,7 @@ export async function addToPlanner(opts: { slug: string; stateName: string; info
     } else {
       showToast(
         "success",
-        `Added ${stateName} ${row.huntCode} to your planner${d ? `, with the ${body.hunt?.agency?.agencyShortName || "agency"} ${d.cycle} application date.` : ". The agency hasn't published the next application date yet."}`,
+        `Added ${stateName} ${row.huntCode} to your planner${d ? `, with the ${body.hunt?.agency?.agencyShortName || "agency"} ${d.cycle} application date.` : ". No upcoming agency application date in our data matches it yet."}`,
         true
       );
     }
