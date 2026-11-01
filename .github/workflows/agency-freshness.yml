@@ -1,0 +1,104 @@
+# Weekly check of the state wildlife agency pages in scripts/agency/watch.json.
+# Opens (or comments on) one issue, "Agency data updates available", when new
+# document links or new next-cycle date mentions appear. See scripts/agency/README.md.
+name: Agency data freshness
+
+on:
+  schedule:
+    - cron: "0 15 * * 1" # Mondays 15:00 UTC (8 or 9 am in Colorado)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  actions: read # only to fall back to the last run's snapshot artifact if the cache was evicted
+
+concurrency:
+  group: agency-freshness
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SNAPSHOT: .agency-freshness/snapshot.json
+      REPORT: .agency-freshness/report.md
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Restore snapshot (cache)
+        uses: actions/cache/restore@v4
+        with:
+          path: .agency-freshness/snapshot.json
+          key: agency-freshness-${{ github.run_id }}
+          restore-keys: agency-freshness-
+
+      # GitHub evicts caches that are not read for 7 days, which a weekly schedule can
+      # hit. Without this fallback an evicted cache would silently turn the run into a
+      # new baseline and hide a week of changes.
+      - name: Restore snapshot (last run's artifact, if the cache missed)
+        if: hashFiles('.agency-freshness/snapshot.json') == ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          run_id=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow agency-freshness.yml --status success --limit 1 --json databaseId --jq '.[0].databaseId // empty' || true)
+          if [ -n "$run_id" ]; then
+            gh run download "$run_id" --repo "$GITHUB_REPOSITORY" --name agency-freshness-snapshot --dir .agency-freshness || echo "No snapshot artifact on run $run_id"
+          fi
+          if [ -f "$SNAPSHOT" ]; then echo "Snapshot restored from run $run_id"; else echo "No snapshot found: this run is a baseline"; fi
+
+      - name: Check agency pages
+        id: fresh
+        run: node scripts/agency/freshness.mjs --state-file "$SNAPSHOT" --report-file "$REPORT"
+
+      - name: Save snapshot (cache)
+        if: always() && hashFiles('.agency-freshness/snapshot.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .agency-freshness/snapshot.json
+          key: agency-freshness-${{ github.run_id }}
+
+      - name: Keep snapshot and report as an artifact
+        if: always() && hashFiles('.agency-freshness/snapshot.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: agency-freshness-snapshot
+          path: |
+            .agency-freshness/snapshot.json
+            .agency-freshness/report.md
+          retention-days: 90
+
+      - name: Job summary
+        if: always() && hashFiles('.agency-freshness/report.md') != ''
+        run: cat "$REPORT" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open or update the "Agency data updates available" issue
+        if: steps.fresh.outputs.changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TITLE: Agency data updates available
+          NEW_DOCS: ${{ steps.fresh.outputs.new_docs }}
+          NEW_MENTIONS: ${{ steps.fresh.outputs.new_mentions }}
+          CYCLE: ${{ steps.fresh.outputs.cycle }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh label create agency-data --repo "$GITHUB_REPOSITORY" --color 0E8A16 \
+            --description "New official agency data to import" 2>/dev/null || true
+          {
+            echo "**Weekly agency check:** $NEW_DOCS new document link(s), $NEW_MENTIONS new $CYCLE mention(s). [Workflow run]($RUN_URL)"
+            echo
+            cat "$REPORT"
+          } > .agency-freshness/issue.md
+          number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "\"$TITLE\" in:title" \
+            --json number,title --jq "[.[] | select(.title == \"$TITLE\")][0].number // empty")
+          if [ -n "$number" ]; then
+            gh issue comment "$number" --repo "$GITHUB_REPOSITORY" --body-file .agency-freshness/issue.md
+            gh issue edit "$number" --repo "$GITHUB_REPOSITORY" --add-label agency-data || true
+          else
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$TITLE" --label agency-data --body-file .agency-freshness/issue.md
+          fi
