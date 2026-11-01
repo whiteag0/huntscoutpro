@@ -21,6 +21,9 @@ export default function PrivacyPage() {
             <p>
               If you use the &ldquo;Request a state&rdquo; form, we receive the information you enter: your name, email address, optional phone number, home state, the state you&apos;re requesting, your residency for that state, species, method of take, when you plan to hunt, any notes, and whether you want to be emailed when the state goes live. If you&apos;re signed in, the request also includes your account email and whether you&apos;re a Pro member.
             </p>
+            <p>
+              If you sign up for free deadline reminders, we receive your email address, the state, species and residency you choose, and the page you signed up on.
+            </p>
           </section>
 
           <section className="space-y-3">
@@ -31,12 +34,18 @@ export default function PrivacyPage() {
             <p>
               State requests are emailed to our team through Resend, our email provider. We use them only to follow up with you about your request and to decide which states to add next. We don&apos;t add you to a mailing list or share your request with anyone else.
             </p>
+            <p>
+              Free deadline reminder signups are used only to send you a confirmation email and, once you confirm, reminders for the state you chose. Each reminder includes a short note about HuntScout Pro and a one-click unsubscribe link.
+            </p>
           </section>
 
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-foreground">3. Data Storage</h2>
             <p>
-              We do not keep a separate customer database. Your sign-in session is kept in an encrypted cookie in your browser. Your purchase record (including your email address, the amount, and the purchase date) is held by Stripe, and we check it with Stripe to confirm your Pro access. If you are a Pro member and answer our hunting-preferences questions, your answers are stored with your purchase record at Stripe, and a copy is emailed to our team so we can follow up. State requests are not stored in a database; they exist only as the email sent to our team. Hunt planner data is stored only in your browser; the planner&apos;s export option saves a file to your own device and does not send it to us.
+              Apart from free deadline reminder signups (described below), we do not keep a separate customer database. Your sign-in session is kept in an encrypted cookie in your browser. Your purchase record (including your email address, the amount, and the purchase date) is held by Stripe, and we check it with Stripe to confirm your Pro access. If you are a Pro member and answer our hunting-preferences questions, your answers are stored with your purchase record at Stripe, and a copy is emailed to our team so we can follow up. State requests are not stored in a database; they exist only as the email sent to our team. Hunt planner data is stored only in your browser; the planner&apos;s export option saves a file to your own device and does not send it to us.
+            </p>
+            <p>
+              Free deadline reminder signups (your email address, your choices, and when you signed up, confirmed or unsubscribed) are stored in a private storage area at Vercel, our host, filed under a scrambled (hashed) ID rather than your address. Signups that are never confirmed are deleted after 30 days. If you unsubscribe, the record is kept, marked as unsubscribed, so nothing more is sent; email us and we&apos;ll delete it.
             </p>
           </section>
 

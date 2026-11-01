@@ -20,6 +20,7 @@ import {
 import { PRICE } from "@/lib/promo";
 import { Crosshair as BrandCrosshair } from "@/components/ComingSoonState";
 import type { HomeData } from "@/components/home/types";
+import { FreeRemindersSignup } from "@/components/growth/FreeRemindersSignup";
 
 /* ------------------------------------------------------------------ */
 /*  SCROLL ANIMATION HOOK                                              */
@@ -511,6 +512,13 @@ export function MarketingHome({ data }: { data: HomeData }) {
               <span className="font-semibold text-foreground">Being checked against agency reports now:</span>{" "}
               {listNames(upcomingStates)}.
             </p>
+          )}
+
+          {/* Free one-state deadline reminders (lead magnet) */}
+          {liveStates.length > 0 && (
+            <RevealSection>
+              <FreeRemindersSignup source="home" className="mt-10" />
+            </RevealSection>
           )}
 
           {/* Coming soon / request a state */}
