@@ -2443,11 +2443,17 @@
   "method": "archery",
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
-  "seasonDates": "2026: Sept. 1-Sept. 25",
+  "seasonDates": "2026: Sept. 1-Sept. 25 (Residents Only); 2026: Sept. 5-Sept. 25 (Nonresidents Only)",
   "seasonRanges": [
    {
     "start": "2026-09-01",
-    "end": "2026-09-25"
+    "end": "2026-09-25",
+    "label": "Residents Only"
+   },
+   {
+    "start": "2026-09-05",
+    "end": "2026-09-25",
+    "label": "Nonresidents Only"
    }
   ],
   "seasonSourceId": "d-supp-2026",
@@ -2470,11 +2476,17 @@
   "method": "archery",
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
-  "seasonDates": "2026: Sept. 1-Sept. 25",
+  "seasonDates": "2026: Sept. 1-Sept. 25 (Residents Only); 2026: Sept. 5-Sept. 25 (Nonresidents Only)",
   "seasonRanges": [
    {
     "start": "2026-09-01",
-    "end": "2026-09-25"
+    "end": "2026-09-25",
+    "label": "Residents Only"
+   },
+   {
+    "start": "2026-09-05",
+    "end": "2026-09-25",
+    "label": "Nonresidents Only"
    }
   ],
   "seasonSourceId": "d-supp-2026",
@@ -5081,11 +5093,17 @@
   "method": "archery",
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
-  "seasonDates": "2025: Sept. 1-Sept. 25",
+  "seasonDates": "2025: Sept. 1-Sept. 25 (Residents Only); 2025: Sept. 5-Sept. 25 (Nonresidents Only)",
   "seasonRanges": [
    {
     "start": "2025-09-01",
-    "end": "2025-09-25"
+    "end": "2025-09-25",
+    "label": "Residents Only"
+   },
+   {
+    "start": "2025-09-05",
+    "end": "2025-09-25",
+    "label": "Nonresidents Only"
    }
   ],
   "seasonSourceId": "d-supp-2025",
@@ -5108,11 +5126,17 @@
   "method": "archery",
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
-  "seasonDates": "2025: Sept. 1-Sept. 25",
+  "seasonDates": "2025: Sept. 1-Sept. 25 (Residents Only); 2025: Sept. 5-Sept. 25 (Nonresidents Only)",
   "seasonRanges": [
    {
     "start": "2025-09-01",
-    "end": "2025-09-25"
+    "end": "2025-09-25",
+    "label": "Residents Only"
+   },
+   {
+    "start": "2025-09-05",
+    "end": "2025-09-25",
+    "label": "Nonresidents Only"
    }
   ],
   "seasonSourceId": "d-supp-2025",
@@ -7679,11 +7703,17 @@
   "method": "archery",
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
-  "seasonDates": "2024: Sept. 1-Sept. 25",
+  "seasonDates": "2024: Sept. 1-Sept. 25 (Residents Only); 2024: Sept. 5-Sept. 25 (Nonresidents Only)",
   "seasonRanges": [
    {
     "start": "2024-09-01",
-    "end": "2024-09-25"
+    "end": "2024-09-25",
+    "label": "Residents Only"
+   },
+   {
+    "start": "2024-09-05",
+    "end": "2024-09-25",
+    "label": "Nonresidents Only"
    }
   ],
   "seasonSourceId": "d-supp-2024",
@@ -7706,11 +7736,17 @@
   "method": "archery",
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
-  "seasonDates": "2024: Sept. 1-Sept. 25",
+  "seasonDates": "2024: Sept. 1-Sept. 25 (Residents Only); 2024: Sept. 5-Sept. 25 (Nonresidents Only)",
   "seasonRanges": [
    {
     "start": "2024-09-01",
-    "end": "2024-09-25"
+    "end": "2024-09-25",
+    "label": "Residents Only"
+   },
+   {
+    "start": "2024-09-05",
+    "end": "2024-09-25",
+    "label": "Nonresidents Only"
    }
   ],
   "seasonSourceId": "d-supp-2024",
@@ -10326,11 +10362,17 @@
   "method": "archery",
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
-  "seasonDates": "2023: Sept. 1-Sept. 25",
+  "seasonDates": "2023: Sept. 1-Sept. 25 (Residents Only); 2023: Sept. 5-Sept. 25 (Nonresidents Only)",
   "seasonRanges": [
    {
     "start": "2023-09-01",
-    "end": "2023-09-25"
+    "end": "2023-09-25",
+    "label": "Residents Only"
+   },
+   {
+    "start": "2023-09-05",
+    "end": "2023-09-25",
+    "label": "Nonresidents Only"
    }
   ],
   "seasonSourceId": "d-supp-2023",
@@ -10353,11 +10395,17 @@
   "method": "archery",
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
-  "seasonDates": "2023: Sept. 1-Sept. 25",
+  "seasonDates": "2023: Sept. 1-Sept. 25 (Residents Only); 2023: Sept. 5-Sept. 25 (Nonresidents Only)",
   "seasonRanges": [
    {
     "start": "2023-09-01",
-    "end": "2023-09-25"
+    "end": "2023-09-25",
+    "label": "Residents Only"
+   },
+   {
+    "start": "2023-09-05",
+    "end": "2023-09-25",
+    "label": "Nonresidents Only"
    }
   ],
   "seasonSourceId": "d-supp-2023",
@@ -10954,11 +11002,11 @@
    "14A"
   ],
   "description": "Unit 14A — Residents Only",
-  "seasonDates": "2022: Nov. 1-30",
+  "seasonDates": "2022: Dec. 1-25",
   "seasonRanges": [
    {
-    "start": "2022-11-01",
-    "end": "2022-11-30"
+    "start": "2022-12-01",
+    "end": "2022-12-25"
    }
   ],
   "seasonSourceId": "d-supp-2022",
@@ -12670,11 +12718,17 @@
   "method": "archery",
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
-  "seasonDates": "2022: Sept. 1-Sept. 25",
+  "seasonDates": "2022: Sept. 1-Sept. 25 (Residents Only); 2022: Sept. 5-Sept. 25 (Nonresidents Only)",
   "seasonRanges": [
    {
     "start": "2022-09-01",
-    "end": "2022-09-25"
+    "end": "2022-09-25",
+    "label": "Residents Only"
+   },
+   {
+    "start": "2022-09-05",
+    "end": "2022-09-25",
+    "label": "Nonresidents Only"
    }
   ],
   "seasonSourceId": "d-supp-2022",
@@ -12697,11 +12751,17 @@
   "method": "archery",
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
-  "seasonDates": "2022: Sept. 1-Sept. 25",
+  "seasonDates": "2022: Sept. 1-Sept. 25 (Residents Only); 2022: Sept. 5-Sept. 25 (Nonresidents Only)",
   "seasonRanges": [
    {
     "start": "2022-09-01",
-    "end": "2022-09-25"
+    "end": "2022-09-25",
+    "label": "Residents Only"
+   },
+   {
+    "start": "2022-09-05",
+    "end": "2022-09-25",
+    "label": "Nonresidents Only"
    }
   ],
   "seasonSourceId": "d-supp-2022",

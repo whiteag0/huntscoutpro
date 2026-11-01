@@ -86,10 +86,29 @@ def parse_group(text, year):
     return pfx, out
 
 
+LABEL = re.compile(r"^(.*?)\s*\(([^()]+)\)\s*$")
+
+
+def split_label(group):
+    """'2026: Sept. 5-Sept. 25 (Nonresidents Only)' -> ('2026: Sept. 5-Sept. 25', 'Nonresidents Only').
+    A trailing parenthesised label marks a season the supplement prints separately for one class of hunter
+    within the same hunt (e.g. DM920/DM922: residents Sept. 1-25, nonresidents Sept. 5-25)."""
+    m = LABEL.match(group.strip())
+    return (m.group(1), m.group(2).strip()) if m else (group, None)
+
+
 def parse(text, year):
-    """seasonDates -> [{'start','end'}], plus the list of (prefix, ranges) groups for the round trip."""
-    groups = [parse_group(g, year) for g in text.split("; ")]
-    ranges = [{"start": s.isoformat(), "end": e.isoformat()} for _, rr in groups for s, e in rr]
+    """seasonDates -> [{'start','end'[,'label']}], plus the list of (prefix, ranges) groups for the round trip."""
+    groups, ranges = [], []
+    for g in text.split("; "):
+        body, label = split_label(g)
+        pfx, rr = parse_group(body, year)
+        groups.append((pfx, rr))
+        for s, e in rr:
+            r = {"start": s.isoformat(), "end": e.isoformat()}
+            if label:
+                r["label"] = label
+            ranges.append(r)
     return ranges, groups
 
 
@@ -114,7 +133,7 @@ def canonical(text):
     month spellings), keeping the printed year prefix."""
     out = []
     for g in text.split("; "):
-        g = re.sub(r"\s+", " ", g.strip())
+        g = re.sub(r"\s+", " ", split_label(g)[0].strip())
         m = PFX.match(g)
         lead, body = (g[:m.start(3)], m.group(3)) if m else ("", g)
         segs = []

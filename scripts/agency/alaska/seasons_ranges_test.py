@@ -51,6 +51,15 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(rng("2026: July 1-Aug. 31 and Sep. 5-Sept. 9", 2026),
                          [("2026-07-01", "2026-08-31"), ("2026-09-05", "2026-09-09")])
 
+    def test_residency_labels(self):
+        # DM920/DM922: the supplement prints residents Sept. 1-25 and nonresidents Sept. 5-25 for one hunt number
+        ranges, _ = sr.parse("2026: Sept. 1-Sept. 25 (Residents Only); 2026: Sept. 5-Sept. 25 (Nonresidents Only)", 2026)
+        self.assertEqual(ranges, [{"start": "2026-09-01", "end": "2026-09-25", "label": "Residents Only"},
+                                  {"start": "2026-09-05", "end": "2026-09-25", "label": "Nonresidents Only"}])
+        ok, kind, _ = sr.round_trip("2026: Sept. 1-Sept. 25 (Residents Only); 2026: Sept. 5-Sept. 25 (Nonresidents Only)", 2026)
+        self.assertTrue(ok)
+        self.assertEqual(kind, "exact")
+
     def test_bad_segment_raises(self):
         with self.assertRaises(sr.SeasonParseError):
             sr.parse("2026: to be announced", 2026)
