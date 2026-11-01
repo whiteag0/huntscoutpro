@@ -14,18 +14,22 @@ import {
   TrendingUp,
   ClipboardList,
   Calendar,
+  ListChecks,
   LogOut,
   User,
 } from "lucide-react";
 
 const navLinks = [
   { href: "/states", label: "States", icon: Map },
+  { href: "/shortlist", label: "Shortlist", icon: ListChecks },
   { href: "/turkey", label: "Turkey", icon: Bird },
   { href: "/compare", label: "Compare", icon: GitCompareArrows },
   { href: "/trends", label: "Trends", icon: TrendingUp },
   { href: "/planner", label: "Planner", icon: ClipboardList },
   { href: "/calendar", label: "Calendar", icon: Calendar },
 ];
+// Desktop nav shows the first PRIMARY_LINKS as one group, the rest after a divider.
+const PRIMARY_LINKS = 4;
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -89,7 +93,7 @@ export function Header() {
         <nav className="hidden lg:flex items-center">
           {/* Primary nav group */}
           <div className="flex items-center gap-0.5">
-            {navLinks.slice(0, 3).map((link) => (
+            {navLinks.slice(0, PRIMARY_LINKS).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -109,7 +113,7 @@ export function Header() {
 
           {/* Secondary nav group */}
           <div className="flex items-center gap-0.5">
-            {navLinks.slice(3).map((link) => (
+            {navLinks.slice(PRIMARY_LINKS).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -136,7 +140,8 @@ export function Header() {
                 className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-muted transition-colors"
               >
                 <User className="h-4 w-4" />
-                {session.user?.name?.split(" ")[0] || "Account"}
+                {/* Name hidden visually below xl so the 7-link nav fits at 1024px; still read by screen readers. */}
+                <span className="sr-only xl:not-sr-only">{session.user?.name?.split(" ")[0] || "Account"}</span>
                 {isPro && (
                   <span
                     className="text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-700 leading-none"
@@ -156,7 +161,7 @@ export function Header() {
               )}
               <button
                 onClick={() => signOut()}
-                className="flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-lg border border-border hover:bg-muted transition-colors cursor-pointer"
+                className="flex items-center gap-1.5 whitespace-nowrap px-3 py-1.5 text-sm rounded-lg border border-border hover:bg-muted transition-colors cursor-pointer"
               >
                 <LogOut className="h-3.5 w-3.5" />
                 Sign Out
