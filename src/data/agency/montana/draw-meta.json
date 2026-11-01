@@ -24,6 +24,7 @@
    "keyDates": [
     {
      "label": "Elk permit and nonresident combination application period",
+     "kind": "application",
      "start": "2026-03-01",
      "end": "2026-04-01",
      "cycle": 2026,
@@ -33,6 +34,7 @@
     },
     {
      "label": "Elk B license application period",
+     "kind": "application",
      "start": "2026-03-01",
      "end": "2026-06-01",
      "cycle": 2026,
@@ -42,21 +44,34 @@
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
      "start": "2026-07-01",
      "end": "2026-09-30",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. 2027 dates not yet published by Montana FWP as of 2026-10-31."
+     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
     },
     {
      "label": "Nonresident preference point purchase without applying for a combination license",
+     "kind": "points",
+     "residency": "nonresident",
      "start": "2026-07-01",
      "end": "2026-12-31",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
      "note": "$100; applicants who applied for a combination license could only buy it at application. 2027 dates not yet published by Montana FWP as of 2026-10-31."
+    },
+    {
+     "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
+     "start": "2027-07-01",
+     "end": "2027-09-30",
+     "cycle": 2027,
+     "status": "confirmed",
+     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
+     "sourceId": "d-fwp-bp-faq"
     }
    ],
    "sourceIds": [
@@ -79,6 +94,7 @@
    "keyDates": [
     {
      "label": "Deer permit and nonresident combination application period",
+     "kind": "application",
      "start": "2026-03-01",
      "end": "2026-04-01",
      "cycle": 2026,
@@ -88,6 +104,7 @@
     },
     {
      "label": "Deer B license application period",
+     "kind": "application",
      "start": "2026-03-01",
      "end": "2026-06-01",
      "cycle": 2026,
@@ -97,27 +114,41 @@
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
      "start": "2026-07-01",
      "end": "2026-09-30",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. 2027 dates not yet published by Montana FWP as of 2026-10-31."
+     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
     },
     {
      "label": "Nonresident preference point purchase without applying for a combination license",
+     "kind": "points",
+     "residency": "nonresident",
      "start": "2026-07-01",
      "end": "2026-12-31",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
      "note": "$100; applicants who applied for a combination license could only buy it at application. 2027 dates not yet published by Montana FWP as of 2026-10-31."
+    },
+    {
+     "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
+     "start": "2027-07-01",
+     "end": "2027-09-30",
+     "cycle": 2027,
+     "status": "confirmed",
+     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
+     "sourceId": "d-fwp-bp-faq"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
     "d-fwp-bonus-points",
-    "d-fwp-regs-dea-2026"
+    "d-fwp-regs-dea-2026",
+    "d-fwp-bp-faq"
    ]
   },
   {
@@ -133,6 +164,7 @@
    "keyDates": [
     {
      "label": "Deer permit and nonresident combination application period",
+     "kind": "application",
      "start": "2026-03-01",
      "end": "2026-04-01",
      "cycle": 2026,
@@ -142,6 +174,7 @@
     },
     {
      "label": "Deer B license application period",
+     "kind": "application",
      "start": "2026-03-01",
      "end": "2026-06-01",
      "cycle": 2026,
@@ -151,18 +184,30 @@
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
      "start": "2026-07-01",
      "end": "2026-09-30",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. 2027 dates not yet published by Montana FWP as of 2026-10-31."
+     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
+    },
+    {
+     "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
+     "start": "2027-07-01",
+     "end": "2027-09-30",
+     "cycle": 2027,
+     "status": "confirmed",
+     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
+     "sourceId": "d-fwp-bp-faq"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
     "d-fwp-bonus-points",
-    "d-fwp-regs-dea-2026"
+    "d-fwp-regs-dea-2026",
+    "d-fwp-bp-faq"
    ]
   },
   {
@@ -178,6 +223,7 @@
    "keyDates": [
     {
      "label": "Antelope, Antelope B and archery antelope application period",
+     "kind": "application",
      "start": "2026-03-01",
      "end": "2026-06-01",
      "cycle": 2026,
@@ -187,18 +233,30 @@
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
      "start": "2026-07-01",
      "end": "2026-09-30",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. 2027 dates not yet published by Montana FWP as of 2026-10-31."
+     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
+    },
+    {
+     "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
+     "start": "2027-07-01",
+     "end": "2027-09-30",
+     "cycle": 2027,
+     "status": "confirmed",
+     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
+     "sourceId": "d-fwp-bp-faq"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
     "d-fwp-regs-dea-2026",
-    "d-fwp-bonus-points"
+    "d-fwp-bonus-points",
+    "d-fwp-bp-faq"
    ]
   },
   {
@@ -214,6 +272,7 @@
    "keyDates": [
     {
      "label": "Moose, sheep, goat and bison application period",
+     "kind": "application",
      "start": "2026-03-01",
      "end": "2026-05-01",
      "cycle": 2026,
@@ -223,17 +282,29 @@
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
      "start": "2026-07-01",
      "end": "2026-09-30",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. 2027 dates not yet published by Montana FWP as of 2026-10-31."
+     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
+    },
+    {
+     "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
+     "start": "2027-07-01",
+     "end": "2027-09-30",
+     "cycle": 2027,
+     "status": "confirmed",
+     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
+     "sourceId": "d-fwp-bp-faq"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
-    "d-fwp-regs-msgb-2026"
+    "d-fwp-regs-msgb-2026",
+    "d-fwp-bp-faq"
    ]
   },
   {
@@ -249,6 +320,7 @@
    "keyDates": [
     {
      "label": "Moose, sheep, goat and bison application period",
+     "kind": "application",
      "start": "2026-03-01",
      "end": "2026-05-01",
      "cycle": 2026,
@@ -258,17 +330,29 @@
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
      "start": "2026-07-01",
      "end": "2026-09-30",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. 2027 dates not yet published by Montana FWP as of 2026-10-31."
+     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
+    },
+    {
+     "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
+     "start": "2027-07-01",
+     "end": "2027-09-30",
+     "cycle": 2027,
+     "status": "confirmed",
+     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
+     "sourceId": "d-fwp-bp-faq"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
-    "d-fwp-regs-msgb-2026"
+    "d-fwp-regs-msgb-2026",
+    "d-fwp-bp-faq"
    ]
   },
   {
@@ -284,6 +368,7 @@
    "keyDates": [
     {
      "label": "Moose, sheep, goat and bison application period",
+     "kind": "application",
      "start": "2026-03-01",
      "end": "2026-05-01",
      "cycle": 2026,
@@ -293,17 +378,29 @@
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
      "start": "2026-07-01",
      "end": "2026-09-30",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. 2027 dates not yet published by Montana FWP as of 2026-10-31."
+     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
+    },
+    {
+     "label": "Bonus point purchase without applying (one per species/license type)",
+     "kind": "points",
+     "start": "2027-07-01",
+     "end": "2027-09-30",
+     "cycle": 2027,
+     "status": "confirmed",
+     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
+     "sourceId": "d-fwp-bp-faq"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
-    "d-fwp-regs-msgb-2026"
+    "d-fwp-regs-msgb-2026",
+    "d-fwp-bp-faq"
    ]
   },
   {
@@ -319,6 +416,7 @@
    "keyDates": [
     {
      "label": "Black bear permit application period",
+     "kind": "application",
      "start": "2026-03-01",
      "end": "2026-04-01",
      "cycle": 2026,
@@ -343,7 +441,17 @@
    "residentNote": "Mountain Lion License $19.",
    "nonresidentNote": "Mountain Lion License $320; a $250 Nonresident Hound License (by drawing) is needed to hunt with dogs.",
    "otcSummary": "2026: Mountain Lion License over the counter (one per hunter), valid subject to LMU quotas.",
-   "keyDates": [],
+   "keyDates": [
+    {
+     "label": "Mountain Lion License purchase deadline (2026 license)",
+     "kind": "other",
+     "date": "2027-02-28",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "FWP: \"Even though the 2026 mountain lion season extends into the 2027 license year, the deadline to purchase 2026 licenses is February 28, 2027.\"",
+     "sourceId": "d-fwp-regs-lion-2026"
+    }
+   ],
    "sourceIds": [
     "d-fwp-regs-lion-2026",
     "d-fwp-dates-2026",
@@ -861,11 +969,50 @@
   {
    "species": "elk",
    "label": "Archery Only Season",
+   "method": "archery",
    "start": "2026-09-05",
    "end": "2026-10-18",
    "year": 2026,
-   "sourceId": "d-fwp-regs-dea-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
+   "note": "FWP 'general' dates (2026 regulations, Important Dates); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-dea-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Archery Only Season",
+   "method": "archery",
+   "start": "2026-09-05",
+   "end": "2026-10-18",
+   "year": 2026,
+   "note": "FWP 'general' dates (2026 regulations, Important Dates); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-dea-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "Archery Only Season",
+   "method": "archery",
+   "start": "2026-09-05",
+   "end": "2026-10-18",
+   "year": 2026,
+   "note": "FWP 'general' dates (2026 regulations, Important Dates); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-dea-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Youth two-day deer hunt",
+   "start": "2026-10-15",
+   "end": "2026-10-16",
+   "year": 2026,
+   "note": "Youth and apprentice hunters 10-15 (deer only).",
+   "sourceId": "d-fwp-regs-dea-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "Youth two-day deer hunt",
+   "start": "2026-10-15",
+   "end": "2026-10-16",
+   "year": 2026,
+   "note": "Youth and apprentice hunters 10-15 (deer only).",
+   "sourceId": "d-fwp-regs-dea-2026"
   },
   {
    "species": "elk",
@@ -873,21 +1020,107 @@
    "start": "2026-10-24",
    "end": "2026-11-29",
    "year": 2026,
-   "sourceId": "d-fwp-regs-dea-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
+   "note": "FWP 'general' dates (2026 regulations, Important Dates); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-dea-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General season",
+   "start": "2026-10-24",
+   "end": "2026-11-29",
+   "year": 2026,
+   "note": "FWP 'general' dates (2026 regulations, Important Dates); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-dea-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "General season",
+   "start": "2026-10-24",
+   "end": "2026-11-29",
+   "year": 2026,
+   "note": "FWP 'general' dates (2026 regulations, Important Dates); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-dea-2026"
   },
   {
    "species": "elk",
-   "label": "Backcountry HDs 150, 280, 316 - archery",
+   "label": "Heritage Muzzleloader Season",
+   "method": "muzzleloader",
+   "start": "2026-12-12",
+   "end": "2026-12-20",
+   "year": 2026,
+   "note": "Only in hunting districts and for licenses whose table lists Heritage Muzzleloader Season dates.",
+   "sourceId": "d-fwp-regs-dea-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Heritage Muzzleloader Season",
+   "method": "muzzleloader",
+   "start": "2026-12-12",
+   "end": "2026-12-20",
+   "year": 2026,
+   "note": "Only in hunting districts and for licenses whose table lists Heritage Muzzleloader Season dates.",
+   "sourceId": "d-fwp-regs-dea-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "Heritage Muzzleloader Season",
+   "method": "muzzleloader",
+   "start": "2026-12-12",
+   "end": "2026-12-20",
+   "year": 2026,
+   "note": "Only in hunting districts and for licenses whose table lists Heritage Muzzleloader Season dates.",
+   "sourceId": "d-fwp-regs-dea-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Backcountry - archery",
+   "method": "archery",
+   "units": [
+    "150",
+    "280"
+   ],
    "start": "2026-09-05",
    "end": "2026-09-14",
    "year": 2026,
-   "sourceId": "d-fwp-regs-dea-2026",
-   "note": "HD 316 has no Archery Only Season."
+   "note": "HD 316 has no Archery Only Season.",
+   "sourceId": "d-fwp-regs-dea-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Backcountry - archery",
+   "method": "archery",
+   "units": [
+    "150",
+    "280"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-09-14",
+   "year": 2026,
+   "note": "HD 316 has no Archery Only Season.",
+   "sourceId": "d-fwp-regs-dea-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "Backcountry - archery",
+   "method": "archery",
+   "units": [
+    "150",
+    "280"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-09-14",
+   "year": 2026,
+   "note": "HD 316 has no Archery Only Season.",
+   "sourceId": "d-fwp-regs-dea-2026"
   },
   {
    "species": "elk",
-   "label": "Backcountry HDs 150, 280, 316 - general",
+   "label": "Backcountry - general",
+   "units": [
+    "150",
+    "280",
+    "316"
+   ],
    "start": "2026-09-15",
    "end": "2026-11-29",
    "year": 2026,
@@ -895,74 +1128,52 @@
   },
   {
    "species": "mule-deer",
-   "label": "Archery Only Season",
-   "start": "2026-09-05",
-   "end": "2026-10-18",
-   "year": 2026,
-   "sourceId": "d-fwp-regs-dea-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
-  },
-  {
-   "species": "mule-deer",
-   "label": "Youth two-day deer hunt",
-   "start": "2026-10-15",
-   "end": "2026-10-16",
-   "year": 2026,
-   "sourceId": "d-fwp-regs-dea-2026",
-   "note": "Youth and apprentice hunters 10-15."
-  },
-  {
-   "species": "mule-deer",
-   "label": "General season",
-   "start": "2026-10-24",
+   "label": "Backcountry - general",
+   "units": [
+    "150",
+    "280",
+    "316"
+   ],
+   "start": "2026-09-15",
    "end": "2026-11-29",
    "year": 2026,
-   "sourceId": "d-fwp-regs-dea-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
+   "sourceId": "d-fwp-regs-dea-2026"
   },
   {
    "species": "whitetail",
-   "label": "Archery Only Season",
-   "start": "2026-09-05",
-   "end": "2026-10-18",
-   "year": 2026,
-   "sourceId": "d-fwp-regs-dea-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
-  },
-  {
-   "species": "whitetail",
-   "label": "Youth two-day deer hunt",
-   "start": "2026-10-15",
-   "end": "2026-10-16",
-   "year": 2026,
-   "sourceId": "d-fwp-regs-dea-2026",
-   "note": "Youth and apprentice hunters 10-15."
-  },
-  {
-   "species": "whitetail",
-   "label": "General season",
-   "start": "2026-10-24",
+   "label": "Backcountry - general",
+   "units": [
+    "150",
+    "280",
+    "316"
+   ],
+   "start": "2026-09-15",
    "end": "2026-11-29",
-   "year": 2026,
-   "sourceId": "d-fwp-regs-dea-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
-  },
-  {
-   "species": "pronghorn",
-   "label": "900 series archery",
-   "start": "2026-08-15",
-   "end": "2026-11-08",
    "year": 2026,
    "sourceId": "d-fwp-regs-dea-2026"
   },
   {
    "species": "pronghorn",
+   "label": "900 series archery",
+   "method": "archery",
+   "huntCodes": [
+    "900-20"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-11-08",
+   "year": 2026,
+   "note": "900-20 is valid in any hunting district beginning with 4, 5, 6 or 7.",
+   "sourceId": "d-fwp-regs-dea-2026"
+  },
+  {
+   "species": "pronghorn",
    "label": "Archery Only Season",
+   "method": "archery",
    "start": "2026-09-05",
    "end": "2026-10-09",
    "year": 2026,
-   "sourceId": "d-fwp-regs-dea-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
+   "note": "FWP 'general' dates (2026 regulations, Important Dates); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-dea-2026"
   },
   {
    "species": "pronghorn",
@@ -970,17 +1181,38 @@
    "start": "2026-10-10",
    "end": "2026-11-08",
    "year": 2026,
-   "sourceId": "d-fwp-regs-dea-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
+   "note": "FWP 'general' dates (2026 regulations, Important Dates); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-dea-2026"
   },
   {
    "species": "moose",
    "label": "Archery Only Season",
+   "method": "archery",
    "start": "2026-09-05",
    "end": "2026-09-14",
    "year": 2026,
-   "sourceId": "d-fwp-regs-msgb-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
+   "note": "FWP 'general' dates (2026 MSGB regulations); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-msgb-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Archery Only Season",
+   "method": "archery",
+   "start": "2026-09-05",
+   "end": "2026-09-14",
+   "year": 2026,
+   "note": "FWP 'general' dates (2026 MSGB regulations); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-msgb-2026"
+  },
+  {
+   "species": "goat",
+   "label": "Archery Only Season",
+   "method": "archery",
+   "start": "2026-09-05",
+   "end": "2026-09-14",
+   "year": 2026,
+   "note": "FWP 'general' dates (2026 MSGB regulations); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-msgb-2026"
   },
   {
    "species": "moose",
@@ -988,17 +1220,8 @@
    "start": "2026-09-15",
    "end": "2026-11-29",
    "year": 2026,
-   "sourceId": "d-fwp-regs-msgb-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
-  },
-  {
-   "species": "sheep",
-   "label": "Archery Only Season (limited-entry districts)",
-   "start": "2026-09-05",
-   "end": "2026-09-14",
-   "year": 2026,
-   "sourceId": "d-fwp-regs-msgb-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
+   "note": "FWP 'general' dates (2026 MSGB regulations); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-msgb-2026"
   },
   {
    "species": "sheep",
@@ -1006,17 +1229,8 @@
    "start": "2026-09-15",
    "end": "2026-11-29",
    "year": 2026,
-   "sourceId": "d-fwp-regs-msgb-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
-  },
-  {
-   "species": "goat",
-   "label": "Archery Only Season",
-   "start": "2026-09-05",
-   "end": "2026-09-14",
-   "year": 2026,
-   "sourceId": "d-fwp-regs-msgb-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
+   "note": "FWP 'general' dates (2026 MSGB regulations); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-msgb-2026"
   },
   {
    "species": "goat",
@@ -1024,17 +1238,44 @@
    "start": "2026-09-15",
    "end": "2026-11-29",
    "year": 2026,
-   "sourceId": "d-fwp-regs-msgb-2026",
-   "note": "FWP 'general' dates; check hunting-district regulations for exceptions."
+   "note": "FWP 'general' dates (2026 MSGB regulations); check hunting-district regulations for exceptions.",
+   "sourceId": "d-fwp-regs-msgb-2026"
+  },
+  {
+   "species": "bear",
+   "label": "Spring season",
+   "start": "2026-04-15",
+   "end": "2026-06-15",
+   "year": 2026,
+   "note": "Apr. 15-Jun. 15 in the BMU tables; BMUs 300, 301, 319 and 580 may close after May 31, and quota BMUs close when the quota is reached.",
+   "sourceId": "d-fwp-regs-bear-2026"
+  },
+  {
+   "species": "bear",
+   "label": "Archery-only season",
+   "method": "archery",
+   "start": "2026-09-05",
+   "end": "2026-09-14",
+   "year": 2026,
+   "sourceId": "d-fwp-regs-bear-2026"
+  },
+  {
+   "species": "bear",
+   "label": "General (fall) season",
+   "start": "2026-09-15",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-fwp-regs-bear-2026"
   },
   {
    "species": "lion",
    "label": "Archery Only Season without dogs",
+   "method": "archery",
    "start": "2026-09-05",
    "end": "2026-10-18",
    "year": 2026,
-   "sourceId": "d-fwp-regs-lion-2026",
-   "note": "All LMUs except 150 and the Scapegoat Wilderness portion of 280."
+   "note": "All LMUs except 150 and the Scapegoat Wilderness portion of 280.",
+   "sourceId": "d-fwp-regs-lion-2026"
   },
   {
    "species": "lion",
@@ -1042,8 +1283,8 @@
    "start": "2026-10-24",
    "end": "2026-11-29",
    "year": 2026,
-   "sourceId": "d-fwp-regs-lion-2026",
-   "note": "All LMUs except 150 and the Scapegoat Wilderness portion of 280."
+   "note": "All LMUs except 150 and the Scapegoat Wilderness portion of 280.",
+   "sourceId": "d-fwp-regs-lion-2026"
   },
   {
    "species": "lion",
@@ -1051,8 +1292,33 @@
    "start": "2026-12-01",
    "end": "2027-05-25",
    "year": 2026,
-   "sourceId": "d-fwp-regs-lion-2026",
-   "note": "All LMUs except 150 and the Scapegoat Wilderness portion of 280; closes by LMU when quotas are reached."
+   "note": "All LMUs except 150 and the Scapegoat Wilderness portion of 280; closes by LMU when quotas are reached, no later than May 25. Hounds prohibited in occupied grizzly bear habitat after April 14.",
+   "sourceId": "d-fwp-regs-lion-2026"
+  },
+  {
+   "species": "lion",
+   "label": "LMU 150 / Scapegoat portion of 280 - archery",
+   "method": "archery",
+   "units": [
+    "150",
+    "280"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-09-14",
+   "year": 2026,
+   "sourceId": "d-fwp-regs-lion-2026"
+  },
+  {
+   "species": "lion",
+   "label": "LMU 150 / Scapegoat portion of 280 - winter",
+   "units": [
+    "150",
+    "280"
+   ],
+   "start": "2026-09-15",
+   "end": "2027-05-25",
+   "year": 2026,
+   "sourceId": "d-fwp-regs-lion-2026"
   },
   {
    "species": "turkey",
@@ -1060,8 +1326,18 @@
    "start": "2026-04-15",
    "end": "2026-05-31",
    "year": 2026,
-   "sourceId": "d-fwp-regs-upgbrd-2026",
-   "note": "Residents, and nonresidents on private land not in a hunting access program; nonresidents on public/access-program land start Apr. 25. Male turkey, shotgun/archery only."
+   "note": "Residents, and nonresidents on private land not in a hunting access program. Male turkey; shotgun/archery only.",
+   "sourceId": "d-fwp-regs-upgbrd-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring season, nonresidents on public/access-program land",
+   "residency": "nonresident",
+   "start": "2026-04-25",
+   "end": "2026-05-31",
+   "year": 2026,
+   "note": "Male turkey; shotgun/archery only.",
+   "sourceId": "d-fwp-regs-upgbrd-2026"
   },
   {
    "species": "turkey",
@@ -1069,8 +1345,18 @@
    "start": "2026-09-01",
    "end": "2027-01-01",
    "year": 2026,
-   "sourceId": "d-fwp-regs-upgbrd-2026",
-   "note": "Residents, and nonresidents on private land not in a hunting access program; nonresidents on public/access-program land start Sep. 11. Either-sex; not valid in Region 4."
+   "note": "Residents, and nonresidents on private land not in a hunting access program. Either-sex; not valid in Region 4.",
+   "sourceId": "d-fwp-regs-upgbrd-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Fall season, nonresidents on public/access-program land",
+   "residency": "nonresident",
+   "start": "2026-09-11",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "Either-sex; not valid in Region 4.",
+   "sourceId": "d-fwp-regs-upgbrd-2026"
   }
  ],
  "coverage": [
@@ -1180,7 +1466,7 @@
    "title": "Applications, Drawings, and Bonus Points (application and drawing dates)",
    "url": "https://fwp.mt.gov/buyandapply/hunting-licenses/application-drawing-dates",
    "dataYear": 2026,
-   "notes": "Shows 2026 application windows; no 2027 dates posted as of 2026-10-31.",
+   "notes": "Shows 2026 application windows; no 2027 dates posted as of 2026-10-31 (re-checked 2026-10-31).",
    "publisher": "Montana Fish, Wildlife & Parks",
    "retrieved": "2026-10-31"
   },
@@ -1198,7 +1484,8 @@
    "url": "https://fwp.mt.gov/binaries/content/assets/fwp/buyandapply/hunting/bonus-points-faq--final-updated.pdf",
    "pageUrl": "https://fwp.mt.gov/buyandapply/hunting-licenses/bonus-points",
    "publisher": "Montana Fish, Wildlife & Parks",
-   "retrieved": "2026-10-31"
+   "retrieved": "2026-10-31",
+   "notes": "Undated FAQ; states the point-only purchase window (July 1 - Sept. 30) as applying in any year you don't apply."
   },
   {
    "id": "d-fwp-drawstats-page",
@@ -2452,6 +2739,45 @@
    "dataYear": 2026,
    "retrieved": "2026-10-31",
    "notes": "FWP document repository objectID 117235; file format PDF."
+  },
+  {
+   "id": "d-fwp-regs-lion-2025",
+   "title": "2025 Mountain Lion Hunting Regulations",
+   "url": "https://fwp.mt.gov/binaries/content/assets/fwp/hunt/regulations/2025/2025-lion-final-for-web.pdf",
+   "pageUrl": "https://fwp.mt.gov/hunt/regulations/archive",
+   "dataYear": 2025,
+   "notes": "Season dates and Limited Mountain Lion License rules for the 2025 lion drawing.",
+   "publisher": "Montana Fish, Wildlife & Parks",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-fwp-hunt-seasons",
+   "title": "Hunting Seasons (general reference season dates)",
+   "url": "https://fwp.mt.gov/hunt/seasons",
+   "dataYear": 2026,
+   "notes": "Shows 2026 seasons only (no 2027 dates) as of 2026-10-31; FWP says to use the regulations for exact dates.",
+   "publisher": "Montana Fish, Wildlife & Parks",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-fwp-corrections-dea-2026",
+   "title": "Corrections to the 2026 Printed Deer, Elk, and Pronghorn Regulations",
+   "url": "https://fwp.mt.gov/binaries/content/assets/fwp/hunt/regulations/2026/corrections-to-the-2026-printed-dea-regulations-and-legal-descriptions.pdf",
+   "pageUrl": "https://fwp.mt.gov/hunt/regulations",
+   "dataYear": 2026,
+   "notes": "Two corrections (HD 202 general white-tailed deer archery dates; HD 535 youth opportunity); neither changes a drawn license.",
+   "publisher": "Montana Fish, Wildlife & Parks",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-fwp-corrections-msgb-2026",
+   "title": "Corrections to the 2026 Printed Moose, Sheep, Goat, and Bison Regulations",
+   "url": "https://fwp.mt.gov/binaries/content/assets/fwp/hunt/regulations/2026/corrections-to-the-2026-printed-msgb-regulations.pdf",
+   "pageUrl": "https://fwp.mt.gov/hunt/regulations",
+   "dataYear": 2026,
+   "notes": "One correction (sheep horn pickup reporting); no season-date changes.",
+   "publisher": "Montana Fish, Wildlife & Parks",
+   "retrieved": "2026-10-31"
   }
  ]
 }

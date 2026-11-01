@@ -2,6 +2,9 @@
 """Parse Montana FWP drawing statistics (draw years 2022-2026) into
 src/data/agency/montana/draw/<species>.json (DrawRecord[], see schema.ts).
 
+After this script, re-run seasons_parse.py: it adds season dates (draw rows) and key-date
+tags/seasons (draw-meta) to the files written here.
+
 Inputs (downloaded by draw_download.py into <raw_dir>):
   pdf/<objectID>.pdf  FWP drawing reports (PDF; 2022 reports are legacy .xls)
   txt/<objectID>.txt  pdftotext -layout output of the PDFs
