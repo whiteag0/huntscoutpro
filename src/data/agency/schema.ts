@@ -64,7 +64,12 @@ export interface KeyDate {
   end?: string;
   /** License/hunt year this date belongs to (e.g. 2027 for the 2027 draw). */
   cycle: number;
-  /** confirmed = published by the agency for that cycle. tentative = agency-published but marked tentative. */
+  /**
+   * confirmed = published by the agency for that cycle.
+   * tentative = agency-published but marked tentative, OR computed from a standing rule in the agency's
+   * current regulation that fixes the date every year (the note cites the rule and says the agency
+   * hasn't announced that cycle's date yet).
+   */
   status: "confirmed" | "tentative";
   note?: string;
   sourceId: string;
