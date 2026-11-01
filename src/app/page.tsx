@@ -4,6 +4,33 @@ import { AGENCY_STATES, type Species } from "@/data/agency/schema";
 import { stateBySlug } from "@/data/state-list";
 import { HomeClient } from "@/components/home/HomeClient";
 import type { HomeData, HomeSpeciesCard } from "@/components/home/types";
+import { SITE } from "@/lib/emails/onboarding";
+import { jsonLdString } from "@/components/growth/state-glance";
+
+// Structured data for search engines: who publishes the site, and the site itself.
+const SITE_JSON_LD = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE}/#organization`,
+    name: "HuntScout Pro",
+    url: SITE,
+    logo: `${SITE}/apple-icon.png`,
+    slogan: "Know Before You Draw",
+    email: "support@huntscoutpro.com",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE}/#website`,
+    name: "HuntScout Pro",
+    url: SITE,
+    description:
+      "Draw results and harvest by unit for western draw states, taken straight from state wildlife agency reports, with every number cited to its source.",
+    publisher: { "@id": `${SITE}/#organization` },
+    inLanguage: "en-US",
+  },
+];
 
 // Species cards on the marketing page. Counts come from getCoverageStats(), which is
 // computed from the published agency files at build time. A card with no data is hidden.
@@ -59,5 +86,10 @@ export default async function HomePage() {
     speciesCards,
   };
 
-  return <HomeClient data={data} />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(SITE_JSON_LD) }} />
+      <HomeClient data={data} />
+    </>
+  );
 }
