@@ -45,7 +45,7 @@ test("digest groups species, escapes agency text and carries unsubscribe headers
   assert.ok(html.includes("Hi Pat,"));
   assert.ok(html.includes("Closes Nov 10, 2026, 3 days from today."));
   assert.ok(html.includes("Window: Oct 20 – Nov 10, 2026"));
-  assert.ok(html.includes("The agency lists this date as tentative."));
+  assert.ok(html.includes("Tentative: the agency hasn&apos;t confirmed this date yet."));
   assert.ok(html.includes("Apply online &amp; pay fees."));
   assert.ok(html.includes('href="https://www.huntscoutpro.com/states/utah?species=elk"'));
   assert.ok(html.includes('href="https://www.huntscoutpro.com/states/utah?species=mule-deer"'));
