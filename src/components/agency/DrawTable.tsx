@@ -7,6 +7,7 @@ import type { DrawRecord, SpeciesInfo } from "@/data/agency/schema";
 import { fmtNum, fmtPct } from "@/lib/agency-format";
 import { drawHistory, drawStats, minPointsDrawn, oddsAtPoints, oddsOf, type DrawResidency } from "@/lib/agency-view";
 import { Cite } from "@/components/agency/SourceNotes";
+import { MobileSort, useIsNarrow, useProgressive } from "@/components/agency/mobile";
 
 type SortKey = "code" | "quota" | "applicants" | "odds" | "minPts" | "atPts";
 
@@ -40,6 +41,68 @@ interface Props {
   onToggleCompare: (code: string) => void;
 }
 
+type Item = {
+  r: DrawRecord;
+  pool: ReturnType<typeof drawStats>["pool"];
+  quota: number | null;
+  applicants: number | null;
+  drawn: number | null;
+  odds: number | null;
+  minPts: number | null;
+  priorMinPts: number | null;
+  priorYear?: number;
+  atPts: ReturnType<typeof oddsAtPoints> | null;
+};
+
+/** Units, pool caveats and agency notes under a hunt code (shared by the table and the phone cards). */
+function HuntExtras({ x, residency, stateSlug, unitTerm, species }: { x: Item; residency: DrawResidency; stateSlug: string; unitTerm: string; species: string }) {
+  const unitLink = x.r.units.length === 1 ? x.r.units[0] : null;
+  const unitHref = (u: string) => `/states/${stateSlug}/units/${encodeURIComponent(u)}?species=${species}`;
+  return (
+    <>
+      {x.r.units.length > 0 && (
+        <div className="text-xs mt-0.5">
+          {unitTerm}{" "}
+          {unitLink ? (
+            <Link href={unitHref(unitLink)} className="text-primary hover:underline py-2">
+              {unitLink}
+            </Link>
+          ) : (
+            x.r.units.slice(0, 8).map((u, i) => (
+              <span key={u}>
+                {i > 0 && ", "}
+                <Link href={unitHref(u)} className="text-primary hover:underline py-2">
+                  {u}
+                </Link>
+              </span>
+            ))
+          )}
+          {x.r.units.length > 8 && ` +${x.r.units.length - 8} more`}
+        </div>
+      )}
+      {x.pool === "total" && <div className="text-[11px] text-muted-foreground mt-0.5">The agency reports one combined applicant pool for this hunt.</div>}
+      {x.pool !== "total" && x.quota === null && x.applicants === null && x.drawn === null && (
+        <div className="text-[11px] text-muted-foreground mt-0.5">No {residency} figures published for this hunt.</div>
+      )}
+      {x.r.note && (
+        <details className="text-[11px] text-muted-foreground mt-0.5">
+          <summary className="cursor-pointer select-none py-2 -my-2 sm:py-0 sm:my-0">Agency notes</summary>
+          {x.r.note}
+        </details>
+      )}
+    </>
+  );
+}
+
+function Stat({ label, children, className = "" }: { label: React.ReactNode; children: React.ReactNode; className?: string }) {
+  return (
+    <div className="bg-card px-2.5 py-2 min-w-0">
+      <dt className="text-[11px] font-semibold text-muted-foreground leading-tight">{label}</dt>
+      <dd className={`mt-0.5 text-base tabular-nums leading-snug ${className}`}>{children}</dd>
+    </div>
+  );
+}
+
 function oddsClass(p: number | null): string {
   if (p === null) return "text-muted-foreground";
   if (p >= 80) return "text-success font-semibold";
@@ -53,8 +116,11 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
   const showPoints = info.pointsMatter;
   const hasPointTables = showPoints && rows.some((r) => r.byPoints?.length);
 
+  const narrow = useIsNarrow();
+  const { shown, button: moreButton } = useProgressive(rows.length);
+
   const view = useMemo(() => {
-    const items = rows.map((r) => {
+    const items = rows.map((r): Item => {
       const { stats, pool } = drawStats(r, residency);
       const prior = history.get(r.huntCode)?.find((h) => h.year < r.year);
       return {
@@ -70,7 +136,7 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
         atPts: hasPointTables ? oddsAtPoints(r, residency, points) : null,
       };
     });
-    const val = (x: (typeof items)[number]): number | string => {
+    const val = (x: Item): number | string => {
       switch (sort.key) {
         case "code":
           return x.r.huntCode;
@@ -98,6 +164,93 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
     return <div className="bg-card border border-border rounded-xl p-8 text-center text-muted-foreground">No hunts match these filters.</div>;
   }
 
+  const appsLabel = rows[0]?.choice === "first" ? "1st-choice apps" : "Applicants";
+
+  if (narrow) {
+    const sortOptions: { key: SortKey; label: string; asc?: string; desc?: string }[] = [
+      { key: "code", label: "Hunt code", asc: "A → Z", desc: "Z → A" },
+      { key: "odds", label: "Draw odds" },
+      { key: "quota", label: "Quota" },
+      { key: "applicants", label: appsLabel },
+      ...(showPoints ? [{ key: "minPts" as const, label: "Min points drawn" }] : []),
+      ...(hasPointTables ? [{ key: "atPts" as const, label: `Odds at ${points} pts` }] : []),
+    ];
+    return (
+      <div>
+        <MobileSort options={sortOptions} value={sort.key} dir={sort.dir} onChange={(key, dir) => setSort({ key, dir: key === sort.key ? dir : key === "code" ? 1 : -1 })} />
+        <ul className="space-y-3" aria-label="Hunts">
+          {view.slice(0, shown).map((x) => {
+            const checked = compare.includes(x.r.huntCode);
+            return (
+              <li key={`${x.r.huntCode}-${x.r.year}`} className={`bg-card border rounded-xl overflow-hidden ${checked ? "border-primary ring-1 ring-primary" : "border-border"}`}>
+                <div className="px-3 pt-3 pb-2.5">
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="font-mono font-semibold text-foreground text-base break-all">
+                      {x.r.huntCode}
+                      <Cite n={cite(x.r.sourceId)} />
+                    </div>
+                    <label className="shrink-0 -mt-2 -mr-1 inline-flex min-h-10 items-center gap-1.5 px-1 text-xs font-medium text-muted-foreground cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={() => onToggleCompare(x.r.huntCode)}
+                        className="h-4 w-4 accent-[var(--primary)]"
+                        aria-label={`Compare ${x.r.huntCode}`}
+                      />
+                      Compare
+                    </label>
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-0.5">
+                    {x.r.description}
+                    {x.r.seasonDates ? ` · ${x.r.seasonDates}` : ""}
+                  </div>
+                  <HuntExtras x={x} residency={residency} stateSlug={stateSlug} unitTerm={unitTerm} species={info.species} />
+                </div>
+                <dl className="grid grid-cols-3 gap-px bg-border border-t border-border">
+                  <Stat label="Quota">{fmtNum(x.quota)}</Stat>
+                  <Stat label={appsLabel === "Applicants" ? "Apps" : "1st-choice apps"}>{fmtNum(x.applicants)}</Stat>
+                  <Stat label="Drawn">{fmtNum(x.drawn)}</Stat>
+                  <Stat label="Draw odds" className={oddsClass(x.odds)}>
+                    {fmtPct(x.odds)}
+                  </Stat>
+                  {showPoints && (
+                    <Stat label="Min pts drawn">
+                      {x.minPts ?? "—"}
+                      {x.priorYear && x.priorMinPts !== null && x.minPts !== null && x.priorMinPts !== x.minPts && (
+                        <span className="block text-[11px] text-muted-foreground">
+                          {x.priorYear}: {x.priorMinPts}
+                        </span>
+                      )}
+                    </Stat>
+                  )}
+                  {hasPointTables && (
+                    <Stat label={`At ${points} pts`} className={oddsClass(x.atPts?.pct ?? null)}>
+                      {x.atPts ? (
+                        <>
+                          {fmtPct(x.atPts.pct)}
+                          <span className="block text-[11px] text-muted-foreground font-normal">
+                            {x.atPts.drawn}/{x.atPts.applicants} drawn
+                          </span>
+                        </>
+                      ) : (
+                        <span className="text-xs text-muted-foreground font-normal">no applicants</span>
+                      )}
+                    </Stat>
+                  )}
+                  {/* Fill the last row so the grid has no gaps showing the border colour. */}
+                  {Array.from({ length: (3 - ((4 + (showPoints ? 1 : 0) + (hasPointTables ? 1 : 0)) % 3)) % 3 }).map((_, i) => (
+                    <div key={i} className="bg-card" aria-hidden />
+                  ))}
+                </dl>
+              </li>
+            );
+          })}
+        </ul>
+        {moreButton}
+      </div>
+    );
+  }
+
   return (
     <div className="bg-card border border-border rounded-xl overflow-hidden">
       <div className="overflow-x-auto">
@@ -110,7 +263,7 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
                 Quota
               </SortTh>
               <SortTh sort={sort} setSort={setSort} k="applicants" right>
-                {rows[0]?.choice === "first" ? "1st-choice apps" : "Applicants"}
+                {appsLabel}
               </SortTh>
               <th className="px-3 py-2.5 text-right font-semibold">Drawn</th>
               <SortTh sort={sort} setSort={setSort} k="odds" right>
@@ -130,7 +283,6 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
           </thead>
           <tbody className="divide-y divide-border">
             {view.map((x) => {
-              const unitLink = x.r.units.length === 1 ? x.r.units[0] : null;
               return (
                 <tr key={`${x.r.huntCode}-${x.r.year}`} className="hover:bg-muted/40">
                   <td className="px-3 py-2.5 align-top">
@@ -151,35 +303,7 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
                       {x.r.description}
                       {x.r.seasonDates ? ` · ${x.r.seasonDates}` : ""}
                     </div>
-                    {x.r.units.length > 0 && (
-                      <div className="text-xs mt-0.5">
-                        {unitTerm} {unitLink ? (
-                          <Link href={`/states/${stateSlug}/units/${encodeURIComponent(unitLink)}?species=${info.species}`} className="text-primary hover:underline">
-                            {unitLink}
-                          </Link>
-                        ) : (
-                          x.r.units.slice(0, 8).map((u, i) => (
-                            <span key={u}>
-                              {i > 0 && ", "}
-                              <Link href={`/states/${stateSlug}/units/${encodeURIComponent(u)}?species=${info.species}`} className="text-primary hover:underline">
-                                {u}
-                              </Link>
-                            </span>
-                          ))
-                        )}
-                        {x.r.units.length > 8 && ` +${x.r.units.length - 8} more`}
-                      </div>
-                    )}
-                    {x.pool === "total" && <div className="text-[11px] text-muted-foreground mt-0.5">The agency reports one combined applicant pool for this hunt.</div>}
-                    {x.pool !== "total" && x.quota === null && x.applicants === null && x.drawn === null && (
-                      <div className="text-[11px] text-muted-foreground mt-0.5">No {residency} figures published for this hunt.</div>
-                    )}
-                    {x.r.note && (
-                      <details className="text-[11px] text-muted-foreground mt-0.5">
-                        <summary className="cursor-pointer select-none">Agency notes</summary>
-                        {x.r.note}
-                      </details>
-                    )}
+                    <HuntExtras x={x} residency={residency} stateSlug={stateSlug} unitTerm={unitTerm} species={info.species} />
                   </td>
                   <td className="px-3 py-2.5 text-right align-top tabular-nums">{fmtNum(x.quota)}</td>
                   <td className="px-3 py-2.5 text-right align-top tabular-nums">{fmtNum(x.applicants)}</td>
