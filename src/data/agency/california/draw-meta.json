@@ -1,0 +1,1320 @@
+{
+ "slug": "california",
+ "name": "California",
+ "abbrev": "CA",
+ "agency": {
+  "name": "California Department of Fish and Wildlife",
+  "shortName": "CDFW",
+  "url": "https://wildlife.ca.gov"
+ },
+ "unitTerm": "Zone",
+ "lastReviewed": "2026-10-31",
+ "overview": "CDFW issues elk, pronghorn, Nelson bighorn sheep and premium deer tags through one Big Game Drawing under a modified preference point system: each hunt's quota is split between a preference-point drawing and a random draw-by-choice drawing (deer 90/10, apprentice deer 50/50, elk, pronghorn and bighorn sheep 75/25 for quotas of four or more). The 2026 application period ran April 15 - June 2, 2026, with results on or around June 15; 2027 dates are not yet published. Applicants earn one point per species when unsuccessful and lose all points for a species when drawn (deer: when drawn for their first choice), while other deer tags (A, B and most D zones), bear tags and wild turkey hunting are over the counter.",
+ "species": [
+  {
+   "species": "mule-deer",
+   "displayName": "Deer (mule & black-tailed)",
+   "drawSystem": "hybrid",
+   "drawSystemSummary": "Premium deer tags (the C zones, the X zones, D12, D14, D17 and the special archery, muzzleloader, late-season and apprentice hunts) are issued in the Big Game Drawing under a modified preference point system: 90% of each quota goes to first-choice applicants in preference-point order and 10% (one tag when the quota is under 10) in a random draw-by-choice round; unsuccessful applicants' second and then third choices are then drawn at random for any tags left. Apprentice deer hunts split 50% preference / 50% random. Party applications (up to six hunters) use the unrounded average of members' points.",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "residentNote": "Applicants earn one deer point when not drawn for their first-choice premium hunt (or by applying with code PD) and lose all deer points when drawn for their first choice. Points are reduced to zero after five consecutive years without applying.",
+   "nonresidentNote": "Nonresidents apply in the same drawing; CDFW's drawing statistics do not separate residents and nonresidents. 2026-27 nonresident first or second deer tag/application: $377.35. Unsuccessful nonresidents may request a refund of the difference from the resident application fee.",
+   "otcSummary": "Deer tags for the A zone, B zones (B1-B6) and D zones D3-5, D6, D7, D8, D9, D10, D11, D13, D15, D16 and D19, plus several archery hunts, are unrestricted (issued on request until the zone quota fills). Leftover premium deer tags are sold first-come, first-served from July 2 at 8:00 a.m.",
+   "keyDates": [
+    {
+     "label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+     "start": "2026-04-15",
+     "end": "2026-06-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Applications must be completed before midnight June 2. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Drawing results available online",
+     "date": "2026-06-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CDFW: 'on or around June 15, 2026'; the drawing is run within 10 business days of the deadline. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Deer: drawn tags and unsuccessful-applicant notices expected by mail",
+     "date": "2026-07-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Unsuccessful notices list deer tags still available; contact CDFW if a drawn tag has not arrived by this date. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Leftover premium deer tags go on sale (8:00 a.m., first-come first-served)",
+     "date": "2026-07-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CDFW FAQ: 'If available, leftover premium deer tags will be issued on July 2 at 8:00 a.m.' 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-bgd-page"
+    },
+    {
+     "label": "Deadline to report deer tags (2026 tags)",
+     "date": "2027-01-31",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "All deer tag holders must report by January 31 of the license year, hunted or not; late or missing reports carry a $21.60 non-reporting fee.",
+     "sourceId": "d-bgd-page"
+    }
+   ],
+   "sourceIds": [
+    "d-digest-2026",
+    "d-bgd-page",
+    "d-fees-2026"
+   ]
+  },
+  {
+   "species": "elk",
+   "displayName": "Elk (Roosevelt, Rocky Mountain & tule)",
+   "drawSystem": "hybrid",
+   "drawSystemSummary": "Elk tags are issued only in the Big Game Drawing, one hunt choice per application, under the modified preference point system: a quota of one tag is drawn at random, two tags split one preference / one random, three tags two / one, and four or more award 75% by preference points and the rest at random. CDFW runs the random draw-by-choice round first, then the preference-point round. Applicants earn one point when unsuccessful and lose all elk points when they receive an elk tag.",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "residentNote": "Up to two residents may apply as a party. One elk tag per person per year (Private Lands Management tags excepted).",
+   "nonresidentNote": "Only one nonresident may be drawn for an elk or pronghorn tag annually, and nonresidents cannot apply as a party. 2026-27 nonresident elk tag: $1,871.80.",
+   "otcSummary": "None: there are no over-the-counter elk tags (SHARE and Private Lands Management tags are issued outside the Big Game Drawing).",
+   "keyDates": [
+    {
+     "label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+     "start": "2026-04-15",
+     "end": "2026-06-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Applications must be completed before midnight June 2. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Drawing results available online",
+     "date": "2026-06-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CDFW: 'on or around June 15, 2026'; the drawing is run within 10 business days of the deadline. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Successful elk applicants' payment notices mailed by",
+     "date": "2026-07-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Unsuccessful applicants are not notified by mail. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Elk tag fee payment deadline (5:00 p.m.)",
+     "date": "2026-07-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Unclaimed tags then go to alternates in the order drawn. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    }
+   ],
+   "sourceIds": [
+    "d-digest-2026",
+    "d-bgd-page",
+    "d-fees-2026"
+   ]
+  },
+  {
+   "species": "pronghorn",
+   "displayName": "Pronghorn",
+   "drawSystem": "hybrid",
+   "drawSystemSummary": "Pronghorn tags are issued only in the Big Game Drawing, one hunt choice per application, under the modified preference point system: a quota of one tag is drawn at random, two tags split one preference / one random, three tags two / one, and four or more award 75% by preference points and the rest at random (random round first, then the preference round). Applicants earn one point when unsuccessful and lose all pronghorn points when they receive a tag.",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "residentNote": "Up to two residents may apply as a party. One pronghorn tag per person per year (Private Lands Management tags excepted).",
+   "nonresidentNote": "Only one nonresident may be drawn for an elk or pronghorn tag annually, and nonresidents cannot apply as a party. 2026-27 nonresident pronghorn tag: $628.85.",
+   "otcSummary": "None: pronghorn tags are issued only through the Big Game Drawing (Private Lands Management tags excepted).",
+   "keyDates": [
+    {
+     "label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+     "start": "2026-04-15",
+     "end": "2026-06-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Applications must be completed before midnight June 2. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Drawing results available online",
+     "date": "2026-06-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CDFW: 'on or around June 15, 2026'; the drawing is run within 10 business days of the deadline. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Successful pronghorn applicants' payment notices mailed by",
+     "date": "2026-07-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Unsuccessful applicants are not notified by mail. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Pronghorn tag fee payment deadline (5:00 p.m.)",
+     "date": "2026-07-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Unclaimed tags then go to alternates in the order drawn. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    }
+   ],
+   "sourceIds": [
+    "d-digest-2026",
+    "d-bgd-page",
+    "d-fees-2026"
+   ]
+  },
+  {
+   "species": "sheep",
+   "displayName": "Desert bighorn sheep (Nelson)",
+   "drawSystem": "hybrid",
+   "drawSystemSummary": "Nelson (desert) bighorn sheep ram tags are issued only in the Big Game Drawing, one hunt choice per application and no party applications, under the modified preference point system: a quota of one tag is drawn at random, two tags split one preference / one random, three tags two / one, and four or more award 75% by preference points (random round first). A hunter may hold one California bighorn sheep tag in a lifetime; not more than 10% of tags go to nonresidents each year.",
+   "pointsMatter": true,
+   "pointName": "preference point",
+   "residentNote": "Applicants must be 16 or older on July 1 and must never have drawn a California bighorn sheep tag. Drawn hunters must attend a mandatory in-person orientation.",
+   "nonresidentNote": "Not more than 10 percent of bighorn sheep tags are awarded to nonresidents each year. 2026-27 nonresident bighorn sheep tag: $2,072.75.",
+   "otcSummary": "None: bighorn sheep tags come only from the Big Game Drawing (plus fundraising tags).",
+   "keyDates": [
+    {
+     "label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+     "start": "2026-04-15",
+     "end": "2026-06-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Applications must be completed before midnight June 2. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Drawing results available online",
+     "date": "2026-06-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CDFW: 'on or around June 15, 2026'; the drawing is run within 10 business days of the deadline. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Bighorn sheep tag fee payment deadline (5:00 p.m., received by the License and Revenue Branch, Sacramento)",
+     "date": "2026-07-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Unclaimed tags then go to alternates in the order drawn. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Mandatory bighorn sheep hunter orientation (in person)",
+     "date": "2026-07-18",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Location to be announced by CDFW. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "sourceId": "d-digest-2026"
+    }
+   ],
+   "sourceIds": [
+    "d-digest-2026",
+    "d-bgd-page",
+    "d-fees-2026"
+   ]
+  },
+  {
+   "species": "bear",
+   "displayName": "Black bear",
+   "drawSystem": "otc",
+   "drawSystemSummary": "No drawing: bear tags are sold over the counter (online, license agents, CDFW offices). The season closes on December 27 or earlier once 1,700 bears (archery season included) have been reported taken; CDFW counted 803 as of October 27, 2026.",
+   "pointsMatter": false,
+   "otcSummary": "Resident bear tag $62.90, nonresident $397.60 (2026-27). CDFW's bear page says licensed hunters 12 or older may buy two bear tags per license year (the second tag was adopted by the Fish and Game Commission in April 2026); daily bag one bear.",
+   "keyDates": [
+    {
+     "label": "Unsuccessful 2026 bear tag report card due",
+     "date": "2027-02-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Report cards for unsuccessful tags are due February 1 of the license year; successful hunters report immediately.",
+     "sourceId": "d-digest-2026"
+    }
+   ],
+   "sourceIds": [
+    "d-bear-page",
+    "d-digest-2026",
+    "d-fees-2026"
+   ]
+  },
+  {
+   "species": "turkey",
+   "displayName": "Wild turkey",
+   "drawSystem": "otc",
+   "drawSystemSummary": "No drawing for the general seasons: wild turkey needs a California hunting license plus an Upland Game Bird Validation (not required under a Junior Hunting License); there is no turkey tag. Spring limit one bearded turkey per day, three per season combined; fall one either-sex per day, two per season.",
+   "pointsMatter": false,
+   "otcSummary": "Upland Game Bird Validation $25.41 (2026-27). CDFW also lists Special Hunts and SHARE Program hunts on its upland game page; those are not covered here.",
+   "keyDates": [],
+   "sourceIds": [
+    "d-upland-page",
+    "d-fees-2026"
+   ]
+  }
+ ],
+ "fees": [
+  {
+   "species": null,
+   "item": "Resident Hunting License",
+   "residency": "resident",
+   "amountUsd": 64.54,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": null,
+   "item": "Nonresident Hunting License",
+   "residency": "nonresident",
+   "amountUsd": 225.46,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": null,
+   "item": "Junior Hunting License (under 16 on July 1)",
+   "residency": "resident",
+   "amountUsd": 17.02,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Resident or nonresident. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": null,
+   "item": "Junior Hunting License (under 16 on July 1)",
+   "residency": "nonresident",
+   "amountUsd": 17.02,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Resident or nonresident. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "mule-deer",
+   "item": "Resident First-Deer Tag or First-Deer Tag Drawing Application",
+   "residency": "resident",
+   "amountUsd": 42.38,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "mule-deer",
+   "item": "Resident Second-Deer Tag or Second-Deer Tag Drawing Application",
+   "residency": "resident",
+   "amountUsd": 52.92,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "mule-deer",
+   "item": "Nonresident First-Deer Tag or First-Deer Tag Drawing Application",
+   "residency": "nonresident",
+   "amountUsd": 377.35,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "mule-deer",
+   "item": "Nonresident Second-Deer Tag or Second-Deer Tag Drawing Application",
+   "residency": "nonresident",
+   "amountUsd": 377.35,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "elk",
+   "item": "Elk Tag Drawing Application",
+   "residency": "resident",
+   "amountUsd": 8.38,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Per application. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "elk",
+   "item": "Elk Tag Drawing Application",
+   "residency": "nonresident",
+   "amountUsd": 8.38,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Per application. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "elk",
+   "item": "Elk Tag",
+   "residency": "resident",
+   "amountUsd": 610.2,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Paid only if drawn. Reduced junior tag fees ended July 1, 2025. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "elk",
+   "item": "Elk Tag",
+   "residency": "nonresident",
+   "amountUsd": 1871.8,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Paid only if drawn. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "pronghorn",
+   "item": "Pronghorn Antelope Tag Drawing Application",
+   "residency": "resident",
+   "amountUsd": 8.38,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Per application. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "pronghorn",
+   "item": "Pronghorn Antelope Tag Drawing Application",
+   "residency": "nonresident",
+   "amountUsd": 8.38,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Per application. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "pronghorn",
+   "item": "Pronghorn Antelope Tag",
+   "residency": "resident",
+   "amountUsd": 205.77,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Paid only if drawn. Reduced junior tag fees ended July 1, 2025. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "pronghorn",
+   "item": "Pronghorn Antelope Tag",
+   "residency": "nonresident",
+   "amountUsd": 628.85,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Paid only if drawn. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "sheep",
+   "item": "Bighorn Sheep Tag Drawing Application",
+   "residency": "resident",
+   "amountUsd": 8.38,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Per application. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "sheep",
+   "item": "Bighorn Sheep Tag Drawing Application",
+   "residency": "nonresident",
+   "amountUsd": 8.38,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Per application. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "sheep",
+   "item": "Bighorn Sheep Tag",
+   "residency": "resident",
+   "amountUsd": 558.5,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Paid only if drawn. Reduced junior tag fees ended July 1, 2025. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "sheep",
+   "item": "Bighorn Sheep Tag",
+   "residency": "nonresident",
+   "amountUsd": 2072.75,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Paid only if drawn. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "bear",
+   "item": "Bear Tag",
+   "residency": "resident",
+   "amountUsd": 62.9,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "bear",
+   "item": "Bear Tag",
+   "residency": "nonresident",
+   "amountUsd": 397.6,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "turkey",
+   "item": "Upland Game Bird Validation (required for wild turkey)",
+   "residency": "resident",
+   "amountUsd": 25.41,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Not required under a Junior Hunting License. License year July 1, 2026 - June 30, 2027."
+  },
+  {
+   "species": "turkey",
+   "item": "Upland Game Bird Validation (required for wild turkey)",
+   "residency": "nonresident",
+   "amountUsd": 25.41,
+   "licenseYear": 2026,
+   "sourceId": "d-fees-2026",
+   "note": "Not required under a Junior Hunting License. License year July 1, 2026 - June 30, 2027."
+  }
+ ],
+ "seasons": [
+  {
+   "species": "mule-deer",
+   "label": "A zone archery season (buck)",
+   "start": "2026-07-11",
+   "end": "2026-08-02",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted A zone tag (quota 65,000)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "A zone general season (buck)",
+   "start": "2026-08-08",
+   "end": "2026-09-20",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted A zone tag (quota 65,000)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "B1, B2, B3, B5 and B6 zones archery season (buck)",
+   "start": "2026-08-15",
+   "end": "2026-09-06",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "B zone tag valid in B1-B6 (quota 35,000)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "B1, B2, B3 and B5 zones general season (buck)",
+   "start": "2026-09-19",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "B zone tag valid in B1-B6 (quota 35,000)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "B4 zone archery season (buck)",
+   "start": "2026-07-25",
+   "end": "2026-08-16",
+   "year": 2026,
+   "sourceId": "d-digest-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "B4 zone general season (buck)",
+   "start": "2026-08-22",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "B6 zone general season (buck)",
+   "start": "2026-09-19",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-digest-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "C1 zone general season (buck, premium C tag)",
+   "start": "2026-09-19",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "C tag (drawing) valid in C1-C4 general seasons; archery in the C zones is hunt A1."
+  },
+  {
+   "species": "mule-deer",
+   "label": "C2 and C3 zones general season (buck, premium C tag)",
+   "start": "2026-09-19",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "C4 zone general season (buck, premium C tag)",
+   "start": "2026-09-19",
+   "end": "2026-10-04",
+   "year": 2026,
+   "sourceId": "d-digest-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "D3-5 zone archery season (buck)",
+   "start": "2026-08-15",
+   "end": "2026-09-06",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted D3-5 tag (quota 33,000)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D3-5 zone general season (buck)",
+   "start": "2026-09-26",
+   "end": "2026-11-01",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted D3-5 tag (quota 33,000)."
+  },
+  {
+   "species": "bear",
+   "label": "Archery bear season (all bear zones)",
+   "start": "2026-08-15",
+   "end": "2026-09-06",
+   "year": 2026,
+   "sourceId": "d-bear-page",
+   "note": "Bears taken count toward the 1,700 limit."
+  },
+  {
+   "species": "bear",
+   "label": "General bear season (deer X zones other than X8, X9A, X9B, X10 and X12)",
+   "start": "2026-10-10",
+   "end": "2026-12-27",
+   "year": 2026,
+   "sourceId": "d-bear-page",
+   "note": "In deer zones A, B, C, D, X8, X9A, X9B, X10 and X12 the general bear season opens with the general deer season and also runs through December 27. Closes earlier if 1,700 bears are reported taken."
+  },
+  {
+   "species": "turkey",
+   "label": "Fall wild turkey season",
+   "start": "2026-11-14",
+   "end": "2026-12-13",
+   "year": 2026,
+   "sourceId": "d-upland-page",
+   "note": "1 either-sex turkey per day, 2 per season."
+  },
+  {
+   "species": "turkey",
+   "label": "Spring wild turkey general season",
+   "start": "2027-03-27",
+   "end": "2027-05-02",
+   "year": 2027,
+   "sourceId": "d-upland-page",
+   "note": "1 bearded turkey per day, 3 per season combined. Listed in CDFW's 2026-2027 seasons."
+  },
+  {
+   "species": "turkey",
+   "label": "Spring wild turkey archery-only season",
+   "start": "2027-05-03",
+   "end": "2027-05-16",
+   "year": 2027,
+   "sourceId": "d-upland-page",
+   "note": "Listed in CDFW's 2026-2027 seasons."
+  },
+  {
+   "species": "turkey",
+   "label": "Additional junior spring turkey hunt (junior license holders)",
+   "start": "2027-03-20",
+   "end": "2027-03-21",
+   "year": 2027,
+   "sourceId": "d-upland-page",
+   "note": "Also May 3-16, 2027. Listed in CDFW's 2026-2027 seasons."
+  }
+ ],
+ "coverage": [
+  {
+   "species": "mule-deer",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Hunts per draw year: 2022: 87, 2023: 88, 2024: 84, 2025: 82, 2026: 82. Counts are CDFW's for all applicants combined (no resident/nonresident split). Preference-point-only applicants (not in rows): 2022: 12,925, 2023: 13,120, 2024: 12,797, 2025: 11,552, 2026: 12,673. Applicants by point value are in each row's note; CDFW does not publish tags drawn by point level, so there is no byPoints. Rows are premium deer hunts only (zone, archery, general late-season, muzzleloader and apprentice hunts); applicants are first-choice applicants. Drawn (first-choice applicants awarded a tag), odds and minPoints (lowest point value drawn in the preference drawing) come from the deer drawing summary in the next year's Big Game Hunting Digest, so 2026 rows have no drawn counts yet. 2024 hunts A19, A20, A21 and A24 have no drawn counts because CDFW's 2024 summary rows for those codes do not match the drawing-statistics PDF. The 2025 general late-season 16-23 point part (DocumentID 242664) prints a preference-point-only row that disagrees with the other parts, so 2025 general late-season hunts carry no point breakdown."
+  },
+  {
+   "species": "elk",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Hunts per draw year: 2022: 59, 2023: 65, 2024: 63, 2025: 72, 2026: 87. Counts are CDFW's for all applicants combined (no resident/nonresident split). Preference-point-only applicants (not in rows): 2022: 11,014, 2023: 11,058, 2024: 10,761, 2025: 9,677, 2026: 10,573. Applicants by point value are in each row's note; CDFW does not publish tags drawn by point level, so there is no byPoints. One hunt choice per application, so choice = all. CDFW does not publish tags drawn for this species: rows give quota and applicants only. Subspecies in descriptions (Roosevelt, Tule, Rocky Mountain) come from the elk hunt tables of the 2023-2026 Big Game Hunting Digests; hunts not listed with a subspecies take their hunt zone's subspecies when every listed hunt in that zone has the same one (shown as '(Tule elk zone)'); Mendocino is listed as Roosevelt/Tule."
+  },
+  {
+   "species": "pronghorn",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Hunts per draw year: 2022: 17, 2023: 17, 2024: 17, 2025: 14, 2026: 14. Counts are CDFW's for all applicants combined (no resident/nonresident split). Preference-point-only applicants (not in rows): 2022: 10,640, 2023: 10,834, 2024: 10,749, 2025: 9,792, 2026: 10,775. Applicants by point value are in each row's note; CDFW does not publish tags drawn by point level, so there is no byPoints. One hunt choice per application, so choice = all. CDFW does not publish tags drawn for this species: rows give quota and applicants only. 2026 apprentice hunts 766, 780 and 790: CDFW's PDF prints 0 in every point column, so no point breakdown."
+  },
+  {
+   "species": "sheep",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Hunts per draw year: 2022: 8, 2023: 8, 2024: 9, 2025: 12, 2026: 15. Counts are CDFW's for all applicants combined (no resident/nonresident split). Preference-point-only applicants (not in rows): 2022: 7,159, 2023: 7,318, 2024: 7,135, 2025: 6,432, 2026: 6,986. Applicants by point value are in each row's note; CDFW does not publish tags drawn by point level, so there is no byPoints. One hunt choice per application, so choice = all. CDFW does not publish tags drawn for this species: rows give quota and applicants only. Nelson (desert) bighorn sheep ram hunts; zones 11-13 are new in 2026."
+  },
+  {
+   "species": "bear",
+   "years": [],
+   "notes": "No drawing: bear tags are sold over the counter with a statewide 1,700-bear harvest limit."
+  },
+  {
+   "species": "turkey",
+   "years": [],
+   "notes": "No drawing for general seasons: hunting license plus upland game bird validation. CDFW special hunts are not covered."
+  }
+ ],
+ "sources": [
+  {
+   "id": "d-bgd-page",
+   "title": "Big Game Hunting Tags (Big Game Drawing, preference points, tag quota splits FAQ)",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://wildlife.ca.gov/Licensing/Hunting/Big-Game-Drawing",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-fees-2026",
+   "title": "Hunting License Items and Fees (valid July 1, 2026, through June 30, 2027)",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://wildlife.ca.gov/Licensing/Hunting/Items",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-bear-page",
+   "title": "Bear Hunting (2026 season, bear tag fees)",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://wildlife.ca.gov/Hunting/Bear",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Harvest counter read 803 bears as of October 27, 2026."
+  },
+  {
+   "id": "d-upland-page",
+   "title": "Upland Game Bird Hunting (2026 - 2027 Seasons and Limits - Wild Turkey)",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://wildlife.ca.gov/Hunting/Upland-Game-Birds",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-digest-2026",
+   "title": "2026 California Big Game Hunting Digest",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=200602&inline",
+   "pageUrl": "https://wildlife.ca.gov/Publications/Hunting-Digest",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Updated 4/17/2026 (some pages 4/1/2026). Prints the 2025 deer drawing summary (pp. 29-31)."
+  },
+  {
+   "id": "d-digest-2025",
+   "title": "2025 California Big Game Hunting Digest",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=243703&inline",
+   "pageUrl": "https://wildlife.ca.gov/Publications/Hunting-Digest",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Updated 4/28/2025. Prints the 2024 deer drawing summary."
+  },
+  {
+   "id": "d-digest-2024",
+   "title": "2024-2025 California Big Game Digest",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=231077&inline",
+   "pageUrl": "https://wildlife.ca.gov/Publications/Hunting-Digest",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "2024-2025 California Big Game Digest, updated 5/31/2024. Prints the 2023 deer drawing summary."
+  },
+  {
+   "id": "d-digest-2023",
+   "title": "2023 California Big Game Hunting Digest",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=221986&inline",
+   "pageUrl": "https://wildlife.ca.gov/Publications/Hunting-Digest",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Prints the 2022 deer drawing summary."
+  },
+  {
+   "id": "d-stats-deer-apprentice-hunts-2022",
+   "title": "2022 Deer Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=207826&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 207826: Deer Tag Drawing Statistics - Apprentice Hunts by Point Value. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-apprentice-hunts-2023",
+   "title": "2023 Deer Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=218677&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 218677: Deer Tag Drawing Statistics - Apprentice Hunts by Point Value. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-apprentice-hunts-2024",
+   "title": "2024 Deer Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=229461&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 229461: Deer Tag Drawing Statistics - Apprentice Hunts by Point Value. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-apprentice-hunts-2025",
+   "title": "2025 Deer Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=242657&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 242657: Deer Tag Drawing Statistics - Apprentice Hunts by Point Value. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-apprentice-hunts-2026",
+   "title": "2026 Deer Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=247729&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 247729: Deer Tag Drawing Statistics - Apprentice Hunts by Point Value. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split. 2026 PDFs are marked REV. 10/06/26-10/09/26."
+  },
+  {
+   "id": "d-stats-deer-archery-hunts-2022",
+   "title": "2022 Deer Tag Drawing Statistics - Archery Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=207827&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 207827: Deer Tag Drawing Statistics - Archery Hunts by Point Value: 0 to 9 Points; DocumentID 207828: Deer Tag Drawing Statistics - Archery Hunts by Point Value: 10 to 20 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-archery-hunts-2023",
+   "title": "2023 Deer Tag Drawing Statistics - Archery Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=218684&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 218684: Deer Tag Drawing Statistics - Archery Hunts by Point Value: 0 to 6 Points; DocumentID 218685: Deer Tag Drawing Statistics - Archery Hunts by Point Value: 7 to 14 Points; DocumentID 218686: Deer Tag Drawing Statistics - Archery Hunts by Point Value: 15 to 21 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-area-specific-archery-hunts-2024",
+   "title": "2024 Deer Tag Drawing Statistics - Area Specific Archery Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=229482&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 229482: Deer Tag Drawing Statistics - Area Specific Archery Hunts by Point Values 0 to 7 Points; DocumentID 229483: Deer Tag Drawing Statistics - Area Specific Archery Hunts by Point Values 8 to 14 Points; DocumentID 229484: Deer Tag Drawing Statistics - Area Specific Archery Hunts by Point Values 15 to 22 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-area-specific-archery-hunts-2025",
+   "title": "2025 Deer Tag Drawing Statistics - Area Specific Archery Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=242658&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 242658: Deer Tag Drawing Statistics - Area Specific Archery Hunts by Point Values 0 to 7 Points; DocumentID 242659: Deer Tag Drawing Statistics - Area Specific Archery Hunts by Point Values 8 to 15 Points; DocumentID 242660: Deer Tag Drawing Statistics - Area Specific Archery Hunts by Point Values 16 to 23 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-area-specific-archery-hunts-2026",
+   "title": "2026 Deer Tag Drawing Statistics - Area Specific Archery Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=247732&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 247732: Deer Tag Drawing Statistics - Area Specific Archery Hunts by Point Values 0 to 7 Points; DocumentID 247733: Deer Tag Drawing Statistics - Area Specific Archery Hunts by Point Values 8 to 15 Points; DocumentID 247735: Deer Tag Drawing Statistics - Area Specific Archery Hunts by Point Values 16 to 24 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split. 2026 PDFs are marked REV. 10/06/26-10/09/26."
+  },
+  {
+   "id": "d-stats-deer-general-late-season-hunts-2022",
+   "title": "2022 Deer Tag Drawing Statistics - General Late Season Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=207829&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 207829: Deer Tag Drawing Statistics - General Late Season Hunts by Point Value: 0 to 9 Points; DocumentID 207830: Deer Tag Drawing Statistics - General Late Season Hunts by Point Value: 10 to 20 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-general-late-season-hunts-2023",
+   "title": "2023 Deer Tag Drawing Statistics - General Late Season Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=218687&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 218687: Deer Tag Drawing Statistics - General Late Season Hunts by Point Value: 0 to 6 Points; DocumentID 218688: Deer Tag Drawing Statistics - General Late Season Hunts by Point Value: 7 to 14 Points; DocumentID 218689: Deer Tag Drawing Statistics - General Late Season Hunts by Point Value: 15 to 21 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-general-late-season-hunts-2024",
+   "title": "2024 Deer Tag Drawing Statistics - General Late Season Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=229485&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 229485: Deer Tag Drawing Statistics - General Late Season Hunts by Point Values 0 to 7 Points; DocumentID 229486: Deer Tag Drawing Statistics - General Late Season Hunts by Point Values 8 to 14 Points; DocumentID 229487: Deer Tag Drawing Statistics - General Late Season Hunts by Point Values 15 to 22 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-general-late-season-hunts-2025",
+   "title": "2025 Deer Tag Drawing Statistics - General Late Season Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=242661&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 242661: Deer Tag Drawing Statistics - General Late Season Hunts by Point Values 0 to 7 Points; DocumentID 242663: Deer Tag Drawing Statistics - General Late Season Hunts by Point Values 8 to 15 Points; DocumentID 242664: Deer Tag Drawing Statistics - General Late Season Hunts by Point Values 16 to 23 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-general-late-season-hunts-2026",
+   "title": "2026 Deer Tag Drawing Statistics - General Late Season Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=247736&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 247736: Deer Tag Drawing Statistics - General Late Season Hunts by Point Values 0 to 7 Points; DocumentID 247737: Deer Tag Drawing Statistics - General Late Season Hunts by Point Values 8 to 15 Points; DocumentID 247738: Deer Tag Drawing Statistics - General Late Season Hunts by Point Values 16 to 24 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split. 2026 PDFs are marked REV. 10/06/26-10/09/26."
+  },
+  {
+   "id": "d-stats-deer-muzzleloader-hunts-2022",
+   "title": "2022 Deer Tag Drawing Statistics - Muzzleloader Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=207831&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 207831: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Value: 0 to 9 Points; DocumentID 207832: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Value: 10 to 20 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-muzzleloader-hunts-2023",
+   "title": "2023 Deer Tag Drawing Statistics - Muzzleloader Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=218678&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 218678: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Value: 0 to 6 Points; DocumentID 218679: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Value: 7 to 14 Points; DocumentID 218680: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Value: 15 to 21 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-muzzleloader-hunts-2024",
+   "title": "2024 Deer Tag Drawing Statistics - Muzzleloader Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=229488&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 229488: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Values 0 to 7 Points; DocumentID 229489: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Values 8 to 14 Points; DocumentID 229490: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Values 15 to 22 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-muzzleloader-hunts-2025",
+   "title": "2025 Deer Tag Drawing Statistics - Muzzleloader Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=242665&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 242665: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Values 0 to 7 Points; DocumentID 242666: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Values 8 to 15 Points; DocumentID 242667: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Values 16 to 23 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-muzzleloader-hunts-2026",
+   "title": "2026 Deer Tag Drawing Statistics - Muzzleloader Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=247739&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 247739: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Values 0 to 7 Points; DocumentID 247740: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Values 8 to 15 Points; DocumentID 247741: Deer Tag Drawing Statistics - Muzzleloader Hunts by Point Values 16 to 24 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split. 2026 PDFs are marked REV. 10/06/26-10/09/26."
+  },
+  {
+   "id": "d-stats-deer-zone-hunts-2022",
+   "title": "2022 Deer Tag Drawing Statistics - Zone Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=207824&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 207824: Deer Tag Drawing Statistics - Zone Hunts by Point Value: 0 to 9 Points; DocumentID 207825: Deer Tag Drawing Statistics - Zone Hunts by Point Value: 10 to 20 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-zone-hunts-2023",
+   "title": "2023 Deer Tag Drawing Statistics - Zone Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=218681&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 218681: Deer Tag Drawing Statistics - Zone Hunts by Point Value: 0 to 6 Points; DocumentID 218682: Deer Tag Drawing Statistics - Zone Hunts by Point Value: 7 to 14 Points; DocumentID 218683: Deer Tag Drawing Statistics - Zone Hunts by Point Value: 15 to 21 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-zone-hunts-2024",
+   "title": "2024 Deer Tag Drawing Statistics - Zone Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=229491&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 229491: Deer Tag Drawing Statistics - Zone Hunts by Point Values 0 to 7 Points; DocumentID 229492: Deer Tag Drawing Statistics - Zone Hunts by Point Values 8 to 14 Points; DocumentID 229493: Deer Tag Drawing Statistics - Zone Hunts by Point Values 15 to 22 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-zone-hunts-2025",
+   "title": "2025 Deer Tag Drawing Statistics - Zone Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=242669&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 242669: Deer Tag Drawing Statistics - Zone Hunts by Point Values 0 to 7 Points; DocumentID 242670: Deer Tag Drawing Statistics - Zone Hunts by Point Values 8 to 15 Points; DocumentID 242671: Deer Tag Drawing Statistics - Zone Hunts by Point Values 16 to 23 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-deer-zone-hunts-2026",
+   "title": "2026 Deer Tag Drawing Statistics - Zone Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=247742&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 247742: Deer Tag Drawing Statistics - Zone Hunts by Point Values 0 to 7 Points; DocumentID 247743: Deer Tag Drawing Statistics - Zone Hunts by Point Values 8 to 15 Points; DocumentID 247744: Deer Tag Drawing Statistics - Zone Hunts by Point Values 16 to 24 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split. 2026 PDFs are marked REV. 10/06/26-10/09/26."
+  },
+  {
+   "id": "d-stats-elk-antlerless-and-either-sex-hunts-2022",
+   "title": "2022 Elk Tag Drawing Statistics - Antlerless and Either-Sex Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=207835&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 207835: Elk Tag Drawing Statistics - Antlerless and Either-Sex Hunts by Point Value: 0 to 9 Points; DocumentID 207836: Elk Tag Drawing Statistics - Antlerless and Either-Sex Hunts by Point Value: 10 to 20 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-elk-antlerless-and-either-sex-hunts-2023",
+   "title": "2023 Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=218692&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 218692: Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts by Point Value: 0 to 6 Points; DocumentID 218693: Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts by Point Value: 7 to 14 Points; DocumentID 218695: Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts by Point Value: 15 to 21 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-elk-antlerless-and-either-sex-hunts-2024",
+   "title": "2024 Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=229451&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 229451: Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts by Point Values 0 to 10 Points; DocumentID 229452: Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts by Point Values 11 to 22 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-elk-antlerless-and-either-sex-hunts-2025",
+   "title": "2025 Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=242639&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 242639: Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts by Point Values 0 to 8 Points; DocumentID 242640: Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts by Point Values 9 to 15 Points; DocumentID 242641: Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts by Point Values 16 to 23 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-elk-antlerless-and-either-sex-hunts-2026",
+   "title": "2026 Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=247748&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 247748: Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts by Point Values 0 to 7 Points; DocumentID 247749: Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts by Point Values 8 to 15 Points; DocumentID 247750: Elk Tag Drawing Statistics - Antlerless and Either-sex Hunts by Point Values 16 to 24 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split. 2026 PDFs are marked REV. 10/06/26-10/09/26."
+  },
+  {
+   "id": "d-stats-elk-apprentice-hunts-2022",
+   "title": "2022 Elk Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=207834&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 207834: Elk Tag Drawing Statistics - Apprentice Hunts by Point Value. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-elk-apprentice-hunts-2023",
+   "title": "2023 Elk Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=218691&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 218691: Elk Tag Drawing Statistics - Apprentice Hunts by Point Value. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-elk-apprentice-hunts-2024",
+   "title": "2024 Elk Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=229450&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 229450: Elk Tag Drawing Statistics - Apprentice Hunts by Point Values. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-elk-apprentice-hunts-2025",
+   "title": "2025 Elk Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=242638&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 242638: Elk Tag Drawing Statistics - Apprentice Hunts by Point Values. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-elk-apprentice-hunts-2026",
+   "title": "2026 Elk Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=247747&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 247747: Elk Tag Drawing Statistics - Apprentice Hunts by Point Values. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split. 2026 PDFs are marked REV. 10/06/26-10/09/26."
+  },
+  {
+   "id": "d-stats-elk-bull-and-spike-bull-hunts-2022",
+   "title": "2022 Elk Tag Drawing Statistics - Bull and Spike Bull Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=207837&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 207837: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Value: 0 to 9 Points; DocumentID 207838: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Value: 10 to 20 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-elk-bull-and-spike-bull-hunts-2023",
+   "title": "2023 Elk Tag Drawing Statistics - Bull and Spike Bull Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=218696&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 218696: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Value: 0 to 6 Points; DocumentID 218697: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Value: 7 to 14 Points; DocumentID 218701: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Value: 15 to 21 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-elk-bull-and-spike-bull-hunts-2024",
+   "title": "2024 Elk Tag Drawing Statistics - Bull and Spike Bull Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=229453&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 229453: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Values 0 to 10 Points; DocumentID 229454: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Values 11 to 22 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-elk-bull-and-spike-bull-hunts-2025",
+   "title": "2025 Elk Tag Drawing Statistics - Bull and Spike Bull Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=242643&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 242643: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Values 0 to 8 Points; DocumentID 242644: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Values 9 to 16 Points; DocumentID 242645: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Values 17 to 23 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-elk-bull-and-spike-bull-hunts-2026",
+   "title": "2026 Elk Tag Drawing Statistics - Bull and Spike Bull Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=247751&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 247751: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Values 0 to 7 Points; DocumentID 247752: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Values 8 to 15 Points; DocumentID 247753: Elk Tag Drawing Statistics - Bull and Spike Bull Hunts by Point Values 16 to 24 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split. 2026 PDFs are marked REV. 10/06/26-10/09/26."
+  },
+  {
+   "id": "d-stats-pronghorn-all-hunts-2022",
+   "title": "2022 Pronghorn Antelope Tag Drawing Statistics - Archery and General Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=207841&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 207841: Pronghorn Antelope Tag Drawing Statistics - Archery and General Hunts by Point Value: 0 to 9 Points; DocumentID 207842: Pronghorn Antelope Tag Drawing Statistics - Archery and General Hunts by Point Value: 10 to 20 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-pronghorn-all-hunts-2023",
+   "title": "2023 Pronghorn Antelope Tag Drawing Statistics - Archery and General Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=218705&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 218705: Pronghorn Antelope Tag Drawing Statistics - Archery and General Hunts by Point Value: 0 to 6 Points; DocumentID 218706: Pronghorn Antelope Tag Drawing Statistics - Archery and General Hunts by Point Value: 7 to 14 Points; DocumentID 218707: Pronghorn Antelope Tag Drawing Statistics - Archery and General Hunts by Point Value: 15 to 21 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-pronghorn-all-hunts-2024",
+   "title": "2024 Pronghorn Tag Drawing Statistics - Applicants - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=229457&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 229457: Pronghorn Tag Drawing Statistics - Applicants by Point Values 0 to 10 Points; DocumentID 229459: Pronghorn Tag Drawing Statistics - Applicants by Point Values 11 to 22 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-pronghorn-all-hunts-2025",
+   "title": "2025 Pronghorn Tag Drawing Statistics - Applicants - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=242635&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 242635: Pronghorn Tag Drawing Statistics - Applicants by Point Values 0 to 8 Points; DocumentID 242636: Pronghorn Tag Drawing Statistics - Applicants by Point Values 9 to 16 Points; DocumentID 242637: Pronghorn Tag Drawing Statistics - Applicants by Point Values 17 to 23 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-pronghorn-all-hunts-2026",
+   "title": "2026 Pronghorn Tag Drawing Statistics - Applicants - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=247755&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 3 PDFs split by point range (DocumentID 247755: Pronghorn Tag Drawing Statistics - Applicants by Point Values 0 to 7 Points; DocumentID 247756: Pronghorn Tag Drawing Statistics - Applicants by Point Values 8 to 15 Points; DocumentID 247757: Pronghorn Tag Drawing Statistics - Applicants by Point Values 16 to 24 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split. 2026 PDFs are marked REV. 10/06/26-10/09/26."
+  },
+  {
+   "id": "d-stats-pronghorn-apprentice-hunts-2022",
+   "title": "2022 Pronghorn Antelope Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=207840&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 207840: Pronghorn Antelope Tag Drawing Statistics - Apprentice Hunts by Point Value. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-pronghorn-apprentice-hunts-2023",
+   "title": "2023 Pronghorn Antelope Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=218704&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 218704: Pronghorn Antelope Tag Drawing Statistics - Apprentice Hunts by Point Value. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-pronghorn-apprentice-hunts-2024",
+   "title": "2024 Pronghorn Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=229455&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 229455: Pronghorn Tag Drawing Statistics - Apprentice Hunts by Point Values. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-pronghorn-apprentice-hunts-2025",
+   "title": "2025 Pronghorn Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=242634&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 242634: Pronghorn Tag Drawing Statistics - Apprentice Hunts by Point Values. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-pronghorn-apprentice-hunts-2026",
+   "title": "2026 Pronghorn Tag Drawing Statistics - Apprentice Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=247754&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 247754: Pronghorn Tag Drawing Statistics - Apprentice Hunts by Point Values. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split. 2026 PDFs are marked REV. 10/06/26-10/09/26."
+  },
+  {
+   "id": "d-stats-sheep-all-hunts-2022",
+   "title": "2022 Bighorn Sheep Tag Drawing Statistic - General Method Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=207833&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 207833: Bighorn Sheep Tag Drawing Statistic - General Method Hunts by Point Value: 0 to 20 Points. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-sheep-all-hunts-2023",
+   "title": "2023 Bighorn Sheep Tag Drawing Statistic - General Method Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=218690&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "DocumentID 218690: Bighorn Sheep Tag Drawing Statistic - General Method Hunts by Point Value: 0 to 21 Points. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-sheep-all-hunts-2024",
+   "title": "2024 Bighorn Sheep Tag Drawing Statistics - Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=229448&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 229448: Bighorn Sheep Tag Drawing Statistics - Hunts by Point Values 0 to 9 Points; DocumentID 229449: Bighorn Sheep Tag Drawing Statistics - Hunts by Point Values 10 to 22 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-sheep-all-hunts-2025",
+   "title": "2025 Bighorn Sheep Tag Drawing Statistics - Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=242632&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 242632: Bighorn Sheep Tag Drawing Statistics - Hunts by Point Values 0 to 10 Points; DocumentID 242633: Bighorn Sheep Tag Drawing Statistics - Hunts by Point Values 11 to 23 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split."
+  },
+  {
+   "id": "d-stats-sheep-all-hunts-2026",
+   "title": "2026 Bighorn Sheep Tag Drawing Statistics - Hunts - Number of Applicants by Point Value",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=247745&inline",
+   "pageUrl": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Published in 2 PDFs split by point range (DocumentID 247745: Bighorn Sheep Tag Drawing Statistics - Hunts by Point Values 0 to 10 Points; DocumentID 247746: Bighorn Sheep Tag Drawing Statistics - Hunts by Point Values 11 to 24 Points). url is the first part. Number of applicants by point value per hunt (first-choice applicants for deer); tag quota and preference/random quota split. 2026 PDFs are marked REV. 10/06/26-10/09/26."
+  }
+ ]
+}

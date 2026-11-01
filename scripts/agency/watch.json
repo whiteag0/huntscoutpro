@@ -643,6 +643,88 @@
           "reason": "season closed 2023-2025 (harvest-meta coverage note)"
         }
       ]
+    },
+    "california": {
+      "agency": "California Department of Fish and Wildlife (CDFW)",
+      "notes": "CDFW serves documents from nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=<id>&inline (no .pdf extension), so pages carry a linkPatterns entry for it; a replaced document gets a new DocumentID. All pages answered curl with a browser User-Agent (HTTP 200) on 2026-10-31. Drawing statistics (one PDF per species, hunt group and point range) are listed on the Big Game Drawing statistics page; deer tags drawn appear only in the next year's Big Game Hunting Digest. Elk (last posted 2022) and pronghorn (last posted 2023) hunt statistics are on the species pages; the bighorn sheep page replaces its hunter-success table each year. Bear harvest is in the Black Bear Program annual report on the bear page; turkey harvest is in the upland game bird harvest survey on the upland page.",
+      "pages": [
+        {
+          "id": "ca-big-game-drawing",
+          "roles": ["key-dates", "regulations"],
+          "url": "https://wildlife.ca.gov/Licensing/Hunting/Big-Game-Drawing",
+          "linkPatterns": ["nrm\\.dfg\\.ca\\.gov/FileHandler\\.ashx\\?DocumentID=\\d+"],
+          "seed": "draw-meta d-bgd-page url"
+        },
+        {
+          "id": "ca-digest",
+          "roles": ["key-dates", "fees", "regulations"],
+          "url": "https://wildlife.ca.gov/Publications/Hunting-Digest",
+          "linkPatterns": ["nrm\\.dfg\\.ca\\.gov/FileHandler\\.ashx\\?DocumentID=\\d+"],
+          "seed": "draw-meta d-digest-2026 pageUrl"
+        },
+        {
+          "id": "ca-draw-stats",
+          "roles": ["draw-results"],
+          "url": "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing",
+          "linkPatterns": ["nrm\\.dfg\\.ca\\.gov/FileHandler\\.ashx\\?DocumentID=\\d+"],
+          "seed": "draw-meta d-stats-* pageUrl"
+        },
+        {
+          "id": "ca-fees",
+          "roles": ["fees"],
+          "url": "https://wildlife.ca.gov/Licensing/Hunting/Items",
+          "seed": "draw-meta d-fees-2026 url"
+        },
+        {
+          "id": "ca-deer",
+          "roles": ["harvest"],
+          "url": "https://wildlife.ca.gov/Hunting/Deer",
+          "linkPatterns": ["nrm\\.dfg\\.ca\\.gov/FileHandler\\.ashx\\?DocumentID=\\d+"],
+          "seed": "harvest-meta h-cdfw-deer-* pageUrl"
+        },
+        {
+          "id": "ca-elk",
+          "roles": ["harvest"],
+          "url": "https://wildlife.ca.gov/Hunting/Elk",
+          "linkPatterns": ["nrm\\.dfg\\.ca\\.gov/FileHandler\\.ashx\\?DocumentID=\\d+"],
+          "seed": "harvest-meta h-cdfw-elk-* pageUrl"
+        },
+        {
+          "id": "ca-pronghorn",
+          "roles": ["harvest"],
+          "url": "https://wildlife.ca.gov/Hunting/Pronghorn-Antelope",
+          "linkPatterns": ["nrm\\.dfg\\.ca\\.gov/FileHandler\\.ashx\\?DocumentID=\\d+"],
+          "seed": "harvest-meta h-cdfw-pronghorn-* pageUrl"
+        },
+        {
+          "id": "ca-bighorn-sheep",
+          "roles": ["harvest", "draw-results"],
+          "url": "https://wildlife.ca.gov/Hunting/Bighorn-Sheep",
+          "linkPatterns": ["nrm\\.dfg\\.ca\\.gov/FileHandler\\.ashx\\?DocumentID=\\d+"],
+          "seed": "harvest-meta h-cdfw-sheep-2025 url"
+        },
+        {
+          "id": "ca-bear",
+          "roles": ["harvest", "key-dates", "fees"],
+          "url": "https://wildlife.ca.gov/Hunting/Bear",
+          "linkPatterns": ["nrm\\.dfg\\.ca\\.gov/FileHandler\\.ashx\\?DocumentID=\\d+"],
+          "seed": "draw-meta d-bear-page url; harvest-meta h-cdfw-bear-* pageUrl"
+        },
+        {
+          "id": "ca-upland",
+          "roles": ["harvest", "key-dates"],
+          "url": "https://wildlife.ca.gov/Hunting/Upland-Game-Birds",
+          "linkPatterns": ["nrm\\.dfg\\.ca\\.gov/FileHandler\\.ashx\\?DocumentID=\\d+"],
+          "seed": "draw-meta d-upland-page url; harvest-meta h-cdfw-upland-* pageUrl"
+        },
+        {
+          "id": "ca-regulations",
+          "roles": ["regulations"],
+          "url": "https://wildlife.ca.gov/Regulations",
+          "linkPatterns": ["nrm\\.dfg\\.ca\\.gov/FileHandler\\.ashx\\?DocumentID=\\d+"],
+          "seed": "CDFW regulations index"
+        }
+      ]
     }
   }
 }
