@@ -50,7 +50,7 @@
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
+     "note": "Only for license types you did not apply for in 2026. MCA 87-2-117(2)(b) sets the same July 1 - Sept. 30 window every license year (see the 2027 entry)."
     },
     {
      "label": "Nonresident preference point purchase without applying for a combination license",
@@ -61,7 +61,25 @@
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "$100; applicants who applied for a combination license could only buy it at application. 2027 dates not yet published by Montana FWP as of 2026-10-31."
+     "note": "$100; applicants who applied for a combination license could only buy it at application. MCA 87-2-115(3)(b) sets the same July 1 - Dec. 31 window every license year (see the 2027 entry)."
+    },
+    {
+     "label": "Elk permit and nonresident combination application deadline",
+     "kind": "application",
+     "date": "2027-04-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.601(1) and (2) (\"The application deadline for B-10 and B-11 license drawings is April 1.\" \"The application deadline for elk and deer permit drawings is April 1.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-601"
+    },
+    {
+     "label": "Elk B license application deadline",
+     "kind": "application",
+     "date": "2027-06-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.601(4) (\"The application deadline for elk B, deer B, antelope, and antelope B license drawings is June 1.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-601"
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
@@ -69,16 +87,30 @@
      "start": "2027-07-01",
      "end": "2027-09-30",
      "cycle": 2027,
-     "status": "confirmed",
-     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
-     "sourceId": "d-fwp-bp-faq"
+     "status": "tentative",
+     "note": "Set by MCA 87-2-117(2)(b) (\"An applicant not applying for a license, tag, or permit may purchase a bonus point only between July 1 and September 30 in the current license year.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-mca-87-2-117"
+    },
+    {
+     "label": "Nonresident preference point purchase without applying for a combination license",
+     "kind": "points",
+     "residency": "nonresident",
+     "start": "2027-07-01",
+     "end": "2027-12-31",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by MCA 87-2-115(3)(b) (\"An applicant not applying for a Class B-10 or Class B-11 license may purchase a preference point only between July 1 and December 31 of that license year.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-mca-87-2-115"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
     "d-fwp-bonus-points",
     "d-fwp-bp-faq",
-    "d-fwp-regs-dea-2026"
+    "d-fwp-regs-dea-2026",
+    "d-arm-12-3-601",
+    "d-mca-87-2-117",
+    "d-mca-87-2-115"
    ]
   },
   {
@@ -120,7 +152,7 @@
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
+     "note": "Only for license types you did not apply for in 2026. MCA 87-2-117(2)(b) sets the same July 1 - Sept. 30 window every license year (see the 2027 entry)."
     },
     {
      "label": "Nonresident preference point purchase without applying for a combination license",
@@ -131,7 +163,25 @@
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "$100; applicants who applied for a combination license could only buy it at application. 2027 dates not yet published by Montana FWP as of 2026-10-31."
+     "note": "$100; applicants who applied for a combination license could only buy it at application. MCA 87-2-115(3)(b) sets the same July 1 - Dec. 31 window every license year (see the 2027 entry)."
+    },
+    {
+     "label": "Deer permit and nonresident combination application deadline",
+     "kind": "application",
+     "date": "2027-04-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.601(1) and (2) (\"The application deadline for B-10 and B-11 license drawings is April 1.\" \"The application deadline for elk and deer permit drawings is April 1.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-601"
+    },
+    {
+     "label": "Deer B license application deadline",
+     "kind": "application",
+     "date": "2027-06-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.601(4) (\"The application deadline for elk B, deer B, antelope, and antelope B license drawings is June 1.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-601"
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
@@ -139,16 +189,30 @@
      "start": "2027-07-01",
      "end": "2027-09-30",
      "cycle": 2027,
-     "status": "confirmed",
-     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
-     "sourceId": "d-fwp-bp-faq"
+     "status": "tentative",
+     "note": "Set by MCA 87-2-117(2)(b) (\"An applicant not applying for a license, tag, or permit may purchase a bonus point only between July 1 and September 30 in the current license year.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-mca-87-2-117"
+    },
+    {
+     "label": "Nonresident preference point purchase without applying for a combination license",
+     "kind": "points",
+     "residency": "nonresident",
+     "start": "2027-07-01",
+     "end": "2027-12-31",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by MCA 87-2-115(3)(b) (\"An applicant not applying for a Class B-10 or Class B-11 license may purchase a preference point only between July 1 and December 31 of that license year.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-mca-87-2-115"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
     "d-fwp-bonus-points",
     "d-fwp-regs-dea-2026",
-    "d-fwp-bp-faq"
+    "d-fwp-bp-faq",
+    "d-arm-12-3-601",
+    "d-mca-87-2-117",
+    "d-mca-87-2-115"
    ]
   },
   {
@@ -190,7 +254,36 @@
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
+     "note": "Only for license types you did not apply for in 2026. MCA 87-2-117(2)(b) sets the same July 1 - Sept. 30 window every license year (see the 2027 entry)."
+    },
+    {
+     "label": "Nonresident preference point purchase without applying for a combination license",
+     "kind": "points",
+     "residency": "nonresident",
+     "start": "2026-07-01",
+     "end": "2026-12-31",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-fwp-regs-dea-2026",
+     "note": "$100; applicants who applied for a combination license could only buy it at application. MCA 87-2-115(3)(b) sets the same July 1 - Dec. 31 window every license year (see the 2027 entry)."
+    },
+    {
+     "label": "Deer permit and nonresident combination application deadline",
+     "kind": "application",
+     "date": "2027-04-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.601(1) and (2) (\"The application deadline for B-10 and B-11 license drawings is April 1.\" \"The application deadline for elk and deer permit drawings is April 1.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-601"
+    },
+    {
+     "label": "Deer B license application deadline",
+     "kind": "application",
+     "date": "2027-06-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.601(4) (\"The application deadline for elk B, deer B, antelope, and antelope B license drawings is June 1.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-601"
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
@@ -198,16 +291,30 @@
      "start": "2027-07-01",
      "end": "2027-09-30",
      "cycle": 2027,
-     "status": "confirmed",
-     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
-     "sourceId": "d-fwp-bp-faq"
+     "status": "tentative",
+     "note": "Set by MCA 87-2-117(2)(b) (\"An applicant not applying for a license, tag, or permit may purchase a bonus point only between July 1 and September 30 in the current license year.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-mca-87-2-117"
+    },
+    {
+     "label": "Nonresident preference point purchase without applying for a combination license",
+     "kind": "points",
+     "residency": "nonresident",
+     "start": "2027-07-01",
+     "end": "2027-12-31",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by MCA 87-2-115(3)(b) (\"An applicant not applying for a Class B-10 or Class B-11 license may purchase a preference point only between July 1 and December 31 of that license year.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-mca-87-2-115"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
     "d-fwp-bonus-points",
     "d-fwp-regs-dea-2026",
-    "d-fwp-bp-faq"
+    "d-fwp-bp-faq",
+    "d-arm-12-3-601",
+    "d-mca-87-2-117",
+    "d-mca-87-2-115"
    ]
   },
   {
@@ -239,7 +346,16 @@
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
+     "note": "Only for license types you did not apply for in 2026. MCA 87-2-117(2)(b) sets the same July 1 - Sept. 30 window every license year (see the 2027 entry)."
+    },
+    {
+     "label": "Antelope, Antelope B and archery antelope application deadline",
+     "kind": "application",
+     "date": "2027-06-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.601(4) (\"The application deadline for elk B, deer B, antelope, and antelope B license drawings is June 1.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-601"
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
@@ -247,16 +363,18 @@
      "start": "2027-07-01",
      "end": "2027-09-30",
      "cycle": 2027,
-     "status": "confirmed",
-     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
-     "sourceId": "d-fwp-bp-faq"
+     "status": "tentative",
+     "note": "Set by MCA 87-2-117(2)(b) (\"An applicant not applying for a license, tag, or permit may purchase a bonus point only between July 1 and September 30 in the current license year.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-mca-87-2-117"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
     "d-fwp-regs-dea-2026",
     "d-fwp-bonus-points",
-    "d-fwp-bp-faq"
+    "d-fwp-bp-faq",
+    "d-arm-12-3-601",
+    "d-mca-87-2-117"
    ]
   },
   {
@@ -288,7 +406,25 @@
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
+     "note": "Only for license types you did not apply for in 2026. MCA 87-2-117(2)(b) sets the same July 1 - Sept. 30 window every license year (see the 2027 entry)."
+    },
+    {
+     "label": "Moose, sheep, goat and bison application deadline",
+     "kind": "application",
+     "date": "2027-05-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.601(3) (\"The application deadline for moose, sheep, goat, and bison drawings is May 1.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-601"
+    },
+    {
+     "label": "Drawn moose, sheep and goat license purchase deadline",
+     "kind": "payment",
+     "date": "2027-08-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.621(1) (\"Applicants who are successful in drawing a moose, sheep, or goat license must finalize their purchase on or before August 1 of the current license year, except licenses that have an unlimited quota.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-621"
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
@@ -296,15 +432,19 @@
      "start": "2027-07-01",
      "end": "2027-09-30",
      "cycle": 2027,
-     "status": "confirmed",
-     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
-     "sourceId": "d-fwp-bp-faq"
+     "status": "tentative",
+     "note": "Set by MCA 87-2-117(2)(b) (\"An applicant not applying for a license, tag, or permit may purchase a bonus point only between July 1 and September 30 in the current license year.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-mca-87-2-117"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
     "d-fwp-regs-msgb-2026",
-    "d-fwp-bp-faq"
+    "d-fwp-bp-faq",
+    "d-fwp-regs-dea-2026",
+    "d-arm-12-3-601",
+    "d-arm-12-3-621",
+    "d-mca-87-2-117"
    ]
   },
   {
@@ -336,7 +476,25 @@
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
+     "note": "Only for license types you did not apply for in 2026. MCA 87-2-117(2)(b) sets the same July 1 - Sept. 30 window every license year (see the 2027 entry)."
+    },
+    {
+     "label": "Moose, sheep, goat and bison application deadline",
+     "kind": "application",
+     "date": "2027-05-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.601(3) (\"The application deadline for moose, sheep, goat, and bison drawings is May 1.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-601"
+    },
+    {
+     "label": "Drawn moose, sheep and goat license purchase deadline",
+     "kind": "payment",
+     "date": "2027-08-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.621(1) (\"Applicants who are successful in drawing a moose, sheep, or goat license must finalize their purchase on or before August 1 of the current license year, except licenses that have an unlimited quota.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-621"
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
@@ -344,15 +502,19 @@
      "start": "2027-07-01",
      "end": "2027-09-30",
      "cycle": 2027,
-     "status": "confirmed",
-     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
-     "sourceId": "d-fwp-bp-faq"
+     "status": "tentative",
+     "note": "Set by MCA 87-2-117(2)(b) (\"An applicant not applying for a license, tag, or permit may purchase a bonus point only between July 1 and September 30 in the current license year.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-mca-87-2-117"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
     "d-fwp-regs-msgb-2026",
-    "d-fwp-bp-faq"
+    "d-fwp-bp-faq",
+    "d-fwp-regs-dea-2026",
+    "d-arm-12-3-601",
+    "d-arm-12-3-621",
+    "d-mca-87-2-117"
    ]
   },
   {
@@ -384,7 +546,25 @@
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-fwp-regs-dea-2026",
-     "note": "Only for license types you did not apply for in 2026. FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry)."
+     "note": "Only for license types you did not apply for in 2026. MCA 87-2-117(2)(b) sets the same July 1 - Sept. 30 window every license year (see the 2027 entry)."
+    },
+    {
+     "label": "Moose, sheep, goat and bison application deadline",
+     "kind": "application",
+     "date": "2027-05-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.601(3) (\"The application deadline for moose, sheep, goat, and bison drawings is May 1.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-601"
+    },
+    {
+     "label": "Drawn moose, sheep and goat license purchase deadline",
+     "kind": "payment",
+     "date": "2027-08-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by ARM 12.3.621(1) (\"Applicants who are successful in drawing a moose, sheep, or goat license must finalize their purchase on or before August 1 of the current license year, except licenses that have an unlimited quota.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-arm-12-3-621"
     },
     {
      "label": "Bonus point purchase without applying (one per species/license type)",
@@ -392,15 +572,19 @@
      "start": "2027-07-01",
      "end": "2027-09-30",
      "cycle": 2027,
-     "status": "confirmed",
-     "note": "FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.",
-     "sourceId": "d-fwp-bp-faq"
+     "status": "tentative",
+     "note": "Set by MCA 87-2-117(2)(b) (\"An applicant not applying for a license, tag, or permit may purchase a bonus point only between July 1 and September 30 in the current license year.\"); FWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-mca-87-2-117"
     }
    ],
    "sourceIds": [
     "d-fwp-dates-2026",
     "d-fwp-regs-msgb-2026",
-    "d-fwp-bp-faq"
+    "d-fwp-bp-faq",
+    "d-fwp-regs-dea-2026",
+    "d-arm-12-3-601",
+    "d-arm-12-3-621",
+    "d-mca-87-2-117"
    ]
   },
   {
@@ -2777,6 +2961,38 @@
    "dataYear": 2026,
    "notes": "One correction (sheep horn pickup reporting); no season-date changes.",
    "publisher": "Montana Fish, Wildlife & Parks",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "publisher": "Montana Fish, Wildlife & Parks (Administrative Rules of Montana, Montana Secretary of State)",
+   "id": "d-arm-12-3-601",
+   "title": "ARM 12.3.601 Application for Drawings",
+   "url": "https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/f4a4adc3-a08c-4e9f-b00d-feae552356b7",
+   "notes": "Current version AMD 2025-297, effective 2025-12-06. Fixes the drawing application deadlines every year: B-10/B-11 combination licenses and deer/elk permits April 1; moose, sheep, goat and bison May 1; elk B, deer B, antelope and antelope B June 1.",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "publisher": "Montana Fish, Wildlife & Parks (Administrative Rules of Montana, Montana Secretary of State)",
+   "id": "d-arm-12-3-621",
+   "title": "ARM 12.3.621 Moose, Sheep, and Goat - Seven-Year Wait Requirement",
+   "url": "https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/b1a0a90a-44c0-412d-bf28-3a1cc9ef0610",
+   "notes": "Current version AMD 2025-297, effective 2025-12-06. Drawn moose, sheep and goat licenses must be purchased on or before August 1 of the license year (unlimited-quota licenses excepted).",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "publisher": "Montana Legislature (Montana Code Annotated 2025)",
+   "id": "d-mca-87-2-117",
+   "title": "MCA 87-2-117. License bonus point system",
+   "url": "https://mca.legmt.gov/bills/mca/title_0870/chapter_0020/part_0010/section_0170/0870-0020-0010-0170.html",
+   "notes": "(2)(b): a bonus point bought without applying may be purchased only between July 1 and September 30 of the license year.",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "publisher": "Montana Legislature (Montana Code Annotated 2025)",
+   "id": "d-mca-87-2-115",
+   "title": "MCA 87-2-115. Nonresident elk and deer license preference point system",
+   "url": "https://mca.legmt.gov/bills/mca/title_0870/chapter_0020/part_0010/section_0150/0870-0020-0010-0150.html",
+   "notes": "(3)(b): a preference point bought without applying for a B-10/B-11 license may be purchased only between July 1 and December 31 of the license year.",
    "retrieved": "2026-10-31"
   }
  ]

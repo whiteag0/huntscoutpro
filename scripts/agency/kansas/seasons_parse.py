@@ -27,7 +27,10 @@ idempotent.
    * Antelope: firearm permits -> Firearms season; muzzleloader permits -> Muzzleloader Only season.
    * Spring turkey (nonresident units 1, 2, 3, 5, 6; Unit 4): the three spring seasons.
 3. keyDates get `kind` and `residency`; KDWP has not published 2027 application dates (checked on
-   the Deer, Antelope, Elk, Turkey and Fees pages on 2026-10-31), so no 2027 key dates are added.
+   the Deer, Antelope, Elk, Turkey and Fees pages on 2026-10-31). K.A.R. 115-4-11 (current version,
+   amended April 26, 2024) fixes each draw's closing date every year (last Friday of April; second
+   Friday of June; second Friday of February), so 2027 deadlines computed from it are added as
+   "tentative" (KEYDATES_2027; opening dates are not fixed by the rule and are not added).
    The fall turkey permit sale date (Oct. 1, 2026) and the over-the-counter deer permit sale
    window (Aug. 5 - Dec. 31) are added as 2026 license-sale dates.
 """
@@ -184,7 +187,8 @@ SPEC = [
     ("Archery & Muzzleloader Only", ["elk"], "Elk on Fort Riley Subunit 2a - Archery & Muzzleloader", None, ["2a"], None, None),
     ("1st Segment: October 1-31 each year", ["elk"], "Elk on Fort Riley Subunit 2a - Firearms, 1st Segment", "rifle", ["2a"], None, None),
     ("2nd Segment: November 1-30 each year", ["elk"], "Elk on Fort Riley Subunit 2a - Firearms, 2nd Segment", "rifle", ["2a"], None,
-     "KDWP's Elk page lists this antlerless segment as November 1-20 each year; the When to Hunt page says November 1-30."),
+     "KDWP's Elk page lists this antlerless segment as November 1-20 each year; the When to Hunt page and K.A.R. 115-25-8(b)(2)(B)(ii) "
+     "(amended Feb. 6, 2026: \"the first day of November through the last day of November\") say November 1-30."),
     ("3rd Segment: December 1-31 each year", ["elk"], "Elk on Fort Riley Subunit 2a - Firearms, 3rd Segment", "rifle", ["2a"], None, None),
     ("Extended Season: January 1-31 each year", ["elk"], "Elk on Fort Riley Subunit 2a - Extended Season", None, ["2a"], None,
      "KDWP's Elk page: open to all unfilled limited draw permit holders."),
@@ -382,11 +386,84 @@ KEYDATE_TAGS = {
     "Nonresident and Unit 4 spring turkey application period": ("application", None),
     "Fall turkey permits go on sale (residents)": ("license-sale", "resident"),
     "Over-the-counter deer permits on sale": ("license-sale", None),
+    "Nonresident deer application deadline": ("application", "nonresident"),
+    "Nonresident preference point purchase deadline": ("points", "nonresident"),
+    "Resident Firearm Either-Species/Either-Sex application deadline": ("application", "resident"),
+    "Resident preference point purchase deadline": ("points", "resident"),
+    "Nonresident deer application deadline (incl. Mule Deer Stamp)": ("application", "nonresident"),
+    "Resident firearm/muzzleloader antelope application deadline": ("application", "resident"),
+    "Preference point purchase deadline": ("points", "resident"),
+    "Resident elk application deadline": ("application", "resident"),
+    "Bonus point purchase deadline": ("points", "resident"),
+    "Nonresident and Unit 4 spring turkey application deadline": ("application", None),
 }
 OTC_DEER = {"label": "Over-the-counter deer permits on sale", "start": "2026-08-05", "end": "2026-12-31", "cycle": 2026, "status": "confirmed",
-            "note": "KDWP Deer page: resident any-season white-tailed, archery and muzzleloader either-species permits, and resident and nonresident "
-                    "white-tailed antlerless-only (WAO) permits are available Aug. 5 - Dec. 31. 2027 dates not yet published by KDWP as of 2026-10-31.",
+            "note": "KDWP Deer page: resident any-season white-tailed, archery and muzzleloader either-species permits, and nonresident "
+                    "white-tailed antlerless-only (WAO) permits are available Aug. 5 - Dec. 31 (the page gives no sale window for resident WAO "
+                    "permits). 2027 dates not yet published by KDWP as of 2026-10-31.",
             "sourceId": "d-ks-deer-page"}
+# 2027 draw deadlines from K.A.R. 115-4-11 (tentative: KDWP hasn't announced 2027 dates). Calendar:
+# last Friday of April 2027 = Apr. 30; second Friday of June 2027 = Jun. 11; second Friday of
+# February 2027 = Feb. 12 (the rule's 2026 dates match KDWP's 2026 deadlines: Apr. 24, Jun. 12, Feb. 13).
+# The rule states no weekend/holiday shift (all three are Fridays). Opening dates ("the earliest date that
+# applications are available") and results are not fixed by any rule and are not added.
+KAR = "d-ks-kar-115-4-11"
+KDWP_TAIL = "; KDWP hasn't announced the 2027 dates yet."
+APR = "through the last Friday of April each year"
+B4 = ("Set by K.A.R. 115-4-11(b)(4) (\"Applications for nonresident limited-quota antlered deer permits shall be accepted in the Pratt "
+      "office from the earliest date that applications are available " + APR + ".\")" + KDWP_TAIL)
+B4P = ("Set by K.A.R. 115-4-11(b)(2)(E) and (b)(4) (a preference point is bought by \"submitting an application during the application "
+       "period specified in this regulation\"; nonresident deer applications are accepted \"" + APR + "\")" + KDWP_TAIL)
+B5 = ("Set by K.A.R. 115-4-11(b)(5) (\"Applications for resident firearms either species, either-sex permits shall be accepted at "
+      "designated locations from the earliest date that applications are available through the second Friday of June.\")" + KDWP_TAIL)
+B5P = ("Set by K.A.R. 115-4-11(b)(2)(E) and (b)(5) (a preference point is bought by \"submitting an application during the application "
+       "period specified in this regulation\"; resident firearms either-species, either-sex applications are accepted \"through the second "
+       "Friday of June\")" + KDWP_TAIL)
+C6 = ("Set by K.A.R. 115-4-11(c)(6) (\"Applications for resident permits shall be accepted in the Pratt office from the earliest date that "
+      "applications are available through the second Friday of June.\")" + KDWP_TAIL)
+C5 = ("Set by K.A.R. 115-4-11(c)(5) and (c)(6) (an antelope preference point is bought by \"submitting an application within the "
+      "application period outlined in this regulation\"; resident antelope applications are accepted \"through the second Friday of "
+      "June\")" + KDWP_TAIL)
+D3 = ("Set by K.A.R. 115-4-11(d)(3) (\"Applications for limited-quota antlerless-only elk permits and limited-quota either-sex elk permits "
+      "shall be accepted at designated locations from the earliest date that applications are available through the second Friday in "
+      "June.\")" + KDWP_TAIL)
+D3P = ("Set by K.A.R. 115-4-11(d)(1)(C)(iv) and (d)(3) (an elk bonus point is bought by \"submitting an application during the "
+       "application period specified in this regulation\"; limited-quota elk applications are accepted \"through the second Friday in "
+       "June\")" + KDWP_TAIL)
+E46 = ("Set by K.A.R. 115-4-11(e)(4) and (e)(6) (unit 4 and nonresident spring wild turkey applications are accepted \"until midnight on "
+       "the second Friday of February\")" + KDWP_TAIL)
+
+
+def _k(label, date, note):
+    return {"label": label, "date": date, "cycle": 2027, "status": "tentative", "note": note, "sourceId": KAR}
+
+
+KEYDATES_2027 = {
+    "whitetail": [_k("Nonresident deer application deadline", "2027-04-30", B4),
+                  _k("Nonresident preference point purchase deadline", "2027-04-30", B4P)],
+    "mule-deer": [_k("Resident Firearm Either-Species/Either-Sex application deadline", "2027-06-11", B5),
+                  _k("Resident preference point purchase deadline", "2027-06-11", B5P),
+                  _k("Nonresident deer application deadline (incl. Mule Deer Stamp)", "2027-04-30", B4)],
+    "pronghorn": [_k("Resident firearm/muzzleloader antelope application deadline", "2027-06-11", C6),
+                  _k("Preference point purchase deadline", "2027-06-11", C5)],
+    "elk": [_k("Resident elk application deadline", "2027-06-11", D3),
+            _k("Bonus point purchase deadline", "2027-06-11", D3P)],
+    "turkey": [_k("Nonresident and Unit 4 spring turkey application deadline", "2027-02-12", E46)],
+}
+RULE_SOURCES = [
+    {"id": KAR, "title": "K.A.R. 115-4-11. Big game and wild turkey permit applications",
+     "publisher": "Kansas Department of Wildlife and Parks (Kansas Administrative Regulations, Kansas Secretary of State)",
+     "url": "https://rules.ks.gov/browse/collections/0ae1e448-f5a1-4e09-9d6d-a488ac7c284a/policies/d9cf14c1-8bfe-4a65-b248-d8a31ed077d4",
+     "retrieved": REVIEWED,
+     "notes": "Authenticated regulation, amended April 26, 2024 (Kansas Register Vol. 43, No. 15). Fixes the draw closing dates every year: "
+              "nonresident deer the last Friday of April; resident firearm either-species deer, resident antelope and limited-quota elk the "
+              "second Friday of June; unit 4 and nonresident spring turkey the second Friday of February."},
+    {"id": "d-ks-kar-115-25-8", "title": "K.A.R. 115-25-8. Elk; open season, bag limit, and permits",
+     "publisher": "Kansas Department of Wildlife and Parks (Kansas Administrative Regulations, Kansas Secretary of State)",
+     "url": "https://rules.ks.gov/browse/collections/0ae1e448-f5a1-4e09-9d6d-a488ac7c284a/policies/23ccfd15-c609-4d1e-ac03-5226777aa7ed",
+     "retrieved": REVIEWED,
+     "notes": "Authenticated regulation, amended Feb. 6, 2026. Fort Riley subunit 2a firearm segments: Oct. 1-31, Nov. 1-30, Dec. 1-31, Jan. 1-31."},
+]
 EXTRA = {
     "turkey": [{"label": "Fall turkey permits go on sale (residents)", "date": "2026-10-01", "cycle": 2026, "status": "confirmed",
                 "note": "KDWP Turkey page: 'Permits will go on sale October 1, 2026.' Fall season reopened in 2026 for Kansas residents only (over the counter).",
@@ -441,7 +518,9 @@ def main():
         meta = json.load(fh)
     for sp in meta["species"]:
         extra = EXTRA.get(sp["species"], [])
-        kd = [x for x in sp["keyDates"] if x["label"] not in {e["label"] for e in extra}] + [dict(e) for e in extra]
+        kd = [x for x in sp["keyDates"] if x["cycle"] != 2027 and x["label"] not in {e["label"] for e in extra}] + [dict(e) for e in extra]
+        kd += [dict(e) for e in KEYDATES_2027.get(sp["species"], [])]
+        extra = extra + KEYDATES_2027.get(sp["species"], [])
         out = []
         for x in kd:
             if x["label"] not in KEYDATE_TAGS:
@@ -454,6 +533,8 @@ def main():
             if e["sourceId"] not in sp["sourceIds"]:
                 sp["sourceIds"].append(e["sourceId"])
     meta["seasons"] = seasons
+    have = {x["id"] for x in meta["sources"]}
+    meta["sources"] += [dict(x) for x in RULE_SOURCES if x["id"] not in have]
     for s in meta["sources"]:
         if s["id"] == SEASON_SRC:
             s["title"] = "When to Hunt (season dates)"

@@ -150,9 +150,28 @@ def main():
     # key dates (2026): the cited page must print the window
     pages = {"d-ks-fees-page": "fees.html", "d-ks-antelope-page": "antelope.html", "d-ks-elk-page": "elk.html",
              "d-ks-turkey-page": "turkey.html", "d-ks-deer-page": "deer.html"}
+    def nth_friday(year, month, n):  # n = -1 for the last Friday
+        days = [datetime.date(year, month, d) for d in range(1, 32) if _valid(year, month, d)]
+        fr = [d for d in days if d.weekday() == 4]
+        return fr[n] if n < 0 else fr[n - 1]
+
+    def _valid(y, m, d):
+        try:
+            datetime.date(y, m, d)
+            return True
+        except ValueError:
+            return False
+
     for sp in meta["species"]:
         for k in sp["keyDates"]:
             checked += 1
+            if k["sourceId"] == "d-ks-kar-115-4-11":
+                # 2027 tentative deadlines: recompute from the rule the note quotes
+                rule = ((4, -1) if "last Friday of April" in k["note"] else (6, 2) if "second Friday" in k["note"] and "June" in k["note"]
+                        else (2, 2) if "second Friday of February" in k["note"] else None)
+                if k["status"] != "tentative" or rule is None or k["date"] != nth_friday(k["cycle"], *rule).isoformat():
+                    bad.append(("keyDate", sp["species"], f"{k['label']}: {k.get('date')} does not follow the K.A.R. 115-4-11 rule"))
+                continue
             t = strip(os.path.join(raw, pages[k["sourceId"]]))
             if "date" in k:
                 dd = datetime.date.fromisoformat(k["date"])

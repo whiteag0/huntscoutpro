@@ -51,14 +51,35 @@
      "end": "2026-12-31",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "KDWP Deer page: resident any-season white-tailed, archery and muzzleloader either-species permits, and resident and nonresident white-tailed antlerless-only (WAO) permits are available Aug. 5 - Dec. 31. 2027 dates not yet published by KDWP as of 2026-10-31.",
+     "note": "KDWP Deer page: resident any-season white-tailed, archery and muzzleloader either-species permits, and nonresident white-tailed antlerless-only (WAO) permits are available Aug. 5 - Dec. 31 (the page gives no sale window for resident WAO permits). 2027 dates not yet published by KDWP as of 2026-10-31.",
      "sourceId": "d-ks-deer-page"
+    },
+    {
+     "label": "Nonresident deer application deadline",
+     "kind": "application",
+     "residency": "nonresident",
+     "date": "2027-04-30",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(b)(4) (\"Applications for nonresident limited-quota antlered deer permits shall be accepted in the Pratt office from the earliest date that applications are available through the last Friday of April each year.\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
+    },
+    {
+     "label": "Nonresident preference point purchase deadline",
+     "kind": "points",
+     "residency": "nonresident",
+     "date": "2027-04-30",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(b)(2)(E) and (b)(4) (a preference point is bought by \"submitting an application during the application period specified in this regulation\"; nonresident deer applications are accepted \"through the last Friday of April each year\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
     }
    ],
    "sourceIds": [
     "d-ks-deer-page",
     "d-ks-deer-quotas-draw-stats-page",
-    "d-ks-fees-page"
+    "d-ks-fees-page",
+    "d-ks-kar-115-4-11"
    ]
   },
   {
@@ -112,14 +133,45 @@
      "end": "2026-12-31",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "KDWP Deer page: resident any-season white-tailed, archery and muzzleloader either-species permits, and resident and nonresident white-tailed antlerless-only (WAO) permits are available Aug. 5 - Dec. 31. 2027 dates not yet published by KDWP as of 2026-10-31.",
+     "note": "KDWP Deer page: resident any-season white-tailed, archery and muzzleloader either-species permits, and nonresident white-tailed antlerless-only (WAO) permits are available Aug. 5 - Dec. 31 (the page gives no sale window for resident WAO permits). 2027 dates not yet published by KDWP as of 2026-10-31.",
      "sourceId": "d-ks-deer-page"
+    },
+    {
+     "label": "Resident Firearm Either-Species/Either-Sex application deadline",
+     "kind": "application",
+     "residency": "resident",
+     "date": "2027-06-11",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(b)(5) (\"Applications for resident firearms either species, either-sex permits shall be accepted at designated locations from the earliest date that applications are available through the second Friday of June.\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
+    },
+    {
+     "label": "Resident preference point purchase deadline",
+     "kind": "points",
+     "residency": "resident",
+     "date": "2027-06-11",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(b)(2)(E) and (b)(5) (a preference point is bought by \"submitting an application during the application period specified in this regulation\"; resident firearms either-species, either-sex applications are accepted \"through the second Friday of June\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
+    },
+    {
+     "label": "Nonresident deer application deadline (incl. Mule Deer Stamp)",
+     "kind": "application",
+     "residency": "nonresident",
+     "date": "2027-04-30",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(b)(4) (\"Applications for nonresident limited-quota antlered deer permits shall be accepted in the Pratt office from the earliest date that applications are available through the last Friday of April each year.\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
     }
    ],
    "sourceIds": [
     "d-ks-deer-page",
     "d-ks-deer-quotas-draw-stats-page",
-    "d-ks-fees-page"
+    "d-ks-fees-page",
+    "d-ks-kar-115-4-11"
    ]
   },
   {
@@ -154,11 +206,32 @@
      "status": "confirmed",
      "note": "2027 dates not yet published by KDWP as of 2026-10-31",
      "sourceId": "d-ks-antelope-page"
+    },
+    {
+     "label": "Resident firearm/muzzleloader antelope application deadline",
+     "kind": "application",
+     "residency": "resident",
+     "date": "2027-06-11",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(c)(6) (\"Applications for resident permits shall be accepted in the Pratt office from the earliest date that applications are available through the second Friday of June.\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
+    },
+    {
+     "label": "Preference point purchase deadline",
+     "kind": "points",
+     "residency": "resident",
+     "date": "2027-06-11",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(c)(5) and (c)(6) (an antelope preference point is bought by \"submitting an application within the application period outlined in this regulation\"; resident antelope applications are accepted \"through the second Friday of June\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
     }
    ],
    "sourceIds": [
     "d-ks-antelope-page",
-    "d-ks-fees-page"
+    "d-ks-fees-page",
+    "d-ks-kar-115-4-11"
    ]
   },
   {
@@ -193,12 +266,33 @@
      "status": "confirmed",
      "note": "2027 dates not yet published by KDWP as of 2026-10-31",
      "sourceId": "d-ks-elk-page"
+    },
+    {
+     "label": "Resident elk application deadline",
+     "kind": "application",
+     "residency": "resident",
+     "date": "2027-06-11",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(d)(3) (\"Applications for limited-quota antlerless-only elk permits and limited-quota either-sex elk permits shall be accepted at designated locations from the earliest date that applications are available through the second Friday in June.\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
+    },
+    {
+     "label": "Bonus point purchase deadline",
+     "kind": "points",
+     "residency": "resident",
+     "date": "2027-06-11",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(d)(1)(C)(iv) and (d)(3) (an elk bonus point is bought by \"submitting an application during the application period specified in this regulation\"; limited-quota elk applications are accepted \"through the second Friday in June\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
     }
    ],
    "sourceIds": [
     "d-ks-elk-page",
     "d-ks-elk-harvest-report-2024-25",
-    "d-ks-fees-page"
+    "d-ks-fees-page",
+    "d-ks-kar-115-4-11"
    ]
   },
   {
@@ -231,11 +325,21 @@
      "status": "confirmed",
      "note": "KDWP Turkey page: 'Permits will go on sale October 1, 2026.' Fall season reopened in 2026 for Kansas residents only (over the counter).",
      "sourceId": "d-ks-turkey-page"
+    },
+    {
+     "label": "Nonresident and Unit 4 spring turkey application deadline",
+     "kind": "application",
+     "date": "2027-02-12",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(e)(4) and (e)(6) (unit 4 and nonresident spring wild turkey applications are accepted \"until midnight on the second Friday of February\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
     }
    ],
    "sourceIds": [
     "d-ks-turkey-page",
-    "d-ks-fees-page"
+    "d-ks-fees-page",
+    "d-ks-kar-115-4-11"
    ]
   }
  ],
@@ -1504,7 +1608,7 @@
    "start": "2026-11-01",
    "end": "2026-11-30",
    "year": 2026,
-   "note": "KDWP's Elk page lists this antlerless segment as November 1-20 each year; the When to Hunt page says November 1-30. KDWP: November 1-30 each year.",
+   "note": "KDWP's Elk page lists this antlerless segment as November 1-20 each year; the When to Hunt page and K.A.R. 115-25-8(b)(2)(B)(ii) (amended Feb. 6, 2026: \"the first day of November through the last day of November\") say November 1-30. KDWP: November 1-30 each year.",
    "sourceId": "d-ks-seasons-page"
   },
   {
@@ -1517,7 +1621,7 @@
    "start": "2027-11-01",
    "end": "2027-11-30",
    "year": 2027,
-   "note": "KDWP's Elk page lists this antlerless segment as November 1-20 each year; the When to Hunt page says November 1-30. KDWP: November 1-30 each year.",
+   "note": "KDWP's Elk page lists this antlerless segment as November 1-20 each year; the When to Hunt page and K.A.R. 115-25-8(b)(2)(B)(ii) (amended Feb. 6, 2026: \"the first day of November through the last day of November\") say November 1-30. KDWP: November 1-30 each year.",
    "sourceId": "d-ks-seasons-page"
   },
   {
@@ -1905,6 +2009,22 @@
    "dataYear": 2026,
    "retrieved": "2026-10-31",
    "notes": "Lists 2026, 2027 and 2028 dates for each big game and turkey season (some as 'each year'); 2026 and 2027 are used. Read 2026-10-31."
+  },
+  {
+   "id": "d-ks-kar-115-4-11",
+   "title": "K.A.R. 115-4-11. Big game and wild turkey permit applications",
+   "publisher": "Kansas Department of Wildlife and Parks (Kansas Administrative Regulations, Kansas Secretary of State)",
+   "url": "https://rules.ks.gov/browse/collections/0ae1e448-f5a1-4e09-9d6d-a488ac7c284a/policies/d9cf14c1-8bfe-4a65-b248-d8a31ed077d4",
+   "retrieved": "2026-10-31",
+   "notes": "Authenticated regulation, amended April 26, 2024 (Kansas Register Vol. 43, No. 15). Fixes the draw closing dates every year: nonresident deer the last Friday of April; resident firearm either-species deer, resident antelope and limited-quota elk the second Friday of June; unit 4 and nonresident spring turkey the second Friday of February."
+  },
+  {
+   "id": "d-ks-kar-115-25-8",
+   "title": "K.A.R. 115-25-8. Elk; open season, bag limit, and permits",
+   "publisher": "Kansas Department of Wildlife and Parks (Kansas Administrative Regulations, Kansas Secretary of State)",
+   "url": "https://rules.ks.gov/browse/collections/0ae1e448-f5a1-4e09-9d6d-a488ac7c284a/policies/23ccfd15-c609-4d1e-ac03-5226777aa7ed",
+   "retrieved": "2026-10-31",
+   "notes": "Authenticated regulation, amended Feb. 6, 2026. Fort Riley subunit 2a firearm segments: Oct. 1-31, Nov. 1-30, Dec. 1-31, Jan. 1-31."
   }
  ]
 }

@@ -34,8 +34,11 @@ What it does
    left without seasonDates/seasonRanges and listed in <raw_dir>/seasons-parse-log.json.
    Dates: the 2026 license year runs March 1, 2026 - Feb. 28, 2027, so a printed Jan/Feb date is
    2027 and every other month is 2026.
-2. draw-meta.json: keyDates get `kind` (and `residency` where FWP limits them); 2027 key dates are
-   added only where FWP states them (see KEYDATES_2027); seasons[] is rebuilt from the 2026 booklets
+2. draw-meta.json: keyDates get `kind` (and `residency` where FWP limits them). FWP has published no
+   2027 dates, so the 2027 key dates (KEYDATES_2027) are "tentative" dates computed from standing rules
+   that fix them every year: ARM 12.3.601 (application deadlines), ARM 12.3.621 (Aug. 1 purchase of
+   drawn moose/sheep/goat licenses), MCA 87-2-117 (bonus points) and MCA 87-2-115 (nonresident
+   preference points); each note quotes the rule. seasons[] is rebuilt from the 2026 booklets
    with method/units/huntCodes/residency; season sources are added; lastReviewed is set.
 """
 import collections
@@ -84,21 +87,94 @@ KEYDATE_TAGS = {
     "Moose, sheep, goat and bison application period": ("application", None),
     "Black bear permit application period": ("application", None),
     "Mountain Lion License purchase deadline (2026 license)": ("other", None),
+    # 2027 rule-based deadlines (KEYDATES_2027)
+    "Elk permit and nonresident combination application deadline": ("application", None),
+    "Elk B license application deadline": ("application", None),
+    "Deer permit and nonresident combination application deadline": ("application", None),
+    "Deer B license application deadline": ("application", None),
+    "Antelope, Antelope B and archery antelope application deadline": ("application", None),
+    "Moose, sheep, goat and bison application deadline": ("application", None),
+    "Drawn moose, sheep and goat license purchase deadline": ("payment", None),
 }
 
-FAQ_NOTE = ("FWP's Bonus Points FAQ states this as a standing rule for any year: \"In years that you don't apply for a license, "
-            "a bonus point can be purchased separately between July 1 and Sept. 30\" (one per species opportunity per year). "
-            "FWP has not posted 2027-specific dates; its 2027 application windows were not published as of 2026-10-31.")
-# 2027 key dates FWP states for 2027 (here: only the FAQ's standing bonus-point window).
-KEYDATES_2027 = {sp: [{"label": "Bonus point purchase without applying (one per species/license type)", "kind": "points",
-                       "start": "2027-07-01", "end": "2027-09-30", "cycle": 2027, "status": "confirmed",
-                       "note": FAQ_NOTE, "sourceId": "d-fwp-bp-faq"}]
-                 for sp in ["elk", "mule-deer", "whitetail", "pronghorn", "moose", "sheep", "goat"]}
+# 2027 key dates. FWP has not announced any 2027 dates (dates page, fee pages and booklets checked
+# 2026-10-31), so every 2027 entry is "tentative": computed from a standing rule in Montana statute
+# (MCA, 2025) or FWP's administrative rules (ARM, current versions) that fixes the date every year.
+# Calendar: Apr. 1, 2027 = Thu; May 1 = Sat; Jun. 1 = Tue; Jul. 1 = Thu; Aug. 1 = Sun; Sep. 30 = Thu;
+# Dec. 31 = Fri. None of these rules moves a date that falls on a weekend or holiday.
+# Rules checked and NOT used: black bear permit (Apr. 1) and limited lion license deadlines are not in
+# ARM 12.3.6 / 12.9 or MCA Title 87 ch. 2; drawing-result dates are not fixed by any rule.
+NOT_ANNOUNCED = "; FWP hasn't announced the 2027 dates yet."
+ARM601 = "d-arm-12-3-601"
+R601_12 = ("Set by ARM 12.3.601(1) and (2) (\"The application deadline for B-10 and B-11 license drawings is April 1.\" "
+           "\"The application deadline for elk and deer permit drawings is April 1.\")" + NOT_ANNOUNCED)
+R601_3 = "Set by ARM 12.3.601(3) (\"The application deadline for moose, sheep, goat, and bison drawings is May 1.\")" + NOT_ANNOUNCED
+R601_4 = ("Set by ARM 12.3.601(4) (\"The application deadline for elk B, deer B, antelope, and antelope B license drawings is "
+          "June 1.\")" + NOT_ANNOUNCED)
+R621 = ("Set by ARM 12.3.621(1) (\"Applicants who are successful in drawing a moose, sheep, or goat license must finalize their "
+        "purchase on or before August 1 of the current license year, except licenses that have an unlimited quota.\")" + NOT_ANNOUNCED)
+BP_LABEL = "Bonus point purchase without applying (one per species/license type)"
+PP_LABEL = "Nonresident preference point purchase without applying for a combination license"
+BP_2027 = {"label": BP_LABEL, "start": "2027-07-01", "end": "2027-09-30", "cycle": 2027, "status": "tentative",
+           "note": "Set by MCA 87-2-117(2)(b) (\"An applicant not applying for a license, tag, or permit may purchase a bonus point "
+                   "only between July 1 and September 30 in the current license year.\")" + NOT_ANNOUNCED,
+           "sourceId": "d-mca-87-2-117"}
+PP_2027 = {"label": PP_LABEL, "start": "2027-07-01", "end": "2027-12-31", "cycle": 2027, "status": "tentative",
+           "note": "Set by MCA 87-2-115(3)(b) (\"An applicant not applying for a Class B-10 or Class B-11 license may purchase a "
+                   "preference point only between July 1 and December 31 of that license year.\")" + NOT_ANNOUNCED,
+           "sourceId": "d-mca-87-2-115"}
+
+
+def _d(label, date, note, src=ARM601):
+    return {"label": label, "date": date, "cycle": 2027, "status": "tentative", "note": note, "sourceId": src}
+
+
+_DEER = [_d("Deer permit and nonresident combination application deadline", "2027-04-01", R601_12),
+         _d("Deer B license application deadline", "2027-06-01", R601_4), BP_2027, PP_2027]
+_MSG = [_d("Moose, sheep, goat and bison application deadline", "2027-05-01", R601_3),
+        _d("Drawn moose, sheep and goat license purchase deadline", "2027-08-01", R621, "d-arm-12-3-621"), BP_2027]
+KEYDATES_2027 = {
+    "elk": [_d("Elk permit and nonresident combination application deadline", "2027-04-01", R601_12),
+            _d("Elk B license application deadline", "2027-06-01", R601_4), BP_2027, PP_2027],
+    "mule-deer": _DEER,
+    "whitetail": _DEER,
+    "pronghorn": [_d("Antelope, Antelope B and archery antelope application deadline", "2027-06-01", R601_4), BP_2027],
+    "moose": _MSG, "sheep": _MSG, "goat": _MSG,
+}
+RULE_SOURCES = [
+    {"id": "d-arm-12-3-601", "title": "ARM 12.3.601 Application for Drawings",
+     "publisher": "Montana Fish, Wildlife & Parks (Administrative Rules of Montana, Montana Secretary of State)",
+     "url": "https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/f4a4adc3-a08c-4e9f-b00d-feae552356b7",
+     "notes": "Current version AMD 2025-297, effective 2025-12-06. Fixes the drawing application deadlines every year: "
+              "B-10/B-11 combination licenses and deer/elk permits April 1; moose, sheep, goat and bison May 1; "
+              "elk B, deer B, antelope and antelope B June 1."},
+    {"id": "d-arm-12-3-621", "title": "ARM 12.3.621 Moose, Sheep, and Goat - Seven-Year Wait Requirement",
+     "publisher": "Montana Fish, Wildlife & Parks (Administrative Rules of Montana, Montana Secretary of State)",
+     "url": "https://rules.mt.gov/browse/collections/aec52c46-128e-4279-9068-8af5d5432d74/policies/b1a0a90a-44c0-412d-bf28-3a1cc9ef0610",
+     "notes": "Current version AMD 2025-297, effective 2025-12-06. Drawn moose, sheep and goat licenses must be purchased "
+              "on or before August 1 of the license year (unlimited-quota licenses excepted)."},
+    {"id": "d-mca-87-2-117", "title": "MCA 87-2-117. License bonus point system",
+     "publisher": "Montana Legislature (Montana Code Annotated 2025)",
+     "url": "https://mca.legmt.gov/bills/mca/title_0870/chapter_0020/part_0010/section_0170/0870-0020-0010-0170.html",
+     "notes": "(2)(b): a bonus point bought without applying may be purchased only between July 1 and September 30 of the license year."},
+    {"id": "d-mca-87-2-115", "title": "MCA 87-2-115. Nonresident elk and deer license preference point system",
+     "publisher": "Montana Legislature (Montana Code Annotated 2025)",
+     "url": "https://mca.legmt.gov/bills/mca/title_0870/chapter_0020/part_0010/section_0150/0870-0020-0010-0150.html",
+     "notes": "(3)(b): a preference point bought without applying for a B-10/B-11 license may be purchased only between "
+              "July 1 and December 31 of the license year."},
+]
 # 2026-cycle date FWP prints that a hunter still has to act on (lion is over the counter in 2026).
 EXTRA_2026 = {"lion": [{"label": "Mountain Lion License purchase deadline (2026 license)", "kind": "other", "date": "2027-02-28",
                         "cycle": 2026, "status": "confirmed",
                         "note": "FWP: \"Even though the 2026 mountain lion season extends into the 2027 license year, the deadline to purchase 2026 licenses is February 28, 2027.\"",
-                        "sourceId": "d-fwp-regs-lion-2026"}]}
+                        "sourceId": "d-fwp-regs-lion-2026"}],
+              # The B-11 deer combination covers white-tailed deer too; draw_meta.py only lists this on elk/mule deer.
+              "whitetail": [{"label": PP_LABEL, "start": "2026-07-01", "end": "2026-12-31", "cycle": 2026, "status": "confirmed",
+                             "sourceId": "d-fwp-regs-dea-2026",
+                             "note": "$100; applicants who applied for a combination license could only buy it at application."}]}
+# 2026 notes: point to the statute that sets the same window every year (the 2027 entry).
+NOTE_2026 = {BP_LABEL: "MCA 87-2-117(2)(b) sets the same July 1 - Sept. 30 window every license year (see the 2027 entry).",
+             PP_LABEL: "MCA 87-2-115(3)(b) sets the same July 1 - Dec. 31 window every license year (see the 2027 entry)."}
 
 D = "d-fwp-regs-dea-2026"
 M = "d-fwp-regs-msgb-2026"
@@ -521,9 +597,9 @@ def main():
     with open(mpath) as fh:
         meta = json.load(fh)
     have = {s["id"] for s in meta["sources"]}
-    for s in NEW_SOURCES:
+    for s in NEW_SOURCES + RULE_SOURCES:
         if s["id"] not in have:
-            meta["sources"].append({**s, "publisher": PUB, "retrieved": REVIEWED})
+            meta["sources"].append({"publisher": PUB, **s, "retrieved": REVIEWED})
     for s in meta["sources"]:
         if s["id"] == "d-fwp-dates-2026":
             s["notes"] = "Shows 2026 application windows; no 2027 dates posted as of 2026-10-31 (re-checked 2026-10-31)."
@@ -542,14 +618,18 @@ def main():
                 d["residency"] = resd
             else:
                 d.pop("residency", None)
-            if d["cycle"] == 2026 and d["label"].startswith("Bonus point purchase") and "note" in d:
-                d["note"] = d["note"].replace("2027 dates not yet published by Montana FWP as of 2026-10-31.",
-                                              "FWP's Bonus Points FAQ gives the same July 1 - Sept. 30 window for any year (see the 2027 entry).")
+            if d["cycle"] == 2026 and d["label"] in NOTE_2026:
+                base_note = re.sub(r" (2027 dates not yet published by Montana FWP as of 2026-10-31\.|FWP's Bonus Points FAQ .*|MCA 87-2-11[57].*)$",
+                                   "", d.get("note", ""))
+                d["note"] = (base_note + " " + NOTE_2026[d["label"]]).strip()
         # label, kind, residency first; the other keys keep draw_meta.py's order
         sp["keyDates"] = [{"label": d["label"], "kind": d["kind"], **({"residency": d["residency"]} if "residency" in d else {}),
                            **{k: v for k, v in d.items() if k not in ("label", "kind", "residency")}} for d in kd]
-        if sp["species"] in KEYDATES_2027 and "d-fwp-bp-faq" not in sp["sourceIds"]:
+        if any(d["label"] == BP_LABEL for d in sp["keyDates"]) and "d-fwp-bp-faq" not in sp["sourceIds"]:
             sp["sourceIds"].append("d-fwp-bp-faq")
+        for d in sp["keyDates"]:
+            if d["sourceId"] not in sp["sourceIds"]:
+                sp["sourceIds"].append(d["sourceId"])
     seasons = []
     for s in SEASONS:
         out = {"species": s["species"], "label": s["label"]}
