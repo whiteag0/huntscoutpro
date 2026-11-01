@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Loader2, X } from "lucide-react";
@@ -13,6 +13,7 @@ import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { SourceNotes, footnoteIndex, Cite } from "@/components/agency/SourceNotes";
 import type { SourceRef } from "@/data/agency/schema";
 import { pill } from "@/components/agency/mobile";
+import { track } from "@/lib/analytics";
 
 interface Props {
   slug: string;
@@ -43,6 +44,7 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
   const { data, loading, error } = useSpeciesData(slug, species);
   const [residency, setResidency] = useState<DrawResidency>("resident");
   const [points, setPoints] = useState(0);
+  useEffect(() => track("compare_open", { state: slug, species, hunts: codes.length }), [slug, species, codes.length]);
 
   const cols = useMemo((): Col[] => {
     if (!data) return [];

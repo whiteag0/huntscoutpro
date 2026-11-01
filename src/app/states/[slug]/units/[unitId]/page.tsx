@@ -5,6 +5,7 @@ import { getStateData, speciesWithData } from "@/lib/agency";
 import { isLiveState } from "@/lib/agency-format";
 import { ComingSoonState } from "@/components/ComingSoonState";
 import { UnitDetail } from "@/components/agency/UnitDetail";
+import { TrackView } from "@/components/analytics/TrackView";
 
 type Params = { params: Promise<{ slug: string; unitId: string }>; searchParams?: Promise<{ species?: string }> };
 
@@ -28,5 +29,10 @@ export default async function UnitPage({ params, searchParams }: Params) {
   const species = data ? speciesWithData(data) : [];
   if (!data || species.length === 0) return <ComingSoonState state={st} />;
   const unit = decodeURIComponent(unitId);
-  return <UnitDetail key={`${slug}/${unit}/${requested}`} state={data} unit={unit} species={species} requested={requested} />;
+  return (
+    <>
+      <TrackView event="unit_view" state={slug} unit={unit} species={requested} />
+      <UnitDetail key={`${slug}/${unit}/${requested}`} state={data} unit={unit} species={species} requested={requested} />
+    </>
+  );
 }

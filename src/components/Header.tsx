@@ -141,7 +141,7 @@ export function Header() {
               >
                 <User className="h-4 w-4" />
                 {/* Name hidden visually below xl so the 7-link nav fits at 1024px; still read by screen readers. */}
-                <span className="sr-only xl:not-sr-only">{session.user?.name?.split(" ")[0] || "Account"}</span>
+                <span className="sr-only xl:not-sr-only" data-clarity-mask="true">{session.user?.name?.split(" ")[0] || "Account"}</span>
                 {isPro && (
                   <span
                     className="text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-700 leading-none"
@@ -246,7 +246,7 @@ export function Header() {
                   className="text-sm text-muted-foreground min-h-11 px-3 py-2 rounded-lg hover:bg-muted flex items-center gap-1.5"
                 >
                   <User className="h-4 w-4 shrink-0" />
-                  <span className="min-w-0 truncate">{session.user?.name || session.user?.email}</span>
+                  <span className="min-w-0 truncate" data-clarity-mask="true">{session.user?.name || session.user?.email}</span>
                   {isPro && (
                     <span className="shrink-0 text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-700 leading-none">
                       Pro member

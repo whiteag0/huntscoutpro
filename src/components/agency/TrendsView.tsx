@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Loader2, TrendingDown, TrendingUp } from "lucide-react";
@@ -12,6 +12,7 @@ import { DemoGate } from "@/components/DemoGate";
 import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { SourceNotes, footnoteIndex } from "@/components/agency/SourceNotes";
 import { pill } from "@/components/agency/mobile";
+import { track } from "@/lib/analytics";
 
 // First column stays put while the year columns scroll sideways on a phone.
 const stickyTh = "sticky left-0 z-10 bg-muted text-left px-3 py-2.5 shadow-[1px_0_0_var(--border)]";
@@ -44,6 +45,7 @@ export function TrendsView({ options, slug, species, pointsMatter, sources }: { 
   const opt = options.find((o) => o.slug === slug)!;
   const { data, loading, error } = useSpeciesData(slug, species);
   const [residency, setResidency] = useState<DrawResidency>("resident");
+  useEffect(() => track("trends_view", { state: slug, species }), [slug, species]);
 
   const go = (s: string, spc?: Species) => {
     const o = options.find((x) => x.slug === s)!;

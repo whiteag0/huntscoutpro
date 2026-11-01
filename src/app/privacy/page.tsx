@@ -1,3 +1,5 @@
+import { ConsentSettings } from "@/components/analytics/ConsentSettings";
+
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-background">
@@ -41,15 +43,65 @@ export default function PrivacyPage() {
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-foreground">4. Third-Party Services</h2>
             <p>
-              We use third-party services including Stripe for payment processing, Google for sign-in, Resend to send email, and Vercel to host the website. These services have their own privacy policies governing how they handle your data.
+              We use third-party services including Stripe for payment processing, Google for sign-in, Resend to send email, and Vercel to host the website. The analytics and advertising services we use are described in the next section. These services have their own privacy policies governing how they handle your data.
             </p>
           </section>
 
-          <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">5. Cookies</h2>
+          <section id="analytics" className="space-y-3 scroll-mt-24">
+            <h2 className="text-lg font-semibold text-foreground">5. Analytics, Advertising and Cookies</h2>
             <p>
-              We use essential cookies for authentication and session management. We do not use tracking cookies or sell your data to advertisers.
+              We use essential cookies to keep you signed in. We also use the following tools to understand how the site is used and to measure our advertising:
             </p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                <span className="font-semibold text-foreground">Vercel Web Analytics and Speed Insights.</span> Count page views and measure how fast pages load. They don&apos;t use cookies and don&apos;t identify you.
+              </li>
+              <li>
+                <span className="font-semibold text-foreground">Microsoft Clarity.</span> Records how visitors move through pages (clicks, scrolling and taps) so we can watch session replays and see heatmaps. Text you type into forms is hidden from these recordings, and we also hide your name, email address and account details on screen. Clarity sets cookies to recognize repeat visits. When you&apos;re signed in, we send Clarity a one-way hash of your email address so we can group your visits; Clarity never receives the address itself. We also record which pages and features are used (for example which state, species or data tab you open, or that a purchase completed). See the{" "}
+                <a href="https://www.microsoft.com/privacy/privacystatement" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2">
+                  Microsoft Privacy Statement
+                </a>
+                .
+              </li>
+              <li>
+                <span className="font-semibold text-foreground">Google Ads tag and Meta Pixel.</span> Only while we run ads on Google or Meta. They tell Google or Meta that someone who saw or clicked one of our ads visited the site or bought Pro (the purchase amount and an order number, never your card details), so we can measure whether the ads work. Google and Meta may set their own cookies and combine this with other information they hold. See{" "}
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2">
+                  Google&apos;s Privacy Policy
+                </a>{" "}
+                and{" "}
+                <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2">
+                  Meta&apos;s Privacy Policy
+                </a>
+                .
+              </li>
+            </ul>
+            <p>
+              We don&apos;t sell your personal information for money. Some U.S. state laws treat letting advertising tags collect visit data as &ldquo;sharing&rdquo; it for advertising, and you can opt out of that in any of the ways below.
+            </p>
+            <h3 className="text-base font-semibold text-foreground pt-1">Your choices</h3>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                <span className="font-semibold text-foreground">Global Privacy Control.</span> If your browser or an extension sends the Global Privacy Control signal, we don&apos;t load the Google Ads tag or the Meta Pixel and tell Clarity not to use your visit for advertising.
+              </li>
+              <li>
+                <span className="font-semibold text-foreground">Visitors in the European Economic Area, the UK and Switzerland.</span> You&apos;ll see a banner on your first visit. Until you choose Accept, Clarity runs without cookies and no advertising tags load. Choosing Decline keeps it that way.
+              </li>
+              <li>
+                <span className="font-semibold text-foreground">Change your choice for this browser at any time:</span>
+                <ConsentSettings />
+              </li>
+              <li>
+                You can also block or delete cookies in your browser settings, and manage ad personalization in{" "}
+                <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2">
+                  Google&apos;s My Ad Center
+                </a>{" "}
+                and{" "}
+                <a href="https://www.facebook.com/adpreferences/" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2">
+                  Meta&apos;s ad preferences
+                </a>
+                .
+              </li>
+            </ul>
           </section>
 
           <section className="space-y-3">
