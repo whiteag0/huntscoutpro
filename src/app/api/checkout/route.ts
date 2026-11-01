@@ -61,7 +61,11 @@ export async function POST() {
         },
       ],
       client_reference_id: session.user.id || undefined,
-      payment_intent_data: { metadata },
+      payment_intent_data: {
+        metadata,
+        // Card statements read "EPICAI* HuntScout PRO" (account prefix + this suffix, 22 chars max).
+        statement_descriptor_suffix: "HuntScout PRO",
+      },
       success_url: `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/pricing`,
       metadata,
