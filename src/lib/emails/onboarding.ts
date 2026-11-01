@@ -1,10 +1,11 @@
 // Branded onboarding emails sent to new HuntScout Pro members.
 // Inline styles and tables only, so they render in Gmail, Outlook and Apple Mail.
 
-const GOLD = "#C9A24A";
-const DARK = "#1F2326";
-const LINK = "#9a7a2c";
-const SITE = "https://www.huntscoutpro.com";
+// Shared with the other branded emails (src/lib/emails/reminders.ts).
+export const GOLD = "#C9A24A";
+export const DARK = "#1F2326";
+export const LINK = "#9a7a2c";
+export const SITE = "https://www.huntscoutpro.com";
 const REPLY_TO = "adam@huntscoutpro.com";
 
 export interface RenderedEmail {
@@ -13,7 +14,7 @@ export interface RenderedEmail {
   text: string;
 }
 
-function esc(s: string): string {
+export function esc(s: string): string {
   return s
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -21,7 +22,11 @@ function esc(s: string): string {
     .replace(/"/g, "&quot;");
 }
 
-function layout(preheader: string, body: string): string {
+const DEFAULT_FOOTER = `You're receiving this because you purchased HuntScout Pro at huntscoutpro.com.<br>
+HuntScout Pro &middot; <a href="${SITE}" style="color:#8a8a8a;">www.huntscoutpro.com</a>`;
+
+/** Branded shell: dark header, white card with signature, small grey footer (HTML, already escaped). */
+export function layout(preheader: string, body: string, footerHtml: string = DEFAULT_FOOTER): string {
   return `<!doctype html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HuntScout Pro</title></head>
 <body style="margin:0;padding:0;background:#f4f2ee;">
@@ -38,8 +43,7 @@ ${body}
 ${signature()}
 </td></tr>
 <tr><td style="padding:16px 28px;font-size:12px;color:#8a8a8a;text-align:center;">
-You're receiving this because you purchased HuntScout Pro at huntscoutpro.com.<br>
-HuntScout Pro &middot; <a href="${SITE}" style="color:#8a8a8a;">www.huntscoutpro.com</a>
+${footerHtml}
 </td></tr>
 </table>
 </td></tr></table>
@@ -55,12 +59,12 @@ function signature(): string {
 </td></tr></table>`;
 }
 
-const SIGNATURE_TEXT = `Adam White
+export const SIGNATURE_TEXT = `Adam White
 CEO & Founder
 HuntScout Pro | Know Before You Draw
 ${REPLY_TO} | www.huntscoutpro.com`;
 
-function button(href: string, label: string): string {
+export function button(href: string, label: string): string {
   return `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:18px 0;"><tr><td style="background:${GOLD};border-radius:6px;">
 <a href="${href}" style="display:inline-block;padding:12px 22px;color:${DARK};font-weight:bold;text-decoration:none;font-size:15px;">${label}</a>
 </td></tr></table>`;

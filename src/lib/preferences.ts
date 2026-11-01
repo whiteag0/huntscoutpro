@@ -16,6 +16,8 @@ const K = {
 } as const;
 export const ONBOARDED_AT_KEY = "hs_onboarded_at";
 export const PREFS_EMAIL_ID_KEY = "hs_prefs_email_id";
+/** "1" on a member's PaymentIntent(s) when they turned deadline reminder emails off. */
+export const REMINDERS_OFF_KEY = "hs_reminders_off";
 
 const LIST_FIELDS = ["states", "species", "methods", "goals"] as const;
 
@@ -44,6 +46,11 @@ function fromMetadata(md: Record<string, string>): HuntingPreferences | null {
     goals: list(K.goals),
     notes: md[K.notes] || "",
   });
+}
+
+/** Member preferences stored on a PaymentIntent's metadata, or null when none were saved. */
+export function preferencesFromMetadata(md: Record<string, string> | null | undefined): HuntingPreferences | null {
+  return md ? fromMetadata(md) : null;
 }
 
 export async function readPreferences(paymentIntentId: string) {
