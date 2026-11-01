@@ -7,7 +7,7 @@ import { SPECIES_LABELS, type Species } from "@/data/types";
 import type { SpeciesInfo } from "@/data/agency/schema";
 import type { StateData } from "@/lib/agency";
 import { formatDate } from "@/lib/agency-format";
-import { defaultHarvestMethod, harvestMethodKey, headlineHarvestRows, isRealUnit, sameUnit, maxPointLevel, methodsIn, years, type DrawResidency } from "@/lib/agency-view";
+import { EVERY_CATEGORY, defaultHarvestMethod, harvestMethodKey, headlineHarvestRows, isRealUnit, sameUnit, maxPointLevel, methodsIn, years, type DrawResidency } from "@/lib/agency-view";
 import { DemoGate } from "@/components/DemoGate";
 import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { DrawTable } from "@/components/agency/DrawTable";
@@ -71,12 +71,12 @@ export function StateExplorer({ state, species: speciesList, initialSpecies }: {
 
   const harvestYearRows = useMemo(() => headlineHarvestRows((data?.harvest || []).filter((r) => r.year === hYear)), [data, hYear]);
   const harvestMethods = useMemo(() => methodsIn(harvestYearRows), [harvestYearRows]);
-  const activeMethod = method && harvestMethods.includes(method) ? method : defaultHarvestMethod(harvestYearRows);
+  const activeMethod = method && (harvestMethods.includes(method) || method === EVERY_CATEGORY) ? method : defaultHarvestMethod(harvestYearRows);
   const harvestRows = useMemo(
     () =>
       harvestYearRows.filter(
         (r) =>
-          harvestMethodKey(r) === activeMethod &&
+          (activeMethod === EVERY_CATEGORY || harvestMethodKey(r) === activeMethod) &&
           (!q || r.unit.toLowerCase().includes(q) || (r.unitName || state.unitNames[species]?.[r.unit] || "").toLowerCase().includes(q) || (r.hunt || "").toLowerCase().includes(q))
       ),
     [harvestYearRows, activeMethod, q, state.unitNames, species]
@@ -203,6 +203,7 @@ export function StateExplorer({ state, species: speciesList, initialSpecies }: {
           <label className="text-sm">
             <span className="block text-xs font-semibold text-muted-foreground mb-1">Category</span>
             <select className="min-h-10 sm:min-h-0 max-w-full px-2 py-1.5 border border-border rounded-lg bg-background text-base sm:text-sm" value={activeMethod} onChange={(e) => setMethod(e.target.value)}>
+              <option value={EVERY_CATEGORY}>{EVERY_CATEGORY}</option>
               {harvestMethods.map((m) => (
                 <option key={m} value={m}>
                   {m}
