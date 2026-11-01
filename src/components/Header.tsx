@@ -55,6 +55,16 @@ export function Header() {
     setMobileOpen(false);
   }
 
+  // Escape closes the phone menu.
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [mobileOpen]);
+
   const showSolid = !isLanding || scrolled || mobileOpen;
 
   return (
@@ -67,7 +77,7 @@ export function Header() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 text-lg">
+        <Link href="/" className="flex h-11 items-center gap-2 text-lg">
           <Crosshair className="h-5 w-5 text-amber-500" />
           <span className="font-bold tracking-tight">HuntScout</span>
           <span className="text-xs font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded-md gradient-gold text-gold-foreground leading-none">
@@ -172,9 +182,12 @@ export function Header() {
 
         {/* Mobile menu toggle */}
         <button
-          className="lg:hidden p-2 cursor-pointer"
+          type="button"
+          className="lg:hidden -mr-2 inline-flex h-11 w-11 items-center justify-center rounded-lg cursor-pointer"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-menu"
         >
           {mobileOpen ? (
             <X className="h-5 w-5" />
@@ -186,21 +199,26 @@ export function Header() {
 
       {/* Mobile menu — max-height transition for smooth animation */}
       <div
+        id="mobile-menu"
         ref={mobileMenuRef}
-        className="lg:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out"
+        // Closed: out of the tab order and the accessibility tree.
+        inert={!mobileOpen}
+        className={`lg:hidden overscroll-contain transition-[max-height,opacity] duration-300 ease-in-out motion-reduce:transition-none ${
+          mobileOpen ? "overflow-y-auto" : "overflow-hidden"
+        }`}
         style={{
-          maxHeight: mobileOpen ? "500px" : "0px",
+          maxHeight: mobileOpen ? "calc(100dvh - 4rem)" : "0px",
           opacity: mobileOpen ? 1 : 0,
         }}
       >
-        <div className="border-t border-border bg-background px-4 pb-4">
+        <div className="border-t border-border bg-background px-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
           <nav className="flex flex-col gap-1 pt-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className={`flex items-center gap-2 px-3 py-2.5 text-sm rounded-lg transition-colors ${
+                className={`flex min-h-11 items-center gap-2 px-3 py-2.5 text-sm rounded-lg transition-colors ${
                   pathname.startsWith(link.href)
                     ? "text-foreground font-medium bg-muted"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted"
@@ -220,7 +238,7 @@ export function Header() {
                 <Link
                   href="/account"
                   onClick={() => setMobileOpen(false)}
-                  className="text-sm text-muted-foreground px-3 py-2 rounded-lg hover:bg-muted flex items-center gap-1.5"
+                  className="text-sm text-muted-foreground min-h-11 px-3 py-2 rounded-lg hover:bg-muted flex items-center gap-1.5"
                 >
                   <User className="h-4 w-4 shrink-0" />
                   <span className="min-w-0 truncate">{session.user?.name || session.user?.email}</span>
@@ -235,14 +253,14 @@ export function Header() {
                   <Link
                     href="/pricing"
                     onClick={() => setMobileOpen(false)}
-                    className="px-3 py-2 text-sm font-bold rounded-lg gradient-gold text-gold-foreground text-center"
+                    className="flex min-h-11 items-center justify-center px-3 py-2 text-sm font-bold rounded-lg gradient-gold text-gold-foreground text-center"
                   >
                     Upgrade to Pro
                   </Link>
                 )}
                 <button
                   onClick={() => signOut()}
-                  className="flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg border border-border hover:bg-muted transition-colors cursor-pointer"
+                  className="flex min-h-11 items-center gap-1.5 px-3 py-2 text-sm rounded-lg border border-border hover:bg-muted transition-colors cursor-pointer"
                 >
                   <LogOut className="h-3.5 w-3.5" />
                   Sign Out
@@ -253,14 +271,14 @@ export function Header() {
                 <Link
                   href="/signin"
                   onClick={() => setMobileOpen(false)}
-                  className="px-3 py-2 text-sm rounded-lg hover:bg-muted transition-colors text-center"
+                  className="flex min-h-11 items-center justify-center px-3 py-2 text-sm rounded-lg hover:bg-muted transition-colors text-center"
                 >
                   Sign In
                 </Link>
                 <Link
                   href="/pricing"
                   onClick={() => setMobileOpen(false)}
-                  className="px-3 py-2 text-sm font-bold rounded-lg gradient-gold text-gold-foreground text-center"
+                  className="flex min-h-11 items-center justify-center px-3 py-2 text-sm font-bold rounded-lg gradient-gold text-gold-foreground text-center"
                 >
                   Get Pro — $14.99
                 </Link>

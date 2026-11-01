@@ -66,7 +66,7 @@ export function DemoGate({ children, preview, feature = "this data" }: DemoGateP
 
         {/* CTA overlay */}
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pb-8">
-          <div className="relative z-10 text-center px-8 py-8 max-w-md">
+          <div className="relative z-10 text-center px-4 sm:px-8 py-8 max-w-md">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-medium mb-4">
               <Eye className="w-3.5 h-3.5" />
               Preview
