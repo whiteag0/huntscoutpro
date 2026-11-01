@@ -8,6 +8,8 @@ import { fmtNum, fmtPct } from "@/lib/agency-format";
 import { drawHistory, drawStats, minPointsDrawn, oddsAtPoints, oddsOf, type DrawResidency } from "@/lib/agency-view";
 import { Cite } from "@/components/agency/SourceNotes";
 import { MobileSort, useIsNarrow, useProgressive } from "@/components/agency/mobile";
+import { AddToPlannerButton, PlannerToaster } from "@/components/planner/AddToPlanner";
+import { stateBySlug } from "@/data/state-list";
 
 type SortKey = "code" | "quota" | "applicants" | "odds" | "minPts" | "atPts";
 
@@ -118,6 +120,7 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
 
   const narrow = useIsNarrow();
   const { shown, button: moreButton } = useProgressive(rows.length);
+  const stateName = stateBySlug(stateSlug)?.name || stateSlug;
 
   const view = useMemo(() => {
     const items = rows.map((r): Item => {
@@ -205,6 +208,9 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
                     {x.r.seasonDates ? ` · ${x.r.seasonDates}` : ""}
                   </div>
                   <HuntExtras x={x} residency={residency} stateSlug={stateSlug} unitTerm={unitTerm} species={info.species} />
+                  <div className="mt-2">
+                    <AddToPlannerButton slug={stateSlug} stateName={stateName} info={info} row={x.r} residency={residency} variant="card" />
+                  </div>
                 </div>
                 <dl className="grid grid-cols-3 gap-px bg-border border-t border-border">
                   <Stat label="Quota">{fmtNum(x.quota)}</Stat>
@@ -247,6 +253,7 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
           })}
         </ul>
         {moreButton}
+        <PlannerToaster />
       </div>
     );
   }
@@ -304,6 +311,9 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
                       {x.r.seasonDates ? ` · ${x.r.seasonDates}` : ""}
                     </div>
                     <HuntExtras x={x} residency={residency} stateSlug={stateSlug} unitTerm={unitTerm} species={info.species} />
+                    <div className="mt-1">
+                      <AddToPlannerButton slug={stateSlug} stateName={stateName} info={info} row={x.r} residency={residency} />
+                    </div>
                   </td>
                   <td className="px-3 py-2.5 text-right align-top tabular-nums">{fmtNum(x.quota)}</td>
                   <td className="px-3 py-2.5 text-right align-top tabular-nums">{fmtNum(x.applicants)}</td>
@@ -339,6 +349,7 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
           </tbody>
         </table>
       </div>
+      <PlannerToaster />
     </div>
   );
 }

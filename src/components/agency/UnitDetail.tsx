@@ -13,6 +13,7 @@ import { DemoGate } from "@/components/DemoGate";
 import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { Cite, SourceNotes, footnoteIndex } from "@/components/agency/SourceNotes";
 import { HScroll, pill, useIsNarrow } from "@/components/agency/mobile";
+import { AddToPlannerButton, PlannerToaster } from "@/components/planner/AddToPlanner";
 
 function PointTable({ r, residency }: { r: DrawRecord; residency: DrawResidency }) {
   const rows = (r.byPoints || []).filter((p) => p[residency]?.applicants).sort((a, b) => b.points - a.points);
@@ -259,11 +260,15 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
                         <PointTable r={list[0]} residency={residency} />
                       </div>
                     )}
+                    <div className="mt-2 pt-2 border-t border-border">
+                      <AddToPlannerButton slug={state.slug} stateName={state.name} info={info} row={list[0]} residency={residency} variant={narrow ? "card" : "inline"} />
+                    </div>
                   </div>
                 ))}
               </div>
             )}
           </section>
+          <PlannerToaster />
         </DemoGate>
       )}
       <SourceNotes sources={state.sources} index={cited} />

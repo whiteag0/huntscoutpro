@@ -95,36 +95,50 @@ export function memberResidencyIn(member: Pick<ReminderMember, "residency" | "ho
 }
 
 /** The window end or the single date. A start-only date has no deadline to remind about. */
-function keyEnd(k: KeyDate): string {
+export function keyEnd(k: KeyDate): string {
   return k.end || k.date || "";
 }
 
-/**
- * Reminders due today for one member.
- * `states` should be the live agency states (e.g. getAllStateData()); states in
- * the member's preferences without published agency data are ignored.
- * `today` is YYYY-MM-DD in Mountain Time (todayIso()).
- */
-function isIsoDay(v: string): boolean {
+export function isIsoDay(v: string): boolean {
   return ISO_DAY.test(v);
+}
+
+/** True for labels like "Draw results posted" or "Successful applicants notified by" (nothing to do by that date). */
+export function isNotificationLabel(label: string): boolean {
+  return NOT_ACTIONABLE.test(label);
+}
+
+/** Whether a key date limited to one residency (per its label) applies to someone applying as `residency`. */
+export function labelFitsResidency(label: string, residency: "resident" | "nonresident" | "both"): boolean {
+  const only = labelResidency(label);
+  if (residency === "resident" && only === "nonresident") return false;
+  if (residency === "nonresident" && only === "resident") return false;
+  return true;
+}
+
+/**
+ * The end date of a key date that is still open for someone applying as `residency`:
+ * its cycle is this year or later, it has a YYYY-MM-DD end, the end is today or later,
+ * and its label isn't limited to the other residency. Null otherwise.
+ */
+export function openKeyDateEnd(k: KeyDate, residency: "resident" | "nonresident" | "both", today: string): string | null {
+  if (k.cycle < Number(today.slice(0, 4))) return null;
+  const end = keyEnd(k);
+  if (!isIsoDay(end) || end < today) return null;
+  return labelFitsResidency(k.label, residency) ? end : null;
 }
 
 /** The member's actionable key dates in one state that haven't ended yet (end >= today). */
 function openKeyDates(member: ReminderMember, st: ReminderState, today: string) {
-  const year = Number(today.slice(0, 4));
   const wanted = new Set(member.species);
   const residency = memberResidencyIn(member, st.abbrev);
   const out: { species: Species; k: KeyDate; end: string }[] = [];
   for (const info of st.species) {
     if (wanted.size > 0 && !wanted.has(info.species)) continue;
     for (const k of info.keyDates) {
-      if (k.cycle < year) continue;
-      if (!ACTIONABLE_LABEL.test(k.label) || NOT_ACTIONABLE.test(k.label)) continue;
-      const end = keyEnd(k);
-      if (!isIsoDay(end) || end < today) continue;
-      const only = labelResidency(k.label);
-      if (residency === "resident" && only === "nonresident") continue;
-      if (residency === "nonresident" && only === "resident") continue;
+      if (!ACTIONABLE_LABEL.test(k.label) || isNotificationLabel(k.label)) continue;
+      const end = openKeyDateEnd(k, residency, today);
+      if (!end) continue;
       out.push({ species: info.species, k, end });
     }
   }
