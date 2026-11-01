@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { track } from "@/lib/analytics";
 
 interface CheckoutButtonProps {
   className?: string;
@@ -27,6 +28,7 @@ export function CheckoutButton({ className, children = "Upgrade to Pro" }: Check
 
   const handleCheckout = async () => {
     if (status === "loading") return;
+    track("checkout_start", { signed_in: !!session });
     if (!session) { router.push("/signin?callbackUrl=/pricing"); return; }
     setError("");
     setLoading(true);

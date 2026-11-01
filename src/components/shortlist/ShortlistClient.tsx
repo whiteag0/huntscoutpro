@@ -8,6 +8,7 @@ import { DRAW_SYSTEM_LABELS } from "@/lib/agency-format";
 import { parsePointValue, pointsKey, serializePoints, type PointsMap } from "@/lib/points-schema";
 import type { ShortlistResult, ShortlistSpeciesOption } from "@/lib/shortlist";
 import { ShortlistResults, shortPointName } from "@/components/shortlist/ShortlistResults";
+import { track } from "@/lib/analytics";
 
 export interface ShortlistInitial {
   species: Species;
@@ -137,6 +138,7 @@ export function ShortlistClient({ options, initial }: { options: ShortlistSpecie
     try {
       const result = await fetchShortlist(species, home, serializePoints(values), stretch, ctrl.signal);
       setLoad({ state: "ready", result });
+      track("shortlist_run", { species, home_state: home, stretch });
       resultsRef.current?.focus();
     } catch (err) {
       if ((err as Error).name !== "AbortError") setLoad({ state: "error", message: (err as Error).message });

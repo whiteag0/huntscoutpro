@@ -13,6 +13,7 @@ import {
 } from "@/lib/preferences-schema";
 import { stateByAbbrev, stateBySlug } from "@/data/state-list";
 import { formatDate as formatIsoDay, isLiveState, todayIso } from "@/lib/agency-format";
+import { track } from "@/lib/analytics";
 
 function formatDate(iso: string | null | undefined) {
   if (!iso) return null;
@@ -192,6 +193,7 @@ export default function AccountPage() {
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data?.error || "Couldn't save right now. Please try again.");
       setReminders({ state: "ready", settings: { ...reminders.settings, enabled: next } });
+      track("reminders_toggle", { enabled: next });
       setReminderMsg({ text: next ? "Deadline reminders are on." : "Deadline reminders are off.", error: false });
     } catch (err) {
       setReminderMsg({ text: err instanceof Error ? err.message : "Couldn't save right now. Please try again.", error: true });
@@ -221,7 +223,7 @@ export default function AccountPage() {
             <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
               <User className="w-5 h-5 text-muted-foreground" />
             </div>
-            <div className="min-w-0">
+            <div className="min-w-0" data-clarity-mask="true">
               <p className="font-semibold truncate">{name || "HuntScout member"}</p>
               <p className="text-sm text-muted-foreground truncate">{email}</p>
             </div>
@@ -310,7 +312,7 @@ export default function AccountPage() {
                     className="grid grid-cols-1 sm:grid-cols-[7.5rem_1fr] gap-0.5 sm:gap-3 py-2 border-t border-border first:border-t-0 first:pt-0"
                   >
                     <dt className="text-muted-foreground">{row.label}</dt>
-                    <dd className="text-foreground break-words min-w-0">{row.value}</dd>
+                    <dd className="text-foreground break-words min-w-0" data-clarity-mask="true">{row.value}</dd>
                   </div>
                 ))}
               </dl>
@@ -435,7 +437,7 @@ export default function AccountPage() {
             >
               <Mail className="w-4 h-4" /> Send me test emails
             </button>
-            {testStatus && <p className="text-sm text-muted-foreground mt-3">{testStatus}</p>}
+            {testStatus && <p className="text-sm text-muted-foreground mt-3" data-clarity-mask="true">{testStatus}</p>}
           </section>
         )}
 
@@ -474,7 +476,7 @@ function ReminderCoverage({ settings, email }: { settings: ReminderSettings; ema
         {settings.enabled ? (
           live.length > 0 ? (
             <>
-              On. Emails go to <span className="break-words">{email}</span>.
+              On. Emails go to <span className="break-words" data-clarity-mask="true">{email}</span>.
             </>
           ) : (
             "On, but there's nothing to remind you about yet."

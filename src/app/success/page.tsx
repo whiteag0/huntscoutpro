@@ -4,6 +4,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { signIn, useSession } from "next-auth/react";
+import { track, trackPurchase } from "@/lib/analytics";
 import {
   Check,
   ArrowRight,
@@ -46,6 +47,9 @@ function SuccessContent() {
         const res = await fetch(`/api/subscription${qs}`, { cache: "no-store" });
         if (!res.ok) throw new Error(String(res.status));
         const data = await res.json();
+        // Conversion only for a checkout the server confirmed was paid by this
+        // user; trackPurchase sends it once per session id.
+        if (sessionId && data.checkout?.paid === true) trackPurchase(sessionId);
         if (data.isPro) {
           // Refresh the login session so every page unlocks immediately.
           await update({ refresh: "entitlement" });
@@ -86,7 +90,10 @@ function SuccessContent() {
             membership will be linked automatically.
           </p>
           <button
-            onClick={() => signIn("google", { callbackUrl })}
+            onClick={() => {
+              track("sign_in_click", { method: "google", from: "success" });
+              signIn("google", { callbackUrl });
+            }}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold gradient-gold text-gold-foreground cursor-pointer"
           >
             Sign in with Google
