@@ -34,6 +34,11 @@ DIGESTS = {
     2023: ("221986", "Prints the 2022 deer drawing summary."),
 }
 
+CCR_NOTE = ("Standing Big Game Drawing deadlines (\"by June 2 each year\"; tag fees \"by 5:00 p.m. on July 15 each year\") used for the "
+            "tentative 2027 key dates. Text read from Cornell LII's copy of the California Code of Regulations; the official "
+            "OAL/Westlaw site (govt.westlaw.com/calregs) refused automated access on 2026-10-31.")
+NOT_ANNOUNCED = "CDFW hasn't announced the 2027 dates yet."
+
 BASE_SOURCES = [
     {"id": "d-bgd-page", "title": "Big Game Hunting Tags (Big Game Drawing, preference points, tag quota splits FAQ)",
      "publisher": PUB, "url": "https://wildlife.ca.gov/Licensing/Hunting/Big-Game-Drawing", "retrieved": RETRIEVED},
@@ -58,6 +63,15 @@ BASE_SOURCES = [
      "notes": "Section 362(b)(4) bighorn sheep season rules and the 2026 elk, pronghorn and bighorn sheep hunt tables, used to "
               "cross-check the digest season dates. Its elk table prints Goodale Period 1 (373) as 'Sep 12- Sep 17' and Lone Pine "
               "Period 3 (496) as 'Oct 03- Oct 11', unlike the digest and the 2026 Elk Hunt Dates sheet."},
+] + [
+    {"id": f"d-ccr-{sec.replace('.', '-')}", "title": f"Cal. Code Regs. tit. 14, § {sec} - {name}",
+     "publisher": "California Fish and Game Commission (Title 14, California Code of Regulations)",
+     "url": f"https://www.law.cornell.edu/regulations/california/14-CCR-{sec}", "retrieved": RETRIEVED,
+     "notes": CCR_NOTE}
+    for sec, name in (("708.14", "Big Game License Tag Drawing System"),
+                      ("708.9", "Bighorn Sheep License Tags, Application, Distribution and Reporting Procedures"),
+                      ("708.10", "Pronghorn Antelope License Tags, Application, Distribution and Reporting Procedures"),
+                      ("708.11", "Elk License Tags, Application, Distribution and Reporting Procedures"))
 ]
 
 APP = {"label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)", "kind": "application",
@@ -66,6 +80,26 @@ APP = {"label": "Big Game Drawing application period (premium deer, elk, prongho
 RESULTS = {"label": "Drawing results available online", "kind": "results", "date": "2026-06-15", "cycle": 2026, "status": "confirmed",
            "note": "CDFW: 'on or around June 15, 2026'; the drawing is run within 10 business days of the deadline. " + NOT_2027,
            "sourceId": "d-digest-2026"}
+
+
+# 2027 cycle: dates fixed by standing rules (CDFW Big Game Drawing page; Title 14 CCR). Tentative until CDFW announces them.
+# April 15, 2027 is a Thursday, June 2, 2027 a Wednesday and July 15, 2027 a Thursday, so no weekend/holiday rule moves them.
+# Results are not added: the rules say only "within 10 business days following the application deadline".
+APP_2027 = {"label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)", "kind": "application",
+            "start": "2027-04-15", "end": "2027-06-02", "cycle": 2027, "status": "tentative",
+            "note": ("Set by CDFW's Big Game Drawing page (\"Applications for the big game drawing are available each year on April 15 "
+                     "through June 2\"; \"The Big Game Drawing deadline is midnight on June 2 of each year\") and Title 14 CCR "
+                     "§708.14(a)(4)(E) (applicants shall apply \"by June 2 each year\"); " + NOT_ANNOUNCED),
+            "sourceId": "d-bgd-page"}
+FEE_RULE = ("\"The tag fee shall be received by the department by 5:00 p.m. on July 15 each year. If the deadline to submit the fee "
+            "falls on a weekend or holiday payment will be accepted until the close of business on the first state business day "
+            "following the deadline to submit payment.\"")
+
+
+def pay_2027(label, sec):
+    return {"label": label, "kind": "payment", "date": "2027-07-15", "cycle": 2027, "status": "tentative",
+            "note": f"Set by Title 14 CCR §{sec} ({FEE_RULE}); {NOT_ANNOUNCED}",
+            "sourceId": "d-ccr-" + sec.split("(")[0].replace(".", "-")}
 
 
 def kd(label, kind, date, note, src="d-digest-2026"):
@@ -104,8 +138,9 @@ SPECIES = [
             {"label": "Deadline to report deer tags (2026 tags)", "kind": "other", "date": "2027-01-31", "cycle": 2026, "status": "confirmed",
              "note": "All deer tag holders must report by January 31 of the license year, hunted or not; late or missing reports "
                      "carry a $21.60 non-reporting fee.", "sourceId": "d-bgd-page"},
+            APP_2027,
         ],
-        "sourceIds": ["d-digest-2026", "d-bgd-page", "d-fees-2026"],
+        "sourceIds": ["d-digest-2026", "d-bgd-page", "d-fees-2026", "d-ccr-708-14"],
     },
     {
         "species": "elk",
@@ -126,8 +161,10 @@ SPECIES = [
             APP, RESULTS,
             kd("Successful elk applicants' payment notices mailed by", "other", "2026-07-02", "Unsuccessful applicants are not notified by mail."),
             kd("Elk tag fee payment deadline (5:00 p.m.)", "payment", "2026-07-15", "Unclaimed tags then go to alternates in the order drawn."),
+            APP_2027,
+            pay_2027("Elk tag fee payment deadline (5:00 p.m.)", "708.11(b)(9)"),
         ],
-        "sourceIds": ["d-digest-2026", "d-bgd-page", "d-fees-2026"],
+        "sourceIds": ["d-digest-2026", "d-bgd-page", "d-fees-2026", "d-ccr-708-14", "d-ccr-708-11"],
     },
     {
         "species": "pronghorn",
@@ -147,8 +184,10 @@ SPECIES = [
             APP, RESULTS,
             kd("Successful pronghorn applicants' payment notices mailed by", "other", "2026-07-02", "Unsuccessful applicants are not notified by mail."),
             kd("Pronghorn tag fee payment deadline (5:00 p.m.)", "payment", "2026-07-15", "Unclaimed tags then go to alternates in the order drawn."),
+            APP_2027,
+            pay_2027("Pronghorn tag fee payment deadline (5:00 p.m.)", "708.10(b)(9)"),
         ],
-        "sourceIds": ["d-digest-2026", "d-bgd-page", "d-fees-2026"],
+        "sourceIds": ["d-digest-2026", "d-bgd-page", "d-fees-2026", "d-ccr-708-14", "d-ccr-708-10"],
     },
     {
         "species": "sheep",
@@ -169,8 +208,11 @@ SPECIES = [
             kd("Bighorn sheep tag fee payment deadline (5:00 p.m., received by the License and Revenue Branch, Sacramento)", "payment", "2026-07-15",
                "Unclaimed tags then go to alternates in the order drawn."),
             kd("Mandatory bighorn sheep hunter orientation (in person)", "other", "2026-07-18", "Location to be announced by CDFW."),
+            APP_2027,
+            pay_2027("Bighorn sheep tag fee payment deadline (5:00 p.m., received by the License and Revenue Branch, Sacramento)",
+                     "708.9(b)(11)"),
         ],
-        "sourceIds": ["d-digest-2026", "d-bgd-page", "d-fees-2026"],
+        "sourceIds": ["d-digest-2026", "d-bgd-page", "d-fees-2026", "d-ccr-708-14", "d-ccr-708-9"],
     },
     {
         "species": "bear",
