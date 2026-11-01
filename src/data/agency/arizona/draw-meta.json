@@ -17,7 +17,7 @@
    "drawSystem": "bonus",
    "pointsMatter": true,
    "pointName": "bonus point",
-   "drawSystemSummary": "Elk permits are drawn in the Pronghorn & Elk (Midwinter) draw. Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points).",
+   "drawSystemSummary": "Elk permits are drawn in the Pronghorn & Elk (Midwinter) draw. Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points). AZGFD also offers a few extra permit-tags in its separate Copper State Draw, a random draw held outside the annual draws in which bonus points are neither used nor earned.",
    "residentNote": "A bonus point is earned for an unsuccessful application or by applying with the elk bonus-point-only hunt number (3000); accumulated points are expended when an elk permit-tag is issued in a computer draw.",
    "nonresidentNote": "Under R12-4-114(E)(2) as printed in the 2026-27 Arizona Hunting Regulations, nonresidents may receive no more than 10% (rounded down) of the permits in any hunt number for antlerless deer, antlerless elk, antlered deer, any deer, any elk, bull elk, javelina, pronghorn, Sandhill crane or turkey. For antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts with 10 or fewer permits, at most one permit is available to nonresidents, and a one-permit hunt is resident-only. No more than half of the nonresident allotment may be issued in the bonus pass (R12-4-114(G)). The 2025-26 regulations printed the earlier rule, whose 10% cap listed only antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts.",
    "otcSummary": "Elk nonpermit-tags (resident $135, nonresident $650) are sold over the counter only for the General or Archery-Only Nonpermit-Tag seasons listed in the elk Commission Order; all other elk hunts require a draw permit.",
@@ -57,13 +57,36 @@
      "status": "confirmed",
      "sourceId": "d-az-regs-pe2026",
      "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Copper State Draw application period, Aug. - Oct. 2026 hunts (8 a.m. Apr. 1 - 5 p.m. Apr. 7, Arizona time)",
+     "kind": "application",
+     "start": "2026-04-01",
+     "end": "2026-04-07",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-news-csd-2026-04",
+     "note": "Copper State Draw: separate from the annual draws; no bonus points used or earned; apply individually (no groups); $13 resident / $15 nonresident application fee per hunt number; a hunting license is needed only if drawn. Hunts: any elk Aug. 1 - Oct. 15, 2026 (Units 1-4B; Units 5A-20A), antlered mule deer Aug. 15 - Sep. 25, 2026 (Units 3A-4B, 28, 31, 32, 37A, 37B) and Aug. 22 - Oct. 2, 2026 (13A, 13B), antlered white-tailed deer Aug. 15 - Sep. 25, 2026 (Units 21-36C), buck pronghorn Aug. 1 - Oct. 15, 2026; six permit-tags in all. AZGFD says drawn applicants are contacted 'during the week of April 13' and must pay then (within 24 hours of contact per the program page); no exact date is given."
+    },
+    {
+     "label": "Copper State Draw application period, Dec. 2026 - Feb. 2027 hunts (8 a.m. July 29 - 5 p.m. Aug. 4, Arizona time)",
+     "kind": "application",
+     "start": "2026-07-29",
+     "end": "2026-08-04",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-news-csd-2026-08",
+     "note": "Copper State Draw: separate from the annual draws; no bonus points used or earned; apply individually (no groups); $13 resident / $15 nonresident application fee per hunt number; a hunting license is needed only if drawn. Hunts: mule deer + elk dual tag Dec. 1, 2026 - Jan. 31, 2027 (Units 22, 23); antlered mule deer Dec. 1, 2026 - Jan. 31, 2027 (Units 28, 31, 32, 37A, 37B) and Dec. 15, 2026 - Feb. 15, 2027 (Units 10, 17A, 17B, 19A, 19B, 20A); antlered white-tailed deer Jan. 1 - Feb. 28, 2027 (three unit groups); any elk Dec. 15, 2026 - Feb. 15, 2027 (Units 1, 27; Units 9, 10); Gould's turkey Apr. 1 - May 31, 2027. AZGFD says drawn applicants are contacted 'during the week of August 10' and must pay then (within 24 hours of contact per the program page); no exact date is given. AZGFD's Aug. 11, 2026 release gives the deadline as Aug. 5; its July 24, July 29 and Aug. 3 releases say 5 p.m. Tuesday, Aug. 4. No later Copper State Draw announced as of 2026-10-31."
     }
    ],
    "sourceIds": [
     "d-az-regs-pe2026",
     "d-az-regs-hunt2026",
     "d-az-regs-hunt2025",
-    "d-az-bonus-point-page"
+    "d-az-bonus-point-page",
+    "d-az-copper-state-draw",
+    "d-az-news-csd-2026-04",
+    "d-az-news-csd-2026-08"
    ]
   },
   {
@@ -72,7 +95,7 @@
    "drawSystem": "bonus",
    "pointsMatter": true,
    "pointName": "bonus point",
-   "drawSystemSummary": "Pronghorn permits are drawn in the Pronghorn & Elk (Midwinter) draw. Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points).",
+   "drawSystemSummary": "Pronghorn permits are drawn in the Pronghorn & Elk (Midwinter) draw. Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points). AZGFD also offers a few extra permit-tags in its separate Copper State Draw, a random draw held outside the annual draws in which bonus points are neither used nor earned.",
    "residentNote": "Bonus-point-only hunt number for pronghorn is 2000; accumulated points are expended when a pronghorn permit-tag is issued in a computer draw.",
    "nonresidentNote": "Under R12-4-114(E)(2) as printed in the 2026-27 Arizona Hunting Regulations, nonresidents may receive no more than 10% (rounded down) of the permits in any hunt number for antlerless deer, antlerless elk, antlered deer, any deer, any elk, bull elk, javelina, pronghorn, Sandhill crane or turkey. For antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts with 10 or fewer permits, at most one permit is available to nonresidents, and a one-permit hunt is resident-only. No more than half of the nonresident allotment may be issued in the bonus pass (R12-4-114(G)). The 2025-26 regulations printed the earlier rule, whose 10% cap listed only antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts.",
    "otcSummary": "None: every pronghorn season requires a draw hunt permit-tag.",
@@ -112,13 +135,25 @@
      "status": "confirmed",
      "sourceId": "d-az-regs-pe2026",
      "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Copper State Draw application period, Aug. - Oct. 2026 hunts (8 a.m. Apr. 1 - 5 p.m. Apr. 7, Arizona time)",
+     "kind": "application",
+     "start": "2026-04-01",
+     "end": "2026-04-07",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-news-csd-2026-04",
+     "note": "Copper State Draw: separate from the annual draws; no bonus points used or earned; apply individually (no groups); $13 resident / $15 nonresident application fee per hunt number; a hunting license is needed only if drawn. Hunts: any elk Aug. 1 - Oct. 15, 2026 (Units 1-4B; Units 5A-20A), antlered mule deer Aug. 15 - Sep. 25, 2026 (Units 3A-4B, 28, 31, 32, 37A, 37B) and Aug. 22 - Oct. 2, 2026 (13A, 13B), antlered white-tailed deer Aug. 15 - Sep. 25, 2026 (Units 21-36C), buck pronghorn Aug. 1 - Oct. 15, 2026; six permit-tags in all. AZGFD says drawn applicants are contacted 'during the week of April 13' and must pay then (within 24 hours of contact per the program page); no exact date is given."
     }
    ],
    "sourceIds": [
     "d-az-regs-pe2026",
     "d-az-regs-hunt2026",
     "d-az-regs-hunt2025",
-    "d-az-bonus-point-page"
+    "d-az-bonus-point-page",
+    "d-az-copper-state-draw",
+    "d-az-news-csd-2026-04"
    ]
   },
   {
@@ -127,7 +162,7 @@
    "drawSystem": "bonus",
    "pointsMatter": true,
    "pointName": "bonus point",
-   "drawSystemSummary": "Deer permits are drawn in the Fall draw (one deer genus for mule deer and white-tailed deer). Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points).",
+   "drawSystemSummary": "Deer permits are drawn in the Fall draw (one deer genus for mule deer and white-tailed deer). Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points). AZGFD also offers a few extra permit-tags in its separate Copper State Draw, a random draw held outside the annual draws in which bonus points are neither used nor earned.",
    "residentNote": "Many Arizona deer hunts are 'Any antlered deer' (either species); this file holds those plus mule-deer-only hunts. Bonus-point-only hunt number for deer is 1000.",
    "nonresidentNote": "Under R12-4-114(E)(2) as printed in the 2026-27 Arizona Hunting Regulations, nonresidents may receive no more than 10% (rounded down) of the permits in any hunt number for antlerless deer, antlerless elk, antlered deer, any deer, any elk, bull elk, javelina, pronghorn, Sandhill crane or turkey. For antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts with 10 or fewer permits, at most one permit is available to nonresidents, and a one-permit hunt is resident-only. No more than half of the nonresident allotment may be issued in the bonus pass (R12-4-114(G)). The 2025-26 regulations printed the earlier rule, whose 10% cap listed only antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts.",
    "otcSummary": "Archery-only deer nonpermit-tags (resident $45, nonresident $300) are sold over the counter for unit-specific archery seasons with harvest limits; nonresident tags are capped and sold online only.",
@@ -207,12 +242,35 @@
      "status": "confirmed",
      "sourceId": "d-az-regs-hunt2026",
      "note": "Nonpermit-Tag First-Come Schedule."
+    },
+    {
+     "label": "Copper State Draw application period, Aug. - Oct. 2026 hunts (8 a.m. Apr. 1 - 5 p.m. Apr. 7, Arizona time)",
+     "kind": "application",
+     "start": "2026-04-01",
+     "end": "2026-04-07",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-news-csd-2026-04",
+     "note": "Copper State Draw: separate from the annual draws; no bonus points used or earned; apply individually (no groups); $13 resident / $15 nonresident application fee per hunt number; a hunting license is needed only if drawn. Hunts: any elk Aug. 1 - Oct. 15, 2026 (Units 1-4B; Units 5A-20A), antlered mule deer Aug. 15 - Sep. 25, 2026 (Units 3A-4B, 28, 31, 32, 37A, 37B) and Aug. 22 - Oct. 2, 2026 (13A, 13B), antlered white-tailed deer Aug. 15 - Sep. 25, 2026 (Units 21-36C), buck pronghorn Aug. 1 - Oct. 15, 2026; six permit-tags in all. AZGFD says drawn applicants are contacted 'during the week of April 13' and must pay then (within 24 hours of contact per the program page); no exact date is given."
+    },
+    {
+     "label": "Copper State Draw application period, Dec. 2026 - Feb. 2027 hunts (8 a.m. July 29 - 5 p.m. Aug. 4, Arizona time)",
+     "kind": "application",
+     "start": "2026-07-29",
+     "end": "2026-08-04",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-news-csd-2026-08",
+     "note": "Copper State Draw: separate from the annual draws; no bonus points used or earned; apply individually (no groups); $13 resident / $15 nonresident application fee per hunt number; a hunting license is needed only if drawn. Hunts: mule deer + elk dual tag Dec. 1, 2026 - Jan. 31, 2027 (Units 22, 23); antlered mule deer Dec. 1, 2026 - Jan. 31, 2027 (Units 28, 31, 32, 37A, 37B) and Dec. 15, 2026 - Feb. 15, 2027 (Units 10, 17A, 17B, 19A, 19B, 20A); antlered white-tailed deer Jan. 1 - Feb. 28, 2027 (three unit groups); any elk Dec. 15, 2026 - Feb. 15, 2027 (Units 1, 27; Units 9, 10); Gould's turkey Apr. 1 - May 31, 2027. AZGFD says drawn applicants are contacted 'during the week of August 10' and must pay then (within 24 hours of contact per the program page); no exact date is given. AZGFD's Aug. 11, 2026 release gives the deadline as Aug. 5; its July 24, July 29 and Aug. 3 releases say 5 p.m. Tuesday, Aug. 4. No later Copper State Draw announced as of 2026-10-31."
     }
    ],
    "sourceIds": [
     "d-az-regs-hunt2026",
     "d-az-regs-hunt2025",
-    "d-az-bonus-point-page"
+    "d-az-bonus-point-page",
+    "d-az-copper-state-draw",
+    "d-az-news-csd-2026-04",
+    "d-az-news-csd-2026-08"
    ]
   },
   {
@@ -221,7 +279,7 @@
    "drawSystem": "bonus",
    "pointsMatter": true,
    "pointName": "bonus point",
-   "drawSystemSummary": "White-tailed deer permits are drawn in the Fall draw under the same deer genus as mule deer. Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points).",
+   "drawSystemSummary": "White-tailed deer permits are drawn in the Fall draw under the same deer genus as mule deer. Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points). AZGFD also offers a few extra permit-tags in its separate Copper State Draw, a random draw held outside the annual draws in which bonus points are neither used nor earned.",
    "residentNote": "This file holds hunts whose legal wildlife is white-tailed deer only; 'Any antlered deer' hunts (either species) are filed under mule deer.",
    "nonresidentNote": "Under R12-4-114(E)(2) as printed in the 2026-27 Arizona Hunting Regulations, nonresidents may receive no more than 10% (rounded down) of the permits in any hunt number for antlerless deer, antlerless elk, antlered deer, any deer, any elk, bull elk, javelina, pronghorn, Sandhill crane or turkey. For antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts with 10 or fewer permits, at most one permit is available to nonresidents, and a one-permit hunt is resident-only. No more than half of the nonresident allotment may be issued in the bonus pass (R12-4-114(G)). The 2025-26 regulations printed the earlier rule, whose 10% cap listed only antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts.",
    "otcSummary": "Archery-only deer nonpermit-tags (resident $45, nonresident $300) are sold over the counter for unit-specific archery seasons with harvest limits.",
@@ -301,12 +359,35 @@
      "status": "confirmed",
      "sourceId": "d-az-regs-hunt2026",
      "note": "Nonpermit-Tag First-Come Schedule."
+    },
+    {
+     "label": "Copper State Draw application period, Aug. - Oct. 2026 hunts (8 a.m. Apr. 1 - 5 p.m. Apr. 7, Arizona time)",
+     "kind": "application",
+     "start": "2026-04-01",
+     "end": "2026-04-07",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-news-csd-2026-04",
+     "note": "Copper State Draw: separate from the annual draws; no bonus points used or earned; apply individually (no groups); $13 resident / $15 nonresident application fee per hunt number; a hunting license is needed only if drawn. Hunts: any elk Aug. 1 - Oct. 15, 2026 (Units 1-4B; Units 5A-20A), antlered mule deer Aug. 15 - Sep. 25, 2026 (Units 3A-4B, 28, 31, 32, 37A, 37B) and Aug. 22 - Oct. 2, 2026 (13A, 13B), antlered white-tailed deer Aug. 15 - Sep. 25, 2026 (Units 21-36C), buck pronghorn Aug. 1 - Oct. 15, 2026; six permit-tags in all. AZGFD says drawn applicants are contacted 'during the week of April 13' and must pay then (within 24 hours of contact per the program page); no exact date is given."
+    },
+    {
+     "label": "Copper State Draw application period, Dec. 2026 - Feb. 2027 hunts (8 a.m. July 29 - 5 p.m. Aug. 4, Arizona time)",
+     "kind": "application",
+     "start": "2026-07-29",
+     "end": "2026-08-04",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-az-news-csd-2026-08",
+     "note": "Copper State Draw: separate from the annual draws; no bonus points used or earned; apply individually (no groups); $13 resident / $15 nonresident application fee per hunt number; a hunting license is needed only if drawn. Hunts: mule deer + elk dual tag Dec. 1, 2026 - Jan. 31, 2027 (Units 22, 23); antlered mule deer Dec. 1, 2026 - Jan. 31, 2027 (Units 28, 31, 32, 37A, 37B) and Dec. 15, 2026 - Feb. 15, 2027 (Units 10, 17A, 17B, 19A, 19B, 20A); antlered white-tailed deer Jan. 1 - Feb. 28, 2027 (three unit groups); any elk Dec. 15, 2026 - Feb. 15, 2027 (Units 1, 27; Units 9, 10); Gould's turkey Apr. 1 - May 31, 2027. AZGFD says drawn applicants are contacted 'during the week of August 10' and must pay then (within 24 hours of contact per the program page); no exact date is given. AZGFD's Aug. 11, 2026 release gives the deadline as Aug. 5; its July 24, July 29 and Aug. 3 releases say 5 p.m. Tuesday, Aug. 4. No later Copper State Draw announced as of 2026-10-31."
     }
    ],
    "sourceIds": [
     "d-az-regs-hunt2026",
     "d-az-regs-hunt2025",
-    "d-az-bonus-point-page"
+    "d-az-bonus-point-page",
+    "d-az-copper-state-draw",
+    "d-az-news-csd-2026-04",
+    "d-az-news-csd-2026-08"
    ]
   },
   {
@@ -368,7 +449,7 @@
    "drawSystem": "bonus",
    "pointsMatter": true,
    "pointName": "bonus point",
-   "drawSystemSummary": "Spring turkey permits are drawn in the Spring draw (applications in October of the prior year) and fall turkey permits in the Fall draw. Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points).",
+   "drawSystemSummary": "Spring turkey permits are drawn in the Spring draw (applications in October of the prior year) and fall turkey permits in the Fall draw. Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most bonus points (bonus pass); the rest are drawn at random, first for 1st/2nd choices and then for 3rd-5th choices, with one extra random-number entry per bonus point (including hunter-education and loyalty points). AZGFD also offers a few extra permit-tags in its separate Copper State Draw, a random draw held outside the annual draws in which bonus points are neither used nor earned.",
    "residentNote": "Bag limit is one turkey per calendar year.",
    "nonresidentNote": "Under R12-4-114(E)(2) as printed in the 2026-27 Arizona Hunting Regulations, nonresidents may receive no more than 10% (rounded down) of the permits in any hunt number for antlerless deer, antlerless elk, antlered deer, any deer, any elk, bull elk, javelina, pronghorn, Sandhill crane or turkey. For antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts with 10 or fewer permits, at most one permit is available to nonresidents, and a one-permit hunt is resident-only. No more than half of the nonresident allotment may be issued in the bonus pass (R12-4-114(G)). The 2025-26 regulations printed the earlier rule, whose 10% cap listed only antlered deer, bull elk, pronghorn, Sandhill crane and turkey hunts.",
    "otcSummary": "Archery turkey nonpermit-tags (resident $25, nonresident $90) and youth-only turkey nonpermit-tags ($10) are sold over the counter for the archery-only nonpermit-tag seasons.",
@@ -498,6 +579,16 @@
      "status": "confirmed",
      "sourceId": "d-az-regs-hunt2026",
      "note": "2027 dates not yet published by AZGFD as of 2026-10-31"
+    },
+    {
+     "label": "Copper State Draw application period, Gould's turkey Apr. 1 - May 31, 2027 hunt (8 a.m. July 29 - 5 p.m. Aug. 4, 2026, Arizona time)",
+     "kind": "application",
+     "start": "2026-07-29",
+     "end": "2026-08-04",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-az-news-csd-2026-08",
+     "note": "Copper State Draw: separate from the annual draws; no bonus points used or earned; apply individually (no groups); $13 resident / $15 nonresident application fee per hunt number; a hunting license is needed only if drawn. Hunts: mule deer + elk dual tag Dec. 1, 2026 - Jan. 31, 2027 (Units 22, 23); antlered mule deer Dec. 1, 2026 - Jan. 31, 2027 (Units 28, 31, 32, 37A, 37B) and Dec. 15, 2026 - Feb. 15, 2027 (Units 10, 17A, 17B, 19A, 19B, 20A); antlered white-tailed deer Jan. 1 - Feb. 28, 2027 (three unit groups); any elk Dec. 15, 2026 - Feb. 15, 2027 (Units 1, 27; Units 9, 10); Gould's turkey Apr. 1 - May 31, 2027. AZGFD says drawn applicants are contacted 'during the week of August 10' and must pay then (within 24 hours of contact per the program page); no exact date is given. AZGFD's Aug. 11, 2026 release gives the deadline as Aug. 5; its July 24, July 29 and Aug. 3 releases say 5 p.m. Tuesday, Aug. 4. No later Copper State Draw announced as of 2026-10-31."
     }
    ],
    "sourceIds": [
@@ -507,7 +598,9 @@
     "d-az-2027s-leftover-list",
     "d-az-regs-hunt2026",
     "d-az-regs-hunt2025",
-    "d-az-bonus-point-page"
+    "d-az-bonus-point-page",
+    "d-az-copper-state-draw",
+    "d-az-news-csd-2026-08"
    ]
   },
   {
@@ -814,6 +907,24 @@
    "licenseYear": 2026,
    "sourceId": "d-az-regs-hunt2026",
    "note": "Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4)"
+  },
+  {
+   "species": null,
+   "item": "Copper State Draw application fee (per Copper State Draw hunt number)",
+   "residency": "resident",
+   "amountUsd": 13,
+   "licenseYear": 2026,
+   "sourceId": "d-az-copper-state-draw",
+   "note": "Copper State Draw program page; separate application fee for each hunt number applied for. Permit-tag fees (Arizona Hunting Regulations) are paid when a tag is awarded. Same amounts in AZGFD's 2026 releases."
+  },
+  {
+   "species": null,
+   "item": "Copper State Draw application fee (per Copper State Draw hunt number)",
+   "residency": "nonresident",
+   "amountUsd": 15,
+   "licenseYear": 2026,
+   "sourceId": "d-az-copper-state-draw",
+   "note": "Copper State Draw program page; separate application fee for each hunt number applied for. Permit-tag fees (Arizona Hunting Regulations) are paid when a tag is awarded. Same amounts in AZGFD's 2026 releases."
   },
   {
    "species": "elk",
@@ -8677,6 +8788,33 @@
    "dataYear": 2027,
    "retrieved": "2026-10-31",
    "notes": "Leftover (first-come) permit list for 2027 spring hunts; applications accepted by U.S. mail only on or after Nov. 2, 2026."
+  },
+  {
+   "id": "d-az-copper-state-draw",
+   "title": "Copper State Draw (AZGFD program information page)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://copperstatedraw.azgfd.com/Home/OnePage",
+   "pageUrl": "https://copperstatedraw.azgfd.com/",
+   "retrieved": "2026-10-31",
+   "notes": "Rules and application fee ($13 resident / $15 nonresident per Copper State Draw hunt number; permit fees per the Arizona Hunting Regulations, paid when the tag is awarded). Application site showed 'The registration is now closed' on 2026-10-31."
+  },
+  {
+   "id": "d-az-news-csd-2026-04",
+   "title": "“Copper State Draw” opens at 8 a.m. Wednesday, April 1 (AZGFD news release, March 27, 2026)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://www.azgfd.com/2026/03/27/copper-state-draw-opens-at-8-a-m-wednesday-april-1/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt list (six permit-tags: elk, mule deer, white-tailed deer, pronghorn; Aug. 1 - Oct. 15, 2026 seasons) as printed in AZGFD's April 6, 2026 release https://www.azgfd.com/2026/04/06/copper-state-draw-closes-tomorrow/. Read in a browser on 2026-10-31."
+  },
+  {
+   "id": "d-az-news-csd-2026-08",
+   "title": "New: One application fee, two epic hunts (AZGFD news release, July 24, 2026)",
+   "publisher": "Arizona Game and Fish Department",
+   "url": "https://www.azgfd.com/2026/07/24/new-one-app-fee-two-epic-hunts/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Copper State Draw for Dec. 2026 - Feb. 2027 elk, mule deer and white-tailed deer hunts and an Apr. 1 - May 31, 2027 Gould's turkey hunt. AZGFD's July 29 and Aug. 3, 2026 releases also give the Aug. 4 close; its Aug. 11, 2026 release says 'The deadline to submit applications was Aug. 5.' Read in a browser on 2026-10-31."
   },
   {
    "id": "d-az-bonus-point-page",

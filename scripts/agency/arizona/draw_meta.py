@@ -50,6 +50,57 @@ SP27_SOURCE = {
     "notes": "Dates from the 'Hunt Permit-tag Application Schedule – Spring 2027' table (booklet p. 1).",
 }
 
+# Copper State Draw: AZGFD's separate, discretionary fund-raising draw (two rounds in 2026). Read in a browser on
+# 2026-10-31 (azgfd.com answers scripts with a bot challenge); the program page copperstatedraw.azgfd.com was downloaded.
+CSD = "d-az-copper-state-draw"
+CSD_A = "d-az-news-csd-2026-04"
+CSD_B = "d-az-news-csd-2026-08"
+CSD_SOURCES = [
+    {"id": CSD, "title": "Copper State Draw (AZGFD program information page)", "publisher": PUB,
+     "url": "https://copperstatedraw.azgfd.com/Home/OnePage", "pageUrl": "https://copperstatedraw.azgfd.com/",
+     "retrieved": RETRIEVED,
+     "notes": "Rules and application fee ($13 resident / $15 nonresident per Copper State Draw hunt number; permit fees per the "
+              "Arizona Hunting Regulations, paid when the tag is awarded). Application site showed 'The registration is now closed' on 2026-10-31."},
+    {"id": CSD_A, "title": "“Copper State Draw” opens at 8 a.m. Wednesday, April 1 (AZGFD news release, March 27, 2026)", "publisher": PUB,
+     "url": "https://www.azgfd.com/2026/03/27/copper-state-draw-opens-at-8-a-m-wednesday-april-1/", "dataYear": 2026, "retrieved": RETRIEVED,
+     "notes": "Hunt list (six permit-tags: elk, mule deer, white-tailed deer, pronghorn; Aug. 1 - Oct. 15, 2026 seasons) as printed in "
+              "AZGFD's April 6, 2026 release https://www.azgfd.com/2026/04/06/copper-state-draw-closes-tomorrow/. Read in a browser on 2026-10-31."},
+    {"id": CSD_B, "title": "New: One application fee, two epic hunts (AZGFD news release, July 24, 2026)", "publisher": PUB,
+     "url": "https://www.azgfd.com/2026/07/24/new-one-app-fee-two-epic-hunts/", "dataYear": 2026, "retrieved": RETRIEVED,
+     "notes": "Copper State Draw for Dec. 2026 - Feb. 2027 elk, mule deer and white-tailed deer hunts and an Apr. 1 - May 31, 2027 "
+              "Gould's turkey hunt. AZGFD's July 29 and Aug. 3, 2026 releases also give the Aug. 4 close; its Aug. 11, 2026 "
+              "release says 'The deadline to submit applications was Aug. 5.' Read in a browser on 2026-10-31."},
+]
+CSD_NOTE = ("Copper State Draw: separate from the annual draws; no bonus points used or earned; apply individually (no groups); "
+            "$13 resident / $15 nonresident application fee per hunt number; a hunting license is needed only if drawn. ")
+CSD_A_NOTE = (CSD_NOTE + "Hunts: any elk Aug. 1 - Oct. 15, 2026 (Units 1-4B; Units 5A-20A), antlered mule deer Aug. 15 - Sep. 25, 2026 "
+              "(Units 3A-4B, 28, 31, 32, 37A, 37B) and Aug. 22 - Oct. 2, 2026 (13A, 13B), antlered white-tailed deer Aug. 15 - Sep. 25, 2026 "
+              "(Units 21-36C), buck pronghorn Aug. 1 - Oct. 15, 2026; six permit-tags in all. AZGFD says drawn applicants are contacted "
+              "'during the week of April 13' and must pay then (within 24 hours of contact per the program page); no exact date is given.")
+CSD_B_NOTE = (CSD_NOTE + "Hunts: mule deer + elk dual tag Dec. 1, 2026 - Jan. 31, 2027 (Units 22, 23); antlered mule deer Dec. 1, 2026 - "
+              "Jan. 31, 2027 (Units 28, 31, 32, 37A, 37B) and Dec. 15, 2026 - Feb. 15, 2027 (Units 10, 17A, 17B, 19A, 19B, 20A); antlered "
+              "white-tailed deer Jan. 1 - Feb. 28, 2027 (three unit groups); any elk Dec. 15, 2026 - Feb. 15, 2027 (Units 1, 27; Units 9, 10); "
+              "Gould's turkey Apr. 1 - May 31, 2027. AZGFD says drawn applicants are contacted 'during the week of August 10' and must "
+              "pay then (within 24 hours of contact per the program page); no exact date is given. AZGFD's Aug. 11, 2026 release gives "
+              "the deadline as Aug. 5; its July 24, July 29 and Aug. 3 releases say 5 p.m. Tuesday, Aug. 4. No later Copper State Draw "
+              "announced as of 2026-10-31.")
+
+
+def csd_window(start, end, cycle, sid, label, note):
+    return {"label": label, "kind": "application", "start": start, "end": end, "cycle": cycle, "status": "confirmed",
+            "sourceId": sid, "note": note}
+
+
+CSD_A_DATES = [csd_window("2026-04-01", "2026-04-07", 2026, CSD_A,
+                          "Copper State Draw application period, Aug. - Oct. 2026 hunts (8 a.m. Apr. 1 - 5 p.m. Apr. 7, Arizona time)", CSD_A_NOTE)]
+CSD_B_DATES = [csd_window("2026-07-29", "2026-08-04", 2026, CSD_B,
+                          "Copper State Draw application period, Dec. 2026 - Feb. 2027 hunts (8 a.m. July 29 - 5 p.m. Aug. 4, Arizona time)", CSD_B_NOTE)]
+CSD_B_TURKEY = [csd_window("2026-07-29", "2026-08-04", 2027, CSD_B,
+                           "Copper State Draw application period, Gould's turkey Apr. 1 - May 31, 2027 hunt (8 a.m. July 29 - 5 p.m. Aug. 4, 2026, Arizona time)",
+                           CSD_B_NOTE)]
+CSD_SUMMARY = (" AZGFD also offers a few extra permit-tags in its separate Copper State Draw, a random draw held outside the annual "
+               "draws in which bonus points are neither used nor earned.")
+
 NOT_2027 = "2027 dates not yet published by AZGFD as of 2026-10-31"
 
 BONUS_SUMMARY = (
@@ -127,36 +178,36 @@ ARCHERY_DEER_SALE = [
 SPECIES = [
     {
         "species": "elk", "displayName": "Elk", "drawSystem": "bonus", "pointsMatter": True, "pointName": "bonus point",
-        "drawSystemSummary": "Elk permits are drawn in the Pronghorn & Elk (Midwinter) draw. " + BONUS_SUMMARY,
+        "drawSystemSummary": "Elk permits are drawn in the Pronghorn & Elk (Midwinter) draw. " + BONUS_SUMMARY + CSD_SUMMARY,
         "residentNote": "A bonus point is earned for an unsuccessful application or by applying with the elk bonus-point-only hunt number (3000); accumulated points are expended when an elk permit-tag is issued in a computer draw.",
         "nonresidentNote": NR_10,
         "otcSummary": "Elk nonpermit-tags (resident $135, nonresident $650) are sold over the counter only for the General or Archery-Only Nonpermit-Tag seasons listed in the elk Commission Order; all other elk hunts require a draw permit.",
-        "keyDates": MIDWINTER_DATES, "sourceIds": [PE, HR, HR25, BPP],
+        "keyDates": MIDWINTER_DATES + CSD_A_DATES + CSD_B_DATES, "sourceIds": [PE, HR, HR25, BPP, CSD, CSD_A, CSD_B],
     },
     {
         "species": "pronghorn", "displayName": "Pronghorn", "drawSystem": "bonus", "pointsMatter": True, "pointName": "bonus point",
-        "drawSystemSummary": "Pronghorn permits are drawn in the Pronghorn & Elk (Midwinter) draw. " + BONUS_SUMMARY,
+        "drawSystemSummary": "Pronghorn permits are drawn in the Pronghorn & Elk (Midwinter) draw. " + BONUS_SUMMARY + CSD_SUMMARY,
         "residentNote": "Bonus-point-only hunt number for pronghorn is 2000; accumulated points are expended when a pronghorn permit-tag is issued in a computer draw.",
         "nonresidentNote": NR_10,
         "otcSummary": "None: every pronghorn season requires a draw hunt permit-tag.",
-        "keyDates": MIDWINTER_DATES, "sourceIds": [PE, HR, HR25, BPP],
+        "keyDates": MIDWINTER_DATES + CSD_A_DATES, "sourceIds": [PE, HR, HR25, BPP, CSD, CSD_A],
     },
     {
         "species": "mule-deer", "displayName": "Mule deer", "drawSystem": "bonus", "pointsMatter": True, "pointName": "bonus point",
-        "drawSystemSummary": "Deer permits are drawn in the Fall draw (one deer genus for mule deer and white-tailed deer). " + BONUS_SUMMARY,
+        "drawSystemSummary": "Deer permits are drawn in the Fall draw (one deer genus for mule deer and white-tailed deer). " + BONUS_SUMMARY + CSD_SUMMARY,
         "residentNote": "Many Arizona deer hunts are 'Any antlered deer' (either species); this file holds those plus mule-deer-only hunts. Bonus-point-only hunt number for deer is 1000.",
         "nonresidentNote": NR_10,
         "otcSummary": "Archery-only deer nonpermit-tags (resident $45, nonresident $300) are sold over the counter for unit-specific archery seasons with harvest limits; nonresident tags are capped and sold online only.",
-        "keyDates": FALL_DATES + ARCHERY_DEER_SALE,
-        "sourceIds": [HR, HR25, BPP],
+        "keyDates": FALL_DATES + ARCHERY_DEER_SALE + CSD_A_DATES + CSD_B_DATES,
+        "sourceIds": [HR, HR25, BPP, CSD, CSD_A, CSD_B],
     },
     {
         "species": "whitetail", "displayName": "White-tailed deer (Coues)", "drawSystem": "bonus", "pointsMatter": True, "pointName": "bonus point",
-        "drawSystemSummary": "White-tailed deer permits are drawn in the Fall draw under the same deer genus as mule deer. " + BONUS_SUMMARY,
+        "drawSystemSummary": "White-tailed deer permits are drawn in the Fall draw under the same deer genus as mule deer. " + BONUS_SUMMARY + CSD_SUMMARY,
         "residentNote": "This file holds hunts whose legal wildlife is white-tailed deer only; 'Any antlered deer' hunts (either species) are filed under mule deer.",
         "nonresidentNote": NR_10,
         "otcSummary": "Archery-only deer nonpermit-tags (resident $45, nonresident $300) are sold over the counter for unit-specific archery seasons with harvest limits.",
-        "keyDates": FALL_DATES + ARCHERY_DEER_SALE, "sourceIds": [HR, HR25, BPP],
+        "keyDates": FALL_DATES + ARCHERY_DEER_SALE + CSD_A_DATES + CSD_B_DATES, "sourceIds": [HR, HR25, BPP, CSD, CSD_A, CSD_B],
     },
     {
         "species": "sheep", "displayName": "Bighorn sheep (desert & Rocky Mountain)", "drawSystem": "bonus", "pointsMatter": True, "pointName": "bonus point",
@@ -168,11 +219,11 @@ SPECIES = [
     },
     {
         "species": "turkey", "displayName": "Wild turkey (Merriam's & Gould's)", "drawSystem": "bonus", "pointsMatter": True, "pointName": "bonus point",
-        "drawSystemSummary": "Spring turkey permits are drawn in the Spring draw (applications in October of the prior year) and fall turkey permits in the Fall draw. " + BONUS_SUMMARY,
+        "drawSystemSummary": "Spring turkey permits are drawn in the Spring draw (applications in October of the prior year) and fall turkey permits in the Fall draw. " + BONUS_SUMMARY + CSD_SUMMARY,
         "residentNote": "Bag limit is one turkey per calendar year.",
         "nonresidentNote": NR_10,
         "otcSummary": "Archery turkey nonpermit-tags (resident $25, nonresident $90) and youth-only turkey nonpermit-tags ($10) are sold over the counter for the archery-only nonpermit-tag seasons.",
-        "keyDates": SPRING_DATES + FALL_DATES, "sourceIds": [SP, SP27, NEWS27S, LO27S, HR, HR25, BPP],
+        "keyDates": SPRING_DATES + FALL_DATES + CSD_B_TURKEY, "sourceIds": [SP, SP27, NEWS27S, LO27S, HR, HR25, BPP, CSD, CSD_B],
     },
     {
         "species": "bear", "displayName": "Black bear", "drawSystem": "otc", "pointsMatter": False,
@@ -206,6 +257,7 @@ FEE_ROWS = [
     ("bear", "Bear Nonpermit-tag", 25, 150, "Over the counter"),
     ("lion", "Mountain Lion Nonpermit-tag", 15, 75, "Over the counter"),
     ("lion", "Mountain Lion Pursuit-only Permit", 20, 100, None),
+    (None, "Copper State Draw application fee (per Copper State Draw hunt number)", 13, 15, "CSD"),
     ("elk", "Elk Nonpermit-tag", 135, 650, "Over the counter, nonpermit-tag seasons only"),
     ("mule-deer", "Archery Deer Nonpermit-tag", 45, 300, "Over the counter; nonresident tag not available at license dealers"),
     ("whitetail", "Archery Deer Nonpermit-tag", 45, 300, "Over the counter; nonresident tag not available at license dealers"),
@@ -219,7 +271,12 @@ def fees():
             if amt is None:
                 continue
             f = {"species": sp, "item": item, "residency": res, "amountUsd": amt, "licenseYear": 2026, "sourceId": HR}
-            f["note"] = ("Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4)" + (f"; {note}" if note else ""))
+            if note == "CSD":
+                f["sourceId"] = CSD
+                f["note"] = ("Copper State Draw program page; separate application fee for each hunt number applied for. Permit-tag "
+                             "fees (Arizona Hunting Regulations) are paid when a tag is awarded. Same amounts in AZGFD's 2026 releases.")
+            else:
+                f["note"] = ("Fee table 'valid for 2026 hunts' (2026-2027 Arizona Hunting Regulations, p. 4)" + (f"; {note}" if note else ""))
             out.append(f)
     return out
 
@@ -236,6 +293,7 @@ def main():
     sources.append(SP27_SOURCE)
     sources.append(NEWS27S_SOURCE)
     sources.append(LO27S_SOURCE)
+    sources.extend(CSD_SOURCES)
     sources.append({
         "id": BPP, "title": "How Arizona Bonus Points Work for the Hunt Draw Process (Bonus Point and Draw Reports page)",
         "publisher": PUB, "url": BP_PAGE, "retrieved": RETRIEVED,
