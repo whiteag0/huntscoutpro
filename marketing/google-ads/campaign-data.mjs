@@ -61,7 +61,7 @@ function stateGroup({ name, slug, pin, headlines, d1, d2, keywords }) {
     headlines: [
       ...pin.map((text) => ({ text, pin: 1 })),
       ...headlines.map((text) => ({ text })),
-      { text: "One Price Covers All 12 States" },
+      { text: "One Price Covers All 14 States" },
       ...SHARED.map((text) => ({ text })),
     ],
     descriptions: [d1, d2, PRICE_DESC, PAST_DESC].map((text) => ({ text })),
@@ -403,7 +403,7 @@ export const OTHER_GROUPS = [
       "Hunts That Drew at Your Points",
       "Western Draw Results",
       "Draw Odds From Agency Data",
-      "12 Western States, One Site",
+      "14 Western States, One Site",
       "Preference & Bonus Points",
       "Elk, Deer, Antelope & More",
       "Minimum Points Drawn by Year",
@@ -411,7 +411,7 @@ export const OTHER_GROUPS = [
     ].map((text) => ({ text })),
     descriptions: [
       "Pick species, home state and points. See which hunts drew at that level last year.",
-      "Draw results and harvest from 12 western state agencies, each table cited to its source.",
+      "Draw results and harvest from 14 western state agencies, each table cited to its source.",
       PRICE_DESC,
       PAST_DESC,
     ].map((text) => ({ text })),
@@ -453,11 +453,11 @@ export const OTHER_GROUPS = [
       "Dates Added as States Publish",
       "Free Application Calendar",
       "Elk, Deer & Antelope Dates",
-      "12 Western States, One Site",
+      "14 Western States, One Site",
       ...SHARED,
     ].map((text) => ({ text })),
     descriptions: [
-      "Application windows, draw results dates and seasons for 12 western states in one place.",
+      "Application windows, draw results dates and seasons for 14 western states in one place.",
       "2027 dates appear as each agency publishes them. Free to view, linked to each source.",
       PRICE_DESC,
       PAST_DESC,
@@ -514,7 +514,7 @@ export const SITELINKS = [
   { text: "Where Can I Draw?", d1: "Hunts that drew at your points", d2: "From last year's agency results", url: `${SITE}/shortlist` },
   { text: "Application Calendar", d1: "Agency application & draw dates", d2: "Free to view, sources linked", url: `${SITE}/calendar` },
   { text: "Pricing", d1: "$14.99 one-time for 2 years", d2: "No auto-renew. 30-day refund.", url: `${SITE}/pricing` },
-  { text: "All 12 States", d1: "CO, WY, MT, ID, UT, AZ, NV, NM", d2: "Plus OR, WA, KS and SD", url: `${SITE}/states` },
+  { text: "All 14 States", d1: "CO, WY, MT, ID, UT, AZ, NV, NM", d2: "Plus OR, WA, CA, AK, KS and SD", url: `${SITE}/states` },
   { text: "Point Creep Trends", d1: "Minimum points drawn over time", d2: "From each state's draw results", url: `${SITE}/trends` },
   { text: "Compare Hunts", d1: "Up to four hunts side by side", d2: "Draw results and harvest together", url: `${SITE}/compare` },
 ];
@@ -526,7 +526,7 @@ export const CALLOUTS = [
   "2 Years of Pro Access",
   "No Auto-Renewal",
   "30-Day Money-Back",
-  "12 Western States",
+  "14 Western States",
   "Free Application Calendar",
 ];
 
@@ -535,7 +535,7 @@ export const CALLOUTS = [
 export const SNIPPETS = [
   {
     header: "Destinations",
-    values: ["Colorado", "Wyoming", "Montana", "Idaho", "Utah", "Arizona", "Nevada", "New Mexico", "Oregon & Washington", "Kansas & South Dakota"],
+    values: ["Colorado", "Wyoming", "Montana", "Idaho", "Utah", "Arizona", "Nevada", "New Mexico", "Oregon & Washington", "California & Alaska"],
   },
   {
     header: "Types",

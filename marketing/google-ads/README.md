@@ -94,7 +94,7 @@ There's no CPC data for these exact terms yet. **Keyword Planner** in the new ac
 | Draw odds & points (generic) | `https://www.huntscoutpro.com/shortlist` | 17 |
 | Application deadlines 2027 | `https://www.huntscoutpro.com/calendar` | 18 |
 
-**Why the generic group lands on `/shortlist` and not `/`.** Someone searching "elk draw odds by points" or "where can I draw elk" hasn't picked a state yet. `/shortlist` ("Where can I draw?") answers that question across all 12 states. Logged-out visitors see the explainer, a blurred example of last year's results (elk, applying from Texas, 3 points) and the Pro call to action. The homepage describes the product in general, so it would add a click before the searcher sees anything relevant. The generic group also carries the 12 state names as ad-group negatives. That way "colorado elk draw odds" is always answered by the Colorado ad and the Colorado page.
+**Why the generic group lands on `/shortlist` and not `/`.** Someone searching "elk draw odds by points" or "where can I draw elk" hasn't picked a state yet. `/shortlist` ("Where can I draw?") answers that question across all 14 states. Logged-out visitors see the explainer, a blurred example of last year's results (elk, applying from Texas, 3 points) and the Pro call to action. The homepage describes the product in general, so it would add a click before the searcher sees anything relevant. The generic group also carries the 12 state ad-group names as ad-group negatives. That way "colorado elk draw odds" is always answered by the Colorado ad and the Colorado page.
 
 **Why deadline searches land on `/calendar`.** The calendar is free and links every date to its agency source. Where an agency has published 2027 dates, it shows them; elsewhere it shows the 2026 date and says so. As of 2026-10-31 only Arizona, Idaho, Nevada, Utah and Washington have any 2027 dates, so no headline says "2027 calendar"; the description says "2027 dates appear as each agency publishes them."
 
@@ -155,7 +155,7 @@ Copy is tailored to what each state's data actually has:
   | Where Can I Draw? | `/shortlist` |
   | Application Calendar | `/calendar` |
   | Pricing | `/pricing` |
-  | All 12 States | `/states` |
+  | All 14 States | `/states` |
   | Point Creep Trends | `/trends` |
   | Compare Hunts | `/compare` |
 
@@ -167,10 +167,10 @@ Copy is tailored to what each state's data actually has:
   - 2 Years of Pro Access
   - No Auto-Renewal
   - 30-Day Money-Back
-  - 12 Western States
+  - 14 Western States
   - Free Application Calendar
 - **Structured snippets.** Google only accepts fixed headers, and "States" isn't one of them. Two snippets are used instead:
-  - **Destinations:** the 12 states. Oregon & Washington and Kansas & South Dakota share a value because the limit is 10 values.
+  - **Destinations:** 10 values (the limit): the first eight states, then "Oregon & Washington" and "California & Alaska". Kansas and South Dakota are covered by their own ad groups.
   - **Types:** Elk, Mule Deer, Whitetail, Pronghorn, Moose, Bighorn Sheep, Mountain Goat, Black Bear, Turkey.
 
 ## What `validate.mjs` checks
@@ -200,7 +200,7 @@ Run it with no flags for the full check. Add `--offline` to skip the network, `-
 
 **Honest copy**
 - Banned words: predict, preview, guaranteed, "guarantee" unless it reads "money-back guarantee", best, win, #1, AI/modeled, subscription wording, easiest, urgency/sale wording, and "official" unless followed by "agency".
-- Facts: no state we don't cover, any state count must equal 12, the only price is $14.99, the only access length is 2 years, the only refund window is 30 days.
+- Facts: no state we don't cover, any state count must equal 14, the only price is $14.99, the only access length is 2 years, the only refund window is 30 days.
 - Every ad states the price, the refund and no auto-renewal.
 - No headline, sitelink or callout promises 2027 dates or a 2027 calendar.
 - Idaho and New Mexico never mention points. Washington never claims point-level or nonresident data. Kansas never mentions elk.
@@ -208,7 +208,7 @@ Run it with no flags for the full check. Add `--offline` to skip the network, `-
 **Assets**
 - Sitelinks: text of 25 characters or fewer, descriptions of 35 or fewer, links to `/shortlist`, `/calendar`, `/pricing` and `/states`.
 - Callouts are 25 characters or fewer.
-- Snippet headers are on Google's allowed list, with 3–10 values of 25 characters or fewer, and the Destinations snippet names all 12 states.
+- Snippet headers are on Google's allowed list, with 3–10 values of 25 characters or fewer, and the Destinations snippet names all 14 states.
 
 **Live site (read-only GETs)**
 - Every landing and sitelink URL returns 200 on www.huntscoutpro.com, isn't a "Coming soon" page, and each state page's title is "<State> Draw Results…".
@@ -217,3 +217,8 @@ Run it with no flags for the full check. Add `--offline` to skip the network, `-
 - `/calendar` shows 2027 and `/shortlist` shows its explainer.
 
 Run the validator again before any copy change goes live, and whenever a state is added to the site.
+
+
+## Alaska and California
+
+Alaska and California went live after this campaign was built. The copy counts 14 states and the sitelink lists them, but there are no Alaska or California ad groups yet. Add them (same pattern as the other states) once you want to spend on those searches.

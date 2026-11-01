@@ -603,7 +603,7 @@ export default function PlannerPage() {
                               placeholder="Add notes..."
                             />
                           ) : (
-                            <p className="text-sm text-muted-foreground whitespace-pre-line break-words">{hunt.notes}</p>
+                            <p className="text-sm text-muted-foreground whitespace-pre-line break-words" data-clarity-mask="true">{hunt.notes}</p>
                           )}
                         </div>
                       )}

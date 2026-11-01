@@ -4,6 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { BellRing, CheckCircle2, Loader2 } from "lucide-react";
+import { track } from "@/lib/analytics";
 import { FREE_RESIDENCY_OPTIONS, type FreeReminderStateOption, type FreeResidency, type FreeSignup } from "@/lib/free-reminders-schema";
 
 type Errors = Partial<Record<keyof FreeSignup, string>>;
@@ -103,6 +104,7 @@ export function FreeRemindersSignup({ options: given, lockedState, source, proNo
       }
       setMessage(data.message || `Check ${email} for a link to confirm.`);
       setPhase("sent");
+      track("free_reminders_signup", { state, source, species: species.length });
     } catch {
       setMessage("We couldn't reach the server. Check your connection and try again.");
       setPhase("error");
@@ -151,7 +153,7 @@ export function FreeRemindersSignup({ options: given, lockedState, source, proNo
           <CheckCircle2 className="w-6 h-6 text-gold shrink-0 mt-0.5" aria-hidden />
           <div>
             <p className="font-semibold">Almost done: confirm your email.</p>
-            <p className="text-white/80 text-sm mt-1">{message}</p>
+            <p className="text-white/80 text-sm mt-1" data-clarity-mask="true">{message}</p>
           </div>
         </div>
       ) : (

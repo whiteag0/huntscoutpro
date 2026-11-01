@@ -130,12 +130,19 @@ export function isRealUnit(unit: string): boolean {
  * Comparable unit id: agencies write the same unit differently across reports
  * ("061" vs "61", "Unit 1" vs "01", "Mountain Goat Unit 2-1" vs "2-1").
  */
+/**
+ * Alaska units with no subunits. ADF&G harvest reports write them "08Z" while the draw supplements write "8";
+ * for units that do have subunits (e.g. 13Z) the Z means "subunit not reported", so those stay distinct.
+ */
+const AK_WHOLE_UNITS = new Set(["2", "3", "4", "7", "8", "10", "11", "12", "18", "23"]);
+
 export function canonicalUnit(unit: string): string {
   return unit
     .trim()
     .replace(/^(mountain goat unit|deer management unit|hunt area|hunting district|unit|gmu|hd)\s+/i, "")
     .replace(/^0+(?=\d)/, "")
-    .toUpperCase();
+    .toUpperCase()
+    .replace(/^(\d+)Z$/, (code, n: string) => (AK_WHOLE_UNITS.has(n) ? n : code));
 }
 
 export function sameUnit(a: string, b: string): boolean {

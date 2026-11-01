@@ -9,6 +9,7 @@ import type { DrawRecord, SpeciesInfo } from "@/data/agency/schema";
 import { todayIso } from "@/lib/agency-format";
 import { nextApplicationDeadline } from "@/lib/planner-agency";
 import type { PlannedHunt, PlannerResidency } from "@/lib/planner-schema";
+import { track } from "@/lib/analytics";
 
 interface Entry {
   slug: string;
@@ -149,6 +150,7 @@ export async function addToPlanner(opts: { slug: string; stateName: string; info
     if (body.status === "duplicate") {
       showToast("info", `${row.huntCode} is already in your planner.`, true);
     } else {
+      track("planner_add", { state: slug, species: info.species, deadline: !!d });
       showToast(
         "success",
         `Added ${stateName} ${row.huntCode} to your planner${d ? `, with the ${body.hunt?.agency?.agencyShortName || "agency"} ${d.cycle} application date.` : ". No upcoming agency application date in our data matches it yet."}`,

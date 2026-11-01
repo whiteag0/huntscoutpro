@@ -33,6 +33,8 @@ In Clarity, filter recordings by **Custom events** (event names below) or **Cust
 | `welcome_submit` | Hunting-profile form saved or skipped | `action` (`submit`, `update`, `skip`), `states`, `species_count` |
 | `reminders_toggle` | Deadline reminders switched on/off | `enabled` |
 | `calendar_filter` | Calendar filters changed | `filter`, `value` |
+| `free_reminders_signup` | Free deadline-reminder form accepted (confirmation email sent) | `state`, `source`, `species` (count) |
+| `planner_add` | "Add to my planner" saved a hunt to the account | `state`, `species`, `deadline` (agency date filled in) |
 
 No event carries a name, email, phone number or free text: `sanitizeProps` drops keys like `email`/`name`/`phone`/`notes` and any value containing `@`. Signed-in visitors are linked in Clarity by `clarity('identify', sha256(lowercased email))`, computed in the browser.
 

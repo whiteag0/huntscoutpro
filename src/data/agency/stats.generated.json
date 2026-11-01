@@ -1,55 +1,55 @@
 {
- "states": 12,
+ "states": 14,
  "species": {
-  "elk": {
-   "states": 12,
-   "huntCodes": 3786,
-   "units": 1553
+  "moose": {
+   "states": 8,
+   "huntCodes": 490,
+   "units": 426
   },
-  "pronghorn": {
-   "states": 11,
-   "huntCodes": 1422,
-   "units": 686
+  "sheep": {
+   "states": 13,
+   "huntCodes": 526,
+   "units": 524
+  },
+  "goat": {
+   "states": 9,
+   "huntCodes": 180,
+   "units": 143
+  },
+  "bear": {
+   "states": 12,
+   "huntCodes": 284,
+   "units": 713
+  },
+  "elk": {
+   "states": 14,
+   "huntCodes": 3886,
+   "units": 1617
   },
   "mule-deer": {
+   "states": 14,
+   "huntCodes": 3314,
+   "units": 1727
+  },
+  "pronghorn": {
    "states": 12,
-   "huntCodes": 3232,
-   "units": 1597
+   "huntCodes": 1436,
+   "units": 704
   },
   "whitetail": {
    "states": 10,
    "huntCodes": 762,
    "units": 984
   },
-  "sheep": {
-   "states": 11,
-   "huntCodes": 464,
-   "units": 453
-  },
   "turkey": {
-   "states": 11,
+   "states": 12,
    "huntCodes": 356,
-   "units": 585
-  },
-  "bear": {
-   "states": 10,
-   "huntCodes": 277,
-   "units": 667
+   "units": 639
   },
   "lion": {
    "states": 11,
    "huntCodes": 53,
    "units": 921
-  },
-  "moose": {
-   "states": 7,
-   "huntCodes": 386,
-   "units": 338
-  },
-  "goat": {
-   "states": 8,
-   "huntCodes": 140,
-   "units": 125
   }
  },
  "drawYears": [
@@ -65,6 +65,77 @@
    "rows": [],
    "units": 67,
    "drawHunts": 92
+  },
+  "california": {
+   "rows": [
+    {
+     "species": "turkey",
+     "year": 2024,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Spring season",
+     "hunters": 26010,
+     "harvest": 19965,
+     "successPct": null,
+     "daysHunted": 109351,
+     "note": "CDFW survey estimate (not a count) for the Spring 2024 season, statewide; harvest may exceed hunters (multi-bird bag); 95% CI harvest 14,782 – 25,148, hunters 22,162 – 29,858, days 87,115 – 131,587",
+     "sourceId": "h-cdfw-upland-2023"
+    },
+    {
+     "species": "turkey",
+     "year": 2023,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season",
+     "hunters": 9708,
+     "harvest": 6594,
+     "successPct": null,
+     "daysHunted": 31322,
+     "note": "CDFW survey estimate (not a count) for the Fall 2023 season, statewide; harvest may exceed hunters (multi-bird bag); 95% CI harvest 4,053 – 9,135, hunters 7,193 – 12,223, days 17,867 – 44,776",
+     "sourceId": "h-cdfw-upland-2023"
+    },
+    {
+     "species": "turkey",
+     "year": 2022,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season",
+     "hunters": 11719,
+     "harvest": 5492,
+     "successPct": null,
+     "daysHunted": 38172,
+     "note": "CDFW survey estimate (not a count) for the Fall 2022 season, statewide; harvest may exceed hunters (multi-bird bag); average bag per hunter 0.47",
+     "sourceId": "h-cdfw-upland-2022"
+    },
+    {
+     "species": "turkey",
+     "year": 2021,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Spring season",
+     "hunters": 26751,
+     "harvest": 20795,
+     "successPct": null,
+     "daysHunted": 105647,
+     "note": "CDFW survey estimate (not a count) for the Spring 2021 season, statewide; harvest may exceed hunters (multi-bird bag); average bag per hunter 0.78",
+     "sourceId": "h-cdfw-upland-2020"
+    },
+    {
+     "species": "turkey",
+     "year": 2020,
+     "unit": "Statewide",
+     "method": "all",
+     "methodLabel": "Fall season",
+     "hunters": 12122,
+     "harvest": 6165,
+     "successPct": null,
+     "daysHunted": 42635,
+     "note": "CDFW survey estimate (not a count) for the Fall 2020 season, statewide; harvest may exceed hunters (multi-bird bag); average bag per hunter 0.51",
+     "sourceId": "h-cdfw-upland-2020"
+    }
+   ],
+   "units": 54,
+   "drawHunts": 0
   },
   "colorado": {
    "rows": [

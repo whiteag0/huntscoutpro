@@ -124,11 +124,11 @@ const locs = by.location || [];
 if (locs.length !== 1 || locs[0].Location !== "United States" || locs[0]["Location ID"] !== "2840") err("location targeting must be exactly United States (2840)");
 
 // ---------- Text rules ----------
-const LIVE = ["Colorado", "Wyoming", "Montana", "Idaho", "Utah", "Arizona", "Nevada", "New Mexico", "Oregon", "Washington", "Kansas", "South Dakota"];
+const LIVE = ["Colorado", "Wyoming", "Montana", "Idaho", "Utah", "Arizona", "Nevada", "New Mexico", "Oregon", "Washington", "Kansas", "South Dakota", "Alaska", "California"];
 const ALL_STATES = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
 const NOT_COVERED = ALL_STATES.filter((s) => !LIVE.includes(s));
 // Acronyms allowed in caps: agencies, state abbreviations, GMU/WMU.
-const CAPS_OK = new Set(["CPW", "WGFD", "FWP", "IDFG", "DWR", "AZGFD", "NDOW", "ODFW", "WDFW", "KDWP", "GFP", "GMU", "WMU", "CO", "WY", "MT", "ID", "UT", "AZ", "NV", "NM", "OR", "WA", "KS", "SD", "US", "OTC"]);
+const CAPS_OK = new Set(["CPW", "WGFD", "FWP", "IDFG", "DWR", "AZGFD", "NDOW", "ODFW", "WDFW", "KDWP", "GFP", "GMU", "WMU", "CO", "WY", "MT", "ID", "UT", "AZ", "NV", "NM", "OR", "WA", "KS", "SD", "AK", "CA", "ADFG", "CDFW", "US", "OTC"]);
 
 const BANNED = [
   [/\bpredict\w*/i, "predict/prediction"],
@@ -349,7 +349,7 @@ if (!OFFLINE) {
     const ours = new Set(LIVE.map((s) => s.toLowerCase().replace(/ /g, "-")));
     for (const s of ours) if (!liveSlugs.has(s)) err(`/states doesn't link ${s}`);
     const extra = [...liveSlugs].filter((s) => !ours.has(s));
-    if (extra.length) warn(`/states also links ${extra.join(", ")}: if those are live, add ad groups and update "12 states" copy`);
+    if (extra.length) warn(`/states also links ${extra.join(", ")}: if those are live, add ad groups and update "14 states" copy`);
   }
   // Price and terms claims in the ads must match the live pricing page.
   const pr = page[SITE + "/pricing"];
@@ -359,7 +359,7 @@ if (!OFFLINE) {
     if (!/2 years/i.test(t)) err("/pricing doesn't say 2 years");
     if (!/no auto-renew/i.test(t)) err("/pricing doesn't say no auto-renewal");
     if (!/30-day money-back guarantee/i.test(t)) err("/pricing doesn't offer the 30-day money-back guarantee");
-    if (!/12 western draw states/i.test(t)) err('/pricing doesn\'t say "12 western draw states"');
+    if (!/14 western draw states/i.test(t)) err('/pricing doesn\'t say "14 western draw states"');
   }
   const cal = page[SITE + "/calendar"];
   if (cal?.status === 200 && !/2027/.test(text(cal.html))) err("/calendar shows no 2027 dates");

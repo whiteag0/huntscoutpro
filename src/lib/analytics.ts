@@ -24,7 +24,9 @@ export type AnalyticsEvent =
   | "request_state_submit"
   | "welcome_submit"
   | "reminders_toggle"
-  | "calendar_filter";
+  | "calendar_filter"
+  | "free_reminders_signup"
+  | "planner_add";
 
 export type EventProps = Record<string, string | number | boolean | null | undefined>;
 
