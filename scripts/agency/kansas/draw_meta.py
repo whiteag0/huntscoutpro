@@ -4,6 +4,9 @@
 Usage:
   python -I scripts/agency/kansas/draw_meta.py <repo_root>
 
+After this script, re-run seasons_parse.py: it adds season dates (draw rows) and key-date
+tags/seasons (draw-meta) to the files written here.
+
 All facts below were read from the KDWP pages/PDFs listed in SOURCES (captured 2026-10-31; see
 draw_download.py). Fees are KDWP's base prices; KDWP adds a $1.00 agent fee and a $1.50 transaction
 fee to every item (plus 2.95% card fee online).
