@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { ArrowRight, Check, LogOut, Mail, Pencil, RefreshCw, User } from "lucide-react";
+import { ArrowRight, Bell, Check, LogOut, Mail, Pencil, RefreshCw, User } from "lucide-react";
 import { SPECIES_LABELS, type Species } from "@/data/types";
 import {
   GOAL_OPTIONS,
@@ -12,7 +12,7 @@ import {
   type HuntingPreferences,
 } from "@/lib/preferences-schema";
 import { stateByAbbrev, stateBySlug } from "@/data/state-list";
-import { isLiveState } from "@/lib/agency-format";
+import { formatDate as formatIsoDay, isLiveState } from "@/lib/agency-format";
 
 function formatDate(iso: string | null | undefined) {
   if (!iso) return null;
@@ -23,6 +23,22 @@ type PrefsLoad =
   | { state: "loading" }
   | { state: "ready"; preferences: HuntingPreferences | null }
   | { state: "error" };
+
+interface UpcomingDate {
+  state: string;
+  stateName: string;
+  next: { label: string; end: string; daysLeft: number } | null;
+}
+
+interface ReminderSettings {
+  available: boolean;
+  enabled: boolean;
+  states: string[];
+  species: string[];
+  upcoming: UpcomingDate[];
+}
+
+type RemindersLoad = { state: "loading" } | { state: "ready"; settings: ReminderSettings } | { state: "error" };
 
 const RESIDENCY_LABELS: Record<string, string> = {
   resident: "Resident",
@@ -66,6 +82,9 @@ export default function AccountPage() {
   const rechecked = useRef(false);
   const [prefs, setPrefs] = useState<PrefsLoad>({ state: "loading" });
   const isProMember = Boolean(session?.user?.isPro);
+  const [reminders, setReminders] = useState<RemindersLoad>({ state: "loading" });
+  const [reminderSaving, setReminderSaving] = useState(false);
+  const [reminderMsg, setReminderMsg] = useState<{ text: string; error: boolean }>({ text: "", error: false });
 
   // Load the member's saved hunting preferences (Pro only; the API 403s otherwise).
   useEffect(() => {
@@ -79,6 +98,34 @@ export default function AccountPage() {
       })
       .catch(() => {
         if (!cancelled) setPrefs({ state: "error" });
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [isProMember]);
+
+  // Deadline reminder setting (stored on the purchase in Stripe).
+  useEffect(() => {
+    if (!isProMember) return;
+    let cancelled = false;
+    fetch("/api/reminders", { cache: "no-store" })
+      .then(async (res) => {
+        if (!res.ok) throw new Error(String(res.status));
+        const data = await res.json();
+        if (!cancelled)
+          setReminders({
+            state: "ready",
+            settings: {
+              available: data?.available === true,
+              enabled: data?.enabled === true,
+              states: Array.isArray(data?.states) ? data.states : [],
+              species: Array.isArray(data?.species) ? data.species : [],
+              upcoming: Array.isArray(data?.upcoming) ? data.upcoming : [],
+            },
+          });
+      })
+      .catch(() => {
+        if (!cancelled) setReminders({ state: "error" });
       });
     return () => {
       cancelled = true;
@@ -128,6 +175,28 @@ export default function AccountPage() {
       await update({ refresh: "entitlement" });
     } finally {
       setRefreshing(false);
+    }
+  }
+
+  async function toggleReminders() {
+    if (reminders.state !== "ready" || reminderSaving) return;
+    const next = !reminders.settings.enabled;
+    setReminderSaving(true);
+    setReminderMsg({ text: "", error: false });
+    try {
+      const res = await fetch("/api/reminders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ enabled: next }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data?.error || "Couldn't save right now. Please try again.");
+      setReminders({ state: "ready", settings: { ...reminders.settings, enabled: next } });
+      setReminderMsg({ text: next ? "Deadline reminders are on." : "Deadline reminders are off.", error: false });
+    } catch (err) {
+      setReminderMsg({ text: err instanceof Error ? err.message : "Couldn't save right now. Please try again.", error: true });
+    } finally {
+      setReminderSaving(false);
     }
   }
 
@@ -263,6 +332,79 @@ export default function AccountPage() {
           </section>
         )}
 
+        {isPro && (
+          <section aria-labelledby="reminders-heading" className="bg-card border border-border rounded-2xl p-6">
+            <div className="flex items-center justify-between gap-4">
+              <h2 id="reminders-heading" className="text-lg font-bold flex items-center gap-2 min-w-0">
+                <Bell className="w-5 h-5 text-gold shrink-0" aria-hidden="true" />
+                Deadline reminders
+              </h2>
+              {reminders.state === "ready" && reminders.settings.available && (
+                <button
+                  type="button"
+                  role="switch"
+                  aria-checked={reminders.settings.enabled}
+                  aria-labelledby="reminders-heading"
+                  aria-describedby="reminders-desc"
+                  onClick={toggleReminders}
+                  disabled={reminderSaving}
+                  className={`relative inline-flex h-7 w-12 shrink-0 items-center rounded-full border transition-colors cursor-pointer disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
+                    reminders.settings.enabled ? "bg-primary border-primary" : "bg-muted border-border"
+                  }`}
+                >
+                  <span className="sr-only">{reminders.settings.enabled ? "On" : "Off"}</span>
+                  <span
+                    aria-hidden="true"
+                    className={`inline-block h-5 w-5 rounded-full bg-white shadow transition-transform ${
+                      reminders.settings.enabled ? "translate-x-6" : "translate-x-1"
+                    }`}
+                  />
+                </button>
+              )}
+            </div>
+            <p id="reminders-desc" className="text-sm text-muted-foreground mt-2">
+              One email 14 days and 3 days before an application or point deadline, and on the day an
+              application window opens, for the states and species in your preferences. Dates come from
+              each agency&apos;s published schedule.
+            </p>
+
+            {reminders.state === "loading" ? (
+              <div className="space-y-2.5 mt-4" aria-busy="true" aria-label="Loading your reminder settings">
+                <div className="h-4 w-1/2 rounded bg-muted animate-pulse" />
+                <div className="h-4 w-1/3 rounded bg-muted animate-pulse" />
+              </div>
+            ) : reminders.state === "error" ? (
+              <p className="text-sm text-muted-foreground mt-4">
+                We couldn&apos;t load your reminder settings right now. Try again in a moment.
+              </p>
+            ) : !reminders.settings.available ? (
+              <p className="text-sm text-muted-foreground mt-4">
+                Reminders are tied to a HuntScout Pro purchase, and there isn&apos;t one on file for this
+                account. Email{" "}
+                <a href="mailto:support@huntscoutpro.com" className="text-gold hover:underline">
+                  support@huntscoutpro.com
+                </a>{" "}
+                if you&apos;d like them.
+              </p>
+            ) : (
+              <ReminderCoverage settings={reminders.settings} email={email ?? ""} />
+            )}
+
+            {/* The switch and the line above already show success; only errors need to be seen. */}
+            <p role="status" aria-live="polite" className={reminderMsg.error ? "text-sm text-red-600 mt-3" : "sr-only"}>
+              {reminderMsg.text}
+            </p>
+
+            <Link
+              href="/welcome"
+              className="inline-flex items-center justify-center gap-2 mt-4 px-5 py-2.5 rounded-xl text-sm font-semibold border border-border hover:bg-muted transition-all"
+            >
+              <Pencil className="w-4 h-4" aria-hidden="true" />
+              Update states and species
+            </Link>
+          </section>
+        )}
+
         <section className="bg-card border border-border rounded-2xl p-6">
           <h2 className="text-lg font-bold mb-3">Help, receipts &amp; refunds</h2>
           <p className="text-sm text-muted-foreground">
@@ -305,6 +447,72 @@ export default function AccountPage() {
           Sign out
         </button>
       </div>
+    </div>
+  );
+}
+
+/** Which of the member's states and species reminders cover. */
+function ReminderCoverage({ settings, email }: { settings: ReminderSettings; email: string }) {
+  const live = settings.states.filter(isLiveState);
+  const notYet = settings.states.filter((s) => !isLiveState(s));
+  const name = (slug: string) => stateBySlug(slug)?.name ?? slug;
+  const species = settings.species.length
+    ? settings.species.map((id) => SPECIES_LABELS[id as Species] ?? id).join(", ")
+    : "All species";
+
+  return (
+    <div className="mt-4 text-sm">
+      <p className="font-medium text-foreground">
+        {settings.enabled ? (
+          live.length > 0 ? (
+            <>
+              On. Emails go to <span className="break-words">{email}</span>.
+            </>
+          ) : (
+            "On, but there's nothing to remind you about yet."
+          )
+        ) : (
+          "Off. We won't email you about deadlines."
+        )}
+      </p>
+      <dl className="mt-3">
+        <div className="grid grid-cols-1 sm:grid-cols-[7.5rem_1fr] gap-0.5 sm:gap-3 py-2 border-t border-border">
+          <dt className="text-muted-foreground">States</dt>
+          <dd className="text-foreground break-words min-w-0">
+            {live.length ? (
+              <ul className="space-y-1">
+                {live.map((slug) => {
+                  const up = settings.upcoming.find((u) => u.state === slug);
+                  return (
+                    <li key={slug}>
+                      <span className="font-medium">{name(slug)}</span>
+                      <span className="text-muted-foreground">
+                        {up?.next
+                          ? ` · next: ${up.next.label}, ${formatIsoDay(up.next.end)}`
+                          : " · no upcoming application dates published by the agency yet"}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              "None yet. Add a state to your preferences."
+            )}
+          </dd>
+        </div>
+        {notYet.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-[7.5rem_1fr] gap-0.5 sm:gap-3 py-2 border-t border-border">
+            <dt className="text-muted-foreground">Not covered yet</dt>
+            <dd className="text-foreground break-words min-w-0">
+              {notYet.map(name).join(", ")} (no agency dates published on HuntScout yet)
+            </dd>
+          </div>
+        )}
+        <div className="grid grid-cols-1 sm:grid-cols-[7.5rem_1fr] gap-0.5 sm:gap-3 py-2 border-t border-border">
+          <dt className="text-muted-foreground">Species</dt>
+          <dd className="text-foreground break-words min-w-0">{species}</dd>
+        </div>
+      </dl>
     </div>
   );
 }
