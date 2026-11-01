@@ -130,7 +130,8 @@ export function Header() {
                 className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-muted transition-colors"
               >
                 <User className="h-4 w-4" />
-                {session.user?.name?.split(" ")[0] || "Account"}
+                {/* Name hidden visually below xl so the 7-link nav fits at 1024px; still read by screen readers. */}
+                <span className="sr-only xl:not-sr-only">{session.user?.name?.split(" ")[0] || "Account"}</span>
                 {isPro && (
                   <span
                     className="text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-700 leading-none"
@@ -150,7 +151,7 @@ export function Header() {
               )}
               <button
                 onClick={() => signOut()}
-                className="flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-lg border border-border hover:bg-muted transition-colors cursor-pointer"
+                className="flex items-center gap-1.5 whitespace-nowrap px-3 py-1.5 text-sm rounded-lg border border-border hover:bg-muted transition-colors cursor-pointer"
               >
                 <LogOut className="h-3.5 w-3.5" />
                 Sign Out
