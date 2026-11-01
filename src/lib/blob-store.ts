@@ -159,8 +159,13 @@ async function blobPut(pathname: string, body: string, opts: PutOptions): Promis
     return res.etag;
   } catch (err) {
     if (err instanceof BlobPreconditionFailedError) throw new StoreConflictError(pathname);
-    // put() without allowOverwrite fails with "already exists" when another request created it first.
-    if (opts.ifNew && err instanceof BlobError && /already exists/i.test(err.message)) throw new StoreConflictError(pathname);
+    // put() without allowOverwrite fails when another request created the object first. The SDK
+    // doesn't give that failure its own error class, so check whether the object now exists.
+    if (opts.ifNew && err instanceof BlobError) {
+      if (/already exists/i.test(err.message)) throw new StoreConflictError(pathname);
+      const exists = await blobGet(pathname).then((r) => !!r, () => false);
+      if (exists) throw new StoreConflictError(pathname);
+    }
     throw err;
   }
 }

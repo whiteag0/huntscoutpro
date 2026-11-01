@@ -23,6 +23,13 @@ function StatewideLine({ s }: { s: NonNullable<GlanceSpecies["statewide"]> }) {
               {r.successComputed && <span className="text-muted-foreground"> (harvest ÷ hunters)</span>}
             </>
           )}
+          {/* Same caveats the harvest table shows (e.g. hunters counted for all deer species combined). */}
+          {r.note && (
+            <details className="text-xs text-muted-foreground mt-0.5">
+              <summary className="cursor-pointer select-none py-1.5 -my-1.5 sm:py-0 sm:my-0">Agency notes</summary>
+              <p className="break-words font-sans">{r.note}</p>
+            </details>
+          )}
         </li>
       ))}
       {s.more > 0 && (

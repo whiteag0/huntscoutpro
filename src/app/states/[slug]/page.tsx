@@ -39,11 +39,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const today = todayIso();
   const upcoming = species.flatMap((s) => s.keyDates).filter((k) => keyDateEnd(k) >= today);
   const cycle = upcoming.length ? Math.max(...upcoming.map((k) => k.cycle)) : 0;
+  // The free reminder signup only shows when the state has agency key dates to remind about.
+  const remind = !!stateOption(data);
   const title = `${data.name} Draw Results & Harvest Data${all ? ` ${spanLabel(all)}` : ""} | HuntScout Pro`;
   const description =
     `Official ${data.agency.shortName} draw results${draw ? ` (${spanLabel(draw)})` : ""} and harvest by ${data.unitTerm}` +
     `${harvest ? ` (${spanLabel(harvest)})` : ""} for ${species.length} species: ${speciesPhrase(species)}.` +
-    `${cycle ? ` ${cycle} application dates and free deadline reminders.` : " Free deadline reminders."} Every number cited to the agency report.`;
+    `${cycle ? ` ${cycle} application dates${remind ? " and free deadline reminders" : ""}.` : remind ? " Free deadline reminders." : ""}` +
+    " Every number cited to the agency report.";
   return {
     title,
     description,

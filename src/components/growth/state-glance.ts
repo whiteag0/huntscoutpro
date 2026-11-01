@@ -27,6 +27,8 @@ export interface GlanceStatewideRow {
   harvest: number | null;
   successPct: number | null;
   successComputed: boolean;
+  /** The agency's caveat for this row (e.g. hunters are all deer species combined). */
+  note: string | null;
   sourceId: string;
 }
 
@@ -101,6 +103,7 @@ export function statewideSummary(rows: readonly HarvestRecord[], max = 3): Glanc
       harvest: r.harvest,
       successPct: r.successPct ?? (r.hunters && r.harvest != null ? (100 * r.harvest) / r.hunters : null),
       successComputed: r.successPct == null || !!r.successComputed,
+      note: r.note?.trim() || null,
       sourceId: r.sourceId,
     })),
     more: Math.max(0, pool.length - max),
