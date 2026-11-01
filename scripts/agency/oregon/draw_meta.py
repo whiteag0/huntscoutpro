@@ -77,6 +77,10 @@ sources += [
      "notes": ("ODFW news release dated Sept. 18, 2026: 2027 Big Game Regulations adopted; printed regulations available in late "
                "November; 2027 western Oregon elk changes (any-legal-weapon coast elk spike-only bag limit moves from the second "
                "to the first period; antlerless elk removed from the General Archery Season Tag bag limit in the West Cascades hunt).")},
+    {"id": "d-or-bg-seasons", "title": "2026 big game seasons", "publisher": ODFW,
+     "url": "https://myodfw.com/big-game-hunting/seasons", "dataYear": 2026, "retrieved": RET,
+     "notes": "General season dates and tag sale deadlines for 2026; used to cross-check the general seasons taken from the 2026 regulations. "
+              "States 'apply by February 10 for spring bear, and May 15 for all other big game species' without naming a year."},
     {"id": "d-or-draft-2026-goat", "title": "Proposed 2026 900 Series Rocky Mountain Goat Controlled Tags (DRAFT)", "publisher": ODFW,
      "url": "https://dfw.state.or.us/news/docs/2025/2026%20Rocky%20Mtn%20Goat%20DRAFT.pdf", "dataYear": 2026, "retrieved": RET,
      "notes": "Draft proposal; used only for the name of 2025 hunt 916A (Central Cascades)."},
@@ -85,8 +89,12 @@ sources += [
 R26 = "d-or-regs-2026"
 
 
-def kd(label, cycle, src, date=None, start=None, end=None, note=NOTE27):
-    d = {"label": label, "cycle": cycle, "status": "confirmed", "sourceId": src}
+def kd(label, kind, cycle, src, date=None, start=None, end=None, note=NOTE27, residency=None):
+    """kind = KeyDateKind (schema.ts); residency only when ODFW limits the date to one residency (none do)."""
+    d = {"label": label, "kind": kind}
+    if residency:
+        d["residency"] = residency
+    d.update({"cycle": cycle, "status": "confirmed", "sourceId": src})
     if date:
         d["date"] = date
     else:
@@ -97,13 +105,13 @@ def kd(label, cycle, src, date=None, start=None, end=None, note=NOTE27):
 
 
 main_dates = [
-    kd("Controlled hunt application deadline (11:59 p.m. PT)", 2026, "d-or-how-apply", date="2026-05-15"),
-    kd("Draw results available", 2026, R26, date="2026-06-12"),
-    kd("Online application changes allowed through", 2026, R26, date="2026-05-25"),
+    kd("Controlled hunt application deadline (11:59 p.m. PT)", "application", 2026, "d-or-how-apply", date="2026-05-15"),
+    kd("Draw results available", "results", 2026, R26, date="2026-06-12"),
+    kd("Online application changes allowed through", "application-change", 2026, R26, date="2026-05-25"),
 ]
-point_saver = kd("Point Saver purchase period (after the draw)", 2026, R26, start="2026-07-01", end="2026-11-30",
+point_saver = kd("Point Saver purchase period (after the draw)", "points", 2026, R26, start="2026-07-01", end="2026-11-30",
                  note="ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application). " + NOTE27)
-leftover = kd("Leftover controlled tags on sale online (10 a.m. PT)", 2026, R26, date="2026-07-01")
+leftover = kd("Leftover controlled tags on sale online (10 a.m. PT)", "leftover", 2026, R26, date="2026-07-01")
 
 NR_DEER_ELK = ("A maximum of 5% of tags in controlled deer, elk and bear hunts can go to nonresidents; nonresidents get no preference "
                "other than their points. Guides and Outfitters Program tags (equal to half the nonresident tags drawn the previous year) reduce "
@@ -121,14 +129,14 @@ species = [
                    "For 2027 (adopted Sept. 18, 2026): the any-legal-weapon coast elk spike-only bag limit moves from the second to "
                    "the first period, and antlerless elk are removed from the General Archery Season Tag bag limit in the West Cascades hunt.",
      "keyDates": main_dates + [point_saver, leftover],
-     "sourceIds": [R26, "d-or-how-apply", "d-or-points", "d-or-premium", "d-or-how-read"]},
+     "sourceIds": [R26, "d-or-how-apply", "d-or-points", "d-or-premium", "d-or-how-read", "d-or-bg-seasons"]},
     {"species": "mule-deer", "displayName": "Deer (mule deer; black-tailed deer in western Oregon)", "drawSystem": "hybrid", "pointsMatter": True,
      "pointName": "preference point", "drawSystemSummary": HYBRID + " Controlled buck deer is the 100 series and antlerless deer the 600 series (separate points for each).",
      "residentNote": "Residents hold at least 95% of tags in each controlled deer hunt. A 600 series antlerless tag can be held in addition to one 100 series (general or controlled) buck tag.",
      "nonresidentNote": NR_DEER_ELK,
      "otcSummary": "Starting in 2026 all Eastern Oregon deer hunting, rifle and archery, is by controlled hunt in Deer Hunt Areas. Over-the-counter general tags remain for Western Oregon (units 10-30): any legal weapon buck season Oct. 3 - Nov. 6, 2026 and general archery from Aug. 29. Premium deer (L series) is a separate random draw.",
      "keyDates": main_dates + [point_saver, leftover],
-     "sourceIds": [R26, "d-or-how-apply", "d-or-points", "d-or-premium", "d-or-how-read"]},
+     "sourceIds": [R26, "d-or-how-apply", "d-or-points", "d-or-premium", "d-or-how-read", "d-or-bg-seasons"]},
     {"species": "whitetail", "displayName": "White-tailed deer", "drawSystem": "hybrid", "pointsMatter": True,
      "pointName": "preference point", "drawSystemSummary": HYBRID + " White-tailed deer hunts are part of the 100 (buck) and 600 (antlerless) deer series and use the same deer points.",
      "residentNote": "Same deer series rules as other controlled deer hunts.",
@@ -149,14 +157,14 @@ species = [
      "nonresidentNote": "A maximum of 5% of controlled bear tags can go to nonresidents. Bear tags cost the same for nonresidents ($16.50).",
      "otcSummary": "General Season Fall Black Bear tag and an Additional Fall tag are sold over the counter; statewide season Aug. 1 - Dec. 31, 2026 (tag sale deadline Oct. 2).",
      "keyDates": [
-         kd("Spring bear controlled hunt application deadline", 2026, R26, date="2026-02-10"),
-         kd("Spring bear draw results available", 2026, R26, date="2026-02-20"),
-         kd("Leftover spring bear tags on sale online (10 a.m. PT)", 2026, R26, date="2026-03-15"),
-         kd("Spring bear controlled tag sale deadline", 2026, R26, date="2026-03-31"),
+         kd("Spring bear controlled hunt application deadline", "application", 2026, R26, date="2026-02-10"),
+         kd("Spring bear draw results available", "results", 2026, R26, date="2026-02-20"),
+         kd("Leftover spring bear tags on sale online (10 a.m. PT)", "leftover", 2026, R26, date="2026-03-15"),
+         kd("Spring bear controlled tag sale deadline", "payment", 2026, R26, date="2026-03-31"),
          point_saver,
-         kd("General season fall bear tag sale deadline", 2026, R26, date="2026-10-02", note=None),
+         kd("General season fall bear tag sale deadline", "other", 2026, R26, date="2026-10-02", note=None),
      ],
-     "sourceIds": [R26, "d-or-how-apply", "d-or-points", "d-or-how-read"]},
+     "sourceIds": [R26, "d-or-how-apply", "d-or-points", "d-or-how-read", "d-or-bg-seasons"]},
     {"species": "sheep", "displayName": "Bighorn sheep (California & Rocky Mountain)", "drawSystem": "random", "pointsMatter": False,
      "drawSystemSummary": "500 series: random draw with no preference points. A person may draw only one controlled bighorn ram tag in a lifetime (ewe hunts excluded). No party applications.",
      "residentNote": "Residents receive 90-95% of bighorn tags.",
@@ -176,8 +184,8 @@ species = [
      "residentNote": "Resident cougar tag $16.50.",
      "nonresidentNote": "Nonresident cougar tag $16.50 (same price as residents).",
      "otcSummary": "General season tag + Additional tag, statewide Jan. 1 - Dec. 31, 2026; general tag sale deadline Oct. 2. Using dogs is prohibited. 2026 zone quotas total 970 (A 180, B 200, C 80, D 100, E 270, F 140).",
-     "keyDates": [kd("General season cougar tag sale deadline", 2026, R26, date="2026-10-02", note=None)],
-     "sourceIds": [R26]},
+     "keyDates": [kd("General season cougar tag sale deadline", "other", 2026, R26, date="2026-10-02", note=None)],
+     "sourceIds": [R26, "d-or-bg-seasons"]},
     {"species": "turkey", "displayName": "Wild turkey", "drawSystem": "otc", "pointsMatter": False,
      "drawSystemSummary": "No draw. Spring and fall turkey tags and beardless turkey permits are sold over the counter.",
      "residentNote": "Resident turkey tag $26.50; youth turkey tag $10.50.",
@@ -228,29 +236,106 @@ fees = [
 ]
 
 
-def season(sp, label, start, end, year=2026, note=None, src=R26):
-    s = {"species": sp, "label": label, "start": start, "end": end, "year": year, "sourceId": src}
+def season(sp, label, start, end, year=2026, note=None, src=R26, method=None, units=None, hunt_codes=None):
+    """SeasonDate (schema.ts). units/hunt_codes only when the season is limited to them, as ODFW writes them."""
+    s = {"species": sp, "label": label}
+    if method:
+        s["method"] = method
+    if units:
+        s["units"] = list(units)
+    if hunt_codes:
+        s["huntCodes"] = list(hunt_codes)
+    s.update({"start": start, "end": end, "year": year, "sourceId": src})
     if note:
         s["note"] = note
     return s
 
 
+def U(*xs):
+    """Unit list from ints/strings; (a, b) tuples expand ODFW ranges such as 'Units 40-45'. Western Oregon has no unit 13."""
+    out = []
+    for x in xs:
+        if isinstance(x, tuple):
+            out += [str(n) for n in range(x[0], x[1] + 1) if n != 13]
+        else:
+            out.append(str(x))
+    return out
+
+
+WEST = U((10, 30))  # "Units 10 - 30" (2026 regs p.30): the 20 western Oregon WMUs
+GB = "d-or-gamebird-2026"
+# 2026 Oregon Big Game Hunting Regulations (R26): deer general seasons p.30-33, elk general seasons p.45-48,
+# cougar p.64, black bear p.65-66. Eastern Oregon deer (rifle and archery) has no general season in 2026: it is
+# entirely controlled hunts by Deer Hunt Area (p.30, p.33). Pronghorn, bighorn sheep and Rocky Mountain goat are
+# controlled hunts only: their dates are per hunt (draw rows' seasonRanges). Cross-checked with ODFW's
+# "2026 big game seasons" page (myodfw.com/big-game-hunting/seasons).
 seasons = [
-    season("elk", "General archery elk (Western & Eastern Oregon, listed units)", "2026-08-29", "2026-09-27"),
-    season("elk", "General West Cascade elk (any legal weapon, one bull)", "2026-11-07", "2026-11-13", note="Units 16, 19, 21, 22, 29, 30."),
-    season("elk", "General Western Oregon Coast elk 1st season", "2026-11-14", "2026-11-17", note="One bull; units 11, 12, 14, 15, 17, 18, 20, 23, 28."),
-    season("elk", "General Western Oregon Coast elk 2nd season", "2026-11-21", "2026-11-27", note="One bull (spike only in units 12, 14, 20)."),
-    season("elk", "General Eastern Oregon Rocky Mountain elk 2nd season (spike only)", "2026-11-07", "2026-11-15", note="Listed units only (49, 50, 52, 53, 61-63 and parts of 48 and 51)."),
-    season("elk", "Premium elk hunts (M series)", "2026-08-01", "2026-11-30"),
-    season("mule-deer", "Western Oregon general buck deer, any legal weapon", "2026-10-03", "2026-11-06", note="Units 10-30 (black-tailed deer). Youth 12-17 extension Nov. 7-8."),
-    season("mule-deer", "Western Oregon general archery deer", "2026-08-29", "2026-09-27", note="Some western units add a late archery period (Nov. 14 - Dec. 6 or Nov. 21 - Dec. 13). Eastern Oregon deer archery is controlled only."),
-    season("mule-deer", "Premium deer hunts (L series)", "2026-08-01", "2026-11-30"),
-    season("pronghorn", "Premium pronghorn hunts (N series)", "2026-08-01", "2026-11-30"),
-    season("bear", "Controlled spring black bear (700 series)", "2026-04-01", "2026-05-31"),
-    season("bear", "General fall black bear (statewide)", "2026-08-01", "2026-12-31"),
+    # ---- elk
+    season("elk", "General archery elk, Western Oregon", "2026-08-29", "2026-09-27", method="archery", units=WEST,
+           note="General Archery Season Tag. Bag limit varies by unit: one elk (15, 20, 23, 25, 28); one bull (11, 12, 14, 17, 18, 27); "
+                "one bull except one elk outside USFS lands (16, 19, 21, 22, 29, 30); one 3 pt.+ bull (10, 24); one spike (26)."),
+    season("elk", "General archery elk, Eastern Oregon (listed units)", "2026-08-29", "2026-09-27", method="archery",
+           units=U((31, 35), 38, 39, (40, 45), "51 (southern portion, S Sumpter)", 64, "65 (eastern portion, east Beulah)",
+                   "66 (southern portion, S Malheur Rvr)", (67, 71), (73, 76), "77"),
+           note="General Archery Season Tag. One elk in 35, 38, 40-45, S Sumpter, 64, east Beulah, S Malheur Rvr, 67-71, 73 and Unit 77 east of "
+                "Hwy 97; one bull in 31-34, 39, 74, 75, 76 and Unit 77 west of Hwy 97. Other eastern units are controlled-only for archery elk."),
+    season("elk", "General West Cascade elk (any legal weapon, one bull)", "2026-11-07", "2026-11-13", method="all",
+           units=U(16, 19, 21, 22, 29, 30)),
+    season("elk", "General Western Oregon Coast elk 1st season", "2026-11-14", "2026-11-17", method="all",
+           units=U(11, 12, 14, 15, 17, 18, 20, 23, 28), note="One bull elk."),
+    season("elk", "General Western Oregon Coast elk 2nd season", "2026-11-21", "2026-11-27", method="all",
+           units=U(11, 12, 14, 15, 17, 18, 20, 23, 28), note="One bull elk in units 11, 15, 17, 18, 23 and 28; one spike elk in units 12, 14 and 20."),
+    season("elk", "General Eastern Oregon Rocky Mountain elk 2nd season (spike only)", "2026-11-07", "2026-11-15", method="all",
+           units=U(49, 50, 52, 53, 61, 62, 63, "48 (north and west of N Fork John Day Rvr)",
+                   "51 (north of Hwy 245 and Burnt Rvr Canyon Rd between Unity and Durkee)"),
+           note="One spike elk."),
+    season("elk", "General season antlerless elk damage hunts", "2026-08-01", "2027-03-31", method="all",
+           note="General Season Antlerless Elk Damage Tag (over the counter), one antlerless elk: all of units 15, 23, 40, 43 and 44 and mapped "
+                "portions of other units (regs p.48, boundaries p.96-97). Some mapped portions close Nov. 30."),
+    season("elk", "Premium elk hunts (M series)", "2026-08-01", "2026-11-30", method="all",
+           note="One tag per hunt, any legal weapon; units per hunt (draw rows)."),
+    # ---- deer (mule deer / black-tailed deer)
+    season("mule-deer", "Western Oregon general buck deer, any legal weapon", "2026-10-03", "2026-11-06", method="all", units=WEST,
+           note="General Any Legal Weapon Western Oregon Tag, one buck with visible antler (black-tailed deer)."),
+    season("mule-deer", "Western Oregon general buck deer, youth extension (ages 12-17)", "2026-11-07", "2026-11-08", method="all", units=WEST,
+           note="Youth 12-17 with an unfilled General Any Legal Weapon Western Oregon tag or W. High Cascade (119A) tag; tag sale deadline Oct. 2, 2026."),
+    season("mule-deer", "Western Oregon general archery deer", "2026-08-29", "2026-09-27", method="archery", units=WEST,
+           note="General Archery Season Western Oregon Deer Tag; bag limit one buck or one deer depending on unit. Eastern Oregon deer archery is controlled only."),
+    season("mule-deer", "Western Oregon general archery deer, late period (Nov. 14 - Dec. 6)", "2026-11-14", "2026-12-06", method="archery",
+           units=U(23, 25, 26, 29, 30), note="Unit 26 late period is traditional archery equipment only. One deer in Unit 23; one buck with visible antler in 25, 26, 29, 30."),
+    season("mule-deer", "Western Oregon general archery deer, late period (Nov. 21 - Dec. 13)", "2026-11-21", "2026-12-13", method="archery",
+           units=U(10, 15, 16, 17, 18, 19, 20, "21 (northern portion, outside South Indigo)"),
+           note="One buck with visible antler in units 10, 17, 18, 20; one deer in 15, 16, 19 and northern Unit 21."),
+    season("mule-deer", "Premium deer hunts (L series)", "2026-08-01", "2026-11-30", method="all",
+           note="One tag per hunt, any legal weapon; units per hunt (draw rows)."),
+    # ---- pronghorn (controlled only)
+    season("pronghorn", "Premium pronghorn hunts (N series)", "2026-08-01", "2026-11-30", method="all",
+           note="One tag per hunt, any legal weapon. All other pronghorn hunting is 400 series controlled hunts with per-hunt dates."),
+    # ---- black bear
+    season("bear", "Controlled spring black bear (700 series)", "2026-04-01", "2026-05-31", method="all",
+           note="All 2026 700 series hunts (adult and youth) print Apr. 1 - May 31; tag sale deadline March 31."),
+    season("bear", "General fall black bear (statewide)", "2026-08-01", "2026-12-31",
+           note="General Season Fall Tag and Additional General Season Fall Tag; tag sale deadline Oct. 2."),
+    # ---- cougar
     season("lion", "General cougar season (statewide)", "2026-01-01", "2026-12-31", note="Zones close when their mortality quota is reached."),
-    season("turkey", "Fall wild turkey, WMUs 14-30", "2026-09-01", "2027-01-31", src="d-or-gamebird-2026", note="Two turkeys of either sex."),
-    season("turkey", "Spring wild turkey (statewide)", "2027-04-15", "2027-05-31", year=2027, src="d-or-gamebird-2026", note="Youth also Apr. 10-11, 2027."),
+    # ---- turkey (2026-27 Game Bird Regulations)
+    season("turkey", "Fall wild turkey, WMUs 14-30", "2026-09-01", "2027-01-31", src=GB, units=U((14, 30)), note="Two turkeys of either sex."),
+    season("turkey", "Fall wild turkey, eastern Oregon (Oct. 10 opener)", "2026-10-10", "2027-01-31", src=GB,
+           units=U(36, "37 (west of FR 12 and south of the northern Ochoco NF boundary)", 38, 40, 43, 44, "45 (north of Wheeler Co line)",
+                   "48 (north of Grant Co line)", 49, (51, 64), "65 (east of the western Malheur NF boundary)", 66, 67, 69, 71, 72),
+           note="Printed 'Oct. 10 - Nov. 30 and Dec. 1 - Jan. 31, 2027'; Dec. 1 - Jan. 31 on private lands by permission only. One turkey of either sex."),
+    season("turkey", "Fall wild turkey, eastern Oregon (Sept. 1 opener)", "2026-09-01", "2027-01-31", src=GB,
+           units=U("37 (east of FR 12 and north of the northern Ochoco NF boundary)", "45 (south of Wheeler Co line)", 46, 47,
+                   "48 (south of Grant Co line)", 50, "65 (west of the western Malheur NF boundary)"),
+           note="Printed 'Sept. 1 - Nov. 30 and Dec. 1 - Jan. 31, 2027'; Dec. 1 - Jan. 31 on private lands by permission only. One turkey of either sex."),
+    season("turkey", "Beardless wild turkey permit season (private lands, listed units)", "2026-10-01", "2027-02-28", src=GB,
+           note="Beardless Turkey Permit: 3 hen turkeys per permit, up to 3 permits; private lands in WMUs 37 (part), 45 (part), 46, 47, 48 (part), 50, "
+                "65 (part), and private lands excluding private industrial forestland in Marion, Polk, Yamhill, Benton, Linn and eastern Lane Cos "
+                "(WMUs 14-21) and WMUs 23, 28, 29 (part) and 30."),
+    season("turkey", "Spring wild turkey (statewide)", "2027-04-15", "2027-05-31", year=2027, src=GB,
+           note="Up to three 2027 spring tags; one male turkey or turkey with a visible beard per tag."),
+    season("turkey", "Youth spring wild turkey (statewide)", "2027-04-10", "2027-04-11", year=2027, src=GB,
+           note="Printed 'Apr. 10 - 11 and Apr. 15 - May 31, 2027' for Youth Spring; an adult 21+ who may not hunt must accompany the youth."),
 ]
 
 

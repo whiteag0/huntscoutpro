@@ -24,6 +24,7 @@
    "keyDates": [
     {
      "label": "Controlled hunt application deadline (11:59 p.m. PT)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-how-apply",
@@ -32,6 +33,7 @@
     },
     {
      "label": "Draw results available",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -40,6 +42,7 @@
     },
     {
      "label": "Online application changes allowed through",
+     "kind": "application-change",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -48,6 +51,7 @@
     },
     {
      "label": "Point Saver purchase period (after the draw)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -57,6 +61,7 @@
     },
     {
      "label": "Leftover controlled tags on sale online (10 a.m. PT)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -70,6 +75,7 @@
     "d-or-points",
     "d-or-premium",
     "d-or-how-read",
+    "d-or-bg-seasons",
     "d-or-news-2027-regs-adopted"
    ]
   },
@@ -86,6 +92,7 @@
    "keyDates": [
     {
      "label": "Controlled hunt application deadline (11:59 p.m. PT)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-how-apply",
@@ -94,6 +101,7 @@
     },
     {
      "label": "Draw results available",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -102,6 +110,7 @@
     },
     {
      "label": "Online application changes allowed through",
+     "kind": "application-change",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -110,6 +119,7 @@
     },
     {
      "label": "Point Saver purchase period (after the draw)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -119,6 +129,7 @@
     },
     {
      "label": "Leftover controlled tags on sale online (10 a.m. PT)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -132,6 +143,7 @@
     "d-or-points",
     "d-or-premium",
     "d-or-how-read",
+    "d-or-bg-seasons",
     "d-or-news-2027-regs-adopted"
    ]
   },
@@ -148,6 +160,7 @@
    "keyDates": [
     {
      "label": "Controlled hunt application deadline (11:59 p.m. PT)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-how-apply",
@@ -156,6 +169,7 @@
     },
     {
      "label": "Draw results available",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -164,6 +178,7 @@
     },
     {
      "label": "Online application changes allowed through",
+     "kind": "application-change",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -172,6 +187,7 @@
     },
     {
      "label": "Point Saver purchase period (after the draw)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -181,6 +197,7 @@
     },
     {
      "label": "Leftover controlled tags on sale online (10 a.m. PT)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -208,6 +225,7 @@
    "keyDates": [
     {
      "label": "Controlled hunt application deadline (11:59 p.m. PT)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-how-apply",
@@ -216,6 +234,7 @@
     },
     {
      "label": "Draw results available",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -224,6 +243,7 @@
     },
     {
      "label": "Online application changes allowed through",
+     "kind": "application-change",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -232,6 +252,7 @@
     },
     {
      "label": "Point Saver purchase period (after the draw)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -241,6 +262,7 @@
     },
     {
      "label": "Leftover controlled tags on sale online (10 a.m. PT)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -269,6 +291,7 @@
    "keyDates": [
     {
      "label": "Spring bear controlled hunt application deadline",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -277,6 +300,7 @@
     },
     {
      "label": "Spring bear draw results available",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -285,6 +309,7 @@
     },
     {
      "label": "Leftover spring bear tags on sale online (10 a.m. PT)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -293,6 +318,7 @@
     },
     {
      "label": "Spring bear controlled tag sale deadline",
+     "kind": "payment",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -301,6 +327,7 @@
     },
     {
      "label": "Point Saver purchase period (after the draw)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -310,6 +337,7 @@
     },
     {
      "label": "General season fall bear tag sale deadline",
+     "kind": "other",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -321,6 +349,7 @@
     "d-or-how-apply",
     "d-or-points",
     "d-or-how-read",
+    "d-or-bg-seasons",
     "d-or-news-2027-regs-adopted"
    ]
   },
@@ -336,6 +365,7 @@
    "keyDates": [
     {
      "label": "Controlled hunt application deadline (11:59 p.m. PT)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-how-apply",
@@ -344,6 +374,7 @@
     },
     {
      "label": "Draw results available",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -352,6 +383,7 @@
     },
     {
      "label": "Online application changes allowed through",
+     "kind": "application-change",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -377,6 +409,7 @@
    "keyDates": [
     {
      "label": "Controlled hunt application deadline (11:59 p.m. PT)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-how-apply",
@@ -385,6 +418,7 @@
     },
     {
      "label": "Draw results available",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -393,6 +427,7 @@
     },
     {
      "label": "Online application changes allowed through",
+     "kind": "application-change",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -418,6 +453,7 @@
    "keyDates": [
     {
      "label": "General season cougar tag sale deadline",
+     "kind": "other",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
@@ -425,7 +461,8 @@
     }
    ],
    "sourceIds": [
-    "d-or-regs-2026"
+    "d-or-regs-2026",
+    "d-or-bg-seasons"
    ]
   },
   {
@@ -655,97 +692,337 @@
  "seasons": [
   {
    "species": "elk",
-   "label": "General archery elk (Western & Eastern Oregon, listed units)",
+   "label": "General archery elk, Western Oregon",
+   "method": "archery",
+   "units": [
+    "10",
+    "11",
+    "12",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30"
+   ],
    "start": "2026-08-29",
    "end": "2026-09-27",
    "year": 2026,
-   "sourceId": "d-or-regs-2026"
+   "sourceId": "d-or-regs-2026",
+   "note": "General Archery Season Tag. Bag limit varies by unit: one elk (15, 20, 23, 25, 28); one bull (11, 12, 14, 17, 18, 27); one bull except one elk outside USFS lands (16, 19, 21, 22, 29, 30); one 3 pt.+ bull (10, 24); one spike (26)."
+  },
+  {
+   "species": "elk",
+   "label": "General archery elk, Eastern Oregon (listed units)",
+   "method": "archery",
+   "units": [
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "51 (southern portion, S Sumpter)",
+    "64",
+    "65 (eastern portion, east Beulah)",
+    "66 (southern portion, S Malheur Rvr)",
+    "67",
+    "68",
+    "69",
+    "70",
+    "71",
+    "73",
+    "74",
+    "75",
+    "76",
+    "77"
+   ],
+   "start": "2026-08-29",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "General Archery Season Tag. One elk in 35, 38, 40-45, S Sumpter, 64, east Beulah, S Malheur Rvr, 67-71, 73 and Unit 77 east of Hwy 97; one bull in 31-34, 39, 74, 75, 76 and Unit 77 west of Hwy 97. Other eastern units are controlled-only for archery elk."
   },
   {
    "species": "elk",
    "label": "General West Cascade elk (any legal weapon, one bull)",
+   "method": "all",
+   "units": [
+    "16",
+    "19",
+    "21",
+    "22",
+    "29",
+    "30"
+   ],
    "start": "2026-11-07",
    "end": "2026-11-13",
    "year": 2026,
-   "sourceId": "d-or-regs-2026",
-   "note": "Units 16, 19, 21, 22, 29, 30."
+   "sourceId": "d-or-regs-2026"
   },
   {
    "species": "elk",
    "label": "General Western Oregon Coast elk 1st season",
+   "method": "all",
+   "units": [
+    "11",
+    "12",
+    "14",
+    "15",
+    "17",
+    "18",
+    "20",
+    "23",
+    "28"
+   ],
    "start": "2026-11-14",
    "end": "2026-11-17",
    "year": 2026,
    "sourceId": "d-or-regs-2026",
-   "note": "One bull; units 11, 12, 14, 15, 17, 18, 20, 23, 28."
+   "note": "One bull elk."
   },
   {
    "species": "elk",
    "label": "General Western Oregon Coast elk 2nd season",
+   "method": "all",
+   "units": [
+    "11",
+    "12",
+    "14",
+    "15",
+    "17",
+    "18",
+    "20",
+    "23",
+    "28"
+   ],
    "start": "2026-11-21",
    "end": "2026-11-27",
    "year": 2026,
    "sourceId": "d-or-regs-2026",
-   "note": "One bull (spike only in units 12, 14, 20)."
+   "note": "One bull elk in units 11, 15, 17, 18, 23 and 28; one spike elk in units 12, 14 and 20."
   },
   {
    "species": "elk",
    "label": "General Eastern Oregon Rocky Mountain elk 2nd season (spike only)",
+   "method": "all",
+   "units": [
+    "49",
+    "50",
+    "52",
+    "53",
+    "61",
+    "62",
+    "63",
+    "48 (north and west of N Fork John Day Rvr)",
+    "51 (north of Hwy 245 and Burnt Rvr Canyon Rd between Unity and Durkee)"
+   ],
    "start": "2026-11-07",
    "end": "2026-11-15",
    "year": 2026,
    "sourceId": "d-or-regs-2026",
-   "note": "Listed units only (49, 50, 52, 53, 61-63 and parts of 48 and 51)."
+   "note": "One spike elk."
+  },
+  {
+   "species": "elk",
+   "label": "General season antlerless elk damage hunts",
+   "method": "all",
+   "start": "2026-08-01",
+   "end": "2027-03-31",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "General Season Antlerless Elk Damage Tag (over the counter), one antlerless elk: all of units 15, 23, 40, 43 and 44 and mapped portions of other units (regs p.48, boundaries p.96-97). Some mapped portions close Nov. 30."
   },
   {
    "species": "elk",
    "label": "Premium elk hunts (M series)",
+   "method": "all",
    "start": "2026-08-01",
    "end": "2026-11-30",
    "year": 2026,
-   "sourceId": "d-or-regs-2026"
+   "sourceId": "d-or-regs-2026",
+   "note": "One tag per hunt, any legal weapon; units per hunt (draw rows)."
   },
   {
    "species": "mule-deer",
    "label": "Western Oregon general buck deer, any legal weapon",
+   "method": "all",
+   "units": [
+    "10",
+    "11",
+    "12",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30"
+   ],
    "start": "2026-10-03",
    "end": "2026-11-06",
    "year": 2026,
    "sourceId": "d-or-regs-2026",
-   "note": "Units 10-30 (black-tailed deer). Youth 12-17 extension Nov. 7-8."
+   "note": "General Any Legal Weapon Western Oregon Tag, one buck with visible antler (black-tailed deer)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Western Oregon general buck deer, youth extension (ages 12-17)",
+   "method": "all",
+   "units": [
+    "10",
+    "11",
+    "12",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-08",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Youth 12-17 with an unfilled General Any Legal Weapon Western Oregon tag or W. High Cascade (119A) tag; tag sale deadline Oct. 2, 2026."
   },
   {
    "species": "mule-deer",
    "label": "Western Oregon general archery deer",
+   "method": "archery",
+   "units": [
+    "10",
+    "11",
+    "12",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30"
+   ],
    "start": "2026-08-29",
    "end": "2026-09-27",
    "year": 2026,
    "sourceId": "d-or-regs-2026",
-   "note": "Some western units add a late archery period (Nov. 14 - Dec. 6 or Nov. 21 - Dec. 13). Eastern Oregon deer archery is controlled only."
+   "note": "General Archery Season Western Oregon Deer Tag; bag limit one buck or one deer depending on unit. Eastern Oregon deer archery is controlled only."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Western Oregon general archery deer, late period (Nov. 14 - Dec. 6)",
+   "method": "archery",
+   "units": [
+    "23",
+    "25",
+    "26",
+    "29",
+    "30"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "Unit 26 late period is traditional archery equipment only. One deer in Unit 23; one buck with visible antler in 25, 26, 29, 30."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Western Oregon general archery deer, late period (Nov. 21 - Dec. 13)",
+   "method": "archery",
+   "units": [
+    "10",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21 (northern portion, outside South Indigo)"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-12-13",
+   "year": 2026,
+   "sourceId": "d-or-regs-2026",
+   "note": "One buck with visible antler in units 10, 17, 18, 20; one deer in 15, 16, 19 and northern Unit 21."
   },
   {
    "species": "mule-deer",
    "label": "Premium deer hunts (L series)",
+   "method": "all",
    "start": "2026-08-01",
    "end": "2026-11-30",
    "year": 2026,
-   "sourceId": "d-or-regs-2026"
+   "sourceId": "d-or-regs-2026",
+   "note": "One tag per hunt, any legal weapon; units per hunt (draw rows)."
   },
   {
    "species": "pronghorn",
    "label": "Premium pronghorn hunts (N series)",
+   "method": "all",
    "start": "2026-08-01",
    "end": "2026-11-30",
    "year": 2026,
-   "sourceId": "d-or-regs-2026"
+   "sourceId": "d-or-regs-2026",
+   "note": "One tag per hunt, any legal weapon. All other pronghorn hunting is 400 series controlled hunts with per-hunt dates."
   },
   {
    "species": "bear",
    "label": "Controlled spring black bear (700 series)",
+   "method": "all",
    "start": "2026-04-01",
    "end": "2026-05-31",
    "year": 2026,
-   "sourceId": "d-or-regs-2026"
+   "sourceId": "d-or-regs-2026",
+   "note": "All 2026 700 series hunts (adult and youth) print Apr. 1 - May 31; tag sale deadline March 31."
   },
   {
    "species": "bear",
@@ -753,7 +1030,8 @@
    "start": "2026-08-01",
    "end": "2026-12-31",
    "year": 2026,
-   "sourceId": "d-or-regs-2026"
+   "sourceId": "d-or-regs-2026",
+   "note": "General Season Fall Tag and Additional General Season Fall Tag; tag sale deadline Oct. 2."
   },
   {
    "species": "lion",
@@ -767,6 +1045,25 @@
   {
    "species": "turkey",
    "label": "Fall wild turkey, WMUs 14-30",
+   "units": [
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30"
+   ],
    "start": "2026-09-01",
    "end": "2027-01-31",
    "year": 2026,
@@ -775,12 +1072,88 @@
   },
   {
    "species": "turkey",
+   "label": "Fall wild turkey, eastern Oregon (Oct. 10 opener)",
+   "units": [
+    "36",
+    "37 (west of FR 12 and south of the northern Ochoco NF boundary)",
+    "38",
+    "40",
+    "43",
+    "44",
+    "45 (north of Wheeler Co line)",
+    "48 (north of Grant Co line)",
+    "49",
+    "51",
+    "52",
+    "53",
+    "54",
+    "55",
+    "56",
+    "57",
+    "58",
+    "59",
+    "60",
+    "61",
+    "62",
+    "63",
+    "64",
+    "65 (east of the western Malheur NF boundary)",
+    "66",
+    "67",
+    "69",
+    "71",
+    "72"
+   ],
+   "start": "2026-10-10",
+   "end": "2027-01-31",
+   "year": 2026,
+   "sourceId": "d-or-gamebird-2026",
+   "note": "Printed 'Oct. 10 - Nov. 30 and Dec. 1 - Jan. 31, 2027'; Dec. 1 - Jan. 31 on private lands by permission only. One turkey of either sex."
+  },
+  {
+   "species": "turkey",
+   "label": "Fall wild turkey, eastern Oregon (Sept. 1 opener)",
+   "units": [
+    "37 (east of FR 12 and north of the northern Ochoco NF boundary)",
+    "45 (south of Wheeler Co line)",
+    "46",
+    "47",
+    "48 (south of Grant Co line)",
+    "50",
+    "65 (west of the western Malheur NF boundary)"
+   ],
+   "start": "2026-09-01",
+   "end": "2027-01-31",
+   "year": 2026,
+   "sourceId": "d-or-gamebird-2026",
+   "note": "Printed 'Sept. 1 - Nov. 30 and Dec. 1 - Jan. 31, 2027'; Dec. 1 - Jan. 31 on private lands by permission only. One turkey of either sex."
+  },
+  {
+   "species": "turkey",
+   "label": "Beardless wild turkey permit season (private lands, listed units)",
+   "start": "2026-10-01",
+   "end": "2027-02-28",
+   "year": 2026,
+   "sourceId": "d-or-gamebird-2026",
+   "note": "Beardless Turkey Permit: 3 hen turkeys per permit, up to 3 permits; private lands in WMUs 37 (part), 45 (part), 46, 47, 48 (part), 50, 65 (part), and private lands excluding private industrial forestland in Marion, Polk, Yamhill, Benton, Linn and eastern Lane Cos (WMUs 14-21) and WMUs 23, 28, 29 (part) and 30."
+  },
+  {
+   "species": "turkey",
    "label": "Spring wild turkey (statewide)",
    "start": "2027-04-15",
    "end": "2027-05-31",
    "year": 2027,
    "sourceId": "d-or-gamebird-2026",
-   "note": "Youth also Apr. 10-11, 2027."
+   "note": "Up to three 2027 spring tags; one male turkey or turkey with a visible beard per tag."
+  },
+  {
+   "species": "turkey",
+   "label": "Youth spring wild turkey (statewide)",
+   "start": "2027-04-10",
+   "end": "2027-04-11",
+   "year": 2027,
+   "sourceId": "d-or-gamebird-2026",
+   "note": "Printed 'Apr. 10 - 11 and Apr. 15 - May 31, 2027' for Youth Spring; an adult 21+ who may not hunt must accompany the youth."
   }
  ],
  "coverage": [
@@ -1477,6 +1850,15 @@
    "dataYear": 2027,
    "retrieved": "2026-10-31",
    "notes": "ODFW news release dated Sept. 18, 2026: 2027 Big Game Regulations adopted; printed regulations available in late November; 2027 western Oregon elk changes (any-legal-weapon coast elk spike-only bag limit moves from the second to the first period; antlerless elk removed from the General Archery Season Tag bag limit in the West Cascades hunt)."
+  },
+  {
+   "id": "d-or-bg-seasons",
+   "title": "2026 big game seasons",
+   "publisher": "Oregon Department of Fish and Wildlife",
+   "url": "https://myodfw.com/big-game-hunting/seasons",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "General season dates and tag sale deadlines for 2026; used to cross-check the general seasons taken from the 2026 regulations. States 'apply by February 10 for spring bear, and May 15 for all other big game species' without naming a year."
   },
   {
    "id": "d-or-draft-2026-goat",

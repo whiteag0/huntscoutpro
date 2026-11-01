@@ -5,11 +5,24 @@ Facts below were read from the IDFG documents listed in SOURCES (downloaded by d
 into <raw>/docs and checked against `pdftotext -layout` output). Coverage is computed from the
 draw/<species>.json files written by draw_build.py.
 
-Usage: python -I draw_meta.py <repo_root>
+Usage: python -I draw_meta.py <repo_root> <raw_seasons_dir>
+  <raw_seasons_dir> = agency-raw/idaho/seasons (Hunt Planner general-season lists and brochure PDFs read by
+  seasons_general.py; needs pdfplumber). Run seasons_ranges.py for the per-hunt seasonRanges.
+
+2027 check (2026-10-31): idfg.idaho.gov HTML pages answered 503 "maintenance" all day, but its PDF files were
+served. The 2026 Big Game, 2027 Nonresident Supplement, 2025 & 2026 Moose/Sheep/Goat and 2026 & 2027 Upland
+PDFs were re-downloaded and are byte-identical to the copies the dates were read from. No 2027 moose/sheep/goat
+or 2027 big game brochure exists at the usual file names (HTTP 404), and the Internet Archive copy of
+idfg.idaho.gov/rules/big-game from 2026-10-15 still lists the 2025-2026 moose/sheep/goat brochure; the
+2026-09-18 copy of idfg.idaho.gov/licenses/tag/quotas/nonresident gives the same 2027 nonresident draw dates as
+the supplement.
 """
 import json
 import os
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import seasons_general  # noqa: E402
 
 RETRIEVED = "2026-10-31"
 PUB = "Idaho Department of Fish and Game"
@@ -91,7 +104,9 @@ SOURCES = [
         "pageUrl": "https://idfg.idaho.gov/licenses/tag/quotas/nonresident",
         "dataYear": 2027,
         "retrieved": RETRIEVED,
-        "notes": "Key dates p.4; draw Q&A pp.5-7. The pageUrl returned HTTP 503 on 2026-10-31; facts are from the PDF only.",
+        "notes": "Key dates p.4; draw Q&A pp.5-7; '2027 licenses go on sale December 1, 2026' p.3. The pageUrl returned HTTP 503 on "
+                 "2026-10-31; facts are from the PDF (re-downloaded 2026-10-31, unchanged). The Internet Archive copy of the pageUrl "
+                 "from 2026-09-18 lists the same 2027 dates.",
     },
     {
         "id": "d-rules-upland-2026-27",
@@ -103,6 +118,61 @@ SOURCES = [
         "retrieved": RETRIEVED,
         "notes": "Turkey controlled hunt rules and dates pp.18-19; turkey seasons pp.22-25. Covers 2026 and 2027 seasons.",
     },
+    {
+        "id": "d-huntlist-general-deer",
+        "title": "Idaho Hunt Planner — Filterable Grid (general deer seasons, 2026)",
+        "publisher": PUB,
+        "url": "https://idfg.idaho.gov/ifwis/huntplanner/api/1.1/list/?game=1&type=1&start=2026-1-1&end=2027-12-31&limit=5000&offset=0",
+        "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/filter",
+        "dataYear": 2026,
+        "retrieved": RETRIEVED,
+        "notes": "JSON behind the Hunt Planner filter page (type=1, general seasons): 462 deer hunt opportunities, one per unit, tag, "
+                 "weapon, antler class and season. Grouped into seasons[] entries by tag, weapon, antler class and dates.",
+    },
+    {
+        "id": "d-huntlist-general-elk",
+        "title": "Idaho Hunt Planner — Filterable Grid (general elk zone A/B tag seasons, 2026)",
+        "publisher": PUB,
+        "url": "https://idfg.idaho.gov/ifwis/huntplanner/api/1.1/list/?game=2&type=1&start=2026-1-1&end=2027-12-31&limit=5000&offset=0",
+        "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/filter",
+        "dataYear": 2026,
+        "retrieved": RETRIEVED,
+        "notes": "JSON behind the Hunt Planner filter page (type=1, general seasons): 99 elk zone A/B tag hunt opportunities.",
+    },
+] + [
+    {
+        "id": f"d-rules-big-game-{ed}",
+        "title": title,
+        "publisher": PUB,
+        "url": f"https://idfg.idaho.gov/sites/default/files/{fn}",
+        "pageUrl": "https://idfg.idaho.gov/rules/big-game",
+        "dataYear": ed,
+        "retrieved": RETRIEVED,
+        "notes": (f"Black bear controlled hunt tables ({ed} fall hunts and {ed + 1} spring hunts) used for draw-row season dates"
+                  + ("; also the 'Black Bear Seasons for Fall 2025 and Spring 2026' table for 2026 spring general seasons" if ed == 2025 else "")
+                  + f". The file is no longer at this URL (HTTP 404 on 2026-10-31); the copy used is the Internet Archive capture "
+                  f"web.archive.org/web/{snap}/{'https://idfg.idaho.gov/sites/default/files/' + fn}."),
+    }
+    for ed, title, fn, snap in [
+        (2021, "Idaho Big Game 2021 Seasons & Rules", "seasons-rules-big-game-2021.pdf", "20210617045911"),
+        (2022, "Idaho Big Game 2022 Seasons & Rules", "seasons-rules-big-game-2022.pdf", "20220508060439"),
+        (2023, "Idaho Big Game 2023 Seasons & Rules", "seasons-rules-big-game-2023-2024.pdf", "20260226003204"),
+        (2024, "Idaho Big Game 2024 Seasons & Rules", "seasons-rules-big-game-2024.pdf", "20240720063317"),
+        (2025, "Idaho Big Game 2025 Seasons and Rules", "seasons-rules-big-game-2025.pdf", "20260813085106"),
+    ]
+] + [
+    {
+        "id": "d-rules-upland-2024-25",
+        "title": "Upland Game, Turkey & Furbearer 2024 & 2025 Seasons & Rules",
+        "publisher": PUB,
+        "url": "https://idfg.idaho.gov/sites/default/files/seasons-rules-upland-game-2024-2025.pdf",
+        "pageUrl": "https://idfg.idaho.gov/rules/upland",
+        "dataYear": 2024,
+        "retrieved": RETRIEVED,
+        "notes": "'2024 & 2025 Spring/Fall Controlled Hunts' turkey tables (pp.24-25), one set of dates for both years, used for draw-row "
+                 "season dates. No longer at this URL (HTTP 404 on 2026-10-31); copy from the Internet Archive capture "
+                 "web.archive.org/web/20261016001452/https://idfg.idaho.gov/sites/default/files/seasons-rules-upland-game-2024-2025.pdf.",
+    },
 ]
 
 BG = "d-rules-big-game-2026"
@@ -112,8 +182,12 @@ UPL = "d-rules-upland-2026-27"
 NOT_YET = "2027 dates not yet published by IDFG as of 2026-10-31."
 
 
-def kd(label, cycle, sid, date=None, start=None, end=None, note=None):
+def kd(label, cycle, sid, date=None, start=None, end=None, note=None, kind=None, residency=None):
     d = {"label": label}
+    if kind:
+        d["kind"] = kind
+    if residency:
+        d["residency"] = residency
     if date:
         d["date"] = date
     if start:
@@ -125,17 +199,22 @@ def kd(label, cycle, sid, date=None, start=None, end=None, note=None):
 
 
 DEER_ELK_CONTROLLED = [
-    kd("Controlled hunt first application period (deer, elk, pronghorn, fall bear)", 2026, BG, start="2026-05-01", end="2026-06-05", note=NOT_YET),
-    kd("Deadline to buy drawn controlled hunt tags", 2026, BG, date="2026-08-01", note="Excludes unlimited and January/February Extra hunts. " + NOT_YET),
-    kd("Controlled hunt second application period", 2026, BG, start="2026-08-05", end="2026-08-15", note=NOT_YET),
-    kd("Second drawing results posted; leftover tags on sale 10 a.m. MT", 2026, BG, date="2026-08-25", note="IDFG: August 25 or next business day. " + NOT_YET),
+    kd("Controlled hunt first application period (deer, elk, pronghorn, fall bear)", 2026, BG, start="2026-05-01", end="2026-06-05", note=NOT_YET, kind="application"),
+    kd("Deadline to buy drawn controlled hunt tags", 2026, BG, date="2026-08-01", note="Excludes unlimited and January/February Extra hunts. " + NOT_YET, kind="payment"),
+    kd("Controlled hunt second application period", 2026, BG, start="2026-08-05", end="2026-08-15", note=NOT_YET, kind="leftover"),
+    kd("Second drawing results posted; leftover tags on sale 10 a.m. MT", 2026, BG, date="2026-08-25", note="IDFG: August 25 or next business day. " + NOT_YET, kind="leftover"),
 ]
 NR_DRAW = [
     kd("Nonresident general season deer/elk tag drawing — first application period (also DAV draw)", 2027, NRS, start="2026-12-05", end="2026-12-15",
-       note="Results announced early January 2027 (no exact date published)."),
-    kd("Nonresident draw — deadline to buy tags drawn in first period", 2027, NRS, date="2027-01-20", note="Unpurchased tags are forfeited (DAV tags excepted)."),
-    kd("Nonresident draw — second application period", 2027, NRS, start="2027-02-05", end="2027-02-15", note="Results early March 2027 (no exact date published)."),
-    kd("Nonresident draw — deadline to buy second-period tags and all DAV tags", 2027, NRS, date="2027-03-20"),
+       note="Results announced early January 2027 (no exact date published).", kind="application", residency="nonresident"),
+    kd("Nonresident draw — deadline to buy tags drawn in first period", 2027, NRS, date="2027-01-20", note="Unpurchased tags are forfeited (DAV tags excepted).",
+       kind="payment", residency="nonresident"),
+    kd("Nonresident draw — second application period", 2027, NRS, start="2027-02-05", end="2027-02-15", note="Results early March 2027 (no exact date published).",
+       kind="leftover", residency="nonresident"),
+    kd("Nonresident draw — deadline to buy second-period tags and all DAV tags", 2027, NRS, date="2027-03-20", kind="payment", residency="nonresident"),
+    kd("2027 Idaho hunting licenses go on sale", 2027, NRS, date="2026-12-01", kind="license-sale",
+       note="Nonresidents must hold a 2027 hunting license valid for big game to apply in the Nonresident Tag Drawing (supplement p.3). "
+            "The 2026 Big Game Seasons & Rules (p.57) also says 'Hunting licenses for 2027 will go on sale December 1, 2026.'"),
 ]
 
 GEN_RES_DEER = ("Residents buy general season deer tags over the counter; resident general deer and uncapped elk tags go on sale in early July "
@@ -212,10 +291,10 @@ SPECIES = [
                            "2026 nonresident tag plus application $2,672.50.",
         "otcSummary": "None; leftover tags from the second drawing go on sale July 10.",
         "keyDates": [
-            kd("Moose, bighorn sheep and mountain goat application period", 2026, MSG, start="2026-04-01", end="2026-04-30", note=NOT_YET),
-            kd("Successful applicants notified by", 2026, MSG, date="2026-06-10", note=NOT_YET),
-            kd("Second drawing application period", 2026, MSG, start="2026-06-15", end="2026-06-25", note=NOT_YET),
-            kd("Leftover tags from second drawing go on sale", 2026, MSG, date="2026-07-10", note=NOT_YET),
+            kd("Moose, bighorn sheep and mountain goat application period", 2026, MSG, start="2026-04-01", end="2026-04-30", note=NOT_YET, kind="application"),
+            kd("Successful applicants notified by", 2026, MSG, date="2026-06-10", note=NOT_YET, kind="results"),
+            kd("Second drawing application period", 2026, MSG, start="2026-06-15", end="2026-06-25", note=NOT_YET, kind="leftover"),
+            kd("Leftover tags from second drawing go on sale", 2026, MSG, date="2026-07-10", note=NOT_YET, kind="leftover"),
         ],
         "sourceIds": [MSG, "d-odds-moose"],
     },
@@ -232,9 +311,9 @@ SPECIES = [
                            "2026 nonresident tag plus application $2,672.50.",
         "otcSummary": "None; special auction and lottery tags are sold separately.",
         "keyDates": [
-            kd("Moose, bighorn sheep and mountain goat application period", 2026, MSG, start="2026-04-01", end="2026-04-30", note=NOT_YET),
-            kd("Successful applicants notified by", 2026, MSG, date="2026-06-10", note=NOT_YET),
-            kd("Second drawing application period", 2026, MSG, start="2026-06-15", end="2026-06-25", note=NOT_YET),
+            kd("Moose, bighorn sheep and mountain goat application period", 2026, MSG, start="2026-04-01", end="2026-04-30", note=NOT_YET, kind="application"),
+            kd("Successful applicants notified by", 2026, MSG, date="2026-06-10", note=NOT_YET, kind="results"),
+            kd("Second drawing application period", 2026, MSG, start="2026-06-15", end="2026-06-25", note=NOT_YET, kind="leftover"),
         ],
         "sourceIds": [MSG, "d-odds-rm-sheep", "d-odds-ca-sheep"],
     },
@@ -250,9 +329,9 @@ SPECIES = [
                            "2026 nonresident tag plus application $2,672.50.",
         "otcSummary": "None.",
         "keyDates": [
-            kd("Moose, bighorn sheep and mountain goat application period", 2026, MSG, start="2026-04-01", end="2026-04-30", note=NOT_YET),
-            kd("Successful applicants notified by", 2026, MSG, date="2026-06-10", note=NOT_YET),
-            kd("Second drawing application period", 2026, MSG, start="2026-06-15", end="2026-06-25", note=NOT_YET),
+            kd("Moose, bighorn sheep and mountain goat application period", 2026, MSG, start="2026-04-01", end="2026-04-30", note=NOT_YET, kind="application"),
+            kd("Successful applicants notified by", 2026, MSG, date="2026-06-10", note=NOT_YET, kind="results"),
+            kd("Second drawing application period", 2026, MSG, start="2026-06-15", end="2026-06-25", note=NOT_YET, kind="leftover"),
         ],
         "sourceIds": [MSG, "d-odds-goat"],
     },
@@ -267,9 +346,13 @@ SPECIES = [
         "otcSummary": "General season black bear tags (residents may buy a second tag where allowed).",
         "keyDates": [
             kd("Spring black bear controlled hunt application period", 2027, BG, start="2027-01-15", end="2027-02-15",
-               note="Published for the 2027 spring controlled hunts in the 2026 Big Game Seasons & Rules."),
-            kd("Fall black bear controlled hunt application period", 2026, BG, start="2026-05-01", end="2026-06-05", note=NOT_YET),
-            kd("Deadline to buy drawn fall bear controlled hunt tags", 2026, BG, date="2026-08-01", note=NOT_YET),
+               note="Published for the 2027 spring controlled hunts in the 2026 Big Game Seasons & Rules.", kind="application"),
+            kd("Leftover spring black bear controlled hunt tags on sale 10 a.m. MT", 2027, BG, date="2027-04-01", kind="leftover",
+               note="The 2026 Big Game Seasons & Rules (valid July 2026 - June 2027) lists 'April 1: Leftover tags for spring bear go on sale at "
+                    "10 a.m. Mountain Time' (p.108) and the 2027 spring controlled hunts (p.72); the year is not printed next to April 1. "
+                    "Spring bear tags have no purchase deadline (bought before hunting)."),
+            kd("Fall black bear controlled hunt application period", 2026, BG, start="2026-05-01", end="2026-06-05", note=NOT_YET, kind="application"),
+            kd("Deadline to buy drawn fall bear controlled hunt tags", 2026, BG, date="2026-08-01", note=NOT_YET, kind="payment"),
         ],
         "sourceIds": [BG, "d-odds-bear"],
     },
@@ -295,11 +378,13 @@ SPECIES = [
         "otcSummary": "General hunt turkey tags (plus special unit tags valid only in Units 1, 2, 3, 4, 4A, 5, 6, 7 and 9); leftover spring controlled tags on sale March 25, fall July 15.",
         "keyDates": [
             kd("Spring turkey controlled hunt application period", 2027, UPL, start="2027-02-01", end="2027-03-01",
-               note="Listed as Feb 1 - Mar 1 in the 2026 & 2027 Upland Game, Turkey & Furbearer Seasons & Rules."),
-            kd("Spring turkey controlled hunt results available by", 2027, UPL, date="2027-03-20"),
-            kd("Leftover spring controlled turkey tags on sale 10 a.m. MDT", 2027, UPL, date="2027-03-25"),
-            kd("Fall turkey controlled hunt application period", 2027, UPL, start="2027-05-01", end="2027-06-05"),
-            kd("Fall turkey controlled hunt results available by", 2027, UPL, date="2027-07-10"),
+               note="Listed as Feb 1 - Mar 1 in the 2026 & 2027 Upland Game, Turkey & Furbearer Seasons & Rules.", kind="application"),
+            kd("Spring turkey controlled hunt results available by", 2027, UPL, date="2027-03-20", kind="results"),
+            kd("Leftover spring controlled turkey tags on sale 10 a.m. MDT", 2027, UPL, date="2027-03-25", kind="leftover"),
+            kd("Fall turkey controlled hunt application period", 2027, UPL, start="2027-05-01", end="2027-06-05", kind="application"),
+            kd("Fall turkey controlled hunt results available by", 2027, UPL, date="2027-07-10", kind="results"),
+            kd("Leftover fall controlled turkey tags on sale 10 a.m. MDT", 2027, UPL, date="2027-07-15", kind="leftover",
+               note="'Any leftover tags go on sale July 15 at 10:00am MDT' in the 2026 & 2027 Upland Game, Turkey & Furbearer Seasons & Rules (pp.18-19)."),
         ],
         "sourceIds": [UPL, "d-odds-turkey"],
     },
@@ -366,22 +451,52 @@ FEES = [
         "Nonrefundable; a 2027 Idaho hunting license valid for big game is required to apply.", NRS, 2027),
 ]
 
-SEASONS = [
-    {"species": "turkey", "label": "General spring turkey season, male or bearded turkey", "start": "2026-04-15", "end": "2026-05-25",
-     "year": 2026, "note": "Units 1, 2 (except Farragut State Park and WMA), 3, 4, 4A, 5, 6, 7, 8, 8A, 9, 10, 10A, 11, 11A, 12, 13, 14, 15, 16, 16A, 17, 18, 19, 19A, 20, "
-                          "22, 23, 24, 31, 32 (except that portion in Payette County), 32A, 33, 39, 40, 68A, 70, 71, 72, 73, 74, 75, 76, 77 & 78. "
-                          "Published for 2026 & 2027.",
-     "sourceId": UPL},
-    {"species": "turkey", "label": "General spring turkey season, male or bearded turkey", "start": "2027-04-15", "end": "2027-05-25",
-     "year": 2027, "note": "Units 1, 2 (except Farragut State Park and WMA), 3, 4, 4A, 5, 6, 7, 8, 8A, 9, 10, 10A, 11, 11A, 12, 13, 14, 15, 16, 16A, 17, 18, 19, 19A, 20, "
-                          "22, 23, 24, 31, 32 (except that portion in Payette County), 32A, 33, 39, 40, 68A, 70, 71, 72, 73, 74, 75, 76, 77 & 78. "
-                          "The 2026 & 2027 Upland Game, Turkey & Furbearer Seasons & Rules gives one set of spring general dates for both years.",
-     "sourceId": UPL},
+# Turkey general seasons, transcribed from "Wild Turkey General Seasons 2026 & 2027" (Upland Game, Turkey & Furbearer
+# 2026 & 2027 Seasons & Rules, p.22): one set of dates printed for both 2026 and 2027.
+T_MAIN = ["1", "2 (except Farragut State Park and WMA)", "3", "4", "4A", "5", "6", "7", "8", "8A", "9", "10", "10A", "11", "11A", "12",
+          "13", "14", "15", "16", "16A", "17", "18", "19", "19A", "20", "22", "23", "24", "31", "32 (except that portion in Payette County)",
+          "32A", "33", "39", "40", "68A", "70", "71", "72", "73", "74", "75", "76", "77", "78"]
+T_FARRAGUT = ["2 (Farragut State Park and WMA only)"]
+TURKEY_TABLE = [
+    # (label, method, units, (start MM-DD, end MM-DD, end in next year?), note)
+    ("General spring turkey season, youth only, male or bearded turkey", None, T_MAIN, ("04-08", "04-14", False), "Youth only."),
+    ("General spring turkey season, youth only, male or bearded turkey", None,
+     ["21", "21A", "28", "29", "30", "36A", "36B", "37", "37A"], ("04-08", "05-25", False), "Youth only."),
+    ("General spring turkey season, youth only, male or bearded turkey", None,
+     ["32 (that portion in Payette County)", "38"], ("04-08", "05-25", False), "Youth only."),
+    ("General spring turkey season, male or bearded turkey", None, T_MAIN, ("04-15", "05-25", False), None),
+    ("General spring turkey season, male or bearded turkey (archery only)", "archery", T_FARRAGUT, ("04-15", "04-30", False),
+     "Archery only; archery permit required."),
+    ("General fall turkey season, either sex", None, ["1", "2 (except Farragut State Park and WMA)", "3", "4", "4A", "5", "6", "7", "9"],
+     ("08-30", "01-31", True), "Overlaps calendar years; turkey tags expire December 31 of the year of purchase (brochure note 2)."),
+    ("General fall turkey season, either sex (archery only)", "archery", T_FARRAGUT, ("11-01", "12-01", False),
+     "Archery only; archery permit required."),
+    ("General fall turkey season, either sex", None,
+     ["8", "8A", "10A", "11", "11A", "13", "14", "15", "16", "18", "21", "21A", "28 (portion downstream from the Hat Creek drainage)",
+      "29", "30", "68A", "70", "71", "72", "73", "74", "75", "76", "77", "78"], ("08-30", "12-31", False), None),
+    ("General fall turkey season, either sex", None, ["10", "12", "16A", "17", "19", "20"], ("08-30", "10-09", False), None),
+    ("General fall turkey season, either sex", None, ["22", "31", "32 (except that portion in Payette County)", "32A", "33", "39"],
+     ("08-30", "10-09", False), "Outside the National Forest System boundary only."),
 ]
 
 
+def turkey_seasons():
+    out = []
+    for year in (2026, 2027):
+        for label, method, units, (a, b, nxt), note in TURKEY_TABLE:
+            e = {"species": "turkey", "label": label}
+            if method:
+                e["method"] = method
+            e.update({"units": units, "start": f"{year}-{a}", "end": f"{year + 1 if nxt else year}-{b}", "year": year})
+            e["note"] = " ".join(x for x in (note, "The 2026 & 2027 brochure prints one set of general dates for both years.") if x)
+            e["sourceId"] = UPL
+            out.append(e)
+    return out
+
+
 def main():
-    repo = sys.argv[1]
+    repo, raw_seasons = sys.argv[1], sys.argv[2]
+    seasons = seasons_general.build(raw_seasons) + turkey_seasons()
     base = os.path.join(repo, "src", "data", "agency", "idaho")
     cov = []
     notes = {
@@ -397,13 +512,17 @@ def main():
         "whitetail": "Only IDFG controlled hunts listed for 'White-tailed Deer'.",
         "pronghorn": "2026 sum of limited-hunt tags (2,040) matches the brochure total '2,040 Tags Plus Unlimited Tags'. Unlimited hunts have quota null.",
         "moose": "2025 antlered moose tags sum to 510, matching the brochure '510 Tags'. 2026 hunt metadata (season dates, antler class) come from the "
-                 "2025 & 2026 brochure because the Hunt Planner list has no 2026 moose/sheep/goat hunts; hunt 3050 (area label differs) is left without dates. "
+                 "2025 & 2026 brochure because the Hunt Planner list has no 2026 moose/sheep/goat hunts (hunt 3050, whose odds-table area label differs, "
+                 "is matched by hunt number, tags and an unchanged area description in seasons_ranges.py). "
                  "IDFG published no second-drawing odds for moose, sheep or goat.",
-        "sheep": "Rocky Mountain (5xxx) and California (7xxx) bighorn hunts combined. Twelve 2026 rows lack season dates (late hunts and hunts whose brochure area label differs from the odds table).",
-        "goat": "2026 season dates from the 2025 & 2026 brochure where hunt area and tags match; 2026 hunts 6018 and 6019 have no dates (area label differs).",
-        "bear": "Controlled hunts only (general seasons are OTC). Bear hunts are not in the Hunt Planner list, so 2022-2025 rows carry no season dates, weapon or "
-                "unlimited flag; 2026 fall hunts from the 2026 brochure (sum 240 tags, matches '240 Tags'). Area 1-1 (AreaID 677) page failed, so 2022 hunt 8501 has no area text.",
-        "turkey": "Controlled hunts only. 2022-2025 rows carry no season dates (not in the Hunt Planner list); 2026 dates from the 2026 & 2027 upland brochure. "
+        "sheep": "Rocky Mountain (5xxx) and California (7xxx) bighorn hunts combined. 2026 dates from the 2025 & 2026 brochure; two 2026 rows (5027, 5028) have none because the odds table's hunt area "
+                 "('Bannock', '37') differs from the brochure's (37L, 37AL).",
+        "goat": "2026 season dates from the 2025 & 2026 brochure where hunt area and tags match; hunts 6018 and 6019 matched by hunt number, tags and an unchanged area description (odds table relabeled 51 -> 51-1, 61 -> 61-1).",
+        "bear": "Controlled hunts only (general seasons are OTC). Bear hunts are not in the Hunt Planner list, so rows carry no weapon or unlimited flag; "
+                "season dates come from each year's big game brochure (spring hunts from the previous year's edition; 2023 hunt 8501 has none: odds "
+                "table area 22-1, brochure 1-1); 2026 fall hunts from the 2026 brochure (sum 240 tags, matches '240 Tags'). Area 1-1 (AreaID 677) page failed, so 2022 hunt 8501 has no area text.",
+        "turkey": "Controlled hunts only (not in the Hunt Planner list). 2026 dates from the 2026 & 2027 upland brochure; 2025 and nine 2024 hunts from the "
+                  "2024 & 2025 brochure; seven 2024 hunts (odds-table area differs from the brochure) and 2022-2023 (brochure not found) have no dates. "
                   "Three 2026 area pages failed to load (AreaIDs 2874, 2877, 2879), so those rows have no area text or GMUs.",
         "lion": "No drawing; mountain lion is general season OTC. No draw file.",
     }
@@ -428,7 +547,7 @@ def main():
                     "held each December (2027 tags: December 5-15, 2026).",
         "species": SPECIES,
         "fees": FEES,
-        "seasons": SEASONS,
+        "seasons": seasons,
         "coverage": cov,
         "sources": SOURCES,
     }

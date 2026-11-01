@@ -23,6 +23,7 @@
    "keyDates": [
     {
      "label": "Controlled hunt first application period (deer, elk, pronghorn, fall bear)",
+     "kind": "application",
      "start": "2026-05-01",
      "end": "2026-06-05",
      "cycle": 2026,
@@ -32,6 +33,7 @@
     },
     {
      "label": "Deadline to buy drawn controlled hunt tags",
+     "kind": "payment",
      "date": "2026-08-01",
      "cycle": 2026,
      "status": "confirmed",
@@ -40,6 +42,7 @@
     },
     {
      "label": "Controlled hunt second application period",
+     "kind": "leftover",
      "start": "2026-08-05",
      "end": "2026-08-15",
      "cycle": 2026,
@@ -49,6 +52,7 @@
     },
     {
      "label": "Second drawing results posted; leftover tags on sale 10 a.m. MT",
+     "kind": "leftover",
      "date": "2026-08-25",
      "cycle": 2026,
      "status": "confirmed",
@@ -57,6 +61,8 @@
     },
     {
      "label": "Nonresident general season deer/elk tag drawing — first application period (also DAV draw)",
+     "kind": "application",
+     "residency": "nonresident",
      "start": "2026-12-05",
      "end": "2026-12-15",
      "cycle": 2027,
@@ -66,6 +72,8 @@
     },
     {
      "label": "Nonresident draw — deadline to buy tags drawn in first period",
+     "kind": "payment",
+     "residency": "nonresident",
      "date": "2027-01-20",
      "cycle": 2027,
      "status": "confirmed",
@@ -74,6 +82,8 @@
     },
     {
      "label": "Nonresident draw — second application period",
+     "kind": "leftover",
+     "residency": "nonresident",
      "start": "2027-02-05",
      "end": "2027-02-15",
      "cycle": 2027,
@@ -83,10 +93,21 @@
     },
     {
      "label": "Nonresident draw — deadline to buy second-period tags and all DAV tags",
+     "kind": "payment",
+     "residency": "nonresident",
      "date": "2027-03-20",
      "cycle": 2027,
      "status": "confirmed",
      "sourceId": "d-nr-supplement-2027"
+    },
+    {
+     "label": "2027 Idaho hunting licenses go on sale",
+     "kind": "license-sale",
+     "date": "2026-12-01",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-nr-supplement-2027",
+     "note": "Nonresidents must hold a 2027 hunting license valid for big game to apply in the Nonresident Tag Drawing (supplement p.3). The 2026 Big Game Seasons & Rules (p.57) also says 'Hunting licenses for 2027 will go on sale December 1, 2026.'"
     }
    ],
    "sourceIds": [
@@ -107,6 +128,7 @@
    "keyDates": [
     {
      "label": "Controlled hunt first application period (deer, elk, pronghorn, fall bear)",
+     "kind": "application",
      "start": "2026-05-01",
      "end": "2026-06-05",
      "cycle": 2026,
@@ -116,6 +138,7 @@
     },
     {
      "label": "Deadline to buy drawn controlled hunt tags",
+     "kind": "payment",
      "date": "2026-08-01",
      "cycle": 2026,
      "status": "confirmed",
@@ -124,6 +147,7 @@
     },
     {
      "label": "Controlled hunt second application period",
+     "kind": "leftover",
      "start": "2026-08-05",
      "end": "2026-08-15",
      "cycle": 2026,
@@ -133,6 +157,7 @@
     },
     {
      "label": "Second drawing results posted; leftover tags on sale 10 a.m. MT",
+     "kind": "leftover",
      "date": "2026-08-25",
      "cycle": 2026,
      "status": "confirmed",
@@ -141,6 +166,8 @@
     },
     {
      "label": "Nonresident general season deer/elk tag drawing — first application period (also DAV draw)",
+     "kind": "application",
+     "residency": "nonresident",
      "start": "2026-12-05",
      "end": "2026-12-15",
      "cycle": 2027,
@@ -150,6 +177,8 @@
     },
     {
      "label": "Nonresident draw — deadline to buy tags drawn in first period",
+     "kind": "payment",
+     "residency": "nonresident",
      "date": "2027-01-20",
      "cycle": 2027,
      "status": "confirmed",
@@ -158,6 +187,8 @@
     },
     {
      "label": "Nonresident draw — second application period",
+     "kind": "leftover",
+     "residency": "nonresident",
      "start": "2027-02-05",
      "end": "2027-02-15",
      "cycle": 2027,
@@ -167,10 +198,21 @@
     },
     {
      "label": "Nonresident draw — deadline to buy second-period tags and all DAV tags",
+     "kind": "payment",
+     "residency": "nonresident",
      "date": "2027-03-20",
      "cycle": 2027,
      "status": "confirmed",
      "sourceId": "d-nr-supplement-2027"
+    },
+    {
+     "label": "2027 Idaho hunting licenses go on sale",
+     "kind": "license-sale",
+     "date": "2026-12-01",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-nr-supplement-2027",
+     "note": "Nonresidents must hold a 2027 hunting license valid for big game to apply in the Nonresident Tag Drawing (supplement p.3). The 2026 Big Game Seasons & Rules (p.57) also says 'Hunting licenses for 2027 will go on sale December 1, 2026.'"
     }
    ],
    "sourceIds": [
@@ -191,6 +233,7 @@
    "keyDates": [
     {
      "label": "Controlled hunt first application period (deer, elk, pronghorn, fall bear)",
+     "kind": "application",
      "start": "2026-05-01",
      "end": "2026-06-05",
      "cycle": 2026,
@@ -200,6 +243,7 @@
     },
     {
      "label": "Deadline to buy drawn controlled hunt tags",
+     "kind": "payment",
      "date": "2026-08-01",
      "cycle": 2026,
      "status": "confirmed",
@@ -208,6 +252,7 @@
     },
     {
      "label": "Controlled hunt second application period",
+     "kind": "leftover",
      "start": "2026-08-05",
      "end": "2026-08-15",
      "cycle": 2026,
@@ -217,6 +262,7 @@
     },
     {
      "label": "Second drawing results posted; leftover tags on sale 10 a.m. MT",
+     "kind": "leftover",
      "date": "2026-08-25",
      "cycle": 2026,
      "status": "confirmed",
@@ -225,6 +271,8 @@
     },
     {
      "label": "Nonresident general season deer/elk tag drawing — first application period (also DAV draw)",
+     "kind": "application",
+     "residency": "nonresident",
      "start": "2026-12-05",
      "end": "2026-12-15",
      "cycle": 2027,
@@ -234,6 +282,8 @@
     },
     {
      "label": "Nonresident draw — deadline to buy tags drawn in first period",
+     "kind": "payment",
+     "residency": "nonresident",
      "date": "2027-01-20",
      "cycle": 2027,
      "status": "confirmed",
@@ -242,6 +292,8 @@
     },
     {
      "label": "Nonresident draw — second application period",
+     "kind": "leftover",
+     "residency": "nonresident",
      "start": "2027-02-05",
      "end": "2027-02-15",
      "cycle": 2027,
@@ -251,10 +303,21 @@
     },
     {
      "label": "Nonresident draw — deadline to buy second-period tags and all DAV tags",
+     "kind": "payment",
+     "residency": "nonresident",
      "date": "2027-03-20",
      "cycle": 2027,
      "status": "confirmed",
      "sourceId": "d-nr-supplement-2027"
+    },
+    {
+     "label": "2027 Idaho hunting licenses go on sale",
+     "kind": "license-sale",
+     "date": "2026-12-01",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-nr-supplement-2027",
+     "note": "Nonresidents must hold a 2027 hunting license valid for big game to apply in the Nonresident Tag Drawing (supplement p.3). The 2026 Big Game Seasons & Rules (p.57) also says 'Hunting licenses for 2027 will go on sale December 1, 2026.'"
     }
    ],
    "sourceIds": [
@@ -274,6 +337,7 @@
    "keyDates": [
     {
      "label": "Controlled hunt first application period (deer, elk, pronghorn, fall bear)",
+     "kind": "application",
      "start": "2026-05-01",
      "end": "2026-06-05",
      "cycle": 2026,
@@ -283,6 +347,7 @@
     },
     {
      "label": "Deadline to buy drawn controlled hunt tags",
+     "kind": "payment",
      "date": "2026-08-01",
      "cycle": 2026,
      "status": "confirmed",
@@ -291,6 +356,7 @@
     },
     {
      "label": "Controlled hunt second application period",
+     "kind": "leftover",
      "start": "2026-08-05",
      "end": "2026-08-15",
      "cycle": 2026,
@@ -300,6 +366,7 @@
     },
     {
      "label": "Second drawing results posted; leftover tags on sale 10 a.m. MT",
+     "kind": "leftover",
      "date": "2026-08-25",
      "cycle": 2026,
      "status": "confirmed",
@@ -324,6 +391,7 @@
    "keyDates": [
     {
      "label": "Moose, bighorn sheep and mountain goat application period",
+     "kind": "application",
      "start": "2026-04-01",
      "end": "2026-04-30",
      "cycle": 2026,
@@ -333,6 +401,7 @@
     },
     {
      "label": "Successful applicants notified by",
+     "kind": "results",
      "date": "2026-06-10",
      "cycle": 2026,
      "status": "confirmed",
@@ -341,6 +410,7 @@
     },
     {
      "label": "Second drawing application period",
+     "kind": "leftover",
      "start": "2026-06-15",
      "end": "2026-06-25",
      "cycle": 2026,
@@ -350,6 +420,7 @@
     },
     {
      "label": "Leftover tags from second drawing go on sale",
+     "kind": "leftover",
      "date": "2026-07-10",
      "cycle": 2026,
      "status": "confirmed",
@@ -374,6 +445,7 @@
    "keyDates": [
     {
      "label": "Moose, bighorn sheep and mountain goat application period",
+     "kind": "application",
      "start": "2026-04-01",
      "end": "2026-04-30",
      "cycle": 2026,
@@ -383,6 +455,7 @@
     },
     {
      "label": "Successful applicants notified by",
+     "kind": "results",
      "date": "2026-06-10",
      "cycle": 2026,
      "status": "confirmed",
@@ -391,6 +464,7 @@
     },
     {
      "label": "Second drawing application period",
+     "kind": "leftover",
      "start": "2026-06-15",
      "end": "2026-06-25",
      "cycle": 2026,
@@ -417,6 +491,7 @@
    "keyDates": [
     {
      "label": "Moose, bighorn sheep and mountain goat application period",
+     "kind": "application",
      "start": "2026-04-01",
      "end": "2026-04-30",
      "cycle": 2026,
@@ -426,6 +501,7 @@
     },
     {
      "label": "Successful applicants notified by",
+     "kind": "results",
      "date": "2026-06-10",
      "cycle": 2026,
      "status": "confirmed",
@@ -434,6 +510,7 @@
     },
     {
      "label": "Second drawing application period",
+     "kind": "leftover",
      "start": "2026-06-15",
      "end": "2026-06-25",
      "cycle": 2026,
@@ -458,6 +535,7 @@
    "keyDates": [
     {
      "label": "Spring black bear controlled hunt application period",
+     "kind": "application",
      "start": "2027-01-15",
      "end": "2027-02-15",
      "cycle": 2027,
@@ -466,7 +544,17 @@
      "note": "Published for the 2027 spring controlled hunts in the 2026 Big Game Seasons & Rules."
     },
     {
+     "label": "Leftover spring black bear controlled hunt tags on sale 10 a.m. MT",
+     "kind": "leftover",
+     "date": "2027-04-01",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-rules-big-game-2026",
+     "note": "The 2026 Big Game Seasons & Rules (valid July 2026 - June 2027) lists 'April 1: Leftover tags for spring bear go on sale at 10 a.m. Mountain Time' (p.108) and the 2027 spring controlled hunts (p.72); the year is not printed next to April 1. Spring bear tags have no purchase deadline (bought before hunting)."
+    },
+    {
      "label": "Fall black bear controlled hunt application period",
+     "kind": "application",
      "start": "2026-05-01",
      "end": "2026-06-05",
      "cycle": 2026,
@@ -476,6 +564,7 @@
     },
     {
      "label": "Deadline to buy drawn fall bear controlled hunt tags",
+     "kind": "payment",
      "date": "2026-08-01",
      "cycle": 2026,
      "status": "confirmed",
@@ -512,6 +601,7 @@
    "keyDates": [
     {
      "label": "Spring turkey controlled hunt application period",
+     "kind": "application",
      "start": "2027-02-01",
      "end": "2027-03-01",
      "cycle": 2027,
@@ -521,6 +611,7 @@
     },
     {
      "label": "Spring turkey controlled hunt results available by",
+     "kind": "results",
      "date": "2027-03-20",
      "cycle": 2027,
      "status": "confirmed",
@@ -528,6 +619,7 @@
     },
     {
      "label": "Leftover spring controlled turkey tags on sale 10 a.m. MDT",
+     "kind": "leftover",
      "date": "2027-03-25",
      "cycle": 2027,
      "status": "confirmed",
@@ -535,6 +627,7 @@
     },
     {
      "label": "Fall turkey controlled hunt application period",
+     "kind": "application",
      "start": "2027-05-01",
      "end": "2027-06-05",
      "cycle": 2027,
@@ -543,10 +636,20 @@
     },
     {
      "label": "Fall turkey controlled hunt results available by",
+     "kind": "results",
      "date": "2027-07-10",
      "cycle": 2027,
      "status": "confirmed",
      "sourceId": "d-rules-upland-2026-27"
+    },
+    {
+     "label": "Leftover fall controlled turkey tags on sale 10 a.m. MDT",
+     "kind": "leftover",
+     "date": "2027-07-15",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-rules-upland-2026-27",
+     "note": "'Any leftover tags go on sale July 15 at 10:00am MDT' in the 2026 & 2027 Upland Game, Turkey & Furbearer Seasons & Rules (pp.18-19)."
     }
    ],
    "sourceIds": [
@@ -964,21 +1067,3575 @@
  ],
  "seasons": [
   {
-   "species": "turkey",
-   "label": "General spring turkey season, male or bearded turkey",
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
+   "method": "all",
+   "units": [
+    "20A",
+    "26",
+    "27"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlerless or Antlered",
+   "method": "all",
+   "units": [
+    "16A",
+    "17",
+    "19",
+    "20"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-11-20",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
+   "method": "all",
+   "units": [
+    "4A"
+   ],
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
+   "method": "all",
+   "units": [
+    "21",
+    "21A",
+    "28",
+    "29",
+    "30",
+    "31",
+    "32",
+    "32A",
+    "36",
+    "36A",
+    "36B",
+    "37",
+    "37A",
+    "50",
+    "51",
+    "56",
+    "58",
+    "59",
+    "59A",
+    "60",
+    "60A",
+    "61",
+    "62",
+    "62A",
+    "64",
+    "65",
+    "66",
+    "66A",
+    "67",
+    "68",
+    "69",
+    "71",
+    "72",
+    "74",
+    "75",
+    "76",
+    "77"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlerless",
+   "method": "all",
+   "units": [
+    "22",
+    "31",
+    "32",
+    "32A"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Two-Point",
+   "method": "all",
+   "units": [
+    "22",
+    "40",
+    "41",
+    "42"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
+   "method": "all",
+   "units": [
+    "1",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "9",
+    "19A",
+    "23",
+    "24",
+    "25",
+    "33",
+    "34",
+    "35",
+    "39",
+    "43",
+    "46",
+    "48",
+    "49",
+    "52A",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlerless",
+   "method": "all",
+   "units": [
+    "19A",
+    "21",
+    "21A",
+    "23",
+    "24",
+    "25",
+    "28",
+    "29",
+    "30",
+    "33",
+    "34",
+    "35",
+    "36",
+    "36A",
+    "36B",
+    "37",
+    "37A",
+    "39",
+    "43",
+    "46",
+    "52A",
+    "Unit 30A private land only"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlerless or Antlered",
+   "method": "all",
+   "units": [
+    "8",
+    "8A",
+    "10",
+    "10A",
+    "12",
+    "15",
+    "16"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-03",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlerless",
+   "method": "all",
+   "units": [
+    "4",
+    "7",
+    "9"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-09",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlerless",
+   "method": "all",
+   "units": [
+    "1",
+    "3",
+    "4A",
+    "5",
+    "6",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
+   "method": "all",
+   "units": [
+    "4",
+    "7",
+    "9"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-11-09",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
+   "method": "all",
+   "units": [
+    "1",
+    "3",
+    "4A",
+    "5",
+    "6",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-11-14",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
+   "method": "all",
+   "units": [
+    "1",
+    "3",
+    "4A",
+    "5",
+    "6",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-11-15",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Antlered",
+   "method": "archery",
+   "units": [
+    "1",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9",
+    "50",
+    "51",
+    "58",
+    "59",
+    "59A",
+    "60",
+    "60A",
+    "61",
+    "62",
+    "62A",
+    "63",
+    "64",
+    "65",
+    "66",
+    "66A",
+    "67",
+    "68",
+    "69",
+    "70",
+    "71",
+    "72",
+    "73",
+    "73A",
+    "74",
+    "75",
+    "76",
+    "77",
+    "78",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Antlerless",
+   "method": "archery",
+   "units": [
+    "1",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9",
+    "22",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "8",
+    "8A",
+    "10",
+    "10A",
+    "12",
+    "15",
+    "19A",
+    "21",
+    "21A",
+    "23",
+    "24",
+    "25",
+    "29",
+    "30",
+    "30A",
+    "31",
+    "32",
+    "32A",
+    "33",
+    "34",
+    "35",
+    "36",
+    "36A",
+    "36B",
+    "37",
+    "37A",
+    "43",
+    "46",
+    "47",
+    "48",
+    "49",
+    "52A",
+    "56",
+    "57",
+    "Unit 38, except Lake Lowell Sector of Deer Flat NWR"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Two-Point",
+   "method": "archery",
+   "units": [
+    "22",
+    "40",
+    "41",
+    "42"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Antlered",
+   "method": "archery",
+   "units": [
+    "73A"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Antlered",
+   "method": "archery",
+   "units": [
+    "Unit 2, Farragut SP only"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Antlerless",
+   "method": "archery",
+   "units": [
+    "Unit 2, Farragut SP only"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "Portion of Unit 39"
+   ],
+   "start": "2026-11-10",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "55"
+   ],
+   "start": "2026-11-16",
+   "end": "2026-12-10",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "60A",
+    "62",
+    "64",
+    "65",
+    "66",
+    "67",
+    "69"
+   ],
+   "start": "2026-11-20",
+   "end": "2026-12-19",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "28"
+   ],
+   "start": "2026-12-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Antlered",
+   "method": "archery",
+   "units": [
+    "1",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-12-10",
+   "end": "2026-12-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Archery deer, Regular Deer Tag: Antlerless",
+   "method": "archery",
+   "units": [
+    "1",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-12-10",
+   "end": "2026-12-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Muzzleloader deer, Regular Deer Tag: Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "39"
+   ],
+   "start": "2026-09-08",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Muzzleloader deer, Regular Deer Tag: Antlered",
+   "method": "muzzleloader",
+   "units": [
+    "73A"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Muzzleloader deer, Regular Deer Tag: Antlered",
+   "method": "muzzleloader",
+   "units": [
+    "4",
+    "7",
+    "9"
+   ],
+   "start": "2026-11-10",
+   "end": "2026-11-14",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Muzzleloader deer, Regular Deer Tag: Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "4",
+    "7",
+    "9"
+   ],
+   "start": "2026-11-10",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Muzzleloader deer, Regular Deer Tag: Antlered",
+   "method": "muzzleloader",
+   "units": [
+    "4",
+    "7",
+    "9"
+   ],
+   "start": "2026-11-15",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Short-Range Weapon deer, Regular Deer Tag: Antlerless or Antlered",
+   "method": "other",
+   "units": [
+    "Portion of Unit 53"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-11-06",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Short-Range Weapon deer, Regular Deer Tag: Antlered",
+   "method": "other",
+   "units": [
+    "63"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Short-Range Weapon deer, Regular Deer Tag: Antlered",
+   "method": "other",
+   "units": [
+    "Unit 38, except Lake Lowell Sector of Deer Flat NWR"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "mule-deer",
+   "label": "General Short-Range Weapon deer, Regular Deer Tag: Antlerless",
+   "method": "other",
+   "units": [
+    "Unit 38, except Lake Lowell Sector of Deer Flat NWR"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "all",
+   "units": [
+    "20A",
+    "26",
+    "27"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "all",
+   "units": [
+    "16A",
+    "17",
+    "19",
+    "20"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-11-20",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, White-tailed Deer Tag: Two-Point",
+   "method": "all",
+   "units": [
+    "40",
+    "41"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, White-tailed Deer Tag: Antlered",
+   "method": "all",
+   "units": [
+    "21",
+    "21A",
+    "28",
+    "29",
+    "30",
+    "30A",
+    "36A",
+    "36B",
+    "37",
+    "37A"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, White-tailed Deer Tag: Antlerless",
+   "method": "all",
+   "units": [
+    "21",
+    "21A",
+    "28",
+    "29",
+    "30",
+    "30A",
+    "36A",
+    "36B",
+    "37",
+    "37A"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "all",
+   "units": [
+    "22",
+    "25",
+    "31",
+    "32",
+    "32A",
+    "39",
+    "43",
+    "46",
+    "50",
+    "51",
+    "58",
+    "59",
+    "59A",
+    "60",
+    "60A",
+    "61",
+    "62",
+    "62A",
+    "64",
+    "65",
+    "66",
+    "67",
+    "69"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "all",
+   "units": [
+    "13"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-03",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "all",
+   "units": [
+    "33",
+    "34",
+    "35"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-08",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "all",
+   "units": [
+    "4",
+    "7",
+    "9"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-09",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "all",
+   "units": [
+    "10",
+    "11A",
+    "12",
+    "14",
+    "15",
+    "16",
+    "18",
+    "19A",
+    "23",
+    "24"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-20",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "all",
+   "units": [
+    "1",
+    "3",
+    "4A",
+    "5",
+    "6",
+    "8",
+    "8A",
+    "10A",
+    "11",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "all",
+   "units": [
+    "50",
+    "51",
+    "58",
+    "59",
+    "59A",
+    "60",
+    "61",
+    "62A"
+   ],
+   "start": "2026-11-10",
+   "end": "2026-12-09",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Archery deer, White-tailed Deer Tag: Antlerless",
+   "method": "archery",
+   "units": [
+    "40",
+    "41"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Archery deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "1",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "8",
+    "8A",
+    "9",
+    "10",
+    "10A",
+    "11A",
+    "12",
+    "15",
+    "19A",
+    "21",
+    "21A",
+    "22",
+    "23",
+    "24",
+    "25",
+    "29",
+    "30",
+    "30A",
+    "31",
+    "32",
+    "32A",
+    "33",
+    "34",
+    "35",
+    "36A",
+    "36B",
+    "37",
+    "37A",
+    "43",
+    "46",
+    "50",
+    "51",
+    "58",
+    "59",
+    "59A",
+    "60",
+    "60A",
+    "61",
+    "62",
+    "62A",
+    "63",
+    "63A",
+    "64",
+    "65",
+    "66",
+    "67",
+    "69",
+    "Unit 2, except Farragut SP",
+    "Unit 38, except Lake Lowell Sector of Deer Flat NWR"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Archery deer, White-tailed Deer Tag: Two-Point",
+   "method": "archery",
+   "units": [
+    "40",
+    "41"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Archery deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "Unit 2, Farragut SP only"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Archery deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "60A",
+    "62",
+    "63",
+    "63A",
+    "64",
+    "65",
+    "66",
+    "67",
+    "69"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-12-19",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Archery deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "Portion of Unit 39"
+   ],
+   "start": "2026-11-10",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Archery deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "28"
+   ],
+   "start": "2026-12-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Archery deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "15"
+   ],
+   "start": "2026-12-05",
+   "end": "2026-12-20",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Archery deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "1",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-12-10",
+   "end": "2026-12-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Muzzleloader deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "muzzleloader",
+   "units": [
+    "4",
+    "7",
+    "9"
+   ],
+   "start": "2026-11-10",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Muzzleloader deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "muzzleloader",
+   "units": [
+    "14",
+    "18"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-12-05",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Muzzleloader deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "muzzleloader",
+   "units": [
+    "16"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-12-09",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Muzzleloader deer, White-tailed Deer Tag: Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-12-02",
+   "end": "2026-12-11",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Muzzleloader deer, White-tailed Deer Tag: Antlerless or Antlered",
+   "method": "muzzleloader",
+   "units": [
+    "8A"
+   ],
+   "start": "2026-12-02",
+   "end": "2026-12-14",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Short-Range Weapon deer, White-tailed Deer Tag: Antlerless",
+   "method": "other",
+   "units": [
+    "63A"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-20",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Short-Range Weapon deer, White-tailed Deer Tag: Antlered",
+   "method": "other",
+   "units": [
+    "63",
+    "Unit 38, except Lake Lowell Sector of Deer Flat NWR"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Short-Range Weapon deer, White-tailed Deer Tag: Antlerless",
+   "method": "other",
+   "units": [
+    "63"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Short-Range Weapon deer, White-tailed Deer Tag: Antlerless",
+   "method": "other",
+   "units": [
+    "Unit 38, except Lake Lowell Sector of Deer Flat NWR"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Short-Range Weapon deer, White-tailed Deer Tag: Antlered",
+   "method": "other",
+   "units": [
+    "63A"
+   ],
+   "start": "2026-10-21",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Short-Range Weapon deer, White-tailed Deer Tag: Antlered",
+   "method": "other",
+   "units": [
+    "21",
+    "21A",
+    "28",
+    "29",
+    "30",
+    "30A",
+    "36A",
+    "36B",
+    "37",
+    "37A"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-12-09",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Short-Range Weapon deer, White-tailed Deer Tag: Antlerless",
+   "method": "other",
+   "units": [
+    "21",
+    "21A",
+    "28",
+    "29",
+    "30",
+    "30A",
+    "36A",
+    "36B",
+    "37",
+    "37A"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Bannock Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "70",
+    "71",
+    "72",
+    "73",
+    "73A",
+    "74"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Bannock Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "70",
+    "71",
+    "72",
+    "73",
+    "73A",
+    "74"
+   ],
+   "start": "2026-10-25",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Bannock Zone: Muzzleloader, Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "70",
+    "71",
+    "72",
+    "73",
+    "73A",
+    "74"
+   ],
+   "start": "2026-12-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Bear River Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "75",
+    "77",
+    "78"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Bear River Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "75",
+    "77",
+    "78"
+   ],
+   "start": "2026-10-25",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Bear River Zone: Muzzleloader, Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "75",
+    "77",
+    "78"
+   ],
+   "start": "2026-12-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Beaverhead Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "Portion of Units 58, 59 and 59A"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-08-29",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Beaverhead Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "Private irrigated land in Unit 30"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Beaverhead Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "30",
+    "30A",
+    "58",
+    "59",
+    "59A"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Beaverhead Zone: Muzzleloader, Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "30",
+    "30A",
+    "58",
+    "59",
+    "59A"
+   ],
+   "start": "2026-10-15",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Big Desert Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "68"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-08-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Big Desert Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "68A"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Big Desert Zone: Short-Range Weapons, Antlerless or Antlered",
+   "method": "other",
+   "units": [
+    "53"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Big Desert Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "52A",
+    "68"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Boise River Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "Portion of Unit 39"
+   ],
+   "start": "2026-11-10",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Brownlee Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "31"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Diamond Creek Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "66A",
+    "76"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Dworshak Zone: Archery, Antlered",
+   "method": "archery",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Dworshak Zone: Muzzleloader, Antlered",
+   "method": "muzzleloader",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-12-02",
+   "end": "2026-12-14",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Elk City Zone: Archery, Antlered",
+   "method": "archery",
+   "units": [
+    "15",
+    "16"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Elk City Zone: Muzzleloader, Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "14",
+    "16"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-12-05",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Island Park Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "Island Park Zone"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Island Park Zone: Muzzleloader, Antlerless or Spike",
+   "method": "muzzleloader",
+   "units": [
+    "61"
+   ],
+   "start": "2026-11-15",
+   "end": "2026-12-09",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Lemhi Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "Portion of Unit 51"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-08-29",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Lemhi Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "29",
+    "37",
+    "37A"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Lemhi Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "29",
+    "37",
+    "37A",
+    "51"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Lemhi Zone: Muzzleloader, Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "29",
+    "37",
+    "37A",
+    "51"
+   ],
+   "start": "2026-11-25",
+   "end": "2026-12-09",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Lolo Zone: Archery, Antlered",
+   "method": "archery",
+   "units": [
+    "10",
+    "12"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - McCall Zone: Short-Range Weapons, Antlerless",
+   "method": "other",
+   "units": [
+    "Units 23 and 24 outside NF boundary"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - McCall Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "19A",
+    "23",
+    "24",
+    "25"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - McCall Zone: Any Weapon, Spike",
+   "method": "all",
+   "units": [
+    "Portion of McCall Zone"
+   ],
+   "start": "2026-10-05",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - McCall Zone: Short-Range Weapons, Antlerless",
+   "method": "other",
+   "units": [
+    "23",
+    "24"
+   ],
+   "start": "2026-11-10",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Middle Fork Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "20A",
+    "26"
+   ],
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Middle Fork Zone: Any Weapon, Brow-tined",
+   "method": "all",
+   "units": [
+    "27"
+   ],
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Palisades Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "64",
+    "65",
+    "67"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Palouse Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "Portion of Units 8, 8A, 11A"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-09-15",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Palouse Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "8",
+    "8A",
+    "11A"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Palouse Zone: Muzzleloader, Antlerless or Spike",
+   "method": "muzzleloader",
+   "units": [
+    "8A"
+   ],
+   "start": "2026-12-02",
+   "end": "2026-12-05",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Palouse Zone: Muzzleloader, Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "Portion of Unit 8 and 11A"
+   ],
+   "start": "2026-12-02",
+   "end": "2026-12-14",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Palouse Zone: Muzzleloader, Spike",
+   "method": "muzzleloader",
+   "units": [
+    "8A"
+   ],
+   "start": "2026-12-06",
+   "end": "2026-12-14",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Panhandle Zone: Archery, Antlered",
+   "method": "archery",
+   "units": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Panhandle Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "Units 1, 2, 3, portion of 4A, 5, 6"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-09-21",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Panhandle Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9"
+   ],
+   "start": "2026-10-25",
+   "end": "2026-10-29",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Panhandle Zone: Muzzleloader, Antlered",
+   "method": "muzzleloader",
+   "units": [
+    "4",
+    "7",
+    "9"
+   ],
+   "start": "2026-11-15",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Panhandle Zone: Muzzleloader, Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "Portion of Units 1, 2, 3, 4A and 5"
+   ],
+   "start": "2026-12-02",
+   "end": "2026-12-08",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Panhandle Zone: Archery, Antlered",
+   "method": "archery",
+   "units": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9"
+   ],
+   "start": "2026-12-10",
+   "end": "2026-12-16",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Pioneer Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "Portion of Unit 50"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-08-29",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Pioneer Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "Private irrigated land in Unit 36A"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Pioneer Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "36A",
+    "49",
+    "50"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Pioneer Zone: Muzzleloader, Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "36A",
+    "49",
+    "50"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-11-09",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Salmon Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "Portion of Unit 21A"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Salmon Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "21",
+    "21A",
+    "36B"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Salmon Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "28"
+   ],
+   "start": "2026-12-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Sawtooth Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "33",
+    "34",
+    "35",
+    "36"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Selway Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "16A",
+    "17",
+    "19",
+    "20"
+   ],
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Smoky-Bennett Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "43",
+    "48"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Snake River Zone: Short-Range Weapons, Antlerless or Antlered",
+   "method": "other",
+   "units": [
+    "63A"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-08-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Snake River Zone: Short-Range Weapons, Antlerless",
+   "method": "other",
+   "units": [
+    "63A"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - South Hills Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "55",
+    "56",
+    "57"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Tex Creek Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "66",
+    "69"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Tex Creek Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "66",
+    "69"
+   ],
+   "start": "2026-10-22",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Weiser River Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "22",
+    "32",
+    "32A"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Weiser River Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "32"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General A Tag elk, Elk A Tag - Weiser River Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "Unit 32 private land only"
+   ],
+   "start": "2026-11-16",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Bear River Zone: Archery, Antlerless or Spike",
+   "method": "archery",
+   "units": [
+    "75",
+    "77",
+    "78"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-14",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Bear River Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "75",
+    "77",
+    "78"
+   ],
+   "start": "2026-10-15",
+   "end": "2026-10-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Big Desert Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "52A",
+    "68"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Boise River Zone: Any Weapon, Antlerless or Antlered",
+   "method": "all",
+   "units": [
+    "38"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Boise River Zone: Any Weapon, Antlerless or Spike",
+   "method": "all",
+   "units": [
+    "38"
+   ],
+   "start": "2026-10-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Boise River Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "Portion of Unit 39"
+   ],
+   "start": "2026-10-27",
+   "end": "2026-11-09",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Brownlee Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "Private agricultural lands in Unit 31"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Brownlee Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "31"
+   ],
+   "start": "2026-11-15",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Diamond Creek Zone: Archery, Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "Portion of Unit 76"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Diamond Creek Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "Portion of Unit 76"
+   ],
+   "start": "2026-10-01",
+   "end": "2026-10-15",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Dworshak Zone: Any Weapon, Brow-tined",
+   "method": "all",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-03",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Elk City Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "14",
+    "15",
+    "16"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Lolo Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "10",
+    "12"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-03",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - McCall Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "Portion of McCall Zone"
+   ],
+   "start": "2026-10-15",
+   "end": "2026-11-03",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Middle Fork Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "20A",
+    "26"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Middle Fork Zone: Any Weapon, Brow-tined",
+   "method": "all",
+   "units": [
+    "27"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Middle Fork Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "20A",
+    "26"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Middle Fork Zone: Any Weapon, Brow-tined",
+   "method": "all",
+   "units": [
+    "27"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Palisades Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "64",
+    "65",
+    "67"
+   ],
+   "start": "2026-10-15",
+   "end": "2026-10-21",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Palouse Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "8",
+    "8A",
+    "11A"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Panhandle Zone: Archery, Antlered",
+   "method": "archery",
+   "units": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9"
+   ],
+   "start": "2026-09-06",
+   "end": "2026-09-12",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Panhandle Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Panhandle Zone: Muzzleloader, Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "Portion of Units 1, 2, 3, 4A and 5"
+   ],
+   "start": "2026-12-02",
+   "end": "2026-12-08",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Pioneer Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "36A",
+    "49",
+    "50"
+   ],
+   "start": "2026-11-10",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Salmon Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "21",
+    "21A",
+    "28",
+    "36B"
+   ],
+   "start": "2026-10-15",
+   "end": "2026-11-08",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Sawtooth Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "33",
+    "34",
+    "35",
+    "36"
+   ],
+   "start": "2026-10-15",
+   "end": "2026-11-08",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Selway Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "16A",
+    "17",
+    "19",
+    "20"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Selway Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "16A",
+    "17",
+    "19",
+    "20"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-11-11",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Smoky-Bennett Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "44",
+    "45",
+    "52"
+   ],
+   "start": "2026-11-10",
+   "end": "2026-11-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - South Hills Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "56"
+   ],
+   "start": "2026-10-25",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Tex Creek Zone: Archery, Antlerless or Spike",
+   "method": "archery",
+   "units": [
+    "66",
+    "69"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-14",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Tex Creek Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "66",
+    "69"
+   ],
+   "start": "2026-10-15",
+   "end": "2026-10-21",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Weiser River Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "Unit 32 private land only"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Weiser River Zone: Any Weapon, Antlerless",
+   "method": "all",
+   "units": [
+    "32"
+   ],
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "elk",
+   "label": "General B Tag elk, Elk B Tag - Weiser River Zone: Any Weapon, Antlered",
+   "method": "all",
+   "units": [
+    "22",
+    "32",
+    "32A"
+   ],
+   "start": "2026-10-25",
+   "end": "2026-11-03",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-elk"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "22",
+    "31",
+    "32",
+    "32A"
+   ],
+   "start": "2026-04-01",
+   "end": "2026-05-22",
+   "year": 2026,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2025"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "10",
+    "12",
+    "16A",
+    "17",
+    "19",
+    "20",
+    "20A",
+    "21",
+    "21A",
+    "26",
+    "27",
+    "28",
+    "36B"
+   ],
+   "start": "2026-04-01",
+   "end": "2026-06-30",
+   "year": 2026,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2025"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "8",
+    "8A",
+    "10A",
+    "11",
+    "11A",
+    "13",
+    "18"
+   ],
    "start": "2026-04-15",
+   "end": "2026-05-31",
+   "year": 2026,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2025"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "24"
+   ],
+   "start": "2026-04-15",
+   "end": "2026-06-07",
+   "year": 2026,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2025"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "1",
+    "2",
+    "3",
+    "5",
+    "29",
+    "30",
+    "30A",
+    "36A",
+    "37",
+    "37A",
+    "43",
+    "44",
+    "45",
+    "48",
+    "49",
+    "52",
+    "52A",
+    "53"
+   ],
+   "start": "2026-04-15",
+   "end": "2026-06-15",
+   "year": 2026,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2025"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "4",
+    "4A",
+    "6",
+    "14",
+    "15",
+    "16",
+    "19A",
+    "23",
+    "25",
+    "33",
+    "34",
+    "35",
+    "36",
+    "39",
+    "50",
+    "51",
+    "58",
+    "59",
+    "59A",
+    "60",
+    "60A",
+    "61",
+    "62",
+    "62A",
+    "63",
+    "63A",
+    "64",
+    "65",
+    "66",
+    "66A",
+    "67",
+    "68",
+    "68A",
+    "69",
+    "70",
+    "71",
+    "72",
+    "73",
+    "73A",
+    "74",
+    "75",
+    "76",
+    "77",
+    "78"
+   ],
+   "start": "2026-04-15",
+   "end": "2026-06-30",
+   "year": 2026,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2025"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "7",
+    "9"
+   ],
+   "start": "2026-04-15",
+   "end": "2026-07-31",
+   "year": 2026,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2025"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "24"
+   ],
+   "start": "2026-06-08",
+   "end": "2026-06-30",
+   "year": 2026,
+   "note": "Portion of Unit 24 only. See Note 1, Page 71. Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2025"
+  },
+  {
+   "species": "bear",
+   "label": "General fall black bear take season",
+   "method": "all",
+   "units": [
+    "1",
+    "2",
+    "3",
+    "5",
+    "8",
+    "8A",
+    "10A",
+    "11",
+    "11A",
+    "13",
+    "14",
+    "15",
+    "16",
+    "18",
+    "19A",
+    "22",
+    "23",
+    "24",
+    "25",
+    "29",
+    "30",
+    "30A",
+    "31",
+    "32",
+    "32A",
+    "33",
+    "34",
+    "35",
+    "36",
+    "36A",
+    "37",
+    "37A",
+    "39",
+    "43",
+    "44",
+    "45",
+    "48",
+    "49",
+    "50",
+    "51",
+    "52",
+    "52A",
+    "53",
+    "58",
+    "59",
+    "59A",
+    "60",
+    "60A",
+    "61",
+    "62",
+    "62A",
+    "63",
+    "63A",
+    "64",
+    "65",
+    "66",
+    "66A",
+    "67",
+    "68",
+    "68A",
+    "69",
+    "70",
+    "71",
+    "72",
+    "73",
+    "73A",
+    "74",
+    "75",
+    "76",
+    "77",
+    "78"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2026"
+  },
+  {
+   "species": "bear",
+   "label": "General fall black bear take season",
+   "method": "all",
+   "units": [
+    "4",
+    "4A",
+    "6",
+    "7",
+    "9",
+    "10",
+    "12",
+    "16A",
+    "17",
+    "19",
+    "20",
+    "20A",
+    "21",
+    "21A",
+    "26",
+    "27",
+    "28",
+    "36B"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2026"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "22",
+    "31",
+    "32",
+    "32A"
+   ],
+   "start": "2027-04-01",
+   "end": "2027-05-22",
+   "year": 2027,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2026"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "10",
+    "12",
+    "16A",
+    "17",
+    "19",
+    "20",
+    "20A",
+    "21",
+    "21A",
+    "26",
+    "27",
+    "28",
+    "36B"
+   ],
+   "start": "2027-04-01",
+   "end": "2027-06-30",
+   "year": 2027,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2026"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "8",
+    "8A",
+    "10A",
+    "11",
+    "11A",
+    "13",
+    "18"
+   ],
+   "start": "2027-04-15",
+   "end": "2027-05-31",
+   "year": 2027,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2026"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "24"
+   ],
+   "start": "2027-04-15",
+   "end": "2027-06-07",
+   "year": 2027,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2026"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "1",
+    "2",
+    "3",
+    "5",
+    "29",
+    "30",
+    "30A",
+    "36A",
+    "37",
+    "37A",
+    "43",
+    "44",
+    "45",
+    "48",
+    "49",
+    "52",
+    "52A",
+    "53"
+   ],
+   "start": "2027-04-15",
+   "end": "2027-06-15",
+   "year": 2027,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2026"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "4",
+    "4A",
+    "6",
+    "14",
+    "15",
+    "16",
+    "19A",
+    "23",
+    "25",
+    "33",
+    "34",
+    "35",
+    "36",
+    "39",
+    "50",
+    "51",
+    "58",
+    "59",
+    "59A",
+    "60",
+    "60A",
+    "61",
+    "62",
+    "62A",
+    "63",
+    "63A",
+    "64",
+    "65",
+    "66",
+    "66A",
+    "67",
+    "68",
+    "68A",
+    "69",
+    "70",
+    "71",
+    "72",
+    "73",
+    "73A",
+    "74",
+    "75",
+    "76",
+    "77",
+    "78"
+   ],
+   "start": "2027-04-15",
+   "end": "2027-06-30",
+   "year": 2027,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2026"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "7",
+    "9"
+   ],
+   "start": "2027-04-15",
+   "end": "2027-07-31",
+   "year": 2027,
+   "note": "Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2026"
+  },
+  {
+   "species": "bear",
+   "label": "General spring black bear take season",
+   "method": "all",
+   "units": [
+    "24"
+   ],
+   "start": "2027-06-08",
+   "end": "2027-06-30",
+   "year": 2027,
+   "note": "Portion of Unit 24 only. See Note 1, Page 71. Take season; females with young are protected. Dog, bait and second-tag rules vary by unit (see brochure).",
+   "sourceId": "d-rules-big-game-2026"
+  },
+  {
+   "species": "lion",
+   "label": "General mountain lion take season (all units)",
+   "method": "all",
+   "start": "2026-07-01",
+   "end": "2027-06-30",
+   "year": 2026,
+   "note": "Printed as July 1 - June 30 for all 32 unit groups in the July 2026 - June 2027 table; hound (dogs prohibited) periods and second-tag rules vary by unit.",
+   "sourceId": "d-rules-big-game-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "General spring turkey season, youth only, male or bearded turkey",
+   "units": [
+    "1",
+    "2 (except Farragut State Park and WMA)",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "8",
+    "8A",
+    "9",
+    "10",
+    "10A",
+    "11",
+    "11A",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "16A",
+    "17",
+    "18",
+    "19",
+    "19A",
+    "20",
+    "22",
+    "23",
+    "24",
+    "31",
+    "32 (except that portion in Payette County)",
+    "32A",
+    "33",
+    "39",
+    "40",
+    "68A",
+    "70",
+    "71",
+    "72",
+    "73",
+    "74",
+    "75",
+    "76",
+    "77",
+    "78"
+   ],
+   "start": "2026-04-08",
+   "end": "2026-04-14",
+   "year": 2026,
+   "note": "Youth only. The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General spring turkey season, youth only, male or bearded turkey",
+   "units": [
+    "21",
+    "21A",
+    "28",
+    "29",
+    "30",
+    "36A",
+    "36B",
+    "37",
+    "37A"
+   ],
+   "start": "2026-04-08",
    "end": "2026-05-25",
    "year": 2026,
-   "note": "Units 1, 2 (except Farragut State Park and WMA), 3, 4, 4A, 5, 6, 7, 8, 8A, 9, 10, 10A, 11, 11A, 12, 13, 14, 15, 16, 16A, 17, 18, 19, 19A, 20, 22, 23, 24, 31, 32 (except that portion in Payette County), 32A, 33, 39, 40, 68A, 70, 71, 72, 73, 74, 75, 76, 77 & 78. Published for 2026 & 2027.",
+   "note": "Youth only. The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General spring turkey season, youth only, male or bearded turkey",
+   "units": [
+    "32 (that portion in Payette County)",
+    "38"
+   ],
+   "start": "2026-04-08",
+   "end": "2026-05-25",
+   "year": 2026,
+   "note": "Youth only. The 2026 & 2027 brochure prints one set of general dates for both years.",
    "sourceId": "d-rules-upland-2026-27"
   },
   {
    "species": "turkey",
    "label": "General spring turkey season, male or bearded turkey",
+   "units": [
+    "1",
+    "2 (except Farragut State Park and WMA)",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "8",
+    "8A",
+    "9",
+    "10",
+    "10A",
+    "11",
+    "11A",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "16A",
+    "17",
+    "18",
+    "19",
+    "19A",
+    "20",
+    "22",
+    "23",
+    "24",
+    "31",
+    "32 (except that portion in Payette County)",
+    "32A",
+    "33",
+    "39",
+    "40",
+    "68A",
+    "70",
+    "71",
+    "72",
+    "73",
+    "74",
+    "75",
+    "76",
+    "77",
+    "78"
+   ],
+   "start": "2026-04-15",
+   "end": "2026-05-25",
+   "year": 2026,
+   "note": "The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General spring turkey season, male or bearded turkey (archery only)",
+   "method": "archery",
+   "units": [
+    "2 (Farragut State Park and WMA only)"
+   ],
+   "start": "2026-04-15",
+   "end": "2026-04-30",
+   "year": 2026,
+   "note": "Archery only; archery permit required. The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General fall turkey season, either sex",
+   "units": [
+    "1",
+    "2 (except Farragut State Park and WMA)",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9"
+   ],
+   "start": "2026-08-30",
+   "end": "2027-01-31",
+   "year": 2026,
+   "note": "Overlaps calendar years; turkey tags expire December 31 of the year of purchase (brochure note 2). The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General fall turkey season, either sex (archery only)",
+   "method": "archery",
+   "units": [
+    "2 (Farragut State Park and WMA only)"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-12-01",
+   "year": 2026,
+   "note": "Archery only; archery permit required. The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General fall turkey season, either sex",
+   "units": [
+    "8",
+    "8A",
+    "10A",
+    "11",
+    "11A",
+    "13",
+    "14",
+    "15",
+    "16",
+    "18",
+    "21",
+    "21A",
+    "28 (portion downstream from the Hat Creek drainage)",
+    "29",
+    "30",
+    "68A",
+    "70",
+    "71",
+    "72",
+    "73",
+    "74",
+    "75",
+    "76",
+    "77",
+    "78"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-12-31",
+   "year": 2026,
+   "note": "The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General fall turkey season, either sex",
+   "units": [
+    "10",
+    "12",
+    "16A",
+    "17",
+    "19",
+    "20"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-10-09",
+   "year": 2026,
+   "note": "The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General fall turkey season, either sex",
+   "units": [
+    "22",
+    "31",
+    "32 (except that portion in Payette County)",
+    "32A",
+    "33",
+    "39"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-10-09",
+   "year": 2026,
+   "note": "Outside the National Forest System boundary only. The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General spring turkey season, youth only, male or bearded turkey",
+   "units": [
+    "1",
+    "2 (except Farragut State Park and WMA)",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "8",
+    "8A",
+    "9",
+    "10",
+    "10A",
+    "11",
+    "11A",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "16A",
+    "17",
+    "18",
+    "19",
+    "19A",
+    "20",
+    "22",
+    "23",
+    "24",
+    "31",
+    "32 (except that portion in Payette County)",
+    "32A",
+    "33",
+    "39",
+    "40",
+    "68A",
+    "70",
+    "71",
+    "72",
+    "73",
+    "74",
+    "75",
+    "76",
+    "77",
+    "78"
+   ],
+   "start": "2027-04-08",
+   "end": "2027-04-14",
+   "year": 2027,
+   "note": "Youth only. The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General spring turkey season, youth only, male or bearded turkey",
+   "units": [
+    "21",
+    "21A",
+    "28",
+    "29",
+    "30",
+    "36A",
+    "36B",
+    "37",
+    "37A"
+   ],
+   "start": "2027-04-08",
+   "end": "2027-05-25",
+   "year": 2027,
+   "note": "Youth only. The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General spring turkey season, youth only, male or bearded turkey",
+   "units": [
+    "32 (that portion in Payette County)",
+    "38"
+   ],
+   "start": "2027-04-08",
+   "end": "2027-05-25",
+   "year": 2027,
+   "note": "Youth only. The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General spring turkey season, male or bearded turkey",
+   "units": [
+    "1",
+    "2 (except Farragut State Park and WMA)",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "8",
+    "8A",
+    "9",
+    "10",
+    "10A",
+    "11",
+    "11A",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "16A",
+    "17",
+    "18",
+    "19",
+    "19A",
+    "20",
+    "22",
+    "23",
+    "24",
+    "31",
+    "32 (except that portion in Payette County)",
+    "32A",
+    "33",
+    "39",
+    "40",
+    "68A",
+    "70",
+    "71",
+    "72",
+    "73",
+    "74",
+    "75",
+    "76",
+    "77",
+    "78"
+   ],
    "start": "2027-04-15",
    "end": "2027-05-25",
    "year": 2027,
-   "note": "Units 1, 2 (except Farragut State Park and WMA), 3, 4, 4A, 5, 6, 7, 8, 8A, 9, 10, 10A, 11, 11A, 12, 13, 14, 15, 16, 16A, 17, 18, 19, 19A, 20, 22, 23, 24, 31, 32 (except that portion in Payette County), 32A, 33, 39, 40, 68A, 70, 71, 72, 73, 74, 75, 76, 77 & 78. The 2026 & 2027 Upland Game, Turkey & Furbearer Seasons & Rules gives one set of spring general dates for both years.",
+   "note": "The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General spring turkey season, male or bearded turkey (archery only)",
+   "method": "archery",
+   "units": [
+    "2 (Farragut State Park and WMA only)"
+   ],
+   "start": "2027-04-15",
+   "end": "2027-04-30",
+   "year": 2027,
+   "note": "Archery only; archery permit required. The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General fall turkey season, either sex",
+   "units": [
+    "1",
+    "2 (except Farragut State Park and WMA)",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9"
+   ],
+   "start": "2027-08-30",
+   "end": "2028-01-31",
+   "year": 2027,
+   "note": "Overlaps calendar years; turkey tags expire December 31 of the year of purchase (brochure note 2). The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General fall turkey season, either sex (archery only)",
+   "method": "archery",
+   "units": [
+    "2 (Farragut State Park and WMA only)"
+   ],
+   "start": "2027-11-01",
+   "end": "2027-12-01",
+   "year": 2027,
+   "note": "Archery only; archery permit required. The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General fall turkey season, either sex",
+   "units": [
+    "8",
+    "8A",
+    "10A",
+    "11",
+    "11A",
+    "13",
+    "14",
+    "15",
+    "16",
+    "18",
+    "21",
+    "21A",
+    "28 (portion downstream from the Hat Creek drainage)",
+    "29",
+    "30",
+    "68A",
+    "70",
+    "71",
+    "72",
+    "73",
+    "74",
+    "75",
+    "76",
+    "77",
+    "78"
+   ],
+   "start": "2027-08-30",
+   "end": "2027-12-31",
+   "year": 2027,
+   "note": "The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General fall turkey season, either sex",
+   "units": [
+    "10",
+    "12",
+    "16A",
+    "17",
+    "19",
+    "20"
+   ],
+   "start": "2027-08-30",
+   "end": "2027-10-09",
+   "year": 2027,
+   "note": "The 2026 & 2027 brochure prints one set of general dates for both years.",
+   "sourceId": "d-rules-upland-2026-27"
+  },
+  {
+   "species": "turkey",
+   "label": "General fall turkey season, either sex",
+   "units": [
+    "22",
+    "31",
+    "32 (except that portion in Payette County)",
+    "32A",
+    "33",
+    "39"
+   ],
+   "start": "2027-08-30",
+   "end": "2027-10-09",
+   "year": 2027,
+   "note": "Outside the National Forest System boundary only. The 2026 & 2027 brochure prints one set of general dates for both years.",
    "sourceId": "d-rules-upland-2026-27"
   }
  ],
@@ -1036,7 +4693,7 @@
     2025,
     2026
    ],
-   "notes": "2025 antlered moose tags sum to 510, matching the brochure '510 Tags'. 2026 hunt metadata (season dates, antler class) come from the 2025 & 2026 brochure because the Hunt Planner list has no 2026 moose/sheep/goat hunts; hunt 3050 (area label differs) is left without dates. IDFG published no second-drawing odds for moose, sheep or goat."
+   "notes": "2025 antlered moose tags sum to 510, matching the brochure '510 Tags'. 2026 hunt metadata (season dates, antler class) come from the 2025 & 2026 brochure because the Hunt Planner list has no 2026 moose/sheep/goat hunts (hunt 3050, whose odds-table area label differs, is matched by hunt number, tags and an unchanged area description in seasons_ranges.py). IDFG published no second-drawing odds for moose, sheep or goat."
   },
   {
    "species": "sheep",
@@ -1047,7 +4704,7 @@
     2025,
     2026
    ],
-   "notes": "Rocky Mountain (5xxx) and California (7xxx) bighorn hunts combined. Twelve 2026 rows lack season dates (late hunts and hunts whose brochure area label differs from the odds table)."
+   "notes": "Rocky Mountain (5xxx) and California (7xxx) bighorn hunts combined. 2026 dates from the 2025 & 2026 brochure; two 2026 rows (5027, 5028) have none because the odds table's hunt area ('Bannock', '37') differs from the brochure's (37L, 37AL)."
   },
   {
    "species": "goat",
@@ -1058,7 +4715,7 @@
     2025,
     2026
    ],
-   "notes": "2026 season dates from the 2025 & 2026 brochure where hunt area and tags match; 2026 hunts 6018 and 6019 have no dates (area label differs)."
+   "notes": "2026 season dates from the 2025 & 2026 brochure where hunt area and tags match; hunts 6018 and 6019 matched by hunt number, tags and an unchanged area description (odds table relabeled 51 -> 51-1, 61 -> 61-1)."
   },
   {
    "species": "bear",
@@ -1069,7 +4726,7 @@
     2025,
     2026
    ],
-   "notes": "Controlled hunts only (general seasons are OTC). Bear hunts are not in the Hunt Planner list, so 2022-2025 rows carry no season dates, weapon or unlimited flag; 2026 fall hunts from the 2026 brochure (sum 240 tags, matches '240 Tags'). Area 1-1 (AreaID 677) page failed, so 2022 hunt 8501 has no area text."
+   "notes": "Controlled hunts only (general seasons are OTC). Bear hunts are not in the Hunt Planner list, so rows carry no weapon or unlimited flag; season dates come from each year's big game brochure (spring hunts from the previous year's edition; 2023 hunt 8501 has none: odds table area 22-1, brochure 1-1); 2026 fall hunts from the 2026 brochure (sum 240 tags, matches '240 Tags'). Area 1-1 (AreaID 677) page failed, so 2022 hunt 8501 has no area text."
   },
   {
    "species": "turkey",
@@ -1080,7 +4737,7 @@
     2025,
     2026
    ],
-   "notes": "Controlled hunts only. 2022-2025 rows carry no season dates (not in the Hunt Planner list); 2026 dates from the 2026 & 2027 upland brochure. Three 2026 area pages failed to load (AreaIDs 2874, 2877, 2879), so those rows have no area text or GMUs."
+   "notes": "Controlled hunts only (not in the Hunt Planner list). 2026 dates from the 2026 & 2027 upland brochure; 2025 and nine 2024 hunts from the 2024 & 2025 brochure; seven 2024 hunts (odds-table area differs from the brochure) and 2022-2023 (brochure not found) have no dates. Three 2026 area pages failed to load (AreaIDs 2874, 2877, 2879), so those rows have no area text or GMUs."
   },
   {
    "species": "lion",
@@ -1216,7 +4873,7 @@
    "pageUrl": "https://idfg.idaho.gov/licenses/tag/quotas/nonresident",
    "dataYear": 2027,
    "retrieved": "2026-10-31",
-   "notes": "Key dates p.4; draw Q&A pp.5-7. The pageUrl returned HTTP 503 on 2026-10-31; facts are from the PDF only."
+   "notes": "Key dates p.4; draw Q&A pp.5-7; '2027 licenses go on sale December 1, 2026' p.3. The pageUrl returned HTTP 503 on 2026-10-31; facts are from the PDF (re-downloaded 2026-10-31, unchanged). The Internet Archive copy of the pageUrl from 2026-09-18 lists the same 2027 dates."
   },
   {
    "id": "d-rules-upland-2026-27",
@@ -1227,6 +4884,86 @@
    "dataYear": 2026,
    "retrieved": "2026-10-31",
    "notes": "Turkey controlled hunt rules and dates pp.18-19; turkey seasons pp.22-25. Covers 2026 and 2027 seasons."
+  },
+  {
+   "id": "d-huntlist-general-deer",
+   "title": "Idaho Hunt Planner — Filterable Grid (general deer seasons, 2026)",
+   "publisher": "Idaho Department of Fish and Game",
+   "url": "https://idfg.idaho.gov/ifwis/huntplanner/api/1.1/list/?game=1&type=1&start=2026-1-1&end=2027-12-31&limit=5000&offset=0",
+   "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/filter",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "JSON behind the Hunt Planner filter page (type=1, general seasons): 462 deer hunt opportunities, one per unit, tag, weapon, antler class and season. Grouped into seasons[] entries by tag, weapon, antler class and dates."
+  },
+  {
+   "id": "d-huntlist-general-elk",
+   "title": "Idaho Hunt Planner — Filterable Grid (general elk zone A/B tag seasons, 2026)",
+   "publisher": "Idaho Department of Fish and Game",
+   "url": "https://idfg.idaho.gov/ifwis/huntplanner/api/1.1/list/?game=2&type=1&start=2026-1-1&end=2027-12-31&limit=5000&offset=0",
+   "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/filter",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "JSON behind the Hunt Planner filter page (type=1, general seasons): 99 elk zone A/B tag hunt opportunities."
+  },
+  {
+   "id": "d-rules-big-game-2021",
+   "title": "Idaho Big Game 2021 Seasons & Rules",
+   "publisher": "Idaho Department of Fish and Game",
+   "url": "https://idfg.idaho.gov/sites/default/files/seasons-rules-big-game-2021.pdf",
+   "pageUrl": "https://idfg.idaho.gov/rules/big-game",
+   "dataYear": 2021,
+   "retrieved": "2026-10-31",
+   "notes": "Black bear controlled hunt tables (2021 fall hunts and 2022 spring hunts) used for draw-row season dates. The file is no longer at this URL (HTTP 404 on 2026-10-31); the copy used is the Internet Archive capture web.archive.org/web/20210617045911/https://idfg.idaho.gov/sites/default/files/seasons-rules-big-game-2021.pdf."
+  },
+  {
+   "id": "d-rules-big-game-2022",
+   "title": "Idaho Big Game 2022 Seasons & Rules",
+   "publisher": "Idaho Department of Fish and Game",
+   "url": "https://idfg.idaho.gov/sites/default/files/seasons-rules-big-game-2022.pdf",
+   "pageUrl": "https://idfg.idaho.gov/rules/big-game",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Black bear controlled hunt tables (2022 fall hunts and 2023 spring hunts) used for draw-row season dates. The file is no longer at this URL (HTTP 404 on 2026-10-31); the copy used is the Internet Archive capture web.archive.org/web/20220508060439/https://idfg.idaho.gov/sites/default/files/seasons-rules-big-game-2022.pdf."
+  },
+  {
+   "id": "d-rules-big-game-2023",
+   "title": "Idaho Big Game 2023 Seasons & Rules",
+   "publisher": "Idaho Department of Fish and Game",
+   "url": "https://idfg.idaho.gov/sites/default/files/seasons-rules-big-game-2023-2024.pdf",
+   "pageUrl": "https://idfg.idaho.gov/rules/big-game",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Black bear controlled hunt tables (2023 fall hunts and 2024 spring hunts) used for draw-row season dates. The file is no longer at this URL (HTTP 404 on 2026-10-31); the copy used is the Internet Archive capture web.archive.org/web/20260226003204/https://idfg.idaho.gov/sites/default/files/seasons-rules-big-game-2023-2024.pdf."
+  },
+  {
+   "id": "d-rules-big-game-2024",
+   "title": "Idaho Big Game 2024 Seasons & Rules",
+   "publisher": "Idaho Department of Fish and Game",
+   "url": "https://idfg.idaho.gov/sites/default/files/seasons-rules-big-game-2024.pdf",
+   "pageUrl": "https://idfg.idaho.gov/rules/big-game",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Black bear controlled hunt tables (2024 fall hunts and 2025 spring hunts) used for draw-row season dates. The file is no longer at this URL (HTTP 404 on 2026-10-31); the copy used is the Internet Archive capture web.archive.org/web/20240720063317/https://idfg.idaho.gov/sites/default/files/seasons-rules-big-game-2024.pdf."
+  },
+  {
+   "id": "d-rules-big-game-2025",
+   "title": "Idaho Big Game 2025 Seasons and Rules",
+   "publisher": "Idaho Department of Fish and Game",
+   "url": "https://idfg.idaho.gov/sites/default/files/seasons-rules-big-game-2025.pdf",
+   "pageUrl": "https://idfg.idaho.gov/rules/big-game",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Black bear controlled hunt tables (2025 fall hunts and 2026 spring hunts) used for draw-row season dates; also the 'Black Bear Seasons for Fall 2025 and Spring 2026' table for 2026 spring general seasons. The file is no longer at this URL (HTTP 404 on 2026-10-31); the copy used is the Internet Archive capture web.archive.org/web/20260813085106/https://idfg.idaho.gov/sites/default/files/seasons-rules-big-game-2025.pdf."
+  },
+  {
+   "id": "d-rules-upland-2024-25",
+   "title": "Upland Game, Turkey & Furbearer 2024 & 2025 Seasons & Rules",
+   "publisher": "Idaho Department of Fish and Game",
+   "url": "https://idfg.idaho.gov/sites/default/files/seasons-rules-upland-game-2024-2025.pdf",
+   "pageUrl": "https://idfg.idaho.gov/rules/upland",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "'2024 & 2025 Spring/Fall Controlled Hunts' turkey tables (pp.24-25), one set of dates for both years, used for draw-row season dates. No longer at this URL (HTTP 404 on 2026-10-31); copy from the Internet Archive capture web.archive.org/web/20261016001452/https://idfg.idaho.gov/sites/default/files/seasons-rules-upland-game-2024-2025.pdf."
   }
  ]
 }
