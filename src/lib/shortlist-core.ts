@@ -65,6 +65,8 @@ export interface ShortlistHunt {
   /** Applicant pool the figures come from; "total" when the agency reports one combined pool. */
   pool: DrawResidency | "total";
   quota: number | null;
+  /** True when the pool has no quota of its own and `quota` is the agency's total for the hunt. */
+  quotaIsTotal: boolean;
   applicants: number | null;
   drawn: number | null;
   /** Overall odds for the pool, percent. */
@@ -161,7 +163,8 @@ export function classifyHunt(r: DrawRecord, residency: DrawResidency, pointsMatt
       seasonDates: r.seasonDates,
       choice: r.choice,
       pool,
-      quota: stats.quota ?? null,
+      quota: stats.quota ?? (pool !== "total" ? r.total?.quota : null) ?? null,
+      quotaIsTotal: stats.quota == null && pool !== "total" && r.total?.quota != null,
       applicants: stats.applicants ?? null,
       drawn: stats.drawn ?? null,
       odds,
@@ -209,11 +212,18 @@ const TIER: Record<HuntStatus, number> = {
   stretch: 2,
 };
 
-/** Hunts drawn at your level first, then hunts without point data, then stretch hunts; each by odds, high to low. */
+/** Licenses behind the ranked odds: drawn at your level when that's what's ranked, else drawn in the pool. */
+const evidence = (h: ShortlistHunt) => (h.status === "drew-at-points" && h.atPoints ? h.atPoints.drawn : (h.drawn ?? -1));
+
+/**
+ * Hunts drawn at your level first, then hunts without point data, then stretch hunts; each by odds,
+ * high to low, and on equal odds the one with more licenses drawn (2 of 2 ahead of 1 of 1).
+ */
 export function compareHunts(a: ShortlistHunt, b: ShortlistHunt): number {
   return (
     TIER[a.status] - TIER[b.status] ||
     (b.rankOdds ?? -1) - (a.rankOdds ?? -1) ||
+    evidence(b) - evidence(a) ||
     (b.quota ?? -1) - (a.quota ?? -1) ||
     a.huntCode.localeCompare(b.huntCode, "en", { numeric: true })
   );

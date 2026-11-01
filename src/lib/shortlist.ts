@@ -104,11 +104,15 @@ function stateNotes(st: StateData, info: StateData["species"][number], r: Omit<S
   if (r.newerYearWithoutResults) {
     notes.push(`${agency} has published ${r.newerYearWithoutResults} quotas but not applicant counts yet, so these are ${r.drawYear} results.`);
   }
+  if (r.counts.hunts > 0 && r.counts.noFigures === r.counts.hunts) {
+    notes.push(`${agency} published no ${r.residency} figures for any of these hunts.`);
+    return notes;
+  }
   if (info.drawSystem === "otc") {
     notes.push(`${agency} sells most of these licenses over the counter; this list covers only the drawn hunts in its draw report.`);
   }
   if (!r.pointsMatter) {
-    notes.push(`This draw doesn't use points (${r.systemLabel.toLowerCase()}), so hunts are ranked by last year's odds for ${r.residency} applicants.`);
+    notes.push(`This draw doesn't use points (${r.systemLabel.replace(/ \(.*\)$/, "").toLowerCase()}), so hunts are ranked by last year's odds for ${r.residency} applicants.`);
   } else if (r.points === null) {
     notes.push(`Add your ${point}s for ${st.name} to see which hunts drew at your level. Until then, hunts are ranked by overall odds; check each hunt's lowest point level drawn.`);
   } else if (!r.hasPointTable && !r.hasMinPoints) {
@@ -186,13 +190,24 @@ const bestOdds = (s: ShortlistState) => {
   return top?.rankOdds ?? -1;
 };
 
+/**
+ * Card order: states where your points matched hunts, then draws that don't use points, then
+ * states you haven't entered points for, then states without point-level data; empty states last.
+ */
+function stateGroup(s: ShortlistState): number {
+  if (!s.hunts.length) return 4;
+  if (s.hunts.some((h) => h.status === "drew-at-points" || h.status === "min-at-or-below")) return 0;
+  if (!s.pointsMatter) return 1;
+  if (s.points === null) return 2;
+  return 3;
+}
+
 /** Cross-state shortlist from each live state's latest published draw results. */
 export async function buildShortlist(q: ShortlistQuery): Promise<ShortlistResult> {
   const states = (await Promise.all(LIVE_STATE_SLUGS.map((slug) => getStateData(slug)))).filter((s): s is StateData => !!s);
   const results = await Promise.all(states.map((st) => stateShortlist(st, q).then((r) => [st, r] as const)));
   const shown = results.flatMap(([, r]) => (r ? [r] : []));
-  // States with hunts drawn at your level (or ranked hunts) first, best odds first; empty states last.
-  shown.sort((a, b) => Number(b.hunts.length > 0) - Number(a.hunts.length > 0) || bestOdds(b) - bestOdds(a) || a.name.localeCompare(b.name));
+  shown.sort((a, b) => stateGroup(a) - stateGroup(b) || bestOdds(b) - bestOdds(a) || a.name.localeCompare(b.name));
   return {
     species: q.species,
     home: q.home,

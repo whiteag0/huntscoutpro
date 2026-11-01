@@ -224,7 +224,7 @@ export function ShortlistClient({ options, initial }: { options: ShortlistSpecie
         )}
         {noPointStates.length > 0 && (
           <p className="text-xs text-muted-foreground mt-4">
-            No points needed in {noPointStates.map((s) => `${s.name} (${DRAW_SYSTEM_LABELS[s.drawSystem].toLowerCase()})`).join(", ")}: those hunts are ranked by last year&apos;s odds.
+            No points needed in {noPointStates.map((s) => `${s.name} (${DRAW_SYSTEM_LABELS[s.drawSystem].replace(/ \(.*\)$/, "").toLowerCase()})`).join(", ")}: those hunts are ranked by last year&apos;s odds.
           </p>
         )}
 

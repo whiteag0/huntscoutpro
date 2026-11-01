@@ -120,7 +120,7 @@ function HuntItem({ h, st, species }: { h: ShortlistHunt; st: ShortlistState; sp
       {reason && <p className="text-xs text-foreground mt-2">{reason}</p>}
 
       <dl className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-2 mt-3">
-        <Stat label="Quota" value={fmtNum(h.quota)} />
+        <Stat label={h.quotaIsTotal ? "Total quota" : "Quota"} value={fmtNum(h.quota)} sub={h.quotaIsTotal ? "all applicants" : undefined} />
         <Stat label={h.choice === "first" ? "1st-choice apps" : "Applicants"} value={fmtNum(h.applicants)} sub={h.pool === "total" ? "combined pool" : undefined} />
         <Stat label="Drawn" value={fmtNum(h.drawn)} />
         <Stat label={`${h.year} odds`} value={fmtPct(h.odds)} sub={h.odds !== null && h.oddsComputed ? "drawn ÷ applicants" : undefined} />
@@ -222,7 +222,11 @@ function StateCard({ st, species, limit }: { st: ShortlistState; species: Specie
         </ol>
       ) : (
         <p className="mt-4 rounded-xl border border-dashed border-border p-4 text-sm text-muted-foreground">
-          No {SPECIES_LABELS[species].toLowerCase()} hunts here {st.pointsMatter && st.points !== null ? "drew at your point level" : "had published odds for your pool"} last year.
+          {st.counts.hunts > 0 && st.counts.noFigures === st.counts.hunts
+            ? `No ${st.residency} draw figures were published for these hunts.`
+            : st.pointsMatter && st.points !== null
+              ? `No ${SPECIES_LABELS[species].toLowerCase()} hunts here drew at your point level last year.`
+              : `No ${SPECIES_LABELS[species].toLowerCase()} hunts here had published odds for ${st.residency} applicants last year.`}
           {st.counts.stretch > 0 && " Turn on stretch hunts to see the closest ones."}
         </p>
       )}

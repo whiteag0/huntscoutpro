@@ -170,3 +170,19 @@ test("pickHarvest: multi-unit hunts, computed success and ambiguity", () => {
   // Only per-hunt rows for other hunts: don't borrow another hunt's success.
   assert.equal(pickHarvest([harvest("10", { hunt: "OTHER" })], { huntCode: "M", units: ["10"] }, "resident"), null);
 });
+
+test("equal odds: more licenses drawn at your level ranks first", () => {
+  const one = hunt(classifyHunt(draw("ONE", { nonresident: { applicants: 1, drawn: 1 }, byPoints: pts([2, 1, 1]) }), "nonresident", true, 2));
+  const many = hunt(classifyHunt(draw("MANY", { nonresident: { applicants: 48, drawn: 48 }, byPoints: pts([2, 48, 48]) }), "nonresident", true, 2));
+  assert.deepEqual([one, many].sort(compareHunts).map((h) => h.huntCode), ["MANY", "ONE"]);
+});
+
+test("pool without its own quota shows the hunt's total quota, flagged", () => {
+  const h = hunt(classifyHunt(draw("Q", { nonresident: { applicants: 10, drawn: 2 }, total: { quota: 11, applicants: 30, drawn: 9 } }), "nonresident", false, null));
+  assert.equal(h.quota, 11);
+  assert.equal(h.quotaIsTotal, true);
+  assert.equal(h.applicants, 10, "applicants stay the member's pool");
+  const own = hunt(classifyHunt(draw("Q2", { nonresident: { quota: 3, applicants: 10, drawn: 2 }, total: { quota: 11 } }), "nonresident", false, null));
+  assert.equal(own.quota, 3);
+  assert.equal(own.quotaIsTotal, false);
+});
