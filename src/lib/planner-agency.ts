@@ -668,7 +668,7 @@ export function planAgency(input: PlanInput): PlanResult {
       cycle: k.cycle,
       status: k.status,
       ...(only ? { residency: only } : {}),
-      ...(keepNote(k.note) ? { note: k.note!.slice(0, 200) } : {}),
+      ...(keepNote(k.note) ? { note: clip(k.note!, PLANNER_LIMITS.label) } : {}),
       ...(src >= 0 ? { src } : {}),
     };
   });
@@ -682,7 +682,7 @@ export function planAgency(input: PlanInput): PlanResult {
         end: main.end,
         cycle: main.cycle,
         status: main.status,
-        ...(main.note ? { note: main.note.slice(0, 300) } : {}),
+        ...(main.note ? { note: clip(main.note, PLANNER_LIMITS.label) } : {}),
         sourceUrl: mainSrc?.url || st.agency.url,
         ...(mainSrc?.title ? { sourceTitle: mainSrc.title.slice(0, 300) } : {}),
       }

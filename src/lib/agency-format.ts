@@ -1,5 +1,5 @@
 // Client-safe helpers for presenting agency data. No data imports here.
-import { AGENCY_STATES, type DrawSystemKind, type KeyDate, type SourceRef } from "@/data/agency/schema";
+import { AGENCY_STATES, type DrawSystemKind, type KeyDate, type SeasonDate, type SourceRef } from "@/data/agency/schema";
 import { LIVE_SLUGS } from "@/data/agency/live.generated";
 import { STATE_LIST, type StateListItem } from "@/data/state-list";
 
@@ -81,4 +81,25 @@ export function sortUnitIds(a: string, b: string): number {
   const nb = parseInt(b.replace(/^\D+/, ""), 10);
   if (!isNaN(na) && !isNaN(nb) && na !== nb) return na - nb;
   return a.localeCompare(b, "en", { numeric: true });
+}
+
+/** Seasons for overview pages: hunt-specific ones (tied to hunt codes) are shown on each hunt instead. */
+export function generalSeasons<T extends Pick<SeasonDate, "huntCodes">>(seasons: readonly T[]): T[] {
+  return seasons.filter((s) => !s.huntCodes?.length);
+}
+
+/** Where a season applies, e.g. "Units 1, 2, 3, 4, 5, 6 +12" or "Residents"; "" when statewide. */
+export function seasonScope(s: Pick<SeasonDate, "units" | "residency">, unitTerm = "Units", max = 6): string {
+  const parts: string[] = [];
+  if (s.units?.length) parts.push(`${unitTerm} ${s.units.slice(0, max).join(", ")}${s.units.length > max ? ` +${s.units.length - max}` : ""}`);
+  if (s.residency) parts.push(s.residency === "resident" ? "Residents" : "Nonresidents");
+  return parts.join(" · ");
+}
+
+/** Text cut to about `max` characters at a sentence or word boundary. */
+export function clipText(text: string | undefined, max = 200): string | undefined {
+  if (!text || text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const at = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf(" "));
+  return `${cut.slice(0, at > max * 0.6 ? at : max).trimEnd()}…`;
 }

@@ -128,7 +128,13 @@ export function CycleBadge({ hunt }: { hunt: PlannedHunt }) {
   const a = hunt.agency;
   if (!a) return <span className="inline-flex items-center rounded-full border border-border px-2 py-0.5 text-xs text-muted-foreground">Your own dates</span>;
   const c = cycleInfo(a);
-  if (c.published) return <span className="inline-flex items-center rounded-full border border-success/30 bg-success/10 px-2 py-0.5 text-xs font-medium text-success">{c.datesCycle} dates published</span>;
+  if (c.published) {
+    const cycle = (a.keyDates || []).filter((k) => k.cycle === c.datesCycle);
+    const allTentative = cycle.length > 0 && cycle.every((k) => k.status === "tentative");
+    if (allTentative)
+      return <span className="inline-flex items-center rounded-full border border-warning/40 bg-warning/10 px-2 py-0.5 text-xs font-medium text-[#7a5a07]">{c.datesCycle} dates tentative</span>;
+    return <span className="inline-flex items-center rounded-full border border-success/30 bg-success/10 px-2 py-0.5 text-xs font-medium text-success">{c.datesCycle} dates published</span>;
+  }
   return (
     <span className="inline-flex items-center rounded-full border border-warning/40 bg-warning/10 px-2 py-0.5 text-xs font-medium text-[#7a5a07]">
       {c.datesCycle ? `Waiting on ${c.planCycle ?? c.datesCycle + 1} dates` : "No agency dates yet"}
@@ -142,13 +148,28 @@ export function CycleNotice({ hunt }: { hunt: PlannedHunt }) {
   if (!a) return null;
   const c = cycleInfo(a);
   const who = a.agencyShortName || a.agencyName;
-  const tentative = (a.keyDates || []).filter((k) => k.status === "tentative" && k.cycle === c.datesCycle).length;
+  const cycleDates = (a.keyDates || []).filter((k) => k.cycle === c.datesCycle);
+  const tentative = cycleDates.filter((k) => k.status === "tentative").length;
   if (c.published) {
+    // Tentative = the agency marked the date tentative, or it follows from the agency's standing rule
+    // (each date's note says which); either way the agency hasn't confirmed it for this cycle yet.
+    if (tentative === cycleDates.length) {
+      return (
+        <p className="flex items-start gap-2 rounded-lg border border-warning/40 bg-warning/10 px-3 py-2 text-sm text-foreground">
+          <Info className="w-4 h-4 mt-0.5 shrink-0 text-warning" aria-hidden />
+          <span>
+            <strong>{c.datesCycle} dates are tentative.</strong> {who} hasn&apos;t confirmed them yet: each comes from {who}&apos;s own rules or is marked
+            tentative by {who}, as its note says. This hunt updates when {who} publishes the {c.datesCycle} dates.
+          </span>
+        </p>
+      );
+    }
     return (
       <p className="flex items-start gap-2 rounded-lg border border-success/30 bg-success/5 px-3 py-2 text-sm text-foreground">
         <Check className="w-4 h-4 mt-0.5 shrink-0 text-success" aria-hidden />
         <span>
-          {who} has published its {c.datesCycle} dates for this hunt{tentative ? ` (${tentative} marked tentative by ${who})` : ""}.
+          {who} has published {c.datesCycle} dates for this hunt
+          {tentative ? `; ${tentative} ${tentative === 1 ? "is" : "are"} tentative (not yet confirmed by ${who}; see each date's note)` : ""}.
         </span>
       </p>
     );

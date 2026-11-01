@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { getAllStateData } from "@/lib/agency";
+import { clipText, generalSeasons, seasonScope } from "@/lib/agency-format";
 import Link from "next/link";
-import { CalendarView, type CalendarItem } from "@/components/agency/CalendarView";
+import { CalendarView, type CalendarItem, type CalendarSource } from "@/components/agency/CalendarView";
 import { FreeRemindersSignup } from "@/components/growth/FreeRemindersSignup";
 import { freeReminderOptions } from "@/lib/free-reminders-options";
 
@@ -17,6 +18,15 @@ export const metadata: Metadata = {
 export default async function CalendarPage() {
   const states = await getAllStateData();
   const items: CalendarItem[] = [];
+  // Each source is sent once; items point at it by index.
+  const sources: CalendarSource[] = [];
+  const sourceIndex = new Map<string, number>();
+  const srcOf = (title: string, url: string) => {
+    const key = `${title}\n${url}`;
+    let i = sourceIndex.get(key);
+    if (i === undefined) sourceIndex.set(key, (i = sources.push({ title, url }) - 1));
+    return i;
+  };
   for (const s of states) {
     const src = new Map(s.sources.map((x) => [x.id, x]));
     for (const sp of s.species) {
@@ -32,27 +42,27 @@ export default async function CalendarPage() {
           end: d.end || d.date!,
           cycle: d.cycle,
           tentative: d.status === "tentative",
-          note: d.note,
-          sourceTitle: source?.title || s.agency.name,
-          sourceUrl: source?.url || s.agency.url,
+          note: clipText(d.note, 240),
+          src: srcOf(source?.title || s.agency.name, source?.url || s.agency.url),
         });
       }
     }
-    for (const se of s.seasons) {
+    // Hunt-specific seasons are on each hunt (state pages, planner); the calendar lists general ones.
+    for (const se of generalSeasons(s.seasons)) {
       const source = src.get(se.sourceId);
+      const scope = seasonScope(se, s.unitTerm === "Unit" ? "Units" : `${s.unitTerm}s`);
       items.push({
         kind: "season",
         state: s.name,
         slug: s.slug,
         species: se.species,
-        label: se.label,
+        label: scope ? `${se.label} (${scope})` : se.label,
         start: se.start,
         end: se.end,
         cycle: se.year,
         tentative: false,
-        note: se.note,
-        sourceTitle: source?.title || s.agency.name,
-        sourceUrl: source?.url || s.agency.url,
+        note: clipText(se.note, 200),
+        src: srcOf(source?.title || s.agency.name, source?.url || s.agency.url),
       });
     }
   }
@@ -76,7 +86,7 @@ export default async function CalendarPage() {
           }
         />
       </div>
-      <CalendarView items={items} states={states.map((s) => ({ slug: s.slug, name: s.name }))} />
+      <CalendarView items={items} sources={sources} states={states.map((s) => ({ slug: s.slug, name: s.name }))} />
     </>
   );
 }

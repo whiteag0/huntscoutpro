@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { stateBySlug } from "@/data/state-list";
 import { getStateData, speciesWithData } from "@/lib/agency";
-import { isLiveState, keyDateEnd, todayIso } from "@/lib/agency-format";
+import { generalSeasons, isLiveState, keyDateEnd, todayIso } from "@/lib/agency-format";
 import { SITE } from "@/lib/emails/onboarding";
 import { stateOption } from "@/lib/free-reminders-options";
 import { ComingSoonState } from "@/components/ComingSoonState";
@@ -69,7 +69,8 @@ export default async function StatePage({ params, searchParams }: Params) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(stateJsonLd(data, species, glance)) }} />
-      <StateExplorer key={slug} state={data} species={species} initialSpecies={requested} />
+      {/* Hunt-specific seasons appear on each hunt row; the overview lists the general ones. */}
+      <StateExplorer key={slug} state={{ ...data, seasons: generalSeasons(data.seasons) }} species={species} initialSpecies={requested} />
       <StateAtAGlance state={data} glance={glance} />
       {option && (
         <div className="max-w-7xl mx-auto px-4 pb-10">
