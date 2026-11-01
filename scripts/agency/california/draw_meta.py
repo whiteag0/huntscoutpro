@@ -6,11 +6,19 @@ into <raw>; digests checked against `pdftotext -layout` output, web pages agains
 text as retrieved 2026-10-31). Coverage is computed from draw/<species>.json (draw_build.py) and
 <raw>/build-side.json (preference-point-only applicant counts, statistics PDF parts).
 
+seasons[]: the hand-entered general deer zone, bear and turkey seasons below, plus deer D/X-zone seasons and C/X-zone
+archery hunts and the elk, pronghorn and bighorn sheep hunt periods generated from the 2026 Big Game Hunting Digest
+hunt tables by seasons_digest.py (run seasons_digest.py first so the 2026 draw rows carry their season dates).
+Every keyDate carries `kind` (schema KeyDateKind); CDFW limits none of them to one residency.
+
 Usage: python -I draw_meta.py <raw_dir> <repo_root>
 """
 import json
 import os
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import seasons_digest  # noqa: E402
 
 RETRIEVED = "2026-10-31"
 PUB = "California Department of Fish and Wildlife"
@@ -36,18 +44,32 @@ BASE_SOURCES = [
      "notes": "Harvest counter read 803 bears as of October 27, 2026."},
     {"id": "d-upland-page", "title": "Upland Game Bird Hunting (2026 - 2027 Seasons and Limits - Wild Turkey)", "publisher": PUB,
      "url": "https://wildlife.ca.gov/Hunting/Upland-Game-Birds", "dataYear": 2026, "retrieved": RETRIEVED},
+    {"id": "d-deer-seasons-2026", "title": "Approved 2026 Deer Seasons (by Zone; Area-Specific Archery Hunts; Additional Hunts)",
+     "publisher": PUB, "url": FH + "168214&inline", "pageUrl": "https://wildlife.ca.gov/Hunting/Deer", "dataYear": 2026,
+     "retrieved": RETRIEVED,
+     "notes": "Three PDFs (DocumentID 168214 by zone, 168216 area-specific archery hunts, 168215 additional hunts) with m/d/2026 "
+              "dates. Used to cross-check the digest season dates on the 2026 deer rows (seasons_spotcheck.py)."},
+    {"id": "d-elk-dates-2026", "title": "2026 Elk Hunt Dates and General Information", "publisher": PUB,
+     "url": FH + "246668&inline", "pageUrl": "https://wildlife.ca.gov/Hunting/Elk", "dataYear": 2026, "retrieved": RETRIEVED,
+     "notes": "Hunt dates with years for every 2026 elk hunt code. Used to cross-check the digest season dates on the 2026 elk rows."},
+    {"id": "d-regs-2026", "title": "2026-2027 California Mammal Hunting Regulations (Title 14 CCR; updated October 27, 2026)",
+     "publisher": PUB, "url": FH + "202568&inline", "pageUrl": "https://wildlife.ca.gov/Regulations", "dataYear": 2026,
+     "retrieved": RETRIEVED,
+     "notes": "Section 362(b)(4) bighorn sheep season rules and the 2026 elk, pronghorn and bighorn sheep hunt tables, used to "
+              "cross-check the digest season dates. Its elk table prints Goodale Period 1 (373) as 'Sep 12- Sep 17' and Lone Pine "
+              "Period 3 (496) as 'Oct 03- Oct 11', unlike the digest and the 2026 Elk Hunt Dates sheet."},
 ]
 
-APP = {"label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+APP = {"label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)", "kind": "application",
        "start": "2026-04-15", "end": "2026-06-02", "cycle": 2026, "status": "confirmed",
        "note": "Applications must be completed before midnight June 2. " + NOT_2027, "sourceId": "d-digest-2026"}
-RESULTS = {"label": "Drawing results available online", "date": "2026-06-15", "cycle": 2026, "status": "confirmed",
+RESULTS = {"label": "Drawing results available online", "kind": "results", "date": "2026-06-15", "cycle": 2026, "status": "confirmed",
            "note": "CDFW: 'on or around June 15, 2026'; the drawing is run within 10 business days of the deadline. " + NOT_2027,
            "sourceId": "d-digest-2026"}
 
 
-def kd(label, date, note, src="d-digest-2026"):
-    return {"label": label, "date": date, "cycle": 2026, "status": "confirmed", "note": f"{note} {NOT_2027}".strip(), "sourceId": src}
+def kd(label, kind, date, note, src="d-digest-2026"):
+    return {"label": label, "kind": kind, "date": date, "cycle": 2026, "status": "confirmed", "note": f"{note} {NOT_2027}".strip(), "sourceId": src}
 
 
 SPECIES = [
@@ -75,11 +97,11 @@ SPECIES = [
                        "premium deer tags are sold first-come, first-served from July 2 at 8:00 a.m."),
         "keyDates": [
             APP, RESULTS,
-            kd("Deer: drawn tags and unsuccessful-applicant notices expected by mail", "2026-07-02",
+            kd("Deer: drawn tags and unsuccessful-applicant notices expected by mail", "other", "2026-07-02",
                "Unsuccessful notices list deer tags still available; contact CDFW if a drawn tag has not arrived by this date."),
-            kd("Leftover premium deer tags go on sale (8:00 a.m., first-come first-served)", "2026-07-02",
+            kd("Leftover premium deer tags go on sale (8:00 a.m., first-come first-served)", "leftover", "2026-07-02",
                "CDFW FAQ: 'If available, leftover premium deer tags will be issued on July 2 at 8:00 a.m.'", "d-bgd-page"),
-            {"label": "Deadline to report deer tags (2026 tags)", "date": "2027-01-31", "cycle": 2026, "status": "confirmed",
+            {"label": "Deadline to report deer tags (2026 tags)", "kind": "other", "date": "2027-01-31", "cycle": 2026, "status": "confirmed",
              "note": "All deer tag holders must report by January 31 of the license year, hunted or not; late or missing reports "
                      "carry a $21.60 non-reporting fee.", "sourceId": "d-bgd-page"},
         ],
@@ -102,8 +124,8 @@ SPECIES = [
         "otcSummary": "None: there are no over-the-counter elk tags (SHARE and Private Lands Management tags are issued outside the Big Game Drawing).",
         "keyDates": [
             APP, RESULTS,
-            kd("Successful elk applicants' payment notices mailed by", "2026-07-02", "Unsuccessful applicants are not notified by mail."),
-            kd("Elk tag fee payment deadline (5:00 p.m.)", "2026-07-15", "Unclaimed tags then go to alternates in the order drawn."),
+            kd("Successful elk applicants' payment notices mailed by", "other", "2026-07-02", "Unsuccessful applicants are not notified by mail."),
+            kd("Elk tag fee payment deadline (5:00 p.m.)", "payment", "2026-07-15", "Unclaimed tags then go to alternates in the order drawn."),
         ],
         "sourceIds": ["d-digest-2026", "d-bgd-page", "d-fees-2026"],
     },
@@ -123,8 +145,8 @@ SPECIES = [
         "otcSummary": "None: pronghorn tags are issued only through the Big Game Drawing (Private Lands Management tags excepted).",
         "keyDates": [
             APP, RESULTS,
-            kd("Successful pronghorn applicants' payment notices mailed by", "2026-07-02", "Unsuccessful applicants are not notified by mail."),
-            kd("Pronghorn tag fee payment deadline (5:00 p.m.)", "2026-07-15", "Unclaimed tags then go to alternates in the order drawn."),
+            kd("Successful pronghorn applicants' payment notices mailed by", "other", "2026-07-02", "Unsuccessful applicants are not notified by mail."),
+            kd("Pronghorn tag fee payment deadline (5:00 p.m.)", "payment", "2026-07-15", "Unclaimed tags then go to alternates in the order drawn."),
         ],
         "sourceIds": ["d-digest-2026", "d-bgd-page", "d-fees-2026"],
     },
@@ -144,9 +166,9 @@ SPECIES = [
         "otcSummary": "None: bighorn sheep tags come only from the Big Game Drawing (plus fundraising tags).",
         "keyDates": [
             APP, RESULTS,
-            kd("Bighorn sheep tag fee payment deadline (5:00 p.m., received by the License and Revenue Branch, Sacramento)", "2026-07-15",
+            kd("Bighorn sheep tag fee payment deadline (5:00 p.m., received by the License and Revenue Branch, Sacramento)", "payment", "2026-07-15",
                "Unclaimed tags then go to alternates in the order drawn."),
-            kd("Mandatory bighorn sheep hunter orientation (in person)", "2026-07-18", "Location to be announced by CDFW."),
+            kd("Mandatory bighorn sheep hunter orientation (in person)", "other", "2026-07-18", "Location to be announced by CDFW."),
         ],
         "sourceIds": ["d-digest-2026", "d-bgd-page", "d-fees-2026"],
     },
@@ -162,7 +184,7 @@ SPECIES = [
                        "two bear tags per license year (the second tag was adopted by the Fish and Game Commission in April 2026); "
                        "daily bag one bear."),
         "keyDates": [
-            {"label": "Unsuccessful 2026 bear tag report card due", "date": "2027-02-01", "cycle": 2026, "status": "confirmed",
+            {"label": "Unsuccessful 2026 bear tag report card due", "kind": "other", "date": "2027-02-01", "cycle": 2026, "status": "confirmed",
              "note": "Report cards for unsuccessful tags are due February 1 of the license year; successful hunters report immediately.",
              "sourceId": "d-digest-2026"},
         ],
@@ -218,33 +240,45 @@ FEES += [
 ]
 
 
-def season(sp, label, start, end, note=None, src="d-digest-2026", year=None):
-    s = {"species": sp, "label": label, "start": start, "end": end, "year": year or int(start[:4]), "sourceId": src}
+def season(sp, label, start, end, note=None, src="d-digest-2026", year=None, method=None, units=None, codes=None):
+    s = {"species": sp, "label": label}
+    if method:
+        s["method"] = method
+    if units:
+        s["units"] = units
+    if codes:
+        s["huntCodes"] = codes
+    s.update({"start": start, "end": end, "year": year or int(start[:4]), "sourceId": src})
     if note:
         s["note"] = note
     return s
 
 
+AR, ALL = {"method": "archery"}, {"method": "all"}
+B15 = ["B1", "B2", "B3", "B5", "B6"]
+
+
 SEASONS = [
-    season("mule-deer", "A zone archery season (buck)", "2026-07-11", "2026-08-02", "Unrestricted A zone tag (quota 65,000)."),
-    season("mule-deer", "A zone general season (buck)", "2026-08-08", "2026-09-20", "Unrestricted A zone tag (quota 65,000)."),
-    season("mule-deer", "B1, B2, B3, B5 and B6 zones archery season (buck)", "2026-08-15", "2026-09-06", "B zone tag valid in B1-B6 (quota 35,000)."),
-    season("mule-deer", "B1, B2, B3 and B5 zones general season (buck)", "2026-09-19", "2026-10-25", "B zone tag valid in B1-B6 (quota 35,000)."),
-    season("mule-deer", "B4 zone archery season (buck)", "2026-07-25", "2026-08-16"),
-    season("mule-deer", "B4 zone general season (buck)", "2026-08-22", "2026-09-27"),
-    season("mule-deer", "B6 zone general season (buck)", "2026-09-19", "2026-10-18"),
-    season("mule-deer", "C1 zone general season (buck, premium C tag)", "2026-09-19", "2026-10-18", "C tag (drawing) valid in C1-C4 general seasons; archery in the C zones is hunt A1."),
-    season("mule-deer", "C2 and C3 zones general season (buck, premium C tag)", "2026-09-19", "2026-10-25"),
-    season("mule-deer", "C4 zone general season (buck, premium C tag)", "2026-09-19", "2026-10-04"),
-    season("mule-deer", "D3-5 zone archery season (buck)", "2026-08-15", "2026-09-06", "Unrestricted D3-5 tag (quota 33,000)."),
-    season("mule-deer", "D3-5 zone general season (buck)", "2026-09-26", "2026-11-01", "Unrestricted D3-5 tag (quota 33,000)."),
-    season("bear", "Archery bear season (all bear zones)", "2026-08-15", "2026-09-06", "Bears taken count toward the 1,700 limit.", "d-bear-page"),
+    season("mule-deer", "A zone archery season (buck)", "2026-07-11", "2026-08-02", "Unrestricted A zone tag (quota 65,000).", units=["A"], **AR),
+    season("mule-deer", "A zone general season (buck)", "2026-08-08", "2026-09-20", "Unrestricted A zone tag (quota 65,000).", units=["A"], **ALL),
+    season("mule-deer", "B1, B2, B3, B5 and B6 zones archery season (buck)", "2026-08-15", "2026-09-06", "B zone tag valid in B1-B6 (quota 35,000).", units=B15, **AR),
+    season("mule-deer", "B1, B2, B3 and B5 zones general season (buck)", "2026-09-19", "2026-10-25", "B zone tag valid in B1-B6 (quota 35,000).", units=["B1", "B2", "B3", "B5"], **ALL),
+    season("mule-deer", "B4 zone archery season (buck)", "2026-07-25", "2026-08-16", units=["B4"], **AR),
+    season("mule-deer", "B4 zone general season (buck)", "2026-08-22", "2026-09-27", units=["B4"], **ALL),
+    season("mule-deer", "B6 zone general season (buck)", "2026-09-19", "2026-10-18", units=["B6"], **ALL),
+    season("mule-deer", "C1 zone general season (buck, premium C tag)", "2026-09-19", "2026-10-18", "C tag (drawing) valid in C1-C4 general seasons; archery in the C zones is hunt A1.", units=["C1"], codes=["C"], **ALL),
+    season("mule-deer", "C2 and C3 zones general season (buck, premium C tag)", "2026-09-19", "2026-10-25", units=["C2", "C3"], codes=["C"], **ALL),
+    season("mule-deer", "C4 zone general season (buck, premium C tag)", "2026-09-19", "2026-10-04", units=["C4"], codes=["C"], **ALL),
+    season("mule-deer", "D3-5 zone archery season (buck)", "2026-08-15", "2026-09-06", "Unrestricted D3-5 tag (quota 33,000).", units=["D3", "D4", "D5"], **AR),
+    season("mule-deer", "D3-5 zone general season (buck)", "2026-09-26", "2026-11-01", "Unrestricted D3-5 tag (quota 33,000).", units=["D3", "D4", "D5"], **ALL),
+    season("bear", "Archery bear season (all bear zones)", "2026-08-15", "2026-09-06", "Bears taken count toward the 1,700 limit.", "d-bear-page", **AR),
     season("bear", "General bear season (deer X zones other than X8, X9A, X9B, X10 and X12)", "2026-10-10", "2026-12-27",
-           "In deer zones A, B, C, D, X8, X9A, X9B, X10 and X12 the general bear season opens with the general deer season and also runs "
-           "through December 27. Closes earlier if 1,700 bears are reported taken.", "d-bear-page"),
-    season("turkey", "Fall wild turkey season", "2026-11-14", "2026-12-13", "1 either-sex turkey per day, 2 per season.", "d-upland-page"),
-    season("turkey", "Spring wild turkey general season", "2027-03-27", "2027-05-02", "1 bearded turkey per day, 3 per season combined. Listed in CDFW's 2026-2027 seasons.", "d-upland-page"),
-    season("turkey", "Spring wild turkey archery-only season", "2027-05-03", "2027-05-16", "Listed in CDFW's 2026-2027 seasons.", "d-upland-page"),
+           "Units are CDFW deer hunting zones. In deer zones A, B, C, D, X8, X9A, X9B, X10 and X12 the general bear season opens with "
+           "the general deer season and also runs through December 27. Closes earlier if 1,700 bears are reported taken.", "d-bear-page",
+           units=["X1", "X2", "X3A", "X3B", "X4", "X5A", "X5B", "X6A", "X6B", "X7A", "X7B", "X9C"], **ALL),
+    season("turkey", "Fall wild turkey season", "2026-11-14", "2026-12-13", "1 either-sex turkey per day, 2 per season.", "d-upland-page", **ALL),
+    season("turkey", "Spring wild turkey general season", "2027-03-27", "2027-05-02", "1 bearded turkey per day, 3 per season combined. Listed in CDFW's 2026-2027 seasons.", "d-upland-page", **ALL),
+    season("turkey", "Spring wild turkey archery-only season", "2027-05-03", "2027-05-16", "Listed in CDFW's 2026-2027 seasons.", "d-upland-page", **AR),
     season("turkey", "Additional junior spring turkey hunt (junior license holders)", "2027-03-20", "2027-03-21", "Also May 3-16, 2027. Listed in CDFW's 2026-2027 seasons.", "d-upland-page"),
 ]
 
@@ -313,6 +347,8 @@ def main():
     coverage.append({"species": "bear", "years": [], "notes": "No drawing: bear tags are sold over the counter with a statewide 1,700-bear harvest limit."})
     coverage.append({"species": "turkey", "years": [], "notes": "No drawing for general seasons: hunting license plus upland game bird validation. CDFW special hunts are not covered."})
 
+    seasons = SEASONS + seasons_digest.deer_meta_seasons(raw) + seasons_digest.meta_seasons(raw, repo)
+
     meta = {
         "slug": "california",
         "name": "California",
@@ -323,14 +359,14 @@ def main():
         "overview": OVERVIEW,
         "species": SPECIES,
         "fees": FEES,
-        "seasons": SEASONS,
+        "seasons": seasons,
         "coverage": coverage,
         "sources": sources,
     }
     with open(os.path.join(base, "draw-meta.json"), "w") as f:
         json.dump(meta, f, indent=1, ensure_ascii=False)
         f.write("\n")
-    print("wrote draw-meta.json:", len(sources), "sources,", len(FEES), "fees,", len(SEASONS), "seasons")
+    print("wrote draw-meta.json:", len(sources), "sources,", len(FEES), "fees,", len(seasons), "seasons")
 
 
 if __name__ == "__main__":

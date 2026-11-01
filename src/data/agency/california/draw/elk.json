@@ -4927,6 +4927,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 07 - Oct 18",
+  "seasonRanges": [
+   {
+    "start": "2026-10-07",
+    "end": "2026-10-18"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 20,
@@ -4946,6 +4954,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Sep 09 - Sep 20",
+  "seasonRanges": [
+   {
+    "start": "2026-09-09",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -4965,6 +4981,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 09 - Sep 20",
+  "seasonRanges": [
+   {
+    "start": "2026-09-09",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 34,
@@ -4984,6 +5008,14 @@
   "method": "other",
   "methodLabel": "Muzzleloader/Archery",
   "sex": "either",
+  "seasonDates": "Oct 31- Nov 08",
+  "seasonRanges": [
+   {
+    "start": "2026-10-31",
+    "end": "2026-11-08"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -5003,6 +5035,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Nov 11 - Nov 22",
+  "seasonRanges": [
+   {
+    "start": "2026-11-11",
+    "end": "2026-11-22"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -5022,6 +5062,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 16 - Sep 27",
+  "seasonRanges": [
+   {
+    "start": "2026-09-16",
+    "end": "2026-09-27"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 15,
@@ -5041,6 +5089,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "male",
+  "seasonDates": "Sep 12 - Sep 27",
+  "seasonRanges": [
+   {
+    "start": "2026-09-12",
+    "end": "2026-09-27"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5060,6 +5116,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "male",
+  "seasonDates": "Sep 12 - Sep 27",
+  "seasonRanges": [
+   {
+    "start": "2026-09-12",
+    "end": "2026-09-27"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5079,6 +5143,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 12 - Sep 27",
+  "seasonRanges": [
+   {
+    "start": "2026-09-12",
+    "end": "2026-09-27"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5098,6 +5170,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 03 - Oct 11",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-10-11"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5117,6 +5197,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 03 - Oct 11",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-10-11"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5136,6 +5224,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Oct 17 - Oct 25",
+  "seasonRanges": [
+   {
+    "start": "2026-10-17",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5155,6 +5251,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 23 - Oct 04",
+  "seasonRanges": [
+   {
+    "start": "2026-09-23",
+    "end": "2026-10-04"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5174,6 +5278,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Oct 10 - Oct 18",
+  "seasonRanges": [
+   {
+    "start": "2026-10-10",
+    "end": "2026-10-18"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5193,6 +5305,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 10 - Oct 18",
+  "seasonRanges": [
+   {
+    "start": "2026-10-10",
+    "end": "2026-10-18"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5212,6 +5332,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "female",
+  "seasonDates": "Sep 12 - Sep 27",
+  "seasonRanges": [
+   {
+    "start": "2026-09-12",
+    "end": "2026-09-27"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5231,6 +5359,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "male",
+  "seasonDates": "Sep 12 - Sep 27",
+  "seasonRanges": [
+   {
+    "start": "2026-09-12",
+    "end": "2026-09-27"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5250,6 +5386,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Nov 07 - Nov 15",
+  "seasonRanges": [
+   {
+    "start": "2026-11-07",
+    "end": "2026-11-15"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5269,6 +5413,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 02 - Sep 24",
+  "seasonRanges": [
+   {
+    "start": "2026-09-02",
+    "end": "2026-09-24"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -5288,6 +5440,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 03 - Sep 06",
+  "seasonRanges": [
+   {
+    "start": "2026-09-03",
+    "end": "2026-09-06"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -5307,6 +5467,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Sep 08 - Sep 11",
+  "seasonRanges": [
+   {
+    "start": "2026-09-08",
+    "end": "2026-09-11"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -5326,6 +5494,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 10 - Sep 13",
+  "seasonRanges": [
+   {
+    "start": "2026-09-10",
+    "end": "2026-09-13"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -5345,6 +5521,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Sep 15 - Sep 18",
+  "seasonRanges": [
+   {
+    "start": "2026-09-15",
+    "end": "2026-09-18"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -5364,6 +5548,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 17 - Sep 20",
+  "seasonRanges": [
+   {
+    "start": "2026-09-17",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -5383,6 +5575,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Sep 22 - Sep 25",
+  "seasonRanges": [
+   {
+    "start": "2026-09-22",
+    "end": "2026-09-25"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -5402,6 +5602,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Oct 03 - Oct 11",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-10-11"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5421,6 +5629,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Oct 17 - Oct 25",
+  "seasonRanges": [
+   {
+    "start": "2026-10-17",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5440,6 +5656,14 @@
   "method": "muzzleloader",
   "methodLabel": "Muzzleloader",
   "sex": "male",
+  "seasonDates": "Sep 12 - Sep 27",
+  "seasonRanges": [
+   {
+    "start": "2026-09-12",
+    "end": "2026-09-27"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5459,6 +5683,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Oct 03 - Oct 11",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-10-11"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5478,6 +5710,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 03 - Oct 11",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-10-11"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5497,6 +5737,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Oct 17 - Oct 25",
+  "seasonRanges": [
+   {
+    "start": "2026-10-17",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5516,6 +5764,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 17 - Oct 25",
+  "seasonRanges": [
+   {
+    "start": "2026-10-17",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5535,12 +5791,20 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 12 - Sep 27",
+  "seasonRanges": [
+   {
+    "start": "2026-09-12",
+    "end": "2026-09-27"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
    "applicants": 264
   },
-  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 4, 23: 5, 22: 5, 21: 3, 20: 6, 19: 6, 18: 5, 17: 7, 16: 2, 15: 5, 14: 10, 13: 9, 12: 5, 11: 9, 10: 11, 9: 8, 8: 8, 7: 14, 6: 20, 5: 17, 4: 14, 3: 14, 2: 17, 1.5: 2, 1: 33, 0: 25.",
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 4, 23: 5, 22: 5, 21: 3, 20: 6, 19: 6, 18: 5, 17: 7, 16: 2, 15: 5, 14: 10, 13: 9, 12: 5, 11: 9, 10: 11, 9: 8, 8: 8, 7: 14, 6: 20, 5: 17, 4: 14, 3: 14, 2: 17, 1.5: 2, 1: 33, 0: 25. Season dates: the 2026 Big Game Hunting Digest and CDFW's 2026 Elk Hunt Dates sheet print Sep 12-27; the hunt table in CDFW's 2026-2027 Mammal Hunting Regulations booklet prints 'Sep 12- Sep 17'.",
   "sourceId": "d-stats-elk-bull-and-spike-bull-hunts-2026"
  },
  {
@@ -5554,6 +5818,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Sep 02 - Sep 24",
+  "seasonRanges": [
+   {
+    "start": "2026-09-02",
+    "end": "2026-09-24"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 15,
@@ -5573,6 +5845,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Oct 03 - Dec 01",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-12-01"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -5592,6 +5872,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 03 - Dec 01",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-12-01"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -5611,6 +5899,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Nov 14 - Dec 06",
+  "seasonRanges": [
+   {
+    "start": "2026-11-14",
+    "end": "2026-12-06"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -5630,6 +5926,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Nov 14 - Dec 06",
+  "seasonRanges": [
+   {
+    "start": "2026-11-14",
+    "end": "2026-12-06"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -5649,6 +5953,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Sep 05 - Oct 04",
+  "seasonRanges": [
+   {
+    "start": "2026-09-05",
+    "end": "2026-10-04"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -5668,6 +5980,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 05 - Oct 04",
+  "seasonRanges": [
+   {
+    "start": "2026-09-05",
+    "end": "2026-10-04"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -5687,6 +6007,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 22 - Sep 25",
+  "seasonRanges": [
+   {
+    "start": "2026-09-22",
+    "end": "2026-09-25"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -5706,6 +6034,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "female",
+  "seasonDates": "Sep 01 - Sep 30",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-09-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -5725,6 +6061,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "male",
+  "seasonDates": "Sep 01 - Sep 30",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-09-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -5744,6 +6088,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "male",
+  "seasonDates": "Aug 26 - Sep 08",
+  "seasonRanges": [
+   {
+    "start": "2026-08-26",
+    "end": "2026-09-08"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -5763,6 +6115,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "male",
+  "seasonDates": "Sep 01 - Sep 30",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-09-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -5782,6 +6142,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "female",
+  "seasonDates": "Sep 01 - Sep 30",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-09-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -5801,6 +6169,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Aug 29 - Sep 04",
+  "seasonRanges": [
+   {
+    "start": "2026-08-29",
+    "end": "2026-09-04"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -5820,6 +6196,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Sep 05 - Sep 11",
+  "seasonRanges": [
+   {
+    "start": "2026-09-05",
+    "end": "2026-09-11"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5839,6 +6223,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Sep 12 - Sep 18",
+  "seasonRanges": [
+   {
+    "start": "2026-09-12",
+    "end": "2026-09-18"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5858,6 +6250,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 26 - Oct 02",
+  "seasonRanges": [
+   {
+    "start": "2026-09-26",
+    "end": "2026-10-02"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5877,6 +6277,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 03 - Oct 09",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-10-09"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5896,6 +6304,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sept 12 - Sept 27",
+  "seasonRanges": [
+   {
+    "start": "2026-09-12",
+    "end": "2026-09-27"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5915,6 +6331,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 03 - Oct 11",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-10-11"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5934,6 +6358,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 17 - Oct 25",
+  "seasonRanges": [
+   {
+    "start": "2026-10-17",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -5953,6 +6385,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 03 - Oct 11",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-10-11"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -5972,6 +6412,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Sep 09 - Sep 20",
+  "seasonRanges": [
+   {
+    "start": "2026-09-09",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -5991,6 +6439,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 10 - Oct 25",
+  "seasonRanges": [
+   {
+    "start": "2026-10-10",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -6010,6 +6466,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "either",
+  "seasonDates": "Sep 09 - Sep 20",
+  "seasonRanges": [
+   {
+    "start": "2026-09-09",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -6029,6 +6493,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "either",
+  "seasonDates": "Sep 16 - Sep 27",
+  "seasonRanges": [
+   {
+    "start": "2026-09-16",
+    "end": "2026-09-27"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -6048,6 +6520,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "either",
+  "seasonDates": "Sep 02 - Sep 13",
+  "seasonRanges": [
+   {
+    "start": "2026-09-02",
+    "end": "2026-09-13"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -6067,6 +6547,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Oct 17 - Nov 01",
+  "seasonRanges": [
+   {
+    "start": "2026-10-17",
+    "end": "2026-11-01"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -6086,6 +6574,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Oct 10 - Nov 01",
+  "seasonRanges": [
+   {
+    "start": "2026-10-10",
+    "end": "2026-11-01"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -6105,6 +6601,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Nov 14 - Dec 06",
+  "seasonRanges": [
+   {
+    "start": "2026-11-14",
+    "end": "2026-12-06"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -6124,6 +6628,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 10 - Nov 01",
+  "seasonRanges": [
+   {
+    "start": "2026-10-10",
+    "end": "2026-11-01"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -6143,6 +6655,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Nov 14 - Dec 06",
+  "seasonRanges": [
+   {
+    "start": "2026-11-14",
+    "end": "2026-12-06"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -6162,6 +6682,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "male",
+  "seasonDates": "Aug 08 - Aug 16",
+  "seasonRanges": [
+   {
+    "start": "2026-08-08",
+    "end": "2026-08-16"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -6181,6 +6709,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 03 - Oct 11",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-10-11"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -6200,6 +6736,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Aug 11 - Aug 14",
+  "seasonRanges": [
+   {
+    "start": "2026-08-11",
+    "end": "2026-08-14"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -6219,6 +6763,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Aug 13 - Aug 16",
+  "seasonRanges": [
+   {
+    "start": "2026-08-13",
+    "end": "2026-08-16"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -6238,6 +6790,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Dec 22 - Jan 03",
+  "seasonRanges": [
+   {
+    "start": "2026-12-22",
+    "end": "2027-01-03"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -6257,6 +6817,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Nov 21 - Nov 29",
+  "seasonRanges": [
+   {
+    "start": "2026-11-21",
+    "end": "2026-11-29"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -6276,6 +6844,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "either",
+  "seasonDates": "Aug 01-Aug 09",
+  "seasonRanges": [
+   {
+    "start": "2026-08-01",
+    "end": "2026-08-09"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -6295,6 +6871,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "female",
+  "seasonDates": "Nov 07 - Nov 15",
+  "seasonRanges": [
+   {
+    "start": "2026-11-07",
+    "end": "2026-11-15"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -6314,6 +6898,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 05 - Oct 01",
+  "seasonRanges": [
+   {
+    "start": "2026-09-05",
+    "end": "2026-10-01"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -6333,6 +6925,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Sep 05 - Oct 01",
+  "seasonRanges": [
+   {
+    "start": "2026-09-05",
+    "end": "2026-10-01"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -6352,6 +6952,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Oct 10 - Nov 01",
+  "seasonRanges": [
+   {
+    "start": "2026-10-10",
+    "end": "2026-11-01"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -6371,6 +6979,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Aug 11 - Aug 14",
+  "seasonRanges": [
+   {
+    "start": "2026-08-11",
+    "end": "2026-08-14"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -6390,6 +7006,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Aug 13 - Aug 16",
+  "seasonRanges": [
+   {
+    "start": "2026-08-13",
+    "end": "2026-08-16"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -6409,6 +7033,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "female",
+  "seasonDates": "Dec 22 - Jan 03",
+  "seasonRanges": [
+   {
+    "start": "2026-12-22",
+    "end": "2027-01-03"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -6428,6 +7060,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Dec 22 - Jan 03",
+  "seasonRanges": [
+   {
+    "start": "2026-12-22",
+    "end": "2027-01-03"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -6447,6 +7087,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "either",
+  "seasonDates": "Sep 02 - Sep 24",
+  "seasonRanges": [
+   {
+    "start": "2026-09-02",
+    "end": "2026-09-24"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -6466,6 +7114,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 10 - Oct 25",
+  "seasonRanges": [
+   {
+    "start": "2026-10-10",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -6485,6 +7141,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 03 - Oct 11",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-10-11"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -6504,6 +7168,14 @@
   "method": "muzzleloader",
   "methodLabel": "Muzzleloader",
   "sex": "male",
+  "seasonDates": "Sept 12 - Sept 27",
+  "seasonRanges": [
+   {
+    "start": "2026-09-12",
+    "end": "2026-09-27"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -6523,6 +7195,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 17 - Oct 25",
+  "seasonRanges": [
+   {
+    "start": "2026-10-17",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -6542,12 +7222,20 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Oct 17 - Oct 25",
+  "seasonRanges": [
+   {
+    "start": "2026-10-17",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
    "applicants": 93
   },
-  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 4, 23: 1, 22: 2, 21: 5, 20: 5, 19: 1, 18: 2, 16: 3, 15: 5, 14: 3, 13: 2, 12: 7, 11: 3, 10: 1, 9: 3, 8: 1, 6: 6, 5: 5, 4: 3, 3: 5, 2: 7, 1: 8, 0: 11.",
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 4, 23: 1, 22: 2, 21: 5, 20: 5, 19: 1, 18: 2, 16: 3, 15: 5, 14: 3, 13: 2, 12: 7, 11: 3, 10: 1, 9: 3, 8: 1, 6: 6, 5: 5, 4: 3, 3: 5, 2: 7, 1: 8, 0: 11. Season dates: the 2026 Big Game Hunting Digest and CDFW's 2026 Elk Hunt Dates sheet print Oct 17-25; the hunt table in CDFW's 2026-2027 Mammal Hunting Regulations booklet prints 'Oct 03- Oct 11'.",
   "sourceId": "d-stats-elk-bull-and-spike-bull-hunts-2026"
  },
  {
@@ -6561,6 +7249,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "either",
+  "seasonDates": "Oct 03 - Oct 25",
+  "seasonRanges": [
+   {
+    "start": "2026-10-03",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 5,

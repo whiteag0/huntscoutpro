@@ -11,6 +11,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2026: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -31,6 +38,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2026: Oct. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-10-01",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -51,6 +65,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2026: Oct. 16-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2026-10-16",
+    "end": "2026-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -69,6 +90,13 @@
   "description": "Unit 3, Zarembo Island — Legal animal: Bull — Hunt Area: Unit 3, Zarembo Island ...",
   "sex": "male",
   "seasonDates": "2026: Oct. 1-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2026-10-01",
+    "end": "2026-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -88,6 +116,13 @@
   "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "male",
   "seasonDates": "2026: Oct. 1-Oct. 12",
+  "seasonRanges": [
+   {
+    "start": "2026-10-01",
+    "end": "2026-10-12"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -107,6 +142,13 @@
   "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "male",
   "seasonDates": "2026: Oct. 11-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2026-10-11",
+    "end": "2026-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -126,6 +168,13 @@
   "description": "Unit 8, Raspberry Island — Nonresidents Only — Legal animal: Cow — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "female",
   "seasonDates": "2026: Oct. 23-Nov. 30",
+  "seasonRanges": [
+   {
+    "start": "2026-10-23",
+    "end": "2026-11-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -144,6 +193,13 @@
   "description": "Unit 8, SW Afognak Island — Legal animal: Bull — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
   "sex": "male",
   "seasonDates": "2026: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2026-09-25",
+    "end": "2026-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 15,
@@ -163,6 +219,13 @@
   "description": "Unit 8, SW Afognak Island — Legal animal: Cow — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
   "sex": "female",
   "seasonDates": "2026: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2026-10-08",
+    "end": "2026-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 120,
@@ -181,6 +244,13 @@
   "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
   "sex": "either",
   "seasonDates": "2026: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2026-09-25",
+    "end": "2026-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 46,
@@ -199,6 +269,13 @@
   "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
   "sex": "either",
   "seasonDates": "2026: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2026-10-08",
+    "end": "2026-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 46,
@@ -217,6 +294,13 @@
   "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north- south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
   "sex": "either",
   "seasonDates": "2026: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2026-09-25",
+    "end": "2026-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 31,
@@ -235,6 +319,13 @@
   "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north- south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
   "sex": "either",
   "seasonDates": "2026: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2026-10-08",
+    "end": "2026-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 31,
@@ -255,6 +346,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2025: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2025-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -275,6 +373,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2025: Oct. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-10-01",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -295,6 +400,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2025: Oct. 16-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2025-10-16",
+    "end": "2025-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -313,6 +425,13 @@
   "description": "Unit 3, Zarembo Island — Legal animal: Bull — Hunt Area: Unit 3, Zarembo Island ...",
   "sex": "male",
   "seasonDates": "2025: Oct. 1-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2025-10-01",
+    "end": "2025-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -332,6 +451,13 @@
   "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "male",
   "seasonDates": "2025: Oct. 1-Oct. 12",
+  "seasonRanges": [
+   {
+    "start": "2025-10-01",
+    "end": "2025-10-12"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -351,6 +477,13 @@
   "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "male",
   "seasonDates": "2025: Oct. 11-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2025-10-11",
+    "end": "2025-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -370,6 +503,13 @@
   "description": "Unit 8, Raspberry Island — Nonresidents Only — Legal animal: Cow — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "female",
   "seasonDates": "2025: Oct. 23-Nov. 30",
+  "seasonRanges": [
+   {
+    "start": "2025-10-23",
+    "end": "2025-11-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -388,6 +528,13 @@
   "description": "Unit 8, SW Afognak Island — Legal animal: Bull — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
   "sex": "male",
   "seasonDates": "2025: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2025-09-25",
+    "end": "2025-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 15,
@@ -407,6 +554,13 @@
   "description": "Unit 8, SW Afognak Island — Legal animal: Cow — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
   "sex": "female",
   "seasonDates": "2025: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2025-10-08",
+    "end": "2025-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 120,
@@ -425,6 +579,13 @@
   "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
   "sex": "either",
   "seasonDates": "2025: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2025-09-25",
+    "end": "2025-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 46,
@@ -443,6 +604,13 @@
   "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
   "sex": "either",
   "seasonDates": "2025: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2025-10-08",
+    "end": "2025-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 46,
@@ -461,6 +629,13 @@
   "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
   "sex": "either",
   "seasonDates": "2025: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2025-09-25",
+    "end": "2025-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 31,
@@ -479,6 +654,13 @@
   "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
   "sex": "either",
   "seasonDates": "2025: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2025-10-08",
+    "end": "2025-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 31,
@@ -499,6 +681,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2024: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2024-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -519,6 +708,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2024: Oct. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-10-01",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -539,6 +735,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2024: Oct. 16-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2024-10-16",
+    "end": "2024-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -557,6 +760,13 @@
   "description": "Unit 3, Zarembo Island — Legal animal: Bull — Hunt Area: Unit 3, Zarembo Island ...",
   "sex": "male",
   "seasonDates": "2024: Oct. 1-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2024-10-01",
+    "end": "2024-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -576,6 +786,13 @@
   "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "male",
   "seasonDates": "2024: Oct. 1-Oct. 12",
+  "seasonRanges": [
+   {
+    "start": "2024-10-01",
+    "end": "2024-10-12"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -595,6 +812,13 @@
   "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "male",
   "seasonDates": "2024: Oct. 11-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2024-10-11",
+    "end": "2024-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -614,6 +838,13 @@
   "description": "Unit 8, Raspberry Island — Nonresidents Only — Legal animal: Cow — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "female",
   "seasonDates": "2024: Oct. 23-Nov. 30",
+  "seasonRanges": [
+   {
+    "start": "2024-10-23",
+    "end": "2024-11-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -632,6 +863,13 @@
   "description": "Unit 8, SW Afognak Island — Legal animal: Bull — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
   "sex": "male",
   "seasonDates": "2024: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2024-09-25",
+    "end": "2024-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 15,
@@ -650,6 +888,13 @@
   "description": "Unit 8, SW Afognak Island — Legal animal: Cow — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
   "sex": "female",
   "seasonDates": "2024: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2024-10-08",
+    "end": "2024-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 120,
@@ -668,6 +913,13 @@
   "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
   "sex": "either",
   "seasonDates": "2024: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2024-09-25",
+    "end": "2024-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 46,
@@ -686,6 +938,13 @@
   "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
   "sex": "either",
   "seasonDates": "2024: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2024-10-08",
+    "end": "2024-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 46,
@@ -704,6 +963,13 @@
   "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
   "sex": "either",
   "seasonDates": "2024: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2024-09-25",
+    "end": "2024-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 31,
@@ -722,6 +988,13 @@
   "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
   "sex": "either",
   "seasonDates": "2024: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2024-10-08",
+    "end": "2024-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 31,
@@ -742,6 +1015,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2023: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2023-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -762,6 +1042,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2023: Oct. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-10-01",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -782,6 +1069,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2023: Oct. 16-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2023-10-16",
+    "end": "2023-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -800,6 +1094,13 @@
   "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "male",
   "seasonDates": "2023: Oct. 1-Oct. 12",
+  "seasonRanges": [
+   {
+    "start": "2023-10-01",
+    "end": "2023-10-12"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -819,6 +1120,13 @@
   "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "male",
   "seasonDates": "2023: Oct. 11-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2023-10-11",
+    "end": "2023-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -838,6 +1146,13 @@
   "description": "Unit 8, Raspberry Island — Legal animal: Cow — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "female",
   "seasonDates": "2023: Oct. 23-Nov. 30",
+  "seasonRanges": [
+   {
+    "start": "2023-10-23",
+    "end": "2023-11-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 150,
@@ -856,6 +1171,13 @@
   "description": "Unit 8, SW Afognak Island — Legal animal: Bull — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
   "sex": "male",
   "seasonDates": "2023: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2023-09-25",
+    "end": "2023-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 15,
@@ -874,6 +1196,13 @@
   "description": "Unit 8, SW Afognak Island — Legal animal: Cow — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
   "sex": "female",
   "seasonDates": "2023: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2023-10-08",
+    "end": "2023-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 120,
@@ -892,6 +1221,13 @@
   "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
   "sex": "either",
   "seasonDates": "2023: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2023-09-25",
+    "end": "2023-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -910,6 +1246,13 @@
   "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
   "sex": "either",
   "seasonDates": "2023: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2023-10-08",
+    "end": "2023-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -928,6 +1271,13 @@
   "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
   "sex": "either",
   "seasonDates": "2023: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2023-09-25",
+    "end": "2023-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -946,6 +1296,13 @@
   "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
   "sex": "either",
   "seasonDates": "2023: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2023-10-08",
+    "end": "2023-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -966,6 +1323,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2022: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2022-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -986,6 +1350,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2022: Oct. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-10-01",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -1006,6 +1377,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2022: Oct. 16-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2022-10-16",
+    "end": "2022-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -1024,6 +1402,13 @@
   "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "male",
   "seasonDates": "2022: Oct. 1-Oct. 12",
+  "seasonRanges": [
+   {
+    "start": "2022-10-01",
+    "end": "2022-10-12"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -1043,6 +1428,13 @@
   "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "male",
   "seasonDates": "2022: Oct. 11-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2022-10-11",
+    "end": "2022-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -1062,6 +1454,13 @@
   "description": "Unit 8, Raspberry Island — Legal animal: Cow — Hunt Area: that portion of Unit 8 on Raspberry Island.",
   "sex": "female",
   "seasonDates": "2022: Oct. 23-Nov. 30",
+  "seasonRanges": [
+   {
+    "start": "2022-10-23",
+    "end": "2022-11-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 150,
@@ -1080,6 +1479,13 @@
   "description": "Unit 8, SW Afognak Island — Legal animal: Bull — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
   "sex": "male",
   "seasonDates": "2022: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2022-09-25",
+    "end": "2022-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 15,
@@ -1098,6 +1504,13 @@
   "description": "Unit 8, SW Afognak Island — Legal animal: Cow — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
   "sex": "female",
   "seasonDates": "2022: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2022-10-08",
+    "end": "2022-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 120,
@@ -1116,6 +1529,13 @@
   "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
   "sex": "either",
   "seasonDates": "2022: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2022-09-25",
+    "end": "2022-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -1134,6 +1554,13 @@
   "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
   "sex": "either",
   "seasonDates": "2022: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2022-10-08",
+    "end": "2022-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -1152,6 +1579,13 @@
   "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
   "sex": "either",
   "seasonDates": "2022: Sept. 25-Oct. 9",
+  "seasonRanges": [
+   {
+    "start": "2022-09-25",
+    "end": "2022-10-09"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -1170,6 +1604,13 @@
   "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
   "sex": "either",
   "seasonDates": "2022: Oct. 8-Oct. 22",
+  "seasonRanges": [
+   {
+    "start": "2022-10-08",
+    "end": "2022-10-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 35,

@@ -13,6 +13,15 @@ coverage, sources). Every fact below was copied from the ADF&G document named by
                (harvest tickets), unit pages (elk RE325/RE706/RE752/RE755/RE756, goat RG471-RG474 and RG476 registration hunts)
   d-web-*      ADF&G web pages retrieved 2026-10-31 (drawing overview, draw results, lottery, Tier I/II, registration)
 
+Every keyDate carries `kind` (schema KeyDateKind) and `residency` where ADF&G limits it (Tier II and Community
+Subsistence Harvest: Alaska residents only). Re-checked 2026-10-31: the draw, Tier I/II and draw-results pages and both
+2027-2028 supplements still give November 1 - December 15, 2026. Registration permits are issued per hunt with their own
+dates in the 2026-2027 regulations (none for 2027-2028 yet) and general-season harvest tickets can be obtained at any time
+(they expire June 30), so neither has a dated keyDate.
+seasons[]: Dall sheep general (harvest ticket) seasons from d-regs-2026 (pages 33 and the unit pages). Moose, mountain goat,
+black bear and elk general/registration seasons differ by unit, subunit and residency and are not summarized here; the
+per-hunt drawing seasons are on the draw rows (seasonRanges, seasons_ranges.py).
+
 Usage: python -I draw_meta.py <repo_root>
 """
 import json
@@ -78,20 +87,52 @@ def sources():
 
 
 DRAW_DATES = [
-    {"label": "Drawing permit application period (online only)", "start": "2026-11-01", "end": "2026-12-15", "cycle": 2027,
+    {"label": "Drawing permit application period (online only)", "kind": "application", "start": "2026-11-01", "end": "2026-12-15", "cycle": 2027,
      "status": "confirmed", "sourceId": "d-supp-2027",
      "note": "Opens 8 a.m., closes 5 p.m. AKST. Hunts take place in 2027 unless designated as 2028. Paper applications are not accepted."},
-    {"label": "Deadline to ask ADF&G for an alternative to applying online", "date": "2026-11-20", "cycle": 2027,
+    {"label": "Deadline to ask ADF&G for an alternative to applying online", "kind": "other", "date": "2026-11-20", "cycle": 2027,
      "status": "confirmed", "sourceId": "d-supp-2027", "note": "5 p.m. AKST, through the local ADF&G office."},
-    {"label": "Drawing results announced", "date": "2027-02-19", "cycle": 2027, "status": "tentative", "sourceId": "d-supp-2027",
+    {"label": "Drawing results announced", "kind": "results", "date": "2027-02-19", "cycle": 2027, "status": "tentative", "sourceId": "d-supp-2027",
      "note": "The 2027-2028 supplement says results are announced on the third Friday of February, which is February 19, 2027. ADF&G's Draw Results page (retrieved 2026-10-31) says 'Friday, February 20'."},
-    {"label": "Undersubscribed drawing permits posted", "date": "2027-03-05", "cycle": 2027, "status": "tentative", "sourceId": "d-supp-2027",
+    {"label": "Undersubscribed drawing permits posted", "kind": "leftover", "date": "2027-03-05", "cycle": 2027, "status": "tentative", "sourceId": "d-supp-2027",
      "note": "Supplement: information on any undersubscribed permits is posted at hunt.alaska.gov on the first Friday in March (March 5, 2027)."},
 ]
 TIER_DATES = [
-    {"label": "Tier II subsistence permit application period (residents only)", "start": "2026-11-01", "end": "2026-12-15", "cycle": 2027,
+    {"label": "Tier II subsistence permit application period (residents only)", "kind": "application", "residency": "resident",
+     "start": "2026-11-01", "end": "2026-12-15", "cycle": 2027,
      "status": "confirmed", "sourceId": "d-subs-2027",
      "note": "Online by 5 p.m. AKST December 15; paper applications must be postmarked November 1-30 and received by December 15."},
+    {"label": "Tier II paper applications: postmark window (must also be received by December 15)", "kind": "application",
+     "residency": "resident", "start": "2026-11-01", "end": "2026-11-30", "cycle": 2027, "status": "confirmed", "sourceId": "d-subs-2027",
+     "note": "Mailed Tier II applications must be postmarked between November 1 and November 30 (U.S. Postal Service postmark) and "
+             "received by 5 p.m. AKST December 15; not accepted over the counter."},
+    {"label": "Copper Basin Community Subsistence Harvest moose hunt CM300: group coordinator applications", "kind": "application",
+     "residency": "resident", "start": "2026-10-01", "end": "2026-12-15", "cycle": 2027, "status": "confirmed", "sourceId": "d-subs-2027",
+     "note": "Online only, closes 5 p.m. AKST December 15. Groups need at least 25 members; Alaska residents only."},
+    {"label": "Copper Basin Community Subsistence Harvest moose hunt CM300: household applications", "kind": "application",
+     "residency": "resident", "start": "2026-11-01", "end": "2026-12-15", "cycle": 2027, "status": "confirmed", "sourceId": "d-subs-2027",
+     "note": "Online only, closes 5 p.m. AKST December 15. Households commit for two years; no member may hold other state moose permits or general-season moose harvest tickets."},
+    {"label": "Tier II and Community Subsistence Harvest results announced", "kind": "results", "residency": "resident",
+     "date": "2027-02-19", "cycle": 2027, "status": "tentative", "sourceId": "d-subs-2027",
+     "note": "The 2027-2028 subsistence supplement says results are announced on the third Friday of February (February 19, 2027). ADF&G's Draw Results page (retrieved 2026-10-31) says 'Friday, February 20' for the Draw, Tier I/II and Community Subsistence Harvest period."},
+]
+
+
+SEASONS = [
+    {"species": "sheep", "label": "General-season (harvest ticket) Dall sheep, full-curl ram", "method": "all",
+     "start": "2026-08-10", "end": "2026-09-20", "year": 2026, "sourceId": "d-regs-2026",
+     "note": "2026-2027 regulations: the standard general (harvest ticket) sheep season is Aug 10-Sept 20 with a full-curl ram bag "
+             "limit (residents one ram; nonresidents one ram every four regulatory years, with a guide or qualifying resident relative). "
+             "From July 1, 2026 hunters must complete ADF&G's Sheep Hunter Orientation before hunting these seasons. Some areas differ "
+             "(Dalton Highway Corridor Management Area: Aug 10-Oct 5), are drawing-permit only or closed; check the unit pages."},
+    {"species": "sheep", "label": "Youth-only general-season Dall sheep hunt, full-curl ram", "method": "all",
+     "start": "2026-08-01", "end": "2026-08-05", "year": 2026, "sourceId": "d-regs-2026",
+     "note": "Listed on the unit pages of the 2026-2027 regulations next to the Aug 10-Sept 20 general sheep seasons (harvest ticket, "
+             "youth hunt only; full-curl ram)."},
+    {"species": "sheep", "label": "Dalton Highway Corridor Management Area general-season Dall sheep, full-curl ram", "method": "all",
+     "units": ["24A", "25A", "26B"], "start": "2026-08-10", "end": "2026-10-05", "year": 2026, "sourceId": "d-regs-2026",
+     "note": "Portions of Units 24A, 25A and 26B within the Dalton Highway Corridor Management Area (harvest ticket; additional "
+             "DHCMA restrictions apply). A youth-only hunt runs Aug 1-Aug 5."},
 ]
 
 COMMON = ("ADF&G awards drawing permits by a computer lottery: each valid application gets a random draw number for each hunt and "
@@ -189,7 +230,9 @@ def coverage(repo):
     for f in os.listdir(d):
         if f.endswith(".json"):
             years[f[:-5]] = sorted({r["year"] for r in json.load(open(os.path.join(d, f)))})
-    base = ("Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt "
+    base = ("Season dates (seasonDates, as printed in the Y-(Y+1) supplement, with seasonRanges from seasons_ranges.py and "
+            "seasonSourceId d-supp-Y) are on every row where the supplement cell could be read. "
+            "Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt "
             "more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as "
             "published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. "
             "Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the "
@@ -233,7 +276,7 @@ def main():
                      "bear are hunted in Alaska but are not covered here."),
         "species": species(),
         "fees": fees(),
-        "seasons": [],
+        "seasons": SEASONS,
         "coverage": coverage(repo),
         "sources": sources(),
     }
