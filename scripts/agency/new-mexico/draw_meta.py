@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Build src/data/agency/new-mexico/draw-meta.json.
 
-Usage: draw_meta.py <repo_root>   (run after draw_parse.py)
+Usage: draw_meta.py <repo_root>   (run after draw_parse.py; then run seasons_parse.py, which
+replaces seasons[] below with the full hunt-table season list and adds season dates to the draw rows)
 
 Facts below were transcribed from the cited NMDOW documents (downloaded by
 draw_download.py; see sources[]). Coverage years/row counts are read from the
@@ -54,31 +55,60 @@ SOURCES = [
                       (2026, "2026 Big Game Drawing Odds Summary Report", "2026-big-game-drawing-odds-summary-report/?wpdmdl=56112")]],
     dict(id="d-nm-rib-2026", title="2026-2027 New Mexico Hunting Rules and Information", publisher=PUB_NEW,
          url=DL + "2026-2027-new-mexico-hunting-rules-and-info/?wpdmdl=52826", dataYear=2026, retrieved=RET,
-         notes="License year April 1, 2026 - March 31, 2027. Draw process, quotas, hunt-code legend, bag codes, 2026 dates, OTC seasons."),
+         pageUrl="https://wildlife.dgf.nm.gov/home/publications/",
+         notes="License year April 1, 2026 - March 31, 2027. Draw process, quotas, hunt-code legend, bag codes, 2026 dates, hunt tables (season dates per hunt code), OTC seasons. "
+               "The 2027-2028 booklet was not yet released as of 2026-10-31 (publications page and NMDOW download list checked)."),
     dict(id="d-nm-draw-page", title="Draw Info, Odds & Tips (How New Mexico's Draw Works)", publisher=PUB_NEW,
          url=ODDS_PAGE, retrieved=RET, notes="Web page (last modified 2026-07-29)."),
     dict(id="d-nm-dates-2026", title="Applying for Big Game Hunts in New Mexico - Important Dates 2026-27", publisher=PUB_NEW,
          url="https://wildlife.dgf.nm.gov/hunting/applications-and-draw-information/", dataYear=2026, retrieved=RET,
-         notes="Web page (last modified 2026-02-16)."),
+         notes="Web page (last modified 2026-02-16; still the 2026-27 dates on 2026-10-31)."),
     dict(id="d-nm-fees-draw-2027", title="2027-2028 Draw Licenses and Fees (Draw Hunt License Fees)", publisher=PUB_NEW,
          url=DL + "2027-2028-draw-licenses-and-fees/?wpdmdl=57207", pageUrl=ODDS_PAGE, dataYear=2027, retrieved=RET,
          notes="License year 2027-2028. Amounts identical to the 2026-27 booklet (page 17)."),
     dict(id="d-nm-fees-otc-2027", title="2027-28 Over-the-Counter (OTC) License Fees", publisher=PUB_NEW,
          url=DL + "2027-2028-over-the-counter-otc-license-fees/?wpdmdl=57206", pageUrl=ODDS_PAGE, dataYear=2027, retrieved=RET,
          notes="License year 2027-2028. Amounts identical to the 2026-27 booklet (page 16)."),
+    dict(id="d-nm-leftover-2026", title="Leftover draw licenses go on sale July 8 (NMDOW news release, 2026-07-07)", publisher=PUB_NEW,
+         url="https://wildlife.dgf.nm.gov/leftover-draw-licenses-go-on-sale-july-8-2026/", dataYear=2026, retrieved=RET,
+         notes="537 leftover deer licenses from the 2026-2027 big-game draw."),
+    dict(id="d-nm-youth-elk-2026", title="Youth encouragement Elk license sale begins July 22 (NMDOW news release, 2026-07-21)", publisher=PUB_NEW,
+         url="https://wildlife.dgf.nm.gov/youth-encouragement-elk-license-sale-begins-july-22-2026/", dataYear=2026, retrieved=RET),
 ]
 
-NOT_2027 = "2027 dates not yet published by NMDOW as of 2026-10-31."
+NOT_2027 = ("2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and "
+            "the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).")
 BIG_DATES = [
-    dict(label="Draw application deadline (5 p.m. MDT)", date="2026-03-18", cycle=2026, status="confirmed",
+    dict(label="Draw application deadline (5 p.m. MDT)", kind="application", date="2026-03-18", cycle=2026, status="confirmed",
          note=NOT_2027, sourceId="d-nm-dates-2026"),
-    dict(label="Big-game draw results available", date="2026-04-22", cycle=2026, status="confirmed",
+    dict(label="Big-game draw results available", kind="results", date="2026-04-22", cycle=2026, status="confirmed",
          note=NOT_2027, sourceId="d-nm-dates-2026"),
 ]
+HARVEST_REPORT = [
+    dict(label="2025-26 harvest report deadline (free; late fee after this date)", kind="other", date="2026-02-15", cycle=2026, status="confirmed",
+         note="Deer, elk, pronghorn and turkey license holders. " + NOT_2027, sourceId="d-nm-dates-2026"),
+    dict(label="Last day for late 2025-26 harvest reports ($8 late fee); unreported hunters' 2026-27 draw applications are rejected", kind="other",
+         date="2026-03-18", cycle=2026, status="confirmed", note="Deer, elk, pronghorn and turkey license holders. " + NOT_2027, sourceId="d-nm-dates-2026"),
+]
+OTC_SALE = dict(label="2026-27 over-the-counter licenses on sale (online, phone, NMDOW offices, vendors)", kind="license-sale", date="2026-03-25",
+                cycle=2026, status="confirmed", note="License year begins April 1, 2026. " + NOT_2027, sourceId="d-nm-dates-2026")
+DEER_LEFTOVER = [
+    dict(label="Leftover deer draw licenses on sale online (10 a.m., residents only for the first 24 hours)", kind="leftover", residency="resident",
+         date="2026-07-08", cycle=2026, status="confirmed", note="537 leftover deer licenses from the 2026-27 draw.", sourceId="d-nm-leftover-2026"),
+    dict(label="Leftover deer draw licenses open to nonresidents (10 a.m., if licenses remain)", kind="leftover", residency="nonresident",
+         date="2026-07-09", cycle=2026, status="confirmed", sourceId="d-nm-leftover-2026"),
+]
+YOUTH_ELK = [
+    dict(label="Youth Encouragement Elk licenses on sale online (10 a.m. MDT; first 14 days only resident youth who applied and drew nothing)",
+         kind="license-sale", residency="resident", date="2026-07-22", cycle=2026, status="confirmed",
+         note="1,960 antlerless licenses, first-come, first-served.", sourceId="d-nm-youth-elk-2026"),
+    dict(label="Youth Encouragement Elk licenses open to any eligible youth hunter (10 a.m. MDT)", kind="license-sale", date="2026-08-05",
+         cycle=2026, status="confirmed", sourceId="d-nm-youth-elk-2026"),
+]
 BT_DATES = [
-    dict(label="Bear and turkey draw permit application deadline (5 p.m. MT)", date="2026-02-11", cycle=2026, status="confirmed",
+    dict(label="Bear and turkey draw permit application deadline (5 p.m. MT)", kind="application", date="2026-02-11", cycle=2026, status="confirmed",
          note=NOT_2027, sourceId="d-nm-dates-2026"),
-    dict(label="Bear and turkey draw permit results available", date="2026-02-18", cycle=2026, status="confirmed",
+    dict(label="Bear and turkey draw permit results available", kind="results", date="2026-02-18", cycle=2026, status="confirmed",
          note=NOT_2027, sourceId="d-nm-dates-2026"),
 ]
 RANDOM_SUMMARY = ("Random draw with no preference or bonus points: each application gets a random sequence number and the "
@@ -93,25 +123,25 @@ SPECIES = [
          residentNote="Residents receive a minimum of 84% of licenses in each hunt, and 100% of antlerless (A) and WMA-only elk licenses.",
          nonresidentNote=NR_NOTE + " Nonresidents are ineligible for antlerless elk and WMA hunts.",
          otcSummary="No public-land OTC elk licenses. Private-land elk hunting uses landowner-issued ranch-only or unit-wide authorizations with a Private-Land Elk License (2026-27 booklet page 73); these are outside the public draw and its odds reports.",
-         keyDates=BIG_DATES, sourceIds=["d-nm-rib-2026", "d-nm-draw-page", "d-nm-dates-2026", "d-nm-fees-draw-2027"]),
+         keyDates=BIG_DATES + HARVEST_REPORT + YOUTH_ELK, sourceIds=["d-nm-rib-2026", "d-nm-draw-page", "d-nm-dates-2026", "d-nm-fees-draw-2027", "d-nm-youth-elk-2026"]),
     dict(species="mule-deer", displayName="Deer (mule deer; most NM deer hunts are bag FAD, legal for either deer species)", drawSystem="random", pointsMatter=False,
          drawSystemSummary=RANDOM_SUMMARY + " NM deer hunts are drawn by hunt code; bag FAD (fork-antlered deer) allows mule deer or white-tailed deer, FAMD is mule deer only.",
          residentNote="Residents receive a minimum of 84% of licenses in each hunt and 100% of WMA-only hunts.",
          nonresidentNote=NR_NOTE,
          otcSummary="Private-Land Only Deer Licenses are sold over the counter (from July 1) for private land in many units; no public-land OTC deer licenses.",
-         keyDates=BIG_DATES, sourceIds=["d-nm-rib-2026", "d-nm-draw-page", "d-nm-dates-2026", "d-nm-fees-draw-2027", "d-nm-fees-otc-2027"]),
+         keyDates=BIG_DATES + HARVEST_REPORT + DEER_LEFTOVER, sourceIds=["d-nm-rib-2026", "d-nm-draw-page", "d-nm-dates-2026", "d-nm-fees-draw-2027", "d-nm-fees-otc-2027", "d-nm-leftover-2026"]),
     dict(species="whitetail", displayName="White-tailed deer (Coues; FAWTD/ESWTD hunt codes)", drawSystem="random", pointsMatter=False,
          drawSystemSummary=RANDOM_SUMMARY + " White-tailed-only deer hunts carry bag FAWTD (fork-antlered white-tailed deer) or ESWTD (either-sex white-tailed deer); FAD hunts (listed under mule deer) are also legal for white-tailed deer.",
          residentNote="Residents receive a minimum of 84% of licenses in each hunt.",
          nonresidentNote=NR_NOTE,
          otcSummary="Private-Land Only Deer Licenses are sold over the counter in some units; no public-land OTC deer licenses.",
-         keyDates=BIG_DATES, sourceIds=["d-nm-rib-2026", "d-nm-draw-page", "d-nm-dates-2026", "d-nm-fees-draw-2027"]),
+         keyDates=BIG_DATES + HARVEST_REPORT + DEER_LEFTOVER, sourceIds=["d-nm-rib-2026", "d-nm-draw-page", "d-nm-dates-2026", "d-nm-fees-draw-2027", "d-nm-leftover-2026"]),
     dict(species="pronghorn", displayName="Pronghorn", drawSystem="random", pointsMatter=False,
          drawSystemSummary=RANDOM_SUMMARY,
          residentNote="Residents receive a minimum of 84% of public draw licenses in each hunt.",
          nonresidentNote=NR_NOTE,
          otcSummary="Private-Land Only Pronghorn Licenses are sold over the counter (from July 1) for private land; public-land pronghorn is draw only.",
-         keyDates=BIG_DATES, sourceIds=["d-nm-rib-2026", "d-nm-draw-page", "d-nm-dates-2026", "d-nm-fees-draw-2027", "d-nm-fees-otc-2027"]),
+         keyDates=BIG_DATES + HARVEST_REPORT, sourceIds=["d-nm-rib-2026", "d-nm-draw-page", "d-nm-dates-2026", "d-nm-fees-draw-2027", "d-nm-fees-otc-2027"]),
     dict(species="sheep", displayName="Bighorn sheep (Rocky Mountain & desert)", drawSystem="random", pointsMatter=False,
          drawSystemSummary=RANDOM_SUMMARY + " Only one hunter per application; a hunter may draw one Rocky Mountain and one desert bighorn ram license in a lifetime.",
          residentNote="Residents receive a minimum of 84% of licenses in each hunt.",
@@ -123,19 +153,19 @@ SPECIES = [
          residentNote="Only New Mexico residents may apply for WMA bear draw permits.",
          nonresidentNote="Nonresidents may buy the OTC Bear License and apply for non-WMA bear draw permits (Valle Vidal, Unit 2 youth, Sugarite Canyon).",
          otcSummary="OTC Bear License valid statewide in open zones during zone seasons (bow-only Sept. 1-24 in most zones; any legal sporting arm periods vary by zone). Zones close when harvest limits are reached. Draw permits must also be validated with the OTC Bear License.",
-         keyDates=BT_DATES, sourceIds=["d-nm-rib-2026", "d-nm-dates-2026", "d-nm-fees-draw-2027", "d-nm-fees-otc-2027"]),
+         keyDates=BT_DATES + [OTC_SALE], sourceIds=["d-nm-rib-2026", "d-nm-dates-2026", "d-nm-fees-draw-2027", "d-nm-fees-otc-2027"]),
     dict(species="turkey", displayName="Wild turkey", drawSystem="otc", pointsMatter=False,
          drawSystemSummary="Turkey hunting is mainly over the counter (spring and fall). A random draw issues turkey draw permits for special areas (e.g. Carson NF Units 2B/2C, Valles Caldera, Valle Vidal); up to two hunters per application, and permits must be validated with an OTC Turkey License.",
          residentNote="Residents receive a minimum of 84% of draw permits in each hunt.",
          nonresidentNote="Nonresidents may buy OTC Turkey Licenses and apply for turkey draw permits in the 6% (or 10% outfitter) pool.",
          otcSummary="OTC Turkey License (spring and/or fall): spring Apr. 15-May 15 statewide except closed areas (bag two bearded turkeys); fall Sept. 1-30 bow only and Nov. 1-30 shotgun, bow or crossbow (bag any one turkey).",
-         keyDates=BT_DATES, sourceIds=["d-nm-rib-2026", "d-nm-dates-2026", "d-nm-fees-draw-2027", "d-nm-fees-otc-2027"]),
+         keyDates=BT_DATES + HARVEST_REPORT + [OTC_SALE], sourceIds=["d-nm-rib-2026", "d-nm-dates-2026", "d-nm-fees-draw-2027", "d-nm-fees-otc-2027"]),
     dict(species="lion", displayName="Cougar (mountain lion)", drawSystem="otc", pointsMatter=False,
          drawSystemSummary="No draw. Cougar hunting is by OTC Cougar License; each Cougar Management Zone closes when harvest reaches 90% of its total or female limit.",
          residentNote="OTC Cougar License; a cougar identification course is mandatory.",
          nonresidentNote="OTC Cougar License; a cougar identification course is mandatory.",
          otcSummary="OTC Cougar License (must be bought at least two calendar days before hunting). Statewide season April 1, 2026-March 31, 2027; bag limit two cougars.",
-         keyDates=[], sourceIds=["d-nm-rib-2026", "d-nm-fees-otc-2027"]),
+         keyDates=[OTC_SALE], sourceIds=["d-nm-rib-2026", "d-nm-dates-2026", "d-nm-fees-otc-2027"]),
     dict(species="moose", displayName="Moose", drawSystem="none", pointsMatter=False,
          drawSystemSummary="New Mexico has no moose hunting season; the 2026-2027 rules booklet lists moose only as an occasional visitor that is protected.",
          keyDates=[], sourceIds=["d-nm-rib-2026"]),
@@ -220,7 +250,7 @@ COMMON_NOTE = ("Source: NMDOW/NMDGF drawing odds reports (draw years = report ye
                "pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. "
                "total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, "
                "so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; "
-               "choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Draw hunt season dates are not in the odds reports and are not included.")
+               "choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Season dates (seasonDates/seasonRanges) for the 2026 rows come from the hunt tables of the 2026-2027 Hunting Rules and Information booklet (seasonSourceId d-nm-rib-2026), written by seasons_parse.py.")
 SP_NOTES = {
     "elk": "Big-game complete reports 2022-2026. 2024-2026 first-choice total drawn = resident + nonresident + outfitter first-choice drawn (sum of published pool figures). "
            "2022 all-choice applicants = 1st+2nd+3rd (the 2022 report prints no total column). Cross-check: 2022 elk section Totals row matches the sum of hunts in every column "

@@ -3,8 +3,12 @@
 
 Usage: python -I scripts/agency/nevada/draw_meta.py <raw_dir> <repo_root>
 
-Run after draw_parse.py (which writes <raw_dir>/draw_sources.json and the draw/<species>.json files).
+Run after draw_parse.py (which writes <raw_dir>/draw_sources.json and the draw/<species>.json files),
+then run seasons_parse.py (which writes draw-meta.seasons[] and the draw rows' seasonRanges).
 Every fact below was read from the NDOW / Nevada documents listed in DOC_SOURCES on 2026-10-31.
+Each key date carries `kind` (schema KeyDateKind) and `residency` when NDOW limits it to one residency.
+draw-meta.seasons[] is owned by seasons_parse.py: this script keeps the seasons already in draw-meta.json
+(falling back to SEASONS only when the file has none), so re-running it does not undo seasons_parse.py.
 """
 import json
 import os
@@ -21,6 +25,8 @@ DOC_SOURCES = [
      "publisher": NDOW, "url": U + "2026/03/2026-Big-Game-Application-FAQ.pdf", "pageUrl": "https://www.ndow.org/apply-buy/apply-buy-hunting/", "dataYear": 2026, "retrieved": R},
     {"id": "d-cr-26-01-a1", "title": "CR 26-01 Amendment #1 2026 Application Deadlines & Draw Result Dates; 2027 Spring Turkey Application Deadline & Draw Result Dates",
      "publisher": "Nevada Board of Wildlife Commissioners / " + NDOW, "url": U + "2026/08/CR-26-01-A-1-2026-2027-Application-Deadlines-Draw-Result-Dates.pdf", "dataYear": 2026, "retrieved": R},
+    {"id": "d-cr-25-01-a1", "title": "CR 25-01 Amendment #1 2025 Application Deadlines & Draw Result Dates and 2026 Spring Turkey Application Deadline & Draw Result Dates (NBWC approved June 2025)",
+     "publisher": "Nevada Board of Wildlife Commissioners / " + NDOW, "url": U + "2025/08/CR25-01-Amendment-1-2025-Application-Deadlines-Draw-Result-and-2026-Spring-Turkey-NBWC-Approved-JUNE-2025-FINAL.pdf", "dataYear": 2026, "retrieved": R},
     {"id": "d-nac-502", "title": "NAC Chapter 502 - Wildlife: Licenses, Tags and Permits (NAC 502.331 application fees; 502.4187-502.4189 bonus points)",
      "publisher": "Nevada Legislature (Legislative Counsel Bureau)", "url": "https://www.leg.state.nv.us/nac/nac-502.html", "retrieved": R},
     {"id": "d-cr-26-11", "title": "CR 26-11 2026-2027 Big Game Quotas (NBWC approved May 2026)",
@@ -29,6 +35,11 @@ DOC_SOURCES = [
      "publisher": "Nevada Board of Wildlife Commissioners / " + NDOW, "url": U + "2026/08/CR-26-12-2026-Black-Bear-Seasons-and-Quotas-NBWC-Approved-May-2026.pdf", "dataYear": 2026, "retrieved": R},
     {"id": "d-cr-26-08", "title": "CR 26-08 2026-2027 Mountain Lion Season - Open Management Units and Harvest Limits (NBWC approved January 2026)",
      "publisher": "Nevada Board of Wildlife Commissioners / " + NDOW, "url": U + "2026/01/CR-26-08-2026-2027-Mountain-Lion-Seasons-2026-NBWC-Approved-January-2026.pdf", "dataYear": 2026, "retrieved": R},
+    {"id": "d-cr-26-09", "title": "CR 26-09 2026-2027 Restricted Nonresident Guided Antlered Mule Deer Seasons and Quota - hunt 1235 (NBWC approved January 2026)",
+     "publisher": "Nevada Board of Wildlife Commissioners / " + NDOW, "url": U + "2026/01/CR-26-09-2026-2027-NR-Guided-Seasons-and-Quotas-NBWC-Approved-January-2026.pdf", "dataYear": 2026, "retrieved": R},
+    {"id": "d-cr-26-13", "title": "CR 26-13 2026-2027 and 2027-2028 Upland Game, Rabbits, Wild Turkey and Furbearer Seasons and Limits (NBWC approved June 2026)",
+     "publisher": "Nevada Board of Wildlife Commissioners / " + NDOW, "url": U + "2026/07/CR26-13-Upland-Furbearer-Seasons.pdf", "dataYear": 2026, "retrieved": R,
+     "notes": "Wild turkey seasons: fall 2026 and 2027, spring 2027 and 2028. Approved by the Commission on June 2026 (approved June 2026 minutes: " + U + "2026/08/June-2026-NBWC-Minutes-Approved.pdf)."},
     {"id": "d-cr-22-11", "title": "CR 22-11 2022-2023 Big Game Quotas (updated) - hunt numbers and approved quotas", "publisher": NDOW,
      "url": U + "2022/05/CR-22-11-2022-2023-Big-Game-Quotas-Updated.pdf", "dataYear": 2022, "retrieved": R},
     {"id": "d-cr-23-14", "title": "CR 23-14 2023 Big Game Quotas (approved) - hunt numbers and approved quotas", "publisher": NDOW,
@@ -44,28 +55,33 @@ DOC_SOURCES = [
               + U + "2021/12/CR-21-06-2021-22-and-2022-23-NR-Guided-Seasons-and-Quotas-ADA-FINAL1.pdf"},
 ]
 
-NOT_2027 = "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates."
+NOT_2027 = ("2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; "
+            "the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.")
 POINT_FACT_IDS = ["d-faq-2026", "d-nac-502", "d-ndow-apply-hunting"]
 
 
 def big_game_dates(include_guided=False):
     d = [
-        {"label": "Big Game Main Draw application period (deadline 11:00 pm PT)", "start": "2026-03-23", "end": "2026-05-13", "cycle": 2026,
+        {"label": "Big Game Main Draw application period (deadline 11:00 pm PT)", "kind": "application", "start": "2026-03-23", "end": "2026-05-13", "cycle": 2026,
          "status": "confirmed", "note": NOT_2027, "sourceId": "d-ndow-apply-hunting"},
-        {"label": "Big Game Main Draw results posted on or before", "date": "2026-05-29", "cycle": 2026, "status": "confirmed", "note": NOT_2027, "sourceId": "d-cr-26-01-a1"},
-        {"label": "Bonus point only applications (sold during the standard big game application periods)", "start": "2026-03-23", "end": "2026-05-13", "cycle": 2026,
+        {"label": "Big Game Main Draw results posted on or before", "kind": "results", "date": "2026-05-29", "cycle": 2026, "status": "confirmed", "note": NOT_2027, "sourceId": "d-cr-26-01-a1"},
+        {"label": "Bonus point only applications (sold during the standard big game application periods)", "kind": "points", "start": "2026-03-23", "end": "2026-05-13", "cycle": 2026,
          "status": "confirmed", "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period, and are offered again in the second draw to those who did not apply in the main draw. " + NOT_2027,
          "sourceId": "d-cr-26-01-a1"},
-        {"label": "Big Game Second Draw application period", "start": "2026-06-08", "end": "2026-06-15", "cycle": 2026, "status": "confirmed",
+        {"label": "Big Game Second Draw application period", "kind": "leftover", "start": "2026-06-08", "end": "2026-06-15", "cycle": 2026, "status": "confirmed",
          "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). " + NOT_2027,
          "sourceId": "d-ndow-apply-hunting"},
-        {"label": "Big Game Second Draw results released on or before", "date": "2026-06-26", "cycle": 2026, "status": "confirmed", "note": NOT_2027, "sourceId": "d-cr-26-01-a1"},
+        {"label": "Big Game Second Draw results released on or before", "kind": "results", "date": "2026-06-26", "cycle": 2026, "status": "confirmed", "note": NOT_2027, "sourceId": "d-cr-26-01-a1"},
     ]
+    d.append({"label": "Big game harvest questionnaire due (5:00 pm PT) for 2026 tags", "kind": "other", "date": "2027-01-31", "cycle": 2026, "status": "confirmed",
+              "note": ("CR 26-01 A-1 / NAC 502.405: every 2026 big game tag holder must submit the online harvest questionnaire, hunted or not, by "
+                       "January 31 following the close of the season; hunts that end on or after January 31 are due February 28 instead."),
+              "sourceId": "d-cr-26-01-a1"})
     if include_guided:
         d = [
-            {"label": "Restricted Nonresident Guided Mule Deer Hunt application period", "start": "2026-02-09", "end": "2026-03-09", "cycle": 2026,
+            {"label": "Restricted Nonresident Guided Mule Deer Hunt application period", "kind": "application", "residency": "nonresident", "start": "2026-02-09", "end": "2026-03-09", "cycle": 2026,
              "status": "confirmed", "note": NOT_2027, "sourceId": "d-ndow-apply-hunting"},
-            {"label": "Restricted Nonresident Guided Mule Deer Hunt results released on or before", "date": "2026-03-20", "cycle": 2026, "status": "confirmed",
+            {"label": "Restricted Nonresident Guided Mule Deer Hunt results released on or before", "kind": "results", "residency": "nonresident", "date": "2026-03-20", "cycle": 2026, "status": "confirmed",
              "note": NOT_2027, "sourceId": "d-cr-26-01-a1"},
         ] + d
     return d
@@ -86,7 +102,7 @@ def species():
          "residentNote": "Resident hunts: 1331 (any legal weapon), 1341 (archery), 1371 (muzzleloader), junior hunts 1105/1106/1107. No waiting period for mule deer.",
          "nonresidentNote": "Nonresident hunts 1332, 1342, 1372 in the main draw, plus the separate Restricted Nonresident Guided Mule Deer Hunt (1235, must hunt with a licensed guide) drawn in March. Resident/nonresident quotas are set at about 90%/10% (Commission Policy 24, per NDOW FAQ).",
          "otcSummary": "No over-the-counter tags; leftover tags from the second draw may be sold First-Come, First-Served from about early-mid July.",
-         "keyDates": big_game_dates(include_guided=True), "sourceIds": common_ids + ["d-cr-25-13", "d-cr-nr-guided"]},
+         "keyDates": big_game_dates(include_guided=True), "sourceIds": common_ids + ["d-cr-25-13", "d-cr-nr-guided", "d-cr-26-09", "d-cr-26-11"]},
         {"species": "elk", "displayName": "Rocky Mountain elk", "drawSystem": "bonus-squared",
          "drawSystemSummary": SQUARED + "Elk has separate bonus point categories for antlered, antlerless and spike elk; elk depredation hunts do not award bonus points.",
          "pointsMatter": True, "pointName": "bonus point",
@@ -121,19 +137,33 @@ def species():
          "pointsMatter": True, "pointName": "bonus point",
          "residentNote": "2026 quota 38 resident tags (CR 26-12). 5-year waiting period after a successful harvest. Indoctrination course is mandatory for tag holders.",
          "nonresidentNote": "2026 quota 4 nonresident tags (CR 26-12).",
-         "otcSummary": "No over-the-counter bear tags.", "keyDates": big_game_dates(), "sourceIds": common_ids + ["d-cr-26-12"]},
+         "otcSummary": "No over-the-counter bear tags.",
+         "keyDates": big_game_dates() + [
+             {"label": "Mandatory black bear indoctrination course (6-9 pm, Reno and Zoom)", "kind": "other", "date": "2026-07-16", "cycle": 2026, "status": "confirmed",
+              "note": "CR 26-12: tags are issued only after the tag holder (and any guide or sub-guide) completes one indoctrination course; second course July 25, 2026.", "sourceId": "d-cr-26-12"},
+             {"label": "Mandatory black bear indoctrination course (1-4 pm, Reno and Zoom)", "kind": "other", "date": "2026-07-25", "cycle": 2026, "status": "confirmed", "sourceId": "d-cr-26-12"},
+         ], "sourceIds": common_ids + ["d-cr-26-12"]},
         {"species": "turkey", "displayName": "Wild turkey", "drawSystem": "bonus-squared",
          "drawSystemSummary": "Wild turkey tags are issued through a separate spring (and fall) turkey draw; turkey bonus points are kept by hunt number and the squared bonus point rule of NAC 502.4189 applies to every tag drawing.",
          "pointsMatter": True, "pointName": "bonus point",
          "residentNote": "NDOW has not published per-hunt turkey draw statistics comparable to its big game bonus point reports; none are included.",
          "otcSummary": "No over-the-counter turkey tags.",
          "keyDates": [
-             {"label": "2027 Spring Wild Turkey draw application deadline (11:00 pm PT)", "date": "2027-01-25", "cycle": 2027, "status": "confirmed",
+             {"label": "2026 Spring Wild Turkey draw application period (deadline 11:00 pm PT)", "kind": "application", "start": "2026-01-12", "end": "2026-01-26", "cycle": 2026,
+              "status": "confirmed", "note": "Opening date from NDOW's 2026 Small Game Application Calendar; deadline also in CR 25-01 A-1.", "sourceId": "d-ndow-apply-hunting"},
+             {"label": "2026 Spring Wild Turkey bonus point only deadline (11:00 pm PT)", "kind": "points", "date": "2026-02-02", "cycle": 2026, "status": "confirmed", "sourceId": "d-cr-25-01-a1"},
+             {"label": "2026 Spring Wild Turkey draw results on or before", "kind": "results", "date": "2026-02-13", "cycle": 2026, "status": "confirmed", "sourceId": "d-cr-25-01-a1"},
+             {"label": "2026 Fall Wild Turkey draw application deadline (11:00 pm PT)", "kind": "application", "date": "2026-08-10", "cycle": 2026, "status": "confirmed",
+              "note": "Fall limited-entry hunts 0131/0132 (Pershing and Lincoln counties); opening date not stated in CR 26-01 A-1.", "sourceId": "d-cr-26-01-a1"},
+             {"label": "2026 Fall Wild Turkey draw results on or before", "kind": "results", "date": "2026-08-21", "cycle": 2026, "status": "confirmed", "sourceId": "d-cr-26-01-a1"},
+             {"label": "2027 Spring Wild Turkey draw application deadline (11:00 pm PT)", "kind": "application", "date": "2027-01-25", "cycle": 2027, "status": "confirmed",
               "note": "Opening date for 2027 not stated in CR 26-01 A-1; the 2026 spring application period opened Jan 12, 2026.", "sourceId": "d-cr-26-01-a1"},
-             {"label": "2027 Spring Wild Turkey bonus point only deadline (11:00 pm PT)", "date": "2027-02-01", "cycle": 2027, "status": "confirmed", "sourceId": "d-cr-26-01-a1"},
-             {"label": "2027 Spring Wild Turkey draw results on or before", "date": "2027-02-12", "cycle": 2027, "status": "confirmed", "sourceId": "d-cr-26-01-a1"},
+             {"label": "2027 Spring Wild Turkey bonus point only deadline (11:00 pm PT)", "kind": "points", "date": "2027-02-01", "cycle": 2027, "status": "confirmed", "sourceId": "d-cr-26-01-a1"},
+             {"label": "2027 Spring Wild Turkey draw results on or before", "kind": "results", "date": "2027-02-12", "cycle": 2027, "status": "confirmed", "sourceId": "d-cr-26-01-a1"},
+             {"label": "Spring wild turkey harvest questionnaire due (5:00 pm PT) for 2027 spring tags", "kind": "other", "date": "2027-05-31", "cycle": 2027, "status": "confirmed",
+              "note": "CR 26-01 A-1 / NAC 502.407: spring wild turkey harvest questionnaires are due May 31 following the close of the season.", "sourceId": "d-cr-26-01-a1"},
          ],
-         "sourceIds": ["d-cr-26-01-a1", "d-nac-502", "d-ndow-apply-hunting"]},
+         "sourceIds": ["d-cr-26-01-a1", "d-cr-25-01-a1", "d-cr-26-13", "d-nac-502", "d-ndow-apply-hunting"]},
         {"species": "lion", "displayName": "Mountain lion", "drawSystem": "otc", "pointsMatter": False,
          "drawSystemSummary": "Mountain lion tags are not drawn; they are sold online at ndowlicensing.com or over the counter at license agents. Hunters must call the mountain lion hotline (1-800-800-1667) to confirm a unit group is open before hunting.",
          "residentNote": "Limit one lion per tag, 2 tags maximum per person (CR 26-08).",
@@ -212,7 +242,13 @@ def main():
         coverage.append({"species": sp, "years": sorted({r["year"] for r in rows}), "notes": COVERAGE_NOTES[sp] + COMMON_NOTE})
     coverage.append({"species": "turkey", "years": [], "notes": "NDOW does not publish per-hunt turkey draw statistics comparable to its big game bonus point reports; only dates and fees are included."})
     coverage.append({"species": "lion", "years": [], "notes": "Mountain lion tags are sold over the counter; there is no draw."})
+    used |= {r["seasonSourceId"] for sp in ["elk", "mule-deer", "pronghorn", "moose", "bear", "sheep", "goat"]
+             for r in json.load(open(os.path.join(out_dir, "draw", f"{sp}.json"))) if r.get("seasonSourceId")}
     sources = [s for s in gen if s["id"] in used] + DOC_SOURCES
+    seasons = SEASONS
+    meta_path = os.path.join(out_dir, "draw-meta.json")
+    if os.path.exists(meta_path):
+        seasons = json.load(open(meta_path)).get("seasons") or SEASONS  # owned by seasons_parse.py
     meta = {
         "slug": "nevada", "name": "Nevada", "abbrev": "NV",
         "agency": {"name": NDOW, "shortName": "NDOW", "url": "https://www.ndow.org"},
@@ -223,7 +259,7 @@ def main():
                      "Applicants pick up to 5 hunt choices (hunt number and unit group) per species category, and each application gets bonus points squared "
                      "plus one draw numbers, so points improve but never guarantee odds. Unsuccessful applicants earn one bonus point per species category per "
                      "year with an active license, and resident/nonresident quotas are split roughly 90/10."),
-        "species": species(), "fees": fees(), "seasons": SEASONS, "coverage": coverage, "sources": sources,
+        "species": species(), "fees": fees(), "seasons": seasons, "coverage": coverage, "sources": sources,
     }
     with open(os.path.join(out_dir, "draw-meta.json"), "w") as f:
         json.dump(meta, f, indent=1)

@@ -2,7 +2,12 @@
 
 Facts are transcribed from AZGFD's 2026 regulation booklets (fee table "valid for 2026 hunts",
 hunt permit-tag application schedules, Commission Rules R12-4-107 / R12-4-114 printed in the
-2026-2027 Arizona Hunting Regulations). Coverage is computed from the draw/<species>.json files.
+2026-2027 Arizona Hunting Regulations), the 2027 Spring Hunt Draw booklet, AZGFD's Oct. 23, 2026 news
+release on 2027 spring draw results and the 2027 spring left-over permit list. Every key date carries
+`kind` (KeyDateKind) and, where AZGFD limits it, `residency`. Coverage is computed from the
+draw/<species>.json files. Run seasons_parse.py afterwards: it fills seasons[] and draw-row seasonRanges.
+As of 2026-10-31 AZGFD has not published 2027 Pronghorn & Elk or 2027 Fall draw dates
+(its draw page says those regulations come out in early January and early May).
 """
 import json, os, sys
 
@@ -20,6 +25,23 @@ SP = regs_source_id("spring2026")  # 2026 Spring Hunt Draw Regulations
 HR25 = regs_source_id("hunt2025")  # 2025-2026 Arizona Hunting Regulations (12/23/2025 revision)
 SP27 = regs_source_id("spring2027")  # 2027 Spring Hunt Draw Information (applications due Oct. 6, 2026)
 BPP = "d-az-bonus-point-page"
+NEWS27S = "d-az-news-2027spring-results"
+LO27S = "d-az-2027s-leftover-list"
+LO27S_SOURCE = {
+    "id": LO27S, "title": "2027 Spring Draw Left-over Permits – October 26, 2026",
+    "publisher": PUB,
+    "url": "https://azgfd-live-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/10/26080729/2027-S-FCFS-Master-PDF.pdf",
+    "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/",
+    "dataYear": 2027, "retrieved": RETRIEVED,
+    "notes": "Leftover (first-come) permit list for 2027 spring hunts; applications accepted by U.S. mail only on or after Nov. 2, 2026.",
+}
+NEWS27S_SOURCE = {
+    "id": NEWS27S, "title": "Spring Draw results are now available (AZGFD news release, Oct. 23, 2026)",
+    "publisher": PUB, "url": "https://www.azgfd.com/2026/10/23/spring-draw-results-available/",
+    "pageUrl": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/",
+    "dataYear": 2027, "retrieved": RETRIEVED,
+    "notes": "azgfd.com pages answer scripts with a bot challenge; read in a browser on 2026-10-31.",
+}
 SP27_SOURCE = {
     "id": SP27, "title": "2027 Spring Turkey, Javelina, Bison, Bear and Raptor Capture Hunt Draw Information",
     "publisher": PUB,
@@ -46,38 +68,60 @@ NR_10 = ("Under R12-4-114(E)(2) as printed in the 2026-27 Arizona Hunting Regula
          "elk, pronghorn, Sandhill crane and turkey hunts.")
 
 
-def kd(label, date, cycle, sid, note=None):
-    d = {"label": label, "date": date, "cycle": cycle, "status": "confirmed", "sourceId": sid}
+def kd(label, date, cycle, sid, note=None, kind=None, residency=None):
+    d = {"label": label}
+    if kind:
+        d["kind"] = kind
+    if residency:
+        d["residency"] = residency
+    d.update({"date": date, "cycle": cycle, "status": "confirmed", "sourceId": sid})
     if note:
         d["note"] = note
     return d
 
 
 MIDWINTER_DATES = [
-    kd("Pronghorn & elk draw application deadline (11:59 p.m. Arizona time)", "2026-02-03", 2026, PE, NOT_2027 + "; applications are accepted from early to mid-January."),
-    kd("Pronghorn & elk hunt permit-tags mailed out by", "2026-04-01", 2026, PE, NOT_2027),
-    kd("Leftover (first-come) pronghorn & elk applications accepted by mail", "2026-03-16", 2026, PE, NOT_2027),
-    kd("Leftover (first-come) pronghorn & elk permits at Department offices", "2026-03-23", 2026, PE, NOT_2027),
+    kd("Pronghorn & elk draw application deadline (11:59 p.m. Arizona time)", "2026-02-03", 2026, PE, NOT_2027 + " (AZGFD's draw page: pronghorn and elk regulations are available in early January); applications are accepted from early to mid-January.", "application"),
+    kd("Pronghorn & elk hunt permit-tags mailed out by", "2026-04-01", 2026, PE, NOT_2027, "other"),
+    kd("Leftover (first-come) pronghorn & elk applications accepted by mail", "2026-03-16", 2026, PE, NOT_2027, "leftover"),
+    kd("Leftover (first-come) pronghorn & elk permits at Department offices", "2026-03-23", 2026, PE, NOT_2027, "leftover"),
 ]
 FALL_DATES = [
-    kd("Fall draw application deadline (deer, fall turkey, fall javelina, bighorn sheep, fall bison, sandhill crane; 11:59 p.m. Arizona time)", "2026-06-02", 2026, HR, NOT_2027 + "; applications are accepted from early to mid-May."),
-    kd("Fall draw hunt permit-tags mailed out by", "2026-07-24", 2026, HR, NOT_2027),
-    kd("Leftover (first-come) fall applications accepted by mail", "2026-07-06", 2026, HR, NOT_2027),
-    kd("Leftover (first-come) fall permits at Department offices", "2026-07-13", 2026, HR, NOT_2027),
+    kd("Fall draw application deadline (deer, fall turkey, fall javelina, bighorn sheep, fall bison, sandhill crane; 11:59 p.m. Arizona time)", "2026-06-02", 2026, HR, NOT_2027 + " (AZGFD's draw page: fall regulations are available in early May); applications are accepted from early to mid-May.", "application"),
+    kd("Fall draw hunt permit-tags mailed out by", "2026-07-24", 2026, HR, NOT_2027, "other"),
+    kd("Leftover (first-come) fall applications accepted by mail", "2026-07-06", 2026, HR, NOT_2027, "leftover"),
+    kd("Leftover (first-come) fall permits at Department offices", "2026-07-13", 2026, HR, NOT_2027, "leftover"),
 ]
 SPRING_DATES = [
-    kd("Spring draw application deadline (spring turkey, spring javelina, spring bison; 11:59 p.m. Arizona time)", "2025-10-07", 2026, SP, "For 2026 spring hunts."),
-    kd("Spring draw hunt permit-tags mailed out by", "2025-11-26", 2026, SP, "For 2026 spring hunts."),
-    kd("Leftover (first-come) spring applications accepted by mail", "2025-11-03", 2026, SP, "For 2026 spring hunts."),
-    kd("Leftover (first-come) spring permits at Department offices", "2025-11-10", 2026, SP, "For 2026 spring hunts."),
+    kd("Spring draw application deadline (spring turkey, spring javelina, spring bison; 11:59 p.m. Arizona time)", "2025-10-07", 2026, SP, "For 2026 spring hunts.", "application"),
+    kd("Spring draw hunt permit-tags mailed out by", "2025-11-26", 2026, SP, "For 2026 spring hunts.", "other"),
+    kd("Leftover (first-come) spring applications accepted by mail", "2025-11-03", 2026, SP, "For 2026 spring hunts.", "leftover"),
+    kd("Leftover (first-come) spring permits at Department offices", "2025-11-10", 2026, SP, "For 2026 spring hunts.", "leftover"),
     # 2027 spring booklet, "Hunt Permit-tag Application Schedule – Spring 2027" (SP27)
     kd("Spring draw application deadline (spring turkey, spring javelina, spring bison, raptor capture; 11:59 p.m. Arizona time)", "2026-10-06", 2027, SP27,
        "For 2027 spring hunts; online applications only, accepted from early to mid-September 2026. Draw results are posted to "
-       "the applicant's AZGFD portal account; the booklet gives no separate results date."),
-    kd("Spring draw hunt permit-tags mailed out by", "2026-11-25", 2027, SP27, "For 2027 spring hunts."),
+       "the applicant's AZGFD portal account; the booklet gives no separate results date.", "application"),
+    kd("Spring draw results released (AZGFD portal account)", "2026-10-23", 2027, NEWS27S,
+       "For 2027 spring hunts; AZGFD news release of Oct. 23, 2026. Results are shown only in the applicant's AZGFD portal account.", "results"),
+    kd("Arizona E-Tag app opt-in deadline to receive spring hunt permit-tags electronically", "2026-10-19", 2027, NEWS27S,
+       "For 2027 spring hunts; customers who opted in after this date receive their hunt permit-tag by mail (AZGFD news release, Oct. 23, 2026).", "other"),
+    kd("Spring draw hunt permit-tags mailed out by", "2026-11-25", 2027, SP27, "For 2027 spring hunts.", "other"),
     kd("Leftover (first-come) spring applications accepted by mail (after 8:00 a.m. Arizona time)", "2026-11-02", 2027, SP27,
-       "For 2027 spring hunts; first-come results are not posted."),
-    kd("Leftover (first-come) spring permits at Department offices (after 8:00 a.m. Arizona time)", "2026-11-09", 2027, SP27, "For 2027 spring hunts."),
+       "For 2027 spring hunts; first-come results are not posted. AZGFD's 2027 Spring Draw left-over permit list (d-az-2027s-leftover-list) is dated Oct. 26, 2026.", "leftover"),
+    kd("Leftover (first-come) spring permits at Department offices (after 8:00 a.m. Arizona time)", "2026-11-09", 2027, SP27, "For 2027 spring hunts.", "leftover"),
+]
+
+# 'Nonpermit-Tag First-Come Schedule' table, 2026-2027 Arizona Hunting Regulations (Deer: Commission Order 2)
+ARCHERY_DEER_SALE = [
+    kd("Resident archery-only deer nonpermit-tags on sale at AZGFD offices", "2026-11-02", 2026, HR,
+       "Nonpermit-Tag First-Come Schedule; available immediately upon purchase.", "license-sale", "resident"),
+    kd("Resident archery-only deer nonpermit-tags on sale at authorized license dealers", "2026-11-23", 2026, HR,
+       "Nonpermit-Tag First-Come Schedule.", "license-sale", "resident"),
+    kd("Nonresident archery-only deer nonpermit-tags on sale online only at otcarchery.azgfd.com (8:00 a.m. Arizona time)", "2026-11-02", 2026, HR,
+       "For nonresidents with an annual Arizona nonresident combination hunt/fish license; tags not taken electronically are mailed by Dec. 1.",
+       "license-sale", "nonresident"),
+    kd("Nonresident archery-only deer nonpermit-tags on sale at AZGFD offices or by mail (Pioneer, Lifetime or Benefactor license holders)", "2026-11-02", 2026, HR,
+       "Nonpermit-Tag First-Come Schedule.", "license-sale", "nonresident"),
 ]
 
 SPECIES = [
@@ -103,7 +147,7 @@ SPECIES = [
         "residentNote": "Many Arizona deer hunts are 'Any antlered deer' (either species); this file holds those plus mule-deer-only hunts. Bonus-point-only hunt number for deer is 1000.",
         "nonresidentNote": NR_10,
         "otcSummary": "Archery-only deer nonpermit-tags (resident $45, nonresident $300) are sold over the counter for unit-specific archery seasons with harvest limits; nonresident tags are capped and sold online only.",
-        "keyDates": FALL_DATES + [kd("Archery-only deer nonpermit-tags on sale (nonresidents online only at otcarchery.azgfd.com, 8:00 a.m. Arizona time)", "2026-11-02", 2026, HR, "Resident tags at AZGFD offices from this date and at license dealers from 2026-11-23.")],
+        "keyDates": FALL_DATES + ARCHERY_DEER_SALE,
         "sourceIds": [HR, HR25, BPP],
     },
     {
@@ -112,7 +156,7 @@ SPECIES = [
         "residentNote": "This file holds hunts whose legal wildlife is white-tailed deer only; 'Any antlered deer' hunts (either species) are filed under mule deer.",
         "nonresidentNote": NR_10,
         "otcSummary": "Archery-only deer nonpermit-tags (resident $45, nonresident $300) are sold over the counter for unit-specific archery seasons with harvest limits.",
-        "keyDates": FALL_DATES, "sourceIds": [HR, HR25, BPP],
+        "keyDates": FALL_DATES + ARCHERY_DEER_SALE, "sourceIds": [HR, HR25, BPP],
     },
     {
         "species": "sheep", "displayName": "Bighorn sheep (desert & Rocky Mountain)", "drawSystem": "bonus", "pointsMatter": True, "pointName": "bonus point",
@@ -128,7 +172,7 @@ SPECIES = [
         "residentNote": "Bag limit is one turkey per calendar year.",
         "nonresidentNote": NR_10,
         "otcSummary": "Archery turkey nonpermit-tags (resident $25, nonresident $90) and youth-only turkey nonpermit-tags ($10) are sold over the counter for the archery-only nonpermit-tag seasons.",
-        "keyDates": SPRING_DATES + FALL_DATES, "sourceIds": [SP, SP27, HR, HR25, BPP],
+        "keyDates": SPRING_DATES + FALL_DATES, "sourceIds": [SP, SP27, NEWS27S, LO27S, HR, HR25, BPP],
     },
     {
         "species": "bear", "displayName": "Black bear", "drawSystem": "otc", "pointsMatter": False,
@@ -190,6 +234,8 @@ SEASONS = [
 def main():
     sources = all_sources()
     sources.append(SP27_SOURCE)
+    sources.append(NEWS27S_SOURCE)
+    sources.append(LO27S_SOURCE)
     sources.append({
         "id": BPP, "title": "How Arizona Bonus Points Work for the Hunt Draw Process (Bonus Point and Draw Reports page)",
         "publisher": PUB, "url": BP_PAGE, "retrieved": RETRIEVED,

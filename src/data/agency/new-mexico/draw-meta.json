@@ -23,26 +23,65 @@
    "keyDates": [
     {
      "label": "Draw application deadline (5 p.m. MDT)",
+     "kind": "application",
      "date": "2026-03-18",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
     },
     {
      "label": "Big-game draw results available",
+     "kind": "results",
      "date": "2026-04-22",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "2025-26 harvest report deadline (free; late fee after this date)",
+     "kind": "other",
+     "date": "2026-02-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Deer, elk, pronghorn and turkey license holders. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "Last day for late 2025-26 harvest reports ($8 late fee); unreported hunters' 2026-27 draw applications are rejected",
+     "kind": "other",
+     "date": "2026-03-18",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Deer, elk, pronghorn and turkey license holders. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "Youth Encouragement Elk licenses on sale online (10 a.m. MDT; first 14 days only resident youth who applied and drew nothing)",
+     "kind": "license-sale",
+     "residency": "resident",
+     "date": "2026-07-22",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "1,960 antlerless licenses, first-come, first-served.",
+     "sourceId": "d-nm-youth-elk-2026"
+    },
+    {
+     "label": "Youth Encouragement Elk licenses open to any eligible youth hunter (10 a.m. MDT)",
+     "kind": "license-sale",
+     "date": "2026-08-05",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-nm-youth-elk-2026"
     }
    ],
    "sourceIds": [
     "d-nm-rib-2026",
     "d-nm-draw-page",
     "d-nm-dates-2026",
-    "d-nm-fees-draw-2027"
+    "d-nm-fees-draw-2027",
+    "d-nm-youth-elk-2026"
    ]
   },
   {
@@ -57,19 +96,58 @@
    "keyDates": [
     {
      "label": "Draw application deadline (5 p.m. MDT)",
+     "kind": "application",
      "date": "2026-03-18",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
     },
     {
      "label": "Big-game draw results available",
+     "kind": "results",
      "date": "2026-04-22",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "2025-26 harvest report deadline (free; late fee after this date)",
+     "kind": "other",
+     "date": "2026-02-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Deer, elk, pronghorn and turkey license holders. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "Last day for late 2025-26 harvest reports ($8 late fee); unreported hunters' 2026-27 draw applications are rejected",
+     "kind": "other",
+     "date": "2026-03-18",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Deer, elk, pronghorn and turkey license holders. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "Leftover deer draw licenses on sale online (10 a.m., residents only for the first 24 hours)",
+     "kind": "leftover",
+     "residency": "resident",
+     "date": "2026-07-08",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "537 leftover deer licenses from the 2026-27 draw.",
+     "sourceId": "d-nm-leftover-2026"
+    },
+    {
+     "label": "Leftover deer draw licenses open to nonresidents (10 a.m., if licenses remain)",
+     "kind": "leftover",
+     "residency": "nonresident",
+     "date": "2026-07-09",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-nm-leftover-2026"
     }
    ],
    "sourceIds": [
@@ -77,7 +155,8 @@
     "d-nm-draw-page",
     "d-nm-dates-2026",
     "d-nm-fees-draw-2027",
-    "d-nm-fees-otc-2027"
+    "d-nm-fees-otc-2027",
+    "d-nm-leftover-2026"
    ]
   },
   {
@@ -92,26 +171,66 @@
    "keyDates": [
     {
      "label": "Draw application deadline (5 p.m. MDT)",
+     "kind": "application",
      "date": "2026-03-18",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
     },
     {
      "label": "Big-game draw results available",
+     "kind": "results",
      "date": "2026-04-22",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "2025-26 harvest report deadline (free; late fee after this date)",
+     "kind": "other",
+     "date": "2026-02-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Deer, elk, pronghorn and turkey license holders. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "Last day for late 2025-26 harvest reports ($8 late fee); unreported hunters' 2026-27 draw applications are rejected",
+     "kind": "other",
+     "date": "2026-03-18",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Deer, elk, pronghorn and turkey license holders. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "Leftover deer draw licenses on sale online (10 a.m., residents only for the first 24 hours)",
+     "kind": "leftover",
+     "residency": "resident",
+     "date": "2026-07-08",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "537 leftover deer licenses from the 2026-27 draw.",
+     "sourceId": "d-nm-leftover-2026"
+    },
+    {
+     "label": "Leftover deer draw licenses open to nonresidents (10 a.m., if licenses remain)",
+     "kind": "leftover",
+     "residency": "nonresident",
+     "date": "2026-07-09",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-nm-leftover-2026"
     }
    ],
    "sourceIds": [
     "d-nm-rib-2026",
     "d-nm-draw-page",
     "d-nm-dates-2026",
-    "d-nm-fees-draw-2027"
+    "d-nm-fees-draw-2027",
+    "d-nm-leftover-2026"
    ]
   },
   {
@@ -126,18 +245,38 @@
    "keyDates": [
     {
      "label": "Draw application deadline (5 p.m. MDT)",
+     "kind": "application",
      "date": "2026-03-18",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
     },
     {
      "label": "Big-game draw results available",
+     "kind": "results",
      "date": "2026-04-22",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "2025-26 harvest report deadline (free; late fee after this date)",
+     "kind": "other",
+     "date": "2026-02-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Deer, elk, pronghorn and turkey license holders. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "Last day for late 2025-26 harvest reports ($8 late fee); unreported hunters' 2026-27 draw applications are rejected",
+     "kind": "other",
+     "date": "2026-03-18",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Deer, elk, pronghorn and turkey license holders. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
     }
    ],
@@ -161,18 +300,20 @@
    "keyDates": [
     {
      "label": "Draw application deadline (5 p.m. MDT)",
+     "kind": "application",
      "date": "2026-03-18",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
     },
     {
      "label": "Big-game draw results available",
+     "kind": "results",
      "date": "2026-04-22",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
     }
    ],
@@ -195,18 +336,29 @@
    "keyDates": [
     {
      "label": "Bear and turkey draw permit application deadline (5 p.m. MT)",
+     "kind": "application",
      "date": "2026-02-11",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
     },
     {
      "label": "Bear and turkey draw permit results available",
+     "kind": "results",
      "date": "2026-02-18",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "2026-27 over-the-counter licenses on sale (online, phone, NMDOW offices, vendors)",
+     "kind": "license-sale",
+     "date": "2026-03-25",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "License year begins April 1, 2026. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
     }
    ],
@@ -229,18 +381,47 @@
    "keyDates": [
     {
      "label": "Bear and turkey draw permit application deadline (5 p.m. MT)",
+     "kind": "application",
      "date": "2026-02-11",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
     },
     {
      "label": "Bear and turkey draw permit results available",
+     "kind": "results",
      "date": "2026-02-18",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by NMDOW as of 2026-10-31.",
+     "note": "2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "2025-26 harvest report deadline (free; late fee after this date)",
+     "kind": "other",
+     "date": "2026-02-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Deer, elk, pronghorn and turkey license holders. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "Last day for late 2025-26 harvest reports ($8 late fee); unreported hunters' 2026-27 draw applications are rejected",
+     "kind": "other",
+     "date": "2026-03-18",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Deer, elk, pronghorn and turkey license holders. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    },
+    {
+     "label": "2026-27 over-the-counter licenses on sale (online, phone, NMDOW offices, vendors)",
+     "kind": "license-sale",
+     "date": "2026-03-25",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "License year begins April 1, 2026. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
      "sourceId": "d-nm-dates-2026"
     }
    ],
@@ -260,9 +441,20 @@
    "residentNote": "OTC Cougar License; a cougar identification course is mandatory.",
    "nonresidentNote": "OTC Cougar License; a cougar identification course is mandatory.",
    "otcSummary": "OTC Cougar License (must be bought at least two calendar days before hunting). Statewide season April 1, 2026-March 31, 2027; bag limit two cougars.",
-   "keyDates": [],
+   "keyDates": [
+    {
+     "label": "2026-27 over-the-counter licenses on sale (online, phone, NMDOW offices, vendors)",
+     "kind": "license-sale",
+     "date": "2026-03-25",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "License year begins April 1, 2026. 2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).",
+     "sourceId": "d-nm-dates-2026"
+    }
+   ],
    "sourceIds": [
     "d-nm-rib-2026",
+    "d-nm-dates-2026",
     "d-nm-fees-otc-2027"
    ]
   },
@@ -715,10 +907,4882 @@
  ],
  "seasons": [
   {
+   "species": "elk",
+   "label": "Elk draw hunt: Bow",
+   "method": "archery",
+   "units": [
+    "2",
+    "5A",
+    "9",
+    "10",
+    "4",
+    "5B",
+    "50",
+    "51",
+    "52",
+    "6A",
+    "6B",
+    "6C",
+    "7",
+    "12",
+    "13",
+    "15",
+    "16A",
+    "16B",
+    "22",
+    "16C",
+    "16D",
+    "16E",
+    "17",
+    "21A",
+    "21B",
+    "23",
+    "24",
+    "34",
+    "36",
+    "45",
+    "48",
+    "49",
+    "53",
+    "18",
+    "29",
+    "30",
+    "37",
+    "42",
+    "47",
+    "59",
+    "56",
+    "57",
+    "58",
+    "54",
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-2-129",
+    "ELK-2-136",
+    "ELK-2-146",
+    "ELK-2-151",
+    "ELK-2-157",
+    "ELK-2-163",
+    "ELK-2-178",
+    "ELK-2-187",
+    "ELK-2-193",
+    "ELK-2-202",
+    "ELK-2-213",
+    "ELK-2-219",
+    "ELK-2-234",
+    "ELK-2-241",
+    "ELK-2-246",
+    "ELK-2-256",
+    "ELK-2-264",
+    "ELK-2-272",
+    "ELK-2-279",
+    "ELK-2-284",
+    "ELK-2-291",
+    "ELK-2-298",
+    "ELK-2-305",
+    "ELK-2-314",
+    "ELK-2-321",
+    "ELK-2-331",
+    "ELK-2-339",
+    "ELK-2-345",
+    "ELK-2-358",
+    "ELK-2-366",
+    "ELK-2-372",
+    "ELK-2-379",
+    "ELK-2-385",
+    "ELK-2-393",
+    "ELK-2-398",
+    "ELK-2-402",
+    "ELK-2-411",
+    "ELK-2-414",
+    "ELK-2-418",
+    "ELK-2-420",
+    "ELK-2-425",
+    "ELK-2-431",
+    "ELK-2-434",
+    "ELK-2-441"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Bow - Humphries/ Rio Chama WMAs only",
+   "method": "archery",
+   "units": [
+    "4"
+   ],
+   "huntCodes": [
+    "ELK-2-171"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Bow - NM Resident Only",
+   "method": "archery",
+   "units": [
+    "6B"
+   ],
+   "huntCodes": [
+    "ELK-2-220"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2026-09-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal",
+   "huntCodes": [
+    "ELK-1-700"
+   ],
+   "start": "2026-09-01",
+   "end": "2027-01-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Bow",
+   "method": "archery",
+   "units": [
+    "2",
+    "5A",
+    "9",
+    "10",
+    "4",
+    "5B",
+    "50",
+    "51",
+    "52",
+    "6A",
+    "6B",
+    "6C",
+    "7",
+    "12",
+    "13",
+    "15",
+    "16A",
+    "16B",
+    "22",
+    "16C",
+    "16D",
+    "16E",
+    "17",
+    "21A",
+    "21B",
+    "23",
+    "24",
+    "34",
+    "36",
+    "45",
+    "48",
+    "49",
+    "53",
+    "18",
+    "29",
+    "30",
+    "37",
+    "42",
+    "47",
+    "59",
+    "56",
+    "57",
+    "58",
+    "54",
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-2-130",
+    "ELK-2-137",
+    "ELK-2-147",
+    "ELK-2-152",
+    "ELK-2-158",
+    "ELK-2-164",
+    "ELK-2-179",
+    "ELK-2-188",
+    "ELK-2-194",
+    "ELK-2-203",
+    "ELK-2-214",
+    "ELK-2-221",
+    "ELK-2-235",
+    "ELK-2-242",
+    "ELK-2-247",
+    "ELK-2-257",
+    "ELK-2-265",
+    "ELK-2-273",
+    "ELK-2-280",
+    "ELK-2-285",
+    "ELK-2-292",
+    "ELK-2-299",
+    "ELK-2-306",
+    "ELK-2-315",
+    "ELK-2-322",
+    "ELK-2-332",
+    "ELK-2-340",
+    "ELK-2-346",
+    "ELK-2-359",
+    "ELK-2-367",
+    "ELK-2-373",
+    "ELK-2-380",
+    "ELK-2-386",
+    "ELK-2-394",
+    "ELK-2-399",
+    "ELK-2-403",
+    "ELK-2-412",
+    "ELK-2-415",
+    "ELK-2-419",
+    "ELK-2-421",
+    "ELK-2-426",
+    "ELK-2-432",
+    "ELK-2-435",
+    "ELK-2-442"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-09-24",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Bow - Humphries/ Rio Chama WMAs only",
+   "method": "archery",
+   "units": [
+    "4"
+   ],
+   "huntCodes": [
+    "ELK-2-172"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-09-24",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Bow - NM Resident Only",
+   "method": "archery",
+   "units": [
+    "6B"
+   ],
+   "huntCodes": [
+    "ELK-2-222"
+   ],
+   "residency": "resident",
+   "start": "2026-09-15",
+   "end": "2026-09-24",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal",
+   "units": [
+    "21B",
+    "14",
+    "18",
+    "29",
+    "30",
+    "37",
+    "38",
+    "39",
+    "43",
+    "42",
+    "47",
+    "59",
+    "56",
+    "57",
+    "58"
+   ],
+   "huntCodes": [
+    "ELK-1-323",
+    "ELK-1-392",
+    "ELK-1-395",
+    "ELK-1-400",
+    "ELK-1-404",
+    "ELK-1-408",
+    "ELK-1-410",
+    "ELK-1-413",
+    "ELK-1-416",
+    "ELK-1-422"
+   ],
+   "start": "2026-10-01",
+   "end": "2026-10-05",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal",
+   "units": [
+    "5A",
+    "4",
+    "5B",
+    "50",
+    "51",
+    "12",
+    "16B",
+    "22",
+    "21A",
+    "49",
+    "29",
+    "30",
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-1-138",
+    "ELK-1-165",
+    "ELK-1-173",
+    "ELK-1-180",
+    "ELK-1-189",
+    "ELK-1-195",
+    "ELK-1-248",
+    "ELK-1-281",
+    "ELK-1-316",
+    "ELK-1-381",
+    "ELK-1-401",
+    "ELK-1-433"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - Mobility Impaired Only",
+   "units": [
+    "16A",
+    "16D",
+    "34"
+   ],
+   "huntCodes": [
+    "ELK-1-274",
+    "ELK-1-293",
+    "ELK-1-349"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only",
+   "units": [
+    "5A"
+   ],
+   "huntCodes": [
+    "ELK-1-139"
+   ],
+   "residency": "resident",
+   "start": "2026-10-10",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only / Youth Only",
+   "units": [
+    "34"
+   ],
+   "huntCodes": [
+    "ELK-1-348"
+   ],
+   "residency": "resident",
+   "start": "2026-10-10",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - Youth Only",
+   "units": [
+    "16C",
+    "16E",
+    "23",
+    "24",
+    "34"
+   ],
+   "huntCodes": [
+    "ELK-1-286",
+    "ELK-1-300",
+    "ELK-1-333",
+    "ELK-1-343",
+    "ELK-1-347"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "2",
+    "9",
+    "10",
+    "52",
+    "6A",
+    "6B",
+    "6C",
+    "7",
+    "36",
+    "45",
+    "48",
+    "54",
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-3-131",
+    "ELK-3-148",
+    "ELK-3-159",
+    "ELK-3-205",
+    "ELK-3-215",
+    "ELK-3-223",
+    "ELK-3-236",
+    "ELK-3-243",
+    "ELK-3-360",
+    "ELK-3-368",
+    "ELK-3-374",
+    "ELK-3-427",
+    "ELK-3-436",
+    "ELK-3-443"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle - Excluding Cerro portion",
+   "method": "muzzleloader",
+   "units": [
+    "53"
+   ],
+   "huntCodes": [
+    "ELK-3-387"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle - Mobility Impaired Only",
+   "method": "muzzleloader",
+   "units": [
+    "9",
+    "52"
+   ],
+   "huntCodes": [
+    "ELK-3-153",
+    "ELK-3-204"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle - NM Resident Only",
+   "method": "muzzleloader",
+   "units": [
+    "52",
+    "6B"
+   ],
+   "huntCodes": [
+    "ELK-3-206",
+    "ELK-3-224"
+   ],
+   "residency": "resident",
+   "start": "2026-10-10",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle - Youth Only",
+   "method": "muzzleloader",
+   "units": [
+    "13",
+    "15",
+    "17"
+   ],
+   "huntCodes": [
+    "ELK-3-258",
+    "ELK-3-266",
+    "ELK-3-307"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal",
+   "units": [
+    "2",
+    "5A",
+    "10",
+    "4",
+    "50",
+    "51",
+    "52",
+    "6A",
+    "6B",
+    "6C",
+    "7",
+    "12",
+    "16A",
+    "16B",
+    "22",
+    "16C",
+    "16D",
+    "21A",
+    "21B",
+    "36",
+    "45",
+    "48",
+    "49",
+    "37",
+    "38",
+    "57",
+    "58",
+    "54",
+    "55",
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-1-132",
+    "ELK-1-140",
+    "ELK-1-160",
+    "ELK-1-166",
+    "ELK-1-174",
+    "ELK-1-190",
+    "ELK-1-196",
+    "ELK-1-207",
+    "ELK-1-216",
+    "ELK-1-225",
+    "ELK-1-237",
+    "ELK-1-244",
+    "ELK-1-249",
+    "ELK-1-275",
+    "ELK-1-282",
+    "ELK-1-287",
+    "ELK-1-294",
+    "ELK-1-317",
+    "ELK-1-324",
+    "ELK-1-361",
+    "ELK-1-369",
+    "ELK-1-375",
+    "ELK-1-382",
+    "ELK-1-405",
+    "ELK-1-409",
+    "ELK-1-423",
+    "ELK-1-428",
+    "ELK-1-437",
+    "ELK-1-444"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-10-21",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - Excluding Cerro portion",
+   "units": [
+    "53"
+   ],
+   "huntCodes": [
+    "ELK-1-388"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-10-21",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only",
+   "units": [
+    "5B",
+    "6B",
+    "56"
+   ],
+   "huntCodes": [
+    "ELK-1-181",
+    "ELK-1-226",
+    "ELK-1-417"
+   ],
+   "residency": "resident",
+   "start": "2026-10-17",
+   "end": "2026-10-21",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legall - NM Resident Only",
+   "units": [
+    "5A"
+   ],
+   "huntCodes": [
+    "ELK-1-141"
+   ],
+   "residency": "resident",
+   "start": "2026-10-17",
+   "end": "2026-10-21",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "9",
+    "13",
+    "15",
+    "16E",
+    "17",
+    "23",
+    "24",
+    "34"
+   ],
+   "huntCodes": [
+    "ELK-3-149",
+    "ELK-3-154",
+    "ELK-3-259",
+    "ELK-3-267",
+    "ELK-3-301",
+    "ELK-3-308",
+    "ELK-3-334",
+    "ELK-3-341",
+    "ELK-3-350"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-10-21",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal",
+   "units": [
+    "5A",
+    "4",
+    "5B",
+    "51",
+    "52",
+    "6A",
+    "6B",
+    "6C",
+    "12",
+    "16A",
+    "16B",
+    "22",
+    "16C",
+    "16D",
+    "16E",
+    "21A",
+    "21B",
+    "23",
+    "34",
+    "45",
+    "48",
+    "54",
+    "55",
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-1-142",
+    "ELK-1-167",
+    "ELK-1-182",
+    "ELK-1-197",
+    "ELK-1-208",
+    "ELK-1-217",
+    "ELK-1-227",
+    "ELK-1-238",
+    "ELK-1-250",
+    "ELK-1-276",
+    "ELK-1-283",
+    "ELK-1-288",
+    "ELK-1-295",
+    "ELK-1-302",
+    "ELK-1-318",
+    "ELK-1-325",
+    "ELK-1-335",
+    "ELK-1-351",
+    "ELK-1-370",
+    "ELK-1-376",
+    "ELK-1-429",
+    "ELK-1-445"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - Excluding Cerro portion",
+   "units": [
+    "53"
+   ],
+   "huntCodes": [
+    "ELK-1-389"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only",
+   "units": [
+    "6B",
+    "7"
+   ],
+   "huntCodes": [
+    "ELK-1-228",
+    "ELK-1-245"
+   ],
+   "residency": "resident",
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only / Youth Only",
+   "units": [
+    "24"
+   ],
+   "huntCodes": [
+    "ELK-1-344"
+   ],
+   "residency": "resident",
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legall - NM Resident Only",
+   "units": [
+    "5A"
+   ],
+   "huntCodes": [
+    "ELK-1-143"
+   ],
+   "residency": "resident",
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "9",
+    "13",
+    "15",
+    "17"
+   ],
+   "huntCodes": [
+    "ELK-3-150",
+    "ELK-3-155",
+    "ELK-3-260",
+    "ELK-3-268",
+    "ELK-3-309"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal",
+   "units": [
+    "5A",
+    "4",
+    "36"
+   ],
+   "huntCodes": [
+    "ELK-1-144",
+    "ELK-1-168",
+    "ELK-1-362"
+   ],
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only",
+   "units": [
+    "5B",
+    "6A",
+    "6C"
+   ],
+   "huntCodes": [
+    "ELK-1-183",
+    "ELK-1-218",
+    "ELK-1-239"
+   ],
+   "residency": "resident",
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only / Youth Only",
+   "units": [
+    "6B"
+   ],
+   "huntCodes": [
+    "ELK-1-229"
+   ],
+   "residency": "resident",
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - Youth Only",
+   "units": [
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-1-446"
+   ],
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legall - NM Resident Only",
+   "units": [
+    "5A"
+   ],
+   "huntCodes": [
+    "ELK-1-145"
+   ],
+   "residency": "resident",
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "9"
+   ],
+   "huntCodes": [
+    "ELK-3-156"
+   ],
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal",
+   "units": [
+    "4",
+    "5B",
+    "54",
+    "55",
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-1-169",
+    "ELK-1-175",
+    "ELK-1-184",
+    "ELK-1-430",
+    "ELK-1-438"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-11",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only",
+   "units": [
+    "50",
+    "51",
+    "6B",
+    "49"
+   ],
+   "huntCodes": [
+    "ELK-1-191",
+    "ELK-1-198",
+    "ELK-1-230",
+    "ELK-1-383"
+   ],
+   "residency": "resident",
+   "start": "2026-11-07",
+   "end": "2026-11-11",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only / Youth Only",
+   "units": [
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-1-447"
+   ],
+   "residency": "resident",
+   "start": "2026-11-07",
+   "end": "2026-11-11",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - Youth Only",
+   "units": [
+    "4"
+   ],
+   "huntCodes": [
+    "ELK-1-170",
+    "ELK-1-176"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-11",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal",
+   "units": [
+    "4",
+    "12",
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-1-177",
+    "ELK-1-251",
+    "ELK-1-439"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - Excluding Cerro portion / NM Resident Only",
+   "units": [
+    "53"
+   ],
+   "huntCodes": [
+    "ELK-1-390"
+   ],
+   "residency": "resident",
+   "start": "2026-11-14",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only",
+   "units": [
+    "5B",
+    "51",
+    "48",
+    "49",
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-1-185",
+    "ELK-1-199",
+    "ELK-1-377",
+    "ELK-1-384",
+    "ELK-1-448"
+   ],
+   "residency": "resident",
+   "start": "2026-11-14",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only / Youth Only",
+   "units": [
+    "10",
+    "52"
+   ],
+   "huntCodes": [
+    "ELK-1-161",
+    "ELK-1-209"
+   ],
+   "residency": "resident",
+   "start": "2026-11-14",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "15"
+   ],
+   "huntCodes": [
+    "ELK-3-269"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle - NM Resident Only",
+   "method": "muzzleloader",
+   "units": [
+    "45"
+   ],
+   "huntCodes": [
+    "ELK-3-371"
+   ],
+   "residency": "resident",
+   "start": "2026-11-14",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - Excluding Cerro portion / NM Resident Only",
+   "units": [
+    "53"
+   ],
+   "huntCodes": [
+    "ELK-1-391"
+   ],
+   "residency": "resident",
+   "start": "2026-11-21",
+   "end": "2026-11-25",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only",
+   "units": [
+    "50",
+    "51",
+    "52",
+    "6B",
+    "6C",
+    "12",
+    "21B",
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-1-192",
+    "ELK-1-200",
+    "ELK-1-211",
+    "ELK-1-231",
+    "ELK-1-240",
+    "ELK-1-252",
+    "ELK-1-326",
+    "ELK-1-449"
+   ],
+   "residency": "resident",
+   "start": "2026-11-21",
+   "end": "2026-11-25",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only / Mobility Impaired Only",
+   "units": [
+    "52"
+   ],
+   "huntCodes": [
+    "ELK-1-210"
+   ],
+   "residency": "resident",
+   "start": "2026-11-21",
+   "end": "2026-11-25",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "13",
+    "17"
+   ],
+   "huntCodes": [
+    "ELK-3-261",
+    "ELK-3-310"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-25",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle - NM Resident Only",
+   "method": "muzzleloader",
+   "units": [
+    "17"
+   ],
+   "huntCodes": [
+    "ELK-3-311"
+   ],
+   "residency": "resident",
+   "start": "2026-11-21",
+   "end": "2026-11-25",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal",
+   "units": [
+    "55A"
+   ],
+   "huntCodes": [
+    "ELK-1-440"
+   ],
+   "start": "2026-11-28",
+   "end": "2026-12-02",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only",
+   "units": [
+    "12",
+    "21B",
+    "34",
+    "37"
+   ],
+   "huntCodes": [
+    "ELK-1-253",
+    "ELK-1-327",
+    "ELK-1-352",
+    "ELK-1-406"
+   ],
+   "residency": "resident",
+   "start": "2026-11-28",
+   "end": "2026-12-02",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only / Youth Only",
+   "units": [
+    "6B"
+   ],
+   "huntCodes": [
+    "ELK-1-232"
+   ],
+   "residency": "resident",
+   "start": "2026-11-28",
+   "end": "2026-12-02",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk youth encouragement hunt (online first-come license): Any Legal - Youth Only",
+   "units": [
+    "5B",
+    "6A",
+    "6C",
+    "10",
+    "16A",
+    "16C",
+    "16D",
+    "16E",
+    "36",
+    "49",
+    "51",
+    "52",
+    "53"
+   ],
+   "huntCodes": [
+    "ELK-1-100",
+    "ELK-1-101",
+    "ELK-1-103",
+    "ELK-1-105",
+    "ELK-1-110",
+    "ELK-1-112",
+    "ELK-1-114",
+    "ELK-1-116",
+    "ELK-1-121",
+    "ELK-1-123",
+    "ELK-1-124",
+    "ELK-1-126",
+    "ELK-1-127"
+   ],
+   "start": "2026-11-28",
+   "end": "2026-12-02",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk youth encouragement hunt (online first-come license): Muzzle - Youth Only",
+   "method": "muzzleloader",
+   "units": [
+    "13",
+    "15",
+    "17"
+   ],
+   "huntCodes": [
+    "ELK-3-106",
+    "ELK-3-108",
+    "ELK-3-118"
+   ],
+   "start": "2026-11-28",
+   "end": "2026-12-02",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal",
+   "units": [
+    "2C"
+   ],
+   "huntCodes": [
+    "ELK-1-135"
+   ],
+   "start": "2026-12-05",
+   "end": "2026-12-09",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only",
+   "units": [
+    "10",
+    "52",
+    "6B",
+    "12",
+    "16A",
+    "16C",
+    "16D",
+    "16E",
+    "21A",
+    "21B",
+    "23",
+    "34",
+    "36",
+    "48"
+   ],
+   "huntCodes": [
+    "ELK-1-162",
+    "ELK-1-212",
+    "ELK-1-233",
+    "ELK-1-254",
+    "ELK-1-277",
+    "ELK-1-289",
+    "ELK-1-296",
+    "ELK-1-303",
+    "ELK-1-319",
+    "ELK-1-328",
+    "ELK-1-336",
+    "ELK-1-353",
+    "ELK-1-363",
+    "ELK-1-378"
+   ],
+   "residency": "resident",
+   "start": "2026-12-05",
+   "end": "2026-12-09",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Bow",
+   "method": "archery",
+   "units": [
+    "37"
+   ],
+   "huntCodes": [
+    "ELK-2-407"
+   ],
+   "start": "2026-12-05",
+   "end": "2026-12-09",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "51"
+   ],
+   "huntCodes": [
+    "ELK-3-201"
+   ],
+   "start": "2026-12-05",
+   "end": "2026-12-09",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle - NM Resident Only",
+   "method": "muzzleloader",
+   "units": [
+    "13",
+    "15",
+    "17"
+   ],
+   "huntCodes": [
+    "ELK-3-262",
+    "ELK-3-270",
+    "ELK-3-312"
+   ],
+   "residency": "resident",
+   "start": "2026-12-05",
+   "end": "2026-12-09",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - McGregor range only",
+   "units": [
+    "28"
+   ],
+   "huntCodes": [
+    "ELK-1-397"
+   ],
+   "start": "2026-12-12",
+   "end": "2026-12-16",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - McGregor range only / Military Only",
+   "units": [
+    "28"
+   ],
+   "huntCodes": [
+    "ELK-1-396"
+   ],
+   "start": "2026-12-12",
+   "end": "2026-12-16",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only",
+   "units": [
+    "2",
+    "16A",
+    "16C",
+    "16D",
+    "16E",
+    "21B",
+    "34",
+    "36",
+    "57",
+    "58"
+   ],
+   "huntCodes": [
+    "ELK-1-133",
+    "ELK-1-278",
+    "ELK-1-290",
+    "ELK-1-297",
+    "ELK-1-304",
+    "ELK-1-329",
+    "ELK-1-354",
+    "ELK-1-364",
+    "ELK-1-424"
+   ],
+   "residency": "resident",
+   "start": "2026-12-12",
+   "end": "2026-12-16",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only / Youth Only",
+   "units": [
+    "2"
+   ],
+   "huntCodes": [
+    "ELK-1-134"
+   ],
+   "residency": "resident",
+   "start": "2026-12-12",
+   "end": "2026-12-16",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Bow",
+   "method": "archery",
+   "units": [
+    "12"
+   ],
+   "huntCodes": [
+    "ELK-2-255"
+   ],
+   "start": "2026-12-12",
+   "end": "2026-12-16",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Muzzle - NM Resident Only",
+   "method": "muzzleloader",
+   "units": [
+    "13",
+    "15",
+    "17"
+   ],
+   "huntCodes": [
+    "ELK-3-263",
+    "ELK-3-271",
+    "ELK-3-313"
+   ],
+   "residency": "resident",
+   "start": "2026-12-12",
+   "end": "2026-12-16",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal",
+   "units": [
+    "5B",
+    "24"
+   ],
+   "huntCodes": [
+    "ELK-1-186",
+    "ELK-1-342"
+   ],
+   "start": "2026-12-19",
+   "end": "2026-12-23",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Bow",
+   "method": "archery",
+   "units": [
+    "21A",
+    "21B",
+    "23",
+    "34"
+   ],
+   "huntCodes": [
+    "ELK-2-320",
+    "ELK-2-330",
+    "ELK-2-337",
+    "ELK-2-355"
+   ],
+   "start": "2026-12-19",
+   "end": "2026-12-23",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - South of NM 78 / NM Resident Only",
+   "units": [
+    "23"
+   ],
+   "huntCodes": [
+    "ELK-1-338"
+   ],
+   "residency": "resident",
+   "start": "2026-12-19",
+   "end": "2026-12-27",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk youth encouragement hunt (online first-come license): Any Legal - Youth Only",
+   "units": [
+    "6A",
+    "6C",
+    "16A",
+    "16C",
+    "16D",
+    "16E",
+    "34",
+    "36",
+    "51",
+    "53"
+   ],
+   "huntCodes": [
+    "ELK-1-102",
+    "ELK-1-104",
+    "ELK-1-111",
+    "ELK-1-113",
+    "ELK-1-115",
+    "ELK-1-117",
+    "ELK-1-120",
+    "ELK-1-122",
+    "ELK-1-125",
+    "ELK-1-128"
+   ],
+   "start": "2026-12-26",
+   "end": "2026-12-30",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk youth encouragement hunt (online first-come license): Muzzle - Youth Only",
+   "method": "muzzleloader",
+   "units": [
+    "13",
+    "15",
+    "17"
+   ],
+   "huntCodes": [
+    "ELK-3-107",
+    "ELK-3-109",
+    "ELK-3-119"
+   ],
+   "start": "2026-12-26",
+   "end": "2026-12-30",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only",
+   "units": [
+    "34",
+    "36"
+   ],
+   "huntCodes": [
+    "ELK-1-356",
+    "ELK-1-365"
+   ],
+   "residency": "resident",
+   "start": "2027-01-23",
+   "end": "2027-01-27",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "elk",
+   "label": "Elk draw hunt: Any Legal - NM Resident Only",
+   "units": [
+    "34"
+   ],
+   "huntCodes": [
+    "ELK-1-357"
+   ],
+   "residency": "resident",
+   "start": "2027-02-06",
+   "end": "2027-02-10",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Bow",
+   "method": "archery",
+   "units": [
+    "2A",
+    "2B",
+    "4",
+    "5A",
+    "5B",
+    "6A",
+    "6C",
+    "7",
+    "9",
+    "10",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "29",
+    "30",
+    "31",
+    "32",
+    "33",
+    "34",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "45",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51A",
+    "51B",
+    "52",
+    "53",
+    "54",
+    "55",
+    "55A",
+    "56",
+    "57",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "DER-2-104",
+    "DER-2-118",
+    "DER-2-141",
+    "DER-2-146",
+    "DER-2-152",
+    "DER-2-156",
+    "DER-2-159",
+    "DER-2-167",
+    "DER-2-175",
+    "DER-2-178",
+    "DER-2-183",
+    "DER-2-187",
+    "DER-2-190",
+    "DER-2-198",
+    "DER-2-204",
+    "DER-2-209",
+    "DER-2-218",
+    "DER-2-224",
+    "DER-2-231",
+    "DER-2-239",
+    "DER-2-259",
+    "DER-2-267",
+    "DER-2-272",
+    "DER-2-281",
+    "DER-2-291",
+    "DER-2-297",
+    "DER-2-302",
+    "DER-2-309",
+    "DER-2-314",
+    "DER-2-323",
+    "DER-2-329",
+    "DER-2-335",
+    "DER-2-340",
+    "DER-2-345",
+    "DER-2-350",
+    "DER-2-358",
+    "DER-2-364",
+    "DER-2-367",
+    "DER-2-373",
+    "DER-2-377",
+    "DER-2-381",
+    "DER-2-385",
+    "DER-2-388",
+    "DER-2-390",
+    "DER-2-393",
+    "DER-2-396",
+    "DER-2-400",
+    "DER-2-403",
+    "DER-2-408",
+    "DER-2-413",
+    "DER-2-419",
+    "DER-2-427",
+    "DER-2-434"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Bow - Youth Only",
+   "method": "archery",
+   "units": [
+    "2B"
+   ],
+   "huntCodes": [
+    "DER-2-119"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer private-land hunt code (OTC private-land license): Bow",
+   "method": "archery",
+   "units": [
+    "8",
+    "46",
+    "54",
+    "55A",
+    "55B"
+   ],
+   "huntCodes": [
+    "DER-2-501",
+    "DER-2-506",
+    "DER-2-512",
+    "DER-2-517"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal",
+   "huntCodes": [
+    "DER-1-700"
+   ],
+   "start": "2026-09-01",
+   "end": "2027-01-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Youth Only",
+   "units": [
+    "24"
+   ],
+   "huntCodes": [
+    "DER-1-253"
+   ],
+   "start": "2026-09-26",
+   "end": "2026-10-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "2A",
+    "2B",
+    "2C",
+    "5A",
+    "5B",
+    "7",
+    "10",
+    "14",
+    "41",
+    "42",
+    "45",
+    "47",
+    "48",
+    "56",
+    "57",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "DER-3-108",
+    "DER-3-124",
+    "DER-3-131",
+    "DER-3-148",
+    "DER-3-153",
+    "DER-3-161",
+    "DER-3-176",
+    "DER-3-189",
+    "DER-3-360",
+    "DER-3-365",
+    "DER-3-374",
+    "DER-3-378",
+    "DER-3-382",
+    "DER-3-414",
+    "DER-3-421",
+    "DER-3-428",
+    "DER-3-435"
+   ],
+   "start": "2026-09-27",
+   "end": "2026-10-03",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle - Restricted Muzzleloader Only",
+   "method": "muzzleloader",
+   "units": [
+    "9"
+   ],
+   "huntCodes": [
+    "DER-3-169"
+   ],
+   "start": "2026-09-27",
+   "end": "2026-10-03",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle - Restricted muzzleloader only",
+   "method": "muzzleloader",
+   "units": [
+    "52"
+   ],
+   "huntCodes": [
+    "DER-3-397"
+   ],
+   "start": "2026-09-27",
+   "end": "2026-10-03",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle - Youth Only",
+   "method": "muzzleloader",
+   "units": [
+    "2B"
+   ],
+   "huntCodes": [
+    "DER-3-125"
+   ],
+   "start": "2026-09-27",
+   "end": "2026-10-03",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer private-land hunt code (OTC private-land license): Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "8",
+    "46",
+    "54",
+    "55A",
+    "55B"
+   ],
+   "huntCodes": [
+    "DER-3-503",
+    "DER-3-507",
+    "DER-3-513",
+    "DER-3-518"
+   ],
+   "start": "2026-09-27",
+   "end": "2026-10-03",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "6A",
+    "6C"
+   ],
+   "huntCodes": [
+    "DER-3-157"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-07",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Mobility Impaired Only",
+   "units": [
+    "6A",
+    "6C"
+   ],
+   "huntCodes": [
+    "DER-1-154"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-14",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer private-land hunt code (OTC private-land license): Any Legal",
+   "units": [
+    "8"
+   ],
+   "huntCodes": [
+    "DER-1-500"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-10-21",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal",
+   "units": [
+    "2B",
+    "4",
+    "10",
+    "14",
+    "41",
+    "42",
+    "47",
+    "49",
+    "50",
+    "51B",
+    "54",
+    "55",
+    "56",
+    "57",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "DER-1-110",
+    "DER-1-133",
+    "DER-1-171",
+    "DER-1-186",
+    "DER-1-353",
+    "DER-1-361",
+    "DER-1-375",
+    "DER-1-383",
+    "DER-1-386",
+    "DER-1-391",
+    "DER-1-401",
+    "DER-1-409",
+    "DER-1-415",
+    "DER-1-422",
+    "DER-1-429"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - ES Barker WMA only",
+   "units": [
+    "55"
+   ],
+   "huntCodes": [
+    "DER-1-404"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Mobility Impaired Only",
+   "units": [
+    "10"
+   ],
+   "huntCodes": [
+    "DER-1-170"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Urraca WMA only",
+   "units": [
+    "55"
+   ],
+   "huntCodes": [
+    "DER-1-406"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Youth Only",
+   "units": [
+    "2A",
+    "2B",
+    "4"
+   ],
+   "huntCodes": [
+    "DER-1-100",
+    "DER-1-111",
+    "DER-1-134"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "29",
+    "30",
+    "31",
+    "32",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "43"
+   ],
+   "huntCodes": [
+    "DER-3-293",
+    "DER-3-299",
+    "DER-3-304",
+    "DER-3-311",
+    "DER-3-331",
+    "DER-3-337",
+    "DER-3-342",
+    "DER-3-347",
+    "DER-3-352",
+    "DER-3-368"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle - Youth Only",
+   "method": "muzzleloader",
+   "units": [
+    "36"
+   ],
+   "huntCodes": [
+    "DER-3-332"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle - restricted muzzleloader only",
+   "method": "muzzleloader",
+   "units": [
+    "33"
+   ],
+   "huntCodes": [
+    "DER-3-316"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer private-land hunt code (OTC private-land license): Any Legal",
+   "units": [
+    "46",
+    "54",
+    "55A",
+    "55B"
+   ],
+   "huntCodes": [
+    "DER-1-504",
+    "DER-1-508",
+    "DER-1-514"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-10-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal",
+   "units": [
+    "2A",
+    "2B",
+    "4",
+    "10",
+    "29",
+    "30",
+    "32",
+    "41",
+    "42",
+    "45",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51A",
+    "51B",
+    "52",
+    "53",
+    "54",
+    "55",
+    "56",
+    "57",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "DER-1-101",
+    "DER-1-113",
+    "DER-1-136",
+    "DER-1-172",
+    "DER-1-289",
+    "DER-1-294",
+    "DER-1-305",
+    "DER-1-354",
+    "DER-1-362",
+    "DER-1-369",
+    "DER-1-376",
+    "DER-1-379",
+    "DER-1-384",
+    "DER-1-387",
+    "DER-1-389",
+    "DER-1-392",
+    "DER-1-394",
+    "DER-1-398",
+    "DER-1-402",
+    "DER-1-410",
+    "DER-1-416",
+    "DER-1-423",
+    "DER-1-430"
+   ],
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Mobility Impaired Only",
+   "units": [
+    "34"
+   ],
+   "huntCodes": [
+    "DER-1-319"
+   ],
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Urraca WMA only",
+   "units": [
+    "55"
+   ],
+   "huntCodes": [
+    "DER-1-407"
+   ],
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Youth Only",
+   "units": [
+    "34"
+   ],
+   "huntCodes": [
+    "DER-1-320"
+   ],
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "12",
+    "13",
+    "15",
+    "16",
+    "17",
+    "18",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27"
+   ],
+   "huntCodes": [
+    "DER-3-179",
+    "DER-3-185",
+    "DER-3-192",
+    "DER-3-200",
+    "DER-3-206",
+    "DER-3-211",
+    "DER-3-220",
+    "DER-3-226",
+    "DER-3-233",
+    "DER-3-243",
+    "DER-3-251",
+    "DER-3-263",
+    "DER-3-269",
+    "DER-3-274",
+    "DER-3-285"
+   ],
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer private-land hunt code (OTC private-land license): Any Legal",
+   "units": [
+    "46",
+    "54",
+    "55A",
+    "55B"
+   ],
+   "huntCodes": [
+    "DER-1-505",
+    "DER-1-509",
+    "DER-1-515"
+   ],
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Bow",
+   "method": "archery",
+   "units": [
+    "57"
+   ],
+   "huntCodes": [
+    "DER-2-420"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal",
+   "units": [
+    "2B",
+    "5B",
+    "6A",
+    "6C",
+    "7",
+    "10",
+    "12",
+    "13",
+    "16",
+    "17",
+    "18",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "31",
+    "33",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "43",
+    "45",
+    "48",
+    "52",
+    "53"
+   ],
+   "huntCodes": [
+    "DER-1-115",
+    "DER-1-150",
+    "DER-1-155",
+    "DER-1-158",
+    "DER-1-173",
+    "DER-1-177",
+    "DER-1-180",
+    "DER-1-194",
+    "DER-1-201",
+    "DER-1-207",
+    "DER-1-216",
+    "DER-1-221",
+    "DER-1-228",
+    "DER-1-234",
+    "DER-1-254",
+    "DER-1-265",
+    "DER-1-270",
+    "DER-1-276",
+    "DER-1-300",
+    "DER-1-312",
+    "DER-1-326",
+    "DER-1-333",
+    "DER-1-338",
+    "DER-1-343",
+    "DER-1-348",
+    "DER-1-366",
+    "DER-1-371",
+    "DER-1-380",
+    "DER-1-395",
+    "DER-1-399"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-11",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Mobility Impaired Only",
+   "units": [
+    "45"
+   ],
+   "huntCodes": [
+    "DER-1-370"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-11",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "34"
+   ],
+   "huntCodes": [
+    "DER-3-325"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-11",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal",
+   "units": [
+    "23"
+   ],
+   "huntCodes": [
+    "DER-1-245"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal",
+   "units": [
+    "5A"
+   ],
+   "huntCodes": [
+    "DER-1-144"
+   ],
+   "start": "2026-11-10",
+   "end": "2026-11-16",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal",
+   "units": [
+    "2C",
+    "4",
+    "9",
+    "13",
+    "16",
+    "17",
+    "18",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "29",
+    "30",
+    "32",
+    "34",
+    "36"
+   ],
+   "huntCodes": [
+    "DER-1-127",
+    "DER-1-138",
+    "DER-1-164",
+    "DER-1-165",
+    "DER-1-181",
+    "DER-1-196",
+    "DER-1-202",
+    "DER-1-208",
+    "DER-1-217",
+    "DER-1-222",
+    "DER-1-229",
+    "DER-1-235",
+    "DER-1-255",
+    "DER-1-266",
+    "DER-1-271",
+    "DER-1-277",
+    "DER-1-290",
+    "DER-1-295",
+    "DER-1-306",
+    "DER-1-321",
+    "DER-1-327"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Mobility Impaired Only",
+   "units": [
+    "16"
+   ],
+   "huntCodes": [
+    "DER-1-195"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal",
+   "units": [
+    "31",
+    "33",
+    "34",
+    "37",
+    "38",
+    "39",
+    "40"
+   ],
+   "huntCodes": [
+    "DER-1-301",
+    "DER-1-313",
+    "DER-1-322",
+    "DER-1-334",
+    "DER-1-339",
+    "DER-1-344",
+    "DER-1-349"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-25",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - ES Barker WMA only / Youth Only",
+   "units": [
+    "55"
+   ],
+   "huntCodes": [
+    "DER-1-405"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Youth Only",
+   "units": [
+    "2A",
+    "2B",
+    "5B",
+    "9",
+    "10",
+    "13",
+    "16",
+    "17",
+    "21",
+    "22",
+    "23",
+    "24",
+    "27",
+    "30",
+    "36",
+    "41",
+    "45",
+    "56",
+    "57",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "DER-1-103",
+    "DER-1-117",
+    "DER-1-151",
+    "DER-1-166",
+    "DER-1-174",
+    "DER-1-182",
+    "DER-1-197",
+    "DER-1-203",
+    "DER-1-223",
+    "DER-1-230",
+    "DER-1-238",
+    "DER-1-247",
+    "DER-1-257",
+    "DER-1-279",
+    "DER-1-296",
+    "DER-1-328",
+    "DER-1-355",
+    "DER-1-372",
+    "DER-1-411",
+    "DER-1-417",
+    "DER-1-424",
+    "DER-1-431"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Bow - Youth Only",
+   "method": "archery",
+   "units": [
+    "8"
+   ],
+   "huntCodes": [
+    "DER-2-162"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle - Huey WMA only / NM Resident Only / Youth Only",
+   "method": "muzzleloader",
+   "units": [
+    "33"
+   ],
+   "huntCodes": [
+    "DER-3-317"
+   ],
+   "residency": "resident",
+   "start": "2026-11-21",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle - Youth Only",
+   "method": "muzzleloader",
+   "units": [
+    "15"
+   ],
+   "huntCodes": [
+    "DER-3-193"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer private-land hunt code (OTC private-land license): Any Legal - Youth Only",
+   "units": [
+    "54",
+    "55A",
+    "55B"
+   ],
+   "huntCodes": [
+    "DER-1-511",
+    "DER-1-516"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Youth Only",
+   "units": [
+    "4"
+   ],
+   "huntCodes": [
+    "DER-1-140"
+   ],
+   "start": "2026-11-25",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "19"
+   ],
+   "huntCodes": [
+    "DER-3-215"
+   ],
+   "start": "2026-12-05",
+   "end": "2026-12-09",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Youth Only",
+   "units": [
+    "32"
+   ],
+   "huntCodes": [
+    "DER-1-307"
+   ],
+   "start": "2026-12-16",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal",
+   "units": [
+    "28"
+   ],
+   "huntCodes": [
+    "DER-1-287"
+   ],
+   "start": "2026-12-19",
+   "end": "2026-12-20",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal - Military Only",
+   "units": [
+    "28"
+   ],
+   "huntCodes": [
+    "DER-1-288"
+   ],
+   "start": "2026-12-19",
+   "end": "2026-12-20",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Muzzle - Huey WMA only / NM Resident Only / Youth Only",
+   "method": "muzzleloader",
+   "units": [
+    "33"
+   ],
+   "huntCodes": [
+    "DER-3-318"
+   ],
+   "residency": "resident",
+   "start": "2026-12-26",
+   "end": "2027-01-01",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Bow",
+   "method": "archery",
+   "units": [
+    "2A",
+    "2B",
+    "2C",
+    "7",
+    "8",
+    "9",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "29",
+    "30",
+    "31",
+    "32",
+    "33",
+    "34",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41"
+   ],
+   "huntCodes": [
+    "DER-2-106",
+    "DER-2-121",
+    "DER-2-129",
+    "DER-2-160",
+    "DER-2-163",
+    "DER-2-168",
+    "DER-2-184",
+    "DER-2-188",
+    "DER-2-191",
+    "DER-2-199",
+    "DER-2-205",
+    "DER-2-210",
+    "DER-2-214",
+    "DER-2-219",
+    "DER-2-225",
+    "DER-2-232",
+    "DER-2-240",
+    "DER-2-248",
+    "DER-2-260",
+    "DER-2-268",
+    "DER-2-273",
+    "DER-2-283",
+    "DER-2-292",
+    "DER-2-298",
+    "DER-2-303",
+    "DER-2-310",
+    "DER-2-315",
+    "DER-2-324",
+    "DER-2-330",
+    "DER-2-336",
+    "DER-2-341",
+    "DER-2-346",
+    "DER-2-351",
+    "DER-2-359"
+   ],
+   "start": "2027-01-01",
+   "end": "2027-01-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Bow - Youth Only",
+   "method": "archery",
+   "units": [
+    "2B"
+   ],
+   "huntCodes": [
+    "DER-2-122"
+   ],
+   "start": "2027-01-01",
+   "end": "2027-01-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer private-land hunt code (OTC private-land license): Bow",
+   "method": "archery",
+   "units": [
+    "8"
+   ],
+   "huntCodes": [
+    "DER-2-502"
+   ],
+   "start": "2027-01-01",
+   "end": "2027-01-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal",
+   "units": [
+    "19"
+   ],
+   "huntCodes": [
+    "DER-1-213"
+   ],
+   "start": "2027-01-08",
+   "end": "2027-01-10",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal",
+   "units": [
+    "32"
+   ],
+   "huntCodes": [
+    "DER-1-308"
+   ],
+   "start": "2027-01-16",
+   "end": "2027-01-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Deer draw hunt: Any Legal",
+   "units": [
+    "19"
+   ],
+   "huntCodes": [
+    "DER-1-212"
+   ],
+   "start": "2027-01-22",
+   "end": "2027-01-24",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "White-tailed deer draw hunt: Bow",
+   "method": "archery",
+   "units": [
+    "23",
+    "24",
+    "27"
+   ],
+   "huntCodes": [
+    "DER-2-241",
+    "DER-2-249",
+    "DER-2-261",
+    "DER-2-282"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "White-tailed deer draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "23",
+    "24",
+    "27"
+   ],
+   "huntCodes": [
+    "DER-3-244",
+    "DER-3-252",
+    "DER-3-264",
+    "DER-3-286"
+   ],
+   "start": "2026-10-31",
+   "end": "2026-11-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "White-tailed deer draw hunt: Any Legal",
+   "units": [
+    "23",
+    "24",
+    "27"
+   ],
+   "huntCodes": [
+    "DER-1-236",
+    "DER-1-256",
+    "DER-1-278"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-25",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "White-tailed deer draw hunt: Any Legal",
+   "units": [
+    "42",
+    "57"
+   ],
+   "huntCodes": [
+    "DER-1-363",
+    "DER-1-418"
+   ],
+   "start": "2026-11-25",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "White-tailed deer private-land hunt code (OTC private-land license): Any Legal",
+   "units": [
+    "54",
+    "55A",
+    "55B"
+   ],
+   "huntCodes": [
+    "DER-1-510",
+    "DER-1-519"
+   ],
+   "start": "2026-11-25",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "White-tailed deer draw hunt: Any Legal - Youth Only",
+   "units": [
+    "41",
+    "56",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "DER-1-356",
+    "DER-1-412",
+    "DER-1-425",
+    "DER-1-432"
+   ],
+   "start": "2026-12-05",
+   "end": "2026-12-09",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "White-tailed deer draw hunt: Any Legal",
+   "units": [
+    "21",
+    "23",
+    "24",
+    "26",
+    "27"
+   ],
+   "huntCodes": [
+    "DER-1-227",
+    "DER-1-237",
+    "DER-1-246",
+    "DER-1-258",
+    "DER-1-275",
+    "DER-1-280"
+   ],
+   "start": "2026-12-05",
+   "end": "2026-12-13",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "White-tailed deer draw hunt: Any Legal",
+   "units": [
+    "41",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "DER-1-357",
+    "DER-1-426",
+    "DER-1-433"
+   ],
+   "start": "2026-12-12",
+   "end": "2026-12-16",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "White-tailed deer draw hunt: Bow",
+   "method": "archery",
+   "units": [
+    "23",
+    "24",
+    "27"
+   ],
+   "huntCodes": [
+    "DER-2-242",
+    "DER-2-250",
+    "DER-2-262",
+    "DER-2-284"
+   ],
+   "start": "2027-01-16",
+   "end": "2027-01-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Muzzle - Youth Only",
+   "method": "muzzleloader",
+   "units": [
+    "50",
+    "52"
+   ],
+   "huntCodes": [
+    "ANT-3-232"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-08-03",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn private-land hunt code (OTC private-land license): Muzzle - Youth Only",
+   "method": "muzzleloader",
+   "units": [
+    "4"
+   ],
+   "huntCodes": [
+    "ANT-3-300"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-08-03",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Bow",
+   "method": "archery",
+   "units": [
+    "50",
+    "52"
+   ],
+   "huntCodes": [
+    "ANT-2-233"
+   ],
+   "start": "2026-08-04",
+   "end": "2026-08-12",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn private-land hunt code (OTC private-land license): Bow",
+   "method": "archery",
+   "units": [
+    "4"
+   ],
+   "huntCodes": [
+    "ANT-2-301"
+   ],
+   "start": "2026-08-04",
+   "end": "2026-08-12",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Any Legal - Not available for OTC private land licenses",
+   "units": [
+    "50",
+    "52"
+   ],
+   "huntCodes": [
+    "ANT-1-234"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-08-17",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn private-land hunt code (OTC private-land license): Any Legal",
+   "units": [
+    "4",
+    "50",
+    "52"
+   ],
+   "huntCodes": [
+    "ANT-1-302"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-08-17",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Bow",
+   "method": "archery",
+   "units": [
+    "2",
+    "7",
+    "9",
+    "10",
+    "12",
+    "13",
+    "15",
+    "16",
+    "17",
+    "18",
+    "20",
+    "21",
+    "24",
+    "22",
+    "23",
+    "25",
+    "26",
+    "27",
+    "30",
+    "31",
+    "32",
+    "33",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "8",
+    "43",
+    "47",
+    "56",
+    "57",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "ANT-2-100",
+    "ANT-2-103",
+    "ANT-2-108",
+    "ANT-2-113",
+    "ANT-2-119",
+    "ANT-2-125",
+    "ANT-2-131",
+    "ANT-2-135",
+    "ANT-2-138",
+    "ANT-2-144",
+    "ANT-2-149",
+    "ANT-2-159",
+    "ANT-2-160",
+    "ANT-2-166",
+    "ANT-2-172",
+    "ANT-2-178",
+    "ANT-2-184",
+    "ANT-2-190",
+    "ANT-2-196",
+    "ANT-2-202",
+    "ANT-2-208",
+    "ANT-2-212",
+    "ANT-2-219",
+    "ANT-2-223",
+    "ANT-2-225",
+    "ANT-2-236",
+    "ANT-2-243",
+    "ANT-2-247",
+    "ANT-2-254"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-08-23",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn private-land hunt code (OTC private-land license): Bow",
+   "method": "archery",
+   "units": [
+    "14",
+    "46",
+    "48",
+    "54",
+    "55"
+   ],
+   "huntCodes": [
+    "ANT-2-304",
+    "ANT-2-308",
+    "ANT-2-313",
+    "ANT-2-318",
+    "ANT-2-323"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-08-23",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "50",
+    "52"
+   ],
+   "huntCodes": [
+    "ANT-3-235"
+   ],
+   "start": "2026-08-22",
+   "end": "2026-08-24",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn private-land hunt code (OTC private-land license): Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "4"
+   ],
+   "huntCodes": [
+    "ANT-3-303"
+   ],
+   "start": "2026-08-22",
+   "end": "2026-08-24",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Any Legal",
+   "units": [
+    "2",
+    "7",
+    "9",
+    "10",
+    "12",
+    "13",
+    "15",
+    "16",
+    "17",
+    "18",
+    "20",
+    "21",
+    "24",
+    "22",
+    "23",
+    "25",
+    "26",
+    "27",
+    "31",
+    "32",
+    "33",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "8",
+    "43",
+    "47",
+    "56",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "ANT-1-102",
+    "ANT-1-105",
+    "ANT-1-110",
+    "ANT-1-115",
+    "ANT-1-121",
+    "ANT-1-127",
+    "ANT-1-132",
+    "ANT-1-137",
+    "ANT-1-140",
+    "ANT-1-146",
+    "ANT-1-151",
+    "ANT-1-162",
+    "ANT-1-168",
+    "ANT-1-174",
+    "ANT-1-179",
+    "ANT-1-186",
+    "ANT-1-192",
+    "ANT-1-198",
+    "ANT-1-204",
+    "ANT-1-209",
+    "ANT-1-214",
+    "ANT-1-224",
+    "ANT-1-227",
+    "ANT-1-238",
+    "ANT-1-249",
+    "ANT-1-256"
+   ],
+   "start": "2026-08-29",
+   "end": "2026-08-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Any Legal - Youth Only",
+   "units": [
+    "2",
+    "7",
+    "9",
+    "10",
+    "12",
+    "13",
+    "15",
+    "16",
+    "17",
+    "20",
+    "21",
+    "24",
+    "22",
+    "23",
+    "25",
+    "26",
+    "27",
+    "31",
+    "32",
+    "33",
+    "36",
+    "37",
+    "38",
+    "39",
+    "41",
+    "42",
+    "47",
+    "56",
+    "57",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "ANT-1-101",
+    "ANT-1-104",
+    "ANT-1-109",
+    "ANT-1-114",
+    "ANT-1-120",
+    "ANT-1-126",
+    "ANT-1-136",
+    "ANT-1-139",
+    "ANT-1-145",
+    "ANT-1-150",
+    "ANT-1-161",
+    "ANT-1-167",
+    "ANT-1-173",
+    "ANT-1-185",
+    "ANT-1-191",
+    "ANT-1-197",
+    "ANT-1-203",
+    "ANT-1-213",
+    "ANT-1-220",
+    "ANT-1-226",
+    "ANT-1-237",
+    "ANT-1-244",
+    "ANT-1-248",
+    "ANT-1-255"
+   ],
+   "start": "2026-08-29",
+   "end": "2026-08-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "29"
+   ],
+   "huntCodes": [
+    "ANT-3-157"
+   ],
+   "start": "2026-08-29",
+   "end": "2026-08-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Muzzle - Youth Only",
+   "method": "muzzleloader",
+   "units": [
+    "29"
+   ],
+   "huntCodes": [
+    "ANT-3-156"
+   ],
+   "start": "2026-08-29",
+   "end": "2026-08-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn private-land hunt code (OTC private-land license): Any Legal",
+   "units": [
+    "14",
+    "46",
+    "48",
+    "54",
+    "55"
+   ],
+   "huntCodes": [
+    "ANT-1-305",
+    "ANT-1-310",
+    "ANT-1-315",
+    "ANT-1-320",
+    "ANT-1-325"
+   ],
+   "start": "2026-08-29",
+   "end": "2026-08-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn private-land hunt code (OTC private-land license): Any Legal - Youth Only",
+   "units": [
+    "46",
+    "48",
+    "54",
+    "55"
+   ],
+   "huntCodes": [
+    "ANT-1-309",
+    "ANT-1-314",
+    "ANT-1-319",
+    "ANT-1-324"
+   ],
+   "start": "2026-08-29",
+   "end": "2026-08-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "28"
+   ],
+   "huntCodes": [
+    "ANT-3-154"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-09-06",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Muzzle - Military Only",
+   "method": "muzzleloader",
+   "units": [
+    "28"
+   ],
+   "huntCodes": [
+    "ANT-3-155"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-09-06",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Any Legal",
+   "units": [
+    "17",
+    "18",
+    "21",
+    "24",
+    "22",
+    "23",
+    "25",
+    "26",
+    "27",
+    "31",
+    "32",
+    "33",
+    "36",
+    "37",
+    "38",
+    "39",
+    "41",
+    "42",
+    "47",
+    "56",
+    "57",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "ANT-1-128",
+    "ANT-1-133",
+    "ANT-1-141",
+    "ANT-1-147",
+    "ANT-1-152",
+    "ANT-1-163",
+    "ANT-1-169",
+    "ANT-1-175",
+    "ANT-1-180",
+    "ANT-1-187",
+    "ANT-1-193",
+    "ANT-1-199",
+    "ANT-1-205",
+    "ANT-1-215",
+    "ANT-1-221",
+    "ANT-1-228",
+    "ANT-1-239",
+    "ANT-1-245",
+    "ANT-1-250",
+    "ANT-1-257"
+   ],
+   "start": "2026-09-26",
+   "end": "2026-09-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Any Legal - Mobility Impaired Only",
+   "units": [
+    "13",
+    "17",
+    "21",
+    "24",
+    "22",
+    "23",
+    "25",
+    "26",
+    "27",
+    "31",
+    "32",
+    "33",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "47",
+    "56",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "ANT-1-111",
+    "ANT-1-129",
+    "ANT-1-142",
+    "ANT-1-148",
+    "ANT-1-153",
+    "ANT-1-164",
+    "ANT-1-170",
+    "ANT-1-176",
+    "ANT-1-181",
+    "ANT-1-188",
+    "ANT-1-194",
+    "ANT-1-200",
+    "ANT-1-206",
+    "ANT-1-210",
+    "ANT-1-216",
+    "ANT-1-229",
+    "ANT-1-240",
+    "ANT-1-251",
+    "ANT-1-258"
+   ],
+   "start": "2026-09-26",
+   "end": "2026-09-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Muzzle",
+   "method": "muzzleloader",
+   "units": [
+    "29"
+   ],
+   "huntCodes": [
+    "ANT-3-158"
+   ],
+   "start": "2026-09-26",
+   "end": "2026-09-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn private-land hunt code (OTC private-land license): Any Legal",
+   "units": [
+    "14",
+    "46",
+    "48",
+    "54",
+    "55"
+   ],
+   "huntCodes": [
+    "ANT-1-306",
+    "ANT-1-311",
+    "ANT-1-316",
+    "ANT-1-321",
+    "ANT-1-326"
+   ],
+   "start": "2026-09-26",
+   "end": "2026-09-28",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Any Legal - WSMR Only / Youth Only",
+   "units": [
+    "19"
+   ],
+   "huntCodes": [
+    "ANT-1-134"
+   ],
+   "start": "2026-10-02",
+   "end": "2026-10-04",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Any Legal",
+   "units": [
+    "12",
+    "13",
+    "15",
+    "16",
+    "17",
+    "21",
+    "24",
+    "31",
+    "32",
+    "33",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "47",
+    "56",
+    "58",
+    "59"
+   ],
+   "huntCodes": [
+    "ANT-1-107",
+    "ANT-1-112",
+    "ANT-1-118",
+    "ANT-1-124",
+    "ANT-1-130",
+    "ANT-1-143",
+    "ANT-1-165",
+    "ANT-1-171",
+    "ANT-1-177",
+    "ANT-1-182",
+    "ANT-1-189",
+    "ANT-1-195",
+    "ANT-1-201",
+    "ANT-1-207",
+    "ANT-1-211",
+    "ANT-1-217",
+    "ANT-1-222",
+    "ANT-1-230",
+    "ANT-1-241",
+    "ANT-1-252",
+    "ANT-1-259"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-05",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Any Legal - Mobility Impaired Only",
+   "units": [
+    "12",
+    "15",
+    "16"
+   ],
+   "huntCodes": [
+    "ANT-1-106",
+    "ANT-1-117",
+    "ANT-1-123"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-05",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn private-land hunt code (OTC private-land license): Any Legal",
+   "units": [
+    "14",
+    "46",
+    "48",
+    "54",
+    "55"
+   ],
+   "huntCodes": [
+    "ANT-1-307",
+    "ANT-1-312",
+    "ANT-1-317",
+    "ANT-1-322",
+    "ANT-1-327"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-05",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn draw hunt: Any Legal - (Roswell Hunt Area only)",
+   "units": [
+    "32"
+   ],
+   "huntCodes": [
+    "ANT-1-183"
+   ],
+   "start": "2026-12-01",
+   "end": "2026-12-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMU 53 (Wheeler Peak)",
+   "units": [
+    "53"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2026-08-06",
+   "end": "2026-08-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMU 45 (Pecos)",
+   "units": [
+    "45"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2026-08-07",
+   "end": "2026-08-16",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMUs 53 and 55 (Latir)",
+   "units": [
+    "53",
+    "55"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2026-08-07",
+   "end": "2026-08-16",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMUs 49, 50 and 53 (Rio Grande Gorge)",
+   "units": [
+    "49",
+    "50",
+    "53"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2026-08-10",
+   "end": "2026-08-24",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMUs 6A and 6C (Jemez)",
+   "units": [
+    "6A",
+    "6C"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2026-08-10",
+   "end": "2026-08-24",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMU 58 (Dry Cimarron)",
+   "units": [
+    "58"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2026-08-15",
+   "end": "2027-01-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMU 45 (Pecos)",
+   "units": [
+    "45"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2026-08-21",
+   "end": "2026-08-30",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMU 45 (Pecos) - Youth Only",
+   "units": [
+    "45"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "note": "Youth only.",
+   "start": "2026-08-21",
+   "end": "2026-08-30",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMUs 53 and 55 (Latir)",
+   "units": [
+    "53",
+    "55"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2026-08-21",
+   "end": "2026-08-30",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMU 53 (Wheeler Peak)",
+   "units": [
+    "53"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-10",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMUs 49, 50 and 53 (Rio Grande Gorge)",
+   "units": [
+    "49",
+    "50",
+    "53"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMUs 6A and 6C (Jemez)",
+   "units": [
+    "6A",
+    "6C"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ewe (BHS-2-203): GMU 45 (Pecos)",
+   "method": "archery",
+   "units": [
+    "45"
+   ],
+   "huntCodes": [
+    "BHS-2-203"
+   ],
+   "start": "2026-09-04",
+   "end": "2026-09-13",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Desert Bighorn Ram (BHS-1-204): GMU 20 North (Fra Cristobal)",
+   "units": [
+    "20"
+   ],
+   "huntCodes": [
+    "BHS-1-204"
+   ],
+   "start": "2026-09-11",
+   "end": "2026-09-20",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Desert Bighorn Ram (BHS-1-204): GMU 26 (Big Hatchets)",
+   "units": [
+    "26"
+   ],
+   "huntCodes": [
+    "BHS-1-204"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Desert Bighorn Ram (BHS-1-204): GMU 26 (Little Hatchets)",
+   "units": [
+    "26"
+   ],
+   "huntCodes": [
+    "BHS-1-204"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ewe (BHS-1-202): GMU 45 (Pecos)",
+   "units": [
+    "45"
+   ],
+   "huntCodes": [
+    "BHS-1-202"
+   ],
+   "start": "2026-09-19",
+   "end": "2026-09-23",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Desert Bighorn Ram (BHS-1-204): GMU 26 (Big Hatchets)",
+   "units": [
+    "26"
+   ],
+   "huntCodes": [
+    "BHS-1-204"
+   ],
+   "start": "2026-10-01",
+   "end": "2026-10-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Desert Bighorn Ram (BHS-1-204): GMU 26 (Little Hatchets)",
+   "units": [
+    "26"
+   ],
+   "huntCodes": [
+    "BHS-1-204"
+   ],
+   "start": "2026-10-01",
+   "end": "2026-10-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ewe (BHS-1-202): GMU 45 (Pecos)",
+   "units": [
+    "45"
+   ],
+   "huntCodes": [
+    "BHS-1-202"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-07",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ewe (BHS-1-202): GMU 45 (Pecos) - Youth Only",
+   "units": [
+    "45"
+   ],
+   "huntCodes": [
+    "BHS-1-202"
+   ],
+   "note": "Youth only.",
+   "start": "2026-10-03",
+   "end": "2026-10-07",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMUs 49, 50 and 53 (Rio Grande Gorge)",
+   "units": [
+    "49",
+    "50",
+    "53"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Desert Bighorn Ram (BHS-1-204): GMU 20 South (Caballos)",
+   "units": [
+    "20"
+   ],
+   "huntCodes": [
+    "BHS-1-204"
+   ],
+   "start": "2026-11-16",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Desert Bighorn Ram (BHS-1-204): GMU 27 (Peloncillos)",
+   "units": [
+    "27"
+   ],
+   "huntCodes": [
+    "BHS-1-204"
+   ],
+   "start": "2026-11-16",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Desert Bighorn Ram (BHS-1-204): GMU 20 South (Caballos)",
+   "units": [
+    "20"
+   ],
+   "huntCodes": [
+    "BHS-1-204"
+   ],
+   "start": "2026-12-01",
+   "end": "2026-12-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Desert Bighorn Ram (BHS-1-204): GMUs 13 and 17 (Ladrones)",
+   "units": [
+    "13",
+    "17"
+   ],
+   "huntCodes": [
+    "BHS-1-204"
+   ],
+   "start": "2026-12-01",
+   "end": "2026-12-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Desert Bighorn Ram (BHS-1-204): GMU 19 (San Andres)",
+   "units": [
+    "19"
+   ],
+   "huntCodes": [
+    "BHS-1-204"
+   ],
+   "start": "2026-12-14",
+   "end": "2026-12-21",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Desert Bighorn Ram (BHS-1-204): GMUs 13 and 17 (Ladrones)",
+   "units": [
+    "13",
+    "17"
+   ],
+   "huntCodes": [
+    "BHS-1-204"
+   ],
+   "start": "2026-12-16",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Desert Bighorn Ram (BHS-1-204): GMU 19 (San Andres)",
+   "units": [
+    "19"
+   ],
+   "huntCodes": [
+    "BHS-1-204"
+   ],
+   "start": "2026-12-27",
+   "end": "2027-01-03",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "sheep",
+   "label": "Rocky Mountain Bighorn Ram (BHS-1-201): GMUs 16B, 22, 23, 24 (San Francisco River / Turkey Creek)",
+   "units": [
+    "16B",
+    "22",
+    "23",
+    "24"
+   ],
+   "huntCodes": [
+    "BHS-1-201"
+   ],
+   "start": "2027-01-01",
+   "end": "2027-01-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "Bear draw permit: Any Legal",
+   "units": [
+    "55A"
+   ],
+   "huntCodes": [
+    "BER-1-105"
+   ],
+   "start": "2026-04-15",
+   "end": "2026-05-20",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "Bear draw permit: Any Legal",
+   "units": [
+    "54",
+    "55A"
+   ],
+   "huntCodes": [
+    "BER-1-104"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-08-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "Bear draw permit: Any Legal - NM Resident Only",
+   "units": [
+    "4",
+    "9"
+   ],
+   "huntCodes": [
+    "BER-1-101",
+    "BER-1-103"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-08-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "Bear draw permit: Any Legal - NM Residents Only",
+   "units": [
+    "4"
+   ],
+   "huntCodes": [
+    "BER-1-102"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-08-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "Bear draw permit: Any Legal - Youth Only",
+   "units": [
+    "2"
+   ],
+   "huntCodes": [
+    "BER-1-100"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-08-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "Bear draw permit: Bow",
+   "method": "archery",
+   "units": [
+    "57"
+   ],
+   "huntCodes": [
+    "BER-2-106"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-08-31",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 11 (Units 37, 38): Any Legal",
+   "units": [
+    "37",
+    "38"
+   ],
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "Zone harvest limit 36 total / 14 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 12 (Unit 34): Any Legal",
+   "units": [
+    "34"
+   ],
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "Zone harvest limit 33 total / 13 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 13 (Unit 36): Any Legal",
+   "units": [
+    "36"
+   ],
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "Zone harvest limit 16 total / 6 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 3 (Units 49, 50, 53): Any Legal",
+   "units": [
+    "49",
+    "50",
+    "53"
+   ],
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "Zone harvest limit 65 total / 26 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 4 (Units 45, 46, 48): Any Legal",
+   "units": [
+    "45",
+    "46",
+    "48"
+   ],
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "Zone harvest limit 109 total / 43 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 5 (Units 54, 55, 57): Any Legal",
+   "units": [
+    "54",
+    "55",
+    "57"
+   ],
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "Zone harvest limit 108 total / 43 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 6 (Units 39-43, 47, 56, 58, 59): Any Legal",
+   "units": [
+    "39-43",
+    "47",
+    "56",
+    "58",
+    "59"
+   ],
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "Zone harvest limit 51 total / 20 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 9 (Units 9, 10): Any Legal",
+   "units": [
+    "9",
+    "10"
+   ],
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "Zone harvest limit 36 total / 14 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 1 (Units 4-7, 51, 52): Bow Only",
+   "method": "archery",
+   "units": [
+    "4-7",
+    "51",
+    "52"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 168 total / 67 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 10 (Units 12, 13, 15-18, 20-24, 26, 27): Bow Only",
+   "method": "archery",
+   "units": [
+    "12",
+    "13",
+    "15-18",
+    "20-24",
+    "26",
+    "27"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 197 total / 79 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 11 (Units 37, 38): Bow Only",
+   "method": "archery",
+   "units": [
+    "37",
+    "38"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 36 total / 14 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 12 (Unit 34): Bow Only",
+   "method": "archery",
+   "units": [
+    "34"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 33 total / 13 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 13 (Unit 36): Bow Only",
+   "method": "archery",
+   "units": [
+    "36"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 16 total / 6 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 14 (Unit 14): Bow Only",
+   "method": "archery",
+   "units": [
+    "14"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 19 total / 7 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 2 (Unit 2): Bow Only",
+   "method": "archery",
+   "units": [
+    "2"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 15 total / 6 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 3 (Units 49, 50, 53): Bow Only",
+   "method": "archery",
+   "units": [
+    "49",
+    "50",
+    "53"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 65 total / 26 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 4 (Units 45, 46, 48): Bow Only",
+   "method": "archery",
+   "units": [
+    "45",
+    "46",
+    "48"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 109 total / 43 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 5 (Units 54, 55, 57): Bow Only",
+   "method": "archery",
+   "units": [
+    "54",
+    "55",
+    "57"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 108 total / 43 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 6 (Units 39-43, 47, 56, 58, 59): Bow Only",
+   "method": "archery",
+   "units": [
+    "39-43",
+    "47",
+    "56",
+    "58",
+    "59"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 51 total / 20 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 8 (Unit 8): Bow Only",
+   "method": "archery",
+   "units": [
+    "8"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 11 total / 4 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 9 (Units 9, 10): Bow Only",
+   "method": "archery",
+   "units": [
+    "9",
+    "10"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "Zone harvest limit 36 total / 14 female; zone closes when reached. Dogs not allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 1 (Units 4-7, 51, 52): Any Legal",
+   "units": [
+    "4-7",
+    "51",
+    "52"
+   ],
+   "start": "2026-09-25",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "Zone harvest limit 168 total / 67 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 2 (Unit 2): Any Legal",
+   "units": [
+    "2"
+   ],
+   "start": "2026-09-25",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "Zone harvest limit 15 total / 6 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 3 (Units 49, 50, 53): Any Legal",
+   "units": [
+    "49",
+    "50",
+    "53"
+   ],
+   "start": "2026-09-25",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "Zone harvest limit 65 total / 26 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 5 (Units 54, 55, 57): Any Legal",
+   "units": [
+    "54",
+    "55",
+    "57"
+   ],
+   "start": "2026-09-25",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "Zone harvest limit 108 total / 43 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 6 (Units 39-43, 47, 56, 58, 59): Any Legal",
+   "units": [
+    "39-43",
+    "47",
+    "56",
+    "58",
+    "59"
+   ],
+   "start": "2026-09-25",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "Zone harvest limit 51 total / 20 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 9 (Units 9, 10): Any Legal",
+   "units": [
+    "9",
+    "10"
+   ],
+   "start": "2026-09-25",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "Zone harvest limit 36 total / 14 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 11 (Units 37, 38): Any Legal",
+   "units": [
+    "37",
+    "38"
+   ],
+   "start": "2026-09-25",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "Zone harvest limit 36 total / 14 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 13 (Unit 36): Any Legal",
+   "units": [
+    "36"
+   ],
+   "start": "2026-09-25",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "Zone harvest limit 16 total / 6 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 4 (Units 45, 46, 48): Any Legal",
+   "units": [
+    "45",
+    "46",
+    "48"
+   ],
+   "start": "2026-09-25",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "Zone harvest limit 109 total / 43 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 10 (Units 12, 13, 15-18, 20-24, 26, 27): Any Legal",
+   "units": [
+    "12",
+    "13",
+    "15-18",
+    "20-24",
+    "26",
+    "27"
+   ],
+   "start": "2026-09-25",
+   "end": "2026-12-15",
+   "year": 2026,
+   "note": "Zone harvest limit 197 total / 79 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 12 (Unit 34): Any Legal",
+   "units": [
+    "34"
+   ],
+   "start": "2026-09-25",
+   "end": "2026-12-15",
+   "year": 2026,
+   "note": "Zone harvest limit 33 total / 13 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 14 (Unit 14): Any Legal",
+   "units": [
+    "14"
+   ],
+   "start": "2026-10-15",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "Zone harvest limit 19 total / 7 female; zone closes when reached. Dogs allowed.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "bear",
+   "label": "OTC bear, Zone 8 (Unit 8): Any Legal",
+   "units": [
+    "8"
+   ],
+   "start": "2026-10-15",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "Zone harvest limit 11 total / 4 female; zone closes when reached. Dogs allowed. USFS Sandia Ranger District is bow only.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
    "species": "turkey",
    "label": "Youth-only spring OTC turkey hunt (all units open for spring OTC)",
    "start": "2026-04-10",
    "end": "2026-04-12",
+   "year": 2026,
+   "note": "Draw-permit areas are not open for youth-only spring OTC license holders.",
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Turkey draw permit: Any Legal",
+   "units": [
+    "6B"
+   ],
+   "huntCodes": [
+    "TUR-1-103"
+   ],
+   "start": "2026-04-15",
+   "end": "2026-04-30",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Turkey draw permit: Any Legal (West Side)",
+   "units": [
+    "55A"
+   ],
+   "huntCodes": [
+    "TUR-1-109"
+   ],
+   "start": "2026-04-15",
+   "end": "2026-04-30",
    "year": 2026,
    "sourceId": "d-nm-rib-2026"
   },
@@ -733,7 +5797,86 @@
   },
   {
    "species": "turkey",
+   "label": "Turkey draw permit: Any Legal",
+   "units": [
+    "2B",
+    "2C",
+    "8"
+   ],
+   "huntCodes": [
+    "TUR-1-100",
+    "TUR-1-104"
+   ],
+   "start": "2026-04-15",
+   "end": "2026-05-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Turkey draw permit: Any Legal (East Side)",
+   "units": [
+    "55A"
+   ],
+   "huntCodes": [
+    "TUR-1-109"
+   ],
+   "start": "2026-04-15",
+   "end": "2026-05-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Turkey draw permit: Any Legal - NM Resident Only",
+   "units": [
+    "9"
+   ],
+   "huntCodes": [
+    "TUR-1-105"
+   ],
+   "residency": "resident",
+   "start": "2026-04-15",
+   "end": "2026-05-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Turkey draw permit: Any Legal - Youth Only",
+   "units": [
+    "2B",
+    "2C",
+    "2A"
+   ],
+   "huntCodes": [
+    "TUR-1-101",
+    "TUR-1-102"
+   ],
+   "start": "2026-04-15",
+   "end": "2026-05-15",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Turkey draw permit: Any Legal - Once-in-a-Lifetime",
+   "units": [
+    "26",
+    "27"
+   ],
+   "huntCodes": [
+    "TUR-1-106"
+   ],
+   "start": "2026-05-01",
+   "end": "2026-05-30",
+   "year": 2026,
+   "sourceId": "d-nm-rib-2026"
+  },
+  {
+   "species": "turkey",
    "label": "Fall OTC turkey - bow only",
+   "method": "archery",
    "start": "2026-09-01",
    "end": "2026-09-30",
    "year": 2026,
@@ -768,7 +5911,7 @@
     2025,
     2026
    ],
-   "notes": "Hunt codes per draw year: 2022: 313, 2023: 322, 2024: 322, 2025: 322, 2026: 322. Big-game complete reports 2022-2026. 2024-2026 first-choice total drawn = resident + nonresident + outfitter first-choice drawn (sum of published pool figures). 2022 all-choice applicants = 1st+2nd+3rd (the 2022 report prints no total column). Cross-check: 2022 elk section Totals row matches the sum of hunts in every column except resident all-choice drawn (hunts sum to 19,853; agency Totals row prints 19,854). Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Draw hunt season dates are not in the odds reports and are not included."
+   "notes": "Hunt codes per draw year: 2022: 313, 2023: 322, 2024: 322, 2025: 322, 2026: 322. Big-game complete reports 2022-2026. 2024-2026 first-choice total drawn = resident + nonresident + outfitter first-choice drawn (sum of published pool figures). 2022 all-choice applicants = 1st+2nd+3rd (the 2022 report prints no total column). Cross-check: 2022 elk section Totals row matches the sum of hunts in every column except resident all-choice drawn (hunts sum to 19,853; agency Totals row prints 19,854). Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Season dates (seasonDates/seasonRanges) for the 2026 rows come from the hunt tables of the 2026-2027 Hunting Rules and Information booklet (seasonSourceId d-nm-rib-2026), written by seasons_parse.py."
   },
   {
    "species": "mule-deer",
@@ -779,7 +5922,7 @@
     2025,
     2026
    ],
-   "notes": "Hunt codes per draw year: 2022: 299, 2023: 305, 2024: 306, 2025: 307, 2026: 307. Deer hunt codes with bag FAD (fork-antlered deer, white-tailed or mule deer), FAMD (fork-antlered mule deer), A (antlerless) or ES are filed here; FAD/A/ES hunts are legal for either deer species. White-tailed-only codes (FAWTD, ESWTD) are in whitetail.json. 2024-2026 first-choice total drawn = sum of published pool figures; 2022 all-choice applicants = 1st+2nd+3rd. 2022 deer section Totals row matches the hunt sum in every column. 2024 DER-2-152: agency pool-total cells (9/6/10) do not reconcile; pool counts taken from the report's per-pool blocks (see row note). Private-land-only hunts often have more licenses than drawn applicants. Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Draw hunt season dates are not in the odds reports and are not included."
+   "notes": "Hunt codes per draw year: 2022: 299, 2023: 305, 2024: 306, 2025: 307, 2026: 307. Deer hunt codes with bag FAD (fork-antlered deer, white-tailed or mule deer), FAMD (fork-antlered mule deer), A (antlerless) or ES are filed here; FAD/A/ES hunts are legal for either deer species. White-tailed-only codes (FAWTD, ESWTD) are in whitetail.json. 2024-2026 first-choice total drawn = sum of published pool figures; 2022 all-choice applicants = 1st+2nd+3rd. 2022 deer section Totals row matches the hunt sum in every column. 2024 DER-2-152: agency pool-total cells (9/6/10) do not reconcile; pool counts taken from the report's per-pool blocks (see row note). Private-land-only hunts often have more licenses than drawn applicants. Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Season dates (seasonDates/seasonRanges) for the 2026 rows come from the hunt tables of the 2026-2027 Hunting Rules and Information booklet (seasonSourceId d-nm-rib-2026), written by seasons_parse.py."
   },
   {
    "species": "whitetail",
@@ -790,7 +5933,7 @@
     2025,
     2026
    ],
-   "notes": "Hunt codes per draw year: 2022: 27, 2023: 30, 2024: 30, 2025: 30, 2026: 30. Deer hunt codes with bag FAWTD or ESWTD only (mostly Coues white-tailed deer in southwest units). FAD deer hunts, also legal for white-tailed deer, are in mule-deer.json. 2024-2026 first-choice total drawn = sum of published pool figures. Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Draw hunt season dates are not in the odds reports and are not included."
+   "notes": "Hunt codes per draw year: 2022: 27, 2023: 30, 2024: 30, 2025: 30, 2026: 30. Deer hunt codes with bag FAWTD or ESWTD only (mostly Coues white-tailed deer in southwest units). FAD deer hunts, also legal for white-tailed deer, are in mule-deer.json. 2024-2026 first-choice total drawn = sum of published pool figures. Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Season dates (seasonDates/seasonRanges) for the 2026 rows come from the hunt tables of the 2026-2027 Hunting Rules and Information booklet (seasonSourceId d-nm-rib-2026), written by seasons_parse.py."
   },
   {
    "species": "pronghorn",
@@ -801,7 +5944,7 @@
     2025,
     2026
    ],
-   "notes": "Hunt codes per draw year: 2022: 161, 2023: 159, 2024: 159, 2025: 153, 2026: 153. Big-game complete reports 2022-2026 (section titled ANTELOPE in 2022). Public draw only; private-land OTC licenses are not in the odds reports. 2022 pronghorn section Totals row matches the hunt sum in every column. 2023 ANT-3-155: the Summary Report prints 5/1/1 in its RES/NR/OUT columns (these equal the 1st/2nd/3rd-choice drawn counts); the Complete Report used here gives pools 6/0/1, which matches the published distribution (85.71/0/14.29%). Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Draw hunt season dates are not in the odds reports and are not included."
+   "notes": "Hunt codes per draw year: 2022: 161, 2023: 159, 2024: 159, 2025: 153, 2026: 153. Big-game complete reports 2022-2026 (section titled ANTELOPE in 2022). Public draw only; private-land OTC licenses are not in the odds reports. 2022 pronghorn section Totals row matches the hunt sum in every column. 2023 ANT-3-155: the Summary Report prints 5/1/1 in its RES/NR/OUT columns (these equal the 1st/2nd/3rd-choice drawn counts); the Complete Report used here gives pools 6/0/1, which matches the published distribution (85.71/0/14.29%). Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Season dates (seasonDates/seasonRanges) for the 2026 rows come from the hunt tables of the 2026-2027 Hunting Rules and Information booklet (seasonSourceId d-nm-rib-2026), written by seasons_parse.py."
   },
   {
    "species": "sheep",
@@ -812,7 +5955,7 @@
     2025,
     2026
    ],
-   "notes": "Hunt codes per draw year: 2022: 4, 2023: 4, 2024: 4, 2025: 4, 2026: 4. Four draw hunt codes per year. BHS-1-201 is the Rocky Mountain bighorn ram hunt and BHS-1-204 the desert bighorn ram hunt (as labeled in the 2025 report); since 2024 their areas are listed as 'TBD by hunt area selected', so units are empty for those rows. 2024 BHS-1-204 has a non-numeric cell ('a') in the nonresident 2nd-choice drawn column; it does not affect any field here. Auction/raffle sheep licenses are outside the draw and not included. Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Draw hunt season dates are not in the odds reports and are not included."
+   "notes": "Hunt codes per draw year: 2022: 4, 2023: 4, 2024: 4, 2025: 4, 2026: 4. Four draw hunt codes per year. BHS-1-201 is the Rocky Mountain bighorn ram hunt and BHS-1-204 the desert bighorn ram hunt (as labeled in the 2025 report); since 2024 their areas are listed as 'TBD by hunt area selected', so units are empty for those rows. 2024 BHS-1-204 has a non-numeric cell ('a') in the nonresident 2nd-choice drawn column; it does not affect any field here. Auction/raffle sheep licenses are outside the draw and not included. Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Season dates (seasonDates/seasonRanges) for the 2026 rows come from the hunt tables of the 2026-2027 Hunting Rules and Information booklet (seasonSourceId d-nm-rib-2026), written by seasons_parse.py."
   },
   {
    "species": "bear",
@@ -823,7 +5966,7 @@
     2025,
     2026
    ],
-   "notes": "Hunt codes per draw year: 2022: 7, 2023: 7, 2024: 7, 2025: 7, 2026: 7. Bear draw permits only (special areas); most bear hunting is OTC and not in these reports. 2022 and 2023 report drawn by pool; 2022 also by choice. 2024-2026 reports give drawn by pool only, so choice=first rows have applicants but drawn = null. 2023 data parsed from the PDF report. Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Draw hunt season dates are not in the odds reports and are not included."
+   "notes": "Hunt codes per draw year: 2022: 7, 2023: 7, 2024: 7, 2025: 7, 2026: 7. Bear draw permits only (special areas); most bear hunting is OTC and not in these reports. 2022 and 2023 report drawn by pool; 2022 also by choice. 2024-2026 reports give drawn by pool only, so choice=first rows have applicants but drawn = null. 2023 data parsed from the PDF report. Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Season dates (seasonDates/seasonRanges) for the 2026 rows come from the hunt tables of the 2026-2027 Hunting Rules and Information booklet (seasonSourceId d-nm-rib-2026), written by seasons_parse.py."
   },
   {
    "species": "turkey",
@@ -834,7 +5977,7 @@
     2025,
     2026
    ],
-   "notes": "Hunt codes per draw year: 2022: 10, 2023: 10, 2024: 10, 2025: 8, 2026: 8. Turkey draw permits only (special areas); most turkey hunting is OTC and not in these reports. 2024-2026 reports give drawn by pool only (choice=first drawn = null). 2023 (PDF): pool-level drawn counts omitted because the turkey RES/NR/OUT columns contradict the published distribution %; total drawn kept. Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Draw hunt season dates are not in the odds reports and are not included."
+   "notes": "Hunt codes per draw year: 2022: 10, 2023: 10, 2024: 10, 2025: 8, 2026: 8. Turkey draw permits only (special areas); most turkey hunting is OTC and not in these reports. 2024-2026 reports give drawn by pool only (choice=first drawn = null). 2023 (PDF): pool-level drawn counts omitted because the turkey RES/NR/OUT columns contradict the published distribution %; total drawn kept. Source: NMDOW/NMDGF drawing odds reports (draw years = report years). Each hunt has a choice=first row (1st-choice applicants and licenses drawn on 1st choice) and a choice=all row (1st+2nd+3rd-choice applicants and all licenses drawn). resident = resident pool; nonresident = nonresident pool without an outfitter; the outfitter pool (residents or nonresidents with a NM registered outfitter) is given in each row's note; total = all pools. total.quota = licenses offered in the hunt. oddsPct is computed (drawn / applicants), not published. No points exist, so no byPoints/minPoints. Cross-check: for 2023-2026 the agency's separate Summary Report matches the Complete Report's pre-draw counts for every hunt and its pool drawn counts for every hunt except 2023 ANT-3-155 (see pronghorn notes). All-choice odds overstate the real chance because each application can draw only one hunt; choice=all drawn counts exclude licenses awarded to 4th-choice (any-hunt quadrant) applicants, which are listed in the row note. Season dates (seasonDates/seasonRanges) for the 2026 rows come from the hunt tables of the 2026-2027 Hunting Rules and Information booklet (seasonSourceId d-nm-rib-2026), written by seasons_parse.py."
   },
   {
    "species": "lion",
@@ -990,7 +6133,8 @@
    "url": "https://wildlife.dgf.nm.gov/download/2026-2027-new-mexico-hunting-rules-and-info/?wpdmdl=52826",
    "dataYear": 2026,
    "retrieved": "2026-10-31",
-   "notes": "License year April 1, 2026 - March 31, 2027. Draw process, quotas, hunt-code legend, bag codes, 2026 dates, OTC seasons."
+   "pageUrl": "https://wildlife.dgf.nm.gov/home/publications/",
+   "notes": "License year April 1, 2026 - March 31, 2027. Draw process, quotas, hunt-code legend, bag codes, 2026 dates, hunt tables (season dates per hunt code), OTC seasons. The 2027-2028 booklet was not yet released as of 2026-10-31 (publications page and NMDOW download list checked)."
   },
   {
    "id": "d-nm-draw-page",
@@ -1007,7 +6151,7 @@
    "url": "https://wildlife.dgf.nm.gov/hunting/applications-and-draw-information/",
    "dataYear": 2026,
    "retrieved": "2026-10-31",
-   "notes": "Web page (last modified 2026-02-16)."
+   "notes": "Web page (last modified 2026-02-16; still the 2026-27 dates on 2026-10-31)."
   },
   {
    "id": "d-nm-fees-draw-2027",
@@ -1028,6 +6172,23 @@
    "dataYear": 2027,
    "retrieved": "2026-10-31",
    "notes": "License year 2027-2028. Amounts identical to the 2026-27 booklet (page 16)."
+  },
+  {
+   "id": "d-nm-leftover-2026",
+   "title": "Leftover draw licenses go on sale July 8 (NMDOW news release, 2026-07-07)",
+   "publisher": "New Mexico Department of Wildlife",
+   "url": "https://wildlife.dgf.nm.gov/leftover-draw-licenses-go-on-sale-july-8-2026/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "537 leftover deer licenses from the 2026-2027 big-game draw."
+  },
+  {
+   "id": "d-nm-youth-elk-2026",
+   "title": "Youth encouragement Elk license sale begins July 22 (NMDOW news release, 2026-07-21)",
+   "publisher": "New Mexico Department of Wildlife",
+   "url": "https://wildlife.dgf.nm.gov/youth-encouragement-elk-license-sale-begins-july-22-2026/",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
   }
  ]
 }
