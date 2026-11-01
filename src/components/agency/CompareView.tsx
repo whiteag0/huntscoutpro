@@ -103,7 +103,9 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
   ];
 
   const swipeRef = useRef<HTMLDivElement>(null);
-  const [active, setActive] = useState(0);
+  const [activeRaw, setActive] = useState(0);
+  // Removing a hunt shrinks the list without a scroll event; keep the indicator in range.
+  const active = Math.min(activeRaw, Math.max(0, cols.length - 1));
   const onSwipe = () => {
     const el = swipeRef.current;
     if (!el || !el.children.length) return;

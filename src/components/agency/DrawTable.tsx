@@ -233,7 +233,7 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
                           </span>
                         </>
                       ) : (
-                        <span className="text-xs text-muted-foreground font-normal">no applicants</span>
+                        <span className="text-xs text-muted-foreground font-normal">{x.r.byPoints?.length ? "no applicants" : "not published"}</span>
                       )}
                     </Stat>
                   )}
@@ -329,7 +329,7 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
                           </div>
                         </>
                       ) : (
-                        <span className="text-xs text-muted-foreground font-normal">no applicants</span>
+                        <span className="text-xs text-muted-foreground font-normal">{x.r.byPoints?.length ? "no applicants" : "not published"}</span>
                       )}
                     </td>
                   )}

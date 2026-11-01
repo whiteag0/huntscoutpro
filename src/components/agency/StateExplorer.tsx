@@ -18,6 +18,8 @@ import { HScroll, ShowMore, pill } from "@/components/agency/mobile";
 
 type Tab = "draw" | "harvest";
 
+const yrsLabel = (n: number) => `${n} ${n === 1 ? "yr" : "yrs"}`;
+
 export function StateExplorer({ state, species: speciesList, initialSpecies }: { state: StateData; species: SpeciesInfo[]; initialSpecies?: string }) {
   const initial = initialSpecies as Species;
   const [species, setSpecies] = useState<Species>(speciesList.some((s) => s.species === initial) ? initial : speciesList[0]?.species);
@@ -145,13 +147,13 @@ export function StateExplorer({ state, species: speciesList, initialSpecies }: {
       />
 
       <div className="grid grid-cols-2 gap-2 mb-4 sm:flex sm:flex-wrap sm:items-center" role="tablist" aria-label="Data type">
-        <button role="tab" aria-selected={tab === "draw"} className={`${pill(tab === "draw")} text-center disabled:opacity-50 disabled:cursor-not-allowed`} onClick={() => setTab("draw")} disabled={!!data && data.totals.drawRows === 0}>
+        <button role="tab" aria-selected={tab === "draw"} className={`${pill(tab === "draw")} flex-col sm:flex-row sm:gap-1 text-center disabled:opacity-50 disabled:cursor-not-allowed`} onClick={() => setTab("draw")} disabled={!!data && data.totals.drawRows === 0}>
           Draw results{" "}
-          {data && <span className="block sm:inline text-xs sm:text-sm opacity-80">({data.totals.drawRows ? years(data.draw).length + " yrs" : "none"})</span>}
+          {data && <span className="block sm:inline text-xs sm:text-sm opacity-80">({data.totals.drawRows ? yrsLabel(years(data.draw).length) : "none"})</span>}
         </button>
-        <button role="tab" aria-selected={tab === "harvest"} className={`${pill(tab === "harvest")} text-center disabled:opacity-50 disabled:cursor-not-allowed`} onClick={() => setTab("harvest")} disabled={!!data && data.totals.harvestRows === 0}>
+        <button role="tab" aria-selected={tab === "harvest"} className={`${pill(tab === "harvest")} flex-col sm:flex-row sm:gap-1 text-center disabled:opacity-50 disabled:cursor-not-allowed`} onClick={() => setTab("harvest")} disabled={!!data && data.totals.harvestRows === 0}>
           Harvest by {state.unitTerm}{" "}
-          {data && <span className="block sm:inline text-xs sm:text-sm opacity-80">({data.totals.harvestRows ? years(data.harvest).length + " yrs" : "none"})</span>}
+          {data && <span className="block sm:inline text-xs sm:text-sm opacity-80">({data.totals.harvestRows ? yrsLabel(years(data.harvest).length) : "none"})</span>}
         </button>
       </div>
 
