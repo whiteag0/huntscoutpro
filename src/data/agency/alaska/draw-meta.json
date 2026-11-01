@@ -1,0 +1,820 @@
+{
+ "slug": "alaska",
+ "name": "Alaska",
+ "abbrev": "AK",
+ "agency": {
+  "name": "Alaska Department of Fish and Game",
+  "shortName": "ADF&G",
+  "url": "https://www.adfg.alaska.gov"
+ },
+ "unitTerm": "GMU",
+ "lastReviewed": "2026-10-31",
+ "overview": "ADF&G awards drawing permits by a random computer lottery with no preference or bonus points, from one application period each year (November 1 - December 15, 2026 for 2027 hunts; results on the third Friday of February). Applicants may submit up to six applications per species at $5 each ($10 for bison and muskox), and most drawing hunts are open to residents and nonresidents, although many are limited to one residency and nonresidents hunting Dall sheep, mountain goat or brown/grizzly bear need an Alaska-licensed guide or a resident relative within the second degree of kindred. Much Alaska big game hunting needs no drawing: general seasons use free harvest tickets, registration permits are issued over the counter, and residents can apply for Tier I/II subsistence permits, which are scored rather than drawn at random. Caribou, bison, muskox, wolf and brown/grizzly bear are hunted in Alaska but are not covered here.",
+ "species": [
+  {
+   "species": "moose",
+   "displayName": "Moose",
+   "drawSystem": "random",
+   "drawSystemSummary": "ADF&G awards drawing permits by a computer lottery: each valid application gets a random draw number for each hunt and permits go to the lowest numbers; there are no preference or bonus points. An applicant may submit up to six applications per species ($5 each), may apply for the same hunt more than once, may apply alone or as a two-person party, and may not be awarded the same drawing hunt two years in a row. Moose are also hunted on general-season harvest tickets, registration permits and, for residents, scored Tier I/II subsistence permits.",
+   "pointsMatter": false,
+   "residentNote": "Residents need a hunting license but no moose locking-tag. Tier II moose permits (for example TM059, TM565) are for Alaska residents only and are awarded by application score, not by lottery; only one Tier II moose permit per household.",
+   "nonresidentNote": "Nonresidents must buy a moose locking-tag ($800; $1,000 for nonresident aliens, who must hunt with an Alaska-licensed guide). Many drawing hunts are limited to residents or to nonresidents, and some to guided or nonguided nonresidents.",
+   "otcSummary": "General-season moose hunts need only a free harvest ticket, and many registration permits are issued without a drawing; nonresidents buy the moose locking-tag over the counter.",
+   "keyDates": [
+    {
+     "label": "Drawing permit application period (online only)",
+     "start": "2026-11-01",
+     "end": "2026-12-15",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-supp-2027",
+     "note": "Opens 8 a.m., closes 5 p.m. AKST. Hunts take place in 2027 unless designated as 2028. Paper applications are not accepted."
+    },
+    {
+     "label": "Deadline to ask ADF&G for an alternative to applying online",
+     "date": "2026-11-20",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-supp-2027",
+     "note": "5 p.m. AKST, through the local ADF&G office."
+    },
+    {
+     "label": "Drawing results announced",
+     "date": "2027-02-19",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-supp-2027",
+     "note": "The 2027-2028 supplement says results are announced on the third Friday of February, which is February 19, 2027. ADF&G's Draw Results page (retrieved 2026-10-31) says 'Friday, February 20'."
+    },
+    {
+     "label": "Undersubscribed drawing permits posted",
+     "date": "2027-03-05",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-supp-2027",
+     "note": "Supplement: information on any undersubscribed permits is posted at hunt.alaska.gov on the first Friday in March (March 5, 2027)."
+    },
+    {
+     "label": "Tier II subsistence permit application period (residents only)",
+     "start": "2026-11-01",
+     "end": "2026-12-15",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-subs-2027",
+     "note": "Online by 5 p.m. AKST December 15; paper applications must be postmarked November 1-30 and received by December 15."
+    }
+   ],
+   "sourceIds": [
+    "d-supp-2027",
+    "d-web-lottery",
+    "d-subs-2027",
+    "d-regs-2026",
+    "d-web-registration"
+   ]
+  },
+  {
+   "species": "sheep",
+   "displayName": "Dall sheep",
+   "drawSystem": "random",
+   "drawSystemSummary": "ADF&G awards drawing permits by a computer lottery: each valid application gets a random draw number for each hunt and permits go to the lowest numbers; there are no preference or bonus points. An applicant may submit up to six applications per species ($5 each), may apply for the same hunt more than once, may apply alone or as a two-person party, and may not be awarded the same drawing hunt two years in a row. Dall sheep are also hunted in general seasons on a free harvest ticket.",
+   "pointsMatter": false,
+   "residentNote": "Residents need a hunting license and a sheep harvest ticket or drawing permit; no locking-tag.",
+   "nonresidentNote": "Nonresident U.S. citizens must be accompanied in the field by an Alaska-licensed guide or a resident relative 19 or older within the second degree of kindred; guided nonresident drawing hunts need a signed guide-client contract at application. Dall sheep locking-tag $850 ($1,100 nonresident alien).",
+   "otcSummary": "General-season Dall sheep hunts on a free harvest ticket in many units; nonresidents buy the sheep locking-tag over the counter but must hunt with a guide or qualifying resident relative.",
+   "keyDates": [
+    {
+     "label": "Drawing permit application period (online only)",
+     "start": "2026-11-01",
+     "end": "2026-12-15",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-supp-2027",
+     "note": "Opens 8 a.m., closes 5 p.m. AKST. Hunts take place in 2027 unless designated as 2028. Paper applications are not accepted."
+    },
+    {
+     "label": "Deadline to ask ADF&G for an alternative to applying online",
+     "date": "2026-11-20",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-supp-2027",
+     "note": "5 p.m. AKST, through the local ADF&G office."
+    },
+    {
+     "label": "Drawing results announced",
+     "date": "2027-02-19",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-supp-2027",
+     "note": "The 2027-2028 supplement says results are announced on the third Friday of February, which is February 19, 2027. ADF&G's Draw Results page (retrieved 2026-10-31) says 'Friday, February 20'."
+    },
+    {
+     "label": "Undersubscribed drawing permits posted",
+     "date": "2027-03-05",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-supp-2027",
+     "note": "Supplement: information on any undersubscribed permits is posted at hunt.alaska.gov on the first Friday in March (March 5, 2027)."
+    }
+   ],
+   "sourceIds": [
+    "d-supp-2027",
+    "d-web-lottery",
+    "d-regs-2026"
+   ]
+  },
+  {
+   "species": "goat",
+   "displayName": "Mountain goat",
+   "drawSystem": "random",
+   "drawSystemSummary": "ADF&G awards drawing permits by a computer lottery: each valid application gets a random draw number for each hunt and permits go to the lowest numbers; there are no preference or bonus points. An applicant may submit up to six applications per species ($5 each), may apply for the same hunt more than once, may apply alone or as a two-person party, and may not be awarded the same drawing hunt two years in a row. Mountain goats are also hunted on registration permits (for example RG471, RG472, RG473, RG474 and RG476 in Unit 8).",
+   "pointsMatter": false,
+   "nonresidentNote": "Nonresident U.S. citizens must be accompanied by an Alaska-licensed guide or a resident relative within the second degree of kindred; a guided nonresident may submit only one application for a Unit 8 goat hunt. Mountain goat locking-tag $600 ($800 nonresident alien).",
+   "otcSummary": "Registration goat permits in several units; nonresidents buy the goat locking-tag over the counter.",
+   "keyDates": [
+    {
+     "label": "Drawing permit application period (online only)",
+     "start": "2026-11-01",
+     "end": "2026-12-15",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-supp-2027",
+     "note": "Opens 8 a.m., closes 5 p.m. AKST. Hunts take place in 2027 unless designated as 2028. Paper applications are not accepted."
+    },
+    {
+     "label": "Deadline to ask ADF&G for an alternative to applying online",
+     "date": "2026-11-20",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-supp-2027",
+     "note": "5 p.m. AKST, through the local ADF&G office."
+    },
+    {
+     "label": "Drawing results announced",
+     "date": "2027-02-19",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-supp-2027",
+     "note": "The 2027-2028 supplement says results are announced on the third Friday of February, which is February 19, 2027. ADF&G's Draw Results page (retrieved 2026-10-31) says 'Friday, February 20'."
+    },
+    {
+     "label": "Undersubscribed drawing permits posted",
+     "date": "2027-03-05",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-supp-2027",
+     "note": "Supplement: information on any undersubscribed permits is posted at hunt.alaska.gov on the first Friday in March (March 5, 2027)."
+    }
+   ],
+   "sourceIds": [
+    "d-supp-2027",
+    "d-web-lottery",
+    "d-regs-2026"
+   ]
+  },
+  {
+   "species": "bear",
+   "displayName": "Black bear",
+   "drawSystem": "random",
+   "drawSystemSummary": "ADF&G awards drawing permits by a computer lottery: each valid application gets a random draw number for each hunt and permits go to the lowest numbers; there are no preference or bonus points. An applicant may submit up to six applications per species ($5 each), may apply for the same hunt more than once, may apply alone or as a two-person party, and may not be awarded the same drawing hunt two years in a row. Only a few black bear hunts are drawn (Units 1C, 2, 3 and 14C); most black bear hunting is general season.",
+   "pointsMatter": false,
+   "nonresidentNote": "Nonresidents need a black bear locking-tag ($450; $600 nonresident alien). In Unit 1C South, Unit 2 and on Kuiu and Kupreanof islands (Unit 3), nonresidents not accompanied by an Alaska-licensed guide or qualified resident relative must hold a DL018 or DL027-DL030 drawing permit; accompanied nonresidents hunt on a black bear harvest ticket instead.",
+   "otcSummary": "General-season black bear hunting; harvest tickets (free) are required in Units 1-7, 11-16 and 20. Nonresident locking-tags are sold over the counter.",
+   "keyDates": [
+    {
+     "label": "Drawing permit application period (online only)",
+     "start": "2026-11-01",
+     "end": "2026-12-15",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-supp-2027",
+     "note": "Opens 8 a.m., closes 5 p.m. AKST. Hunts take place in 2027 unless designated as 2028. Paper applications are not accepted."
+    },
+    {
+     "label": "Deadline to ask ADF&G for an alternative to applying online",
+     "date": "2026-11-20",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-supp-2027",
+     "note": "5 p.m. AKST, through the local ADF&G office."
+    },
+    {
+     "label": "Drawing results announced",
+     "date": "2027-02-19",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-supp-2027",
+     "note": "The 2027-2028 supplement says results are announced on the third Friday of February, which is February 19, 2027. ADF&G's Draw Results page (retrieved 2026-10-31) says 'Friday, February 20'."
+    },
+    {
+     "label": "Undersubscribed drawing permits posted",
+     "date": "2027-03-05",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-supp-2027",
+     "note": "Supplement: information on any undersubscribed permits is posted at hunt.alaska.gov on the first Friday in March (March 5, 2027)."
+    }
+   ],
+   "sourceIds": [
+    "d-supp-2027",
+    "d-supp-2026",
+    "d-web-lottery",
+    "d-regs-2026"
+   ]
+  },
+  {
+   "species": "elk",
+   "displayName": "Elk",
+   "drawSystem": "random",
+   "drawSystemSummary": "ADF&G awards drawing permits by a computer lottery: each valid application gets a random draw number for each hunt and permits go to the lowest numbers; there are no preference or bonus points. An applicant may submit up to six applications per species ($5 each), may apply for the same hunt more than once, may apply alone or as a two-person party, and may not be awarded the same drawing hunt two years in a row. Elk drawing hunts are on Afognak and Raspberry islands (Unit 8) and Etolin and Zarembo islands (Unit 3).",
+   "pointsMatter": false,
+   "nonresidentNote": "Nonresident elk locking-tag $600 ($800 nonresident alien). Some elk drawing hunts are limited to nonresidents.",
+   "otcSummary": "Registration elk permits (RE325 in Unit 3; RE706, RE752, RE755 and RE756 in Unit 8) are issued without a drawing.",
+   "keyDates": [
+    {
+     "label": "Drawing permit application period (online only)",
+     "start": "2026-11-01",
+     "end": "2026-12-15",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-supp-2027",
+     "note": "Opens 8 a.m., closes 5 p.m. AKST. Hunts take place in 2027 unless designated as 2028. Paper applications are not accepted."
+    },
+    {
+     "label": "Deadline to ask ADF&G for an alternative to applying online",
+     "date": "2026-11-20",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-supp-2027",
+     "note": "5 p.m. AKST, through the local ADF&G office."
+    },
+    {
+     "label": "Drawing results announced",
+     "date": "2027-02-19",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-supp-2027",
+     "note": "The 2027-2028 supplement says results are announced on the third Friday of February, which is February 19, 2027. ADF&G's Draw Results page (retrieved 2026-10-31) says 'Friday, February 20'."
+    },
+    {
+     "label": "Undersubscribed drawing permits posted",
+     "date": "2027-03-05",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-supp-2027",
+     "note": "Supplement: information on any undersubscribed permits is posted at hunt.alaska.gov on the first Friday in March (March 5, 2027)."
+    }
+   ],
+   "sourceIds": [
+    "d-supp-2027",
+    "d-web-lottery",
+    "d-regs-2026"
+   ]
+  },
+  {
+   "species": "mule-deer",
+   "displayName": "Sitka black-tailed deer",
+   "drawSystem": "otc",
+   "drawSystemSummary": "Sitka black-tailed deer (Odocoileus hemionus sitkensis) are hunted in general seasons on free harvest tickets; the 2022-2023 through 2027-2028 drawing supplements list no deer drawing hunts.",
+   "pointsMatter": false,
+   "residentNote": "Residents need a hunting license and free deer harvest tickets, used in sequential order.",
+   "nonresidentNote": "Nonresidents need a deer locking-tag ($300; $400 nonresident alien) and harvest tickets.",
+   "otcSummary": "Deer harvest tickets are free from license vendors, ADF&G offices and online; nonresident deer locking-tags are sold over the counter.",
+   "keyDates": [],
+   "sourceIds": [
+    "d-regs-2026"
+   ]
+  }
+ ],
+ "fees": [
+  {
+   "species": null,
+   "item": "Drawing permit application fee (black bear, brown bear, caribou, elk, moose, mountain goat, Dall sheep)",
+   "residency": "resident",
+   "amountUsd": 5.0,
+   "licenseYear": 2026,
+   "note": "Per application, for the drawing held in 2026; not refundable.",
+   "sourceId": "d-supp-2026"
+  },
+  {
+   "species": null,
+   "item": "Drawing permit application fee (bison, muskox)",
+   "residency": "resident",
+   "amountUsd": 10.0,
+   "licenseYear": 2026,
+   "note": "Per application, for the drawing held in 2026.",
+   "sourceId": "d-supp-2026"
+  },
+  {
+   "species": null,
+   "item": "Drawing permit application fee (black bear, brown bear, caribou, elk, moose, mountain goat, Dall sheep)",
+   "residency": "nonresident",
+   "amountUsd": 5.0,
+   "licenseYear": 2026,
+   "note": "Per application, for the drawing held in 2026; not refundable.",
+   "sourceId": "d-supp-2026"
+  },
+  {
+   "species": null,
+   "item": "Drawing permit application fee (bison, muskox)",
+   "residency": "nonresident",
+   "amountUsd": 10.0,
+   "licenseYear": 2026,
+   "note": "Per application, for the drawing held in 2026.",
+   "sourceId": "d-supp-2026"
+  },
+  {
+   "species": null,
+   "item": "Drawing permit application fee (black bear, brown bear, caribou, elk, moose, mountain goat, Dall sheep)",
+   "residency": "resident",
+   "amountUsd": 5.0,
+   "licenseYear": 2027,
+   "note": "Per application, for the drawing held in 2027; not refundable.",
+   "sourceId": "d-supp-2027"
+  },
+  {
+   "species": null,
+   "item": "Drawing permit application fee (bison, muskox)",
+   "residency": "resident",
+   "amountUsd": 10.0,
+   "licenseYear": 2027,
+   "note": "Per application, for the drawing held in 2027.",
+   "sourceId": "d-supp-2027"
+  },
+  {
+   "species": null,
+   "item": "Drawing permit application fee (black bear, brown bear, caribou, elk, moose, mountain goat, Dall sheep)",
+   "residency": "nonresident",
+   "amountUsd": 5.0,
+   "licenseYear": 2027,
+   "note": "Per application, for the drawing held in 2027; not refundable.",
+   "sourceId": "d-supp-2027"
+  },
+  {
+   "species": null,
+   "item": "Drawing permit application fee (bison, muskox)",
+   "residency": "nonresident",
+   "amountUsd": 10.0,
+   "licenseYear": 2027,
+   "note": "Per application, for the drawing held in 2027.",
+   "sourceId": "d-supp-2027"
+  },
+  {
+   "species": null,
+   "item": "Resident hunting license",
+   "residency": "resident",
+   "amountUsd": 45.0,
+   "licenseYear": 2026,
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Resident hunting/trapping license",
+   "residency": "resident",
+   "amountUsd": 65.0,
+   "licenseYear": 2026,
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Resident hunting/sport fishing license",
+   "residency": "resident",
+   "amountUsd": 60.0,
+   "licenseYear": 2026,
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Resident hunting/trapping/sport fishing license",
+   "residency": "resident",
+   "amountUsd": 85.0,
+   "licenseYear": 2026,
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Resident low-income license",
+   "residency": "resident",
+   "amountUsd": 5.0,
+   "licenseYear": 2026,
+   "note": "Household income at or below the state poverty guidelines.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Resident brown/grizzly bear locking-tag",
+   "residency": "resident",
+   "amountUsd": 25.0,
+   "licenseYear": 2026,
+   "note": "Required only in some locations. Brown/grizzly bear is not a HuntScout species key.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Nonresident hunting license (all game)",
+   "residency": "nonresident",
+   "amountUsd": 160.0,
+   "licenseYear": 2026,
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Nonresident hunting and trapping license",
+   "residency": "nonresident",
+   "amountUsd": 405.0,
+   "licenseYear": 2026,
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Nonresident small game hunting license",
+   "residency": "nonresident",
+   "amountUsd": 60.0,
+   "licenseYear": 2026,
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Nonresident alien hunting license",
+   "residency": "nonresident",
+   "amountUsd": 630.0,
+   "licenseYear": 2026,
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": "bear",
+   "item": "Nonresident black bear locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 450.0,
+   "licenseYear": 2026,
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": "bear",
+   "item": "Nonresident alien black bear locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 600.0,
+   "licenseYear": 2026,
+   "note": "Nonresident aliens must hunt all big game with an Alaska-licensed guide.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": "moose",
+   "item": "Nonresident moose locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 800.0,
+   "licenseYear": 2026,
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": "moose",
+   "item": "Nonresident alien moose locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 1000.0,
+   "licenseYear": 2026,
+   "note": "Nonresident aliens must hunt all big game with an Alaska-licensed guide.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": "sheep",
+   "item": "Nonresident dall sheep locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 850.0,
+   "licenseYear": 2026,
+   "note": "Guide (or resident relative within second degree of kindred) required.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": "sheep",
+   "item": "Nonresident alien dall sheep locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 1100.0,
+   "licenseYear": 2026,
+   "note": "Nonresident aliens must hunt all big game with an Alaska-licensed guide.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": "goat",
+   "item": "Nonresident mountain goat locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 600.0,
+   "licenseYear": 2026,
+   "note": "Guide (or resident relative within second degree of kindred) required.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": "goat",
+   "item": "Nonresident alien mountain goat locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 800.0,
+   "licenseYear": 2026,
+   "note": "Nonresident aliens must hunt all big game with an Alaska-licensed guide.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": "elk",
+   "item": "Nonresident elk locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 600.0,
+   "licenseYear": 2026,
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": "elk",
+   "item": "Nonresident alien elk locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 800.0,
+   "licenseYear": 2026,
+   "note": "Nonresident aliens must hunt all big game with an Alaska-licensed guide.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Nonresident deer (sitka black-tailed) locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 300.0,
+   "licenseYear": 2026,
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": "mule-deer",
+   "item": "Nonresident alien deer (sitka black-tailed) locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 400.0,
+   "licenseYear": 2026,
+   "note": "Nonresident aliens must hunt all big game with an Alaska-licensed guide.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Nonresident brown/grizzly bear locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 1000.0,
+   "licenseYear": 2026,
+   "note": "Guide (or resident relative within second degree of kindred) required. Brown/grizzly bear is not a HuntScout species key.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Nonresident alien brown/grizzly bear locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 1300.0,
+   "licenseYear": 2026,
+   "note": "Nonresident aliens must hunt all big game with an Alaska-licensed guide. Brown/grizzly bear is not a HuntScout species key.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Nonresident caribou locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 650.0,
+   "licenseYear": 2026,
+   "note": "Caribou is not a HuntScout species key.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Nonresident alien caribou locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 850.0,
+   "licenseYear": 2026,
+   "note": "Nonresident aliens must hunt all big game with an Alaska-licensed guide. Caribou is not a HuntScout species key.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Nonresident bison locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 900.0,
+   "licenseYear": 2026,
+   "note": "Bison is not a HuntScout species key.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Nonresident alien bison locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 1300.0,
+   "licenseYear": 2026,
+   "note": "Nonresident aliens must hunt all big game with an Alaska-licensed guide. Bison is not a HuntScout species key.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Nonresident muskox locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 2200.0,
+   "licenseYear": 2026,
+   "note": "Muskox is not a HuntScout species key.",
+   "sourceId": "d-regs-2026"
+  },
+  {
+   "species": null,
+   "item": "Nonresident alien muskox locking-tag",
+   "residency": "nonresident",
+   "amountUsd": 3000.0,
+   "licenseYear": 2026,
+   "note": "Nonresident aliens must hunt all big game with an Alaska-licensed guide. Muskox is not a HuntScout species key.",
+   "sourceId": "d-regs-2026"
+  }
+ ],
+ "seasons": [],
+ "coverage": [
+  {
+   "species": "moose",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). Includes youth drawing hunts (YM). Hunts DM802-DM811 (Unit 21B Nowitna River, 2023-2026) and DM766 (Unit 20A Wood River CUA East, 2022-2025) are printed in tables whose cells could not be separated, so those rows carry only the GMU/area label and the counts. Season dates are omitted for 49 moose rows and the legal animal for 61 where the supplement cell could not be read unambiguously (mostly 2022 Unit 14A and the hunts above); JBER (14C) weapon certifications are printed in rotated text and are not captured."
+  },
+  {
+   "species": "sheep",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). Dall sheep."
+  },
+  {
+   "species": "goat",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). The supplement lists DG352 (Brown Mtn.) under the Unit 7 heading and DG354/DG356 as 15C; ADF&G's 2026 hunt pages give 15C and 15B for these, units are kept as the supplement prints them."
+  },
+  {
+   "species": "bear",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). Black bear only (DL hunts); the legal animal comes from the black bear page header in the 2024-2026 supplements (not printed there in 2022-2023). Brown/grizzly bear drawing hunts (DB, including Kodiak) are excluded because brown/grizzly bear is not a HuntScout species key."
+  },
+  {
+   "species": "elk",
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "notes": "Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). Unit 8 (Afognak, Raspberry islands) and Unit 3 (Etolin, Zarembo islands) elk drawing hunts."
+  },
+  {
+   "species": "mule-deer",
+   "years": [],
+   "notes": "Sitka black-tailed deer: ADF&G held no deer drawing hunts in the 2022-2026 drawings (none in any results table), so there are no draw rows. Deer are hunted on general-season harvest tickets."
+  }
+ ],
+ "sources": [
+  {
+   "id": "d-supp-2022",
+   "title": "2022-2023 Alaska Drawing Permit Hunt Supplement",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/static/license/huntlicense/pdfs/2022-2023_draw_supplement.pdf",
+   "pageUrl": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.drawsupplements",
+   "dataYear": 2022,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt tables describe the 2022 drawing hunts (used for the 2022 rows' hunt details); its back page holds 2021 results, which are not used."
+  },
+  {
+   "id": "d-supp-2023",
+   "title": "2023-2024 Alaska Drawing Permit Hunt Supplement",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/static/license/huntlicense/pdfs/2023-2024_draw_supplement.pdf",
+   "pageUrl": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.drawsupplements",
+   "dataYear": 2023,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt tables (GMU/area, residency, legal animal, season dates, advertised permits, hunt area) describe the 2023 drawing hunts. Back page: 'Results of the 2022 Permit Hunt Drawing' (Apps Received, Permits Available, % Drawn per hunt number), the source of every draw row for 2022. ADF&G notes the Permits Available column may differ from what was advertised for administrative reasons."
+  },
+  {
+   "id": "d-supp-2024",
+   "title": "2024-2025 Alaska Drawing Permit Hunt Supplement",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/static/license/huntlicense/pdfs/2024-2025_draw_supplement.pdf",
+   "pageUrl": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.drawsupplements",
+   "dataYear": 2024,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt tables (GMU/area, residency, legal animal, season dates, advertised permits, hunt area) describe the 2024 drawing hunts. Back page: 'Results of the 2023 Permit Hunt Drawing' (Apps Received, Permits Available, % Drawn per hunt number), the source of every draw row for 2023. ADF&G notes the Permits Available column may differ from what was advertised for administrative reasons."
+  },
+  {
+   "id": "d-supp-2025",
+   "title": "2025-2026 Alaska Drawing Permit Hunt Supplement",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/static/license/huntlicense/pdfs/2025-2026_draw_supplement.pdf",
+   "pageUrl": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.drawsupplements",
+   "dataYear": 2025,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt tables (GMU/area, residency, legal animal, season dates, advertised permits, hunt area) describe the 2025 drawing hunts. Back page: 'Results of the 2024 Permit Hunt Drawing' (Apps Received, Permits Available, % Drawn per hunt number), the source of every draw row for 2024. ADF&G notes the Permits Available column may differ from what was advertised for administrative reasons."
+  },
+  {
+   "id": "d-supp-2026",
+   "title": "2026-2027 Alaska Drawing Permit Hunt Supplement",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/static/license/huntlicense/pdfs/2026-2027-draw-supplement.pdf",
+   "pageUrl": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.drawsupplements",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt tables (GMU/area, residency, legal animal, season dates, advertised permits, hunt area) describe the 2026 drawing hunts. Back page: 'Results of the 2025 Permit Hunt Drawing' (Apps Received, Permits Available, % Drawn per hunt number), the source of every draw row for 2025. ADF&G notes the Permits Available column may differ from what was advertised for administrative reasons."
+  },
+  {
+   "id": "d-supp-2027",
+   "title": "2027-2028 Alaska Drawing Permit Hunt Supplement",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/static/applications/web/nocache/license/huntlicense/pdfs/2027-2028-draw-supplement.pdf3BFB1645DB9A3CB33708AE9235433E9910F96D86BB6DD0A02297417F7BB8B4BD/2027-2028-draw-supplement.pdf",
+   "pageUrl": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.drawsupplements",
+   "dataYear": 2027,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt tables (GMU/area, residency, legal animal, season dates, advertised permits, hunt area) describe the 2027 drawing hunts. Back page: 'Results of the 2026 Permit Hunt Drawing' (Apps Received, Permits Available, % Drawn per hunt number), the source of every draw row for 2026. ADF&G notes the Permits Available column may differ from what was advertised for administrative reasons. Page 1 gives the 2027 drawing application period (November 1 - December 15, 2026), application fees and rules."
+  },
+  {
+   "id": "d-subs-2027",
+   "title": "2027-2028 Alaska Subsistence Permit Hunt Supplement",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/static/applications/web/nocache/license/huntlicense/pdfs/2027-2028-subsistence-supplement.pdf359F3A3B0DB7D8CD13881BC0478CF175D845293AE782FCF239536C1113502F9D/2027-2028-subsistence-supplement.pdf",
+   "pageUrl": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.tiersupplements",
+   "dataYear": 2027,
+   "retrieved": "2026-10-31",
+   "notes": "Tier II subsistence hunts (caribou, moose, muskox): Alaska residents only, applications scored on five questions; same November 1 - December 15, 2026 application period."
+  },
+  {
+   "id": "d-regs-2026",
+   "title": "2026-2027 Alaska Hunting Regulations (No. 67), effective July 1, 2026 - June 30, 2027",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/static/applications/web/nocache/regulations/wildliferegulations/pdfs/regulations_complete.pdfF4FABFEA04F84DC3012883459CAC68B5536D84B54ADFAC1BE626F863AC94BC83/regulations_complete.pdf",
+   "pageUrl": "https://www.adfg.alaska.gov/index.cfm?adfg=wildliferegulations.hunting",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Pages 9-10: resident and nonresident license and locking-tag fees (licenses and locking-tags are valid for the calendar year printed on them). Page 14: general-season harvest tickets."
+  },
+  {
+   "id": "d-web-draw",
+   "title": "Drawing Hunt Permits Information - Draw Hunting Overview",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.draw",
+   "retrieved": "2026-10-31",
+   "notes": "Application period November 1, 8am - December 15, 5pm (AKST); single application period each year; up to 6 hunts per species."
+  },
+  {
+   "id": "d-web-results",
+   "title": "Drawing Hunt Permits Information - Draw Results",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.drawresults",
+   "retrieved": "2026-10-31",
+   "notes": "As retrieved: results of the November 1 - December 15, 2026 Draw, Tier I/II and Community Subsistence Harvest application period 'are expected to be available online on Friday, February 20' (February 20, 2027 is a Saturday; the supplement says the third Friday of February)."
+  },
+  {
+   "id": "d-web-lottery",
+   "title": "Drawing Hunt Permits Information - How Does the Random Drawing Work?",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.lottery",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-web-tier",
+   "title": "Alaska Tier I & II Permit Information",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.tier",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-web-registration",
+   "title": "Registration Hunts Overview",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.registration",
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-web-prices",
+   "title": "Hunting / Trapping Licenses & Permits - License & Tag Prices",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.prices",
+   "retrieved": "2026-10-31",
+   "notes": "No license year printed on the page; amounts as retrieved match the 2026-2027 Hunting Regulations."
+  },
+  {
+   "id": "d-web-hunts-2026",
+   "title": "Permit Hunt Information for Regulatory Year 2026 (per-hunt pages)",
+   "publisher": "Alaska Department of Fish and Game",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=huntingmaps.hunt_details&huntfile_id=27077",
+   "pageUrl": "https://www.adfg.alaska.gov/index.cfm?adfg=huntingmaps.byhuntnumber",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "One page per hunt (example: DM769). Used only to cross-check the parsed 2026-2027 supplement (residency, units, season, legal animal); not a source of row values."
+  }
+ ]
+}

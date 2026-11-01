@@ -219,6 +219,7 @@ export const AGENCY_STATES = [
   "kansas",
   "south-dakota",
   "california",
+  "alaska",
 ] as const;
 
 export type AgencyStateSlug = (typeof AGENCY_STATES)[number];

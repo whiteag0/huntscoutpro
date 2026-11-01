@@ -1,0 +1,1181 @@
+[
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE318",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast following the midline of Ernest Sound, excluding Niblack Islands, to its intersection with ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2026: Sept. 1-Sept. 30",
+  "choice": "all",
+  "total": {
+   "quota": 25,
+   "applicants": 323,
+   "oddsPct": 8
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE321",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast following the midline of Ernest Sound, excluding Niblack Islands, to its intersection with ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2026: Oct. 1-Oct. 15",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 818,
+   "oddsPct": 6
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE323",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast following the midline of Ernest Sound, excluding Niblack Islands, to its intersection with ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2026: Oct. 16-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 477,
+   "oddsPct": 10
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE324",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Zarembo Island — Legal animal: Bull — Hunt Area: Unit 3, Zarembo Island ...",
+  "sex": "male",
+  "seasonDates": "2026: Oct. 1-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 2479,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE702",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "male",
+  "seasonDates": "2026: Oct. 1-Oct. 12",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 3896,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE704",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "male",
+  "seasonDates": "2026: Oct. 11-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 2264,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE706",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Nonresidents Only — Legal animal: Cow — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "female",
+  "seasonDates": "2026: Oct. 23-Nov. 30",
+  "choice": "all",
+  "total": {
+   "quota": 10,
+   "applicants": 120,
+   "oddsPct": 8
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE711",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, SW Afognak Island — Legal animal: Bull — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
+  "sex": "male",
+  "seasonDates": "2026: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 15,
+   "applicants": 3168,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE713",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, SW Afognak Island — Legal animal: Cow — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
+  "sex": "female",
+  "seasonDates": "2026: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 120,
+   "applicants": 1157,
+   "oddsPct": 10
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE715",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
+  "sex": "either",
+  "seasonDates": "2026: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 46,
+   "applicants": 2078,
+   "oddsPct": 2
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE717",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
+  "sex": "either",
+  "seasonDates": "2026: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 46,
+   "applicants": 1855,
+   "oddsPct": 2
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE721",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north- south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
+  "sex": "either",
+  "seasonDates": "2026: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 31,
+   "applicants": 1501,
+   "oddsPct": 2
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2026,
+  "huntCode": "DE723",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north- south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
+  "sex": "either",
+  "seasonDates": "2026: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 31,
+   "applicants": 1251,
+   "oddsPct": 2
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE318",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast fol- lowing the midline of Ernest Sound, excluding Niblack Islands, to its intersection ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2025: Sept. 1-Sept. 30",
+  "choice": "all",
+  "total": {
+   "quota": 25,
+   "applicants": 315,
+   "oddsPct": 8
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE321",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast fol- lowing the midline of Ernest Sound, excluding Niblack Islands, to its intersection ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2025: Oct. 1-Oct. 15",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 1029,
+   "oddsPct": 5
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE323",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast fol- lowing the midline of Ernest Sound, excluding Niblack Islands, to its intersection ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2025: Oct. 16-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 483,
+   "oddsPct": 10
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE324",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Zarembo Island — Legal animal: Bull — Hunt Area: Unit 3, Zarembo Island ...",
+  "sex": "male",
+  "seasonDates": "2025: Oct. 1-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 1554,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE702",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "male",
+  "seasonDates": "2025: Oct. 1-Oct. 12",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 3579,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE704",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "male",
+  "seasonDates": "2025: Oct. 11-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 2524,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE706",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Nonresidents Only — Legal animal: Cow — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "female",
+  "seasonDates": "2025: Oct. 23-Nov. 30",
+  "choice": "all",
+  "total": {
+   "quota": 10,
+   "applicants": 99,
+   "oddsPct": 10
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE711",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, SW Afognak Island — Legal animal: Bull — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
+  "sex": "male",
+  "seasonDates": "2025: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 15,
+   "applicants": 3025,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE713",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, SW Afognak Island — Legal animal: Cow — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
+  "sex": "female",
+  "seasonDates": "2025: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 120,
+   "applicants": 1121,
+   "oddsPct": 11
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE715",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
+  "sex": "either",
+  "seasonDates": "2025: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 46,
+   "applicants": 2069,
+   "oddsPct": 2
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE717",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
+  "sex": "either",
+  "seasonDates": "2025: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 46,
+   "applicants": 1432,
+   "oddsPct": 3
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE721",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
+  "sex": "either",
+  "seasonDates": "2025: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 31,
+   "applicants": 1324,
+   "oddsPct": 2
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2025,
+  "huntCode": "DE723",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
+  "sex": "either",
+  "seasonDates": "2025: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 31,
+   "applicants": 1046,
+   "oddsPct": 3
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE318",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast fol- lowing the midline of Ernest Sound, excluding Niblack Islands, to its intersection ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2024: Sept. 1-Sept. 30",
+  "choice": "all",
+  "total": {
+   "quota": 25,
+   "applicants": 322,
+   "oddsPct": 8
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE321",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast fol- lowing the midline of Ernest Sound, excluding Niblack Islands, to its intersection ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2024: Oct. 1-Oct. 15",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 1213,
+   "oddsPct": 4
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE323",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast fol- lowing the midline of Ernest Sound, excluding Niblack Islands, to its intersection ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2024: Oct. 16-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 583,
+   "oddsPct": 9
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE324",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Zarembo Island — Legal animal: Bull — Hunt Area: Unit 3, Zarembo Island ...",
+  "sex": "male",
+  "seasonDates": "2024: Oct. 1-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 2070,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE702",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "male",
+  "seasonDates": "2024: Oct. 1-Oct. 12",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 3726,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE704",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "male",
+  "seasonDates": "2024: Oct. 11-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 2294,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE706",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Nonresidents Only — Legal animal: Cow — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "female",
+  "seasonDates": "2024: Oct. 23-Nov. 30",
+  "choice": "all",
+  "total": {
+   "quota": 10,
+   "applicants": 79,
+   "oddsPct": 13
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE711",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, SW Afognak Island — Legal animal: Bull — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
+  "sex": "male",
+  "seasonDates": "2024: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 15,
+   "applicants": 2445,
+   "oddsPct": 1
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE713",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, SW Afognak Island — Legal animal: Cow — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
+  "sex": "female",
+  "seasonDates": "2024: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 120,
+   "applicants": 1282,
+   "oddsPct": 9
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE715",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
+  "sex": "either",
+  "seasonDates": "2024: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 46,
+   "applicants": 1999,
+   "oddsPct": 2
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE717",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
+  "sex": "either",
+  "seasonDates": "2024: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 46,
+   "applicants": 1617,
+   "oddsPct": 3
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE721",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
+  "sex": "either",
+  "seasonDates": "2024: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 31,
+   "applicants": 961,
+   "oddsPct": 3
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2024,
+  "huntCode": "DE723",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
+  "sex": "either",
+  "seasonDates": "2024: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 31,
+   "applicants": 917,
+   "oddsPct": 3
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "elk",
+  "year": 2023,
+  "huntCode": "DE318",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast fol- lowing the midline of Ernest Sound, excluding Niblack Islands, to its intersection ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2023: Sept. 1-Sept. 30",
+  "choice": "all",
+  "total": {
+   "quota": 25,
+   "applicants": 391,
+   "oddsPct": 6
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "elk",
+  "year": 2023,
+  "huntCode": "DE321",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast fol- lowing the midline of Ernest Sound, excluding Niblack Islands, to its intersection ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2023: Oct. 1-Oct. 15",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 1181,
+   "oddsPct": 4
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "elk",
+  "year": 2023,
+  "huntCode": "DE323",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast fol- lowing the midline of Ernest Sound, excluding Niblack Islands, to its intersection ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2023: Oct. 16-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 623,
+   "oddsPct": 8
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "elk",
+  "year": 2023,
+  "huntCode": "DE702",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "male",
+  "seasonDates": "2023: Oct. 1-Oct. 12",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 3394,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "elk",
+  "year": 2023,
+  "huntCode": "DE704",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "male",
+  "seasonDates": "2023: Oct. 11-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 1950,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "elk",
+  "year": 2023,
+  "huntCode": "DE706",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Legal animal: Cow — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "female",
+  "seasonDates": "2023: Oct. 23-Nov. 30",
+  "choice": "all",
+  "total": {
+   "quota": 150,
+   "applicants": 2015,
+   "oddsPct": 7
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "elk",
+  "year": 2023,
+  "huntCode": "DE711",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, SW Afognak Island — Legal animal: Bull — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
+  "sex": "male",
+  "seasonDates": "2023: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 15,
+   "applicants": 2219,
+   "oddsPct": 1
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "elk",
+  "year": 2023,
+  "huntCode": "DE713",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, SW Afognak Island — Legal animal: Cow — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
+  "sex": "female",
+  "seasonDates": "2023: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 120,
+   "applicants": 715,
+   "oddsPct": 17
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "elk",
+  "year": 2023,
+  "huntCode": "DE715",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
+  "sex": "either",
+  "seasonDates": "2023: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 1526,
+   "oddsPct": 3
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "elk",
+  "year": 2023,
+  "huntCode": "DE717",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
+  "sex": "either",
+  "seasonDates": "2023: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 1333,
+   "oddsPct": 4
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "elk",
+  "year": 2023,
+  "huntCode": "DE721",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
+  "sex": "either",
+  "seasonDates": "2023: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 35,
+   "applicants": 1036,
+   "oddsPct": 3
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "elk",
+  "year": 2023,
+  "huntCode": "DE723",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
+  "sex": "either",
+  "seasonDates": "2023: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 35,
+   "applicants": 841,
+   "oddsPct": 4
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "elk",
+  "year": 2022,
+  "huntCode": "DE318",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast fol- lowing the midline of Ernest Sound, excluding Niblack Islands, to its intersection ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2022: Sept. 1-Sept. 30",
+  "choice": "all",
+  "total": {
+   "quota": 25,
+   "applicants": 344,
+   "oddsPct": 7
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "elk",
+  "year": 2022,
+  "huntCode": "DE321",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast fol- lowing the midline of Ernest Sound, excluding Niblack Islands, to its intersection ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2022: Oct. 1-Oct. 15",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 1190,
+   "oddsPct": 4
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "elk",
+  "year": 2022,
+  "huntCode": "DE323",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Etolin Island and smaller associated islands — Certified Bowhunters Only — Legal animal: Bull — Hunt Area: that portion of Unit 3 bounded by a line beginning at the intersection of Stikine Strait and Clarence Strait, running southeast following the midline of Clarence Strait, down to its intersection with Ernest Sound, then northeast fol- lowing the midline of Ernest Sound, excluding Niblack Islands, to its intersection ...",
+  "method": "archery",
+  "methodLabel": "Certified Bowhunters Only",
+  "sex": "male",
+  "seasonDates": "2022: Oct. 16-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 627,
+   "oddsPct": 8
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "elk",
+  "year": 2022,
+  "huntCode": "DE702",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "male",
+  "seasonDates": "2022: Oct. 1-Oct. 12",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 3362,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "elk",
+  "year": 2022,
+  "huntCode": "DE704",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Legal animal: Bull — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "male",
+  "seasonDates": "2022: Oct. 11-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 2340,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "elk",
+  "year": 2022,
+  "huntCode": "DE706",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Raspberry Island — Legal animal: Cow — Hunt Area: that portion of Unit 8 on Raspberry Island.",
+  "sex": "female",
+  "seasonDates": "2022: Oct. 23-Nov. 30",
+  "choice": "all",
+  "total": {
+   "quota": 150,
+   "applicants": 1885,
+   "oddsPct": 8
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "elk",
+  "year": 2022,
+  "huntCode": "DE711",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, SW Afognak Island — Legal animal: Bull — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
+  "sex": "male",
+  "seasonDates": "2022: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 15,
+   "applicants": 1791,
+   "oddsPct": 1
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "elk",
+  "year": 2022,
+  "huntCode": "DE713",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, SW Afognak Island — Legal animal: Cow — Hunt Area: Southwest Afognak, that portion of Afognak Island south and west of a line from the head of Back Bay (N 58° 05.3', W 152° 45.7') to Hatchery Peak (N 58° 07.2', W 152° 47.5'), to the head of Malina Bay (N 58° 09.3', W 152° 51.0') and adjacent islands.",
+  "sex": "female",
+  "seasonDates": "2022: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 120,
+   "applicants": 719,
+   "oddsPct": 17
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "elk",
+  "year": 2022,
+  "huntCode": "DE715",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
+  "sex": "either",
+  "seasonDates": "2022: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 1341,
+   "oddsPct": 4
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "elk",
+  "year": 2022,
+  "huntCode": "DE717",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, Remainder — Legal animal: Either Sex — Hunt Area: remainder of Unit 8.",
+  "sex": "either",
+  "seasonDates": "2022: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 1249,
+   "oddsPct": 4
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "elk",
+  "year": 2022,
+  "huntCode": "DE721",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
+  "sex": "either",
+  "seasonDates": "2022: Sept. 25-Oct. 9",
+  "choice": "all",
+  "total": {
+   "quota": 35,
+   "applicants": 892,
+   "oddsPct": 4
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "elk",
+  "year": 2022,
+  "huntCode": "DE723",
+  "units": [
+   "8"
+  ],
+  "description": "Unit 8, East Afognak Island — Legal animal: Either Sex — Hunt Area: Eastern Afognak, that portion of Afognak Island east of the main north-south logging road (1100 road) from the Danger Bay logging camp (N 58° 08.2', W 152° 32.9') north to its terminus at Discoverer Bay (N 58° 19.6', W 152° 21.8') and adjacent islands west of Marmot Strait.",
+  "sex": "either",
+  "seasonDates": "2022: Oct. 8-Oct. 22",
+  "choice": "all",
+  "total": {
+   "quota": 35,
+   "applicants": 833,
+   "oddsPct": 4
+  },
+  "sourceId": "d-supp-2023"
+ }
+]

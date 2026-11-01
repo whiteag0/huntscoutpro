@@ -725,6 +725,66 @@
           "seed": "CDFW regulations index"
         }
       ]
+    },
+    "alaska": {
+      "agency": "Alaska Department of Fish and Game (ADF&G)",
+      "notes": "One drawing application period a year (November 1 - December 15); the Drawing Permit Hunt Supplement PDF carries the next year's hunts, the application dates and fees on page 1, and the previous drawing's results on its back page. ADF&G serves the current supplements from /static/applications/web/nocache/... URLs with a content hash in the path, so a revised PDF gets a new URL. Harvest General Reports (moose, sheep, goat, elk) are a POST form at secure.wildlife.alaska.gov (the page lists the regulatory years offered); deer and black bear harvest are year-selector pages on adfg.alaska.gov. All pages answered curl with a browser User-Agent (HTTP 200) on 2026-10-31.",
+      "pages": [
+        {
+          "id": "ak-draw-overview",
+          "roles": ["key-dates"],
+          "url": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.draw",
+          "seed": "draw-meta d-web-draw url"
+        },
+        {
+          "id": "ak-draw-supplements",
+          "roles": ["key-dates", "draw-results", "fees", "regulations"],
+          "url": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.drawsupplements",
+          "seed": "draw-meta d-supp-* pageUrl"
+        },
+        {
+          "id": "ak-draw-results",
+          "roles": ["key-dates", "draw-results"],
+          "url": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.drawresults",
+          "seed": "draw-meta d-web-results url"
+        },
+        {
+          "id": "ak-tier-supplements",
+          "roles": ["key-dates"],
+          "url": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.tiersupplements",
+          "seed": "draw-meta d-subs-2027 pageUrl"
+        },
+        {
+          "id": "ak-prices",
+          "roles": ["fees"],
+          "url": "https://www.adfg.alaska.gov/index.cfm?adfg=huntlicense.prices",
+          "seed": "draw-meta d-web-prices url"
+        },
+        {
+          "id": "ak-regulations",
+          "roles": ["regulations", "fees"],
+          "url": "https://www.adfg.alaska.gov/index.cfm?adfg=wildliferegulations.hunting",
+          "seed": "draw-meta d-regs-2026 pageUrl"
+        },
+        {
+          "id": "ak-harvest-general-reports",
+          "roles": ["harvest"],
+          "url": "https://secure.wildlife.alaska.gov/DWC/HarvestInformation/GeneralReports/",
+          "seed": "harvest-meta h-adfg-{moose,sheep,goat,elk}-* url"
+        },
+        {
+          "id": "ak-deer-harvest",
+          "roles": ["harvest"],
+          "url": "https://www.adfg.alaska.gov/index.cfm?adfg=deerhunting.deerharvest",
+          "seed": "harvest-meta h-adfg-deer-* url"
+        },
+        {
+          "id": "ak-blackbear-harvest",
+          "roles": ["harvest"],
+          "url": "https://www.adfg.alaska.gov/index.cfm?adfg=blackbearhunting.harvest",
+          "seed": "harvest-meta h-adfg-blackbear-* url"
+        }
+      ]
     }
   }
 }
