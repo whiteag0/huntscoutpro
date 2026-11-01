@@ -9,7 +9,7 @@ document or is simple arithmetic on one, and then it is labeled as computed.
 | Path | What it is |
 |---|---|
 | `<state>/` | Per-state downloaders, parsers, meta writers and spot-checkers (Python 3) |
-| `validate.mjs` | Checks one state's files against the data contract below. Exits 1 on errors |
+| `validate.mjs` | Checks one state's files against the data contract below. Exits 1 on errors. `npm run validate:data` checks every state, and CI runs the same check on every pull request (see `CONTRIBUTING.md`) |
 | `build-index.mjs` | Regenerates `src/data/agency/index.generated.ts`, `live.generated.ts`, `stats.generated.json` and the gzipped tables in `.agency-gz/`. Runs as `prebuild` |
 | `watch.json` | The agency pages the freshness monitor watches (per state, with roles) |
 | `freshness.mjs` | The freshness monitor: tells us when an agency has published something new |
