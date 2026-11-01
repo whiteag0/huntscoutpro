@@ -145,6 +145,9 @@ const BANNED = [
   [/\b(easiest|easy tags?)\b/i, "easiest (ad copy can't promise easy tags)"],
   [/\b(limited time|act now|hurry|last chance|sale)\b/i, "urgency/sale wording"],
   [/\bofficial\s+(?!agency\b)/i, '"official" must read "official agency …" (we are not the agency)'],
+  // Logged-out visitors get table/shortlist rows blurred behind the paywall
+  // (DemoGate), which can't be read, so ads can't sell a "free preview".
+  [/\b(free\s+)?(table\s+)?previews?\b/i, "preview (logged-out previews are blurred, not readable)"],
 ];
 
 function checkText(text, where, { max, kindName }) {
@@ -158,6 +161,10 @@ function checkText(text, where, { max, kindName }) {
   if (/[*@^~|<>{}\[\]\\]/.test(text)) err(`${where}: symbol not allowed in ad text: "${text}"`);
   for (const w of text.match(/\b[A-Z]{2,}\b/g) || []) if (!CAPS_OK.has(w)) err(`${where}: all-caps word "${w}" (Google editorial)`);
   for (const [re, label] of BANNED) if (re.test(text)) err(`${where}: banned wording (${label}) in "${text}"`);
+  // Most states have no 2027 dates on /calendar yet (it shows 2026 dates and
+  // says so). A description may explain that; a short asset can't promise it.
+  if (!kindName.startsWith("description") && /\b2027\s+(application\s+|draw\s+|deadline\s+)?(calendar|dates|deadlines)\b/i.test(text))
+    err(`${where}: "${text}" promises 2027 dates (most states only have 2026 dates so far)`);
   for (const s of NOT_COVERED) if (new RegExp(`\\b${s}\\b`, "i").test(text.replace(/new mexico/gi, ""))) err(`${where}: mentions ${s}, which we don't cover`);
   const n = text.match(/\b(\d+)\s+(western\s+)?(draw\s+)?(state|states)\b/i);
   if (n && Number(n[1]) !== LIVE.length) err(`${where}: claims ${n[1]} states, live count is ${LIVE.length}`);

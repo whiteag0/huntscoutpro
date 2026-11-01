@@ -94,9 +94,9 @@ There's no CPC data for these exact terms yet. **Keyword Planner** in the new ac
 | Draw odds & points (generic) | `https://www.huntscoutpro.com/shortlist` | 17 |
 | Application deadlines 2027 | `https://www.huntscoutpro.com/calendar` | 18 |
 
-**Why the generic group lands on `/shortlist` and not `/`.** Someone searching "elk draw odds by points" or "where can I draw elk" hasn't picked a state yet. `/shortlist` ("Where can I draw?") answers that question across all 12 states. Logged-out visitors see the explainer, a real sample of last year's results (elk, applying from Texas, 3 points) and the Pro call to action. The homepage describes the product in general, so it would add a click before the searcher sees anything relevant. The generic group also carries the 12 state names as ad-group negatives. That way "colorado elk draw odds" is always answered by the Colorado ad and the Colorado page.
+**Why the generic group lands on `/shortlist` and not `/`.** Someone searching "elk draw odds by points" or "where can I draw elk" hasn't picked a state yet. `/shortlist` ("Where can I draw?") answers that question across all 12 states. Logged-out visitors see the explainer, a blurred example of last year's results (elk, applying from Texas, 3 points) and the Pro call to action. The homepage describes the product in general, so it would add a click before the searcher sees anything relevant. The generic group also carries the 12 state names as ad-group negatives. That way "colorado elk draw odds" is always answered by the Colorado ad and the Colorado page.
 
-**Why deadline searches land on `/calendar`.** The calendar is free and links every date to its agency source. Where an agency has published 2027 dates, it shows them; elsewhere it shows the 2026 date and says so. The ad copy says the same: "2027 dates appear as each agency publishes them."
+**Why deadline searches land on `/calendar`.** The calendar is free and links every date to its agency source. Where an agency has published 2027 dates, it shows them; elsewhere it shows the 2026 date and says so. As of 2026-10-31 only Arizona, Idaho, Nevada, Utah and Washington have any 2027 dates, so no headline says "2027 calendar"; the description says "2027 dates appear as each agency publishes them."
 
 **Keywords** are phrase match, plus one exact-match version of each group's main query. They're built around the words each agency and its applicants actually use:
 
@@ -122,7 +122,8 @@ Every ad has 15 headlines (30 characters or fewer) and 4 descriptions (90 or few
 - The numbers come from official state agency draw results and harvest reports, and every table links to its source.
 - **$14.99 one-time for 2 years of Pro**, no subscription and no auto-renewal (matches `/pricing`).
 - **30-day money-back guarantee** (matches the `/pricing` FAQ).
-- They are past results, not forecasts. "Free preview" refers to the short table previews logged-out visitors see.
+- They are past results, not forecasts.
+- No ad offers a "free preview". Logged-out visitors get a few table and shortlist rows, but they are blurred behind the paywall and can't be read, so the validator bans the word. The free thing that is real is the application calendar.
 
 Copy is tailored to what each state's data actually has:
 
@@ -167,7 +168,7 @@ Copy is tailored to what each state's data actually has:
   - No Auto-Renewal
   - 30-Day Money-Back
   - 12 Western States
-  - Free Table Previews
+  - Free Application Calendar
 - **Structured snippets.** Google only accepts fixed headers, and "States" isn't one of them. Two snippets are used instead:
   - **Destinations:** the 12 states. Oregon & Washington and Kansas & South Dakota share a value because the limit is 10 values.
   - **Types:** Elk, Mule Deer, Whitetail, Pronghorn, Moose, Bighorn Sheep, Mountain Goat, Black Bear, Turkey.
@@ -198,9 +199,10 @@ Run it with no flags for the full check. Add `--offline` to skip the network, `-
 - Google editorial rules: no "!" in headlines, no repeated punctuation or symbols, all-caps only for agency acronyms and state abbreviations, ASCII only.
 
 **Honest copy**
-- Banned words: predict, guaranteed, "guarantee" unless it reads "money-back guarantee", best, win, #1, AI/modeled, subscription wording, easiest, urgency/sale wording, and "official" unless followed by "agency".
+- Banned words: predict, preview, guaranteed, "guarantee" unless it reads "money-back guarantee", best, win, #1, AI/modeled, subscription wording, easiest, urgency/sale wording, and "official" unless followed by "agency".
 - Facts: no state we don't cover, any state count must equal 12, the only price is $14.99, the only access length is 2 years, the only refund window is 30 days.
 - Every ad states the price, the refund and no auto-renewal.
+- No headline, sitelink or callout promises 2027 dates or a 2027 calendar.
 - Idaho and New Mexico never mention points. Washington never claims point-level or nonresident data. Kansas never mentions elk.
 
 **Assets**

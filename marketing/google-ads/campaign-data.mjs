@@ -37,7 +37,7 @@ const SHARED = [
   "$14.99 One-Time for 2 Years",
   "No Subscription. No Renewal.",
   "30-Day Money-Back Guarantee",
-  "Free Preview Before You Buy",
+  "Hunt-by-Hunt Agency Tables",
   "Plan Your 2027 Applications",
 ];
 
@@ -390,8 +390,10 @@ export const OTHER_GROUPS = [
   {
     // Generic "draw odds / points" searches have no state, so the best answer
     // is the cross-state shortlist ("Where can I draw?"). Logged-out visitors
-    // see the explainer plus a real sample (elk, from Texas, 3 points) and the
+    // see the explainer, a blurred example (elk, from Texas, 3 points) and the
     // Pro call to action; that matches the query better than the homepage.
+    // Ad copy never promises a free preview: the logged-out table and
+    // shortlist "previews" are blurred behind the paywall and can't be read.
     name: "Draw odds & points (generic)",
     finalUrl: `${SITE}/shortlist`,
     path1: "draw-odds",
@@ -436,13 +438,15 @@ export const OTHER_GROUPS = [
   },
   {
     // Deadline searches land on the free calendar: every agency date we hold,
-    // 2027 where published, otherwise the 2026 date marked as such.
+    // 2027 where published, otherwise the 2026 date marked as such. Most states
+    // (CO, WY, MT, NM, OR, KS, SD) have no 2027 dates yet, so no headline may
+    // promise a "2027 calendar"; the description says dates arrive as published.
     name: "Application deadlines 2027",
     finalUrl: `${SITE}/calendar`,
     path1: "calendar",
     path2: "2027",
     headlines: [
-      "2027 Application Calendar",
+      "Application Calendar by State",
       "Western Draw Deadlines",
       "Agency Application Dates",
       "Draw & Results Dates by State",
@@ -523,7 +527,7 @@ export const CALLOUTS = [
   "No Auto-Renewal",
   "30-Day Money-Back",
   "12 Western States",
-  "Free Table Previews",
+  "Free Application Calendar",
 ];
 
 // Google only allows its fixed snippet headers ("States" is not one).
