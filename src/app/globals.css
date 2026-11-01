@@ -112,6 +112,62 @@
 
 html {
   scroll-behavior: smooth;
+  /* Anchor jumps (e.g. footnote [n] -> source) land below the fixed header. */
+  scroll-padding-top: 5rem;
+  /* Keep text size stable when a phone rotates to landscape. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ========================================
+   Phone / touch behaviour
+   ======================================== */
+
+/* No grey flash on tap, and no 300ms double-tap-zoom delay on controls. */
+a,
+button,
+summary,
+label,
+select,
+input,
+[role="tab"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Buttons shouldn't select their label text on long-press. */
+button,
+[role="tab"],
+summary {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/*
+ * iOS Safari zooms the page when a focused form control's text is under 16px.
+ * Unlayered on purpose so it wins over text-sm/text-xs utilities on phones and
+ * touch devices; desktop sizes are unchanged.
+ */
+@media (max-width: 639.98px), (pointer: coarse) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Horizontal scrollers (species pills, compare cards) without a visible bar. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 body {

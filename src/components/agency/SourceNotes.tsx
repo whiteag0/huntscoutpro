@@ -12,7 +12,7 @@ export function footnoteIndex(ids: Iterable<string>): Map<string, number> {
 export function Cite({ n }: { n?: number }) {
   if (!n) return null;
   return (
-    <a href={`#src-${n}`} className="ml-0.5 align-super text-[10px] font-semibold text-gold hover:underline" aria-label={`Source ${n}`}>
+    <a href={`#src-${n}`} className="ml-0.5 py-2 align-super text-[10px] font-semibold text-gold hover:underline" aria-label={`Source ${n}`}>
       [{n}]
     </a>
   );

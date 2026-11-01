@@ -7,6 +7,7 @@ import type { HarvestRecord, Species } from "@/data/agency/schema";
 import { fmtNum, fmtPct, sortUnitIds } from "@/lib/agency-format";
 import { harvestMethodKey, isRealUnit, successOf, unitNameOf } from "@/lib/agency-view";
 import { Cite } from "@/components/agency/SourceNotes";
+import { MobileSort, useIsNarrow, useProgressive } from "@/components/agency/mobile";
 
 type SortKey = "unit" | "hunters" | "harvest" | "success";
 
@@ -42,6 +43,8 @@ interface Props {
 
 export function HarvestTable({ rows, allRows, species, stateSlug, unitTerm, unitNames, cite }: Props) {
   const [sort, setSort] = useState<SortState>({ key: "unit", dir: 1 });
+  const narrow = useIsNarrow();
+  const { shown, button: moreButton } = useProgressive(rows.length);
 
   const series = useMemo(() => {
     const m = new Map<string, HarvestRecord[]>();
@@ -71,6 +74,100 @@ export function HarvestTable({ rows, allRows, species, stateSlug, unitTerm, unit
     return <div className="bg-card border border-border rounded-xl p-8 text-center text-muted-foreground">No harvest rows match these filters.</div>;
   }
 
+  const categoryOf = (r: HarvestRecord) =>
+    [showMethod ? harvestMethodKey(r) : "", r.sex && r.sex !== "all" ? r.sex : "", r.residency && r.residency !== "all" ? r.residency : ""].filter(Boolean).join(" · ");
+
+  const unitCell = (r: HarvestRecord) => (
+    <>
+      {!isRealUnit(r.unit) ? (
+        <span className="font-semibold">{r.unit === "Statewide" ? "Statewide" : "Multi-unit"}</span>
+      ) : (
+        <Link href={`/states/${stateSlug}/units/${encodeURIComponent(r.unit)}?species=${species}`} className="font-semibold text-primary hover:underline py-2">
+          {narrow ? `${unitTerm} ${r.unit}` : r.unit}
+        </Link>
+      )}
+      <Cite n={cite(r.sourceId)} />
+    </>
+  );
+
+  const notes = (r: HarvestRecord) =>
+    r.note && (
+      <details className="text-[11px] text-muted-foreground mt-0.5">
+        <summary className="cursor-pointer select-none py-2 -my-2 sm:py-0 sm:my-0">Agency notes</summary>
+        {r.note}
+      </details>
+    );
+
+  if (narrow) {
+    return (
+      <div>
+        <MobileSort<SortKey>
+          options={[
+            { key: "unit", label: unitTerm, asc: "A → Z", desc: "Z → A" },
+            { key: "success", label: "Success" },
+            { key: "harvest", label: "Harvest" },
+            { key: "hunters", label: "Hunters" },
+          ]}
+          value={sort.key}
+          dir={sort.dir}
+          onChange={(key, dir) => setSort({ key, dir: key === sort.key ? dir : key === "unit" ? 1 : -1 })}
+        />
+        <ul className="space-y-3" aria-label={`Harvest by ${unitTerm}`}>
+          {view.slice(0, shown).map(({ r, success, prior }, i) => {
+            const priorSuccess = prior ? successOf(prior) : null;
+            const name = r.unitName || unitNameOf(unitNames, r.unit);
+            const category = categoryOf(r);
+            return (
+              <li key={`${r.unit}-${r.hunt}-${harvestMethodKey(r)}-${r.sex}-${r.residency}-${i}`} className="bg-card border border-border rounded-xl overflow-hidden">
+                <div className="px-3 pt-3 pb-2.5">
+                  <div className="text-base">{unitCell(r)}</div>
+                  {name && <div className="text-xs text-muted-foreground">{name}</div>}
+                  {(r.hunt || ((showMethod || hasSplit) && category)) && (
+                    <div className="mt-1 flex flex-wrap gap-1.5 text-[11px]">
+                      {r.hunt && <span className="px-1.5 py-0.5 rounded bg-muted font-mono text-foreground">Hunt {r.hunt}</span>}
+                      {(showMethod || hasSplit) && category && <span className="px-1.5 py-0.5 rounded bg-muted text-muted-foreground capitalize">{category}</span>}
+                    </div>
+                  )}
+                  {notes(r)}
+                </div>
+                <dl className="grid grid-cols-3 gap-px bg-border border-t border-border">
+                  <div className="bg-card px-2.5 py-2">
+                    <dt className="text-[11px] font-semibold text-muted-foreground">Hunters</dt>
+                    <dd className="mt-0.5 text-base tabular-nums">{fmtNum(r.hunters)}</dd>
+                  </div>
+                  <div className="bg-card px-2.5 py-2">
+                    <dt className="text-[11px] font-semibold text-muted-foreground">Harvest</dt>
+                    <dd className="mt-0.5 text-base tabular-nums">{fmtNum(r.harvest)}</dd>
+                  </div>
+                  <div className="bg-card px-2.5 py-2">
+                    <dt className="text-[11px] font-semibold text-muted-foreground">Success</dt>
+                    <dd className="mt-0.5 text-base tabular-nums font-semibold">
+                      {fmtPct(success)}
+                      {r.successComputed && <span className="block text-[10px] font-normal text-muted-foreground">harvest ÷ hunters</span>}
+                    </dd>
+                  </div>
+                  <div className="bg-card px-2.5 py-2 col-span-3 flex items-baseline justify-between gap-3 text-xs">
+                    <dt className="font-semibold text-muted-foreground text-[11px]">Prior year</dt>
+                    <dd className="tabular-nums text-muted-foreground text-right">
+                      {prior ? (
+                        <>
+                          {prior.year}: <span className="text-foreground font-semibold">{fmtPct(priorSuccess)}</span> · {fmtNum(prior.harvest)} harvested of {fmtNum(prior.hunters)}
+                        </>
+                      ) : (
+                        "—"
+                      )}
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+            );
+          })}
+        </ul>
+        {moreButton}
+      </div>
+    );
+  }
+
   return (
     <div className="bg-card border border-border rounded-xl overflow-hidden">
       <div className="overflow-x-auto">
@@ -96,27 +193,13 @@ export function HarvestTable({ rows, allRows, species, stateSlug, unitTerm, unit
             {view.map(({ r, success, prior }, i) => {
               const priorSuccess = prior ? successOf(prior) : null;
               const name = r.unitName || unitNameOf(unitNames, r.unit);
-              const category = [showMethod ? harvestMethodKey(r) : "", r.sex && r.sex !== "all" ? r.sex : "", r.residency && r.residency !== "all" ? r.residency : ""]
-                .filter(Boolean)
-                .join(" · ");
+              const category = categoryOf(r);
               return (
                 <tr key={`${r.unit}-${r.hunt}-${harvestMethodKey(r)}-${r.sex}-${r.residency}-${i}`} className="hover:bg-muted/40">
                   <td className="px-3 py-2.5 align-top">
-                    {!isRealUnit(r.unit) ? (
-                      <span className="font-semibold">{r.unit === "Statewide" ? "Statewide" : "Multi-unit"}</span>
-                    ) : (
-                      <Link href={`/states/${stateSlug}/units/${encodeURIComponent(r.unit)}?species=${species}`} className="font-semibold text-primary hover:underline">
-                        {r.unit}
-                      </Link>
-                    )}
-                    <Cite n={cite(r.sourceId)} />
+                    {unitCell(r)}
                     {name && <div className="text-xs text-muted-foreground">{name}</div>}
-                    {r.note && (
-                      <details className="text-[11px] text-muted-foreground mt-0.5">
-                        <summary className="cursor-pointer select-none">Agency notes</summary>
-                        {r.note}
-                      </details>
-                    )}
+                    {notes(r)}
                   </td>
                   {hasHunt && <td className="px-3 py-2.5 align-top font-mono text-xs">{r.hunt || "—"}</td>}
                   {(showMethod || hasSplit) && <td className="px-3 py-2.5 align-top text-xs text-muted-foreground capitalize">{category || "All"}</td>}

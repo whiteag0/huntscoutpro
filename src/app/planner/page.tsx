@@ -446,10 +446,10 @@ export default function PlannerPage() {
               </p>
             </div>
             <div className="flex gap-2">
-              <span className="px-4 py-2 rounded-lg border border-white/20 text-white/40 text-sm font-medium">
+              <span className="inline-flex min-h-10 items-center px-4 py-2 rounded-lg border border-white/20 text-white/40 text-sm font-medium">
                 Export JSON
               </span>
-              <span className="px-4 py-2 rounded-lg border border-white/20 text-white/40 text-sm font-medium">
+              <span className="inline-flex min-h-10 items-center px-4 py-2 rounded-lg border border-white/20 text-white/40 text-sm font-medium">
                 Import
               </span>
             </div>
@@ -459,7 +459,7 @@ export default function PlannerPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Preview tabs */}
-        <div className="flex gap-1 border-b border-border mb-8">
+        <div className="flex gap-1 border-b border-border mb-8 overflow-x-auto no-scrollbar">
           {["My Hunts", "Timeline", "Budget", "Gear Checklist"].map((tab, i) => (
             <span
               key={tab}
@@ -524,13 +524,13 @@ export default function PlannerPage() {
             <div className="flex gap-2">
               <button
                 onClick={exportData}
-                className="px-4 py-2 rounded-lg border border-white/20 text-white/80 text-sm font-medium hover:bg-white/10 transition-colors cursor-pointer"
+                className="min-h-10 px-4 py-2 rounded-lg border border-white/20 text-white/80 text-sm font-medium hover:bg-white/10 transition-colors cursor-pointer"
               >
                 Export JSON
               </button>
               <button
                 onClick={importData}
-                className="px-4 py-2 rounded-lg border border-white/20 text-white/80 text-sm font-medium hover:bg-white/10 transition-colors cursor-pointer"
+                className="min-h-10 px-4 py-2 rounded-lg border border-white/20 text-white/80 text-sm font-medium hover:bg-white/10 transition-colors cursor-pointer"
               >
                 Import
               </button>
@@ -579,7 +579,7 @@ export default function PlannerPage() {
               </h2>
               <button
                 onClick={() => setShowAddHunt(!showAddHunt)}
-                className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-light transition-colors cursor-pointer"
+                className="min-h-10 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-light transition-colors cursor-pointer"
               >
                 {showAddHunt ? "Cancel" : "+ Add a Hunt"}
               </button>

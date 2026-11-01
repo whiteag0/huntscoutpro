@@ -606,7 +606,7 @@ export default function WelcomePage() {
                         {renderStateChips(WESTERN_DRAW_STATES)}
                       </div>
                       <details className="group">
-                        <summary className="cursor-pointer select-none text-xs font-semibold uppercase tracking-wide text-muted-foreground hover:text-foreground list-none inline-flex items-center gap-1">
+                        <summary className="cursor-pointer select-none text-xs font-semibold uppercase tracking-wide text-muted-foreground hover:text-foreground list-none inline-flex min-h-10 items-center gap-1">
                           <ArrowRight
                             className="w-3.5 h-3.5 transition-transform group-open:rotate-90"
                             aria-hidden="true"
@@ -758,7 +758,7 @@ export default function WelcomePage() {
                 type="button"
                 onClick={skip}
                 disabled={busy}
-                className="inline-flex items-center justify-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground px-2 py-2 cursor-pointer disabled:opacity-50"
+                className="inline-flex items-center justify-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground min-h-10 px-2 py-2 cursor-pointer disabled:opacity-50"
               >
                 {save.kind === "skipping" && <Loader2 className="w-4 h-4 animate-spin" aria-hidden="true" />}
                 Skip for now

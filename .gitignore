@@ -42,3 +42,6 @@ next-env.d.ts
 
 # gzipped agency tables, rebuilt by scripts/agency/build-index.mjs
 /.agency-gz/
+
+# agency freshness monitor snapshot/report (scripts/agency/freshness.mjs)
+/.agency-freshness/

@@ -115,7 +115,7 @@ export default async function StatesPage() {
               <Link
                 key={s.slug}
                 href={`/states/${s.slug}#request`}
-                className="group flex items-center justify-between gap-2 px-3 py-2 rounded-lg border border-border hover:border-gold text-sm transition"
+                className="group flex min-h-10 items-center justify-between gap-2 px-3 py-2 rounded-lg border border-border hover:border-gold text-sm transition"
               >
                 <span className="text-foreground">{s.name}</span>
                 <span className="text-[10px] font-semibold text-muted-foreground group-hover:text-gold">REQUEST</span>

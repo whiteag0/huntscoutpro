@@ -10,6 +10,7 @@ import {
   ClipboardList,
   GitCompareArrows,
   Info,
+  ListChecks,
   Map as MapIcon,
   Pencil,
   TrendingUp,
@@ -266,6 +267,28 @@ export function MemberHome({
         {/* Quick launch */}
         <nav aria-label="Pro tools" className="mb-8">
           <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <li className="col-span-2 sm:col-span-3">
+              <Link
+                href="/shortlist"
+                className="group flex items-center gap-4 bg-card border border-gold/50 rounded-2xl p-4 sm:p-5 hover:border-gold hover:shadow-md transition-all"
+              >
+                <span className="w-10 h-10 shrink-0 rounded-lg gradient-gold text-gold-foreground flex items-center justify-center">
+                  <ListChecks className="w-5 h-5" aria-hidden="true" />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="flex items-center gap-1 font-semibold text-foreground">
+                    Where can I draw?
+                    <ArrowRight
+                      className="w-3.5 h-3.5 text-muted-foreground group-hover:translate-x-0.5 transition-transform"
+                      aria-hidden="true"
+                    />
+                  </span>
+                  <span className="block text-xs sm:text-sm text-muted-foreground leading-snug mt-0.5">
+                    Your shortlist: hunts in every state that drew at your points last year
+                  </span>
+                </span>
+              </Link>
+            </li>
             {QUICK_LAUNCH.map((item) => {
               const Icon = item.icon;
               return (

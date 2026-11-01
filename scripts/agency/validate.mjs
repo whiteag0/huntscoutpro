@@ -13,6 +13,9 @@ const DRAW_KINDS = ["preference", "bonus", "bonus-squared", "hybrid", "random", 
 const POINT_KINDS = ["preference", "bonus", "bonus-squared", "hybrid"];
 const MAX_FILE_BYTES = 6 * 1024 * 1024;
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
+// Latest season/draw year a data row may carry: the current year in Colorado (was a fixed 2026,
+// which would have rejected the first 2027 draw results).
+const MAX_YEAR = Number(new Intl.DateTimeFormat("en-CA", { timeZone: "America/Denver", year: "numeric" }).format(new Date()));
 
 const slug = process.argv[2];
 const partIdx = process.argv.indexOf("--part");
@@ -93,7 +96,7 @@ function validateHarvest() {
     rows.forEach((r, i) => {
       const at = `harvest/${f}[${i}]`;
       if (r.species !== sp) err(`${at}: species "${r.species}" != file ${sp}`);
-      if (!Number.isInteger(r.year) || r.year < 2005 || r.year > 2026) err(`${at}: year ${r.year} out of range`);
+      if (!Number.isInteger(r.year) || r.year < 2005 || r.year > MAX_YEAR) err(`${at}: year ${r.year} out of range`);
       if (typeof r.unit !== "string" || !r.unit) err(`${at}: unit must be a non-empty string`);
       if (r.method && !METHODS.includes(r.method)) err(`${at}: method "${r.method}" invalid`);
       if (r.sex && !SEXES.includes(r.sex)) err(`${at}: sex "${r.sex}" invalid`);
@@ -188,7 +191,7 @@ function validateDraw() {
     rows.forEach((r, i) => {
       const at = `draw/${f}[${i}] ${r.huntCode} ${r.year}`;
       if (r.species !== sp) err(`${at}: species mismatch`);
-      if (!Number.isInteger(r.year) || r.year < 2010 || r.year > 2026) err(`${at}: year out of range`);
+      if (!Number.isInteger(r.year) || r.year < 2010 || r.year > MAX_YEAR) err(`${at}: year out of range`);
       if (!r.huntCode) err(`${at}: huntCode required`);
       if (!Array.isArray(r.units)) err(`${at}: units must be an array`);
       if (!r.description) err(`${at}: description required`);

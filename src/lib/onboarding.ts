@@ -25,13 +25,17 @@ interface SendOptions {
   idempotencyKey?: string;
   scheduledAt?: string;
   replyTo?: string;
+  /** Extra email headers, e.g. List-Unsubscribe. */
+  headers?: Record<string, string>;
+  /** Copy ONBOARDING_BCC (default true). Off for member digests, whose unsubscribe links are per member. */
+  bcc?: boolean;
 }
 
 /**
  * Send through Resend's HTTP API. Returns the Resend email id, or null when
  * RESEND_API_KEY isn't configured.
  */
-export async function sendEmail({ to, email, idempotencyKey, scheduledAt, replyTo }: SendOptions): Promise<string | null> {
+export async function sendEmail({ to, email, idempotencyKey, scheduledAt, replyTo, headers, bcc = true }: SendOptions): Promise<string | null> {
   const key = process.env.RESEND_API_KEY;
   if (!key) {
     console.warn(`RESEND_API_KEY not set; skipping "${email.subject}"`);
@@ -49,11 +53,12 @@ export async function sendEmail({ to, email, idempotencyKey, scheduledAt, replyT
         from: FROM,
         to: [to],
         reply_to: replyTo || REPLY_TO,
-        ...(BCC.length ? { bcc: BCC } : {}),
+        ...(bcc && BCC.length ? { bcc: BCC } : {}),
         subject: email.subject,
         html: email.html,
         text: email.text,
         ...(scheduledAt ? { scheduled_at: scheduledAt } : {}),
+        ...(headers && Object.keys(headers).length ? { headers } : {}),
       }),
       signal: AbortSignal.timeout(10000),
     });

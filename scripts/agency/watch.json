@@ -1,0 +1,648 @@
+{
+  "$comment": "Agency pages that announce new draw, harvest, fee and date information. Read by scripts/agency/freshness.mjs. Seeded from the url/pageUrl fields of src/data/agency/<state>/draw-meta.json and harvest-meta.json; index pages are preferred over single PDFs. roles: key-dates | draw-results | harvest | fees | regulations. kind: html (default) | s3-list | wp-media. linkPatterns: extra regexes (matched against the absolute URL) that count as document links on that page, on top of the built-in pdf/xlsx/csv and agency document-server patterns. enabled:false pages are listed in the report but not fetched. 'seed' names the meta source the page came from; 'checked' is the last manual verification. knownGaps: per-state {part: draw|harvest, species, reason} entries for coverage that is old on purpose (discontinued hunts); the data-age section lists them without flagging.",
+  "version": 1,
+  "checked": "2026-10-31",
+  "states": {
+    "colorado": {
+      "agency": "Colorado Parks and Wildlife (CPW)",
+      "notes": "CPW serves documents from cpw.widen.net / cpw.widencollective.com share links (no .pdf extension); those are built-in document patterns. The species statistics pages list every Draw Recap, Drawn Out At, secondary-draw and harvest report by year. Fees and key dates are printed in the brochures linked from the big game, sheep/goat, turkey and lion pages.",
+      "pages": [
+        {
+          "id": "co-big-game",
+          "roles": ["key-dates", "fees", "regulations"],
+          "url": "https://cpw.state.co.us/activities/hunting/big-game",
+          "seed": "draw-meta d-brochure-biggame-2026 pageUrl"
+        },
+        {
+          "id": "co-primary-draw",
+          "roles": ["key-dates"],
+          "url": "https://cpw.state.co.us/activities/hunting/big-game/primary-draw",
+          "seed": "linked from co-big-game (Primary Draw)"
+        },
+        {
+          "id": "co-rules-regs",
+          "roles": ["regulations"],
+          "url": "https://cpw.state.co.us/rules-and-regulations",
+          "seed": "linked from co-big-game (Rules and Regulations)"
+        },
+        {
+          "id": "co-sheep",
+          "roles": ["key-dates", "fees"],
+          "url": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep",
+          "seed": "draw-meta d-brochure-sheepgoat-2026 pageUrl"
+        },
+        {
+          "id": "co-turkey",
+          "roles": ["key-dates", "fees"],
+          "url": "https://cpw.state.co.us/activities/hunting/turkey-hunting",
+          "seed": "draw-meta d-brochure-turkey-2026 pageUrl"
+        },
+        {
+          "id": "co-lion",
+          "roles": ["key-dates", "fees"],
+          "url": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-lion",
+          "seed": "draw-meta d-brochure-lion-2026 pageUrl"
+        },
+        {
+          "id": "co-elk-stats",
+          "roles": ["draw-results", "harvest"],
+          "url": "https://cpw.state.co.us/activities/hunting/big-game/hunting-elk/elk-statistics",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "co-deer-stats",
+          "roles": ["draw-results", "harvest"],
+          "url": "https://cpw.state.co.us/activities/hunting/big-game/hunting-deer/deer-statistics",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "co-pronghorn-stats",
+          "roles": ["draw-results", "harvest"],
+          "url": "https://cpw.state.co.us/activities/hunting/big-game/hunting-pronghorn/pronghorn-statistics",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "co-moose-stats",
+          "roles": ["draw-results", "harvest"],
+          "url": "https://cpw.state.co.us/activities/hunting/big-game/hunting-moose/moose-statistics",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "co-bear-stats",
+          "roles": ["draw-results", "harvest"],
+          "url": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bear/bear-statistics",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "co-sheep-stats",
+          "roles": ["draw-results", "harvest"],
+          "url": "https://cpw.state.co.us/activities/hunting/big-game/hunting-bighorn-sheep/bighorn-sheep-statistics",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "co-goat-stats",
+          "roles": ["draw-results", "harvest"],
+          "url": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-goat/mountain-goat-statistics",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "co-turkey-stats",
+          "roles": ["draw-results", "harvest"],
+          "url": "https://cpw.state.co.us/activities/hunting/turkey-hunting/turkey-statistics",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "co-lion-stats",
+          "roles": ["harvest"],
+          "url": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-lion/mountain-lion-statistics",
+          "seed": "harvest-meta pageUrl"
+        }
+      ]
+    },
+    "wyoming": {
+      "agency": "Wyoming Game and Fish Department (WGFD)",
+      "notes": "WGFD documents are /media/<id>/download links (no extension); built-in document pattern.",
+      "pages": [
+        {
+          "id": "wy-dates",
+          "roles": ["key-dates"],
+          "url": "https://wgfd.wyo.gov/licenses-applications/application-dates-deadlines",
+          "seed": "draw-meta source url"
+        },
+        {
+          "id": "wy-licenses-applications",
+          "roles": ["key-dates"],
+          "url": "https://wgfd.wyo.gov/licenses-applications",
+          "seed": "draw-meta d-wy-2026-application-booklet pageUrl"
+        },
+        {
+          "id": "wy-draw-odds",
+          "roles": ["draw-results"],
+          "url": "https://wgfd.wyo.gov/licenses-applications/draw-results-odds",
+          "seed": "draw-meta pageUrl"
+        },
+        {
+          "id": "wy-harvest",
+          "roles": ["harvest"],
+          "url": "https://wgfd.wyo.gov/hunting-trapping/harvest-reports-surveys",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "wy-fees",
+          "roles": ["fees"],
+          "url": "https://wgfd.wyo.gov/licenses-applications/license-fee-list",
+          "seed": "draw-meta d-wy-license-fee-list url"
+        },
+        {
+          "id": "wy-regulations",
+          "roles": ["regulations"],
+          "url": "https://wgfd.wyo.gov/regulations",
+          "seed": "draw-meta pageUrl"
+        }
+      ]
+    },
+    "montana": {
+      "agency": "Montana Fish, Wildlife & Parks (FWP)",
+      "notes": "Harvest estimate reports are myfwp.mt.gov getRepositoryFile?objectID=<n> links (built-in pattern). The myfwp drawing statistics tool is a search form, so only its text/year options are tracked.",
+      "pages": [
+        {
+          "id": "mt-dates",
+          "roles": ["key-dates"],
+          "url": "https://fwp.mt.gov/buyandapply/hunting-licenses/application-drawing-dates",
+          "seed": "draw-meta d-fwp-dates-2026 url"
+        },
+        {
+          "id": "mt-drawing-statistics",
+          "roles": ["draw-results"],
+          "url": "https://fwp.mt.gov/buyandapply/hunting-licenses/drawing-statistics",
+          "seed": "draw-meta source url"
+        },
+        {
+          "id": "mt-myfwp-drawing-statistics",
+          "roles": ["draw-results"],
+          "url": "https://myfwp.mt.gov/fwpPub/drawingStatistics",
+          "seed": "draw-meta pageUrl"
+        },
+        {
+          "id": "mt-harvest",
+          "roles": ["harvest"],
+          "url": "https://myfwp.mt.gov/fwpPub/harvestReports",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "mt-fees-resident",
+          "roles": ["fees"],
+          "url": "https://fwp.mt.gov/buyandapply/hunting-licenses/resident-licenses/fees",
+          "seed": "draw-meta d-fwp-fees-res url"
+        },
+        {
+          "id": "mt-fees-nonresident",
+          "roles": ["fees"],
+          "url": "https://fwp.mt.gov/buyandapply/hunting-licenses/nonresident-licenses/fees",
+          "seed": "draw-meta d-fwp-fees-nr url"
+        },
+        {
+          "id": "mt-bonus-points",
+          "roles": ["key-dates"],
+          "url": "https://fwp.mt.gov/buyandapply/hunting-licenses/bonus-points",
+          "seed": "draw-meta pageUrl"
+        },
+        {
+          "id": "mt-regulations",
+          "roles": ["regulations", "fees"],
+          "url": "https://fwp.mt.gov/hunt/regulations",
+          "seed": "draw-meta d-fwp-regs-dea-2026 pageUrl"
+        }
+      ]
+    },
+    "idaho": {
+      "agency": "Idaho Department of Fish and Game (IDFG)",
+      "notes": "On 2026-10-31 every idfg.idaho.gov page except the /ifwis/huntplanner/ tools answered HTTP 503 with a 'website is undergoing maintenance' page (Retry-After 18000), so the rules/quota pages below could not be re-verified that day; they are the pageUrls recorded in draw-meta.json when the data was collected. The script reports them as failed while the outage lasts. Hunt planner odds/stats are rendered by JavaScript, so only their static text is tracked; new seasons show up there as year options.",
+      "pages": [
+        {
+          "id": "id-rules-big-game",
+          "roles": ["key-dates", "fees", "regulations"],
+          "url": "https://idfg.idaho.gov/rules/big-game",
+          "seed": "draw-meta d-rules-big-game-2026 pageUrl"
+        },
+        {
+          "id": "id-nr-quotas",
+          "roles": ["key-dates", "fees"],
+          "url": "https://idfg.idaho.gov/licenses/tag/quotas/nonresident",
+          "seed": "draw-meta d-nr-supplement-2027 pageUrl"
+        },
+        {
+          "id": "id-rules-upland",
+          "roles": ["key-dates", "regulations"],
+          "url": "https://idfg.idaho.gov/rules/upland",
+          "seed": "draw-meta d-rules-upland-2026-27 pageUrl"
+        },
+        {
+          "id": "id-huntplanner-odds",
+          "roles": ["draw-results"],
+          "url": "https://idfg.idaho.gov/ifwis/huntplanner/odds/",
+          "seed": "draw-meta pageUrl"
+        },
+        {
+          "id": "id-huntplanner-stats",
+          "roles": ["harvest"],
+          "url": "https://idfg.idaho.gov/ifwis/huntplanner/stats/",
+          "seed": "harvest-meta pageUrl"
+        }
+      ]
+    },
+    "utah": {
+      "agency": "Utah Division of Wildlife Resources (DWR)",
+      "notes": "wildlife.utah.gov/drawing-odds-and-point-results.html and /bg-odds.html now redirect to /odds and /biggame/odds; the new URLs are watched. utahdraws.com/drawodds is a JavaScript app (text only).",
+      "pages": [
+        {
+          "id": "ut-guidebooks",
+          "roles": ["key-dates", "regulations"],
+          "url": "https://wildlife.utah.gov/guidebooks",
+          "seed": "draw-meta d-bg-guide-2026 pageUrl"
+        },
+        {
+          "id": "ut-news",
+          "roles": ["key-dates"],
+          "url": "https://wildlife.utah.gov/news",
+          "seed": "draw-meta d-news-sportsman-2027 pageUrl"
+        },
+        {
+          "id": "ut-odds",
+          "roles": ["draw-results"],
+          "url": "https://wildlife.utah.gov/odds",
+          "seed": "draw-meta pageUrl (drawing-odds-and-point-results.html, redirects here)"
+        },
+        {
+          "id": "ut-biggame-odds",
+          "roles": ["draw-results"],
+          "url": "https://wildlife.utah.gov/biggame/odds",
+          "seed": "draw-meta pageUrl (bg-odds.html, redirects here)"
+        },
+        {
+          "id": "ut-utahdraws-odds",
+          "roles": ["draw-results"],
+          "url": "https://www.utahdraws.com/internetsales/home/drawodds",
+          "seed": "draw-meta pageUrl (utahdraws.com/drawodds)"
+        },
+        {
+          "id": "ut-biggame-reports",
+          "roles": ["harvest"],
+          "url": "https://wildlife.utah.gov/biggame/reports",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "ut-upland-reports",
+          "roles": ["harvest"],
+          "url": "https://wildlife.utah.gov/uplandgame/reports",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "ut-fees",
+          "roles": ["fees"],
+          "url": "https://wildlife.utah.gov/fees",
+          "seed": "draw-meta d-fees url"
+        },
+        {
+          "id": "ut-points",
+          "roles": ["key-dates"],
+          "url": "https://wildlife.utah.gov/licenses/points",
+          "seed": "draw-meta source url"
+        }
+      ],
+      "knownGaps": [
+        {
+          "part": "draw",
+          "species": "lion",
+          "reason": "Utah removed cougar permits and draws in 2023 (draw-meta coverage note)"
+        }
+      ]
+    },
+    "arizona": {
+      "agency": "Arizona Game and Fish Department (AZGFD)",
+      "notes": "Every azgfd.com HTML page answers non-browser clients with a Cloudflare challenge (HTTP 403 'Just a moment...'), with or without a browser User-Agent, so those pages are listed but disabled. AZGFD's WordPress uploads live in a public S3 bucket whose listing is open, so new draw reports, bonus point reports, regulations and harvest PDFs are detected from the bucket listing for the current and next year instead. (The second bucket azgfd-live-portal-wordpress-pantheon serves files but refuses listing.)",
+      "pages": [
+        {
+          "id": "az-s3-uploads",
+          "roles": ["key-dates", "draw-results", "harvest", "fees", "regulations"],
+          "kind": "s3-list",
+          "url": "https://azgfd-portal-wordpress-pantheon.s3.us-west-2.amazonaws.com/",
+          "prefixes": ["wp-content/uploads/{year}/", "wp-content/uploads/{nextYear}/"],
+          "include": "draw|bonus|odds|harvest|regulation|fee|application|hunt|survey|summary|report|point|deadline",
+          "seed": "draw-meta/harvest-meta source urls (S3 bucket); scripts/agency/arizona/draw_list_s3.py"
+        },
+        {
+          "id": "az-hunt-draw",
+          "roles": ["key-dates", "draw-results"],
+          "url": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/",
+          "enabled": false,
+          "blocked": "Cloudflare challenge (HTTP 403) on 2026-10-31; covered by az-s3-uploads"
+        },
+        {
+          "id": "az-bonus-points",
+          "roles": ["draw-results"],
+          "url": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/big-game-draw/bonus-point-process/",
+          "enabled": false,
+          "blocked": "Cloudflare challenge (HTTP 403) on 2026-10-31; covered by az-s3-uploads",
+          "seed": "draw-meta pageUrl"
+        },
+        {
+          "id": "az-harvest-reporting",
+          "roles": ["harvest"],
+          "url": "https://www.azgfd.com/hunting/hunt-draw-and-licenses/harvest-reporting/",
+          "enabled": false,
+          "blocked": "Cloudflare challenge (HTTP 403) on 2026-10-31; covered by az-s3-uploads",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "az-regulations",
+          "roles": ["regulations", "fees"],
+          "url": "https://www.azgfd.com/hunting/regulations/",
+          "enabled": false,
+          "blocked": "Cloudflare challenge (HTTP 403) on 2026-10-31; covered by az-s3-uploads",
+          "seed": "harvest-meta pageUrl"
+        }
+      ]
+    },
+    "nevada": {
+      "agency": "Nevada Department of Wildlife (NDOW)",
+      "notes": "ndow.org/publications/ loads its list with JavaScript (no links in the HTML), so NDOW's WordPress media API (newest 200 uploads) is watched instead, filtered to hunting documents and excluding advisory-board agendas/minutes. NDOW answers missing pages with HTTP 200 'Page Not Found', which the script treats as a failure.",
+      "pages": [
+        {
+          "id": "nv-apply-buy-hunting",
+          "roles": ["key-dates", "fees"],
+          "url": "https://www.ndow.org/apply-buy/apply-buy-hunting/",
+          "seed": "draw-meta d-ndow-apply-hunting url"
+        },
+        {
+          "id": "nv-hunt-statistics",
+          "roles": ["draw-results", "harvest"],
+          "url": "https://www.ndow.org/blog/hunt-statistics/",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "nv-rules-regulations",
+          "roles": ["regulations"],
+          "url": "https://www.ndow.org/rules-regulations/",
+          "seed": "linked from nv-apply-buy-hunting"
+        },
+        {
+          "id": "nv-eregs-big-game",
+          "roles": ["regulations", "key-dates"],
+          "url": "https://www.eregulations.com/nevada/hunting/big-game",
+          "seed": "linked from nv-apply-buy-hunting (Big Game Seasons and Applications)"
+        },
+        {
+          "id": "nv-wp-media",
+          "roles": ["key-dates", "draw-results", "harvest", "regulations"],
+          "kind": "wp-media",
+          "url": "https://www.ndow.org/wp-json/wp/v2/media",
+          "pages": 2,
+          "include": "draw|bonus|odds|harvest|quota|tag|hunt|application|deadline|season|regulation|fee|result|statistic|CR-\\d",
+          "exclude": "CABMW|minutes|agenda|advisory board|meeting|fishing|boat|press release",
+          "seed": "NDOW publications page (JavaScript list) -> WordPress media API"
+        }
+      ]
+    },
+    "new-mexico": {
+      "agency": "New Mexico Department of Wildlife (NMDOW)",
+      "notes": "NMDOW documents are WordPress Download Manager links (/download/<slug>/?wpdmdl=<id>); built-in pattern. Every NMDOW page carries site-wide 2027 menu text, which the baseline absorbs.",
+      "pages": [
+        {
+          "id": "nm-applications-draw",
+          "roles": ["key-dates"],
+          "url": "https://wildlife.dgf.nm.gov/hunting/applications-and-draw-information/",
+          "seed": "draw-meta d-nm-dates-2026 url"
+        },
+        {
+          "id": "nm-how-draw-works",
+          "roles": ["draw-results", "fees"],
+          "url": "https://wildlife.dgf.nm.gov/hunting/applications-and-draw-information/how-new-mexico-draw-works/",
+          "seed": "draw-meta d-nm-fees-draw-2027 pageUrl"
+        },
+        {
+          "id": "nm-harvest",
+          "roles": ["harvest"],
+          "url": "https://wildlife.dgf.nm.gov/hunting/harvest-reporting-information/",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "nm-licenses",
+          "roles": ["fees"],
+          "url": "https://wildlife.dgf.nm.gov/hunting/licenses-and-permits/",
+          "seed": "NMDOW hunting menu"
+        },
+        {
+          "id": "nm-publications",
+          "roles": ["regulations"],
+          "url": "https://wildlife.dgf.nm.gov/home/publications/",
+          "seed": "NMDOW publications index (rules & info booklets)"
+        }
+      ]
+    },
+    "oregon": {
+      "agency": "Oregon Department of Fish and Wildlife (ODFW)",
+      "notes": "myodfw.com/articles/how-apply-controlled-hunt now redirects to /articles/controlled-hunt-navigation (watched). The Oregon Big Game Regulations (with fees and the May 15 application deadline) are published on eregulations.com.",
+      "pages": [
+        {
+          "id": "or-controlled-hunt",
+          "roles": ["key-dates"],
+          "url": "https://myodfw.com/articles/controlled-hunt-navigation",
+          "seed": "draw-meta d-or-how-apply url (redirects here)"
+        },
+        {
+          "id": "or-point-summary",
+          "roles": ["draw-results"],
+          "url": "https://myodfw.com/articles/point-summary-reports",
+          "seed": "draw-meta pageUrl"
+        },
+        {
+          "id": "or-harvest",
+          "roles": ["harvest"],
+          "url": "https://myodfw.com/articles/big-game-hunting-harvest-statistics",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "or-regulations",
+          "roles": ["regulations", "fees", "key-dates"],
+          "url": "https://myodfw.com/articles/oregon-fishing-hunting-regulations-and-updates",
+          "seed": "draw-meta d-or-regs-2026 pageUrl"
+        },
+        {
+          "id": "or-eregs-hunting",
+          "roles": ["regulations", "fees"],
+          "url": "https://www.eregulations.com/oregon/hunting",
+          "seed": "draw-meta d-or-regs-2026 url (eregulations.com)"
+        }
+      ]
+    },
+    "washington": {
+      "agency": "Washington Department of Fish and Wildlife (WDFW)",
+      "notes": "Harvest reports are HTML pages (/hunting/management/game-harvest/<year>/<report>), matched with a page link pattern. The special hunt drawing result summaries are embedded Power BI reports, so only that page's text is tracked. Publications are /publications/<number> pages (built-in pattern).",
+      "pages": [
+        {
+          "id": "wa-special-hunts",
+          "roles": ["key-dates"],
+          "url": "https://wdfw.wa.gov/hunting/special-hunts",
+          "seed": "WDFW special hunt permits index"
+        },
+        {
+          "id": "wa-mywdfw-special-hunt",
+          "roles": ["key-dates"],
+          "url": "https://www.mywdfw.org/multi-season-special-hunt/",
+          "seed": "draw-meta d-mywdfw url"
+        },
+        {
+          "id": "wa-special-hunt-results",
+          "roles": ["draw-results"],
+          "url": "https://wdfw.wa.gov/hunting/special-hunts/results",
+          "seed": "draw-meta pageUrl"
+        },
+        {
+          "id": "wa-game-harvest",
+          "roles": ["harvest"],
+          "url": "https://wdfw.wa.gov/hunting/management/game-harvest",
+          "linkPatterns": ["/hunting/management/game-harvest/\\d{4}/"],
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "wa-fees",
+          "roles": ["fees"],
+          "url": "https://wdfw.wa.gov/licenses/hunting/big-game",
+          "seed": "draw-meta d-fees-2026 url"
+        },
+        {
+          "id": "wa-regulations",
+          "roles": ["regulations"],
+          "url": "https://wdfw.wa.gov/hunting/regulations",
+          "seed": "draw-meta d-pamphlet-2026 (publications 02706) index"
+        },
+        {
+          "id": "wa-eregs-hunting",
+          "roles": ["regulations"],
+          "url": "https://www.eregulations.com/washington/hunting",
+          "seed": "WDFW hunting regulations pamphlet host"
+        }
+      ],
+      "knownGaps": [
+        {
+          "part": "draw",
+          "species": "bear",
+          "reason": "no spring black bear permit season since 2021; fall bear is a general season (draw-meta coverage note)"
+        }
+      ]
+    },
+    "kansas": {
+      "agency": "Kansas Department of Wildlife and Parks (KDWP)",
+      "notes": "www.ksoutdoors.gov sits behind Akamai. On 2026-10-31 these pages answered Node fetch and curl with a browser User-Agent (HTTP 200), but earlier collection runs got HTTP 403 (see scripts/agency/kansas/draw_download.py); the script retries a 403 once with curl and browser headers, and otherwise reports the page as failed. KDWP documents are /home/showpublisheddocument/<id>/<version> links (built-in pattern; a new version number means the file was replaced).",
+      "pages": [
+        {
+          "id": "ks-deer-draw-stats",
+          "roles": ["draw-results"],
+          "url": "https://www.ksoutdoors.gov/outdoor-activities/hunting-in-kansas/what-to-hunt/big-game/deer/deer-quotas-and-draw-statistics",
+          "seed": "draw-meta source url"
+        },
+        {
+          "id": "ks-deer",
+          "roles": ["key-dates", "regulations"],
+          "url": "https://www.ksoutdoors.gov/outdoor-activities/hunting-in-kansas/what-to-hunt/big-game/deer",
+          "seed": "draw-meta source url"
+        },
+        {
+          "id": "ks-antelope",
+          "roles": ["key-dates", "draw-results"],
+          "url": "https://www.ksoutdoors.gov/outdoor-activities/hunting-in-kansas/what-to-hunt/big-game/antelope",
+          "seed": "draw-meta d-ks-antelope-page url"
+        },
+        {
+          "id": "ks-elk",
+          "roles": ["key-dates", "draw-results"],
+          "url": "https://www.ksoutdoors.gov/outdoor-activities/hunting-in-kansas/what-to-hunt/big-game/elk",
+          "seed": "draw-meta d-ks-elk-page url"
+        },
+        {
+          "id": "ks-turkey",
+          "roles": ["key-dates", "draw-results"],
+          "url": "https://www.ksoutdoors.gov/outdoor-activities/hunting-in-kansas/what-to-hunt/turkey",
+          "seed": "draw-meta source url"
+        },
+        {
+          "id": "ks-when-to-hunt",
+          "roles": ["key-dates"],
+          "url": "https://www.ksoutdoors.gov/outdoor-activities/hunting-in-kansas/when-to-hunt",
+          "seed": "draw-meta source url"
+        },
+        {
+          "id": "ks-research",
+          "roles": ["harvest"],
+          "url": "https://www.ksoutdoors.gov/programs-services/research",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "ks-fees",
+          "roles": ["fees", "key-dates"],
+          "url": "https://www.ksoutdoors.gov/licenses-permits-fees/hunting-furharvester-licenses-permit-fees-280",
+          "seed": "draw-meta d-ks-fees-page url"
+        },
+        {
+          "id": "ks-regulations",
+          "roles": ["regulations"],
+          "url": "https://www.ksoutdoors.gov/programs-services/law-enforcement/regulations-statutes",
+          "seed": "linked from ks-deer (Hunting & Fishing Regulations)"
+        }
+      ]
+    },
+    "south-dakota": {
+      "agency": "South Dakota Game, Fish and Parks (GFP)",
+      "notes": "GFP redirects unknown paths to the home page; the script treats a redirect to '/' as a failure. Draw statistics live in the Go Outdoors South Dakota licensing site (a search form); a new draw year shows up as a new year option.",
+      "pages": [
+        {
+          "id": "sd-key-dates",
+          "roles": ["key-dates"],
+          "url": "https://gfp.sd.gov/events/keydates/",
+          "seed": "draw-meta d-sd-keydates url"
+        },
+        {
+          "id": "sd-draw-stats",
+          "roles": ["draw-results"],
+          "url": "https://gfp.sd.gov/draw-stats/",
+          "seed": "draw-meta pageUrl"
+        },
+        {
+          "id": "sd-gooutdoors-draw-stats",
+          "roles": ["draw-results"],
+          "url": "https://license.gooutdoorssouthdakota.com/License/DrawStatistics",
+          "seed": "draw-meta source url"
+        },
+        {
+          "id": "sd-harvest",
+          "roles": ["harvest"],
+          "url": "https://gfp.sd.gov/hunt-surveys/",
+          "seed": "harvest-meta pageUrl"
+        },
+        {
+          "id": "sd-licenses",
+          "roles": ["fees", "key-dates"],
+          "url": "https://gfp.sd.gov/hunt-fish-license/",
+          "seed": "draw-meta d-sd-prefpoints-fees pageUrl"
+        },
+        {
+          "id": "sd-license-types",
+          "roles": ["fees"],
+          "url": "https://gfp.sd.gov/license-types/",
+          "seed": "draw-meta d-sd-license-types url"
+        },
+        {
+          "id": "sd-preference-points",
+          "roles": ["fees", "key-dates"],
+          "url": "https://gfp.sd.gov/preference-points/",
+          "seed": "draw-meta d-sd-prefpoints url"
+        },
+        {
+          "id": "sd-big-game-regulations",
+          "roles": ["regulations"],
+          "url": "https://gfp.sd.gov/big-game-regulations/",
+          "seed": "linked from gfp.sd.gov/hunt/ (Big Game Regulations)"
+        },
+        {
+          "id": "sd-regulations",
+          "roles": ["regulations"],
+          "url": "https://gfp.sd.gov/regulations/",
+          "seed": "GFP regulations index"
+        }
+      ],
+      "knownGaps": [
+        {
+          "part": "draw",
+          "species": "goat",
+          "reason": "single 2022 drawing; Black Hills mountain goat season closed 2023-2025 (coverage notes)"
+        },
+        {
+          "part": "harvest",
+          "species": "goat",
+          "reason": "season closed 2023-2025 (harvest-meta coverage note)"
+        }
+      ]
+    }
+  }
+}

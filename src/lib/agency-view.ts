@@ -78,10 +78,19 @@ export function methodsIn(rows: HarvestRecord[]): string[] {
 export const harvestMethodKey = (r: HarvestRecord) => r.methodLabel || r.method || "All";
 
 /** Default harvest view: the agency's all-methods rows when they exist, otherwise the first method published. */
+/** Pseudo-category: show every published row for the season, with the category in its own column. */
+export const EVERY_CATEGORY = "Every category";
+
+/**
+ * Default harvest view: the agency's all-methods rows when they cover individual units; otherwise
+ * every row (e.g. CPW's 2025 report is per hunt code by method, with only a statewide all-methods total).
+ */
 export function defaultHarvestMethod(rows: HarvestRecord[]): string {
+  const allRows = rows.filter((r) => r.method === "all");
+  const allUnits = new Set(allRows.filter((r) => isRealUnit(r.unit)).map((r) => r.unit));
+  if (allRows.length && allUnits.size >= 2) return harvestMethodKey(allRows[0]);
   const keys = methodsIn(rows);
-  const all = rows.find((r) => r.method === "all");
-  return all ? harvestMethodKey(all) : keys[0] || "All";
+  return keys.length > 1 ? EVERY_CATEGORY : keys[0] || "All";
 }
 
 const isWhole = (r: HarvestRecord) => (!r.sex || r.sex === "all") && (!r.residency || r.residency === "all");
