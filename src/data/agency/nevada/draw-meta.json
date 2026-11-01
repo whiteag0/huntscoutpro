@@ -24,62 +24,80 @@
    "keyDates": [
     {
      "label": "Restricted Nonresident Guided Mule Deer Hunt application period",
+     "kind": "application",
+     "residency": "nonresident",
      "start": "2026-02-09",
      "end": "2026-03-09",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Restricted Nonresident Guided Mule Deer Hunt results released on or before",
+     "kind": "results",
+     "residency": "nonresident",
      "date": "2026-03-20",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Big Game Main Draw application period (deadline 11:00 pm PT)",
+     "kind": "application",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Main Draw results posted on or before",
+     "kind": "results",
      "date": "2026-05-29",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Bonus point only applications (sold during the standard big game application periods)",
+     "kind": "points",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period, and are offered again in the second draw to those who did not apply in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period. NDOW's 2026 Big Game FAQ adds that bonus points are offered again in the second draw, only to applicants who did not apply and earn a point or draw a tag in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Big Game Second Draw application period",
+     "kind": "leftover",
      "start": "2026-06-08",
      "end": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Second Draw results released on or before",
+     "kind": "results",
      "date": "2026-06-26",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
+     "sourceId": "d-cr-26-01-a1"
+    },
+    {
+     "label": "Big game harvest questionnaire due (5:00 pm PT) for 2026 tags",
+     "kind": "other",
+     "date": "2027-01-31",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CR 26-01 A-1 / NAC 502.405: every 2026 big game tag holder must submit the online harvest questionnaire, hunted or not, by January 31 following the close of the season; hunts that end on or after January 31 are due February 28 instead.",
      "sourceId": "d-cr-26-01-a1"
     }
    ],
@@ -89,7 +107,9 @@
     "d-ndow-apply-hunting",
     "d-cr-26-01-a1",
     "d-cr-25-13",
-    "d-cr-nr-guided"
+    "d-cr-nr-guided",
+    "d-cr-26-09",
+    "d-cr-26-11"
    ]
   },
   {
@@ -105,45 +125,59 @@
    "keyDates": [
     {
      "label": "Big Game Main Draw application period (deadline 11:00 pm PT)",
+     "kind": "application",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Main Draw results posted on or before",
+     "kind": "results",
      "date": "2026-05-29",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Bonus point only applications (sold during the standard big game application periods)",
+     "kind": "points",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period, and are offered again in the second draw to those who did not apply in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period. NDOW's 2026 Big Game FAQ adds that bonus points are offered again in the second draw, only to applicants who did not apply and earn a point or draw a tag in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Big Game Second Draw application period",
+     "kind": "leftover",
      "start": "2026-06-08",
      "end": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Second Draw results released on or before",
+     "kind": "results",
      "date": "2026-06-26",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
+     "sourceId": "d-cr-26-01-a1"
+    },
+    {
+     "label": "Big game harvest questionnaire due (5:00 pm PT) for 2026 tags",
+     "kind": "other",
+     "date": "2027-01-31",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CR 26-01 A-1 / NAC 502.405: every 2026 big game tag holder must submit the online harvest questionnaire, hunted or not, by January 31 following the close of the season; hunts that end on or after January 31 are due February 28 instead.",
      "sourceId": "d-cr-26-01-a1"
     }
    ],
@@ -168,45 +202,59 @@
    "keyDates": [
     {
      "label": "Big Game Main Draw application period (deadline 11:00 pm PT)",
+     "kind": "application",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Main Draw results posted on or before",
+     "kind": "results",
      "date": "2026-05-29",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Bonus point only applications (sold during the standard big game application periods)",
+     "kind": "points",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period, and are offered again in the second draw to those who did not apply in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period. NDOW's 2026 Big Game FAQ adds that bonus points are offered again in the second draw, only to applicants who did not apply and earn a point or draw a tag in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Big Game Second Draw application period",
+     "kind": "leftover",
      "start": "2026-06-08",
      "end": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Second Draw results released on or before",
+     "kind": "results",
      "date": "2026-06-26",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
+     "sourceId": "d-cr-26-01-a1"
+    },
+    {
+     "label": "Big game harvest questionnaire due (5:00 pm PT) for 2026 tags",
+     "kind": "other",
+     "date": "2027-01-31",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CR 26-01 A-1 / NAC 502.405: every 2026 big game tag holder must submit the online harvest questionnaire, hunted or not, by January 31 following the close of the season; hunts that end on or after January 31 are due February 28 instead.",
      "sourceId": "d-cr-26-01-a1"
     }
    ],
@@ -231,45 +279,59 @@
    "keyDates": [
     {
      "label": "Big Game Main Draw application period (deadline 11:00 pm PT)",
+     "kind": "application",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Main Draw results posted on or before",
+     "kind": "results",
      "date": "2026-05-29",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Bonus point only applications (sold during the standard big game application periods)",
+     "kind": "points",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period, and are offered again in the second draw to those who did not apply in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period. NDOW's 2026 Big Game FAQ adds that bonus points are offered again in the second draw, only to applicants who did not apply and earn a point or draw a tag in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Big Game Second Draw application period",
+     "kind": "leftover",
      "start": "2026-06-08",
      "end": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Second Draw results released on or before",
+     "kind": "results",
      "date": "2026-06-26",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
+     "sourceId": "d-cr-26-01-a1"
+    },
+    {
+     "label": "Big game harvest questionnaire due (5:00 pm PT) for 2026 tags",
+     "kind": "other",
+     "date": "2027-01-31",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CR 26-01 A-1 / NAC 502.405: every 2026 big game tag holder must submit the online harvest questionnaire, hunted or not, by January 31 following the close of the season; hunts that end on or after January 31 are due February 28 instead.",
      "sourceId": "d-cr-26-01-a1"
     }
    ],
@@ -294,45 +356,59 @@
    "keyDates": [
     {
      "label": "Big Game Main Draw application period (deadline 11:00 pm PT)",
+     "kind": "application",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Main Draw results posted on or before",
+     "kind": "results",
      "date": "2026-05-29",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Bonus point only applications (sold during the standard big game application periods)",
+     "kind": "points",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period, and are offered again in the second draw to those who did not apply in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period. NDOW's 2026 Big Game FAQ adds that bonus points are offered again in the second draw, only to applicants who did not apply and earn a point or draw a tag in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Big Game Second Draw application period",
+     "kind": "leftover",
      "start": "2026-06-08",
      "end": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Second Draw results released on or before",
+     "kind": "results",
      "date": "2026-06-26",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
+     "sourceId": "d-cr-26-01-a1"
+    },
+    {
+     "label": "Big game harvest questionnaire due (5:00 pm PT) for 2026 tags",
+     "kind": "other",
+     "date": "2027-01-31",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CR 26-01 A-1 / NAC 502.405: every 2026 big game tag holder must submit the online harvest questionnaire, hunted or not, by January 31 following the close of the season; hunts that end on or after January 31 are due February 28 instead.",
      "sourceId": "d-cr-26-01-a1"
     }
    ],
@@ -357,45 +433,59 @@
    "keyDates": [
     {
      "label": "Big Game Main Draw application period (deadline 11:00 pm PT)",
+     "kind": "application",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Main Draw results posted on or before",
+     "kind": "results",
      "date": "2026-05-29",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Bonus point only applications (sold during the standard big game application periods)",
+     "kind": "points",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period, and are offered again in the second draw to those who did not apply in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period. NDOW's 2026 Big Game FAQ adds that bonus points are offered again in the second draw, only to applicants who did not apply and earn a point or draw a tag in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Big Game Second Draw application period",
+     "kind": "leftover",
      "start": "2026-06-08",
      "end": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Second Draw results released on or before",
+     "kind": "results",
      "date": "2026-06-26",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
+     "sourceId": "d-cr-26-01-a1"
+    },
+    {
+     "label": "Big game harvest questionnaire due (5:00 pm PT) for 2026 tags",
+     "kind": "other",
+     "date": "2027-01-31",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CR 26-01 A-1 / NAC 502.405: every 2026 big game tag holder must submit the online harvest questionnaire, hunted or not, by January 31 following the close of the season; hunts that end on or after January 31 are due February 28 instead.",
      "sourceId": "d-cr-26-01-a1"
     }
    ],
@@ -421,46 +511,77 @@
    "keyDates": [
     {
      "label": "Big Game Main Draw application period (deadline 11:00 pm PT)",
+     "kind": "application",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Main Draw results posted on or before",
+     "kind": "results",
      "date": "2026-05-29",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Bonus point only applications (sold during the standard big game application periods)",
+     "kind": "points",
      "start": "2026-03-23",
      "end": "2026-05-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period, and are offered again in the second draw to those who did not apply in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period. NDOW's 2026 Big Game FAQ adds that bonus points are offered again in the second draw, only to applicants who did not apply and earn a point or draw a tag in the main draw. 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
     },
     {
      "label": "Big Game Second Draw application period",
+     "kind": "leftover",
      "start": "2026-06-08",
      "end": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). 2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-ndow-apply-hunting"
     },
     {
      "label": "Big Game Second Draw results released on or before",
+     "kind": "results",
      "date": "2026-06-26",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31; these are the 2026 dates.",
+     "note": "2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.",
      "sourceId": "d-cr-26-01-a1"
+    },
+    {
+     "label": "Big game harvest questionnaire due (5:00 pm PT) for 2026 tags",
+     "kind": "other",
+     "date": "2027-01-31",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CR 26-01 A-1 / NAC 502.405: every 2026 big game tag holder must submit the online harvest questionnaire, hunted or not, by January 31 following the close of the season; hunts that end on or after January 31 are due February 28 instead.",
+     "sourceId": "d-cr-26-01-a1"
+    },
+    {
+     "label": "Mandatory black bear indoctrination course (6-9 pm, Reno and Zoom)",
+     "kind": "other",
+     "date": "2026-07-16",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "CR 26-12: tags are issued only after the tag holder (and any guide or sub-guide) completes one indoctrination course; second course July 25, 2026.",
+     "sourceId": "d-cr-26-12"
+    },
+    {
+     "label": "Mandatory black bear indoctrination course (1-4 pm, Reno and Zoom)",
+     "kind": "other",
+     "date": "2026-07-25",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-cr-26-12"
     }
    ],
    "sourceIds": [
@@ -482,7 +603,51 @@
    "otcSummary": "No over-the-counter turkey tags.",
    "keyDates": [
     {
+     "label": "2026 Spring Wild Turkey draw application period (deadline 11:00 pm PT)",
+     "kind": "application",
+     "start": "2026-01-12",
+     "end": "2026-01-26",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Opening date from NDOW's 2026 Small Game Application Calendar; deadline also in CR 25-01 A-1.",
+     "sourceId": "d-ndow-apply-hunting"
+    },
+    {
+     "label": "2026 Spring Wild Turkey bonus point only deadline (11:00 pm PT)",
+     "kind": "points",
+     "date": "2026-02-02",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-cr-25-01-a1"
+    },
+    {
+     "label": "2026 Spring Wild Turkey draw results on or before",
+     "kind": "results",
+     "date": "2026-02-13",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-cr-25-01-a1"
+    },
+    {
+     "label": "2026 Fall Wild Turkey draw application deadline (11:00 pm PT)",
+     "kind": "application",
+     "date": "2026-08-10",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "Fall limited-entry hunts 0131/0132 (Pershing and Lincoln counties); opening date not stated in CR 26-01 A-1.",
+     "sourceId": "d-cr-26-01-a1"
+    },
+    {
+     "label": "2026 Fall Wild Turkey draw results on or before",
+     "kind": "results",
+     "date": "2026-08-21",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-cr-26-01-a1"
+    },
+    {
      "label": "2027 Spring Wild Turkey draw application deadline (11:00 pm PT)",
+     "kind": "application",
      "date": "2027-01-25",
      "cycle": 2027,
      "status": "confirmed",
@@ -491,6 +656,7 @@
     },
     {
      "label": "2027 Spring Wild Turkey bonus point only deadline (11:00 pm PT)",
+     "kind": "points",
      "date": "2027-02-01",
      "cycle": 2027,
      "status": "confirmed",
@@ -498,14 +664,26 @@
     },
     {
      "label": "2027 Spring Wild Turkey draw results on or before",
+     "kind": "results",
      "date": "2027-02-12",
      "cycle": 2027,
      "status": "confirmed",
+     "sourceId": "d-cr-26-01-a1"
+    },
+    {
+     "label": "Spring wild turkey harvest questionnaire due (5:00 pm PT) for 2027 spring tags",
+     "kind": "other",
+     "date": "2027-05-31",
+     "cycle": 2027,
+     "status": "confirmed",
+     "note": "CR 26-01 A-1 / NAC 502.407: spring wild turkey harvest questionnaires are due May 31 following the close of the season.",
      "sourceId": "d-cr-26-01-a1"
     }
    ],
    "sourceIds": [
     "d-cr-26-01-a1",
+    "d-cr-25-01-a1",
+    "d-cr-26-13",
     "d-nac-502",
     "d-ndow-apply-hunting"
    ]
@@ -853,30 +1031,4853 @@
  ],
  "seasons": [
   {
-   "species": "bear",
-   "label": "Black bear, all open unit groups (hunts 6151/6251)",
-   "start": "2026-09-15",
-   "end": "2026-12-01",
+   "species": "pronghorn",
+   "label": "Resident antelope, horns longer than ears - any legal weapon (hunt 2151)",
+   "units": [
+    "011",
+    "012 - 014",
+    "015",
+    "021, 022",
+    "031",
+    "032, 034",
+    "035",
+    "041, 042",
+    "043 - 046",
+    "051",
+    "061, 062, 064, 071, 073",
+    "065, 142, 144",
+    "066",
+    "067, 068",
+    "072, 074, 075",
+    "076, 077, 079, 081, 091",
+    "078, 105 - 107, 121",
+    "101 - 104, 108, 109, 144",
+    "111 - 114",
+    "115, 231, 242",
+    "131, 145, 163, 164",
+    "132 - 134, 245",
+    "161, 162",
+    "171 - 173",
+    "181 - 184",
+    "203, 291",
+    "205 - 208",
+    "211 - 213",
+    "221 - 223, 241",
+    "251"
+   ],
+   "huntCodes": [
+    "2151"
+   ],
+   "residency": "resident",
+   "start": "2026-08-22",
+   "end": "2026-09-07",
    "year": 2026,
-   "note": "Or until harvest limits are met; call 1-800-800-1667 before hunting.",
-   "sourceId": "d-cr-26-12"
+   "note": "2026 quota for these unit groups: 1,846 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Resident antelope, horns longer than ears - any legal weapon (hunt 2151)",
+   "units": [
+    "033 Early"
+   ],
+   "huntCodes": [
+    "2151"
+   ],
+   "residency": "resident",
+   "start": "2026-08-22",
+   "end": "2026-08-28",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 15 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Resident antelope, horns longer than ears - any legal weapon (hunt 2151)",
+   "units": [
+    "033 Late"
+   ],
+   "huntCodes": [
+    "2151"
+   ],
+   "residency": "resident",
+   "start": "2026-08-29",
+   "end": "2026-09-07",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 15 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Resident antelope, horns longer than ears - any legal weapon (hunt 2151)",
+   "units": [
+    "141, 143, 151 - 156"
+   ],
+   "huntCodes": [
+    "2151"
+   ],
+   "residency": "resident",
+   "start": "2026-08-15",
+   "end": "2026-08-26",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 169 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Resident antelope, horns longer than ears - any legal weapon (hunt 2151)",
+   "units": [
+    "141, 143, 151 - 156"
+   ],
+   "huntCodes": [
+    "2151"
+   ],
+   "residency": "resident",
+   "start": "2026-08-27",
+   "end": "2026-09-07",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 169 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Resident antelope, horns longer than ears - any legal weapon (hunt 2151)",
+   "units": [
+    "202, 204"
+   ],
+   "huntCodes": [
+    "2151"
+   ],
+   "residency": "resident",
+   "start": "2026-10-15",
+   "end": "2026-10-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 8 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Nonresident antelope, horns longer than ears - any legal weapon (hunt 2251)",
+   "units": [
+    "011",
+    "012 - 014",
+    "015",
+    "021, 022",
+    "031",
+    "032, 034",
+    "035",
+    "041, 042",
+    "043 - 046",
+    "051",
+    "061, 062, 064, 071, 073",
+    "065, 142, 144",
+    "066",
+    "067, 068",
+    "072, 074, 075",
+    "076, 077, 079, 081, 091",
+    "078, 105 - 107, 121",
+    "101 - 104, 108, 109, 144",
+    "111 - 114",
+    "115, 231, 242",
+    "131, 145, 163, 164",
+    "132 - 134, 245",
+    "161, 162",
+    "171 - 173",
+    "181 - 184",
+    "205 - 208",
+    "221 - 223, 241",
+    "251"
+   ],
+   "huntCodes": [
+    "2251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-22",
+   "end": "2026-09-07",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 202 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Nonresident antelope, horns longer than ears - any legal weapon (hunt 2251)",
+   "units": [
+    "033 Early"
+   ],
+   "huntCodes": [
+    "2251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-22",
+   "end": "2026-08-28",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Nonresident antelope, horns longer than ears - any legal weapon (hunt 2251)",
+   "units": [
+    "033 Late"
+   ],
+   "huntCodes": [
+    "2251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-29",
+   "end": "2026-09-07",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Nonresident antelope, horns longer than ears - any legal weapon (hunt 2251)",
+   "units": [
+    "141, 143, 151 - 156"
+   ],
+   "huntCodes": [
+    "2251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-15",
+   "end": "2026-08-26",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 19 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Nonresident antelope, horns longer than ears - any legal weapon (hunt 2251)",
+   "units": [
+    "141, 143, 151 - 156"
+   ],
+   "huntCodes": [
+    "2251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-27",
+   "end": "2026-09-07",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 19 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Nonresident antelope, horns longer than ears - any legal weapon (hunt 2251)",
+   "units": [
+    "202, 204"
+   ],
+   "huntCodes": [
+    "2251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-15",
+   "end": "2026-10-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Resident antelope, horns longer than ears - muzzleloader (hunt 2171)",
+   "method": "muzzleloader",
+   "units": [
+    "011",
+    "012-014",
+    "015",
+    "031",
+    "041, 042",
+    "043 - 046",
+    "051",
+    "115, 231, 242",
+    "131, 145, 163, 164",
+    "132 - 134, 245",
+    "202, 204",
+    "221 - 223, 241"
+   ],
+   "huntCodes": [
+    "2171"
+   ],
+   "residency": "resident",
+   "start": "2026-08-15",
+   "end": "2026-08-21",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 78 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Resident antelope, horns longer than ears - muzzleloader (hunt 2171)",
+   "method": "muzzleloader",
+   "units": [
+    "021 - 022",
+    "032, 034",
+    "033",
+    "035",
+    "061, 062, 064, 071, 073",
+    "065, 142, 144",
+    "066",
+    "067, 068",
+    "072, 074, 075",
+    "076, 077, 079, 081, 091",
+    "078, 105 - 107, 121",
+    "101 - 104, 108, 109, 144",
+    "111 - 114",
+    "141, 143, 151 - 156",
+    "161 - 162",
+    "171 - 173",
+    "181 - 184",
+    "203, 291",
+    "205 - 208",
+    "211 - 213",
+    "251"
+   ],
+   "huntCodes": [
+    "2171"
+   ],
+   "residency": "resident",
+   "start": "2026-09-25",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 145 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Nonresident antelope, horns longer than ears - muzzleloader (hunt 2271)",
+   "method": "muzzleloader",
+   "units": [
+    "012-014",
+    "031",
+    "043 - 046"
+   ],
+   "huntCodes": [
+    "2271"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-15",
+   "end": "2026-08-21",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Nonresident antelope, horns longer than ears - muzzleloader (hunt 2271)",
+   "method": "muzzleloader",
+   "units": [
+    "061, 062, 064, 071, 073",
+    "067, 068",
+    "078, 105 - 107, 121",
+    "101 - 104, 108, 109, 144",
+    "111 - 114",
+    "141, 143, 151 - 156"
+   ],
+   "huntCodes": [
+    "2271"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-25",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Resident antelope, horns longer than ears - archery (hunt 2161)",
+   "method": "archery",
+   "units": [
+    "011",
+    "012 - 014",
+    "015",
+    "031",
+    "041, 042",
+    "043 - 046",
+    "051",
+    "115, 231, 242",
+    "131, 145, 163, 164",
+    "132 - 134, 245",
+    "141, 143, 151 - 156",
+    "221 - 223, 241"
+   ],
+   "huntCodes": [
+    "2161"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-08-14",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 371 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Resident antelope, horns longer than ears - archery (hunt 2161)",
+   "method": "archery",
+   "units": [
+    "021, 022",
+    "032, 034",
+    "033",
+    "035",
+    "061, 062, 064, 071, 073",
+    "065, 142, 144",
+    "066",
+    "067, 068",
+    "072, 074, 075",
+    "076, 077, 079, 081, 091",
+    "078, 105 - 107, 121",
+    "101 - 104, 108, 109, 144",
+    "111 - 114",
+    "161, 162",
+    "171 - 173",
+    "181 - 184",
+    "203, 291",
+    "205 - 208",
+    "211 - 213",
+    "251"
+   ],
+   "huntCodes": [
+    "2161"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-08-21",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 347 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Nonresident antelope, horns longer than ears - archery (hunt 2261)",
+   "method": "archery",
+   "units": [
+    "011",
+    "012 - 014",
+    "015",
+    "031",
+    "041, 042",
+    "043 - 046",
+    "051",
+    "115, 231, 242",
+    "131, 145, 163, 164",
+    "132 - 134, 245",
+    "141, 143, 151 - 156"
+   ],
+   "huntCodes": [
+    "2261"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-01",
+   "end": "2026-08-14",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 41 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Nonresident antelope, horns longer than ears - archery (hunt 2261)",
+   "method": "archery",
+   "units": [
+    "021, 022",
+    "032, 034",
+    "033",
+    "035",
+    "061, 062, 064, 071, 073",
+    "065, 142, 144",
+    "067, 068",
+    "072, 074, 075",
+    "078, 105 - 107, 121",
+    "101 - 104, 108, 109, 144",
+    "111 - 114",
+    "161, 162",
+    "171 - 173",
+    "181 - 184",
+    "205 - 208"
+   ],
+   "huntCodes": [
+    "2261"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-01",
+   "end": "2026-08-21",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 37 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Resident antelope, horns shorter than ears - any legal weapon (hunt 2181)",
+   "units": [
+    "043-046",
+    "061, 062, 064, 071, 073",
+    "065, 142, 144",
+    "066",
+    "067, 068",
+    "072, 074, 075",
+    "076, 077, 079, 081, 091",
+    "101-104, 108, 109, 144",
+    "111-114",
+    "115",
+    "141, 143, 152, 154, 155",
+    "151, 153, 156",
+    "181 - 184"
+   ],
+   "huntCodes": [
+    "2181"
+   ],
+   "residency": "resident",
+   "start": "2026-09-08",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 510 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Resident junior antelope, horns shorter than ears - any legal weapon (hunt 2191)",
+   "units": [
+    "043-046",
+    "061, 062, 064, 071, 073",
+    "065, 142, 144",
+    "066",
+    "067, 068",
+    "072, 074, 075",
+    "076, 077, 079, 081, 091",
+    "101-104, 108, 109, 144",
+    "111-114",
+    "115",
+    "141, 143, 152, 154, 155",
+    "151, 153, 156",
+    "181 - 184"
+   ],
+   "huntCodes": [
+    "2191"
+   ],
+   "residency": "resident",
+   "start": "2026-09-08",
+   "end": "2026-09-24",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 764 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon depredation hunt (hunt 4102)",
+   "units": [
+    "101 - 103 Early",
+    "144, 145 Early"
+   ],
+   "huntCodes": [
+    "4102"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 55 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon depredation hunt (hunt 4102)",
+   "units": [
+    "101 - 103 Late",
+    "144, 145 Late"
+   ],
+   "huntCodes": [
+    "4102"
+   ],
+   "residency": "resident",
+   "start": "2026-10-01",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 55 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon depredation hunt (hunt 4102)",
+   "units": [
+    "115 Antler Pt. Limit - 1st",
+    "231 Antler Pt. Limit - 1st"
+   ],
+   "huntCodes": [
+    "4102"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-08-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon depredation hunt (hunt 4102)",
+   "units": [
+    "115 Antler Pt. Limit - 2nd",
+    "231 Antler Pt. Limit - 2nd"
+   ],
+   "huntCodes": [
+    "4102"
+   ],
+   "residency": "resident",
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon depredation hunt (hunt 4102)",
+   "units": [
+    "115 Antler Pt. Limit - 3rd",
+    "231 Antler Pt. Limit - 3rd"
+   ],
+   "huntCodes": [
+    "4102"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon depredation hunt (hunt 4102)",
+   "units": [
+    "115 Antler Pt. Limit - 4th",
+    "231 Antler Pt. Limit - 4th"
+   ],
+   "huntCodes": [
+    "4102"
+   ],
+   "residency": "resident",
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon depredation hunt (hunt 4102)",
+   "units": [
+    "115 Antler Pt. Limit - 5th",
+    "231 Antler Pt. Limit - 5th"
+   ],
+   "huntCodes": [
+    "4102"
+   ],
+   "residency": "resident",
+   "start": "2026-11-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon (hunt 4151)",
+   "units": [
+    "051",
+    "262"
+   ],
+   "huntCodes": [
+    "4151"
+   ],
+   "residency": "resident",
+   "start": "2026-09-17",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 6 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon (hunt 4151)",
+   "units": [
+    "061, 071 Early"
+   ],
+   "huntCodes": [
+    "4151"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-10-21",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 11 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon (hunt 4151)",
+   "units": [
+    "061, 071 Late",
+    "062, 064, 066 - 068",
+    "072, 073, 074 Early",
+    "075 Early",
+    "078, 105 - 107, 109 Early"
+   ],
+   "huntCodes": [
+    "4151"
+   ],
+   "residency": "resident",
+   "start": "2026-10-22",
+   "end": "2026-11-05",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 107 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon (hunt 4151)",
+   "units": [
+    "072, 073, 074 Late",
+    "075 Late",
+    "076, 077, 079, 081 Early",
+    "078, 105 - 107, 109 Late",
+    "104, 108, 121 Early",
+    "108, 131, 132 Early",
+    "111 - 115 Early",
+    "161 - 164, 171 - 173 Early",
+    "221 - 223 Early",
+    "231 Early",
+    "241, 242"
+   ],
+   "huntCodes": [
+    "4151"
+   ],
+   "residency": "resident",
+   "start": "2026-11-06",
+   "end": "2026-11-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 377 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon (hunt 4151)",
+   "units": [
+    "076, 077, 079, 081 Late",
+    "104, 108, 121 Late",
+    "108, 131, 132 Late",
+    "111 - 115 Late",
+    "161 - 164, 171 - 173 Late",
+    "221 - 223 Late",
+    "231 Late"
+   ],
+   "huntCodes": [
+    "4151"
+   ],
+   "residency": "resident",
+   "start": "2026-11-21",
+   "end": "2026-12-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 336 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - any legal weapon (hunt 4151)",
+   "units": [
+    "091"
+   ],
+   "huntCodes": [
+    "4151"
+   ],
+   "residency": "resident",
+   "start": "2026-09-12",
+   "end": "2026-10-02",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 7 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlered - any legal weapon (hunt 4251)",
+   "units": [
+    "061, 071 Early"
+   ],
+   "huntCodes": [
+    "4251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-10-21",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlered - any legal weapon (hunt 4251)",
+   "units": [
+    "061, 071 Late",
+    "062, 064, 066 - 068",
+    "072, 073, 074 Early",
+    "075 Early",
+    "078, 105 - 107, 109 Early"
+   ],
+   "huntCodes": [
+    "4251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-22",
+   "end": "2026-11-05",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 11 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlered - any legal weapon (hunt 4251)",
+   "units": [
+    "072, 073, 074 Late",
+    "075 Late",
+    "076, 077, 079, 081 Early",
+    "078, 105 - 107, 109 Late",
+    "104, 108, 121 Early",
+    "108, 131, 132 Early",
+    "111 - 115 Early",
+    "161 - 164, 171 - 173 Early",
+    "221 - 223 Early",
+    "231 Early"
+   ],
+   "huntCodes": [
+    "4251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-11-06",
+   "end": "2026-11-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 41 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlered - any legal weapon (hunt 4251)",
+   "units": [
+    "076, 077, 079, 081 Late",
+    "104, 108, 121 Late",
+    "108, 131, 132 Late",
+    "111 - 115 Late",
+    "161 - 164, 171 - 173 Late",
+    "221 - 223 Late",
+    "231 Late"
+   ],
+   "huntCodes": [
+    "4251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-11-21",
+   "end": "2026-12-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 38 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - muzzleloader (hunt 4156)",
+   "method": "muzzleloader",
+   "units": [
+    "051",
+    "061,071",
+    "062, 064, 066-068"
+   ],
+   "huntCodes": [
+    "4156"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2026-09-16",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 12 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - muzzleloader (hunt 4156)",
+   "method": "muzzleloader",
+   "units": [
+    "072, 073, 074",
+    "075",
+    "078, 105 - 107, 109"
+   ],
+   "huntCodes": [
+    "4156"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-10-21",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 19 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - muzzleloader (hunt 4156)",
+   "method": "muzzleloader",
+   "units": [
+    "076, 077, 079, 081",
+    "104, 108, 121",
+    "108, 131, 132",
+    "111 - 115",
+    "221 - 223",
+    "231",
+    "262"
+   ],
+   "huntCodes": [
+    "4156"
+   ],
+   "residency": "resident",
+   "start": "2026-10-22",
+   "end": "2026-11-05",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 94 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - muzzleloader (hunt 4156)",
+   "method": "muzzleloader",
+   "units": [
+    "161 - 164, 171 - 173",
+    "241, 242"
+   ],
+   "huntCodes": [
+    "4156"
+   ],
+   "residency": "resident",
+   "start": "2026-09-17",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 8 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlered - muzzleloader (hunt 4256)",
+   "method": "muzzleloader",
+   "units": [
+    "061, 071",
+    "062, 064, 066-068"
+   ],
+   "huntCodes": [
+    "4256"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-01",
+   "end": "2026-09-16",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlered - muzzleloader (hunt 4256)",
+   "method": "muzzleloader",
+   "units": [
+    "072, 073, 074",
+    "078, 105 - 107, 109"
+   ],
+   "huntCodes": [
+    "4256"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-10-21",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlered - muzzleloader (hunt 4256)",
+   "method": "muzzleloader",
+   "units": [
+    "076, 077, 079, 081",
+    "104, 108, 121",
+    "111 - 115",
+    "221 - 223",
+    "231"
+   ],
+   "huntCodes": [
+    "4256"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-22",
+   "end": "2026-11-05",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 11 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlered - muzzleloader (hunt 4256)",
+   "method": "muzzleloader",
+   "units": [
+    "161 - 164, 171 - 173"
+   ],
+   "huntCodes": [
+    "4256"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-17",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - archery (hunt 4161)",
+   "method": "archery",
+   "units": [
+    "061, 071",
+    "062, 064, 066 - 068"
+   ],
+   "huntCodes": [
+    "4161"
+   ],
+   "residency": "resident",
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 42 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - archery (hunt 4161)",
+   "method": "archery",
+   "units": [
+    "072, 073, 074",
+    "075",
+    "076, 077, 079, 081",
+    "104, 108, 121",
+    "108, 131, 132",
+    "111 - 115",
+    "161 - 164, 171 - 173",
+    "221 - 223",
+    "231",
+    "241, 242",
+    "262"
+   ],
+   "huntCodes": [
+    "4161"
+   ],
+   "residency": "resident",
+   "start": "2026-08-25",
+   "end": "2026-09-16",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 190 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - archery (hunt 4161)",
+   "method": "archery",
+   "units": [
+    "078, 105 - 107, 109"
+   ],
+   "huntCodes": [
+    "4161"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2026-09-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlered - archery (hunt 4161)",
+   "method": "archery",
+   "units": [
+    "091"
+   ],
+   "huntCodes": [
+    "4161"
+   ],
+   "residency": "resident",
+   "start": "2026-08-15",
+   "end": "2026-09-06",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlered - archery (hunt 4261)",
+   "method": "archery",
+   "units": [
+    "061, 071",
+    "062, 064, 066 - 068"
+   ],
+   "huntCodes": [
+    "4261"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 5 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlered - archery (hunt 4261)",
+   "method": "archery",
+   "units": [
+    "072, 073, 074",
+    "076, 077, 079, 081",
+    "104, 108, 121",
+    "108, 131, 132",
+    "111 - 115",
+    "161 - 164, 171 - 173",
+    "221 - 223",
+    "231"
+   ],
+   "huntCodes": [
+    "4261"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-25",
+   "end": "2026-09-16",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 22 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlered - archery (hunt 4261)",
+   "method": "archery",
+   "units": [
+    "078, 105 - 107, 109"
+   ],
+   "huntCodes": [
+    "4261"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-01",
+   "end": "2026-09-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk spike - any legal weapon (hunt 4651)",
+   "units": [
+    "061, 071 Early",
+    "062, 064, 066 - 068"
+   ],
+   "huntCodes": [
+    "4651"
+   ],
+   "residency": "resident",
+   "start": "2026-09-17",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 19 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk spike - any legal weapon (hunt 4651)",
+   "units": [
+    "061, 071 Late"
+   ],
+   "huntCodes": [
+    "4651"
+   ],
+   "residency": "resident",
+   "start": "2026-11-06",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 6 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk spike - any legal weapon (hunt 4651)",
+   "units": [
+    "072, 073, 074 Early",
+    "104, 108, 121 Early",
+    "111, 112 Early",
+    "113 Early",
+    "114, 115 Early",
+    "221 Early",
+    "222, 223 Early",
+    "231 Early"
+   ],
+   "huntCodes": [
+    "4651"
+   ],
+   "residency": "resident",
+   "start": "2026-09-27",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 94 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk spike - any legal weapon (hunt 4651)",
+   "units": [
+    "072, 073, 074 Late",
+    "078, 105 - 107, 109 Late"
+   ],
+   "huntCodes": [
+    "4651"
+   ],
+   "residency": "resident",
+   "start": "2026-11-21",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 22 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk spike - any legal weapon (hunt 4651)",
+   "units": [
+    "076, 077, 079, 081 Early",
+    "161 - 164 Early"
+   ],
+   "huntCodes": [
+    "4651"
+   ],
+   "residency": "resident",
+   "start": "2026-10-01",
+   "end": "2026-10-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 20 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk spike - any legal weapon (hunt 4651)",
+   "units": [
+    "076, 077, 079, 081 Late",
+    "104, 108, 121 Late",
+    "111, 112 Late",
+    "113 Late",
+    "114, 115 Late",
+    "161 - 164 Late",
+    "221 Late",
+    "222, 223 Late",
+    "231 Late"
+   ],
+   "huntCodes": [
+    "4651"
+   ],
+   "residency": "resident",
+   "start": "2026-12-05",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 82 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk spike - any legal weapon (hunt 4651)",
+   "units": [
+    "078, 107 Early",
+    "105, 106, 109 Early"
+   ],
+   "huntCodes": [
+    "4651"
+   ],
+   "residency": "resident",
+   "start": "2026-09-21",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 5 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon (hunt 4181)",
+   "units": [
+    "061, 071 Early",
+    "062 Early"
+   ],
+   "huntCodes": [
+    "4181"
+   ],
+   "residency": "resident",
+   "start": "2026-09-17",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 296 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon (hunt 4181)",
+   "units": [
+    "061, 071 Late",
+    "062, 066 Late"
+   ],
+   "huntCodes": [
+    "4181"
+   ],
+   "residency": "resident",
+   "start": "2026-11-06",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 136 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon (hunt 4181)",
+   "units": [
+    "062 Mid"
+   ],
+   "huntCodes": [
+    "4181"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-10-21",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 98 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon (hunt 4181)",
+   "units": [
+    "072, 073, 074 Early",
+    "075 Early",
+    "104, 108, 121 Early",
+    "108, 131, 132",
+    "111, 112 Early",
+    "113 Early",
+    "114, 115 Early",
+    "221 Early",
+    "222, 223 Early",
+    "231 Early"
+   ],
+   "huntCodes": [
+    "4181"
+   ],
+   "residency": "resident",
+   "start": "2026-09-27",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 325 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon (hunt 4181)",
+   "units": [
+    "072 - 075 Late",
+    "078, 105 - 107, 109 Late"
+   ],
+   "huntCodes": [
+    "4181"
+   ],
+   "residency": "resident",
+   "start": "2026-11-21",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 151 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon (hunt 4181)",
+   "units": [
+    "076, 077, 079, 081 Early",
+    "161 - 164 Early",
+    "241, 242"
+   ],
+   "huntCodes": [
+    "4181"
+   ],
+   "residency": "resident",
+   "start": "2026-10-01",
+   "end": "2026-10-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 103 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon (hunt 4181)",
+   "units": [
+    "076, 077, 079, 081 Late",
+    "104, 108, 121 Late",
+    "111, 112 Late",
+    "113 Late",
+    "114, 115 Late",
+    "161 - 164 Late",
+    "221 Late",
+    "222, 223 Late",
+    "231 Late"
+   ],
+   "huntCodes": [
+    "4181"
+   ],
+   "residency": "resident",
+   "start": "2026-12-05",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 195 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon (hunt 4181)",
+   "units": [
+    "078, 107 Early",
+    "105, 106, 109 Early"
+   ],
+   "huntCodes": [
+    "4181"
+   ],
+   "residency": "resident",
+   "start": "2026-09-21",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 9 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon (hunt 4181)",
+   "units": [
+    "091 Early"
+   ],
+   "huntCodes": [
+    "4181"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-08-14",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 5 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon (hunt 4181)",
+   "units": [
+    "091 Late"
+   ],
+   "huntCodes": [
+    "4181"
+   ],
+   "residency": "resident",
+   "start": "2026-10-03",
+   "end": "2026-11-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 5 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon (hunt 4181)",
+   "units": [
+    "113 N"
+   ],
+   "huntCodes": [
+    "4181"
+   ],
+   "residency": "resident",
+   "start": "2027-01-02",
+   "end": "2027-01-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 4 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - any legal weapon (hunt 4281)",
+   "units": [
+    "061, 071 Early",
+    "062 Early"
+   ],
+   "huntCodes": [
+    "4281"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-17",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 38 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - any legal weapon (hunt 4281)",
+   "units": [
+    "061, 071 Late",
+    "062, 066 Late"
+   ],
+   "huntCodes": [
+    "4281"
+   ],
+   "residency": "nonresident",
+   "start": "2026-11-06",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 19 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - any legal weapon (hunt 4281)",
+   "units": [
+    "062 Mid"
+   ],
+   "huntCodes": [
+    "4281"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-10-21",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 11 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - any legal weapon (hunt 4281)",
+   "units": [
+    "072, 073, 074 Early",
+    "104, 108, 121 Early",
+    "108, 131, 132",
+    "111, 112 Early",
+    "113 Early",
+    "114, 115 Early",
+    "221 Early",
+    "222, 223 Early",
+    "231 Early"
+   ],
+   "huntCodes": [
+    "4281"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-27",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 32 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - any legal weapon (hunt 4281)",
+   "units": [
+    "072 - 075 Late",
+    "078, 105 - 107, 109 Late"
+   ],
+   "huntCodes": [
+    "4281"
+   ],
+   "residency": "nonresident",
+   "start": "2026-11-21",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 18 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - any legal weapon (hunt 4281)",
+   "units": [
+    "076, 077, 079, 081 Early",
+    "161 - 164 Early"
+   ],
+   "huntCodes": [
+    "4281"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-01",
+   "end": "2026-10-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - any legal weapon (hunt 4281)",
+   "units": [
+    "076, 077, 079, 081 Late",
+    "104, 108, 121 Late",
+    "111, 112 Late",
+    "113 Late",
+    "114, 115 Late",
+    "161 - 164 Late",
+    "221 Late",
+    "222, 223 Late",
+    "231 Late"
+   ],
+   "huntCodes": [
+    "4281"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-05",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 23 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - any legal weapon (hunt 4281)",
+   "units": [
+    "078, 107 Early",
+    "105, 106, 109 Early"
+   ],
+   "huntCodes": [
+    "4281"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-21",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - any legal weapon (hunt 4281)",
+   "units": [
+    "113 N"
+   ],
+   "huntCodes": [
+    "4281"
+   ],
+   "residency": "nonresident",
+   "start": "2027-01-02",
+   "end": "2027-01-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - muzzleloader (hunt 4176)",
+   "method": "muzzleloader",
+   "units": [
+    "072, 073, 074",
+    "075",
+    "104, 108, 121",
+    "108, 131, 132",
+    "111, 112",
+    "113",
+    "114, 115",
+    "221 - 223",
+    "231"
+   ],
+   "huntCodes": [
+    "4176"
+   ],
+   "residency": "resident",
+   "start": "2026-09-17",
+   "end": "2026-09-26",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 115 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - muzzleloader (hunt 4176)",
+   "method": "muzzleloader",
+   "units": [
+    "076, 077, 079, 081"
+   ],
+   "huntCodes": [
+    "4176"
+   ],
+   "residency": "resident",
+   "start": "2026-09-17",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - muzzleloader (hunt 4176)",
+   "method": "muzzleloader",
+   "units": [
+    "078, 105 - 107, 109"
+   ],
+   "huntCodes": [
+    "4176"
+   ],
+   "residency": "resident",
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 4 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - muzzleloader (hunt 4176)",
+   "method": "muzzleloader",
+   "units": [
+    "161 - 164",
+    "241, 242"
+   ],
+   "huntCodes": [
+    "4176"
+   ],
+   "residency": "resident",
+   "start": "2026-08-16",
+   "end": "2026-08-24",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 25 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - muzzleloader (hunt 4276)",
+   "method": "muzzleloader",
+   "units": [
+    "072, 073, 074",
+    "104, 108, 121",
+    "108, 131, 132",
+    "111, 112",
+    "113",
+    "114, 115",
+    "221 - 223",
+    "231"
+   ],
+   "huntCodes": [
+    "4276"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-17",
+   "end": "2026-09-26",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 14 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - muzzleloader (hunt 4276)",
+   "method": "muzzleloader",
+   "units": [
+    "076, 077, 079, 081"
+   ],
+   "huntCodes": [
+    "4276"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-17",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - muzzleloader (hunt 4276)",
+   "method": "muzzleloader",
+   "units": [
+    "078, 105 - 107, 109"
+   ],
+   "huntCodes": [
+    "4276"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - muzzleloader (hunt 4276)",
+   "method": "muzzleloader",
+   "units": [
+    "161 - 164"
+   ],
+   "huntCodes": [
+    "4276"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-16",
+   "end": "2026-08-24",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - archery (hunt 4111)",
+   "method": "archery",
+   "units": [
+    "061, 071",
+    "062",
+    "078, 105 - 107, 109",
+    "161 - 164",
+    "241, 242"
+   ],
+   "huntCodes": [
+    "4111"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-08-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 236 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - archery (hunt 4111)",
+   "method": "archery",
+   "units": [
+    "072, 073, 074",
+    "075",
+    "076, 077, 079, 081",
+    "104, 108, 121",
+    "108, 131, 132",
+    "111, 112",
+    "113",
+    "114",
+    "221 - 223",
+    "231"
+   ],
+   "huntCodes": [
+    "4111"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-08-24",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 112 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - archery (hunt 4211)",
+   "method": "archery",
+   "units": [
+    "061, 071",
+    "062",
+    "078, 105 - 107, 109",
+    "161 - 164"
+   ],
+   "huntCodes": [
+    "4211"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-01",
+   "end": "2026-08-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 31 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Nonresident elk antlerless - archery (hunt 4211)",
+   "method": "archery",
+   "units": [
+    "072, 073, 074",
+    "076, 077, 079, 081",
+    "104, 108, 121",
+    "108, 131, 132",
+    "111, 112",
+    "113",
+    "114",
+    "221 - 223",
+    "231"
+   ],
+   "huntCodes": [
+    "4211"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-01",
+   "end": "2026-08-24",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 15 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "081 1st"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-08-24",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 30 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "081 2nd"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-09-17",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 30 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "081 3rd"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-10-01",
+   "end": "2026-10-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 30 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "081 4th"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-12-05",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 30 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "101 - 103"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 150 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "114, 115 - Ag Lands - 1st"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-08-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "114, 115 - Ag Lands - 2nd"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-08-16",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "114, 115 - Ag Lands - 3rd",
+    "121 2nd"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 25 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "114, 115 - Ag Lands - 4th"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "114, 115 - Ag Lands - 5th"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-11-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "114, 115 - Ag Lands - 6th"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-12-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "114, 115 - Ag Lands - 7th"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2027-01-01",
+   "end": "2027-01-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "121 1st"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-08-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 20 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "121 3rd",
+    "144, 145 Late"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-10-01",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 15 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "elk",
+   "label": "Resident elk antlerless - any legal weapon depredation hunt (hunt 4107)",
+   "units": [
+    "144, 145 Early"
+   ],
+   "huntCodes": [
+    "4107"
+   ],
+   "residency": "resident",
+   "start": "2026-08-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 5 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
   },
   {
    "species": "moose",
-   "label": "Resident antlered moose, hunt 10151 (units 061, 062, 064, 066-068, 071-077, 081, 101-103)",
+   "label": "Resident moose antlered - any legal weapon (hunt 10151)",
+   "units": [
+    "061, 062, 064, 066 - 068, 071 - 077, 081, 101 - 103"
+   ],
+   "huntCodes": [
+    "10151"
+   ],
+   "residency": "resident",
    "start": "2026-09-01",
    "end": "2026-11-30",
    "year": 2026,
-   "note": "2026 approved quota 3.",
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3151)",
+   "units": [
+    "045"
+   ],
+   "huntCodes": [
+    "3151"
+   ],
+   "residency": "resident",
+   "start": "2026-09-15",
+   "end": "2026-10-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 4 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3151)",
+   "units": [
+    "131, 132",
+    "161",
+    "207"
+   ],
+   "huntCodes": [
+    "3151"
+   ],
+   "residency": "resident",
+   "start": "2026-09-15",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 6 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3151)",
+   "units": [
+    "134, 251",
+    "163, 162",
+    "181 East",
+    "181 West",
+    "182, 044",
+    "183, 153",
+    "205",
+    "206, 208",
+    "211",
+    "212",
+    "213",
+    "223, 221",
+    "241",
+    "243",
+    "244",
+    "245, 133",
+    "253",
+    "261",
+    "262",
+    "263",
+    "264, 265, 266",
+    "267",
+    "271, 242",
+    "272",
+    "283, 284",
+    "286"
+   ],
+   "huntCodes": [
+    "3151"
+   ],
+   "residency": "resident",
+   "start": "2026-11-20",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 93 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3151)",
+   "units": [
+    "173"
+   ],
+   "huntCodes": [
+    "3151"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3151)",
+   "units": [
+    "184",
+    "202"
+   ],
+   "huntCodes": [
+    "3151"
+   ],
+   "residency": "resident",
+   "start": "2026-10-15",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 11 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3151)",
+   "units": [
+    "204"
+   ],
+   "huntCodes": [
+    "3151"
+   ],
+   "residency": "resident",
+   "start": "2026-09-15",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3151)",
+   "units": [
+    "254"
+   ],
+   "huntCodes": [
+    "3151"
+   ],
+   "residency": "resident",
+   "start": "2026-11-01",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 4 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3151)",
+   "units": [
+    "268 Early"
+   ],
+   "huntCodes": [
+    "3151"
+   ],
+   "residency": "resident",
+   "start": "2026-11-16",
+   "end": "2026-12-08",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 18 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3151)",
+   "units": [
+    "268 Late"
+   ],
+   "huntCodes": [
+    "3151"
+   ],
+   "residency": "resident",
+   "start": "2026-12-10",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 18 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3151)",
+   "units": [
+    "280",
+    "281",
+    "282"
+   ],
+   "huntCodes": [
+    "3151"
+   ],
+   "residency": "resident",
+   "start": "2026-12-19",
+   "end": "2027-01-03",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Nonresident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3251)",
+   "units": [
+    "181 West",
+    "182, 044",
+    "183, 153",
+    "205",
+    "243",
+    "253",
+    "263",
+    "267",
+    "283, 284"
+   ],
+   "huntCodes": [
+    "3251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-11-20",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 9 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Nonresident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3251)",
+   "units": [
+    "184"
+   ],
+   "huntCodes": [
+    "3251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-15",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Nonresident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3251)",
+   "units": [
+    "268 Early"
+   ],
+   "huntCodes": [
+    "3251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-11-16",
+   "end": "2026-12-08",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Nonresident Nelson (desert) bighorn sheep any ram - any legal weapon (hunt 3251)",
+   "units": [
+    "268 Late"
+   ],
+   "huntCodes": [
+    "3251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-10",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - archery (hunt 3161)",
+   "method": "archery",
+   "units": [
+    "182, 044"
+   ],
+   "huntCodes": [
+    "3161"
+   ],
+   "residency": "resident",
+   "start": "2026-08-15",
+   "end": "2026-10-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - archery (hunt 3161)",
+   "method": "archery",
+   "units": [
+    "184"
+   ],
+   "huntCodes": [
+    "3161"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2026-10-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - archery (hunt 3161)",
+   "method": "archery",
+   "units": [
+    "202"
+   ],
+   "huntCodes": [
+    "3161"
+   ],
+   "residency": "resident",
+   "start": "2026-09-15",
+   "end": "2026-10-14",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - archery (hunt 3161)",
+   "method": "archery",
+   "units": [
+    "267"
+   ],
+   "huntCodes": [
+    "3161"
+   ],
+   "residency": "resident",
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ram - archery (hunt 3161)",
+   "method": "archery",
+   "units": [
+    "268"
+   ],
+   "huntCodes": [
+    "3161"
+   ],
+   "residency": "resident",
+   "start": "2027-01-05",
+   "end": "2027-02-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep management ram, one horn - any legal weapon (hunt 3171)",
+   "units": [
+    "262, 263, 264, 265, 266",
+    "267, 268"
+   ],
+   "huntCodes": [
+    "3171"
+   ],
+   "residency": "resident",
+   "start": "2027-01-05",
+   "end": "2027-02-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 4 tags. CR 26-11 prints this table's season column heading as '2024 Season' under the 2026 quota; dates as printed. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep management ram - any legal weapon (hunt 3172)",
+   "units": [
+    "164 Early"
+   ],
+   "huntCodes": [
+    "3172"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep management ram - any legal weapon (hunt 3172)",
+   "units": [
+    "164 Late"
+   ],
+   "huntCodes": [
+    "3172"
+   ],
+   "residency": "resident",
+   "start": "2026-11-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Nelson (desert) bighorn sheep any ewe - any legal weapon (hunt 3181)",
+   "units": [
+    "268"
+   ],
+   "huntCodes": [
+    "3181"
+   ],
+   "residency": "resident",
+   "start": "2026-10-20",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 50 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Nonresident Nelson (desert) bighorn sheep any ewe - any legal weapon (hunt 3281)",
+   "units": [
+    "268"
+   ],
+   "huntCodes": [
+    "3281"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-20",
+   "end": "2026-11-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 5 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident California bighorn sheep any ram - any legal weapon (hunt 8151)",
+   "units": [
+    "011, 013",
+    "022"
+   ],
+   "huntCodes": [
+    "8151"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2026-11-10",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident California bighorn sheep any ram - any legal weapon (hunt 8151)",
+   "units": [
+    "012",
+    "014",
+    "031 Double Hs",
+    "032 Pine Forest, Pueblos",
+    "033, 032 SNWR, McGee Mtn",
+    "034",
+    "035 Jacksons",
+    "035 Bloody Runs",
+    "051"
+   ],
+   "huntCodes": [
+    "8151"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 35 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident California bighorn sheep any ram - any legal weapon (hunt 8151)",
+   "units": [
+    "068 Early"
+   ],
+   "huntCodes": [
+    "8151"
+   ],
+   "residency": "resident",
+   "start": "2026-08-20",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident California bighorn sheep any ram - any legal weapon (hunt 8151)",
+   "units": [
+    "068 Late"
+   ],
+   "huntCodes": [
+    "8151"
+   ],
+   "residency": "resident",
+   "start": "2026-10-01",
+   "end": "2026-11-10",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 4 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Nonresident California bighorn sheep any ram - any legal weapon (hunt 8251)",
+   "units": [
+    "032 Pine Forest, Pueblos",
+    "034",
+    "035 Jacksons"
+   ],
+   "huntCodes": [
+    "8251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Nonresident California bighorn sheep any ram - any legal weapon (hunt 8251)",
+   "units": [
+    "068 Early"
+   ],
+   "huntCodes": [
+    "8251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-20",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident California bighorn sheep management ram - any legal weapon (hunt 8172)",
+   "units": [
+    "066 Early"
+   ],
+   "huntCodes": [
+    "8172"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 6 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident California bighorn sheep management ram - any legal weapon (hunt 8172)",
+   "units": [
+    "066 Mid"
+   ],
+   "huntCodes": [
+    "8172"
+   ],
+   "residency": "resident",
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 6 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident California bighorn sheep management ram - any legal weapon (hunt 8172)",
+   "units": [
+    "066 Late"
+   ],
+   "huntCodes": [
+    "8172"
+   ],
+   "residency": "resident",
+   "start": "2026-11-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 6 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Rocky Mountain bighorn sheep any ram - any legal weapon (hunt 9151)",
+   "units": [
+    "091"
+   ],
+   "huntCodes": [
+    "9151"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Rocky Mountain bighorn sheep any ram - any legal weapon (hunt 9151)",
+   "units": [
+    "102"
+   ],
+   "huntCodes": [
+    "9151"
+   ],
+   "residency": "resident",
+   "start": "2026-09-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "sheep",
+   "label": "Resident Rocky Mountain bighorn sheep any ram - any legal weapon (hunt 9151)",
+   "units": [
+    "115"
+   ],
+   "huntCodes": [
+    "9151"
+   ],
+   "residency": "resident",
+   "start": "2026-11-15",
+   "end": "2027-02-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
    "sourceId": "d-cr-26-11"
   },
   {
    "species": "goat",
-   "label": "Mountain goat, hunts 7151/7251 (units 101, 102, 103)",
+   "label": "Resident mountain goat, any goat - any legal weapon (hunt 7151)",
+   "units": [
+    "101",
+    "102",
+    "103"
+   ],
+   "huntCodes": [
+    "7151"
+   ],
+   "residency": "resident",
    "start": "2026-09-01",
    "end": "2026-10-31",
    "year": 2026,
+   "note": "2026 quota for these unit groups: 19 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
    "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "goat",
+   "label": "Nonresident mountain goat, any goat - any legal weapon (hunt 7251)",
+   "units": [
+    "102"
+   ],
+   "huntCodes": [
+    "7251"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, primitive antlered only - archery or muzzleloader (hunt 1105), archery segment",
+   "method": "archery",
+   "units": [
+    "014",
+    "051",
+    "061, 062, 064, 066-068",
+    "065",
+    "071 - 079, 091",
+    "101 - 109",
+    "114, 115",
+    "131 - 134",
+    "141 - 145",
+    "151 - 156",
+    "171 - 173",
+    "194, 196",
+    "221 - 223",
+    "241 - 245"
+   ],
+   "huntCodes": [
+    "1105"
+   ],
+   "residency": "resident",
+   "start": "2026-08-10",
+   "end": "2026-09-09",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 968 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, primitive antlered only - archery or muzzleloader (hunt 1105), muzzleloader segment",
+   "method": "muzzleloader",
+   "units": [
+    "014",
+    "051",
+    "061, 062, 064, 066-068",
+    "065",
+    "071 - 079, 091",
+    "114, 115",
+    "131 - 134",
+    "141 - 145",
+    "151 - 156",
+    "171 - 173",
+    "194, 196",
+    "221 - 223",
+    "241 - 245"
+   ],
+   "huntCodes": [
+    "1105"
+   ],
+   "residency": "resident",
+   "start": "2026-09-10",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 698 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, primitive antlered only - archery or muzzleloader (hunt 1105), archery segment",
+   "method": "archery",
+   "units": [
+    "081"
+   ],
+   "huntCodes": [
+    "1105"
+   ],
+   "residency": "resident",
+   "start": "2026-11-10",
+   "end": "2026-11-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 5 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, primitive antlered only - archery or muzzleloader (hunt 1105), muzzleloader segment",
+   "method": "muzzleloader",
+   "units": [
+    "081"
+   ],
+   "huntCodes": [
+    "1105"
+   ],
+   "residency": "resident",
+   "start": "2026-11-21",
+   "end": "2026-12-10",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 5 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, primitive antlered only - archery or muzzleloader (hunt 1105), muzzleloader segment",
+   "method": "muzzleloader",
+   "units": [
+    "101 - 109"
+   ],
+   "huntCodes": [
+    "1105"
+   ],
+   "residency": "resident",
+   "start": "2026-09-10",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 270 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - any legal weapon (hunt 1106), any legal weapon segment",
+   "units": [
+    "014",
+    "051",
+    "065"
+   ],
+   "huntCodes": [
+    "1106"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-11-05",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 55 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - any legal weapon (hunt 1106), any legal weapon segment",
+   "units": [
+    "061, 062, 064, 066-068",
+    "071 - 079, 091",
+    "114, 115",
+    "141 - 145",
+    "151 - 156",
+    "171 - 173"
+   ],
+   "huntCodes": [
+    "1106"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-11-02",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 785 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - any legal weapon (hunt 1106), any legal weapon segment",
+   "units": [
+    "081"
+   ],
+   "huntCodes": [
+    "1106"
+   ],
+   "residency": "resident",
+   "start": "2026-12-11",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 8 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - any legal weapon (hunt 1106), any legal weapon segment",
+   "units": [
+    "101 - 109"
+   ],
+   "huntCodes": [
+    "1106"
+   ],
+   "residency": "resident",
+   "start": "2026-10-01",
+   "end": "2026-11-02",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 330 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - any legal weapon (hunt 1106), any legal weapon segment",
+   "units": [
+    "131 - 134",
+    "221 - 223",
+    "241 - 245"
+   ],
+   "huntCodes": [
+    "1106"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 85 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - any legal weapon (hunt 1106), any legal weapon segment",
+   "units": [
+    "194, 196"
+   ],
+   "huntCodes": [
+    "1106"
+   ],
+   "residency": "resident",
+   "start": "2026-11-05",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 8 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), archery segment",
+   "method": "archery",
+   "units": [
+    "011 - 013",
+    "015",
+    "022",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "041, 042",
+    "043, 044, 046",
+    "045",
+    "111 - 113",
+    "121",
+    "161 - 164",
+    "181 - 184",
+    "192",
+    "195",
+    "203",
+    "211 - 213",
+    "231",
+    "251 - 254",
+    "261 - 268",
+    "271, 272",
+    "291"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-08-10",
+   "end": "2026-09-09",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 624 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), muzzleloader segment",
+   "method": "muzzleloader",
+   "units": [
+    "011 - 013",
+    "015",
+    "022",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "041, 042",
+    "043, 044, 046",
+    "045",
+    "111 - 113",
+    "121",
+    "161 - 164",
+    "181 - 184",
+    "192",
+    "195",
+    "231",
+    "251 - 254",
+    "261 - 268",
+    "271, 272",
+    "291"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-09-10",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 599 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), any legal weapon segment",
+   "units": [
+    "011 - 013",
+    "022",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "041, 042",
+    "043, 044, 046",
+    "045",
+    "181 - 184"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-11-05",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 265 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), any legal weapon segment",
+   "units": [
+    "015"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-12-11",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 8 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), archery segment",
+   "method": "archery",
+   "units": [
+    "021"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-12-01",
+   "end": "2026-12-10",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), muzzleloader segment",
+   "method": "muzzleloader",
+   "units": [
+    "021"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-12-11",
+   "end": "2026-12-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), any legal weapon segment",
+   "units": [
+    "021"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-12-21",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), any legal weapon segment",
+   "units": [
+    "111 - 113",
+    "121",
+    "161 - 164",
+    "195",
+    "251 - 254"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-11-02",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 205 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), any legal weapon segment",
+   "units": [
+    "192",
+    "201, 204",
+    "202, 205 - 208",
+    "203",
+    "211 - 213",
+    "261 - 268",
+    "271, 272",
+    "291"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-11-05",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 104 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), muzzleloader segment",
+   "method": "muzzleloader",
+   "units": [
+    "201, 204",
+    "202, 205 - 208"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-12-01",
+   "end": "2026-12-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 28 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), archery segment",
+   "method": "archery",
+   "units": [
+    "201, 204",
+    "202, 205 - 208"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-12-16",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 28 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), muzzleloader segment",
+   "method": "muzzleloader",
+   "units": [
+    "211 - 213"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-09-10",
+   "end": "2026-10-10",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 15 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident junior mule deer, antlered only - archery, muzzleloader or any legal weapon classic hunt (hunt 1107), any legal weapon segment",
+   "units": [
+    "231"
+   ],
+   "huntCodes": [
+    "1107"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 70 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "011 - 013",
+    "014",
+    "022",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "041, 042",
+    "043, 044, 046",
+    "045",
+    "051",
+    "065",
+    "181 - 184"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-11-05",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 718 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "015",
+    "081"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-12-11",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 38 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "021"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-12-21",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 29 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "061, 062, 064, 066-068 Early",
+    "071 - 079, 091 Early",
+    "111 - 113 Early",
+    "114, 115 Early",
+    "121 Early",
+    "131 - 134 Early",
+    "141 - 145 Early",
+    "151 - 156 Early",
+    "161 - 164 Early",
+    "221 - 223 Early"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-10-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2,772 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "061, 062, 064, 066-068 Late",
+    "071 - 079, 091 Late",
+    "111 - 113 Late",
+    "114, 115 Late",
+    "121 Late",
+    "131 - 134 Late",
+    "141 - 145 Late",
+    "151 - 156 Late",
+    "161 - 164 Late",
+    "221 - 223 Late"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-10-21",
+   "end": "2026-11-05",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 294 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "101 - 109 Early"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-10-01",
+   "end": "2026-10-16",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 755 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "101 - 109 Mid",
+    "171 - 173 Mid"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-10-17",
+   "end": "2026-10-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1,029 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "101 - 109 Late",
+    "171 - 173 Late"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-10-31",
+   "end": "2026-11-08",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 224 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "115"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-12-01",
+   "end": "2026-12-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 5 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "171 - 173 Early"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-10-16",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 383 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "192",
+    "194, 196",
+    "201, 204",
+    "202, 205 - 208",
+    "203",
+    "211 - 213",
+    "261 - 268",
+    "271, 272",
+    "291"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-11-05",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 254 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "195",
+    "251 - 254"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-11-02",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 14 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - any legal weapon (hunt 1331)",
+   "units": [
+    "231",
+    "241 - 245"
+   ],
+   "huntCodes": [
+    "1331"
+   ],
+   "residency": "resident",
+   "start": "2026-10-05",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 162 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "011 - 013",
+    "014",
+    "022",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "041, 042",
+    "043, 044, 046",
+    "045",
+    "051",
+    "065",
+    "181 - 184"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-11-05",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 52 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "015",
+    "081"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-11",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "021"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-21",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "061, 062, 064, 066-068 Early",
+    "071 - 079, 091 Early",
+    "111 - 113 Early",
+    "114, 115 Early",
+    "121 Early",
+    "131 - 134 Early",
+    "141 - 145 Early",
+    "151 - 156 Early",
+    "161 - 164 Early",
+    "221 - 223 Early"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-10-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 200 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "061, 062, 064, 066-068 Late",
+    "071 - 079, 091 Late",
+    "111 - 113 Late",
+    "114, 115 Late",
+    "121 Late",
+    "131 - 134 Late",
+    "141 - 145 Late",
+    "151 - 156 Late",
+    "161 - 164 Late",
+    "221 - 223 Late"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-21",
+   "end": "2026-11-05",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 24 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "101 - 109 Early"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-01",
+   "end": "2026-10-16",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 72 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "101 - 109 Mid",
+    "171 - 173 Mid"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-17",
+   "end": "2026-10-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 89 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "101 - 109 Late",
+    "171 - 173 Late"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-31",
+   "end": "2026-11-08",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 18 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "115"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-01",
+   "end": "2026-12-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "171 - 173 Early"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-10-16",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 33 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "192",
+    "194, 196",
+    "201, 204",
+    "202, 205 - 208",
+    "203",
+    "211 - 213",
+    "261 - 268",
+    "271, 272",
+    "291"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-11-05",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 19 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "195",
+    "251 - 254"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-11-02",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - any legal weapon (hunt 1332)",
+   "units": [
+    "231",
+    "241 - 245"
+   ],
+   "huntCodes": [
+    "1332"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 13 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - muzzleloader (hunt 1371)",
+   "method": "muzzleloader",
+   "units": [
+    "011 - 013",
+    "014",
+    "015",
+    "022",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "041, 042",
+    "043, 044, 046",
+    "045",
+    "051",
+    "061, 062, 064, 066 - 068",
+    "065",
+    "071 - 079, 091",
+    "111 - 113",
+    "121",
+    "131 - 134",
+    "141 - 145",
+    "151 - 156",
+    "161 - 164",
+    "171 - 173",
+    "192",
+    "194, 196",
+    "195",
+    "221 - 223",
+    "231",
+    "241 - 245",
+    "251 - 254",
+    "261 - 268",
+    "271, 272",
+    "291"
+   ],
+   "huntCodes": [
+    "1371"
+   ],
+   "residency": "resident",
+   "start": "2026-09-10",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 818 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - muzzleloader (hunt 1371)",
+   "method": "muzzleloader",
+   "units": [
+    "021"
+   ],
+   "huntCodes": [
+    "1371"
+   ],
+   "residency": "resident",
+   "start": "2026-12-11",
+   "end": "2026-12-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 6 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - muzzleloader (hunt 1371)",
+   "method": "muzzleloader",
+   "units": [
+    "081"
+   ],
+   "huntCodes": [
+    "1371"
+   ],
+   "residency": "resident",
+   "start": "2026-11-21",
+   "end": "2026-12-10",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 5 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - muzzleloader (hunt 1371)",
+   "method": "muzzleloader",
+   "units": [
+    "101 - 109"
+   ],
+   "huntCodes": [
+    "1371"
+   ],
+   "residency": "resident",
+   "start": "2026-09-10",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 329 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - muzzleloader (hunt 1371)",
+   "method": "muzzleloader",
+   "units": [
+    "114, 115",
+    "181 - 184"
+   ],
+   "huntCodes": [
+    "1371"
+   ],
+   "residency": "resident",
+   "start": "2026-11-10",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 38 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - muzzleloader (hunt 1371)",
+   "method": "muzzleloader",
+   "units": [
+    "201, 204",
+    "202, 205 - 208"
+   ],
+   "huntCodes": [
+    "1371"
+   ],
+   "residency": "resident",
+   "start": "2026-12-01",
+   "end": "2026-12-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 15 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - muzzleloader (hunt 1371)",
+   "method": "muzzleloader",
+   "units": [
+    "211 - 213"
+   ],
+   "huntCodes": [
+    "1371"
+   ],
+   "residency": "resident",
+   "start": "2026-09-10",
+   "end": "2026-10-10",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 7 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - muzzleloader (hunt 1372)",
+   "method": "muzzleloader",
+   "units": [
+    "011 - 013",
+    "014",
+    "015",
+    "022",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "041, 042",
+    "043, 044, 046",
+    "045",
+    "051",
+    "061, 062, 064, 066 - 068",
+    "065",
+    "071 - 079, 091",
+    "111 - 113",
+    "121",
+    "131 - 134",
+    "141 - 145",
+    "151 - 156",
+    "161 - 164",
+    "171 - 173",
+    "192",
+    "194, 196",
+    "195",
+    "221 - 223",
+    "231",
+    "241 - 245",
+    "251 - 254",
+    "261 - 268",
+    "271, 272",
+    "291"
+   ],
+   "huntCodes": [
+    "1372"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-10",
+   "end": "2026-10-04",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 100 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - muzzleloader (hunt 1372)",
+   "method": "muzzleloader",
+   "units": [
+    "021"
+   ],
+   "huntCodes": [
+    "1372"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-11",
+   "end": "2026-12-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - muzzleloader (hunt 1372)",
+   "method": "muzzleloader",
+   "units": [
+    "081"
+   ],
+   "huntCodes": [
+    "1372"
+   ],
+   "residency": "nonresident",
+   "start": "2026-11-21",
+   "end": "2026-12-10",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - muzzleloader (hunt 1372)",
+   "method": "muzzleloader",
+   "units": [
+    "101 - 109"
+   ],
+   "huntCodes": [
+    "1372"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-10",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 37 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - muzzleloader (hunt 1372)",
+   "method": "muzzleloader",
+   "units": [
+    "114, 115",
+    "181 - 184"
+   ],
+   "huntCodes": [
+    "1372"
+   ],
+   "residency": "nonresident",
+   "start": "2026-11-10",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - muzzleloader (hunt 1372)",
+   "method": "muzzleloader",
+   "units": [
+    "201, 204",
+    "202, 205 - 208"
+   ],
+   "huntCodes": [
+    "1372"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-01",
+   "end": "2026-12-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - muzzleloader (hunt 1372)",
+   "method": "muzzleloader",
+   "units": [
+    "211 - 213"
+   ],
+   "huntCodes": [
+    "1372"
+   ],
+   "residency": "nonresident",
+   "start": "2026-09-10",
+   "end": "2026-10-10",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - archery (hunt 1341)",
+   "method": "archery",
+   "units": [
+    "011 - 013",
+    "014",
+    "015",
+    "022",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "041, 042",
+    "043, 044, 046",
+    "045",
+    "051",
+    "061, 062, 064, 066 - 068",
+    "065",
+    "071 - 079, 091 Early",
+    "081 Early",
+    "101 - 109 Early",
+    "111 - 113",
+    "114, 115",
+    "121 Early",
+    "131 - 134",
+    "141 - 145",
+    "151 - 156",
+    "161 - 164",
+    "171 - 173",
+    "181 - 184",
+    "192 Early",
+    "194, 196 Early",
+    "195",
+    "201, 202, 204 - 208 Early",
+    "203 Early",
+    "211 - 213",
+    "221 - 223",
+    "231",
+    "241 - 245",
+    "251 - 254",
+    "261 - 268",
+    "271, 272",
+    "291"
+   ],
+   "huntCodes": [
+    "1341"
+   ],
+   "residency": "resident",
+   "start": "2026-08-10",
+   "end": "2026-09-09",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2,720 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - archery (hunt 1341)",
+   "method": "archery",
+   "units": [
+    "021"
+   ],
+   "huntCodes": [
+    "1341"
+   ],
+   "residency": "resident",
+   "start": "2026-12-01",
+   "end": "2026-12-10",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 19 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - archery (hunt 1341)",
+   "method": "archery",
+   "units": [
+    "071 - 079, 091 Late",
+    "081 Late",
+    "101 - 109 Late",
+    "121 Late"
+   ],
+   "huntCodes": [
+    "1341"
+   ],
+   "residency": "resident",
+   "start": "2026-11-10",
+   "end": "2026-11-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 55 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - archery (hunt 1341)",
+   "method": "archery",
+   "units": [
+    "192 Late",
+    "194, 196 Late"
+   ],
+   "huntCodes": [
+    "1341"
+   ],
+   "residency": "resident",
+   "start": "2026-12-01",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 11 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Resident mule deer antlered - archery (hunt 1341)",
+   "method": "archery",
+   "units": [
+    "201, 204 Late",
+    "202, 205 - 208 Late",
+    "203 Late"
+   ],
+   "huntCodes": [
+    "1341"
+   ],
+   "residency": "resident",
+   "start": "2026-12-16",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 26 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - archery (hunt 1342)",
+   "method": "archery",
+   "units": [
+    "011 - 013",
+    "014",
+    "015",
+    "022",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "041, 042",
+    "043, 044, 046",
+    "045",
+    "051",
+    "061, 062, 064, 066 - 068",
+    "065",
+    "071 - 079, 091 Early",
+    "081 Early",
+    "101 - 109 Early",
+    "111 - 113",
+    "114, 115",
+    "121 Early",
+    "131 - 134",
+    "141 - 145",
+    "151 - 156",
+    "161 - 164",
+    "171 - 173",
+    "181 - 184",
+    "192 Early",
+    "194, 196 Early",
+    "195",
+    "201, 202, 204 - 208 Early",
+    "203 Early",
+    "211 - 213",
+    "221 - 223",
+    "231",
+    "241 - 245",
+    "251 - 254",
+    "261 - 268",
+    "271, 272",
+    "291"
+   ],
+   "huntCodes": [
+    "1342"
+   ],
+   "residency": "nonresident",
+   "start": "2026-08-10",
+   "end": "2026-09-09",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 307 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - archery (hunt 1342)",
+   "method": "archery",
+   "units": [
+    "021"
+   ],
+   "huntCodes": [
+    "1342"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-01",
+   "end": "2026-12-10",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - archery (hunt 1342)",
+   "method": "archery",
+   "units": [
+    "071 - 079, 091 Late",
+    "081 Late",
+    "101 - 109 Late",
+    "121 Late"
+   ],
+   "huntCodes": [
+    "1342"
+   ],
+   "residency": "nonresident",
+   "start": "2026-11-10",
+   "end": "2026-11-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 7 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - archery (hunt 1342)",
+   "method": "archery",
+   "units": [
+    "192 Late",
+    "194, 196 Late"
+   ],
+   "huntCodes": [
+    "1342"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-01",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Nonresident mule deer antlered - archery (hunt 1342)",
+   "method": "archery",
+   "units": [
+    "201, 204 Late",
+    "202, 205 - 208 Late",
+    "203 Late"
+   ],
+   "huntCodes": [
+    "1342"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-16",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 3 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-11.",
+   "sourceId": "d-cr-26-11"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "011 - 013",
+    "014",
+    "022",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "041, 042",
+    "043, 044, 046",
+    "045",
+    "051",
+    "065",
+    "181 - 184"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-11-05",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 31 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "015",
+    "081"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-11",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "021"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-21",
+   "end": "2027-01-01",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "061, 062, 064, 066-068 Early",
+    "071 - 079, 091 Early",
+    "111 - 113 Early",
+    "114, 115 Early",
+    "121 Early",
+    "131 - 134 Early",
+    "141 - 145 Early",
+    "151 - 156 Early",
+    "161 - 164 Early",
+    "221 - 223 Early"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-10-20",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 112 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "061, 062, 064, 066-068 Late",
+    "071 - 079, 091 Late",
+    "111 - 113 Late",
+    "114, 115 Late",
+    "121 Late",
+    "131 - 134 Late",
+    "141 - 145 Late",
+    "151 - 156 Late",
+    "161 - 164 Late",
+    "221 - 223 Late"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-21",
+   "end": "2026-11-05",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 16 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "101 - 109 Early"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-01",
+   "end": "2026-10-16",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 22 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "101 - 109 Mid",
+    "171 - 173 Mid"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-17",
+   "end": "2026-10-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 30 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "101 - 109 Late",
+    "171 - 173 Late"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-31",
+   "end": "2026-11-08",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 7 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "115"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-12-01",
+   "end": "2026-12-15",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 1 tag. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "171 - 173 Early"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-10-16",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 10 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "192",
+    "194, 196",
+    "201, 204",
+    "202, 205 - 208",
+    "203",
+    "211 - 213",
+    "261 - 268",
+    "271, 272",
+    "291"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-11-05",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 15 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "195",
+    "251 - 254"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-11-02",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 2 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Restricted nonresident guided mule deer antlered - any legal weapon (must hunt with a licensed guide) (hunt 1235)",
+   "units": [
+    "231",
+    "241 - 245"
+   ],
+   "huntCodes": [
+    "1235"
+   ],
+   "residency": "nonresident",
+   "start": "2026-10-05",
+   "end": "2026-10-31",
+   "year": 2026,
+   "note": "2026 quota for these unit groups: 5 tags. Some unit groups cover only part of a unit or carry extra restrictions; see the footnotes in CR 26-09.",
+   "sourceId": "d-cr-26-09"
+  },
+  {
+   "species": "bear",
+   "label": "Black bear, either sex - any legal weapon (hunts 6151 resident / 6251 nonresident), all open unit groups",
+   "units": [
+    "192, 194, 195, 196",
+    "201, 202, 204, 206",
+    "291, 203"
+   ],
+   "huntCodes": [
+    "6151",
+    "6251"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-12-01",
+   "year": 2026,
+   "note": "Or until harvest limits are met; call 1-800-800-1667 before hunting. Portions of 192 and 194 are excluded (CR 26-12 special regulations).",
+   "sourceId": "d-cr-26-12"
+  },
+  {
+   "species": "turkey",
+   "label": "Fall wild turkey, either sex - limited entry (hunt 0131 resident)",
+   "units": [
+    "Pershing County",
+    "Lincoln County"
+   ],
+   "huntCodes": [
+    "0131"
+   ],
+   "residency": "resident",
+   "start": "2026-11-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-cr-26-13"
+  },
+  {
+   "species": "turkey",
+   "label": "Fall wild turkey, either sex - limited entry (hunt 0132 nonresident)",
+   "units": [
+    "Pershing County",
+    "Lincoln County"
+   ],
+   "huntCodes": [
+    "0132"
+   ],
+   "residency": "nonresident",
+   "start": "2026-11-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "sourceId": "d-cr-26-13"
+  },
+  {
+   "species": "turkey",
+   "label": "Fall wild turkey, either sex - private lands of Paradise Valley (hunts 0135 resident / 0137 nonresident)",
+   "units": [
+    "051"
+   ],
+   "huntCodes": [
+    "0135",
+    "0137"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-11-30",
+   "year": 2026,
+   "note": "Landowner-signed Paradise Valley application form required; no internet applications.",
+   "sourceId": "d-cr-26-13"
+  },
+  {
+   "species": "turkey",
+   "label": "Junior spring wild turkey, bearded (hunt 0138)",
+   "units": [
+    "203 of Lyon County",
+    "102 & 065 within Elko County",
+    "103 & 108 within Elko & White Pine County",
+    "115 within White Pine County",
+    "Pershing County",
+    "151 and 152 of Lander County",
+    "154 of Lander County",
+    "Lincoln County"
+   ],
+   "huntCodes": [
+    "0138"
+   ],
+   "residency": "resident",
+   "start": "2027-03-20",
+   "end": "2027-05-02",
+   "year": 2027,
+   "note": "Closed to nonresidents. Moapa Valley of Clark County closed.",
+   "sourceId": "d-cr-26-13"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring wild turkey, bearded - limited entry (hunt 0131 resident)",
+   "units": [
+    "091 of Elko County",
+    "101 of Elko County",
+    "102 and 065 of Elko County",
+    "103 and 108 of Elko County and White Pine County",
+    "154 of Lander County and Eureka County",
+    "223 and 231 of Lincoln County",
+    "241 and 242 of Lincoln County",
+    "That portion of 202 in Lyon County and 204",
+    "Pershing County",
+    "115 of White Pine County"
+   ],
+   "huntCodes": [
+    "0131"
+   ],
+   "residency": "resident",
+   "start": "2027-03-27",
+   "end": "2027-05-02",
+   "year": 2027,
+   "note": "CR 26-13 prints 'Last Saturday in March - first Sunday in May'; for 2027 that is March 27 - May 2, 2027. Moapa Valley of Clark County closed.",
+   "sourceId": "d-cr-26-13"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring wild turkey, bearded - limited entry (hunt 0132 nonresident)",
+   "units": [
+    "102 and 065 of Elko County",
+    "241 and 242 of Lincoln County",
+    "Pershing County"
+   ],
+   "huntCodes": [
+    "0132"
+   ],
+   "residency": "nonresident",
+   "start": "2027-03-27",
+   "end": "2027-05-02",
+   "year": 2027,
+   "note": "CR 26-13 prints 'Last Saturday in March - first Sunday in May'; for 2027 that is March 27 - May 2, 2027. Nonresident tags only in the listed areas.",
+   "sourceId": "d-cr-26-13"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring wild turkey, bearded - limited entry, hunt period 1 (hunt 0131 resident)",
+   "units": [
+    "151 and 152 of Lander County",
+    "203 of Lyon County"
+   ],
+   "huntCodes": [
+    "0131"
+   ],
+   "residency": "resident",
+   "start": "2027-03-27",
+   "end": "2027-04-04",
+   "year": 2027,
+   "sourceId": "d-cr-26-13"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring wild turkey, bearded - limited entry, hunt period 2 (hunt 0131 resident)",
+   "units": [
+    "151 and 152 of Lander County",
+    "203 of Lyon County"
+   ],
+   "huntCodes": [
+    "0131"
+   ],
+   "residency": "resident",
+   "start": "2027-04-10",
+   "end": "2027-04-18",
+   "year": 2027,
+   "sourceId": "d-cr-26-13"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring wild turkey, bearded - limited entry, hunt period 2 (hunt 0132 nonresident)",
+   "units": [
+    "203 of Lyon County"
+   ],
+   "huntCodes": [
+    "0132"
+   ],
+   "residency": "nonresident",
+   "start": "2027-04-10",
+   "end": "2027-04-18",
+   "year": 2027,
+   "sourceId": "d-cr-26-13"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring wild turkey, bearded - limited entry, hunt period 3 (hunt 0131 resident)",
+   "units": [
+    "151 and 152 of Lander County",
+    "203 of Lyon County"
+   ],
+   "huntCodes": [
+    "0131"
+   ],
+   "residency": "resident",
+   "start": "2027-04-24",
+   "end": "2027-05-02",
+   "year": 2027,
+   "sourceId": "d-cr-26-13"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring wild turkey, bearded - limited entry, hunt period 3 (hunt 0132 nonresident)",
+   "units": [
+    "203 of Lyon County"
+   ],
+   "huntCodes": [
+    "0132"
+   ],
+   "residency": "nonresident",
+   "start": "2027-04-24",
+   "end": "2027-05-02",
+   "year": 2027,
+   "sourceId": "d-cr-26-13"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring wild turkey, bearded - private lands of Paradise Valley (hunts 0135 resident / 0137 nonresident)",
+   "units": [
+    "051"
+   ],
+   "huntCodes": [
+    "0135",
+    "0137"
+   ],
+   "start": "2027-03-27",
+   "end": "2027-05-02",
+   "year": 2027,
+   "note": "CR 26-13 prints 'Last Saturday in March - first Sunday in May'; for 2027 that is March 27 - May 2, 2027. Landowner-signed Paradise Valley application form required; no internet applications.",
+   "sourceId": "d-cr-26-13"
   }
  ],
  "coverage": [
@@ -2084,6 +7085,14 @@
    "retrieved": "2026-10-31"
   },
   {
+   "id": "d-cr-25-01-a1",
+   "title": "CR 25-01 Amendment #1 2025 Application Deadlines & Draw Result Dates and 2026 Spring Turkey Application Deadline & Draw Result Dates (NBWC approved June 2025)",
+   "publisher": "Nevada Board of Wildlife Commissioners / Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2025/08/CR25-01-Amendment-1-2025-Application-Deadlines-Draw-Result-and-2026-Spring-Turkey-NBWC-Approved-JUNE-2025-FINAL.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
    "id": "d-nac-502",
    "title": "NAC Chapter 502 - Wildlife: Licenses, Tags and Permits (NAC 502.331 application fees; 502.4187-502.4189 bonus points)",
    "publisher": "Nevada Legislature (Legislative Counsel Bureau)",
@@ -2113,6 +7122,23 @@
    "url": "https://www.ndow.org/wp-content/uploads/2026/01/CR-26-08-2026-2027-Mountain-Lion-Seasons-2026-NBWC-Approved-January-2026.pdf",
    "dataYear": 2026,
    "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-cr-26-09",
+   "title": "CR 26-09 2026-2027 Restricted Nonresident Guided Antlered Mule Deer Seasons and Quota - hunt 1235 (NBWC approved January 2026)",
+   "publisher": "Nevada Board of Wildlife Commissioners / Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/01/CR-26-09-2026-2027-NR-Guided-Seasons-and-Quotas-NBWC-Approved-January-2026.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-cr-26-13",
+   "title": "CR 26-13 2026-2027 and 2027-2028 Upland Game, Rabbits, Wild Turkey and Furbearer Seasons and Limits (NBWC approved June 2026)",
+   "publisher": "Nevada Board of Wildlife Commissioners / Nevada Department of Wildlife",
+   "url": "https://www.ndow.org/wp-content/uploads/2026/07/CR26-13-Upland-Furbearer-Seasons.pdf",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Wild turkey seasons: fall 2026 and 2027, spring 2027 and 2028. Approved by the Commission on June 2026 (approved June 2026 minutes: https://www.ndow.org/wp-content/uploads/2026/08/June-2026-NBWC-Minutes-Approved.pdf)."
   },
   {
    "id": "d-cr-22-11",
