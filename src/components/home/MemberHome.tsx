@@ -212,7 +212,7 @@ function YourHuntsCard({ load }: { load: PrefsLoad }) {
           )}
           {prefs.units && (
             <SummaryRow label="Units">
-              <span className="break-words">{prefs.units}</span>
+              <span className="break-words" data-clarity-mask="true">{prefs.units}</span>
             </SummaryRow>
           )}
         </dl>
@@ -256,7 +256,7 @@ export function MemberHome({
             <span className="w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
             Pro member
           </span>
-          <h1 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+          <h1 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-foreground" data-clarity-mask="true">
             Welcome back{firstName ? `, ${firstName}` : ""}
           </h1>
           <p className="text-muted-foreground mt-2">

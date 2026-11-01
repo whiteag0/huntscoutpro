@@ -110,13 +110,12 @@ export function AnalyticsProvider() {
       {adsOn && META_PIXEL_ID && (
         <Script id="meta-pixel" src="https://connect.facebook.net/en_US/fbevents.js" strategy="afterInteractive" />
       )}
-      {known && region && choice === null && <ConsentBanner />}
+      {known && region && choice === null && <ConsentBanner withAds={adsConfigured() && !gpc} />}
     </>
   );
 }
 
-function ConsentBanner() {
-  const withAds = adsConfigured();
+function ConsentBanner({ withAds }: { withAds: boolean }) {
   return (
     <section
       aria-label="Cookie choices"

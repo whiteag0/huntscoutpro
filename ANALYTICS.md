@@ -53,4 +53,7 @@ No event carries a name, email, phone number or free text: `sanitizeProps` drops
 - **EEA, UK, Switzerland**: `/api/geo` returns only `{ country }` from Vercel's `x-vercel-ip-country` header (no cache). Those visitors see an Accept / Decline banner; until Accept, Clarity gets `consentv2` denied (no cookies), no ad tags load and no `identify` is sent. The choice is stored in `localStorage` (`hs_consent`).
 - Everyone else: no banner; anyone can opt out on /privacy#analytics.
 - Session recordings mask: account name/email/profile answers, the request-a-state form, /welcome free text, the admin sign-in form and the header account name (`data-clarity-mask="true"`). Keep Clarity's masking setting at **Balanced** (default) or **Strict** so all other form inputs stay masked too.
+- The member home greeting and its free-text "Units" answer are masked too.
+- After a visitor withdraws consent on /privacy, nothing more is sent to Google or Meta on that page, and the tags don't load on later visits.
+- Meta Pixel loads with `autoConfig` off (no automatic button/page scraping). In Meta Events Manager keep **Automatic advanced matching** off, and in Google Ads don't turn on **automatic enhanced conversions**: both would collect (hashed) emails typed into forms, which the privacy policy doesn't cover.
 - Pages stay static: the country lookup happens in the browser, never via `headers()` in the layout.

@@ -121,6 +121,14 @@ function makeQueue() {
 
 const clarityQueue = makeQueue();
 const adsQueue = makeQueue();
+// Set when the visitor withdraws consent after the ad tags loaded on this page:
+// from then on nothing more is sent to Google or Meta.
+let adsWithdrawn = false;
+
+function ads(fn: () => void) {
+  if (adsWithdrawn) return;
+  adsQueue.run(fn);
+}
 
 function clarity(...args: unknown[]) {
   if (!CLARITY_ID) return;
@@ -182,6 +190,8 @@ export function startAds() {
     n.queue = [];
     window.fbq = n;
     if (!window._fbq) window._fbq = n;
+    // No automatic button/page-content scraping ("automatic events"); we send our own events.
+    window.fbq("set", "autoConfig", false, META_PIXEL_ID);
     // Meta's pixel records later client-side route changes as PageViews on its own.
     window.fbq("init", META_PIXEL_ID);
     window.fbq("track", "PageView");
@@ -192,6 +202,7 @@ export function startAds() {
 /** Visitor withdrew (granted = false) or restored consent after the ad tags had loaded on this page. */
 export function updateAdsConsent(granted: boolean) {
   if (typeof window === "undefined") return;
+  adsWithdrawn = !granted;
   const v = granted ? "granted" : "denied";
   try {
     window.gtag?.("consent", "update", { ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v });
@@ -242,10 +253,10 @@ export function track(event: AnalyticsEvent, props?: EventProps) {
   const p = sanitizeProps(props);
   for (const [k, v] of Object.entries(p)) clarity("set", k, String(v));
   clarity("event", event);
-  if (GOOGLE_ADS_ID) adsQueue.run(() => window.gtag?.("event", event, p));
+  if (GOOGLE_ADS_ID) ads(() => window.gtag?.("event", event, p));
   if (META_PIXEL_ID) {
     const standard = META_STANDARD[event];
-    adsQueue.run(() => (standard ? window.fbq?.("track", standard, p) : window.fbq?.("trackCustom", event, p)));
+    ads(() => (standard ? window.fbq?.("track", standard, p) : window.fbq?.("trackCustom", event, p)));
   }
 }
 
@@ -267,12 +278,12 @@ export function trackPurchase(sessionId: string): boolean {
   clarity("event", "purchase");
   if (GOOGLE_ADS_ID && GOOGLE_ADS_PURCHASE_LABEL) {
     const sendTo = `${GOOGLE_ADS_ID}/${GOOGLE_ADS_PURCHASE_LABEL}`;
-    adsQueue.run(() =>
+    ads(() =>
       window.gtag?.("event", "conversion", { send_to: sendTo, value: PRO_PRICE_USD, currency: "USD", transaction_id: sessionId })
     );
   }
   if (META_PIXEL_ID) {
-    adsQueue.run(() => window.fbq?.("track", "Purchase", { value: PRO_PRICE_USD, currency: "USD" }, { eventID: sessionId }));
+    ads(() => window.fbq?.("track", "Purchase", { value: PRO_PRICE_USD, currency: "USD" }, { eventID: sessionId }));
   }
   return true;
 }
@@ -359,4 +370,5 @@ export function setStoredConsent(choice: ConsentChoice) {
 export function __resetForTests() {
   clarityQueue.reset();
   adsQueue.reset();
+  adsWithdrawn = false;
 }
