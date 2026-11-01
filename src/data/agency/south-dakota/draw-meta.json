@@ -24,6 +24,8 @@
    "keyDates": [
     {
      "label": "Elk first draw application period",
+     "kind": "application",
+     "residency": "resident",
      "start": "2026-04-15",
      "end": "2026-05-19",
      "cycle": 2026,
@@ -33,6 +35,8 @@
     },
     {
      "label": "Elk first draw results available",
+     "kind": "results",
+     "residency": "resident",
      "date": "2026-05-27",
      "cycle": 2026,
      "status": "confirmed",
@@ -41,6 +45,8 @@
     },
     {
      "label": "Elk second draw application period",
+     "kind": "leftover",
+     "residency": "resident",
      "start": "2026-05-28",
      "end": "2026-06-11",
      "cycle": 2026,
@@ -50,6 +56,8 @@
     },
     {
      "label": "Elk landowner preference application period",
+     "kind": "application",
+     "residency": "resident",
      "start": "2026-03-12",
      "end": "2026-04-02",
      "cycle": 2026,
@@ -59,6 +67,8 @@
     },
     {
      "label": "Elk license return deadline",
+     "kind": "surrender",
+     "residency": "resident",
      "date": "2026-08-01",
      "cycle": 2026,
      "status": "confirmed",
@@ -110,6 +120,7 @@
    "keyDates": [
     {
      "label": "West River, East River, Black Hills & CSP, Muzzleloader and Refuge deer - first draw application period",
+     "kind": "application",
      "start": "2026-05-27",
      "end": "2026-06-23",
      "cycle": 2026,
@@ -119,6 +130,7 @@
     },
     {
      "label": "Deer first draw results available",
+     "kind": "results",
      "date": "2026-07-02",
      "cycle": 2026,
      "status": "confirmed",
@@ -127,6 +139,7 @@
     },
     {
      "label": "Deer second draw application period",
+     "kind": "leftover",
      "start": "2026-07-08",
      "end": "2026-07-22",
      "cycle": 2026,
@@ -136,6 +149,7 @@
     },
     {
      "label": "Deer third draw application period",
+     "kind": "leftover",
      "start": "2026-07-29",
      "end": "2026-08-12",
      "cycle": 2026,
@@ -145,6 +159,7 @@
     },
     {
      "label": "Deer fourth draw application period",
+     "kind": "leftover",
      "start": "2026-08-18",
      "end": "2026-09-01",
      "cycle": 2026,
@@ -154,6 +169,7 @@
     },
     {
      "label": "West River deer leftover licenses (first-come, first-served)",
+     "kind": "leftover",
      "start": "2026-09-09",
      "end": "2026-11-29",
      "cycle": 2026,
@@ -163,6 +179,7 @@
     },
     {
      "label": "Special Buck first draw application period (East River ESD, West River WSD)",
+     "kind": "application",
      "start": "2026-03-11",
      "end": "2026-04-14",
      "cycle": 2026,
@@ -172,6 +189,8 @@
     },
     {
      "label": "Nonresident archery deer (public/private land, ADNP-ST1) application period",
+     "kind": "application",
+     "residency": "nonresident",
      "start": "2026-05-13",
      "end": "2026-06-09",
      "cycle": 2026,
@@ -181,6 +200,7 @@
     },
     {
      "label": "Archery deer access permit application period",
+     "kind": "application",
      "start": "2026-06-10",
      "end": "2026-07-01",
      "cycle": 2026,
@@ -190,6 +210,7 @@
     },
     {
      "label": "Preference point purchase period (in lieu of an application)",
+     "kind": "points",
      "start": "2026-09-15",
      "end": "2026-12-15",
      "cycle": 2026,
@@ -230,6 +251,7 @@
    "keyDates": [
     {
      "label": "West River, East River, Black Hills & CSP, Muzzleloader and Refuge deer - first draw application period",
+     "kind": "application",
      "start": "2026-05-27",
      "end": "2026-06-23",
      "cycle": 2026,
@@ -239,6 +261,7 @@
     },
     {
      "label": "Deer first draw results available",
+     "kind": "results",
      "date": "2026-07-02",
      "cycle": 2026,
      "status": "confirmed",
@@ -247,6 +270,7 @@
     },
     {
      "label": "Deer second draw application period",
+     "kind": "leftover",
      "start": "2026-07-08",
      "end": "2026-07-22",
      "cycle": 2026,
@@ -256,6 +280,7 @@
     },
     {
      "label": "Deer third draw application period",
+     "kind": "leftover",
      "start": "2026-07-29",
      "end": "2026-08-12",
      "cycle": 2026,
@@ -265,6 +290,7 @@
     },
     {
      "label": "Deer fourth draw application period",
+     "kind": "leftover",
      "start": "2026-08-18",
      "end": "2026-09-01",
      "cycle": 2026,
@@ -274,6 +300,7 @@
     },
     {
      "label": "West River deer leftover licenses (first-come, first-served)",
+     "kind": "leftover",
      "start": "2026-09-09",
      "end": "2026-11-29",
      "cycle": 2026,
@@ -283,6 +310,7 @@
     },
     {
      "label": "Special Buck first draw application period (East River ESD, West River WSD)",
+     "kind": "application",
      "start": "2026-03-11",
      "end": "2026-04-14",
      "cycle": 2026,
@@ -292,6 +320,8 @@
     },
     {
      "label": "Nonresident archery deer (public/private land, ADNP-ST1) application period",
+     "kind": "application",
+     "residency": "nonresident",
      "start": "2026-05-13",
      "end": "2026-06-09",
      "cycle": 2026,
@@ -301,6 +331,7 @@
     },
     {
      "label": "Archery deer access permit application period",
+     "kind": "application",
      "start": "2026-06-10",
      "end": "2026-07-01",
      "cycle": 2026,
@@ -310,6 +341,7 @@
     },
     {
      "label": "Preference point purchase period (in lieu of an application)",
+     "kind": "points",
      "start": "2026-09-15",
      "end": "2026-12-15",
      "cycle": 2026,
@@ -332,6 +364,7 @@
    "keyDates": [
     {
      "label": "Firearms antelope first draw application period",
+     "kind": "application",
      "start": "2026-06-16",
      "end": "2026-07-07",
      "cycle": 2026,
@@ -341,6 +374,7 @@
     },
     {
      "label": "Firearms antelope second draw application period",
+     "kind": "leftover",
      "start": "2026-07-09",
      "end": "2026-07-23",
      "cycle": 2026,
@@ -350,6 +384,8 @@
     },
     {
      "label": "Nonresident archery antelope (public/private land) application period",
+     "kind": "application",
+     "residency": "nonresident",
      "start": "2026-06-23",
      "end": "2026-07-07",
      "cycle": 2026,
@@ -359,6 +395,7 @@
     },
     {
      "label": "Preference point purchase period (in lieu of an application)",
+     "kind": "points",
      "start": "2026-09-15",
      "end": "2026-12-15",
      "cycle": 2026,
@@ -393,6 +430,8 @@
    "keyDates": [
     {
      "label": "Bighorn sheep application period",
+     "kind": "application",
+     "residency": "resident",
      "start": "2026-04-15",
      "end": "2026-05-19",
      "cycle": 2026,
@@ -402,6 +441,8 @@
     },
     {
      "label": "Bighorn sheep draw results available",
+     "kind": "results",
+     "residency": "resident",
      "date": "2026-05-27",
      "cycle": 2026,
      "status": "confirmed",
@@ -447,6 +488,8 @@
    "keyDates": [
     {
      "label": "Mountain lion dog-hunting access permit application period (2026 season)",
+     "kind": "application",
+     "residency": "resident",
      "start": "2025-11-06",
      "end": "2025-12-03",
      "cycle": 2026,
@@ -477,6 +520,7 @@
    "keyDates": [
     {
      "label": "Prairie spring turkey first draw application period",
+     "kind": "application",
      "start": "2026-01-14",
      "end": "2026-02-11",
      "cycle": 2026,
@@ -486,6 +530,7 @@
     },
     {
      "label": "Prairie spring turkey second draw application period",
+     "kind": "leftover",
      "start": "2026-02-18",
      "end": "2026-03-04",
      "cycle": 2026,
@@ -495,6 +540,7 @@
     },
     {
      "label": "Prairie spring turkey third draw application period",
+     "kind": "leftover",
      "start": "2026-03-10",
      "end": "2026-03-24",
      "cycle": 2026,
@@ -504,6 +550,7 @@
     },
     {
      "label": "Nonresident Black Hills and Custer State Park spring turkey application period",
+     "kind": "application",
      "start": "2026-01-14",
      "end": "2026-02-11",
      "cycle": 2026,
@@ -513,6 +560,7 @@
     },
     {
      "label": "Fall turkey first draw application period",
+     "kind": "application",
      "start": "2026-08-11",
      "end": "2026-09-02",
      "cycle": 2026,
@@ -522,6 +570,7 @@
     },
     {
      "label": "Fall turkey second draw application period",
+     "kind": "leftover",
      "start": "2026-09-11",
      "end": "2026-09-22",
      "cycle": 2026,
@@ -531,6 +580,7 @@
     },
     {
      "label": "Fall turkey third draw application period",
+     "kind": "leftover",
      "start": "2026-09-29",
      "end": "2026-10-13",
      "cycle": 2026,
@@ -540,6 +590,7 @@
     },
     {
      "label": "Preference point purchase period (in lieu of an application)",
+     "kind": "points",
      "start": "2026-09-15",
      "end": "2026-12-15",
      "cycle": 2026,
@@ -1202,6 +1253,15 @@
   {
    "species": "elk",
    "label": "Black Hills Archery Elk (AEE)",
+   "method": "archery",
+   "units": [
+    "H1A",
+    "H2A",
+    "H3A",
+    "H4A",
+    "H5A",
+    "H7A"
+   ],
    "start": "2026-09-01",
    "end": "2026-09-30",
    "year": 2026,
@@ -1210,6 +1270,17 @@
   {
    "species": "elk",
    "label": "Prairie Firearms Elk (PRE)",
+   "units": [
+    "09A",
+    "11B",
+    "15A",
+    "27A",
+    "35A",
+    "35B",
+    "49A",
+    "ERA",
+    "WRA"
+   ],
    "start": "2026-09-01",
    "end": "2026-12-31",
    "year": 2026,
@@ -1218,6 +1289,15 @@
   {
    "species": "elk",
    "label": "Black Hills Firearms Elk - H1A, H2A, H3A, H4A, H5A, H7A, H9A",
+   "units": [
+    "H1A",
+    "H2A",
+    "H3A",
+    "H4A",
+    "H5A",
+    "H7A",
+    "H9A"
+   ],
    "start": "2026-10-01",
    "end": "2026-10-31",
    "year": 2026,
@@ -1225,16 +1305,21 @@
   },
   {
    "species": "elk",
-   "label": "Black Hills Firearms Elk - H4B (first interval)",
+   "label": "Black Hills Firearms Elk - H4B (interval 1)",
+   "units": [
+    "H4B"
+   ],
    "start": "2026-10-01",
    "end": "2026-10-31",
    "year": 2026,
-   "sourceId": "d-sd-elk-2026",
-   "note": "Also December 1-16, 2026."
+   "sourceId": "d-sd-elk-2026"
   },
   {
    "species": "elk",
-   "label": "Black Hills Firearms Elk - H4B (second interval)",
+   "label": "Black Hills Firearms Elk - H4B (interval 2)",
+   "units": [
+    "H4B"
+   ],
    "start": "2026-12-01",
    "end": "2026-12-16",
    "year": 2026,
@@ -1242,16 +1327,25 @@
   },
   {
    "species": "elk",
-   "label": "Black Hills Firearms Elk - H1B, H7B, H9B (first interval)",
+   "label": "Black Hills Firearms Elk - H1B, H7B, H9B (interval 1)",
+   "units": [
+    "H1B",
+    "H7B",
+    "H9B"
+   ],
    "start": "2026-10-15",
    "end": "2026-10-31",
    "year": 2026,
-   "sourceId": "d-sd-elk-2026",
-   "note": "Also December 1-16, 2026."
+   "sourceId": "d-sd-elk-2026"
   },
   {
    "species": "elk",
-   "label": "Black Hills Firearms Elk - H1B, H7B, H9B (second interval)",
+   "label": "Black Hills Firearms Elk - H1B, H7B, H9B (interval 2)",
+   "units": [
+    "H1B",
+    "H7B",
+    "H9B"
+   ],
    "start": "2026-12-01",
    "end": "2026-12-16",
    "year": 2026,
@@ -1260,6 +1354,13 @@
   {
    "species": "elk",
    "label": "Black Hills Firearms Elk - H2B, H2E, H2H, H3B, H3E",
+   "units": [
+    "H2B",
+    "H2E",
+    "H2H",
+    "H3B",
+    "H3E"
+   ],
    "start": "2026-10-15",
    "end": "2026-10-31",
    "year": 2026,
@@ -1268,6 +1369,13 @@
   {
    "species": "elk",
    "label": "Black Hills Firearms Elk - H2C, H2F, H2I, H3C, H3F",
+   "units": [
+    "H2C",
+    "H2F",
+    "H2I",
+    "H3C",
+    "H3F"
+   ],
    "start": "2026-12-01",
    "end": "2026-12-16",
    "year": 2026,
@@ -1276,6 +1384,12 @@
   {
    "species": "elk",
    "label": "Black Hills Firearms Elk - H2G, H2J, H3D, H3G",
+   "units": [
+    "H2G",
+    "H2J",
+    "H3D",
+    "H3G"
+   ],
    "start": "2026-12-17",
    "end": "2026-12-31",
    "year": 2026,
@@ -1284,6 +1398,10 @@
   {
    "species": "elk",
    "label": "Custer State Park Early Archery Elk (CEE)",
+   "method": "archery",
+   "units": [
+    "CU1"
+   ],
    "start": "2026-09-01",
    "end": "2026-09-30",
    "year": 2026,
@@ -1292,6 +1410,9 @@
   {
    "species": "elk",
    "label": "Custer State Park Firearms Elk (CUE)",
+   "units": [
+    "CU1"
+   ],
    "start": "2026-10-01",
    "end": "2026-10-31",
    "year": 2026,
@@ -1300,6 +1421,9 @@
   {
    "species": "elk",
    "label": "CSP Special Antlerless Elk - CU1",
+   "units": [
+    "CU1"
+   ],
    "start": "2026-10-15",
    "end": "2026-10-31",
    "year": 2026,
@@ -1308,6 +1432,9 @@
   {
    "species": "elk",
    "label": "CSP Special Antlerless Elk - CU2",
+   "units": [
+    "CU2"
+   ],
    "start": "2026-12-01",
    "end": "2026-12-16",
    "year": 2026,
@@ -1315,7 +1442,7 @@
   },
   {
    "species": "pronghorn",
-   "label": "Firearms antelope (prairie units, Special Antelope)",
+   "label": "Firearms antelope (prairie units, Special Antelope, Custer State Park)",
    "start": "2026-10-03",
    "end": "2026-10-18",
    "year": 2026,
@@ -1323,24 +1450,33 @@
   },
   {
    "species": "pronghorn",
-   "label": "Custer State Park antelope",
-   "start": "2026-10-03",
-   "end": "2026-10-18",
+   "label": "Archery antelope",
+   "method": "archery",
+   "start": "2026-08-15",
+   "end": "2026-10-31",
    "year": 2026,
+   "note": "Closed during the firearms antelope season (October 3-18, 2026).",
    "sourceId": "d-sd-keydates"
   },
   {
    "species": "pronghorn",
-   "label": "Archery antelope",
+   "label": "Nonresident archery antelope (public and private land)",
+   "method": "archery",
+   "residency": "nonresident",
    "start": "2026-08-15",
    "end": "2026-10-31",
    "year": 2026,
-   "sourceId": "d-sd-keydates",
-   "note": "Closed during the firearms season."
+   "note": "Closed during the firearms antelope season (October 3-18, 2026).",
+   "sourceId": "d-sd-keydates"
   },
   {
    "species": "sheep",
-   "label": "Bighorn sheep (Black Hills and Custer State Park)",
+   "label": "Bighorn sheep (Black Hills BH2, BH4 and Custer State Park CU1)",
+   "units": [
+    "BH2",
+    "BH4",
+    "CU1"
+   ],
    "start": "2026-09-01",
    "end": "2026-12-31",
    "year": 2026,
@@ -1352,8 +1488,8 @@
    "start": "2025-12-26",
    "end": "2026-04-30",
    "year": 2026,
-   "sourceId": "d-sd-lion-2026",
-   "note": "Closes early if 60 lions or 40 females are harvested."
+   "note": "Closes early if 60 lions or 40 females are harvested.",
+   "sourceId": "d-sd-lion-2026"
   },
   {
    "species": "lion",
@@ -1369,12 +1505,70 @@
    "start": "2026-04-11",
    "end": "2026-05-31",
    "year": 2026,
-   "sourceId": "d-sd-springturkey-prairie-2026",
-   "note": "Exceptions for units 08A, 08B, 44A, 44B and 58B; state parks and recreation areas close after April 30 unless specified."
+   "note": "Units 08A, 08B, 44A, 44B and 58B have their own dates; state parks and recreation areas close after April 30 unless specified otherwise in unit descriptions.",
+   "sourceId": "d-sd-springturkey-prairie-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Prairie spring turkey - unit 08A",
+   "units": [
+    "08A"
+   ],
+   "start": "2026-04-11",
+   "end": "2026-04-30",
+   "year": 2026,
+   "sourceId": "d-sd-springturkey-prairie-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Prairie spring turkey - unit 44A",
+   "units": [
+    "44A"
+   ],
+   "start": "2026-04-11",
+   "end": "2026-04-30",
+   "year": 2026,
+   "sourceId": "d-sd-springturkey-prairie-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Prairie spring turkey - unit 58B",
+   "units": [
+    "58B"
+   ],
+   "start": "2026-04-11",
+   "end": "2026-04-30",
+   "year": 2026,
+   "sourceId": "d-sd-springturkey-prairie-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Prairie spring turkey - unit 08B",
+   "units": [
+    "08B"
+   ],
+   "start": "2026-05-01",
+   "end": "2026-05-31",
+   "year": 2026,
+   "sourceId": "d-sd-springturkey-prairie-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Prairie spring turkey - unit 44B",
+   "units": [
+    "44B"
+   ],
+   "start": "2026-05-01",
+   "end": "2026-05-31",
+   "year": 2026,
+   "sourceId": "d-sd-springturkey-prairie-2026"
   },
   {
    "species": "turkey",
    "label": "Black Hills spring turkey (BH1)",
+   "units": [
+    "BH1"
+   ],
    "start": "2026-04-25",
    "end": "2026-05-31",
    "year": 2026,
@@ -1383,20 +1577,33 @@
   {
    "species": "turkey",
    "label": "Custer State Park spring turkey (CU1)",
+   "units": [
+    "CU1"
+   ],
    "start": "2026-04-25",
    "end": "2026-05-17",
    "year": 2026,
-   "sourceId": "d-sd-springturkey-bh-2026",
-   "note": "Dates from the 2026 application PDF; GFP's Key Dates page lists Apr 25 - May 23, 2026."
+   "note": "Dates from the 2026 application sheet; GFP's Key Dates page lists Apr 25 - May 23, 2026.",
+   "sourceId": "d-sd-springturkey-bh-2026"
   },
   {
    "species": "turkey",
    "label": "Spring archery turkey (ST1)",
+   "method": "archery",
    "start": "2026-04-11",
    "end": "2026-05-31",
    "year": 2026,
-   "sourceId": "d-sd-springturkey-bh-2026",
-   "note": "Archery hunters cannot hunt the Black Hills unit until April 25."
+   "note": "Archery and mentored hunters cannot hunt the Black Hills unit until April 25.",
+   "sourceId": "d-sd-springturkey-bh-2026"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring archery turkey access permits (Adams Homestead & Nature Preserve, Good Earth State Park)",
+   "method": "archery",
+   "start": "2026-04-11",
+   "end": "2026-04-30",
+   "year": 2026,
+   "sourceId": "d-sd-springturkey-bh-2026"
   },
   {
    "species": "turkey",
@@ -1412,8 +1619,41 @@
    "start": "2026-11-14",
    "end": "2026-11-29",
    "year": 2026,
-   "sourceId": "d-sd-wrdeer-2026",
-   "note": "Unit 30A: Nov 7-10 and Nov 23-29; 58D: Nov 21-22."
+   "note": "Except units 30A and 58D.",
+   "sourceId": "d-sd-wrdeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "West River deer - unit 30A (1st interval)",
+   "units": [
+    "30A"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-10",
+   "year": 2026,
+   "sourceId": "d-sd-wrdeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "West River deer - unit 30A (2nd interval)",
+   "units": [
+    "30A"
+   ],
+   "start": "2026-11-23",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-sd-wrdeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "West River deer - unit 58D (wheelchair for mobility users only)",
+   "units": [
+    "58D"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-sd-wrdeer-2026"
   },
   {
    "species": "mule-deer",
@@ -1429,12 +1669,15 @@
    "start": "2026-12-12",
    "end": "2026-12-20",
    "year": 2026,
-   "sourceId": "d-sd-wrdeer-2026",
-   "note": "Only tags designated antlerless; any deer/any buck/any whitetail tags are not valid."
+   "note": "Only tags designated antlerless; any deer, any buck and any whitetail tags do not convert. Special Buck licenses are not valid.",
+   "sourceId": "d-sd-wrdeer-2026"
   },
   {
    "species": "mule-deer",
-   "label": "Black Hills deer",
+   "label": "Black Hills deer (BH1)",
+   "units": [
+    "BH1"
+   ],
    "start": "2026-11-01",
    "end": "2026-11-30",
    "year": 2026,
@@ -1442,7 +1685,10 @@
   },
   {
    "species": "mule-deer",
-   "label": "Custer State Park deer",
+   "label": "Custer State Park deer (CU1)",
+   "units": [
+    "CU1"
+   ],
    "start": "2026-11-01",
    "end": "2026-11-30",
    "year": 2026,
@@ -1451,6 +1697,7 @@
   {
    "species": "mule-deer",
    "label": "Muzzleloader deer",
+   "method": "muzzleloader",
    "start": "2026-12-01",
    "end": "2027-01-01",
    "year": 2026,
@@ -1459,28 +1706,141 @@
   {
    "species": "mule-deer",
    "label": "Archery deer",
+   "method": "archery",
    "start": "2026-09-01",
    "end": "2027-01-01",
    "year": 2026,
-   "sourceId": "d-sd-resarchdeer-2026",
-   "note": "Nonresident archery on public land (ADNP licenses) opens October 1, 2026; private land opens September 1."
+   "note": "Some state parks, recreation areas, nature areas and lakeside use areas open October 1, 2026; nonresident archery on public land opens October 1, 2026.",
+   "sourceId": "d-sd-resarchdeer-2026"
   },
   {
    "species": "mule-deer",
-   "label": "West River Special Buck",
+   "label": "West River Special Buck (WSD)",
    "start": "2026-11-14",
    "end": "2026-11-29",
    "year": 2026,
-   "sourceId": "d-sd-specialbuck-2026",
-   "note": "Gregory County: Nov 7-10 and 14-29."
+   "note": "Private land only.",
+   "sourceId": "d-sd-specialbuck-2026"
   },
   {
    "species": "mule-deer",
-   "label": "East River Special Buck",
+   "label": "West River Special Buck - Gregory County only (opening segment)",
+   "start": "2026-11-07",
+   "end": "2026-11-10",
+   "year": 2026,
+   "note": "Gregory County only: November 7-10, 14-29, 2026.",
+   "sourceId": "d-sd-specialbuck-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "East River Special Buck (ESD)",
    "start": "2026-11-21",
    "end": "2026-12-06",
    "year": 2026,
+   "note": "Private land only.",
    "sourceId": "d-sd-specialbuck-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "East River nonresident landowner-own-land deer",
+   "start": "2026-11-21",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-sd-keydates"
+  },
+  {
+   "species": "mule-deer",
+   "label": "National Wildlife Refuge deer - LC1 LaCreek NWR - muzzleloader only",
+   "method": "muzzleloader",
+   "units": [
+    "LC1"
+   ],
+   "start": "2026-10-21",
+   "end": "2026-10-27",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "National Wildlife Refuge deer - LC2 LaCreek NWR - muzzleloader only",
+   "method": "muzzleloader",
+   "units": [
+    "LC2"
+   ],
+   "start": "2026-11-25",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "National Wildlife Refuge deer - SL1 Sand Lake NWR - muzzeloader only",
+   "method": "muzzleloader",
+   "units": [
+    "SL1"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "National Wildlife Refuge deer - SL2 Sand Lake NWR",
+   "units": [
+    "SL2"
+   ],
+   "start": "2026-11-19",
+   "end": "2026-11-23",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "National Wildlife Refuge deer - SL4 Sand Lake NWR - muzzleloader only",
+   "method": "muzzleloader",
+   "units": [
+    "SL4"
+   ],
+   "start": "2026-11-30",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "National Wildlife Refuge deer - SL5 Sand Lake NWR",
+   "units": [
+    "SL5"
+   ],
+   "start": "2026-12-07",
+   "end": "2026-12-13",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "National Wildlife Refuge deer - WA1 Waubay NWR/SWR - muzzleloader only",
+   "method": "muzzleloader",
+   "units": [
+    "WA1"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "mule-deer",
+   "label": "National Wildlife Refuge deer - WA3 Waubay NWR/SWR - muzzleloader only",
+   "method": "muzzleloader",
+   "units": [
+    "WA3"
+   ],
+   "start": "2026-11-28",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
   },
   {
    "species": "whitetail",
@@ -1488,8 +1848,41 @@
    "start": "2026-11-14",
    "end": "2026-11-29",
    "year": 2026,
-   "sourceId": "d-sd-wrdeer-2026",
-   "note": "Unit 30A: Nov 7-10 and Nov 23-29; 58D: Nov 21-22."
+   "note": "Except units 30A and 58D.",
+   "sourceId": "d-sd-wrdeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "West River deer - unit 30A (1st interval)",
+   "units": [
+    "30A"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-10",
+   "year": 2026,
+   "sourceId": "d-sd-wrdeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "West River deer - unit 30A (2nd interval)",
+   "units": [
+    "30A"
+   ],
+   "start": "2026-11-23",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-sd-wrdeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "West River deer - unit 58D (wheelchair for mobility users only)",
+   "units": [
+    "58D"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-sd-wrdeer-2026"
   },
   {
    "species": "whitetail",
@@ -1505,12 +1898,15 @@
    "start": "2026-12-12",
    "end": "2026-12-20",
    "year": 2026,
-   "sourceId": "d-sd-wrdeer-2026",
-   "note": "Only tags designated antlerless; any deer/any buck/any whitetail tags are not valid."
+   "note": "Only tags designated antlerless; any deer, any buck and any whitetail tags do not convert. Special Buck licenses are not valid.",
+   "sourceId": "d-sd-wrdeer-2026"
   },
   {
    "species": "whitetail",
-   "label": "Black Hills deer",
+   "label": "Black Hills deer (BH1)",
+   "units": [
+    "BH1"
+   ],
    "start": "2026-11-01",
    "end": "2026-11-30",
    "year": 2026,
@@ -1518,7 +1914,10 @@
   },
   {
    "species": "whitetail",
-   "label": "Custer State Park deer",
+   "label": "Custer State Park deer (CU1)",
+   "units": [
+    "CU1"
+   ],
    "start": "2026-11-01",
    "end": "2026-11-30",
    "year": 2026,
@@ -1527,6 +1926,7 @@
   {
    "species": "whitetail",
    "label": "Muzzleloader deer",
+   "method": "muzzleloader",
    "start": "2026-12-01",
    "end": "2027-01-01",
    "year": 2026,
@@ -1535,28 +1935,141 @@
   {
    "species": "whitetail",
    "label": "Archery deer",
+   "method": "archery",
    "start": "2026-09-01",
    "end": "2027-01-01",
    "year": 2026,
-   "sourceId": "d-sd-resarchdeer-2026",
-   "note": "Nonresident archery on public land (ADNP licenses) opens October 1, 2026; private land opens September 1."
+   "note": "Some state parks, recreation areas, nature areas and lakeside use areas open October 1, 2026; nonresident archery on public land opens October 1, 2026.",
+   "sourceId": "d-sd-resarchdeer-2026"
   },
   {
    "species": "whitetail",
-   "label": "West River Special Buck",
+   "label": "West River Special Buck (WSD)",
    "start": "2026-11-14",
    "end": "2026-11-29",
    "year": 2026,
-   "sourceId": "d-sd-specialbuck-2026",
-   "note": "Gregory County: Nov 7-10 and 14-29."
+   "note": "Private land only.",
+   "sourceId": "d-sd-specialbuck-2026"
   },
   {
    "species": "whitetail",
-   "label": "East River Special Buck",
+   "label": "West River Special Buck - Gregory County only (opening segment)",
+   "start": "2026-11-07",
+   "end": "2026-11-10",
+   "year": 2026,
+   "note": "Gregory County only: November 7-10, 14-29, 2026.",
+   "sourceId": "d-sd-specialbuck-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "East River Special Buck (ESD)",
    "start": "2026-11-21",
    "end": "2026-12-06",
    "year": 2026,
+   "note": "Private land only.",
    "sourceId": "d-sd-specialbuck-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "East River nonresident landowner-own-land deer",
+   "start": "2026-11-21",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-sd-keydates"
+  },
+  {
+   "species": "whitetail",
+   "label": "National Wildlife Refuge deer - LC1 LaCreek NWR - muzzleloader only",
+   "method": "muzzleloader",
+   "units": [
+    "LC1"
+   ],
+   "start": "2026-10-21",
+   "end": "2026-10-27",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "National Wildlife Refuge deer - LC2 LaCreek NWR - muzzleloader only",
+   "method": "muzzleloader",
+   "units": [
+    "LC2"
+   ],
+   "start": "2026-11-25",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "National Wildlife Refuge deer - SL1 Sand Lake NWR - muzzeloader only",
+   "method": "muzzleloader",
+   "units": [
+    "SL1"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-11-18",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "National Wildlife Refuge deer - SL2 Sand Lake NWR",
+   "units": [
+    "SL2"
+   ],
+   "start": "2026-11-19",
+   "end": "2026-11-23",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "National Wildlife Refuge deer - SL4 Sand Lake NWR - muzzleloader only",
+   "method": "muzzleloader",
+   "units": [
+    "SL4"
+   ],
+   "start": "2026-11-30",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "National Wildlife Refuge deer - SL5 Sand Lake NWR",
+   "units": [
+    "SL5"
+   ],
+   "start": "2026-12-07",
+   "end": "2026-12-13",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "National Wildlife Refuge deer - WA1 Waubay NWR/SWR - muzzleloader only",
+   "method": "muzzleloader",
+   "units": [
+    "WA1"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "National Wildlife Refuge deer - WA3 Waubay NWR/SWR - muzzleloader only",
+   "method": "muzzleloader",
+   "units": [
+    "WA3"
+   ],
+   "start": "2026-11-28",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-sd-refugedeer-2026"
   }
  ],
  "coverage": [

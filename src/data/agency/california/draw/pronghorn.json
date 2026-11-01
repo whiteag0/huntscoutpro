@@ -1245,6 +1245,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Aug 22 - Aug 30",
+  "seasonRanges": [
+   {
+    "start": "2026-08-22",
+    "end": "2026-08-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -1264,6 +1272,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Aug 22 - Aug 30",
+  "seasonRanges": [
+   {
+    "start": "2026-08-22",
+    "end": "2026-08-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -1283,6 +1299,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "male",
+  "seasonDates": "Aug 08 - Aug 16",
+  "seasonRanges": [
+   {
+    "start": "2026-08-08",
+    "end": "2026-08-16"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1302,6 +1326,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Aug 22 - Aug 30",
+  "seasonRanges": [
+   {
+    "start": "2026-08-22",
+    "end": "2026-08-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -1321,6 +1353,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Aug 22 - Aug 30",
+  "seasonRanges": [
+   {
+    "start": "2026-08-22",
+    "end": "2026-08-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -1340,6 +1380,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Sep 05 - Sep 13",
+  "seasonRanges": [
+   {
+    "start": "2026-09-05",
+    "end": "2026-09-13"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -1359,6 +1407,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "male",
+  "seasonDates": "Aug 08 - Aug 16",
+  "seasonRanges": [
+   {
+    "start": "2026-08-08",
+    "end": "2026-08-16"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -1378,6 +1434,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Aug 22 - Aug 30",
+  "seasonRanges": [
+   {
+    "start": "2026-08-22",
+    "end": "2026-08-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -1397,6 +1461,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "male",
+  "seasonDates": "Aug 08 - Aug 16",
+  "seasonRanges": [
+   {
+    "start": "2026-08-08",
+    "end": "2026-08-16"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1416,6 +1488,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Aug 22 - Aug 30",
+  "seasonRanges": [
+   {
+    "start": "2026-08-22",
+    "end": "2026-08-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -1435,6 +1515,14 @@
   "method": "archery",
   "methodLabel": "Archery",
   "sex": "male",
+  "seasonDates": "Aug 08 - Aug 16",
+  "seasonRanges": [
+   {
+    "start": "2026-08-08",
+    "end": "2026-08-16"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1454,6 +1542,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "either",
+  "seasonDates": "Aug 22 - Aug 30",
+  "seasonRanges": [
+   {
+    "start": "2026-08-22",
+    "end": "2026-08-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -1473,6 +1569,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "either",
+  "seasonDates": "Aug 22 - Aug 30",
+  "seasonRanges": [
+   {
+    "start": "2026-08-22",
+    "end": "2026-08-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1492,6 +1596,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "either",
+  "seasonDates": "Aug 22 - Aug 30",
+  "seasonRanges": [
+   {
+    "start": "2026-08-22",
+    "end": "2026-08-30"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 5,

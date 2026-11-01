@@ -19,13 +19,18 @@ export interface CalendarItem {
   cycle: number;
   tentative: boolean;
   note?: string;
-  sourceTitle: string;
-  sourceUrl: string;
+  /** Index into `sources`. */
+  src: number;
+}
+
+export interface CalendarSource {
+  title: string;
+  url: string;
 }
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-export function CalendarView({ items, states }: { items: CalendarItem[]; states: { slug: string; name: string }[] }) {
+export function CalendarView({ items, sources, states }: { items: CalendarItem[]; sources: CalendarSource[]; states: { slug: string; name: string }[] }) {
   const today = todayIso();
   const [state, setState] = useState("all");
   const [species, setSpecies] = useState<Species | "all">("all");
@@ -130,7 +135,7 @@ export function CalendarView({ items, states }: { items: CalendarItem[]; states:
                         {i.tentative && <span className="text-muted-foreground"> (tentative)</span>}
                         {i.note && <div className="text-xs text-muted-foreground mt-0.5">{i.note}</div>}
                       </div>
-                      <a href={i.sourceUrl} target="_blank" rel="noopener noreferrer" className="self-start sm:self-auto -my-3 py-3 sm:my-0 sm:py-0 text-xs text-muted-foreground hover:text-foreground inline-flex items-center gap-1 shrink-0">
+                      <a href={sources[i.src]?.url} title={sources[i.src]?.title} target="_blank" rel="noopener noreferrer" className="self-start sm:self-auto -my-3 py-3 sm:my-0 sm:py-0 text-xs text-muted-foreground hover:text-foreground inline-flex items-center gap-1 shrink-0">
                         {i.cycle} source <ExternalLink className="w-3 h-3" aria-hidden />
                       </a>
                     </li>

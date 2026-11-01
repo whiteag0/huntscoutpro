@@ -1,6 +1,6 @@
 import { CalendarDays, DollarSign, Info } from "lucide-react";
 import type { FeeItem, SeasonDate, SpeciesInfo } from "@/data/agency/schema";
-import { DRAW_SYSTEM_LABELS, formatDate, formatKeyDate, keyDateEnd, todayIso } from "@/lib/agency-format";
+import { DRAW_SYSTEM_LABELS, formatDate, formatKeyDate, keyDateEnd, seasonScope, todayIso } from "@/lib/agency-format";
 import { Cite } from "@/components/agency/SourceNotes";
 import { ShowMore } from "@/components/agency/mobile";
 
@@ -93,7 +93,8 @@ export function SpeciesInfoPanel({ info, fees, seasons, cite }: Props) {
             <ul className="space-y-1.5">
               {seasons.map((s, i) => (
                 <li key={i} className="text-sm text-muted-foreground">
-                  <span className="text-foreground">{s.label}</span>: {formatDate(s.start, false)} – {formatDate(s.end)}
+                  <span className="text-foreground">{s.label}</span>
+                  {seasonScope(s) && <span> ({seasonScope(s)})</span>}: {formatDate(s.start, false)} – {formatDate(s.end)}
                   <Cite n={cite(s.sourceId)} />
                 </li>
               ))}

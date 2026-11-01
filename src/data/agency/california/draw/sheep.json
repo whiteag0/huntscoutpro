@@ -708,6 +708,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Dec 5 - Feb 7",
+  "seasonRanges": [
+   {
+    "start": "2026-12-05",
+    "end": "2027-02-07"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -727,6 +735,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Dec 5 - Feb 7",
+  "seasonRanges": [
+   {
+    "start": "2026-12-05",
+    "end": "2027-02-07"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -746,6 +762,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Dec 5 - Feb 7",
+  "seasonRanges": [
+   {
+    "start": "2026-12-05",
+    "end": "2027-02-07"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -765,6 +789,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Dec 5 - Feb 7",
+  "seasonRanges": [
+   {
+    "start": "2026-12-05",
+    "end": "2027-02-07"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -784,6 +816,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Dec 19 - Feb 21",
+  "seasonRanges": [
+   {
+    "start": "2026-12-19",
+    "end": "2027-02-21"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -803,6 +843,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Dec 5 - Feb 7",
+  "seasonRanges": [
+   {
+    "start": "2026-12-05",
+    "end": "2027-02-07"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -822,6 +870,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Aug 15 - Sep 27",
+  "seasonRanges": [
+   {
+    "start": "2026-08-15",
+    "end": "2026-09-27"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -841,6 +897,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Dec 5 - Feb 7",
+  "seasonRanges": [
+   {
+    "start": "2026-12-05",
+    "end": "2027-02-07"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -860,6 +924,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Dec 5 - Feb 7",
+  "seasonRanges": [
+   {
+    "start": "2026-12-05",
+    "end": "2027-02-07"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -879,6 +951,14 @@
   "method": "all",
   "methodLabel": "General Methods",
   "sex": "male",
+  "seasonDates": "Jan 2 - Feb 7",
+  "seasonRanges": [
+   {
+    "start": "2027-01-02",
+    "end": "2027-02-07"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -897,6 +977,14 @@
   "description": "Zone 10 - Newberry, Rodman and Ord Mountains P1",
   "method": "all",
   "methodLabel": "General Method",
+  "seasonDates": "Dec 5 - Jan 2",
+  "seasonRanges": [
+   {
+    "start": "2026-12-05",
+    "end": "2027-01-02"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -915,6 +1003,14 @@
   "description": "Zone 10 - Newberry, Rodman and Ord Mountains P2",
   "method": "all",
   "methodLabel": "General Method",
+  "seasonDates": "Jan 3 - Feb 7",
+  "seasonRanges": [
+   {
+    "start": "2027-01-03",
+    "end": "2027-02-07"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -933,6 +1029,14 @@
   "description": "Zone 11 - Granite and North Bristol Mountains",
   "method": "all",
   "methodLabel": "General Method",
+  "seasonDates": "Dec 5 - Feb 7",
+  "seasonRanges": [
+   {
+    "start": "2026-12-05",
+    "end": "2027-02-07"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -951,6 +1055,14 @@
   "description": "Zone 12 - Providence, Woods & Hackberry Mountains",
   "method": "all",
   "methodLabel": "General Method",
+  "seasonDates": "Dec 5 - Feb 7",
+  "seasonRanges": [
+   {
+    "start": "2026-12-05",
+    "end": "2027-02-07"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -969,6 +1081,14 @@
   "description": "Zone 13 - Castle Mountains and Piute Range",
   "method": "all",
   "methodLabel": "General Method",
+  "seasonDates": "Dec 5 - Feb 7",
+  "seasonRanges": [
+   {
+    "start": "2026-12-05",
+    "end": "2027-02-07"
+   }
+  ],
+  "seasonSourceId": "d-digest-2026",
   "choice": "all",
   "total": {
    "quota": 2,

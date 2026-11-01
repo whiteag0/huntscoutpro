@@ -7,6 +7,9 @@ Every fee, date and rule cites its source id. Drawing-report sources and
 coverage are taken from the parsed draw files written by draw_parse.py.
 
 Usage: python -I draw_meta.py <raw_dir> <repo_root>
+
+After this script, re-run seasons_parse.py: it adds season dates (draw rows) and key-date
+tags/seasons (draw-meta) to the files written here.
 """
 import collections
 import json

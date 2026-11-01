@@ -58,7 +58,7 @@ function entryHtml(g: DigestGroup, e: DigestEntry): string {
 <div style="font-weight:bold;color:${DARK};">${esc(e.label)}</div>
 <div style="margin-top:2px;"><span style="background:${e.kind === "opens" ? "#e8f1ea" : "#faf3e1"};color:${DARK};font-size:13px;padding:1px 6px;">${esc(whenLine(e))}</span></div>
 ${win ? `<div style="font-size:13px;color:#555;margin-top:4px;">Window: ${esc(win)}</div>` : ""}
-${e.status === "tentative" ? `<div style="font-size:13px;color:#555;margin-top:4px;">The agency lists this date as tentative.</div>` : ""}
+${e.status === "tentative" ? `<div style="font-size:13px;color:#555;margin-top:4px;">Tentative: the agency hasn&apos;t confirmed this date yet.</div>` : ""}
 ${e.note ? `<div style="font-size:13px;color:#555;margin-top:4px;">${esc(e.note)}</div>` : ""}
 <div style="font-size:13px;margin-top:6px;">On HuntScout: ${speciesLinks} &nbsp;&middot;&nbsp; <a href="${esc(e.sourceUrl)}" style="color:${LINK};">Agency source${e.sourceTitle ? `: ${esc(e.sourceTitle)}` : ""}</a></div>
 </td></tr>`;
@@ -82,7 +82,7 @@ function entryText(g: DigestGroup, e: DigestEntry): string {
     `- ${e.label}`,
     `  ${whenLine(e)}`,
     win ? `  Window: ${win}` : null,
-    e.status === "tentative" ? "  The agency lists this date as tentative." : null,
+    e.status === "tentative" ? "  Tentative: the agency hasn't confirmed this date yet." : null,
     e.note ? `  ${e.note}` : null,
     ...e.species.map((s) => `  ${speciesLabel(s)} on HuntScout: ${stateLink(g.state, s)}`),
     `  Agency source: ${e.sourceUrl}`,

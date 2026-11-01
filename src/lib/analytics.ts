@@ -26,7 +26,11 @@ export type AnalyticsEvent =
   | "reminders_toggle"
   | "calendar_filter"
   | "free_reminders_signup"
-  | "planner_add";
+  | "planner_add"
+  | "plan_start"
+  | "plan_save"
+  | "planner_refresh"
+  | "ics_download";
 
 export type EventProps = Record<string, string | number | boolean | null | undefined>;
 

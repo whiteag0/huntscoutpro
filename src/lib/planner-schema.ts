@@ -1,15 +1,32 @@
 // Shared (client + server) shape of a member's Hunt Planner, plus validation and
 // merging. Pure functions only (no I/O) so they can be unit tested: `npm test`.
 //
-// Entries added from agency data carry an `agency` block whose deadline, fees and
-// odds note were copied from the agency's published rows (src/lib/planner-agency.ts).
-// Manual entries hold only what the member typed.
+// Entries planned from agency data carry an `agency` block whose dates, seasons,
+// fees and odds were copied from the agency's published rows by the server
+// (src/lib/planner-agency.ts). Everything else on an entry is the member's own:
+// status, notes, points owned, their own dates and checklist items. Refreshing
+// (src/lib/planner-refresh.ts) only ever replaces the agency block.
+//
+// Schema history
+//   1: hunts with one agency deadline, budget, gear checklist.
+//   2: agency block gains every key date (by kind), the hunt's season ranges,
+//      the planning cycle and whether the agency has published it, draw-system
+//      notes and requirements; hunts gain tag-purchased/hunted statuses, their
+//      own checklist and dates. v1 documents load unchanged (all new fields are
+//      optional or default to empty) and are written back as v2.
 
-export type HuntStatus = "planning" | "applied" | "drawn" | "alternate" | "not-drawn";
+export type HuntStatus = "planning" | "applied" | "drawn" | "alternate" | "not-drawn" | "tag-purchased" | "hunted";
 export type PlannerSeason = "rifle" | "archery" | "muzzleloader" | "shotgun" | "crossbow" | "";
 export type PlannerResidency = "resident" | "nonresident";
 
-export const HUNT_STATUSES: readonly HuntStatus[] = ["planning", "applied", "drawn", "alternate", "not-drawn"];
+export const HUNT_STATUSES: readonly HuntStatus[] = ["planning", "applied", "drawn", "alternate", "not-drawn", "tag-purchased", "hunted"];
+/** How the hunt is obtained: an agency draw hunt, a general/over-the-counter license, or one the member described. */
+export type PlanKind = "draw" | "otc" | "custom";
+export const PLAN_KINDS: readonly PlanKind[] = ["draw", "otc", "custom"];
+/** What an agency date is for (same values as KeyDate.kind in src/data/agency/schema.ts). */
+export type AgencyDateKind = "application" | "application-change" | "results" | "payment" | "surrender" | "points" | "leftover" | "license-sale" | "other";
+export const AGENCY_DATE_KINDS: readonly AgencyDateKind[] = ["application", "application-change", "results", "payment", "surrender", "points", "leftover", "license-sale", "other"];
+export type DrawingSeason = "spring" | "fall";
 const SEASONS: readonly PlannerSeason[] = ["rifle", "archery", "muzzleloader", "shotgun", "crossbow", ""];
 const SPECIES = ["elk", "mule-deer", "whitetail", "pronghorn", "moose", "bear", "sheep", "goat", "lion", "turkey"] as const;
 export type PlannerSpecies = (typeof SPECIES)[number];
@@ -38,10 +55,45 @@ export interface AgencyFee {
   note?: string;
   /** False for fees the agency lists for every species (application fee, base license). */
   speciesSpecific: boolean;
+  /** "" on v2 entries, which point at agency.links by `src` instead. Read through linkOf(). */
   sourceUrl: string;
+  src?: number;
 }
 
-/** Facts copied from one agency draw row and the state's meta when the entry was added. */
+/** One agency key date for the hunt's species and residency, copied from draw-meta keyDates. */
+export interface AgencyDate {
+  kind: AgencyDateKind;
+  label: string;
+  date?: string;
+  start?: string;
+  /** Window end or the single date (YYYY-MM-DD). */
+  end: string;
+  cycle: number;
+  status: "confirmed" | "tentative";
+  residency?: PlannerResidency;
+  note?: string;
+  /** Index into the entry's agency.links (source document). See linkOf(). */
+  src?: number;
+}
+
+/**
+ * One stretch of season. scope: "hunt" = the agency's dates for this hunt (its
+ * row or a season entry naming its hunt code); "units" = a season entry for the
+ * hunt's units; "statewide" = the species' standard/statewide season, not
+ * specific to this hunt.
+ */
+export interface AgencySeason {
+  label: string;
+  start: string;
+  end: string;
+  year: number;
+  scope: "hunt" | "units" | "statewide";
+  note?: string;
+  /** Index into the entry's agency.links. */
+  src?: number;
+}
+
+/** Facts copied from the agency's data by the server when the entry was planned or last refreshed. */
 export interface AgencyRef {
   stateSlug: string;
   agencyName: string;
@@ -61,6 +113,54 @@ export interface AgencyRef {
   sourceUrl: string;
   sourceTitle?: string;
   addedAt: string;
+  // ---- v2 (all optional so v1 entries load unchanged) ----
+  /** draw (a hunt code from the draw table), otc (general/OTC license) or custom. v1 entries are draw. */
+  kind?: PlanKind;
+  /** The cycle being planned: the soonest one whose dates haven't all passed; null when the agency has published no dates. */
+  planCycle?: number | null;
+  /** Cycle the keyDates belong to. Lower than planCycle when the agency hasn't published planCycle yet. */
+  datesCycle?: number | null;
+  /** True when keyDates are the agency's published dates for planCycle. */
+  cyclePublished?: boolean;
+  keyDates?: AgencyDate[];
+  seasons?: AgencySeason[];
+  /** Source documents keyDates and seasons point at (by `src`), each listed once to keep entries small. */
+  links?: string[];
+  /** Season dates exactly as the agency prints them for the hunt, when that's all there is. */
+  seasonText?: string;
+  /** Year of `seasons` / `seasonText`. */
+  seasonYear?: number | null;
+  drawSystem?: string;
+  drawSummary?: string;
+  pointName?: string;
+  pointsMatter?: boolean;
+  /** The agency's note for the entry's residency. */
+  residencyNote?: string;
+  otcSummary?: string;
+  /** Requirements the agency notes for the species (hunter education, required courses, qualifying license...), as written. */
+  requirements?: string[];
+  method?: string;
+  sex?: string;
+  /** Lowest points drawn in drawYear for the residency, when the agency publishes it. */
+  minPoints?: number | null;
+  /** Draw odds in percent for the residency in drawYear. */
+  oddsPct?: number | null;
+  refreshedAt?: string;
+}
+
+/** A checklist item the member added to one hunt. */
+export interface HuntTask {
+  id: string;
+  label: string;
+  done: boolean;
+}
+
+/** A date the member added to one hunt (YYYY-MM-DD; `end` for a span). */
+export interface CustomDate {
+  id: string;
+  label: string;
+  date: string;
+  end?: string;
 }
 
 export interface PlannedHunt {
@@ -81,6 +181,15 @@ export interface PlannedHunt {
   agency?: AgencyRef;
   /** ISO time of the last change, used to pick a side when two devices edited the same entry. */
   updatedAt?: string;
+  // ---- v2 member fields ----
+  /** Which drawing the member said the hunt is in, when the agency runs separate spring and fall draws and the hunt doesn't say. */
+  drawing?: DrawingSeason;
+  /** Keys of the agency-derived checklist steps the member ticked (see huntSteps in planner-timeline.ts). */
+  stepsDone?: string[];
+  /** The member's own checklist items for this hunt. */
+  tasks?: HuntTask[];
+  /** The member's own dates for this hunt. */
+  customDates?: CustomDate[];
 }
 
 export interface BudgetItem {
@@ -119,9 +228,16 @@ export interface PlannerDoc {
   data: PlannerData;
 }
 
-export const PLANNER_SCHEMA = 1;
-/** Largest stored planner document, in bytes of JSON. */
-export const MAX_PLANNER_BYTES = 200 * 1024;
+export const PLANNER_SCHEMA = 2;
+/** Older schemas sanitizePlannerDoc can still read (migrated on load). */
+export const PLANNER_SCHEMAS_READ: readonly number[] = [1, 2];
+/**
+ * Largest stored planner document, in bytes of JSON. A planned hunt's agency block is
+ * 3-8 KB, so this fits the 150-hunt limit with room for notes and budget lines.
+ */
+export const MAX_PLANNER_BYTES = 1024 * 1024;
+/** The size cap in words, for messages ("1 MB"). */
+export const MAX_PLANNER_SIZE_TEXT = MAX_PLANNER_BYTES >= 1024 * 1024 ? `${MAX_PLANNER_BYTES / (1024 * 1024)} MB` : `${MAX_PLANNER_BYTES / 1024} KB`;
 export const PLANNER_LIMITS = {
   hunts: 150,
   budget: 600,
@@ -129,6 +245,13 @@ export const PLANNER_LIMITS = {
   deleted: 600,
   fees: 12,
   units: 60,
+  keyDates: 30,
+  seasons: 16,
+  requirements: 4,
+  tasks: 30,
+  customDates: 20,
+  steps: 30,
+  links: 12,
   text: 2000,
   label: 300,
   short: 120,
@@ -214,21 +337,79 @@ function sanitizeFee(v: unknown): AgencyFee | null {
   const licenseYear = int(v.licenseYear, 1990, 2100, 0);
   if (!item || amountUsd === null || !licenseYear) return null;
   const note = optStr(v.note, PLANNER_LIMITS.label);
-  return { item, amountUsd, licenseYear, ...(note ? { note } : {}), speciesSpecific: v.speciesSpecific !== false, sourceUrl: httpUrl(v.sourceUrl) };
+  const src = srcIndex(v.src);
+  return { item, amountUsd, licenseYear, ...(note ? { note } : {}), speciesSpecific: v.speciesSpecific !== false, sourceUrl: httpUrl(v.sourceUrl), ...(src !== null ? { src } : {}) };
+}
+
+function sanitizeAgencyDate(v: unknown): AgencyDate | null {
+  if (!isObj(v)) return null;
+  const end = isoDay(v.end);
+  const label = str(v.label, PLANNER_LIMITS.label);
+  const cycle = int(v.cycle, 1990, 2100, 0);
+  if (!end || !label || !cycle) return null;
+  const date = isoDay(v.date);
+  const start = isoDay(v.start);
+  const note = optStr(v.note, PLANNER_LIMITS.label);
+  const src = srcIndex(v.src);
+  return {
+    kind: AGENCY_DATE_KINDS.find((k) => k === v.kind) ?? "other",
+    label,
+    ...(date ? { date } : {}),
+    ...(start && start <= end ? { start } : {}),
+    end,
+    cycle,
+    status: v.status === "tentative" ? "tentative" : "confirmed",
+    ...(v.residency === "resident" || v.residency === "nonresident" ? { residency: v.residency } : {}),
+    ...(note ? { note } : {}),
+    ...(src !== null ? { src } : {}),
+  };
+}
+
+const srcIndex = (v: unknown) => (typeof v === "number" && Number.isInteger(v) && v >= 0 && v < PLANNER_LIMITS.links ? v : null);
+
+function sanitizeSeason(v: unknown): AgencySeason | null {
+  if (!isObj(v)) return null;
+  const start = isoDay(v.start);
+  const end = isoDay(v.end);
+  const year = int(v.year, 1990, 2100, 0);
+  if (!start || !end || start > end || !year) return null;
+  const note = optStr(v.note, PLANNER_LIMITS.label);
+  const src = srcIndex(v.src);
+  return {
+    label: str(v.label, PLANNER_LIMITS.label),
+    start,
+    end,
+    year,
+    scope: v.scope === "hunt" || v.scope === "units" ? v.scope : "statewide",
+    ...(note ? { note } : {}),
+    ...(src !== null ? { src } : {}),
+  };
+}
+
+const list = <T>(v: unknown, fn: (x: unknown) => T | null, max: number): T[] =>
+  Array.isArray(v) ? v.slice(0, max * 2).map(fn).filter((x): x is T => x !== null).slice(0, max) : [];
+const optYear = (v: unknown) => (v === null || v === undefined ? null : int(v, 1990, 2100, 0) || null);
+const optCount = (v: unknown, max: number) => (v === null || v === undefined ? null : num(v, 0, max));
+
+/** An agency block exactly as it will be stored (strings trimmed and capped), for comparing a fresh build with a saved one. */
+export function sanitizeAgencyRef(v: unknown): AgencyRef | undefined {
+  return sanitizeAgency(v);
 }
 
 function sanitizeAgency(v: unknown): AgencyRef | undefined {
   if (!isObj(v)) return undefined;
   const stateSlug = str(v.stateSlug, 40);
+  const kind: PlanKind = PLAN_KINDS.find((k) => k === v.kind) ?? "draw";
   const huntCode = str(v.huntCode, PLANNER_LIMITS.short);
   const drawYear = int(v.drawYear, 1990, 2100, 0);
-  if (!/^[a-z-]{2,40}$/.test(stateSlug) || !huntCode || !drawYear) return undefined;
+  // Draw entries are tied to one hunt code and draw year; general/OTC and custom entries have neither.
+  if (!/^[a-z-]{2,40}$/.test(stateSlug) || (kind === "draw" && (!huntCode || !drawYear))) return undefined;
   const units = Array.isArray(v.units)
     ? v.units.map((u) => str(u, 40)).filter(Boolean).slice(0, PLANNER_LIMITS.units)
     : [];
   const fees = Array.isArray(v.fees) ? v.fees.map(sanitizeFee).filter((f): f is AgencyFee => !!f).slice(0, PLANNER_LIMITS.fees) : [];
   const sourceTitle = optStr(v.sourceTitle, PLANNER_LIMITS.label);
-  return {
+  const out: AgencyRef = {
     stateSlug,
     agencyName: str(v.agencyName, PLANNER_LIMITS.short),
     agencyShortName: str(v.agencyShortName, 40),
@@ -245,6 +426,52 @@ function sanitizeAgency(v: unknown): AgencyRef | undefined {
     ...(sourceTitle ? { sourceTitle } : {}),
     addedAt: isoTime(v.addedAt) || new Date(0).toISOString(),
   };
+  // v2 fields: only written when present, so a v1 entry round-trips exactly.
+  if (v.kind !== undefined) out.kind = kind;
+  if (v.planCycle !== undefined) out.planCycle = optYear(v.planCycle);
+  if (v.datesCycle !== undefined) out.datesCycle = optYear(v.datesCycle);
+  if (v.cyclePublished !== undefined) out.cyclePublished = v.cyclePublished === true;
+  if (v.keyDates !== undefined) out.keyDates = list(v.keyDates, sanitizeAgencyDate, PLANNER_LIMITS.keyDates);
+  if (v.seasons !== undefined) out.seasons = list(v.seasons, sanitizeSeason, PLANNER_LIMITS.seasons);
+  if (v.links !== undefined) out.links = Array.isArray(v.links) ? v.links.slice(0, PLANNER_LIMITS.links).map(httpUrl) : [];
+  if (v.seasonYear !== undefined) out.seasonYear = optYear(v.seasonYear);
+  if (v.pointsMatter !== undefined) out.pointsMatter = v.pointsMatter === true;
+  if (v.requirements !== undefined) out.requirements = list(v.requirements, (x) => str(x, 400) || null, PLANNER_LIMITS.requirements);
+  if (v.minPoints !== undefined) out.minPoints = optCount(v.minPoints, 99);
+  if (v.oddsPct !== undefined) out.oddsPct = optCount(v.oddsPct, 100);
+  for (const [k, max] of [
+    ["seasonText", 200],
+    ["drawSystem", 60],
+    ["drawSummary", 900],
+    ["pointName", PLANNER_LIMITS.short],
+    ["residencyNote", 900],
+    ["otcSummary", 900],
+    ["method", 40],
+    ["sex", 20],
+  ] as const) {
+    const x = optStr(v[k], max);
+    if (x) out[k] = x;
+  }
+  const refreshedAt = isoTime(v.refreshedAt);
+  if (refreshedAt) out.refreshedAt = refreshedAt;
+  return out;
+}
+
+function sanitizeTask(v: unknown): HuntTask | null {
+  if (!isObj(v)) return null;
+  const tid = id(v.id);
+  const label = str(v.label, 160);
+  return tid && label ? { id: tid, label, done: v.done === true } : null;
+}
+
+function sanitizeCustomDate(v: unknown): CustomDate | null {
+  if (!isObj(v)) return null;
+  const cid = id(v.id);
+  const label = str(v.label, 160);
+  const date = isoDay(v.date);
+  if (!cid || !label || !date) return null;
+  const end = isoDay(v.end);
+  return { id: cid, label, date, ...(end && end > date ? { end } : {}) };
 }
 
 function sanitizeHunt(v: unknown): PlannedHunt | null {
@@ -259,7 +486,7 @@ function sanitizeHunt(v: unknown): PlannedHunt | null {
   const season = SEASONS.find((s) => s === v.season) ?? "";
   const status = HUNT_STATUSES.find((s) => s === v.status) ?? "planning";
   const updatedAt = isoTime(v.updatedAt);
-  return {
+  const out: PlannedHunt = {
     id: hid,
     state: state || agency!.stateSlug,
     species,
@@ -274,6 +501,13 @@ function sanitizeHunt(v: unknown): PlannedHunt | null {
     ...(agency ? { agency } : {}),
     ...(updatedAt ? { updatedAt } : {}),
   };
+  if (v.drawing === "spring" || v.drawing === "fall") out.drawing = v.drawing;
+  if (v.stepsDone !== undefined) {
+    out.stepsDone = Array.from(new Set(list(v.stepsDone, (x) => (typeof x === "string" && /^[a-z0-9:-]{1,64}$/.test(x) ? x : null), PLANNER_LIMITS.steps)));
+  }
+  if (v.tasks !== undefined) out.tasks = uniqueById(list(v.tasks, sanitizeTask, PLANNER_LIMITS.tasks));
+  if (v.customDates !== undefined) out.customDates = uniqueById(list(v.customDates, sanitizeCustomDate, PLANNER_LIMITS.customDates));
+  return out;
 }
 
 function sanitizeBudget(v: unknown): BudgetItem | null {
@@ -328,18 +562,38 @@ export function sanitizePlannerData(raw: unknown): PlannerData | null {
   return { hunts, budget, checklist, deleted };
 }
 
-/** A stored document, or null when it isn't one (corrupt or a different schema). */
+/**
+ * A stored document as the current schema, or null when it isn't one (corrupt or
+ * an unknown schema). Older schemas are migrated: see migratePlannerData.
+ */
 export function sanitizePlannerDoc(raw: unknown): PlannerDoc | null {
-  if (!isObj(raw) || raw.schema !== PLANNER_SCHEMA) return null;
+  if (!isObj(raw) || typeof raw.schema !== "number" || !PLANNER_SCHEMAS_READ.includes(raw.schema)) return null;
   const version = raw.version;
-  const data = sanitizePlannerData(raw.data);
+  const data = sanitizePlannerData(migratePlannerData(raw.data, raw.schema));
   if (typeof version !== "number" || !Number.isSafeInteger(version) || version < 0 || !data) return null;
   return { schema: PLANNER_SCHEMA, version, updatedAt: isoTime(raw.updatedAt) ?? null, data };
+}
+
+/**
+ * Upgrade stored planner data from `fromSchema` to the current schema.
+ * v1 -> v2: nothing to rewrite. Every v2 field is optional (agency blocks
+ * without keyDates are read through their v1 `deadline`; see agencyDatesOf in
+ * planner-timeline.ts), so the member's hunts, statuses, notes, points, budget
+ * and checklist come through exactly as saved.
+ */
+export function migratePlannerData(data: unknown, fromSchema: number): unknown {
+  // Later migrations chain here, e.g. `if (fromSchema < 3) data = v2to3(data);`.
+  return fromSchema <= PLANNER_SCHEMA ? data : null;
 }
 
 /** Bytes of the JSON a document serializes to. */
 export function docBytes(doc: PlannerDoc): number {
   return new TextEncoder().encode(JSON.stringify(doc)).length;
+}
+
+/** Source link of an agency date or season: its entry in agency.links, else the entry's main source. */
+export function linkOf(a: Pick<AgencyRef, "links" | "sourceUrl">, item: { src?: number; sourceUrl?: string }): string {
+  return item.sourceUrl || (item.src !== undefined && a.links?.[item.src]) || a.sourceUrl;
 }
 
 // ------------------------------------------------------------
@@ -354,15 +608,25 @@ export function docBytes(doc: PlannerDoc): number {
  */
 export function sameAgencyHunt(a: AgencyRef, b: AgencyRef): boolean {
   if (a.stateSlug !== b.stateSlug) return false;
+  const ka = a.kind ?? "draw";
+  const kb = b.kind ?? "draw";
+  // Custom entries are whatever the member described: never collapsed. General/OTC entries are
+  // matched by species (in sameHunt below), residency and cycle.
+  if (ka !== kb || ka === "custom") return false;
+  if (ka === "otc" && a.residency !== b.residency) return false;
   if (a.huntCode.trim().toUpperCase() !== b.huntCode.trim().toUpperCase()) return false;
-  const ca = a.deadline?.cycle ?? null;
-  const cb = b.deadline?.cycle ?? null;
+  const ca = a.planCycle ?? a.deadline?.cycle ?? null;
+  const cb = b.planCycle ?? b.deadline?.cycle ?? null;
   return ca === null || cb === null || ca === cb;
 }
 
-/** The existing entry that `agency` would duplicate, if any. */
-export function findAgencyDuplicate(hunts: readonly PlannedHunt[], agency: AgencyRef): PlannedHunt | undefined {
-  return hunts.find((h) => h.agency && sameAgencyHunt(h.agency, agency));
+function sameHunt(a: PlannedHunt, b: PlannedHunt): boolean {
+  return !!a.agency && !!b.agency && (a.agency.kind !== "otc" || a.species === b.species) && sameAgencyHunt(a.agency, b.agency);
+}
+
+/** The existing entry that `candidate` would duplicate, if any. */
+export function findAgencyDuplicate(hunts: readonly PlannedHunt[], agency: AgencyRef, species?: PlannerSpecies): PlannedHunt | undefined {
+  return hunts.find((h) => h.agency && sameAgencyHunt(h.agency, agency) && (agency.kind !== "otc" || !species || h.species === species));
 }
 
 const manualKey = (h: PlannedHunt) =>
@@ -391,8 +655,12 @@ export function mergePlanners(a: PlannerData, b: PlannerData, prefer: "a" | "b" 
   for (const h of second.hunts) huntsById.set(h.id, h);
   for (const h of first.hunts) {
     const other = huntsById.get(h.id);
-    if (other && other.updatedAt && h.updatedAt && other.updatedAt > h.updatedAt) continue;
-    huntsById.set(h.id, h);
+    if (!other) {
+      huntsById.set(h.id, h);
+      continue;
+    }
+    // The member's edits: the newer copy wins. The agency block is picked on its own (see combineHunt).
+    huntsById.set(h.id, other.updatedAt && h.updatedAt && other.updatedAt > h.updatedAt ? combineHunt(other, h) : combineHunt(h, other));
   }
   // Collapse duplicates; remember which id each dropped one became.
   const alias = new Map<string, string>();
@@ -402,7 +670,7 @@ export function mergePlanners(a: PlannerData, b: PlannerData, prefer: "a" | "b" 
     const h = huntsById.get(hid);
     if (!h || gone.has(hid)) continue;
     if (h.agency) {
-      const dup = hunts.find((x) => x.agency && sameAgencyHunt(x.agency, h.agency!));
+      const dup = hunts.find((x) => sameHunt(x, h));
       if (dup) {
         alias.set(hid, dup.id);
         continue;
@@ -463,6 +731,78 @@ export function mergePlanners(a: PlannerData, b: PlannerData, prefer: "a" | "b" 
     budget: budget.slice(0, PLANNER_LIMITS.budget),
     checklist: checklist.slice(0, PLANNER_LIMITS.checklist),
     deleted,
+  };
+}
+
+/** When an agency block was last built from agency data (planned or refreshed), as ms; 0 when unknown. */
+function agencyStamp(a: AgencyRef): number {
+  const t = Date.parse(a.refreshedAt || a.addedAt);
+  return Number.isFinite(t) ? t : 0;
+}
+
+/** A copy written by a page from before schema 2: none of the v2 member fields are present. */
+const isV1Shaped = (h: PlannedHunt) => h.tasks === undefined && h.customDates === undefined && h.stepsDone === undefined;
+const V2_STATUSES: readonly HuntStatus[] = ["tag-purchased", "hunted"];
+
+/**
+ * One hunt from two copies. `mine` is the copy whose member edits win (the newer
+ * updatedAt); `other` is the other copy.
+ * - The agency block is the more recently built one (a refresh on the server or
+ *   another device doesn't count as a member edit, and a member edit doesn't
+ *   undo a refresh), with the fields derived from it (see withAgencyBlock).
+ * - A v1-shaped `mine` (saved by a page loaded before the v2 planner) keeps the
+ *   v2 checklist, own dates, ticked steps, drawing answer and v2 status from `other`,
+ *   which that page couldn't show or keep.
+ */
+function combineHunt(mine: PlannedHunt, other: PlannedHunt): PlannedHunt {
+  let out = mine;
+  if (isV1Shaped(mine) && !isV1Shaped(other)) {
+    out = {
+      ...out,
+      ...(other.tasks ? { tasks: other.tasks } : {}),
+      ...(other.customDates ? { customDates: other.customDates } : {}),
+      ...(other.stepsDone ? { stepsDone: other.stepsDone } : {}),
+      ...(other.drawing && !out.drawing ? { drawing: other.drawing } : {}),
+      ...(V2_STATUSES.includes(other.status) && out.status === "planning" ? { status: other.status } : {}),
+    };
+  }
+  const a = out.agency;
+  const b = other.agency;
+  if (a && b && a !== b) {
+    const sa = agencyStamp(a);
+    const sb = agencyStamp(b);
+    if (sb > sa || (sb === sa && a.keyDates === undefined && b.keyDates !== undefined)) out = withAgencyBlock(out, b);
+  }
+  return out;
+}
+
+/**
+ * The hunt with `fresh` as its agency block and the fields derived from it
+ * updated (the application deadline and, for draw hunts, the printed season
+ * dates). Everything the member entered stays; an application date the member
+ * typed while the agency had none is kept as one of their own dates when the
+ * agency's date replaces it.
+ */
+export function withAgencyBlock(h: PlannedHunt, fresh: AgencyRef): PlannedHunt {
+  const old = h.agency;
+  const derived = !!old?.deadline && h.applicationDeadline === old.deadline.end;
+  let applicationDeadline = h.applicationDeadline;
+  let customDates = h.customDates;
+  if (fresh.deadline) {
+    if (h.applicationDeadline && !derived && h.applicationDeadline !== fresh.deadline.end) {
+      const mine: CustomDate = { id: `own${h.applicationDeadline.replace(/-/g, "")}`, label: "Application deadline you entered", date: h.applicationDeadline };
+      if (!(customDates || []).some((c) => c.id === mine.id)) customDates = [...(customDates || []), mine];
+    }
+    applicationDeadline = fresh.deadline.end;
+  } else if (derived) {
+    applicationDeadline = "";
+  }
+  return {
+    ...h,
+    agency: fresh,
+    applicationDeadline,
+    seasonDates: (fresh.kind ?? "draw") === "draw" ? fresh.seasonText || h.seasonDates : h.seasonDates,
+    ...(customDates ? { customDates } : {}),
   };
 }
 

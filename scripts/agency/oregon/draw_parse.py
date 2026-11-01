@@ -10,7 +10,9 @@ Inputs (all produced by draw_download.py in <raw_dir>):
                                hunt lists)
 
 Usage: python -I draw_parse.py <raw_dir> <out_dir>
-Writes <out_dir>/<species>.json. Nothing is estimated: values absent from the agency
+Writes <out_dir>/<species>.json. Afterwards run seasons_ranges.py, which fills seasonDates the
+one-line table regex below cannot read (wrapped cells, ", 2027" end dates) and adds seasonRanges and
+seasonSourceId. Nothing is estimated: values absent from the agency
 documents are left out (null). Odds are computed drawn/applicants and flagged oddsComputed.
 """
 import json

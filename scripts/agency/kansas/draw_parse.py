@@ -5,6 +5,9 @@ src/data/agency/kansas/draw/{whitetail,mule-deer,pronghorn,turkey}.json.
 Usage:
   python -I scripts/agency/kansas/draw_parse.py <raw_dir> <repo_root>
 
+After this script, re-run seasons_parse.py: it adds season dates (draw rows) and key-date
+tags/seasons (draw-meta) to the files written here.
+
 Every number is copied from a KDWP publication. Derived values (flagged in each row's note):
   * "drawn" for a hunt whose document lists permits issued only by preference-point level is the
     sum of those published rows (checked against KDWP's statewide/zone totals where published);

@@ -3,59 +3,42 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
-import { X } from "lucide-react";
-import { Species, SPECIES_LABELS, Season, SEASON_LABELS, SPECIES_SEASONS } from "@/data/types";
+import { CalendarArrowDown, ChevronRight, Loader2, Plus, RefreshCw, X } from "lucide-react";
 import { DemoGate } from "@/components/DemoGate";
-import { todayIso } from "@/lib/agency-format";
-import { deadlinesOf, sanitizePlannerData, type AgencyFee, type BudgetItem, type ChecklistItem, type HuntStatus, type PlannedHunt, type PlannerData } from "@/lib/planner-schema";
+import { formatDate, todayIso } from "@/lib/agency-format";
+import { sanitizePlannerData, type BudgetItem, type ChecklistItem, type HuntStatus, type PlannedHunt, type PlannerData } from "@/lib/planner-schema";
+import { countdown, cycleInfo, huntSteps, huntTimeline, nextForHunt, upcomingDeadlines, type TimelineItem } from "@/lib/planner-timeline";
 import { usePlannerSync } from "@/components/planner/usePlannerSync";
-import { BUDGET_CATEGORIES, CHECKLIST_CATEGORIES, STATUS_OPTIONS, US_STATES, generateId } from "@/components/planner/defaults";
-import {
-  AgencyDetails,
-  NextDeadlineSummary,
-  SyncBadge,
-  Timeline,
-  dateRange,
-  daysLeftText,
-  feeBudgetDescription,
-  feeCategory,
-  fromLabel,
-  huntTitle,
-  urgencyClass,
-} from "@/components/planner/PlannerParts";
-
-const ALL_SPECIES: Species[] = ["elk", "mule-deer", "whitetail", "pronghorn", "moose", "bear", "sheep", "goat", "lion", "turkey"];
-
-function getStatusColor(status: HuntStatus) {
-  return STATUS_OPTIONS.find((s) => s.value === status)?.color || "";
-}
+import { downloadCalendar, usePlannerRefresh } from "@/components/planner/actions";
+import { BUDGET_CATEGORIES, CHECKLIST_CATEGORIES, generateId } from "@/components/planner/defaults";
+import { CycleBadge, STATUS_LABELS, STATUS_PILL, SourceLink, SyncBadge, TONE_CLASS, UpcomingStrip, dateRange, huntTitle } from "@/components/planner/PlannerParts";
 
 const inputCls =
   "w-full min-h-10 px-3 py-2 border border-border rounded-lg bg-background text-foreground text-base sm:text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/40";
-const labelCls = "block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1";
+const headerBtn = "inline-flex min-h-11 items-center gap-1.5 px-4 py-2 rounded-lg border border-white/20 text-white/90 text-sm font-medium hover:bg-white/10 transition-colors cursor-pointer disabled:opacity-60";
+
+/** Planner home sections, in pipeline order. */
+const GROUPS: { key: string; label: string; statuses: HuntStatus[] }[] = [
+  { key: "planning", label: "Planning", statuses: ["planning"] },
+  { key: "applied", label: "Applied", statuses: ["applied"] },
+  { key: "drawn", label: "Drawn or alternate", statuses: ["drawn", "alternate"] },
+  { key: "tag", label: "Tag purchased", statuses: ["tag-purchased"] },
+  { key: "not-drawn", label: "Not drawn", statuses: ["not-drawn"] },
+  { key: "hunted", label: "Hunted", statuses: ["hunted"] },
+];
+const STATUS_ORDER: HuntStatus[] = ["planning", "applied", "drawn", "alternate", "not-drawn", "tag-purchased", "hunted"];
 
 export default function PlannerPage() {
   const { data: session, status: sessionStatus } = useSession();
-  const { data, status, update, retry, notice, dismissNotice, account } = usePlannerSync({
+  const { data, status, update, retry, flush, reload, notice, dismissNotice, account } = usePlannerSync({
     ready: sessionStatus !== "loading",
     email: session?.user?.email?.trim().toLowerCase() || null,
     isPro: !!session?.user?.isPro,
   });
   const today = todayIso();
+  const refresh = usePlannerRefresh({ enabled: account && status.kind !== "loading", hunts: data?.hunts ?? null, flush, reload, auto: true });
 
-  const [showAddHunt, setShowAddHunt] = useState(false);
-  const [activeTab, setActiveTab] = useState<"hunts" | "timeline" | "budget" | "gear">("hunts");
-  const [expandedNotes, setExpandedNotes] = useState<string | null>(null);
-
-  // New hunt form
-  const [formState, setFormState] = useState("");
-  const [formSpecies, setFormSpecies] = useState<Species>("elk");
-  const [formUnit, setFormUnit] = useState("");
-  const [formSeason, setFormSeason] = useState<Season>("rifle");
-  const [formPoints, setFormPoints] = useState(0);
-  const [formDeadline, setFormDeadline] = useState("");
-  const [formSeasonDates, setFormSeasonDates] = useState("");
-  const [formNotes, setFormNotes] = useState("");
+  const [activeTab, setActiveTab] = useState<"hunts" | "dates" | "budget" | "gear">("hunts");
 
   // Budget form
   const [budgetHunt, setBudgetHunt] = useState("");
@@ -71,20 +54,7 @@ export default function PlannerPage() {
   const budget = useMemo(() => data?.budget ?? [], [data]);
   const checklist = useMemo(() => data?.checklist ?? [], [data]);
 
-  // Hunts in deadline order: upcoming first, then no deadline, then passed.
-  const sortedHunts = useMemo(() => {
-    const ends = new Map(deadlinesOf(hunts).map((d) => [d.hunt.id, d.end] as const));
-    const rank = (h: PlannedHunt) => {
-      const e = ends.get(h.id);
-      return e === undefined ? 1 : e >= today ? 0 : 2;
-    };
-    return hunts
-      .map((h, i) => ({ h, i }))
-      .sort((a, b) => rank(a.h) - rank(b.h) || (ends.get(a.h.id) || "").localeCompare(ends.get(b.h.id) || "") || a.i - b.i)
-      .map((x) => x.h);
-  }, [hunts, today]);
-
-  const deadlineCount = useMemo(() => deadlinesOf(hunts).length, [hunts]);
+  const upcoming = useMemo(() => upcomingDeadlines(hunts, today), [hunts, today]);
   const budgetTotal = useMemo(() => budget.reduce((sum, b) => sum + b.amount, 0), [budget]);
   const budgetByHunt = useMemo(() => {
     const map: Record<string, number> = {};
@@ -99,51 +69,15 @@ export default function PlannerPage() {
     for (const item of checklist) (map[item.category] ||= []).push(item);
     return map;
   }, [checklist]);
+  const allDates = useMemo(() => {
+    const items = hunts.flatMap((h) => huntTimeline(h, today)).filter((t) => t.end >= today && t.published && (t.kind !== "season" || t.scope !== "statewide"));
+    return items.sort((x, y) => (x.start || x.end).localeCompare(y.start || y.end) || x.huntId.localeCompare(y.huntId));
+  }, [hunts, today]);
 
   const stamp = () => new Date().toISOString();
   const tombstone = (d: PlannerData, ids: string[]) => [...d.deleted, ...ids].slice(-600);
   const patchHunt = (id: string, patch: Partial<PlannedHunt>) =>
     update((prev) => ({ ...prev, hunts: prev.hunts.map((h) => (h.id === id ? { ...h, ...patch, updatedAt: stamp() } : h)) }));
-
-  // --- Hunt CRUD ---
-
-  function addHunt() {
-    if (!formState || !formUnit) return;
-    const hunt: PlannedHunt = {
-      id: generateId(),
-      state: formState,
-      species: formSpecies,
-      unit: formUnit,
-      season: formSeason,
-      preferencePointsNeeded: 0,
-      preferencePointsOwned: formPoints,
-      applicationDeadline: formDeadline,
-      seasonDates: formSeasonDates,
-      status: "planning",
-      notes: formNotes,
-      updatedAt: stamp(),
-    };
-    update((prev) => ({ ...prev, hunts: [...prev.hunts, hunt] }));
-    setFormState("");
-    setFormUnit("");
-    setFormPoints(0);
-    setFormDeadline("");
-    setFormSeasonDates("");
-    setFormNotes("");
-    setShowAddHunt(false);
-  }
-
-  function removeHunt(id: string) {
-    update((prev) => {
-      const gone = prev.budget.filter((b) => b.huntId === id).map((b) => b.id);
-      return {
-        ...prev,
-        hunts: prev.hunts.filter((h) => h.id !== id),
-        budget: prev.budget.filter((b) => b.huntId !== id),
-        deleted: tombstone(prev, [id, ...gone]),
-      };
-    });
-  }
 
   // --- Budget ---
 
@@ -159,21 +93,6 @@ export default function PlannerPage() {
     update((prev) => ({ ...prev, budget: [...prev.budget, item] }));
     setBudgetDesc("");
     setBudgetAmount("");
-  }
-
-  function addFeeToBudget(hunt: PlannedHunt, f: AgencyFee) {
-    const description = feeBudgetDescription(f);
-    update((prev) =>
-      prev.budget.some((b) => b.huntId === hunt.id && b.description === description)
-        ? prev
-        : {
-            ...prev,
-            budget: [
-              ...prev.budget,
-              { id: generateId(), huntId: hunt.id, category: feeCategory(f), description, amount: f.amountUsd, licenseYear: f.licenseYear, ...(f.sourceUrl ? { sourceUrl: f.sourceUrl } : {}) },
-            ],
-          }
-    );
   }
 
   function removeBudgetItem(id: string) {
@@ -248,8 +167,8 @@ export default function PlannerPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">Hunt Planner</h1>
           <p className="text-white/60 max-w-xl">
-            Add hunts straight from the agency draw tables. The planner fills in the agency&apos;s application deadline and fees, sorts everything by
-            deadline, and saves to your account so it&apos;s on every device you sign in on.
+            Plan a hunt in a few taps: pick the state, species and hunt, and the planner brings together the agency&apos;s application dates, season dates, fees and
+            last draw results, sorts every deadline, exports them to your calendar and saves to your account.
           </p>
         </div>
       </section>
@@ -284,13 +203,15 @@ export default function PlannerPage() {
     );
   }
 
+  const byId = new Map(hunts.map((h) => [h.id, h] as const));
+
   return (
     <div className="min-h-screen bg-background">
       <DemoGate feature="the Hunt Planner" preview={plannerPreview}>
         {/* Header */}
         <section className="bg-gradient-to-br from-[#1a3a1a] via-[#0f2a0f] to-[#1c1917] text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+            <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-5">
               <div className="min-w-0">
                 <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">Hunt Planner</h1>
                 <p className="text-white/60 max-w-xl">
@@ -302,17 +223,28 @@ export default function PlannerPage() {
                   <SyncBadge status={status} onRetry={retry} />
                 </div>
               </div>
-              <div className="flex gap-2">
-                <button
-                  onClick={exportData}
-                  className="min-h-10 px-4 py-2 rounded-lg border border-white/20 text-white/80 text-sm font-medium hover:bg-white/10 transition-colors cursor-pointer"
+              <div className="flex flex-wrap gap-2">
+                <Link
+                  href="/planner/new?from=planner"
+                  className="inline-flex min-h-11 items-center gap-1.5 px-5 py-2 rounded-lg bg-gold text-gold-foreground text-sm font-bold hover:brightness-105 transition"
                 >
-                  Export JSON
+                  <Plus className="w-4 h-4" aria-hidden /> Plan a hunt
+                </Link>
+                {account && hunts.some((h) => h.agency) && (
+                  <button type="button" onClick={() => void refresh.run()} disabled={refresh.busy} className={headerBtn}>
+                    {refresh.busy ? <Loader2 className="w-4 h-4 animate-spin" aria-hidden /> : <RefreshCw className="w-4 h-4" aria-hidden />}
+                    {refresh.busy ? "Checking…" : "Check for updated dates"}
+                  </button>
+                )}
+                {hunts.length > 0 && (
+                  <button type="button" onClick={() => downloadCalendar(hunts, "planner", "huntscout-planner")} className={headerBtn}>
+                    <CalendarArrowDown className="w-4 h-4" aria-hidden /> Calendar (.ics)
+                  </button>
+                )}
+                <button onClick={exportData} className={headerBtn}>
+                  Export
                 </button>
-                <button
-                  onClick={importData}
-                  className="min-h-10 px-4 py-2 rounded-lg border border-white/20 text-white/80 text-sm font-medium hover:bg-white/10 transition-colors cursor-pointer"
-                >
+                <button onClick={importData} className={headerBtn}>
                   Import
                 </button>
               </div>
@@ -329,25 +261,83 @@ export default function PlannerPage() {
               </button>
             </div>
           )}
+          {(refresh.result || refresh.error) && (
+            <div
+              className={`mb-6 flex items-start gap-3 rounded-xl border px-4 py-3 text-sm text-foreground ${refresh.error ? "border-danger/40 bg-danger/5" : "border-success/40 bg-success/10"}`}
+              role="status"
+            >
+              <div className="flex-1 min-w-0">
+                {refresh.error ? (
+                  refresh.error
+                ) : refresh.result!.updates.length ? (
+                  <>
+                    <p className="font-semibold">
+                      Updated dates for {refresh.result!.updates.length} hunt{refresh.result!.updates.length === 1 ? "" : "s"}. Your status, notes, points and own dates weren&apos;t changed.
+                    </p>
+                    <ul className="mt-2 space-y-2">
+                      {refresh.result!.updates.map((u) => {
+                        const h = byId.get(u.id);
+                        if (!h) return null;
+                        return (
+                          <li key={u.id}>
+                            <Link href={`/planner/hunt/${u.id}`} className="font-semibold text-primary hover:underline">
+                              {huntTitle(h)}
+                            </Link>
+                            <span className="text-muted-foreground"> · updated dates from {h.agency?.agencyShortName || h.agency?.agencyName}</span>
+                            <ul className="list-disc pl-5 text-foreground">
+                              {u.changes.slice(0, 6).map((c) => (
+                                <li key={c} className="break-words">
+                                  {c}
+                                </li>
+                              ))}
+                              {u.changes.length > 6 && <li>and {u.changes.length - 6} more</li>}
+                            </ul>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </>
+                ) : (
+                  `Checked ${refresh.result!.checked} hunt${refresh.result!.checked === 1 ? "" : "s"} against current agency data: nothing has changed.`
+                )}
+                {!refresh.error && refresh.result!.unmatched.length > 0 && (
+                  <p className="mt-2 text-muted-foreground">
+                    Not in the agency&apos;s latest draw data, so kept as saved (the hunt may have been dropped or renumbered):{" "}
+                    {refresh.result!.unmatched
+                      .map((id) => byId.get(id))
+                      .filter((h): h is PlannedHunt => !!h)
+                      .map((h) => huntTitle(h))
+                      .join(", ")}
+                    .
+                  </p>
+                )}
+              </div>
+              <button type="button" onClick={refresh.clear} className="-m-1.5 p-2 rounded-md text-muted-foreground hover:text-foreground cursor-pointer" aria-label="Dismiss">
+                <X className="w-4 h-4" aria-hidden />
+              </button>
+            </div>
+          )}
 
-          <NextDeadlineSummary hunts={hunts} budgetTotal={budgetTotal} today={today} />
+          <UpcomingStrip items={upcoming} hunts={hunts} today={today} />
 
           {/* Tabs */}
           <div className="flex gap-1 border-b border-border mb-8 overflow-x-auto no-scrollbar" role="tablist" aria-label="Planner sections">
             {(
               [
                 { key: "hunts", label: "My Hunts", count: hunts.length },
-                { key: "timeline", label: "Timeline", count: deadlineCount },
+                { key: "dates", label: "All dates", count: allDates.length },
                 { key: "budget", label: "Budget", count: budget.length },
-                { key: "gear", label: "Gear Checklist", count: checklist.filter((c) => c.checked).length },
+                { key: "gear", label: "Gear", count: checklist.filter((c) => c.checked).length },
               ] as const
             ).map((tab) => (
               <button
                 key={tab.key}
                 role="tab"
+                id={`tab-${tab.key}`}
                 aria-selected={activeTab === tab.key}
+                aria-controls={`panel-${tab.key}`}
                 onClick={() => setActiveTab(tab.key)}
-                className={`min-h-11 px-4 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap cursor-pointer ${
+                className={`min-h-11 px-3 sm:px-4 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap cursor-pointer ${
                   activeTab === tab.key ? "border-primary text-primary" : "border-transparent text-muted-foreground hover:text-foreground hover:border-border"
                 }`}
               >
@@ -359,278 +349,63 @@ export default function PlannerPage() {
 
           {/* ── Hunts Tab ── */}
           {activeTab === "hunts" && (
-            <div className="space-y-6">
-              <div className="flex flex-wrap justify-between items-center gap-3">
-                <h2 className="text-xl font-bold text-foreground">Planned Hunts</h2>
-                <button
-                  onClick={() => setShowAddHunt(!showAddHunt)}
-                  className="min-h-10 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-light transition-colors cursor-pointer"
-                >
-                  {showAddHunt ? "Cancel" : "+ Add a hunt yourself"}
-                </button>
-              </div>
-              <p className="text-sm text-muted-foreground -mt-3">
-                Fastest way: open a{" "}
-                <Link href="/states" className="text-primary hover:underline">
-                  state&apos;s draw table
-                </Link>{" "}
-                and tap <span className="font-semibold">Add to my planner</span> on a hunt. It brings in the agency&apos;s application deadline, fees and last
-                year&apos;s draw figures.
-              </p>
-
-              {showAddHunt && (
-                <div className="bg-card border border-border rounded-xl p-4 sm:p-6 animate-fade-in-up">
-                  <h3 className="font-bold text-foreground mb-4">New hunt</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <label>
-                      <span className={labelCls}>State</span>
-                      <select value={formState} onChange={(e) => setFormState(e.target.value)} className={inputCls}>
-                        <option value="">Select state...</option>
-                        {US_STATES.map((s) => (
-                          <option key={s} value={s}>
-                            {s}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                    <label>
-                      <span className={labelCls}>Species</span>
-                      <select
-                        value={formSpecies}
-                        onChange={(e) => {
-                          const sp = e.target.value as Species;
-                          setFormSpecies(sp);
-                          const validSeasons = SPECIES_SEASONS[sp];
-                          if (!validSeasons.includes(formSeason)) setFormSeason(validSeasons[0]);
-                        }}
-                        className={inputCls}
-                      >
-                        {ALL_SPECIES.map((s) => (
-                          <option key={s} value={s}>
-                            {SPECIES_LABELS[s]}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                    <label>
-                      <span className={labelCls}>Unit / GMU</span>
-                      <input type="text" value={formUnit} onChange={(e) => setFormUnit(e.target.value)} placeholder="e.g. GMU 61" className={inputCls} />
-                    </label>
-                    <label>
-                      <span className={labelCls}>Season</span>
-                      <select value={formSeason} onChange={(e) => setFormSeason(e.target.value as Season)} className={inputCls}>
-                        {SPECIES_SEASONS[formSpecies].map((s) => (
-                          <option key={s} value={s}>
-                            {SEASON_LABELS[s]}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                    <label>
-                      <span className={labelCls}>Your points</span>
-                      <input type="number" min={0} max={25} value={formPoints} onChange={(e) => setFormPoints(parseInt(e.target.value) || 0)} className={inputCls} />
-                    </label>
-                    <label>
-                      <span className={labelCls}>Application deadline</span>
-                      <input type="date" value={formDeadline} onChange={(e) => setFormDeadline(e.target.value)} className={inputCls} />
-                    </label>
-                    <label className="sm:col-span-2">
-                      <span className={labelCls}>Season dates</span>
-                      <input type="text" value={formSeasonDates} onChange={(e) => setFormSeasonDates(e.target.value)} placeholder="e.g. Oct 12 - Nov 3" className={inputCls} />
-                    </label>
-                    <label className="sm:col-span-2 lg:col-span-3">
-                      <span className={labelCls}>Notes</span>
-                      <textarea
-                        value={formNotes}
-                        onChange={(e) => setFormNotes(e.target.value)}
-                        rows={2}
-                        placeholder="Access notes, camp spots, research links..."
-                        className={`${inputCls} resize-y`}
-                      />
-                    </label>
-                  </div>
-                  <div className="mt-4 flex justify-end">
-                    <button
-                      onClick={addHunt}
-                      disabled={!formState || !formUnit}
-                      className="min-h-10 px-6 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary-light transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
-                    >
-                      Save hunt
-                    </button>
-                  </div>
-                </div>
-              )}
-
-              {hunts.length === 0 && !showAddHunt && (
-                <div className="text-center py-16 px-4 bg-card border border-border rounded-xl">
-                  <div className="text-5xl mb-4" aria-hidden>
-                    {"🌲"}
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">No hunts planned yet</h3>
-                  <p className="text-muted-foreground mb-6">Pick hunts from a state&apos;s draw results, or add one yourself.</p>
+            <div id="panel-hunts" role="tabpanel" aria-labelledby="tab-hunts" className="space-y-8">
+              {hunts.length === 0 ? (
+                <div className="text-center py-14 px-4 bg-card border border-border rounded-xl">
+                  <h2 className="text-lg font-bold text-foreground mb-2">No hunts planned yet</h2>
+                  <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+                    Pick a state, species and hunt. We&apos;ll bring in the agency&apos;s application dates, season dates, fees and last draw results.
+                  </p>
                   <div className="flex flex-wrap justify-center gap-3">
                     <Link
-                      href="/states"
-                      className="inline-flex min-h-10 items-center px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary-light transition-colors"
+                      href="/planner/new?from=empty"
+                      className="inline-flex min-h-11 items-center gap-1.5 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary-light transition-colors"
                     >
-                      Browse states
+                      <Plus className="w-4 h-4" aria-hidden /> Plan your first hunt
                     </Link>
-                    <button
-                      onClick={() => setShowAddHunt(true)}
-                      className="min-h-10 px-5 py-2.5 rounded-lg border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer"
-                    >
-                      Add one yourself
-                    </button>
+                    <Link href="/states" className="inline-flex min-h-11 items-center px-5 py-2.5 rounded-lg border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-primary-foreground transition-colors">
+                      Browse draw tables
+                    </Link>
                   </div>
                 </div>
-              )}
-
-              <div className="space-y-4">
-                {sortedHunts.map((hunt) => {
-                  const from = fromLabel(hunt);
-                  const manualDeadline = !hunt.agency?.deadline && hunt.applicationDeadline ? hunt.applicationDeadline : "";
+              ) : (
+                GROUPS.map((g) => {
+                  const list = hunts
+                    .filter((h) => g.statuses.includes(h.status))
+                    .map((h) => ({ h, next: nextForHunt(h, today) }))
+                    .sort((x, y) => (x.next?.end || "9999").localeCompare(y.next?.end || "9999") || huntTitle(x.h).localeCompare(huntTitle(y.h)));
+                  if (!list.length) return null;
                   return (
-                    <article key={hunt.id} className="bg-card border border-border rounded-xl p-4 sm:p-5 hover:shadow-md transition-shadow min-w-0" aria-label={huntTitle(hunt)}>
-                      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
-                        <div className="min-w-0">
-                          <div className="flex items-center gap-x-3 gap-y-1 flex-wrap">
-                            <h3 className="font-bold text-foreground text-lg">{hunt.state}</h3>
-                            <span className="text-sm font-medium text-muted-foreground">{SPECIES_LABELS[hunt.species]}</span>
-                            {hunt.agency ? (
-                              <span className="text-xs font-mono bg-muted px-2 py-0.5 rounded text-foreground break-all">{hunt.agency.huntCode}</span>
-                            ) : (
-                              hunt.unit && <span className="text-xs font-mono bg-muted px-2 py-0.5 rounded text-muted-foreground break-all">{hunt.unit}</span>
-                            )}
-                            {hunt.season && <span className="text-xs text-muted-foreground">{SEASON_LABELS[hunt.season]}</span>}
-                          </div>
-                          <div className="mt-1 flex flex-wrap items-center gap-2 text-xs">
-                            {from ? (
-                              <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/5 px-2 py-0.5 font-medium text-primary">{from}</span>
-                            ) : (
-                              <span className="inline-flex items-center rounded-full border border-border px-2 py-0.5 text-muted-foreground">Added by you</span>
-                            )}
-                            {hunt.agency && (
-                              <span className="text-muted-foreground">
-                                {hunt.agency.residency === "resident" ? "Resident" : "Nonresident"}
-                                {hunt.unit ? ` · ${hunt.unit}` : ""}
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2 shrink-0">
-                          <select
-                            value={hunt.status}
-                            onChange={(e) => patchHunt(hunt.id, { status: e.target.value as HuntStatus })}
-                            aria-label={`Status for ${huntTitle(hunt)}`}
-                            className={`min-h-10 sm:min-h-0 px-2.5 py-1 rounded-lg text-xs font-semibold border cursor-pointer ${getStatusColor(hunt.status)}`}
-                          >
-                            {STATUS_OPTIONS.map((s) => (
-                              <option key={s.value} value={s.value}>
-                                {s.label}
-                              </option>
-                            ))}
-                          </select>
-                          <button
-                            onClick={() => removeHunt(hunt.id)}
-                            className="p-2.5 rounded-lg text-muted-foreground hover:text-danger hover:bg-danger/10 transition-colors cursor-pointer"
-                            aria-label={`Remove ${huntTitle(hunt)}`}
-                            title="Remove hunt"
-                          >
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-
-                      {hunt.agency && (
-                        <AgencyDetails
-                          hunt={hunt}
-                          today={today}
-                          budget={budget}
-                          onAddFee={(f) => addFeeToBudget(hunt, f)}
-                          onSetDeadline={(iso) => patchHunt(hunt.id, { applicationDeadline: iso })}
-                        />
-                      )}
-
-                      <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
-                        {hunt.seasonDates && (
-                          <div className="min-w-0">
-                            <span className="text-xs text-muted-foreground block">Season</span>
-                            <span className="font-medium text-foreground break-words">{hunt.seasonDates}</span>
-                          </div>
-                        )}
-                        {manualDeadline && !hunt.agency && (
-                          <div>
-                            <span className="text-xs text-muted-foreground block">Deadline (you entered)</span>
-                            <span className={urgencyClass(today, manualDeadline)}>
-                              {dateRange(undefined, manualDeadline)} · {daysLeftText(today, manualDeadline)}
-                            </span>
-                          </div>
-                        )}
-                        <label className="min-w-0">
-                          <span className="text-xs text-muted-foreground block">Your points</span>
-                          <input
-                            type="number"
-                            min={0}
-                            max={99}
-                            value={hunt.preferencePointsOwned}
-                            onChange={(e) => patchHunt(hunt.id, { preferencePointsOwned: Math.max(0, Math.min(99, parseInt(e.target.value) || 0)) })}
-                            className="w-20 min-h-10 sm:min-h-0 px-2 py-1 border border-border rounded-lg bg-background text-base sm:text-sm font-medium text-foreground"
-                          />
-                        </label>
-                        {budgetByHunt[hunt.id] !== undefined && (
-                          <div>
-                            <span className="text-xs text-muted-foreground block">Budget</span>
-                            <span className="font-medium text-foreground">${budgetByHunt[hunt.id].toLocaleString("en-US", { maximumFractionDigits: 2 })}</span>
-                          </div>
-                        )}
-                      </div>
-
-                      {(hunt.notes || expandedNotes === hunt.id) && (
-                        <div className="mt-3 pt-3 border-t border-border">
-                          {expandedNotes === hunt.id ? (
-                            <textarea
-                              value={hunt.notes}
-                              onChange={(e) => patchHunt(hunt.id, { notes: e.target.value })}
-                              rows={3}
-                              aria-label={`Notes for ${huntTitle(hunt)}`}
-                              className="w-full px-3 py-2 border border-border rounded-lg bg-background text-base sm:text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/40 resize-y"
-                              placeholder="Add notes..."
-                            />
-                          ) : (
-                            <p className="text-sm text-muted-foreground whitespace-pre-line break-words" data-clarity-mask="true">{hunt.notes}</p>
-                          )}
-                        </div>
-                      )}
-                      <button
-                        onClick={() => setExpandedNotes(expandedNotes === hunt.id ? null : hunt.id)}
-                        className="mt-2 inline-flex min-h-10 sm:min-h-8 items-center text-xs text-primary hover:underline cursor-pointer"
-                      >
-                        {expandedNotes === hunt.id ? "Close notes" : hunt.notes ? "Edit notes" : "Add notes"}
-                      </button>
-                    </article>
+                    <section key={g.key} aria-labelledby={`group-${g.key}`}>
+                      <h2 id={`group-${g.key}`} className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-3">
+                        {g.label} <span className="font-normal">({list.length})</span>
+                      </h2>
+                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {list.map(({ h, next }) => (
+                          <li key={h.id}>
+                            <HuntCard hunt={h} next={next} today={today} budget={budgetByHunt[h.id]} onStatus={(s) => patchHunt(h.id, { status: s })} />
+                          </li>
+                        ))}
+                      </ul>
+                    </section>
                   );
-                })}
-              </div>
+                })
+              )}
             </div>
           )}
 
-          {/* ── Timeline Tab ── */}
-          {activeTab === "timeline" && (
-            <div className="space-y-6">
-              <h2 className="text-xl font-bold text-foreground">Application timeline</h2>
-              <Timeline hunts={hunts} today={today} />
+          {/* ── All dates Tab ── */}
+          {activeTab === "dates" && (
+            <div id="panel-dates" role="tabpanel" aria-labelledby="tab-dates" className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground">Every upcoming date</h2>
+              <p className="text-sm text-muted-foreground -mt-2">Published agency dates for the cycle you&apos;re planning, hunt-specific season dates, and your own dates.</p>
+              <AllDates items={allDates} byId={byId} today={today} />
             </div>
           )}
 
           {/* ── Budget Tab ── */}
           {activeTab === "budget" && (
-            <div className="space-y-6">
+            <div id="panel-budget" role="tabpanel" aria-labelledby="tab-budget" className="space-y-6">
               <div className="flex items-center justify-between gap-3">
                 <h2 className="text-xl font-bold text-foreground">Budget</h2>
                 <div className="text-right">
@@ -639,7 +414,7 @@ export default function PlannerPage() {
                 </div>
               </div>
               {hunts.some((h) => h.agency?.fees.length) && (
-                <p className="text-sm text-muted-foreground -mt-3">Agency fees for each hunt are listed on its card under My Hunts; add the ones that apply to you.</p>
+                <p className="text-sm text-muted-foreground -mt-3">Agency fees for each hunt are on its page (open it from My Hunts); add the ones that apply to you with one tap.</p>
               )}
 
               <div className="bg-card border border-border rounded-xl p-4 sm:p-5">
@@ -730,7 +505,7 @@ export default function PlannerPage() {
                 </div>
               ) : (
                 <div className="text-center py-12 px-4 bg-card border border-border rounded-xl">
-                  <p className="text-muted-foreground">No expenses yet. Add agency fees from a hunt&apos;s card, or your own costs above.</p>
+                  <p className="text-muted-foreground">No expenses yet. Add agency fees from a hunt&apos;s page, or your own costs above.</p>
                 </div>
               )}
 
@@ -755,7 +530,7 @@ export default function PlannerPage() {
 
           {/* ── Gear Checklist Tab ── */}
           {activeTab === "gear" && (
-            <div className="space-y-6">
+            <div id="panel-gear" role="tabpanel" aria-labelledby="tab-gear" className="space-y-6">
               <h2 className="text-xl font-bold text-foreground">Gear checklist</h2>
               <div className="bg-card border border-border rounded-xl p-4 sm:p-5">
                 <h3 className="font-bold text-foreground mb-3 text-sm">Add custom item</h3>
@@ -832,6 +607,143 @@ export default function PlannerPage() {
           )}
         </div>
       </DemoGate>
+    </div>
+  );
+}
+
+function HuntCard({ hunt, next, today, budget, onStatus }: { hunt: PlannedHunt; next: TimelineItem | null; today: string; budget?: number; onStatus: (s: HuntStatus) => void }) {
+  const a = hunt.agency;
+  const steps = huntSteps(hunt);
+  const done = steps.filter((s) => (hunt.stepsDone || []).includes(s.key)).length + (hunt.tasks || []).filter((t) => t.done).length;
+  const total = steps.length + (hunt.tasks || []).length;
+  const cd = next ? countdown(next, today) : null;
+  const title = huntTitle(hunt);
+  const c = a ? cycleInfo(a) : null;
+  return (
+    <article className="h-full rounded-xl border border-border bg-card p-4 hover:shadow-md transition-shadow min-w-0" aria-label={title}>
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <h3 className="font-bold text-foreground break-words">
+            <Link href={`/planner/hunt/${hunt.id}`} className="hover:underline focus-visible:underline">
+              {title}
+            </Link>
+          </h3>
+          <p className="text-xs text-muted-foreground break-words">
+            {a ? (a.residency === "resident" ? "Resident" : "Nonresident") : "Added by you"}
+            {hunt.unit && a?.kind !== "otc" ? ` · ${hunt.unit}` : ""}
+            {a?.method ? ` · ${a.method}` : ""}
+          </p>
+        </div>
+        <select
+          value={hunt.status}
+          onChange={(e) => onStatus(e.target.value as HuntStatus)}
+          aria-label={`Status for ${title}`}
+          className={`shrink-0 min-h-10 px-2 rounded-lg text-xs font-semibold border cursor-pointer ${STATUS_PILL[hunt.status]}`}
+        >
+          {STATUS_ORDER.map((s) => (
+            <option key={s} value={s}>
+              {STATUS_LABELS[s]}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="mt-2 flex flex-wrap items-center gap-2">
+        <CycleBadge hunt={hunt} />
+        {total > 0 && (
+          <span className="text-xs text-muted-foreground">
+            Checklist {done}/{total}
+          </span>
+        )}
+        {a?.pointsMatter && (
+          <span className="text-xs text-muted-foreground">
+            Points {hunt.preferencePointsOwned}
+            {a.minPoints != null ? ` · lowest drawn ${a.minPoints}` : ""}
+          </span>
+        )}
+        {budget !== undefined && <span className="text-xs text-muted-foreground">Budget ${budget.toLocaleString("en-US", { maximumFractionDigits: 2 })}</span>}
+      </div>
+      <div className="mt-3 text-sm">
+        {next ? (
+          <p className="break-words">
+            <span className="text-muted-foreground">Next:</span> <span className="font-medium text-foreground">{next.label}</span>
+            <span className="block text-xs">
+              {dateRange(next.start, next.end)} · <span className={TONE_CLASS[cd!.tone]}>{cd!.text}</span>
+              {next.tentative ? " · tentative" : ""}
+              {next.otherCycle ? ` · ${next.cycle} cycle` : ""}
+            </span>
+          </p>
+        ) : c && !c.published ? (
+          <p className="text-xs text-muted-foreground">{c.label}. Updates when published.</p>
+        ) : (
+          <p className="text-xs text-muted-foreground">No upcoming dates.</p>
+        )}
+      </div>
+      <Link href={`/planner/hunt/${hunt.id}`} className="mt-3 inline-flex min-h-10 items-center gap-1 text-sm font-semibold text-primary hover:underline" aria-label={`Open ${title}`}>
+        Open hunt <ChevronRight className="w-4 h-4" aria-hidden />
+      </Link>
+    </article>
+  );
+}
+
+function AllDates({ items, byId, today }: { items: TimelineItem[]; byId: Map<string, PlannedHunt>; today: string }) {
+  const waiting = Array.from(byId.values()).filter((h) => h.agency && !cycleInfo(h.agency).published);
+  const groups = new Map<string, TimelineItem[]>();
+  for (const t of items) {
+    const k = (t.start || t.end).slice(0, 7);
+    groups.set(k, [...(groups.get(k) || []), t]);
+  }
+  return (
+    <div className="space-y-4">
+      {items.length === 0 && <p className="rounded-xl border border-border bg-card px-4 py-6 text-center text-sm text-muted-foreground">No upcoming published dates yet.</p>}
+      {Array.from(groups.entries()).map(([ym, list]) => (
+        <section key={ym} className="bg-card border border-border rounded-xl overflow-hidden" aria-label={formatDate(`${ym}-01`).replace(/ 1,/, "")}>
+          <h3 className="px-4 py-2 bg-muted/50 border-b border-border text-sm font-bold text-foreground">{formatDate(`${ym}-01`).replace(/ 1,/, "")}</h3>
+          <ul className="divide-y divide-border">
+            {list.map((t) => {
+              const h = byId.get(t.huntId)!;
+              const cd = countdown(t, today);
+              return (
+                <li key={`${t.huntId}-${t.key}`} className="flex gap-3 px-4 py-3">
+                  <div className="w-12 shrink-0 text-center" aria-hidden>
+                    <div className="text-xl font-bold tabular-nums text-foreground">{Number((t.start || t.end).slice(8, 10))}</div>
+                  </div>
+                  <div className="min-w-0 flex-1 text-sm">
+                    <Link href={`/planner/hunt/${h.id}`} className="font-semibold text-foreground hover:underline break-words">
+                      {huntTitle(h)}
+                    </Link>
+                    <div className="text-xs text-muted-foreground break-words">
+                      {t.kind === "season" ? `Season${t.label ? `: ${t.label}` : ""}` : t.label} · {dateRange(t.start, t.end)} · <span className={TONE_CLASS[cd.tone]}>{cd.text}</span>
+                      {t.tentative ? " · tentative" : ""}
+                      {t.otherCycle ? ` · ${t.cycle} cycle` : ""}
+                      {t.sourceUrl && !t.mine && (
+                        <>
+                          {" · "}
+                          <SourceLink href={t.sourceUrl}>{h.agency?.agencyShortName || "Agency"}</SourceLink>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))}
+      {waiting.length > 0 && (
+        <section className="rounded-xl border border-warning/40 bg-warning/5 px-4 py-3 text-sm">
+          <h3 className="font-semibold text-foreground">Waiting on the agency</h3>
+          <ul className="mt-1 space-y-1 text-muted-foreground">
+            {waiting.map((h) => (
+              <li key={h.id} className="break-words">
+                <Link href={`/planner/hunt/${h.id}`} className="text-primary hover:underline">
+                  {huntTitle(h)}
+                </Link>
+                : {cycleInfo(h.agency!).label}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </div>
   );
 }

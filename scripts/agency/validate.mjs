@@ -9,6 +9,7 @@ const SPECIES = ["elk", "mule-deer", "whitetail", "pronghorn", "moose", "bear", 
 const METHODS = ["all", "rifle", "archery", "muzzleloader", "shotgun", "other"];
 const SEXES = ["all", "male", "female", "either"];
 const RES = ["all", "resident", "nonresident"];
+const KEY_DATE_KINDS = ["application", "application-change", "results", "payment", "surrender", "points", "leftover", "license-sale", "other"];
 const DRAW_KINDS = ["preference", "bonus", "bonus-squared", "hybrid", "random", "otc", "none"];
 const POINT_KINDS = ["preference", "bonus", "bonus-squared", "hybrid"];
 const MAX_FILE_BYTES = 6 * 1024 * 1024;
@@ -156,6 +157,8 @@ function validateDraw() {
       for (const k of ["date", "start", "end"]) if (d[k] && !isoOk(d[k])) err(`${dat}: ${k} "${d[k]}" not a real YYYY-MM-DD date`);
       if (d.start && d.end && d.start > d.end) err(`${dat}: start after end`);
       if (!["confirmed", "tentative"].includes(d.status)) err(`${dat}: status must be confirmed|tentative`);
+      if (d.kind !== undefined && !KEY_DATE_KINDS.includes(d.kind)) err(`${dat}: kind "${d.kind}" invalid`);
+      if (d.residency !== undefined && !RES.slice(1).includes(d.residency)) err(`${dat}: residency "${d.residency}" invalid`);
       refOk(d.sourceId, dat);
     }
   }
@@ -165,6 +168,10 @@ function validateDraw() {
   }
   for (const s of m.seasons || []) {
     if (!SPECIES.includes(s.species) || !s.label || !isoOk(s.start || "") || !isoOk(s.end || "") || s.start > s.end) err(`draw-meta.seasons: bad season ${JSON.stringify(s).slice(0, 140)}`);
+    if (!Number.isInteger(s.year) || (s.start && Math.abs(Number(s.start.slice(0, 4)) - s.year) > 1)) err(`draw-meta.seasons "${s.label}": year ${s.year} doesn't match start ${s.start}`);
+    if (s.method !== undefined && !METHODS.includes(s.method)) err(`draw-meta.seasons "${s.label}": method invalid`);
+    if (s.residency !== undefined && !RES.slice(1).includes(s.residency)) err(`draw-meta.seasons "${s.label}": residency invalid`);
+    for (const k of ["units", "huntCodes"]) if (s[k] !== undefined && (!Array.isArray(s[k]) || !s[k].length || s[k].some((x) => typeof x !== "string" || !x))) err(`draw-meta.seasons "${s.label}": ${k} must be a non-empty string array`);
     refOk(s.sourceId, `season "${s.label}"`);
   }
   const dir = path.join(root, "draw");
@@ -202,6 +209,17 @@ function validateDraw() {
       resStats(r.nonresident, `${at}.nonresident`);
       resStats(r.total, `${at}.total`);
       if (!r.resident && !r.nonresident && !r.total) err(`${at}: no resident/nonresident/total stats`);
+      if (r.seasonRanges !== undefined) {
+        if (!Array.isArray(r.seasonRanges) || !r.seasonRanges.length) err(`${at}: seasonRanges must be a non-empty array`);
+        for (const g of r.seasonRanges || []) {
+          if (!isoOk(g.start || "") || !isoOk(g.end || "") || g.start > g.end) err(`${at}: bad seasonRange ${JSON.stringify(g)}`);
+          // A hunt's season is in its draw year, or runs into the next January-March.
+          else if (Number(g.start.slice(0, 4)) !== r.year && !(Number(g.start.slice(0, 4)) === r.year + 1 && g.start.slice(5) <= "03-31"))
+            err(`${at}: seasonRange ${g.start} is outside draw year ${r.year}`);
+        }
+        if (!r.seasonDates) warn(`${at}: seasonRanges without the agency's seasonDates text`);
+      }
+      if (r.seasonSourceId !== undefined) { refOk(r.seasonSourceId, `${at}.seasonSourceId`); used.add(r.seasonSourceId); }
       if (r.byPoints) {
         // byPoints are allowed for the current points draw, or for history under a past points system (pastDrawSystem).
         if (info && !info.pointsMatter && !POINT_KINDS.includes(info.pastDrawSystem))

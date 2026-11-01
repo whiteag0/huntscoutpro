@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
     "/api/agency/[state]/[species]": ["./.agency-gz/**/*"],
     "/api/shortlist": ["./.agency-gz/**/*"],
     "/shortlist": ["./.agency-gz/**/*"],
+    // The planner builds each entry's agency block from the server's own tables.
+    "/api/planner/entries": ["./.agency-gz/**/*"],
+    "/api/planner/refresh": ["./.agency-gz/**/*"],
+    "/api/planner/hunts": ["./.agency-gz/**/*"],
   },
   async redirects() {
     // The old /unit page showed generated data; unit pages now live under each state.

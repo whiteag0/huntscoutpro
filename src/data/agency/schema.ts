@@ -43,16 +43,33 @@ export type Method = "all" | "rifle" | "archery" | "muzzleloader" | "shotgun" | 
 export type SexClass = "all" | "male" | "female" | "either";
 export type ResidencyClass = "all" | "resident" | "nonresident";
 
+/**
+ * What a key date is for, so the planner and reminders don't have to guess from the label.
+ * application = the window/deadline to apply in the draw; application-change = modify/withdraw/
+ * correction deadline; results = draw results posted; payment = pay for a drawn license/tag;
+ * surrender = return a drawn license without penalty; points = point-only purchase/application;
+ * leftover = leftover/second/secondary draw or sale; license-sale = OTC/general licenses go on sale.
+ */
+export type KeyDateKind = "application" | "application-change" | "results" | "payment" | "surrender" | "points" | "leftover" | "license-sale" | "other";
+
 export interface KeyDate {
   /** e.g. "Big game draw application period", "Draw results posted". */
   label: string;
+  kind?: KeyDateKind;
+  /** Set when the agency limits this date to one residency. */
+  residency?: "resident" | "nonresident";
   /** Single date, YYYY-MM-DD. Use start/end for windows. */
   date?: string;
   start?: string;
   end?: string;
   /** License/hunt year this date belongs to (e.g. 2027 for the 2027 draw). */
   cycle: number;
-  /** confirmed = published by the agency for that cycle. tentative = agency-published but marked tentative. */
+  /**
+   * confirmed = published by the agency for that cycle.
+   * tentative = agency-published but marked tentative, OR computed from a standing rule in the agency's
+   * current regulation that fixes the date every year (the note cites the rule and says the agency
+   * hasn't announced that cycle's date yet).
+   */
   status: "confirmed" | "tentative";
   note?: string;
   sourceId: string;
@@ -94,6 +111,13 @@ export interface SeasonDate {
   species: Species;
   /** e.g. "First rifle season (elk)", "General archery". */
   label: string;
+  /** Weapon the season is for, when it is limited to one. */
+  method?: Method;
+  /** Units the dates apply to, as the agency writes them; omitted = statewide/standard season. */
+  units?: string[];
+  /** Hunt codes the dates apply to, when the agency ties them to specific hunts. */
+  huntCodes?: string[];
+  residency?: "resident" | "nonresident";
   start: string; // YYYY-MM-DD
   end: string; // YYYY-MM-DD
   year: number;
@@ -162,6 +186,14 @@ export interface HarvestRecord {
   sourceId: string;
 }
 
+/** One continuous stretch of a hunt's season. */
+export interface SeasonRange {
+  start: string; // YYYY-MM-DD
+  end: string; // YYYY-MM-DD
+  /** e.g. "Any Legal Weapon", "Archery only", when the agency splits a hunt's season. */
+  label?: string;
+}
+
 export interface DrawResidencyStats {
   quota?: number | null;
   applicants?: number | null;
@@ -193,7 +225,12 @@ export interface DrawRecord {
   method?: Method;
   methodLabel?: string;
   sex?: SexClass;
+  /** Season dates exactly as the agency prints them for this hunt. */
   seasonDates?: string;
+  /** The same dates as YYYY-MM-DD ranges (one per segment), for timelines and calendar export. */
+  seasonRanges?: SeasonRange[];
+  /** Source of seasonDates/seasonRanges when it isn't sourceId (e.g. the regulations booklet). */
+  seasonSourceId?: string;
   /** Which applications the counts reflect. */
   choice: "first" | "all";
   resident?: DrawResidencyStats | null;

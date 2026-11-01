@@ -3,15 +3,26 @@
 import { useEffect, useId, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
-import { CalendarCheck, CalendarPlus, CheckCircle2, Info, Loader2, TriangleAlert, X } from "lucide-react";
+import { CalendarCheck, CalendarPlus, CheckCircle2, Info, TriangleAlert, X } from "lucide-react";
 import type { DrawRecord, SpeciesInfo } from "@/data/agency/schema";
 import type { PlannerResidency } from "@/lib/planner-schema";
-import { addToPlanner, dismissToast, plannedCycle, plannerState, usePlannerIndex, useToast } from "@/components/planner/plannerIndex";
+import { dismissToast, plannedCycle, plannerState, usePlannerIndex, useToast } from "@/components/planner/plannerIndex";
+
+/** The guided planner, opened at the review screen for one hunt. */
+export function planHref(o: { slug: string; species: string; residency: PlannerResidency; huntCode?: string; year?: number; kind?: "otc"; from: string }): string {
+  const q = new URLSearchParams({ state: o.slug, species: o.species, residency: o.residency, from: o.from });
+  if (o.huntCode) q.set("hunt", o.huntCode);
+  if (o.year) q.set("year", String(o.year));
+  if (o.kind) q.set("kind", o.kind);
+  return `/planner/new?${q.toString()}`;
+}
 
 /**
- * "Add to my planner" for one agency draw row. Members only (the agency tables
- * are behind the Pro gate); the server fills in the agency's application date
- * and fees. `variant="card"` is the 40px-tall phone version.
+ * "Add to my planner" for one agency draw row: opens the guided planner's review
+ * screen for this hunt (state, species, residency and hunt filled in), where the
+ * server assembles its dates, seasons, fees and odds before the member saves.
+ * Members only (the agency tables are behind the Pro gate). `variant="card"` is
+ * the 40px-tall phone version.
  */
 export function AddToPlannerButton({
   slug,
@@ -50,18 +61,24 @@ export function AddToPlannerButton({
       </Link>
     );
   }
-  const busy = state === "adding";
+  const cls = `${base} ${variant === "card" ? "border-primary/40 bg-card" : ""} text-primary hover:bg-primary/10`;
+  if (!isPro) {
+    return (
+      <span className={`${cls} opacity-60`} aria-disabled="true">
+        <CalendarPlus className="w-4 h-4 shrink-0" aria-hidden />
+        Add to my planner
+      </span>
+    );
+  }
   return (
-    <button
-      type="button"
-      disabled={busy || !isPro}
-      onClick={() => addToPlanner({ slug, stateName, info, row, residency })}
-      aria-label={`Add ${row.huntCode} (${residency}) to my planner`}
-      className={`${base} ${variant === "card" ? "border-primary/40 bg-card" : ""} text-primary hover:bg-primary/10 cursor-pointer disabled:cursor-default disabled:opacity-60`}
+    <Link
+      href={planHref({ slug, species: info.species, residency, huntCode: row.huntCode, year: row.year, from: "draw_table" })}
+      aria-label={`Add ${stateName} ${row.huntCode} (${residency}) to my planner`}
+      className={cls}
     >
-      {busy ? <Loader2 className="w-4 h-4 shrink-0 animate-spin" aria-hidden /> : <CalendarPlus className="w-4 h-4 shrink-0" aria-hidden />}
-      {busy ? "Adding…" : "Add to my planner"}
-    </button>
+      <CalendarPlus className="w-4 h-4 shrink-0" aria-hidden />
+      Add to my planner
+    </Link>
   );
 }
 

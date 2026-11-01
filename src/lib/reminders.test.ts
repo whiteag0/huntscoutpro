@@ -237,3 +237,10 @@ test("nextReminderDates carries the window start so the card can say opens/close
     daysLeft: 59,
   });
 });
+
+test("labelResidency: a nonresident license joined to another by 'and' is for everyone", () => {
+  assert.equal(labelResidency("Elk permit and nonresident combination application period"), "any");
+  assert.equal(labelResidency("Nonresident and Unit 4 spring turkey application period"), "any");
+  assert.equal(labelResidency("Nonresident preference point purchase without applying for a combination license"), "nonresident");
+  assert.equal(labelResidency("Nonresident draw — deadline to buy second-period tags and all DAV tags"), "nonresident");
+});

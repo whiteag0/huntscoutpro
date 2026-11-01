@@ -24,6 +24,8 @@
    "keyDates": [
     {
      "label": "Nonresident deer application period",
+     "kind": "application",
+     "residency": "nonresident",
      "start": "2026-04-01",
      "end": "2026-04-24",
      "cycle": 2026,
@@ -33,18 +35,51 @@
     },
     {
      "label": "Nonresident preference point purchase period",
+     "kind": "points",
+     "residency": "nonresident",
      "start": "2026-04-01",
      "end": "2026-04-24",
      "cycle": 2026,
      "status": "confirmed",
      "note": "2027 dates not yet published by KDWP as of 2026-10-31; points can only be bought during the application period",
      "sourceId": "d-ks-fees-page"
+    },
+    {
+     "label": "Over-the-counter deer permits on sale",
+     "kind": "license-sale",
+     "start": "2026-08-05",
+     "end": "2026-12-31",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "KDWP Deer page: resident any-season white-tailed, archery and muzzleloader either-species permits, and nonresident white-tailed antlerless-only (WAO) permits are available Aug. 5 - Dec. 31 (the page gives no sale window for resident WAO permits). 2027 dates not yet published by KDWP as of 2026-10-31.",
+     "sourceId": "d-ks-deer-page"
+    },
+    {
+     "label": "Nonresident deer application deadline",
+     "kind": "application",
+     "residency": "nonresident",
+     "date": "2027-04-30",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(b)(4) (\"Applications for nonresident limited-quota antlered deer permits shall be accepted in the Pratt office from the earliest date that applications are available through the last Friday of April each year.\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
+    },
+    {
+     "label": "Nonresident preference point purchase deadline",
+     "kind": "points",
+     "residency": "nonresident",
+     "date": "2027-04-30",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(b)(2)(E) and (b)(4) (a preference point is bought by \"submitting an application during the application period specified in this regulation\"; nonresident deer applications are accepted \"through the last Friday of April each year\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
     }
    ],
    "sourceIds": [
     "d-ks-deer-page",
     "d-ks-deer-quotas-draw-stats-page",
-    "d-ks-fees-page"
+    "d-ks-fees-page",
+    "d-ks-kar-115-4-11"
    ]
   },
   {
@@ -60,6 +95,8 @@
    "keyDates": [
     {
      "label": "Resident Firearm Either-Species/Either-Sex application period",
+     "kind": "application",
+     "residency": "resident",
      "start": "2026-05-12",
      "end": "2026-06-12",
      "cycle": 2026,
@@ -69,6 +106,8 @@
     },
     {
      "label": "Resident preference point purchase period",
+     "kind": "points",
+     "residency": "resident",
      "start": "2026-05-12",
      "end": "2026-06-12",
      "cycle": 2026,
@@ -78,18 +117,61 @@
     },
     {
      "label": "Nonresident deer application period (incl. Mule Deer Stamp)",
+     "kind": "application",
+     "residency": "nonresident",
      "start": "2026-04-01",
      "end": "2026-04-24",
      "cycle": 2026,
      "status": "confirmed",
      "note": "2027 dates not yet published by KDWP as of 2026-10-31",
      "sourceId": "d-ks-fees-page"
+    },
+    {
+     "label": "Over-the-counter deer permits on sale",
+     "kind": "license-sale",
+     "start": "2026-08-05",
+     "end": "2026-12-31",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "KDWP Deer page: resident any-season white-tailed, archery and muzzleloader either-species permits, and nonresident white-tailed antlerless-only (WAO) permits are available Aug. 5 - Dec. 31 (the page gives no sale window for resident WAO permits). 2027 dates not yet published by KDWP as of 2026-10-31.",
+     "sourceId": "d-ks-deer-page"
+    },
+    {
+     "label": "Resident Firearm Either-Species/Either-Sex application deadline",
+     "kind": "application",
+     "residency": "resident",
+     "date": "2027-06-11",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(b)(5) (\"Applications for resident firearms either species, either-sex permits shall be accepted at designated locations from the earliest date that applications are available through the second Friday of June.\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
+    },
+    {
+     "label": "Resident preference point purchase deadline",
+     "kind": "points",
+     "residency": "resident",
+     "date": "2027-06-11",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(b)(2)(E) and (b)(5) (a preference point is bought by \"submitting an application during the application period specified in this regulation\"; resident firearms either-species, either-sex applications are accepted \"through the second Friday of June\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
+    },
+    {
+     "label": "Nonresident deer application deadline (incl. Mule Deer Stamp)",
+     "kind": "application",
+     "residency": "nonresident",
+     "date": "2027-04-30",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(b)(4) (\"Applications for nonresident limited-quota antlered deer permits shall be accepted in the Pratt office from the earliest date that applications are available through the last Friday of April each year.\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
     }
    ],
    "sourceIds": [
     "d-ks-deer-page",
     "d-ks-deer-quotas-draw-stats-page",
-    "d-ks-fees-page"
+    "d-ks-fees-page",
+    "d-ks-kar-115-4-11"
    ]
   },
   {
@@ -105,6 +187,8 @@
    "keyDates": [
     {
      "label": "Resident firearm/muzzleloader antelope application period",
+     "kind": "application",
+     "residency": "resident",
      "start": "2026-05-12",
      "end": "2026-06-12",
      "cycle": 2026,
@@ -114,17 +198,40 @@
     },
     {
      "label": "Preference point purchase period",
+     "kind": "points",
+     "residency": "resident",
      "start": "2026-05-12",
      "end": "2026-06-12",
      "cycle": 2026,
      "status": "confirmed",
      "note": "2027 dates not yet published by KDWP as of 2026-10-31",
      "sourceId": "d-ks-antelope-page"
+    },
+    {
+     "label": "Resident firearm/muzzleloader antelope application deadline",
+     "kind": "application",
+     "residency": "resident",
+     "date": "2027-06-11",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(c)(6) (\"Applications for resident permits shall be accepted in the Pratt office from the earliest date that applications are available through the second Friday of June.\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
+    },
+    {
+     "label": "Preference point purchase deadline",
+     "kind": "points",
+     "residency": "resident",
+     "date": "2027-06-11",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(c)(5) and (c)(6) (an antelope preference point is bought by \"submitting an application within the application period outlined in this regulation\"; resident antelope applications are accepted \"through the second Friday of June\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
     }
    ],
    "sourceIds": [
     "d-ks-antelope-page",
-    "d-ks-fees-page"
+    "d-ks-fees-page",
+    "d-ks-kar-115-4-11"
    ]
   },
   {
@@ -140,6 +247,8 @@
    "keyDates": [
     {
      "label": "Resident elk application period",
+     "kind": "application",
+     "residency": "resident",
      "start": "2026-05-12",
      "end": "2026-06-12",
      "cycle": 2026,
@@ -149,18 +258,41 @@
     },
     {
      "label": "Bonus point purchase period",
+     "kind": "points",
+     "residency": "resident",
      "start": "2026-05-12",
      "end": "2026-06-12",
      "cycle": 2026,
      "status": "confirmed",
      "note": "2027 dates not yet published by KDWP as of 2026-10-31",
      "sourceId": "d-ks-elk-page"
+    },
+    {
+     "label": "Resident elk application deadline",
+     "kind": "application",
+     "residency": "resident",
+     "date": "2027-06-11",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(d)(3) (\"Applications for limited-quota antlerless-only elk permits and limited-quota either-sex elk permits shall be accepted at designated locations from the earliest date that applications are available through the second Friday in June.\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
+    },
+    {
+     "label": "Bonus point purchase deadline",
+     "kind": "points",
+     "residency": "resident",
+     "date": "2027-06-11",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(d)(1)(C)(iv) and (d)(3) (an elk bonus point is bought by \"submitting an application during the application period specified in this regulation\"; limited-quota elk applications are accepted \"through the second Friday in June\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
     }
    ],
    "sourceIds": [
     "d-ks-elk-page",
     "d-ks-elk-harvest-report-2024-25",
-    "d-ks-fees-page"
+    "d-ks-fees-page",
+    "d-ks-kar-115-4-11"
    ]
   },
   {
@@ -176,17 +308,38 @@
    "keyDates": [
     {
      "label": "Nonresident and Unit 4 spring turkey application period",
+     "kind": "application",
      "start": "2026-01-13",
      "end": "2026-02-13",
      "cycle": 2026,
      "status": "confirmed",
      "note": "2027 dates not yet published by KDWP as of 2026-10-31",
      "sourceId": "d-ks-fees-page"
+    },
+    {
+     "label": "Fall turkey permits go on sale (residents)",
+     "kind": "license-sale",
+     "residency": "resident",
+     "date": "2026-10-01",
+     "cycle": 2026,
+     "status": "confirmed",
+     "note": "KDWP Turkey page: 'Permits will go on sale October 1, 2026.' Fall season reopened in 2026 for Kansas residents only (over the counter).",
+     "sourceId": "d-ks-turkey-page"
+    },
+    {
+     "label": "Nonresident and Unit 4 spring turkey application deadline",
+     "kind": "application",
+     "date": "2027-02-12",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by K.A.R. 115-4-11(e)(4) and (e)(6) (unit 4 and nonresident spring wild turkey applications are accepted \"until midnight on the second Friday of February\"); KDWP hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ks-kar-115-4-11"
     }
    ],
    "sourceIds": [
     "d-ks-turkey-page",
-    "d-ks-fees-page"
+    "d-ks-fees-page",
+    "d-ks-kar-115-4-11"
    ]
   }
  ],
@@ -430,88 +583,9 @@
  ],
  "seasons": [
   {
-   "species": "whitetail",
-   "label": "Youth and Disability (deer)",
-   "start": "2026-09-05",
-   "end": "2026-09-13",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page"
-  },
-  {
-   "species": "whitetail",
-   "label": "Muzzleloader Only (deer)",
-   "start": "2026-09-14",
-   "end": "2026-09-27",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page"
-  },
-  {
-   "species": "whitetail",
-   "label": "Regular Archery (deer)",
-   "start": "2026-09-14",
-   "end": "2026-12-31",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page"
-  },
-  {
-   "species": "whitetail",
-   "label": "Regular Firearms (deer)",
-   "start": "2026-12-02",
-   "end": "2026-12-13",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page"
-  },
-  {
-   "species": "mule-deer",
-   "label": "Youth and Disability (deer)",
-   "start": "2026-09-05",
-   "end": "2026-09-13",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page"
-  },
-  {
-   "species": "mule-deer",
-   "label": "Muzzleloader Only (deer)",
-   "start": "2026-09-14",
-   "end": "2026-09-27",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page"
-  },
-  {
-   "species": "mule-deer",
-   "label": "Regular Archery (deer)",
-   "start": "2026-09-14",
-   "end": "2026-12-31",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page"
-  },
-  {
-   "species": "mule-deer",
-   "label": "Regular Firearms (deer)",
-   "start": "2026-12-02",
-   "end": "2026-12-13",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page"
-  },
-  {
-   "species": "whitetail",
-   "label": "Pre-Rut, Whitetail Antlerless Only (WAO)",
-   "start": "2026-10-10",
-   "end": "2026-10-12",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page"
-  },
-  {
-   "species": "whitetail",
-   "label": "Extended Pre-Rut, Whitetail Antlerless Only (WAO) - Unit 12 Only",
-   "start": "2026-10-13",
-   "end": "2026-10-18",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page"
-  },
-  {
    "species": "pronghorn",
    "label": "Antelope - Archery",
+   "method": "archery",
    "start": "2026-09-19",
    "end": "2026-09-27",
    "year": 2026,
@@ -519,7 +593,17 @@
   },
   {
    "species": "pronghorn",
+   "label": "Antelope - Archery",
+   "method": "archery",
+   "start": "2027-09-18",
+   "end": "2027-09-26",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "pronghorn",
    "label": "Antelope - Muzzleloader Only",
+   "method": "muzzleloader",
    "start": "2026-09-28",
    "end": "2026-10-05",
    "year": 2026,
@@ -527,89 +611,1108 @@
   },
   {
    "species": "pronghorn",
+   "label": "Antelope - Muzzleloader Only",
+   "method": "muzzleloader",
+   "start": "2027-09-27",
+   "end": "2027-10-04",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "pronghorn",
    "label": "Antelope - Firearms",
+   "method": "rifle",
    "start": "2026-10-02",
    "end": "2026-10-05",
    "year": 2026,
+   "note": "Resident-only draw permits (Units 2, 17, 18).",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Antelope - Firearms",
+   "method": "rifle",
+   "start": "2027-10-01",
+   "end": "2027-10-04",
+   "year": 2027,
+   "note": "Resident-only draw permits (Units 2, 17, 18).",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Youth and Disability (deer)",
+   "start": "2026-09-05",
+   "end": "2026-09-13",
+   "year": 2026,
+   "note": "Youth and hunters with disabilities only.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Youth and Disability (deer)",
+   "start": "2026-09-05",
+   "end": "2026-09-13",
+   "year": 2026,
+   "note": "Youth and hunters with disabilities only.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Youth and Disability (deer)",
+   "start": "2027-09-04",
+   "end": "2027-09-12",
+   "year": 2027,
+   "note": "Youth and hunters with disabilities only.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Youth and Disability (deer)",
+   "start": "2027-09-04",
+   "end": "2027-09-12",
+   "year": 2027,
+   "note": "Youth and hunters with disabilities only.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Muzzleloader Only (deer)",
+   "method": "muzzleloader",
+   "start": "2026-09-14",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Muzzleloader Only (deer)",
+   "method": "muzzleloader",
+   "start": "2026-09-14",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Muzzleloader Only (deer)",
+   "method": "muzzleloader",
+   "start": "2027-09-13",
+   "end": "2027-09-26",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Muzzleloader Only (deer)",
+   "method": "muzzleloader",
+   "start": "2027-09-13",
+   "end": "2027-09-26",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Regular Archery (deer)",
+   "method": "archery",
+   "start": "2026-09-14",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Regular Archery (deer)",
+   "method": "archery",
+   "start": "2026-09-14",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Regular Archery (deer)",
+   "method": "archery",
+   "start": "2027-09-13",
+   "end": "2027-12-31",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Regular Archery (deer)",
+   "method": "archery",
+   "start": "2027-09-13",
+   "end": "2027-12-31",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Extended Archery Whitetail Antlerless Only (WAO) - Unit 19",
+   "method": "archery",
+   "units": [
+    "19"
+   ],
+   "start": "2027-01-25",
+   "end": "2027-01-31",
+   "year": 2026,
+   "note": "KDWP lists these dates as '2027: January 25-31, 2027'; filed with the 2026 season, which it follows.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Extended Archery Whitetail Antlerless Only (WAO) - Unit 19",
+   "method": "archery",
+   "units": [
+    "19"
+   ],
+   "start": "2028-01-24",
+   "end": "2028-01-31",
+   "year": 2027,
+   "note": "KDWP lists these dates as '2028: January 24-31, 2028'; filed with the 2027 season, which it follows.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Pre-Rut, Whitetail Antlerless Only (WAO)",
+   "method": "rifle",
+   "start": "2026-10-10",
+   "end": "2026-10-12",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Pre-Rut, Whitetail Antlerless Only (WAO)",
+   "method": "rifle",
+   "start": "2027-10-09",
+   "end": "2027-10-11",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Extended Pre-Rut, Whitetail Antlerless Only (WAO) - Unit 12",
+   "method": "rifle",
+   "units": [
+    "12"
+   ],
+   "start": "2026-10-13",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Extended Pre-Rut, Whitetail Antlerless Only (WAO) - Unit 12",
+   "method": "rifle",
+   "units": [
+    "12"
+   ],
+   "start": "2027-10-12",
+   "end": "2027-10-17",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Regular Firearms (deer)",
+   "method": "rifle",
+   "start": "2026-12-02",
+   "end": "2026-12-13",
+   "year": 2026,
+   "note": "Any legal equipment for the season.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Regular Firearms (deer)",
+   "method": "rifle",
+   "start": "2026-12-02",
+   "end": "2026-12-13",
+   "year": 2026,
+   "note": "Any legal equipment for the season.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Regular Firearms (deer)",
+   "method": "rifle",
+   "start": "2027-12-01",
+   "end": "2027-12-12",
+   "year": 2027,
+   "note": "Any legal equipment for the season.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Regular Firearms (deer)",
+   "method": "rifle",
+   "start": "2027-12-01",
+   "end": "2027-12-12",
+   "year": 2027,
+   "note": "Any legal equipment for the season.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Extended Whitetail Antlerless Only (WAO) - 1st segment",
+   "method": "rifle",
+   "units": [
+    "3"
+   ],
+   "start": "2027-01-01",
+   "end": "2027-01-10",
+   "year": 2026,
+   "note": "KDWP lists these dates as '2027: January 1-10, 2027'; filed with the 2026 season, which it follows.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Extended Whitetail Antlerless Only (WAO) - 1st segment",
+   "method": "rifle",
+   "units": [
+    "3"
+   ],
+   "start": "2028-01-01",
+   "end": "2028-01-09",
+   "year": 2027,
+   "note": "KDWP lists these dates as '2028: January 1-9, 2028'; filed with the 2027 season, which it follows.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Extended Whitetail Antlerless Only (WAO) - 2nd segment",
+   "method": "rifle",
+   "units": [
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "16"
+   ],
+   "start": "2027-01-01",
+   "end": "2027-01-17",
+   "year": 2026,
+   "note": "KDWP lists these dates as '2027: January 1-17, 2027'; filed with the 2026 season, which it follows.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Extended Whitetail Antlerless Only (WAO) - 2nd segment",
+   "method": "rifle",
+   "units": [
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "16"
+   ],
+   "start": "2028-01-01",
+   "end": "2028-01-16",
+   "year": 2027,
+   "note": "KDWP lists these dates as '2028: January 1-16, 2028'; filed with the 2027 season, which it follows.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Extended Whitetail Antlerless Only (WAO) - 3rd segment",
+   "method": "rifle",
+   "units": [
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "19"
+   ],
+   "start": "2027-01-01",
+   "end": "2027-01-24",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Extended Whitetail Antlerless Only (WAO) - 3rd segment",
+   "method": "rifle",
+   "units": [
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "19"
+   ],
+   "start": "2028-01-01",
+   "end": "2028-01-23",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Riley Subunit 8A - Regular Firearms (1st part)",
+   "method": "rifle",
+   "units": [
+    "8A"
+   ],
+   "start": "2026-12-19",
+   "end": "2026-12-23",
+   "year": 2026,
+   "note": "Fort Riley Outdoor Recreation and Conservation Permits also required; dates subject to cancellation for military training.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Riley Subunit 8A - Regular Firearms (1st part)",
+   "method": "rifle",
+   "units": [
+    "8A"
+   ],
+   "start": "2026-12-19",
+   "end": "2026-12-23",
+   "year": 2026,
+   "note": "Fort Riley Outdoor Recreation and Conservation Permits also required; dates subject to cancellation for military training.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Riley Subunit 8A - Regular Firearms (2nd part)",
+   "method": "rifle",
+   "units": [
+    "8A"
+   ],
+   "start": "2026-12-26",
+   "end": "2026-12-31",
+   "year": 2026,
+   "note": "Fort Riley Outdoor Recreation and Conservation Permits also required; dates subject to cancellation for military training.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Riley Subunit 8A - Regular Firearms (2nd part)",
+   "method": "rifle",
+   "units": [
+    "8A"
+   ],
+   "start": "2026-12-26",
+   "end": "2026-12-31",
+   "year": 2026,
+   "note": "Fort Riley Outdoor Recreation and Conservation Permits also required; dates subject to cancellation for military training.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Riley Subunit 8A - Regular Firearms (1st part)",
+   "method": "rifle",
+   "units": [
+    "8A"
+   ],
+   "start": "2027-12-18",
+   "end": "2027-12-23",
+   "year": 2027,
+   "note": "Fort Riley Outdoor Recreation and Conservation Permits also required; dates subject to cancellation for military training.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Riley Subunit 8A - Regular Firearms (1st part)",
+   "method": "rifle",
+   "units": [
+    "8A"
+   ],
+   "start": "2027-12-18",
+   "end": "2027-12-23",
+   "year": 2027,
+   "note": "Fort Riley Outdoor Recreation and Conservation Permits also required; dates subject to cancellation for military training.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Riley Subunit 8A - Regular Firearms (2nd part)",
+   "method": "rifle",
+   "units": [
+    "8A"
+   ],
+   "start": "2027-12-26",
+   "end": "2027-12-31",
+   "year": 2027,
+   "note": "Fort Riley Outdoor Recreation and Conservation Permits also required; dates subject to cancellation for military training.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Riley Subunit 8A - Regular Firearms (2nd part)",
+   "method": "rifle",
+   "units": [
+    "8A"
+   ],
+   "start": "2027-12-26",
+   "end": "2027-12-31",
+   "year": 2027,
+   "note": "Fort Riley Outdoor Recreation and Conservation Permits also required; dates subject to cancellation for military training.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Riley Subunit 8A - Firearms WAO, 1st segment",
+   "method": "rifle",
+   "units": [
+    "8A"
+   ],
+   "start": "2026-11-27",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Riley Subunit 8A - Firearms WAO, 1st segment",
+   "method": "rifle",
+   "units": [
+    "8A"
+   ],
+   "start": "2027-11-26",
+   "end": "2027-11-28",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Riley Subunit 8A - Firearms WAO, 2nd segment",
+   "method": "rifle",
+   "units": [
+    "8A"
+   ],
+   "start": "2027-01-01",
+   "end": "2027-01-17",
+   "year": 2026,
+   "note": "KDWP lists these dates as '2027: January 1-17, 2027'; filed with the 2026 season, which it follows. KDWP prints 'January 1, 17, 2027'; read as January 1-17 per its rule 'January 1 through second Sunday after January 3'.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Riley Subunit 8A - Firearms WAO, 2nd segment",
+   "method": "rifle",
+   "units": [
+    "8A"
+   ],
+   "start": "2028-01-01",
+   "end": "2028-01-16",
+   "year": 2027,
+   "note": "KDWP lists these dates as '2028: January 1-16, 2028'; filed with the 2027 season, which it follows.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 1st segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 1st segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 1st segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2027-11-13",
+   "end": "2027-11-14",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 1st segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2027-11-13",
+   "end": "2027-11-14",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 2nd segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 2nd segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 2nd segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2027-11-20",
+   "end": "2027-11-21",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 2nd segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2027-11-20",
+   "end": "2027-11-21",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 3rd segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-11-26",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 3rd segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-11-26",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 3rd segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2027-11-25",
+   "end": "2027-11-28",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 3rd segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2027-11-25",
+   "end": "2027-11-28",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 4th segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-12-05",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 4th segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-12-05",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 4th segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2027-12-04",
+   "end": "2027-12-05",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 4th segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2027-12-04",
+   "end": "2027-12-05",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 5th segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-12-12",
+   "end": "2026-12-13",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 5th segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2026-12-12",
+   "end": "2026-12-13",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 5th segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2027-12-11",
+   "end": "2027-12-12",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fort Leavenworth Subunit 10A - Regular Firearms, 5th segment",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2027-12-11",
+   "end": "2027-12-12",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Firearms WAO",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2027-01-01",
+   "end": "2027-01-24",
+   "year": 2026,
+   "note": "KDWP lists these dates as '2027: January 1-24, 2027'; filed with the 2026 season, which it follows.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Firearms WAO",
+   "method": "rifle",
+   "units": [
+    "10A"
+   ],
+   "start": "2028-01-01",
+   "end": "2028-01-23",
+   "year": 2027,
+   "note": "KDWP lists these dates as '2028: January 1-23, 2028'; filed with the 2027 season, which it follows. KDWP prints '2028: January 1-23, 208'; read as January 1-23, 2028 per its rule 'January 1 through third Sunday after January 3'.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Extended Archery WAO",
+   "method": "archery",
+   "units": [
+    "10A"
+   ],
+   "start": "2027-01-25",
+   "end": "2027-01-31",
+   "year": 2026,
+   "note": "KDWP lists these dates as '2027: January 25-31, 2027'; filed with the 2026 season, which it follows.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fort Leavenworth Subunit 10A - Extended Archery WAO",
+   "method": "archery",
+   "units": [
+    "10A"
+   ],
+   "start": "2028-01-24",
+   "end": "2028-01-31",
+   "year": 2027,
+   "note": "KDWP lists these dates as '2028: January 24-31, 2028'; filed with the 2027 season, which it follows.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Smoky Hill ANG Range Subunit 4A - Firearms",
+   "method": "rifle",
+   "units": [
+    "4A"
+   ],
+   "start": "2026-12-02",
+   "end": "2026-12-13",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Smoky Hill ANG Range Subunit 4A - Firearms",
+   "method": "rifle",
+   "units": [
+    "4A"
+   ],
+   "start": "2026-12-02",
+   "end": "2026-12-13",
+   "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "whitetail",
+   "label": "Smoky Hill ANG Range Subunit 4A - Firearms",
+   "method": "rifle",
+   "units": [
+    "4A"
+   ],
+   "start": "2027-12-01",
+   "end": "2027-12-12",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Smoky Hill ANG Range Subunit 4A - Firearms",
+   "method": "rifle",
+   "units": [
+    "4A"
+   ],
+   "start": "2027-12-01",
+   "end": "2027-12-12",
+   "year": 2027,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "elk",
+   "label": "Elk - Archery",
+   "method": "archery",
+   "start": "2026-09-14",
+   "end": "2026-12-31",
+   "year": 2026,
+   "note": "Statewide except Fort Riley Subunit 2a and Unit 1 (closed to elk hunting).",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "elk",
+   "label": "Elk - Archery",
+   "method": "archery",
+   "start": "2027-09-13",
+   "end": "2027-12-31",
+   "year": 2027,
+   "note": "Statewide except Fort Riley Subunit 2a and Unit 1 (closed to elk hunting).",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "elk",
+   "label": "Elk - Muzzleloader Only",
+   "method": "muzzleloader",
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "Statewide except Unit 1 (closed to elk hunting). KDWP: September 1-30 each year.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "elk",
+   "label": "Elk - Muzzleloader Only",
+   "method": "muzzleloader",
+   "start": "2027-09-01",
+   "end": "2027-09-30",
+   "year": 2027,
+   "note": "Statewide except Unit 1 (closed to elk hunting). KDWP: September 1-30 each year.",
    "sourceId": "d-ks-seasons-page"
   },
   {
    "species": "elk",
    "label": "Elk - Firearms, 1st Segment",
+   "method": "rifle",
    "start": "2026-08-01",
    "end": "2026-08-31",
    "year": 2026,
-   "sourceId": "d-ks-seasons-page",
-   "note": "Statewide except Fort Riley Subunit 2a and Unit 1"
+   "note": "Statewide except Fort Riley Subunit 2a and Unit 1. KDWP: August 1-31 each year.",
+   "sourceId": "d-ks-seasons-page"
   },
   {
    "species": "elk",
-   "label": "Elk - Muzzleloader Only",
-   "start": "2026-09-01",
-   "end": "2026-09-30",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page",
-   "note": "Statewide except Unit 1; also Fort Riley Subunit 2a archery & muzzleloader"
-  },
-  {
-   "species": "elk",
-   "label": "Elk - Archery",
-   "start": "2026-09-14",
-   "end": "2026-12-31",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page",
-   "note": "Statewide except Fort Riley Subunit 2a and Unit 1"
+   "label": "Elk - Firearms, 1st Segment",
+   "method": "rifle",
+   "start": "2027-08-01",
+   "end": "2027-08-31",
+   "year": 2027,
+   "note": "Statewide except Fort Riley Subunit 2a and Unit 1. KDWP: August 1-31 each year.",
+   "sourceId": "d-ks-seasons-page"
   },
   {
    "species": "elk",
    "label": "Elk - Firearms, 2nd Segment",
+   "method": "rifle",
    "start": "2026-12-02",
    "end": "2026-12-13",
    "year": 2026,
-   "sourceId": "d-ks-seasons-page",
-   "note": "Statewide except Fort Riley Subunit 2a and Unit 1"
+   "note": "Statewide except Fort Riley Subunit 2a and Unit 1.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "elk",
+   "label": "Elk - Firearms, 2nd Segment",
+   "method": "rifle",
+   "start": "2027-12-01",
+   "end": "2027-12-12",
+   "year": 2027,
+   "note": "Statewide except Fort Riley Subunit 2a and Unit 1.",
+   "sourceId": "d-ks-seasons-page"
   },
   {
    "species": "elk",
    "label": "Elk - Firearms, 3rd Segment",
+   "method": "rifle",
    "start": "2027-01-01",
    "end": "2027-03-15",
    "year": 2026,
-   "sourceId": "d-ks-seasons-page",
-   "note": "Statewide except Fort Riley Subunit 2a and Unit 1; KDWP lists it as January 1-March 15 each year"
+   "note": "Statewide except Fort Riley Subunit 2a and Unit 1. KDWP: January 1-March 15 each year.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "elk",
+   "label": "Elk - Firearms, 3rd Segment",
+   "method": "rifle",
+   "start": "2028-01-01",
+   "end": "2028-03-15",
+   "year": 2027,
+   "note": "Statewide except Fort Riley Subunit 2a and Unit 1. KDWP: January 1-March 15 each year.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "elk",
+   "label": "Elk on Fort Riley Subunit 2a - Archery & Muzzleloader",
+   "units": [
+    "2a"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "note": "KDWP: September 1-30 each year.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "elk",
+   "label": "Elk on Fort Riley Subunit 2a - Archery & Muzzleloader",
+   "units": [
+    "2a"
+   ],
+   "start": "2027-09-01",
+   "end": "2027-09-30",
+   "year": 2027,
+   "note": "KDWP: September 1-30 each year.",
+   "sourceId": "d-ks-seasons-page"
   },
   {
    "species": "elk",
    "label": "Elk on Fort Riley Subunit 2a - Firearms, 1st Segment",
+   "method": "rifle",
+   "units": [
+    "2a"
+   ],
    "start": "2026-10-01",
    "end": "2026-10-31",
    "year": 2026,
+   "note": "KDWP: October 1-31 each year.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "elk",
+   "label": "Elk on Fort Riley Subunit 2a - Firearms, 1st Segment",
+   "method": "rifle",
+   "units": [
+    "2a"
+   ],
+   "start": "2027-10-01",
+   "end": "2027-10-31",
+   "year": 2027,
+   "note": "KDWP: October 1-31 each year.",
    "sourceId": "d-ks-seasons-page"
   },
   {
    "species": "elk",
    "label": "Elk on Fort Riley Subunit 2a - Firearms, 2nd Segment",
+   "method": "rifle",
+   "units": [
+    "2a"
+   ],
    "start": "2026-11-01",
    "end": "2026-11-30",
    "year": 2026,
+   "note": "KDWP's Elk page lists this antlerless segment as November 1-20 each year; the When to Hunt page and K.A.R. 115-25-8(b)(2)(B)(ii) (amended Feb. 6, 2026: \"the first day of November through the last day of November\") say November 1-30. KDWP: November 1-30 each year.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "elk",
+   "label": "Elk on Fort Riley Subunit 2a - Firearms, 2nd Segment",
+   "method": "rifle",
+   "units": [
+    "2a"
+   ],
+   "start": "2027-11-01",
+   "end": "2027-11-30",
+   "year": 2027,
+   "note": "KDWP's Elk page lists this antlerless segment as November 1-20 each year; the When to Hunt page and K.A.R. 115-25-8(b)(2)(B)(ii) (amended Feb. 6, 2026: \"the first day of November through the last day of November\") say November 1-30. KDWP: November 1-30 each year.",
    "sourceId": "d-ks-seasons-page"
   },
   {
    "species": "elk",
    "label": "Elk on Fort Riley Subunit 2a - Firearms, 3rd Segment",
+   "method": "rifle",
+   "units": [
+    "2a"
+   ],
    "start": "2026-12-01",
    "end": "2026-12-31",
    "year": 2026,
+   "note": "KDWP: December 1-31 each year.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "elk",
+   "label": "Elk on Fort Riley Subunit 2a - Firearms, 3rd Segment",
+   "method": "rifle",
+   "units": [
+    "2a"
+   ],
+   "start": "2027-12-01",
+   "end": "2027-12-31",
+   "year": 2027,
+   "note": "KDWP: December 1-31 each year.",
    "sourceId": "d-ks-seasons-page"
   },
   {
    "species": "elk",
    "label": "Elk on Fort Riley Subunit 2a - Extended Season",
+   "units": [
+    "2a"
+   ],
    "start": "2027-01-01",
    "end": "2027-01-31",
    "year": 2026,
-   "sourceId": "d-ks-seasons-page",
-   "note": "KDWP lists it as January 1-31 each year"
+   "note": "KDWP's Elk page: open to all unfilled limited draw permit holders. KDWP: January 1-31 each year.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "elk",
+   "label": "Elk on Fort Riley Subunit 2a - Extended Season",
+   "units": [
+    "2a"
+   ],
+   "start": "2028-01-01",
+   "end": "2028-01-31",
+   "year": 2027,
+   "note": "KDWP's Elk page: open to all unfilled limited draw permit holders. KDWP: January 1-31 each year.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "turkey",
+   "label": "Fall Turkey - Residents Only (1st part)",
+   "residency": "resident",
+   "start": "2026-10-31",
+   "end": "2026-12-01",
+   "year": 2026,
+   "note": "Excludes the 12-day deer firearm season.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "turkey",
+   "label": "Fall Turkey - Residents Only (2nd part)",
+   "residency": "resident",
+   "start": "2026-12-14",
+   "end": "2027-01-31",
+   "year": 2026,
+   "note": "Excludes the 12-day deer firearm season.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "turkey",
+   "label": "Fall Turkey - Residents Only (1st part)",
+   "residency": "resident",
+   "start": "2027-10-31",
+   "end": "2027-11-30",
+   "year": 2027,
+   "note": "Excludes the 12-day deer firearm season.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "turkey",
+   "label": "Fall Turkey - Residents Only (2nd part)",
+   "residency": "resident",
+   "start": "2027-12-13",
+   "end": "2028-01-31",
+   "year": 2027,
+   "note": "Excludes the 12-day deer firearm season.",
+   "sourceId": "d-ks-seasons-page"
   },
   {
    "species": "turkey",
@@ -617,14 +1720,34 @@
    "start": "2026-04-01",
    "end": "2026-04-14",
    "year": 2026,
+   "note": "Youth and hunters with disabilities only.",
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring Turkey - Youth and Disability",
+   "start": "2027-04-01",
+   "end": "2027-04-13",
+   "year": 2027,
+   "note": "Youth and hunters with disabilities only.",
    "sourceId": "d-ks-seasons-page"
   },
   {
    "species": "turkey",
    "label": "Spring Turkey - Archery Only",
+   "method": "archery",
    "start": "2026-04-06",
    "end": "2026-04-14",
    "year": 2026,
+   "sourceId": "d-ks-seasons-page"
+  },
+  {
+   "species": "turkey",
+   "label": "Spring Turkey - Archery Only",
+   "method": "archery",
+   "start": "2027-04-05",
+   "end": "2027-04-13",
+   "year": 2027,
    "sourceId": "d-ks-seasons-page"
   },
   {
@@ -637,18 +1760,10 @@
   },
   {
    "species": "turkey",
-   "label": "Fall Turkey - Residents Only (1st part)",
-   "start": "2026-10-31",
-   "end": "2026-12-01",
-   "year": 2026,
-   "sourceId": "d-ks-seasons-page"
-  },
-  {
-   "species": "turkey",
-   "label": "Fall Turkey - Residents Only (2nd part)",
-   "start": "2026-12-14",
-   "end": "2027-01-31",
-   "year": 2026,
+   "label": "Spring Turkey - Regular (Firearms & Archery)",
+   "start": "2027-04-14",
+   "end": "2027-05-31",
+   "year": 2027,
    "sourceId": "d-ks-seasons-page"
   }
  ],
@@ -892,7 +2007,24 @@
    "publisher": "Kansas Department of Wildlife and Parks",
    "url": "https://www.ksoutdoors.gov/outdoor-activities/hunting-in-kansas/when-to-hunt",
    "dataYear": 2026,
-   "retrieved": "2026-10-31"
+   "retrieved": "2026-10-31",
+   "notes": "Lists 2026, 2027 and 2028 dates for each big game and turkey season (some as 'each year'); 2026 and 2027 are used. Read 2026-10-31."
+  },
+  {
+   "id": "d-ks-kar-115-4-11",
+   "title": "K.A.R. 115-4-11. Big game and wild turkey permit applications",
+   "publisher": "Kansas Department of Wildlife and Parks (Kansas Administrative Regulations, Kansas Secretary of State)",
+   "url": "https://rules.ks.gov/browse/collections/0ae1e448-f5a1-4e09-9d6d-a488ac7c284a/policies/d9cf14c1-8bfe-4a65-b248-d8a31ed077d4",
+   "retrieved": "2026-10-31",
+   "notes": "Authenticated regulation, amended April 26, 2024 (Kansas Register Vol. 43, No. 15). Fixes the draw closing dates every year: nonresident deer the last Friday of April; resident firearm either-species deer, resident antelope and limited-quota elk the second Friday of June; unit 4 and nonresident spring turkey the second Friday of February."
+  },
+  {
+   "id": "d-ks-kar-115-25-8",
+   "title": "K.A.R. 115-25-8. Elk; open season, bag limit, and permits",
+   "publisher": "Kansas Department of Wildlife and Parks (Kansas Administrative Regulations, Kansas Secretary of State)",
+   "url": "https://rules.ks.gov/browse/collections/0ae1e448-f5a1-4e09-9d6d-a488ac7c284a/policies/23ccfd15-c609-4d1e-ac03-5226777aa7ed",
+   "retrieved": "2026-10-31",
+   "notes": "Authenticated regulation, amended Feb. 6, 2026. Fort Riley subunit 2a firearm segments: Oct. 1-31, Nov. 1-30, Dec. 1-31, Jan. 1-31."
   }
  ]
 }
