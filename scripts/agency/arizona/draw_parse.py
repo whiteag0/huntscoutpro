@@ -38,6 +38,13 @@ ODDS_DUP_PICK = {
     (2025, "6028"): ("39E", "hunt2025", "hunt 6028: 39 East (east of old AZ Hwy 80), Dec 1 - Dec 31, 2025, Any ram, 2 permits"),
     (2025, "6029"): ("39W", "hunt2025", "hunt 6029: 39 West (west of old AZ Hwy 80), Dec 1 - Dec 31, 2025, Any ram, 3 permits"),
 }
+# Fall hunts with a split season: the 2023-2025 draw-odds summaries print only the first segment,
+# the regulation booklet prints both (date cell wrapped over the hunt-number line; checked by hand).
+ODDS_SPLIT_SEASON = {
+    (2023, "1201"): ("hunt2023", "Aug 25 - Sep 14, 2023 and Dec 15 - Dec 31, 2023"),  # 17A archery deer
+    (2024, "1204"): ("hunt2024", "Aug 23 - Sep 12, 2024 and Dec 13 - Dec 31, 2024"),  # 17A archery deer
+    (2025, "1206"): ("hunt2025", "Aug 22 - Sep 11, 2025 and Dec 12 - Dec 31, 2025"),  # 17A archery deer
+}
 MONTHS = {m: i for i, m in enumerate(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], 1)}
 
 
@@ -229,6 +236,14 @@ def main():
                         notes.append(f"Season dates from {regs_source_id(spring_regs_key)} ('{mr['dates']}'); AZGFD's "
                                      f"draw-odds summary prints {season_dates}")
                         season_dates = rd
+                split = ODDS_SPLIT_SEASON.get((year, hunt))
+                if split:
+                    rd = regs_dates_mdy(split[1])
+                    if rd is None or not rd.startswith(season_dates + " and "):
+                        raise ValueError(f"ODDS_SPLIT_SEASON {year} {hunt}: {split[1]!r} does not extend {season_dates!r}")
+                    notes.append(f"Season dates from {regs_source_id(split[0])} ('{split[1]}'); AZGFD's "
+                                 f"draw-odds summary prints {season_dates}")
+                    season_dates = rd
             elif mr and not mr.get("bonusOnly"):
                 sm = SECTION.match(mr["section"] or "")
                 sec = sm.group(1).strip() if sm else (mr["section"] or "")

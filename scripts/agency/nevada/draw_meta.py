@@ -66,7 +66,7 @@ def big_game_dates(include_guided=False):
          "status": "confirmed", "note": NOT_2027, "sourceId": "d-ndow-apply-hunting"},
         {"label": "Big Game Main Draw results posted on or before", "kind": "results", "date": "2026-05-29", "cycle": 2026, "status": "confirmed", "note": NOT_2027, "sourceId": "d-cr-26-01-a1"},
         {"label": "Bonus point only applications (sold during the standard big game application periods)", "kind": "points", "start": "2026-03-23", "end": "2026-05-13", "cycle": 2026,
-         "status": "confirmed", "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period, and are offered again in the second draw to those who did not apply in the main draw. " + NOT_2027,
+         "status": "confirmed", "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period. NDOW's 2026 Big Game FAQ adds that bonus points are offered again in the second draw, only to applicants who did not apply and earn a point or draw a tag in the main draw. " + NOT_2027,
          "sourceId": "d-cr-26-01-a1"},
         {"label": "Big Game Second Draw application period", "kind": "leftover", "start": "2026-06-08", "end": "2026-06-15", "cycle": 2026, "status": "confirmed",
          "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). " + NOT_2027,
