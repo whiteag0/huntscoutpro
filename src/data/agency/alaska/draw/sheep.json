@@ -11,6 +11,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Nonresidents guided by resident relatives Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2026: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-26",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -30,6 +37,13 @@
   "description": "Unit 14C, Upper Eagle River — Nonresidents guided by resident relatives Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2026-08-23",
+    "end": "2026-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -49,6 +63,13 @@
   "description": "Unit 13D, East — Nonresidents guided by resident relative Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 13D, that portion east of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek to the Richardson Hwy.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -70,6 +91,13 @@
   "description": "Units 12, 13C, and 20D, Tok Management Area — Legal animal: Full curl every 4 regulatory years — Hunt Area: Tok Management Area (TMA) - those portions of Units 12, 13C and 20D bounded by a line along the Alaska Hwy east from the west side of the Johnson River bridge to Tok Junction, then south along the Tok-Slana cutoff (Glenn Hwy) to the Slana River, then west along the north bank of the Slana River to its confluence with ...",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -89,6 +117,13 @@
   "description": "Unit 14C, Central — Residents Only — Legal animal: Full curl — Hunt Area: the area encompassing Falls Creek drainage on the west and the Indian Creek drainage west of Indian Creek, excluding a 1/4-mile buffer along Powerline Pass trail; and the south-side Eagle River drainage downstream of the Heritage Falls Creek drainage to, but not including, the South Fork Eagle River drainage; and Ram ...",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -108,6 +143,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George, and the East Fork Eklutna River drainage upstream from the East Fork Eklutna River bridge (N 61° 18.863', W 148° 58.339').",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -126,6 +168,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George, and the East Fork Eklutna River drainage upstream from the East Fork Eklutna River bridge (N 61° 18.863', W 148° 58.339').",
   "sex": "male",
   "seasonDates": "2026: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2026-08-23",
+    "end": "2026-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -144,6 +193,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George, and the East Fork Eklutna River drainage upstream from the East Fork Eklutna River bridge (N 61° 18.863', W 148° 58.339').",
   "sex": "male",
   "seasonDates": "2026: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2026-09-05",
+    "end": "2026-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -162,6 +218,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -180,6 +243,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2026-08-23",
+    "end": "2026-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -198,6 +268,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2026-09-05",
+    "end": "2026-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -216,6 +293,13 @@
   "description": "Unit 14C, Upper Eagle River — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -235,6 +319,13 @@
   "description": "Unit 14C, Upper Eagle River — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2026-09-05",
+    "end": "2026-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -254,6 +345,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream from and including Heritage Falls Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -273,6 +371,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream from and including Heritage Falls Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2026-08-23",
+    "end": "2026-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -291,6 +396,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream from and including Heritage Falls Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2026-09-05",
+    "end": "2026-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -311,6 +423,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2026: Oct. 1-Oct. 10",
+  "seasonRanges": [
+   {
+    "start": "2026-10-01",
+    "end": "2026-10-10"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 57,
@@ -331,6 +450,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2026: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 24,
@@ -349,6 +475,13 @@
   "description": "Unit 7, Crescent Lake — Residents Only; Nonresidents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 7 south of the Sterling Hwy, west of the Seward Hwy, and north and east of Kenai Lake.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -368,6 +501,13 @@
   "description": "Unit 13D, West — Residents Only — Legal animal: Full curl — Hunt Area: Unit 13D, that portion west of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -386,6 +526,13 @@
   "description": "Unit 13D, East — Residents Only — Legal animal: Full curl — Hunt Area: Unit 13D, that portion east of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek to the Richardson Hwy.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 16,
@@ -404,6 +551,13 @@
   "description": "Unit 14A, Metal Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -423,6 +577,13 @@
   "description": "Unit 14A, Metal Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2026: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-26",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -441,6 +602,13 @@
   "description": "Unit 14A, Friday Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -460,6 +628,13 @@
   "description": "Unit 14A, Friday Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2026: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-26",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -478,6 +653,13 @@
   "description": "Unit 14A, Carpenter Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the drainages east of Wolverine Creek drainage, including the Carbon and Carpenter creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -496,6 +678,13 @@
   "description": "Unit 14A, Carpenter Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the drainages east of Wolverine Creek drainage, including the Carbon and Carpenter creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2026: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-26",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -514,6 +703,13 @@
   "description": "Unit 19C — Residents Only — Legal animal: Full curl — Hunt Area: 19C ...",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 16,
@@ -532,6 +728,13 @@
   "description": "Unit 19C — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: 19C ...",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -550,6 +753,13 @@
   "description": "Unit 19C — Nonresidents guided by resident relatives Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: 19C ...",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -570,6 +780,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Residents Only — Legal animal: Full curl — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 42,
@@ -590,6 +807,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Residents Only — Legal animal: Full curl — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2026: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-26",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 34,
@@ -610,6 +834,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2026: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-26",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -629,6 +860,13 @@
   "description": "Units 20E and 20D, Mt. Harper — Residents Only; Nonresidents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 20D north of the Alaska Hwy and that portion of Unit 20E within the Middle Fork of the Fortymile River drainage north and west of the north bank upstream from and including the Joseph Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -650,6 +888,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -668,6 +913,13 @@
   "description": "Unit 14C, Northeast — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George, and the East Fork Eklutna River drainage upstream from the East Fork Eklutna River bridge (N 61° 18.863', W 148° 58.339').",
   "sex": "male",
   "seasonDates": "2026: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2026-08-23",
+    "end": "2026-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -687,6 +939,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -706,6 +965,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2026-08-23",
+    "end": "2026-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -724,6 +990,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2026-09-05",
+    "end": "2026-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -742,6 +1015,13 @@
   "description": "Unit 14C, Southwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream from and including Heritage Falls Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -761,6 +1041,13 @@
   "description": "Unit 14C, Southwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream from and including Heritage Falls Creek drainage.",
   "sex": "male",
   "seasonDates": "2026: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2026-08-23",
+    "end": "2026-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -781,6 +1068,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2026: Oct. 1-Oct. 10",
+  "seasonRanges": [
+   {
+    "start": "2026-10-01",
+    "end": "2026-10-10"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -801,6 +1095,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2026: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -819,6 +1120,13 @@
   "description": "Unit 13D, West — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 13D, that portion west of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -837,6 +1145,13 @@
   "description": "Unit 13D, East — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 13D, that portion east of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek to the Richardson Hwy.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -855,6 +1170,13 @@
   "description": "Unit 14A, Metal Creek — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2026: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -874,6 +1196,13 @@
   "description": "Unit 14A, Friday Creek — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2026: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2026-08-26",
+    "end": "2026-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -894,6 +1223,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Nonresidents guided by resident relatives Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -913,6 +1249,13 @@
   "description": "Unit 14C, Northwest — Nonresidents guided by resident relative Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -932,6 +1275,13 @@
   "description": "Unit 13D, East — Nonresidents guided by resident relative Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 13D, that portion east of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek to the Richardson Hwy.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -953,6 +1303,13 @@
   "description": "Units 12, 13C, and 20D, Tok Management Area — Legal animal: Full curl every 4 regulatory years — Hunt Area: Tok Management Area (TMA) - those portions of Units 12, 13C and 20D bounded by a line along the Alaska Hwy east from the west side of the Johnson River bridge to Tok Junction, then south along the Tok-Slana cutoff (Glenn Hwy) to the Slana River, then west along the north bank of the Slana River to its confluence with ...",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -972,6 +1329,13 @@
   "description": "Unit 14C, Central — Residents Only — Legal animal: Full curl — Hunt Area: the area encompassing Falls Creek drainage on the west and the Indian Creek drainage west of Indian Creek, ex- cluding a 1/4-mile buffer along Powerline Pass trail; and the south-side Eagle River drainage downstream of the Heritage Falls Creek drainage to, but not including, the South Fork Eagle River drainage; and ...",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -991,6 +1355,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George, and the East Fork Eklutna River drainage upstream from the East Fork Eklutna River bridge (N 61° 18.863', W 148° 58.339').",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1009,6 +1380,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George, and the East Fork Eklutna River drainage upstream from the East Fork Eklutna River bridge (N 61° 18.863', W 148° 58.339').",
   "sex": "male",
   "seasonDates": "2025: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2025-08-23",
+    "end": "2025-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1027,6 +1405,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George, and the East Fork Eklutna River drainage upstream from the East Fork Eklutna River bridge (N 61° 18.863', W 148° 58.339').",
   "sex": "male",
   "seasonDates": "2025: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2025-09-05",
+    "end": "2025-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1045,6 +1430,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -1063,6 +1455,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2025-08-23",
+    "end": "2025-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -1081,6 +1480,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2025-09-05",
+    "end": "2025-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -1099,6 +1505,13 @@
   "description": "Unit 14C, Upper Eagle River — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1118,6 +1531,13 @@
   "description": "Unit 14C, Upper Eagle River — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2025-09-05",
+    "end": "2025-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1137,6 +1557,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream from and including Heritage Falls Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -1155,6 +1582,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream from and including Heritage Falls Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2025-08-23",
+    "end": "2025-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -1173,6 +1607,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream from and including Heritage Falls Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2025-09-05",
+    "end": "2025-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -1193,6 +1634,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2025: Oct. 1-Oct. 10",
+  "seasonRanges": [
+   {
+    "start": "2025-10-01",
+    "end": "2025-10-10"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 57,
@@ -1213,6 +1661,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2025: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2025-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 24,
@@ -1232,6 +1687,13 @@
   "description": "Units 7 & 15A, portions of Round Mt. — Residents Only; Nonresidents Only — Legal animal: Full curl — Hunt Area: those portions of Units 7 and 15A east of the Fuller Lake Trail, south of Dike Creek and a straight line from the source of Dike Creek east through the divide south of Trout Lake to Juneau Creek, west of Juneau Creek, and north of the Sterling Hwy.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1251,6 +1713,13 @@
   "description": "Unit 13D, West — Residents Only — Legal animal: Any ram — Hunt Area: Unit 13D, that portion west of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -1270,6 +1739,13 @@
   "description": "Unit 13D, East — Residents Only — Legal animal: Full curl — Hunt Area: Unit 13D, that portion east of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek to the Richardson Hwy.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 14,
@@ -1288,6 +1764,13 @@
   "description": "Unit 14A, Metal Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1307,6 +1790,13 @@
   "description": "Unit 14A, Metal Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2025: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-26",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -1325,6 +1815,13 @@
   "description": "Unit 14A, Friday Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -1344,6 +1841,13 @@
   "description": "Unit 14A, Friday Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2025: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-26",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1362,6 +1866,13 @@
   "description": "Unit 14A, Carpenter Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the drainages east of Wolverine Creek drainage, including the Carbon and Carpenter creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1380,6 +1891,13 @@
   "description": "Unit 14A, Carpenter Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the drainages east of Wolverine Creek drainage, including the Carbon and Carpenter creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2025: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-26",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1400,6 +1918,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Residents Only — Legal animal: Full curl — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 42,
@@ -1420,6 +1945,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Residents Only — Legal animal: Full curl — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2025: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-26",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 34,
@@ -1440,6 +1972,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2025: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-26",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -1459,6 +1998,13 @@
   "description": "Units 20E and 20D, Mt. Harper — Residents Only; Nonresidents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 20D north of the Alaska Hwy and that portion of Unit 20E within the Middle Fork of the Fortymile River drainage north and west of the north bank upstream from and including the Joseph Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -1480,6 +2026,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1498,6 +2051,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2025-08-23",
+    "end": "2025-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1516,6 +2076,13 @@
   "description": "Unit 14C, Northwest — Nonresidents guided by resident relative Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2025-09-05",
+    "end": "2025-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1534,6 +2101,13 @@
   "description": "Unit 14C, Upper Eagle River — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2025-08-23",
+    "end": "2025-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1553,6 +2127,13 @@
   "description": "Unit 14C, Southwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream from and including Heritage Falls Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1572,6 +2153,13 @@
   "description": "Unit 14C, Southwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream from and including Heritage Falls Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2025-08-23",
+    "end": "2025-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1591,6 +2179,13 @@
   "description": "Unit 14C, Southwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream from and including Heritage Falls Creek drainage.",
   "sex": "male",
   "seasonDates": "2025: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2025-09-05",
+    "end": "2025-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1611,6 +2206,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2025: Oct. 1-Oct. 10",
+  "seasonRanges": [
+   {
+    "start": "2025-10-01",
+    "end": "2025-10-10"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1631,6 +2233,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2025: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2025-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1649,6 +2258,13 @@
   "description": "Unit 13D, West — Nonresidents Guided Only — Legal animal: Any ram every 4 regulatory years — Hunt Area: Unit 13D, that portion west of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -1668,6 +2284,13 @@
   "description": "Unit 13D, East — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 13D, that portion east of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek to the Richardson Hwy.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -1687,6 +2310,13 @@
   "description": "Unit 14A, Metal Creek — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2025: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1706,6 +2336,13 @@
   "description": "Unit 14A, Friday Creek — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2025: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2025-08-26",
+    "end": "2025-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1726,6 +2363,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Nonresidents guided by resident relatives Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2024: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2024-08-26",
+    "end": "2024-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1745,6 +2389,13 @@
   "description": "Unit 14C, Southwest — Nonresidents guided by resident relative Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream ...",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1766,6 +2417,13 @@
   "description": "Units 12, 13C, and 20D, Tok Management Area — Legal animal: Full curl every 4 regulatory years — Hunt Area: Tok Management Area (TMA) - those portions of Units 12, 13C and 20D bounded by a line along the Alaska Hwy east from the west side of the Johnson River bridge to Tok Junction, then south along the Tok-Slana cutoff (Glenn Hwy) to the Slana River, then west along the north bank of the Slana River to its confluence with ...",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -1785,6 +2443,13 @@
   "description": "Unit 14C, Central — Residents Only — Legal animal: Full curl — Hunt Area: the area encompassing Falls Creek drainage on the west and the Indian Creek drainage west of Indian Creek, ex- cluding a 1/4-mile buffer along Powerline Pass trail; and the south-side Eagle River drainage downstream of the Heritage Falls Creek drainage to, but not including, the South Fork Eagle River drainage; and ...",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1804,6 +2469,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George, and the East Fork Eklutna River drainage upstream from the East Fork Eklutna River bridge (N 61° 18.863', W 148° 58.339').",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1823,6 +2495,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George, and the East Fork Eklutna River drainage upstream from the East Fork Eklutna River bridge (N 61° 18.863', W 148° 58.339').",
   "sex": "male",
   "seasonDates": "2024: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2024-08-23",
+    "end": "2024-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1842,6 +2521,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George, and the East Fork Eklutna River drainage upstream from the East Fork Eklutna River bridge (N 61° 18.863', W 148° 58.339').",
   "sex": "male",
   "seasonDates": "2024: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2024-09-05",
+    "end": "2024-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1860,6 +2546,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -1878,6 +2571,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2024: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2024-08-23",
+    "end": "2024-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -1896,6 +2596,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2024: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2024-09-05",
+    "end": "2024-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -1914,6 +2621,13 @@
   "description": "Unit 14C, Upper Eagle River — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1933,6 +2647,13 @@
   "description": "Unit 14C, Upper Eagle River — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2024: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2024-09-05",
+    "end": "2024-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -1952,6 +2673,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream ...",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -1971,6 +2699,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream ...",
   "sex": "male",
   "seasonDates": "2024: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2024-08-23",
+    "end": "2024-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -1989,6 +2724,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream ...",
   "sex": "male",
   "seasonDates": "2024: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2024-09-05",
+    "end": "2024-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -2009,6 +2751,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2024: Oct. 1-Oct. 10",
+  "seasonRanges": [
+   {
+    "start": "2024-10-01",
+    "end": "2024-10-10"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 57,
@@ -2029,6 +2778,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2024: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2024-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 24,
@@ -2047,6 +2803,13 @@
   "description": "Unit 13D, West — Residents Only — Legal animal: Any ram — Hunt Area: Unit 13D, that portion west of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek.",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -2066,6 +2829,13 @@
   "description": "Unit 13D, East — Residents Only — Legal animal: Full curl — Hunt Area: Unit 13D, that portion east of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek to the Richardson Hwy.",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -2085,6 +2855,13 @@
   "description": "Unit 14A, Metal Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -2104,6 +2881,13 @@
   "description": "Unit 14A, Metal Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2024: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2024-08-26",
+    "end": "2024-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2122,6 +2906,13 @@
   "description": "Unit 14A, Friday Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2141,6 +2932,13 @@
   "description": "Unit 14A, Friday Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2024: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2024-08-26",
+    "end": "2024-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2160,6 +2958,13 @@
   "description": "Unit 14A, Carpenter Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the drainages east of Wolverine Creek drainage, including the Carbon and Carpenter creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2178,6 +2983,13 @@
   "description": "Unit 14A, Carpenter Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the drainages east of Wolverine Creek drainage, including the Carbon and Carpenter creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2024: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2024-08-26",
+    "end": "2024-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2198,6 +3010,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Residents Only — Legal animal: Full curl — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 34,
@@ -2218,6 +3037,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Residents Only — Legal animal: Full curl — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2024: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2024-08-26",
+    "end": "2024-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 42,
@@ -2238,6 +3064,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 7,
@@ -2257,6 +3090,13 @@
   "description": "Units 20E and 20D, Mt. Harper — Residents Only; Nonresidents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 20D north of the Alaska Hwy and that portion of Unit 20E within the Middle Fork of the Fortymile River drainage north and west of the north bank upstream from and including the Joseph Creek drainage.",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2276,6 +3116,13 @@
   "description": "Unit 14C, Northeast — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George, and the East Fork Eklutna River drainage upstream from the East Fork Eklutna River bridge (N 61° 18.863', W 148° 58.339').",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2295,6 +3142,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2314,6 +3168,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2024: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2024-08-23",
+    "end": "2024-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2332,6 +3193,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2024: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2024-09-05",
+    "end": "2024-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2350,6 +3218,13 @@
   "description": "Unit 14C, Southwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream ...",
   "sex": "male",
   "seasonDates": "2024: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2024-08-23",
+    "end": "2024-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2369,6 +3244,13 @@
   "description": "Unit 14C, Southwest — Nonresidents guided by resident relative Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base Elemendorf-Richardson (excluding Tokle Creek drainage), Bird Creek, the north side of Glacier Creek, and the south side of Eagle River (excluding Raven Creek) upstream ...",
   "sex": "male",
   "seasonDates": "2024: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2024-09-05",
+    "end": "2024-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2389,6 +3271,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2024: Oct. 1-Oct. 10",
+  "seasonRanges": [
+   {
+    "start": "2024-10-01",
+    "end": "2024-10-10"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -2409,6 +3298,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2024: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2024-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2427,6 +3323,13 @@
   "description": "Unit 13D, West — Nonresidents Guided Only — Legal animal: Any ram every 4 regulatory years — Hunt Area: Unit 13D, that portion west of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek.",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2446,6 +3349,13 @@
   "description": "Unit 13D, East — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 13D, that portion east of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek to the Richardson Hwy.",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2465,6 +3375,13 @@
   "description": "Unit 14A, Metal Creek — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2024: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2485,6 +3402,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Nonresidents guided by resident relatives Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2504,6 +3428,13 @@
   "description": "Unit 14C, Northeast — Nonresidents guided by resident relatives Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2523,6 +3454,13 @@
   "description": "Unit 13D, West — Nonresidents guided by resident relative Only — Legal animal: Any ram every 4 regulatory years — Hunt Area: Unit 13D, that portion west of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2544,6 +3482,13 @@
   "description": "Units 12, 13C, and 20D, Tok Management Area — Legal animal: Full curl every 4 regulatory years — Hunt Area: Tok Management Area (TMA) - those portions of Units 12, 13C and 20D bounded by a line along the Alaska Hwy east from the west side of the Johnson River bridge to Tok Junction, then south along the Tok-Slana cutoff (Glenn Hwy) to the Slana River, then west along the north bank of the Slana River to its confluence with ...",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -2563,6 +3508,13 @@
   "description": "Unit 14C, Central — Residents Only — Legal animal: Full curl — Hunt Area: the area encompassing Falls Creek drainage on the west and the Indian Creek drainage west of Indian Creek, ex- cluding a 1/4-mile buffer along Powerline Pass trail; and the south-side Eagle River drainage downstream of the Heritage Falls Creek drainage to, but not including, the South Fork Eagle River drainage; and ...",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2582,6 +3534,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -2600,6 +3559,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George.",
   "sex": "male",
   "seasonDates": "2023: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2023-08-23",
+    "end": "2023-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -2618,6 +3584,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George.",
   "sex": "male",
   "seasonDates": "2023: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2023-09-05",
+    "end": "2023-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -2636,6 +3609,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -2654,6 +3634,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2023: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2023-08-23",
+    "end": "2023-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -2672,6 +3659,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2023: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2023-09-05",
+    "end": "2023-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -2690,6 +3684,13 @@
   "description": "Unit 14C, Upper Eagle River — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2709,6 +3710,13 @@
   "description": "Unit 14C, Upper Eagle River — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2023: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2023-09-05",
+    "end": "2023-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2727,6 +3735,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base ...",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -2746,6 +3761,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base ...",
   "sex": "male",
   "seasonDates": "2023: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2023-08-23",
+    "end": "2023-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -2764,6 +3786,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base ...",
   "sex": "male",
   "seasonDates": "2023: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2023-09-05",
+    "end": "2023-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -2784,6 +3813,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2023: Oct. 1-Oct. 10",
+  "seasonRanges": [
+   {
+    "start": "2023-10-01",
+    "end": "2023-10-10"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 57,
@@ -2804,6 +3840,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2023: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2023-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 24,
@@ -2822,6 +3865,13 @@
   "description": "Unit 13D, West — Residents Only — Legal animal: Any ram — Hunt Area: Unit 13D, that portion west of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 15,
@@ -2841,6 +3891,13 @@
   "description": "Unit 13D, East — Residents Only — Legal animal: Full curl — Hunt Area: Unit 13D, that portion east of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek to the Richardson Hwy.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 16,
@@ -2859,6 +3916,13 @@
   "description": "Unit 14A, Metal Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -2878,6 +3942,13 @@
   "description": "Unit 14A, Metal Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2023: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2023-08-26",
+    "end": "2023-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2896,6 +3967,13 @@
   "description": "Unit 14A, Friday Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2915,6 +3993,13 @@
   "description": "Unit 14A, Friday Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2023: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2023-08-26",
+    "end": "2023-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2934,6 +4019,13 @@
   "description": "Unit 14A, Carpenter Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the drainages east of Wolverine Creek drainage, including the Carbon and Carpenter creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2952,6 +4044,13 @@
   "description": "Unit 14A, Carpenter Creek — Residents Only — Legal animal: Full curl — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the drainages east of Wolverine Creek drainage, including the Carbon and Carpenter creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2023: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2023-08-26",
+    "end": "2023-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2972,6 +4071,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Residents Only — Legal animal: Full curl — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 40,
@@ -2993,6 +4099,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Residents Only — Legal animal: Full curl — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2023: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2023-08-26",
+    "end": "2023-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -3014,6 +4127,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2023: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2023-08-26",
+    "end": "2023-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 7,
@@ -3033,6 +4153,13 @@
   "description": "Units 20E and 20D, Mt. Harper — Residents Only; Nonresidents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 20D north of the Alaska Hwy and that portion of Unit 20E within the Middle Fork of the Fortymile River drainage north and west of the north bank upstream from and including the Joseph Creek drainage.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -3052,6 +4179,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3071,6 +4205,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2023: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2023-08-23",
+    "end": "2023-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3089,6 +4230,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2023: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2023-09-05",
+    "end": "2023-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3107,6 +4255,13 @@
   "description": "Unit 14C, Southwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base ...",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3126,6 +4281,13 @@
   "description": "Unit 14C, Southwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base ...",
   "sex": "male",
   "seasonDates": "2023: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2023-08-23",
+    "end": "2023-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3144,6 +4306,13 @@
   "description": "Unit 14C, Southwest — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base ...",
   "sex": "male",
   "seasonDates": "2023: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2023-09-05",
+    "end": "2023-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3164,6 +4333,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2023: Oct. 1-Oct. 10",
+  "seasonRanges": [
+   {
+    "start": "2023-10-01",
+    "end": "2023-10-10"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -3184,6 +4360,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2023: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2023-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3202,6 +4385,13 @@
   "description": "Unit 13D, West — Nonresidents Guided Only — Legal animal: Any ram every 4 regulatory years — Hunt Area: Unit 13D, that portion west of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -3221,6 +4411,13 @@
   "description": "Unit 13D, East — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 13D, that portion east of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek to the Richardson Hwy.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -3240,6 +4437,13 @@
   "description": "Unit 14A, Metal Creek — Nonresidents Guided Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2023: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3261,6 +4465,13 @@
   "description": "Units 12, 13C, and 20D, Tok Management Area — Legal animal: Full curl every 4 regulatory years — Hunt Area: Tok Management Area (TMA) - those portions of Units 12, 13C and 20D bounded by a line along the Alaska Hwy east from the west side of the Johnson River bridge to Tok Junction, then south along the Tok-Slana cutoff (Glenn Hwy) to the Slana River, then west along the north bank of the Slana River to its confluence with ...",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -3280,6 +4491,13 @@
   "description": "Unit 14C, Central — Residents Only — Legal animal: Full curl — Hunt Area: the area encompassing Falls Creek drainage on the west and the Indian Creek drainage west of Indian Creek, ex- cluding a 1/4-mile buffer along Powerline Pass trail; and the south-side Eagle River drainage downstream of the Heritage Falls Creek drainage to, but not including, the South Fork Eagle River drainage; and ...",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3299,6 +4517,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -3317,6 +4542,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George.",
   "sex": "male",
   "seasonDates": "2022: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2022-08-23",
+    "end": "2022-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -3335,6 +4567,13 @@
   "description": "Unit 14C, Northeast — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George.",
   "sex": "male",
   "seasonDates": "2022: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2022-09-05",
+    "end": "2022-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -3353,6 +4592,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -3371,6 +4617,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2022: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2022-08-23",
+    "end": "2022-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -3389,6 +4642,13 @@
   "description": "Unit 14C, Northwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2022: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2022-09-05",
+    "end": "2022-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -3407,6 +4667,13 @@
   "description": "Unit 14C, Upper Eagle River — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3426,6 +4693,13 @@
   "description": "Unit 14C, Upper Eagle River — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2022: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2022-09-05",
+    "end": "2022-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3445,6 +4719,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base ...",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -3463,6 +4744,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base ...",
   "sex": "male",
   "seasonDates": "2022: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2022-08-23",
+    "end": "2022-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -3481,6 +4769,13 @@
   "description": "Unit 14C, Southwest — Residents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base ...",
   "sex": "male",
   "seasonDates": "2022: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2022-09-05",
+    "end": "2022-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -3501,6 +4796,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2022: Oct. 1-Oct. 10",
+  "seasonRanges": [
+   {
+    "start": "2022-10-01",
+    "end": "2022-10-10"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 57,
@@ -3521,6 +4823,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2022: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2022-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 24,
@@ -3539,6 +4848,13 @@
   "description": "Unit 13D, West — Residents Only — Legal animal: Any ram — Hunt Area: Unit 13D, that portion west of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -3557,6 +4873,13 @@
   "description": "Unit 13D, East — Residents Only — Legal animal: Full curl — Hunt Area: Unit 13D, that portion east of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek to the Richardson Hwy.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 16,
@@ -3575,6 +4898,13 @@
   "description": "Unit 14A, Metal Creek — Residents Only — Legal animal: Any ram — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -3593,6 +4923,13 @@
   "description": "Unit 14A, Metal Creek — Residents Only — Legal animal: Any ram — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2022: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2022-08-26",
+    "end": "2022-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -3611,6 +4948,13 @@
   "description": "Unit 14A, Friday Creek — Residents Only — Legal animal: Any ram — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -3630,6 +4974,13 @@
   "description": "Unit 14A, Friday Creek — Residents Only — Legal animal: Any ram — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2022: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2022-08-26",
+    "end": "2022-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -3648,6 +4999,13 @@
   "description": "Unit 14A, Carpenter Creek — Residents Only — Legal animal: Any ram — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the drainages east of Wolverine Creek drainage, including the Carbon and Carpenter creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -3667,6 +5025,13 @@
   "description": "Unit 14A, Carpenter Creek — Residents Only — Legal animal: Any ram — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the drainages east of Wolverine Creek drainage, including the Carbon and Carpenter creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2022: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2022-08-26",
+    "end": "2022-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -3687,6 +5052,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Residents Only; Nonresidents Only — Legal animal: Full curl — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 60,
@@ -3708,6 +5080,13 @@
   "description": "Units 20D, 13B, and 20A, Delta Controlled Use Area — Residents Only; Nonresidents Only — Legal animal: Full curl — Hunt Area: Delta Controlled Use Area (DCUA) - those portions of Units 13B, 20A, and 20D beginning at the confluence of Miller Creek and the Delta River then west to Vertical Angle Bench Mark (VABM) Miller, then west to include all drainages of Augustana Creek and Black Rapids Glacier, then north and east to include all drainages ...",
   "sex": "male",
   "seasonDates": "2022: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2022-08-26",
+    "end": "2022-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 60,
@@ -3728,6 +5107,13 @@
   "description": "Units 20E and 20D, Mt. Harper — Residents Only; Nonresidents Only — Legal animal: Full curl — Hunt Area: that portion of Unit 20D north of the Alaska Hwy and that portion of Unit 20E within the Middle Fork of the Fortymile River drainage north and west of the north bank upstream from and including the Joseph Creek drainage.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -3747,6 +5133,13 @@
   "description": "Unit 14C, Northeast — Nonresidents Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Hunter Creek, Big Timber Creek and the west side drainages of Lake George.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3765,6 +5158,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3784,6 +5184,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2022: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2022-08-23",
+    "end": "2022-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3803,6 +5210,13 @@
   "description": "Unit 14C, Northwest — Nonresidents Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Peters Creek, Thunderbird Creek, Goat Creek, and Knik River downstream from the Hunter Creek drainage.",
   "sex": "male",
   "seasonDates": "2022: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2022-09-05",
+    "end": "2022-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3821,6 +5235,13 @@
   "description": "Unit 14C, Upper Eagle River — Nonresidents Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainage of the north side of Eagle River upstream from and including Dishwater Creek drainage.",
   "sex": "male",
   "seasonDates": "2022: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2022-08-23",
+    "end": "2022-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3840,6 +5261,13 @@
   "description": "Unit 14C, Southwest — Nonresidents Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base ...",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 22",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-22"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3859,6 +5287,13 @@
   "description": "Unit 14C, Southwest — Nonresidents Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base ...",
   "sex": "male",
   "seasonDates": "2022: Aug. 23-Sept. 4",
+  "seasonRanges": [
+   {
+    "start": "2022-08-23",
+    "end": "2022-09-04"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3877,6 +5312,13 @@
   "description": "Unit 14C, Southwest — Nonresidents Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: that portion of Unit 14C within the drainages of Ship Creek above Joint Base ...",
   "sex": "male",
   "seasonDates": "2022: Sept. 5-Sept. 17",
+  "seasonRanges": [
+   {
+    "start": "2022-09-05",
+    "end": "2022-09-17"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3897,6 +5339,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2022: Oct. 1-Oct. 10",
+  "seasonRanges": [
+   {
+    "start": "2022-10-01",
+    "end": "2022-10-10"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -3917,6 +5366,13 @@
   "methodLabel": "Certified Bowhunters Only",
   "sex": "male",
   "seasonDates": "2022: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2022-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3935,6 +5391,13 @@
   "description": "Unit 13D, West — Nonresidents Only — Legal animal: Any ram every 4 regulatory years — Hunt Area: Unit 13D, that portion west of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -3954,6 +5417,13 @@
   "description": "Unit 13D, East — Nonresidents Only — Legal animal: Full curl every 4 regulatory years — Hunt Area: Unit 13D, that portion east of a line along the west side of the Tazlina Glacier, Tazlina Lake, and the west bank of Mendeltna Creek to the Richardson Hwy.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -3973,6 +5443,13 @@
   "description": "Unit 14A, Metal Creek — Nonresidents Only — Legal animal: Any ram every 4 regulatory years — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3992,6 +5469,13 @@
   "description": "Unit 14A, Metal Creek — Nonresidents Only — Legal animal: Any ram every 4 regulatory years — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Marcus Baker and Metal Creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2022: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2022-08-26",
+    "end": "2022-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -4010,6 +5494,13 @@
   "description": "Unit 14A, Friday Creek — Nonresidents Only — Legal animal: Any ram every 4 regulatory years — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2022: Aug. 10-Aug. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-08-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -4028,6 +5519,13 @@
   "description": "Unit 14A, Friday Creek — Nonresidents Only — Legal animal: Any ram every 4 regulatory years — Hunt Area: Unit 14A, that portion south of the Matanuska River, including all of the Friday, Jim, and Wolverine creek drainages in the Chugach Mountains.",
   "sex": "male",
   "seasonDates": "2022: Aug. 26-Sept. 20",
+  "seasonRanges": [
+   {
+    "start": "2022-08-26",
+    "end": "2022-09-20"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,

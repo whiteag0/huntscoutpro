@@ -88,6 +88,15 @@ DAY = MON + r"\s*!?\s*\d{1,2}"
 RANGE = re.compile(r"(?:\d{2}[A-F]?:\s*)?" + DAY + r"\s*(?:-\s*(?:" + MON + r"\s*)?\d{1,2}|thru\s+" + DAY + r")")
 
 
+# Season cells the table reader gets wrong, corrected by hand against the supplement page (verified 2026-10-31):
+# DM414 (2022-2023 supplement) prints "Dec 1-25" but the reader took DM413's "Nov. 1-30"; DM920/DM922 print
+# separate residents (Sept. 1-25) and nonresidents (Sept. 5-25) seasons and the reader kept only the first.
+SEASON_FIXES = {(2022, "DM414"): "2022: Dec. 1-25"}
+for _y in range(2022, 2027):
+    for _c in ("DM920", "DM922"):
+        SEASON_FIXES[(_y, _c)] = f"{_y}: Sept. 1-Sept. 25 (Residents Only); {_y}: Sept. 5-Sept. 25 (Nonresidents Only)"
+
+
 def clean_dates(d):
     """Season cell text -> the date ranges printed in it, or None when the cell holds several ranges separated
     by text that is not "and" (text from a neighbouring column or an inset overlapping the cell)."""
@@ -243,6 +252,7 @@ def build_row(y, code, r, b, supp_text=""):
         if d:
             seasons.append((yr, d))
     season_txt = "; ".join(f"{yr}: {d}" if yr else d for yr, d in seasons) or None
+    season_txt = SEASON_FIXES.get((y, code), season_txt)
 
     total = {"quota": r["permits"], "applicants": r["apps"]}
     if r["pct"] == "<1":

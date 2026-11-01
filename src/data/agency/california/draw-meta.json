@@ -24,6 +24,7 @@
    "keyDates": [
     {
      "label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+     "kind": "application",
      "start": "2026-04-15",
      "end": "2026-06-02",
      "cycle": 2026,
@@ -33,6 +34,7 @@
     },
     {
      "label": "Drawing results available online",
+     "kind": "results",
      "date": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
@@ -41,6 +43,7 @@
     },
     {
      "label": "Deer: drawn tags and unsuccessful-applicant notices expected by mail",
+     "kind": "other",
      "date": "2026-07-02",
      "cycle": 2026,
      "status": "confirmed",
@@ -49,6 +52,7 @@
     },
     {
      "label": "Leftover premium deer tags go on sale (8:00 a.m., first-come first-served)",
+     "kind": "leftover",
      "date": "2026-07-02",
      "cycle": 2026,
      "status": "confirmed",
@@ -57,17 +61,29 @@
     },
     {
      "label": "Deadline to report deer tags (2026 tags)",
+     "kind": "other",
      "date": "2027-01-31",
      "cycle": 2026,
      "status": "confirmed",
      "note": "All deer tag holders must report by January 31 of the license year, hunted or not; late or missing reports carry a $21.60 non-reporting fee.",
+     "sourceId": "d-bgd-page"
+    },
+    {
+     "label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+     "kind": "application",
+     "start": "2027-04-15",
+     "end": "2027-06-02",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by CDFW's Big Game Drawing page (\"Applications for the big game drawing are available each year on April 15 through June 2\"; \"The Big Game Drawing deadline is midnight on June 2 of each year\") and Title 14 CCR §708.14(a)(4)(E) (applicants shall apply \"by June 2 each year\"); CDFW hasn't announced the 2027 dates yet.",
      "sourceId": "d-bgd-page"
     }
    ],
    "sourceIds": [
     "d-digest-2026",
     "d-bgd-page",
-    "d-fees-2026"
+    "d-fees-2026",
+    "d-ccr-708-14"
    ]
   },
   {
@@ -83,6 +99,7 @@
    "keyDates": [
     {
      "label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+     "kind": "application",
      "start": "2026-04-15",
      "end": "2026-06-02",
      "cycle": 2026,
@@ -92,6 +109,7 @@
     },
     {
      "label": "Drawing results available online",
+     "kind": "results",
      "date": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
@@ -100,6 +118,7 @@
     },
     {
      "label": "Successful elk applicants' payment notices mailed by",
+     "kind": "other",
      "date": "2026-07-02",
      "cycle": 2026,
      "status": "confirmed",
@@ -108,17 +127,39 @@
     },
     {
      "label": "Elk tag fee payment deadline (5:00 p.m.)",
+     "kind": "payment",
      "date": "2026-07-15",
      "cycle": 2026,
      "status": "confirmed",
      "note": "Unclaimed tags then go to alternates in the order drawn. 2027 dates not yet published by CDFW as of 2026-10-31.",
      "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+     "kind": "application",
+     "start": "2027-04-15",
+     "end": "2027-06-02",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by CDFW's Big Game Drawing page (\"Applications for the big game drawing are available each year on April 15 through June 2\"; \"The Big Game Drawing deadline is midnight on June 2 of each year\") and Title 14 CCR §708.14(a)(4)(E) (applicants shall apply \"by June 2 each year\"); CDFW hasn't announced the 2027 dates yet.",
+     "sourceId": "d-bgd-page"
+    },
+    {
+     "label": "Elk tag fee payment deadline (5:00 p.m.)",
+     "kind": "payment",
+     "date": "2027-07-15",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by Title 14 CCR §708.11(b)(9) (\"The tag fee shall be received by the department by 5:00 p.m. on July 15 each year. If the deadline to submit the fee falls on a weekend or holiday payment will be accepted until the close of business on the first state business day following the deadline to submit payment.\"); CDFW hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ccr-708-11"
     }
    ],
    "sourceIds": [
     "d-digest-2026",
     "d-bgd-page",
-    "d-fees-2026"
+    "d-fees-2026",
+    "d-ccr-708-14",
+    "d-ccr-708-11"
    ]
   },
   {
@@ -134,6 +175,7 @@
    "keyDates": [
     {
      "label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+     "kind": "application",
      "start": "2026-04-15",
      "end": "2026-06-02",
      "cycle": 2026,
@@ -143,6 +185,7 @@
     },
     {
      "label": "Drawing results available online",
+     "kind": "results",
      "date": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
@@ -151,6 +194,7 @@
     },
     {
      "label": "Successful pronghorn applicants' payment notices mailed by",
+     "kind": "other",
      "date": "2026-07-02",
      "cycle": 2026,
      "status": "confirmed",
@@ -159,17 +203,39 @@
     },
     {
      "label": "Pronghorn tag fee payment deadline (5:00 p.m.)",
+     "kind": "payment",
      "date": "2026-07-15",
      "cycle": 2026,
      "status": "confirmed",
      "note": "Unclaimed tags then go to alternates in the order drawn. 2027 dates not yet published by CDFW as of 2026-10-31.",
      "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+     "kind": "application",
+     "start": "2027-04-15",
+     "end": "2027-06-02",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by CDFW's Big Game Drawing page (\"Applications for the big game drawing are available each year on April 15 through June 2\"; \"The Big Game Drawing deadline is midnight on June 2 of each year\") and Title 14 CCR §708.14(a)(4)(E) (applicants shall apply \"by June 2 each year\"); CDFW hasn't announced the 2027 dates yet.",
+     "sourceId": "d-bgd-page"
+    },
+    {
+     "label": "Pronghorn tag fee payment deadline (5:00 p.m.)",
+     "kind": "payment",
+     "date": "2027-07-15",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by Title 14 CCR §708.10(b)(9) (\"The tag fee shall be received by the department by 5:00 p.m. on July 15 each year. If the deadline to submit the fee falls on a weekend or holiday payment will be accepted until the close of business on the first state business day following the deadline to submit payment.\"); CDFW hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ccr-708-10"
     }
    ],
    "sourceIds": [
     "d-digest-2026",
     "d-bgd-page",
-    "d-fees-2026"
+    "d-fees-2026",
+    "d-ccr-708-14",
+    "d-ccr-708-10"
    ]
   },
   {
@@ -185,6 +251,7 @@
    "keyDates": [
     {
      "label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+     "kind": "application",
      "start": "2026-04-15",
      "end": "2026-06-02",
      "cycle": 2026,
@@ -194,6 +261,7 @@
     },
     {
      "label": "Drawing results available online",
+     "kind": "results",
      "date": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
@@ -202,6 +270,7 @@
     },
     {
      "label": "Bighorn sheep tag fee payment deadline (5:00 p.m., received by the License and Revenue Branch, Sacramento)",
+     "kind": "payment",
      "date": "2026-07-15",
      "cycle": 2026,
      "status": "confirmed",
@@ -210,17 +279,39 @@
     },
     {
      "label": "Mandatory bighorn sheep hunter orientation (in person)",
+     "kind": "other",
      "date": "2026-07-18",
      "cycle": 2026,
      "status": "confirmed",
      "note": "Location to be announced by CDFW. 2027 dates not yet published by CDFW as of 2026-10-31.",
      "sourceId": "d-digest-2026"
+    },
+    {
+     "label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)",
+     "kind": "application",
+     "start": "2027-04-15",
+     "end": "2027-06-02",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by CDFW's Big Game Drawing page (\"Applications for the big game drawing are available each year on April 15 through June 2\"; \"The Big Game Drawing deadline is midnight on June 2 of each year\") and Title 14 CCR §708.14(a)(4)(E) (applicants shall apply \"by June 2 each year\"); CDFW hasn't announced the 2027 dates yet.",
+     "sourceId": "d-bgd-page"
+    },
+    {
+     "label": "Bighorn sheep tag fee payment deadline (5:00 p.m., received by the License and Revenue Branch, Sacramento)",
+     "kind": "payment",
+     "date": "2027-07-15",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by Title 14 CCR §708.9(b)(11) (\"The tag fee shall be received by the department by 5:00 p.m. on July 15 each year. If the deadline to submit the fee falls on a weekend or holiday payment will be accepted until the close of business on the first state business day following the deadline to submit payment.\"); CDFW hasn't announced the 2027 dates yet.",
+     "sourceId": "d-ccr-708-9"
     }
    ],
    "sourceIds": [
     "d-digest-2026",
     "d-bgd-page",
-    "d-fees-2026"
+    "d-fees-2026",
+    "d-ccr-708-14",
+    "d-ccr-708-9"
    ]
   },
   {
@@ -233,6 +324,7 @@
    "keyDates": [
     {
      "label": "Unsuccessful 2026 bear tag report card due",
+     "kind": "other",
      "date": "2027-02-01",
      "cycle": 2026,
      "status": "confirmed",
@@ -482,6 +574,10 @@
   {
    "species": "mule-deer",
    "label": "A zone archery season (buck)",
+   "method": "archery",
+   "units": [
+    "A"
+   ],
    "start": "2026-07-11",
    "end": "2026-08-02",
    "year": 2026,
@@ -491,6 +587,10 @@
   {
    "species": "mule-deer",
    "label": "A zone general season (buck)",
+   "method": "all",
+   "units": [
+    "A"
+   ],
    "start": "2026-08-08",
    "end": "2026-09-20",
    "year": 2026,
@@ -500,6 +600,14 @@
   {
    "species": "mule-deer",
    "label": "B1, B2, B3, B5 and B6 zones archery season (buck)",
+   "method": "archery",
+   "units": [
+    "B1",
+    "B2",
+    "B3",
+    "B5",
+    "B6"
+   ],
    "start": "2026-08-15",
    "end": "2026-09-06",
    "year": 2026,
@@ -509,6 +617,13 @@
   {
    "species": "mule-deer",
    "label": "B1, B2, B3 and B5 zones general season (buck)",
+   "method": "all",
+   "units": [
+    "B1",
+    "B2",
+    "B3",
+    "B5"
+   ],
    "start": "2026-09-19",
    "end": "2026-10-25",
    "year": 2026,
@@ -518,6 +633,10 @@
   {
    "species": "mule-deer",
    "label": "B4 zone archery season (buck)",
+   "method": "archery",
+   "units": [
+    "B4"
+   ],
    "start": "2026-07-25",
    "end": "2026-08-16",
    "year": 2026,
@@ -526,6 +645,10 @@
   {
    "species": "mule-deer",
    "label": "B4 zone general season (buck)",
+   "method": "all",
+   "units": [
+    "B4"
+   ],
    "start": "2026-08-22",
    "end": "2026-09-27",
    "year": 2026,
@@ -534,6 +657,10 @@
   {
    "species": "mule-deer",
    "label": "B6 zone general season (buck)",
+   "method": "all",
+   "units": [
+    "B6"
+   ],
    "start": "2026-09-19",
    "end": "2026-10-18",
    "year": 2026,
@@ -542,6 +669,13 @@
   {
    "species": "mule-deer",
    "label": "C1 zone general season (buck, premium C tag)",
+   "method": "all",
+   "units": [
+    "C1"
+   ],
+   "huntCodes": [
+    "C"
+   ],
    "start": "2026-09-19",
    "end": "2026-10-18",
    "year": 2026,
@@ -551,6 +685,14 @@
   {
    "species": "mule-deer",
    "label": "C2 and C3 zones general season (buck, premium C tag)",
+   "method": "all",
+   "units": [
+    "C2",
+    "C3"
+   ],
+   "huntCodes": [
+    "C"
+   ],
    "start": "2026-09-19",
    "end": "2026-10-25",
    "year": 2026,
@@ -559,6 +701,13 @@
   {
    "species": "mule-deer",
    "label": "C4 zone general season (buck, premium C tag)",
+   "method": "all",
+   "units": [
+    "C4"
+   ],
+   "huntCodes": [
+    "C"
+   ],
    "start": "2026-09-19",
    "end": "2026-10-04",
    "year": 2026,
@@ -567,6 +716,12 @@
   {
    "species": "mule-deer",
    "label": "D3-5 zone archery season (buck)",
+   "method": "archery",
+   "units": [
+    "D3",
+    "D4",
+    "D5"
+   ],
    "start": "2026-08-15",
    "end": "2026-09-06",
    "year": 2026,
@@ -576,6 +731,12 @@
   {
    "species": "mule-deer",
    "label": "D3-5 zone general season (buck)",
+   "method": "all",
+   "units": [
+    "D3",
+    "D4",
+    "D5"
+   ],
    "start": "2026-09-26",
    "end": "2026-11-01",
    "year": 2026,
@@ -585,6 +746,7 @@
   {
    "species": "bear",
    "label": "Archery bear season (all bear zones)",
+   "method": "archery",
    "start": "2026-08-15",
    "end": "2026-09-06",
    "year": 2026,
@@ -594,15 +756,31 @@
   {
    "species": "bear",
    "label": "General bear season (deer X zones other than X8, X9A, X9B, X10 and X12)",
+   "method": "all",
+   "units": [
+    "X1",
+    "X2",
+    "X3A",
+    "X3B",
+    "X4",
+    "X5A",
+    "X5B",
+    "X6A",
+    "X6B",
+    "X7A",
+    "X7B",
+    "X9C"
+   ],
    "start": "2026-10-10",
    "end": "2026-12-27",
    "year": 2026,
    "sourceId": "d-bear-page",
-   "note": "In deer zones A, B, C, D, X8, X9A, X9B, X10 and X12 the general bear season opens with the general deer season and also runs through December 27. Closes earlier if 1,700 bears are reported taken."
+   "note": "Units are CDFW deer hunting zones. In deer zones A, B, C, D, X8, X9A, X9B, X10 and X12 the general bear season opens with the general deer season and also runs through December 27. Closes earlier if 1,700 bears are reported taken."
   },
   {
    "species": "turkey",
    "label": "Fall wild turkey season",
+   "method": "all",
    "start": "2026-11-14",
    "end": "2026-12-13",
    "year": 2026,
@@ -612,6 +790,7 @@
   {
    "species": "turkey",
    "label": "Spring wild turkey general season",
+   "method": "all",
    "start": "2027-03-27",
    "end": "2027-05-02",
    "year": 2027,
@@ -621,6 +800,7 @@
   {
    "species": "turkey",
    "label": "Spring wild turkey archery-only season",
+   "method": "archery",
    "start": "2027-05-03",
    "end": "2027-05-16",
    "year": 2027,
@@ -635,6 +815,1879 @@
    "year": 2027,
    "sourceId": "d-upland-page",
    "note": "Also May 3-16, 2027. Listed in CDFW's 2026-2027 seasons."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D6 and D7 zones archery season (buck)",
+   "method": "archery",
+   "units": [
+    "D6",
+    "D7"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-09-06",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted zone tag (issued until the quota fills)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D6 and D7 zones general season (buck)",
+   "method": "all",
+   "units": [
+    "D6",
+    "D7"
+   ],
+   "start": "2026-09-19",
+   "end": "2026-11-01",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted zone tag (issued until the quota fills)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D8, D9 and D10 zones archery season (buck)",
+   "method": "archery",
+   "units": [
+    "D8",
+    "D9",
+    "D10"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-09-06",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted zone tag (issued until the quota fills)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D8, D9 and D10 zones general season (buck)",
+   "method": "all",
+   "units": [
+    "D8",
+    "D9",
+    "D10"
+   ],
+   "start": "2026-09-26",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted zone tag (issued until the quota fills)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D11, D13 and D15 zones archery season (buck)",
+   "method": "archery",
+   "units": [
+    "D11",
+    "D13",
+    "D15"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted zone tag (issued until the quota fills). D11, D13 and D15 tags are each valid in all three zones."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D11, D13 and D15 zones general season (buck)",
+   "method": "all",
+   "units": [
+    "D11",
+    "D13",
+    "D15"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-08",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted zone tag (issued until the quota fills). D11, D13 and D15 tags are each valid in all three zones."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D16 zone archery season (buck)",
+   "method": "archery",
+   "units": [
+    "D16"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted zone tag (issued until the quota fills)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D16 zone general season (buck)",
+   "method": "all",
+   "units": [
+    "D16"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted zone tag (issued until the quota fills)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D19 zone archery season (buck)",
+   "method": "archery",
+   "units": [
+    "D19"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted zone tag (issued until the quota fills)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D19 zone general season (buck)",
+   "method": "all",
+   "units": [
+    "D19"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-11-01",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Unrestricted zone tag (issued until the quota fills)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D12 zone archery season (buck, premium D12 tag)",
+   "method": "archery",
+   "units": [
+    "D12"
+   ],
+   "huntCodes": [
+    "D12"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Premium deer hunt (Big Game Drawing); the tag is valid in both seasons."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D12 zone general season (buck, premium D12 tag)",
+   "method": "all",
+   "units": [
+    "D12"
+   ],
+   "huntCodes": [
+    "D12"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Premium deer hunt (Big Game Drawing); the tag is valid in both seasons."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D14 zone archery season (buck, premium D14 tag)",
+   "method": "archery",
+   "units": [
+    "D14"
+   ],
+   "huntCodes": [
+    "D14"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Premium deer hunt (Big Game Drawing); the tag is valid in both seasons."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D14 zone general season (buck, premium D14 tag)",
+   "method": "all",
+   "units": [
+    "D14"
+   ],
+   "huntCodes": [
+    "D14"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-08",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Premium deer hunt (Big Game Drawing); the tag is valid in both seasons."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D17 zone archery season (buck, premium D17 tag)",
+   "method": "archery",
+   "units": [
+    "D17"
+   ],
+   "huntCodes": [
+    "D17"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Premium deer hunt (Big Game Drawing); the tag is valid in both seasons."
+  },
+  {
+   "species": "mule-deer",
+   "label": "D17 zone general season (buck, premium D17 tag)",
+   "method": "all",
+   "units": [
+    "D17"
+   ],
+   "huntCodes": [
+    "D17"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-01",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Premium deer hunt (Big Game Drawing); the tag is valid in both seasons."
+  },
+  {
+   "species": "mule-deer",
+   "label": "X zone general season (buck): X9A, X9B, X12",
+   "method": "all",
+   "units": [
+    "X9A",
+    "X9B",
+    "X12"
+   ],
+   "huntCodes": [
+    "X9A",
+    "X9B",
+    "X12"
+   ],
+   "start": "2026-09-19",
+   "end": "2026-10-12",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Premium deer hunts (Big Game Drawing), one tag per zone; archery in each X zone is a separate hunt (A3-A20)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "X zone general season (buck): X8, X10",
+   "method": "all",
+   "units": [
+    "X8",
+    "X10"
+   ],
+   "huntCodes": [
+    "X8",
+    "X10"
+   ],
+   "start": "2026-09-26",
+   "end": "2026-10-11",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Premium deer hunts (Big Game Drawing), one tag per zone; archery in each X zone is a separate hunt (A3-A20)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "X zone general season (buck): X1, X2, X3A, X3B, X4, X5A, X5B, X6A, X6B, X7A, X7B",
+   "method": "all",
+   "units": [
+    "X1",
+    "X2",
+    "X3A",
+    "X3B",
+    "X4",
+    "X5A",
+    "X5B",
+    "X6A",
+    "X6B",
+    "X7A",
+    "X7B"
+   ],
+   "huntCodes": [
+    "X1",
+    "X2",
+    "X3A",
+    "X3B",
+    "X4",
+    "X5A",
+    "X5B",
+    "X6A",
+    "X6B",
+    "X7A",
+    "X7B"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Premium deer hunts (Big Game Drawing), one tag per zone; archery in each X zone is a separate hunt (A3-A20)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "X zone general season (buck): X9C",
+   "method": "all",
+   "units": [
+    "X9C"
+   ],
+   "huntCodes": [
+    "X9C"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-11-08",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Premium deer hunts (Big Game Drawing), one tag per zone; archery in each X zone is a separate hunt (A3-A20)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "C zones archery-only hunt A1 (buck): C1 and C4",
+   "method": "archery",
+   "units": [
+    "C1",
+    "C4"
+   ],
+   "huntCodes": [
+    "A1"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-08-30",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Premium hunt A1 (Big Game Drawing) is valid in zones C1-C4 during the archery season only; each zone has its own dates."
+  },
+  {
+   "species": "mule-deer",
+   "label": "C zones archery-only hunt A1 (buck): C2 and C3",
+   "method": "archery",
+   "units": [
+    "C2",
+    "C3"
+   ],
+   "huntCodes": [
+    "A1"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-09-06",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Premium hunt A1 (Big Game Drawing) is valid in zones C1-C4 during the archery season only; each zone has its own dates."
+  },
+  {
+   "species": "mule-deer",
+   "label": "X zone archery-only hunts (buck): A19",
+   "method": "archery",
+   "units": [
+    "X10"
+   ],
+   "huntCodes": [
+    "A19"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-08-30",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Archery-only hunts, one per X zone; premium (Big Game Drawing) except A18 and A19, which are unrestricted."
+  },
+  {
+   "species": "mule-deer",
+   "label": "X zone archery-only hunts (buck): A3, A4, A5, A6, A7, A8, A9, A11, A12, A13, A14, A15, A16, A17, A18, A20",
+   "method": "archery",
+   "units": [
+    "X1",
+    "X2",
+    "X3A",
+    "X3B",
+    "X4",
+    "X5A",
+    "X5B",
+    "X6A",
+    "X6B",
+    "X7A",
+    "X7B",
+    "X8",
+    "X9A",
+    "X9B",
+    "X9C",
+    "X12"
+   ],
+   "huntCodes": [
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A20"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-09-06",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "Archery-only hunts, one per X zone; premium (Big Game Drawing) except A18 and A19, which are unrestricted."
+  },
+  {
+   "species": "elk",
+   "label": "Fort Hunter Liggett elk (archery) — hunt 449",
+   "method": "archery",
+   "units": [
+    "Fort Hunter Liggett"
+   ],
+   "huntCodes": [
+    "449"
+   ],
+   "start": "2026-08-01",
+   "end": "2026-08-09",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 449 Fort Hunter Liggett - Archery - Either-Sex (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Owens Valley Multiple Zone elk (archery) — hunt 422",
+   "method": "archery",
+   "units": [
+    "Owens Valley Multiple Zone"
+   ],
+   "huntCodes": [
+    "422"
+   ],
+   "start": "2026-08-08",
+   "end": "2026-08-16",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 422 Owens Valley Multiple Zone - Archery - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Grizzly Island elk (general methods) — hunts 433, 466",
+   "method": "all",
+   "units": [
+    "Grizzly Island"
+   ],
+   "huntCodes": [
+    "433",
+    "466"
+   ],
+   "start": "2026-08-11",
+   "end": "2026-08-14",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 433 Grizzly Island Period 1 - General Methods - Antlerless (Tule elk); 466 Grizzly Island Apprentice - Period 1 - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Grizzly Island elk (general methods) — hunts 437, 469",
+   "method": "all",
+   "units": [
+    "Grizzly Island"
+   ],
+   "huntCodes": [
+    "437",
+    "469"
+   ],
+   "start": "2026-08-13",
+   "end": "2026-08-16",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 437 Grizzly Island Period 2 - General Methods - Spike Bull (Tule elk); 469 Grizzly Island Apprentice - Period 2 - General Methods - Spike Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Siskiyou elk (archery) — hunt 384",
+   "method": "archery",
+   "units": [
+    "Siskiyou"
+   ],
+   "huntCodes": [
+    "384"
+   ],
+   "start": "2026-08-26",
+   "end": "2026-09-08",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 384 Siskiyou - Archery - Bull (Roosevelt elk zone). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Lake Pillsbury elk (general methods) — hunt 387",
+   "method": "all",
+   "units": [
+    "Lake Pillsbury"
+   ],
+   "huntCodes": [
+    "387"
+   ],
+   "start": "2026-08-29",
+   "end": "2026-09-04",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 387 Lake Pillsbury Period 1 - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Central Coast elk (archery) — hunts 382, 383",
+   "method": "archery",
+   "units": [
+    "Central Coast"
+   ],
+   "huntCodes": [
+    "382",
+    "383"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 382 Central Coast - Archery - Antlerless (Tule elk); 383 Central Coast - Archery - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "La Panza elk (archery) — hunts 385, 386",
+   "method": "archery",
+   "units": [
+    "La Panza"
+   ],
+   "huntCodes": [
+    "385",
+    "386"
+   ],
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 385 La Panza - Archery - Bull (Tule elk); 386 La Panza - Archery - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Northeastern elk (archery) — hunt 411",
+   "method": "archery",
+   "units": [
+    "Northeastern"
+   ],
+   "huntCodes": [
+    "411"
+   ],
+   "start": "2026-09-02",
+   "end": "2026-09-13",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 411 Northeastern - Archery - Either-Sex (Rocky Mountain elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Northwestern elk (general methods) — hunts 355, 374, 483",
+   "method": "all",
+   "units": [
+    "Northwestern"
+   ],
+   "huntCodes": [
+    "355",
+    "374",
+    "483"
+   ],
+   "start": "2026-09-02",
+   "end": "2026-09-24",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 355 Northwestern - General Methods - Bull (Roosevelt elk); 374 Northwestern - General Methods - Antlerless (Roosevelt elk); 483 Northwestern - General Methods - Either-Sex (Roosevelt elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Grizzly Island elk (general methods) — hunt 357",
+   "method": "all",
+   "units": [
+    "Grizzly Island"
+   ],
+   "huntCodes": [
+    "357"
+   ],
+   "start": "2026-09-03",
+   "end": "2026-09-06",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 357 Grizzly Island Period 8 - General Methods - Spike Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "East Park Reservoir elk (general methods) — hunts 461, 463",
+   "method": "all",
+   "units": [
+    "East Park Reservoir"
+   ],
+   "huntCodes": [
+    "461",
+    "463"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-10-01",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 461 East Park Reservoir - General Methods - Bull (Tule elk); 463 East Park Reservoir - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Lake Pillsbury elk (general methods) — hunt 388",
+   "method": "all",
+   "units": [
+    "Lake Pillsbury"
+   ],
+   "huntCodes": [
+    "388"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-09-11",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 388 Lake Pillsbury Period 2 - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Tehachapi elk (general methods) — hunts 379, 380",
+   "method": "all",
+   "units": [
+    "Tehachapi"
+   ],
+   "huntCodes": [
+    "379",
+    "380"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-10-04",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 379 Tehachapi - General Methods - Antlerless (Rocky Mountain elk); 380 Tehachapi - General Methods - Bull (Rocky Mountain elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Grizzly Island elk (general methods) — hunt 358",
+   "method": "all",
+   "units": [
+    "Grizzly Island"
+   ],
+   "huntCodes": [
+    "358"
+   ],
+   "start": "2026-09-08",
+   "end": "2026-09-11",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 358 Grizzly Island Period 9 - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Marble Mountains elk (general methods) — hunts 301, 302, 408",
+   "method": "all",
+   "units": [
+    "Marble Mountains"
+   ],
+   "huntCodes": [
+    "301",
+    "302",
+    "408"
+   ],
+   "start": "2026-09-09",
+   "end": "2026-09-20",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 301 Marble Mountains - General Methods - Antlerless (Roosevelt elk); 302 Marble Mountains - General Methods - Bull (Roosevelt elk); 408 Marble Mountains Apprentice - General Methods - Either-Sex (Roosevelt elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Siskiyou elk (general methods) — hunt 401",
+   "method": "all",
+   "units": [
+    "Siskiyou"
+   ],
+   "huntCodes": [
+    "401"
+   ],
+   "start": "2026-09-09",
+   "end": "2026-09-20",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 401 Siskiyou - General Methods - Antlerless (Roosevelt elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Grizzly Island elk (general methods) — hunt 359",
+   "method": "all",
+   "units": [
+    "Grizzly Island"
+   ],
+   "huntCodes": [
+    "359"
+   ],
+   "start": "2026-09-10",
+   "end": "2026-09-13",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 359 Grizzly Island Period 10 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Bishop elk (muzzleloader) — hunt 487",
+   "method": "muzzleloader",
+   "units": [
+    "Bishop"
+   ],
+   "huntCodes": [
+    "487"
+   ],
+   "start": "2026-09-12",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 487 Bishop Period 1 - Muzzleloader - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Goodale elk (general methods) — hunt 373",
+   "method": "all",
+   "units": [
+    "Goodale"
+   ],
+   "huntCodes": [
+    "373"
+   ],
+   "start": "2026-09-12",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 373 Goodale Period 1 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Independence elk (muzzleloader) — hunt 367",
+   "method": "muzzleloader",
+   "units": [
+    "Independence"
+   ],
+   "huntCodes": [
+    "367"
+   ],
+   "start": "2026-09-12",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 367 Independence Period 1 - Muzzleloader - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Lake Pillsbury elk (general methods) — hunt 389",
+   "method": "all",
+   "units": [
+    "Lake Pillsbury"
+   ],
+   "huntCodes": [
+    "389"
+   ],
+   "start": "2026-09-12",
+   "end": "2026-09-18",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 389 Lake Pillsbury Period 3 - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Lone Pine elk (archery) — hunts 311, 337",
+   "method": "archery",
+   "units": [
+    "Lone Pine"
+   ],
+   "huntCodes": [
+    "311",
+    "337"
+   ],
+   "start": "2026-09-12",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 311 Lone Pine Period 1 - Archery - Bull (Tule elk zone); 337 Lone Pine Period 1 - Archery - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Tinemaha elk (archery) — hunt 312",
+   "method": "archery",
+   "units": [
+    "Tinemaha"
+   ],
+   "huntCodes": [
+    "312"
+   ],
+   "start": "2026-09-12",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 312 Tinemaha - Period 1 - Archery - Bull (Tule elk zone). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Tinemaha Mountain elk (general methods) — hunt 392",
+   "method": "all",
+   "units": [
+    "Tinemaha Mountain"
+   ],
+   "huntCodes": [
+    "392"
+   ],
+   "start": "2026-09-12",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 392 Tinemaha Mountain Period 1 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "West Tinemaha elk (general methods) — hunt 315",
+   "method": "all",
+   "units": [
+    "West Tinemaha"
+   ],
+   "huntCodes": [
+    "315"
+   ],
+   "start": "2026-09-12",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 315 West Tinemaha Period 1 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Whitney elk (archery) — hunt 343",
+   "method": "archery",
+   "units": [
+    "Whitney"
+   ],
+   "huntCodes": [
+    "343"
+   ],
+   "start": "2026-09-12",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 343 Whitney Period 1 - Archery Only - Bull (Tule elk zone). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Grizzly Island elk (general methods) — hunt 360",
+   "method": "all",
+   "units": [
+    "Grizzly Island"
+   ],
+   "huntCodes": [
+    "360"
+   ],
+   "start": "2026-09-15",
+   "end": "2026-09-18",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 360 Grizzly Island Period 11 - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Northeastern elk (general methods) — hunts 305, 409",
+   "method": "all",
+   "units": [
+    "Northeastern"
+   ],
+   "huntCodes": [
+    "305",
+    "409"
+   ],
+   "start": "2026-09-16",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 305 Northeastern - General Methods - Bull (Rocky Mountain elk); 409 Northeastern Apprentice- General Methods - Either-Sex (Rocky Mountain elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Grizzly Island elk (general methods) — hunt 362",
+   "method": "all",
+   "units": [
+    "Grizzly Island"
+   ],
+   "huntCodes": [
+    "362"
+   ],
+   "start": "2026-09-17",
+   "end": "2026-09-20",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 362 Grizzly Island Period 12 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Grizzly Island elk (general methods) — hunts 363, 381",
+   "method": "all",
+   "units": [
+    "Grizzly Island"
+   ],
+   "huntCodes": [
+    "363",
+    "381"
+   ],
+   "start": "2026-09-22",
+   "end": "2026-09-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 363 Grizzly Island Period 13 - General Methods - Antlerless (Tule elk); 381 Grizzly Island Period 13 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Mendocino elk (general methods) — hunt 328",
+   "method": "all",
+   "units": [
+    "Mendocino"
+   ],
+   "huntCodes": [
+    "328"
+   ],
+   "start": "2026-09-23",
+   "end": "2026-10-04",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 328 Mendocino - General Methods - Bull (Roosevelt/Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Lake Pillsbury elk (general methods) — hunt 390",
+   "method": "all",
+   "units": [
+    "Lake Pillsbury"
+   ],
+   "huntCodes": [
+    "390"
+   ],
+   "start": "2026-09-26",
+   "end": "2026-10-02",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 390 Lake Pillsbury Period 4 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Bishop elk (general methods) — hunt 396",
+   "method": "all",
+   "units": [
+    "Bishop"
+   ],
+   "huntCodes": [
+    "396"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-11",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 396 Bishop Period 2 Apprentice - General Methods - Bull (Tule elk zone). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Central Coast elk (general methods) — hunts 375, 376",
+   "method": "all",
+   "units": [
+    "Central Coast"
+   ],
+   "huntCodes": [
+    "375",
+    "376"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 375 Central Coast - General Methods - Antlerless (Tule elk); 376 Central Coast - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Goodale elk (general methods) — hunt 365",
+   "method": "all",
+   "units": [
+    "Goodale"
+   ],
+   "huntCodes": [
+    "365"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-11",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 365 Goodale Period 2 - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Independence elk (general methods) — hunts 368, 369",
+   "method": "all",
+   "units": [
+    "Independence"
+   ],
+   "huntCodes": [
+    "368",
+    "369"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-11",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 368 Independence Period 2 - General Methods - Antlerless (Tule elk); 369 Independence Period 2 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Lake Pillsbury elk (general methods) — hunt 391",
+   "method": "all",
+   "units": [
+    "Lake Pillsbury"
+   ],
+   "huntCodes": [
+    "391"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-09",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 391 Lake Pillsbury Period 5 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Lone Pine elk (general methods) — hunt 486",
+   "method": "all",
+   "units": [
+    "Lone Pine"
+   ],
+   "huntCodes": [
+    "486"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-11",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 486 Lone Pine Period 2 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "San Luis Reservoir elk (general methods) — hunt 497",
+   "method": "all",
+   "units": [
+    "San Luis Reservoir"
+   ],
+   "huntCodes": [
+    "497"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 497 San Luis Reservoir - General Methods - Either Sex (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Tinemaha elk (general methods) — hunt 426",
+   "method": "all",
+   "units": [
+    "Tinemaha"
+   ],
+   "huntCodes": [
+    "426"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-11",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 426 Tinemaha Period 2 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Tinemaha Mountain elk (general methods) — hunt 393",
+   "method": "all",
+   "units": [
+    "Tinemaha Mountain"
+   ],
+   "huntCodes": [
+    "393"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-11",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 393 Tinemaha Mountain Period 2 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "West Tinemaha elk (general methods) — hunt 317",
+   "method": "all",
+   "units": [
+    "West Tinemaha"
+   ],
+   "huntCodes": [
+    "317"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-11",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 317 West Tinemaha Period 2 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Whitney elk (general methods) — hunt 323",
+   "method": "all",
+   "units": [
+    "Whitney"
+   ],
+   "huntCodes": [
+    "323"
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-11",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 323 Whitney Period 2 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Siskiyou elk (general methods) — hunt 300",
+   "method": "all",
+   "units": [
+    "Siskiyou"
+   ],
+   "huntCodes": [
+    "300"
+   ],
+   "start": "2026-10-07",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 300 Siskiyou - General Methods - Bull (Roosevelt elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Bear Valley elk (general methods) — hunts 329, 330",
+   "method": "all",
+   "units": [
+    "Bear Valley"
+   ],
+   "huntCodes": [
+    "329",
+    "330"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 329 Bear Valley - General Methods - Antlerless (Tule elk); 330 Bear Valley - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Cache Creek elk (general methods) — hunts 406, 484",
+   "method": "all",
+   "units": [
+    "Cache Creek"
+   ],
+   "huntCodes": [
+    "406",
+    "484"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 406 Cache Creek Period 1 - General Methods - Bull (Tule elk); 484 Cache Creek Apprentice - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "La Panza elk (general methods) — hunts 417, 419, 464",
+   "method": "all",
+   "units": [
+    "La Panza"
+   ],
+   "huntCodes": [
+    "417",
+    "419",
+    "464"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-01",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 417 La Panza Period 1 - General Methods - Antlerless (Tule elk); 419 La Panza Period 1 - General Methods - Bull (Tule elk); 464 La Panza Period 1 Apprentice - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Bishop elk (general methods) — hunt 490",
+   "method": "all",
+   "units": [
+    "Bishop"
+   ],
+   "huntCodes": [
+    "490"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 490 Bishop Period 3 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Cache Creek elk (general methods) — hunt 416",
+   "method": "all",
+   "units": [
+    "Cache Creek"
+   ],
+   "huntCodes": [
+    "416"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-11-01",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 416 Cache Creek Period 2 - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Goodale elk (general methods) — hunt 366",
+   "method": "all",
+   "units": [
+    "Goodale"
+   ],
+   "huntCodes": [
+    "366"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 366 Goodale Period 3 - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Independence elk (general methods) — hunts 370, 371",
+   "method": "all",
+   "units": [
+    "Independence"
+   ],
+   "huntCodes": [
+    "370",
+    "371"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 370 Independence Period 3 - General Methods - Antlerless (Tule elk); 371 Independence Period 3 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Lone Pine elk (general methods) — hunt 496",
+   "method": "all",
+   "units": [
+    "Lone Pine"
+   ],
+   "huntCodes": [
+    "496"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 496 Lone Pine Period 3 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "West Tinemaha elk (general methods) — hunt 394",
+   "method": "all",
+   "units": [
+    "West Tinemaha"
+   ],
+   "huntCodes": [
+    "394"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 394 West Tinemaha Period 3 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Whitney elk (general methods) — hunt 324",
+   "method": "all",
+   "units": [
+    "Whitney"
+   ],
+   "huntCodes": [
+    "324"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 324 Whitney Period 3 - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Marble Mountains elk (muzzleloader/archery) — hunt 303",
+   "method": "other",
+   "units": [
+    "Marble Mountains"
+   ],
+   "huntCodes": [
+    "303"
+   ],
+   "start": "2026-10-31",
+   "end": "2026-11-08",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 303 Marble Mountains - Muzzleloader/Archery - Either-Sex (Roosevelt elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Bishop elk (general methods) — hunt 348",
+   "method": "all",
+   "units": [
+    "Bishop"
+   ],
+   "huntCodes": [
+    "348"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 348 Bishop Period 4 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Fort Hunter Liggett elk (archery) — hunt 450",
+   "method": "archery",
+   "units": [
+    "Fort Hunter Liggett"
+   ],
+   "huntCodes": [
+    "450"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 450 Fort Hunter Liggett - Archery - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Northeastern elk (general methods) — hunt 304",
+   "method": "all",
+   "units": [
+    "Northeastern"
+   ],
+   "huntCodes": [
+    "304"
+   ],
+   "start": "2026-11-11",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 304 Northeastern - General Methods - Antlerless (Rocky Mountain elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Gabilan elk (general methods) — hunts 377, 378",
+   "method": "all",
+   "units": [
+    "Gabilan"
+   ],
+   "huntCodes": [
+    "377",
+    "378"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 377 Gabilan - General Methods - Antlerless (Tule elk); 378 Gabilan - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "La Panza elk (general methods) — hunts 418, 420",
+   "method": "all",
+   "units": [
+    "La Panza"
+   ],
+   "huntCodes": [
+    "418",
+    "420"
+   ],
+   "start": "2026-11-14",
+   "end": "2026-12-06",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 418 La Panza Period 2 - General Methods - Antlerless (Tule elk); 420 La Panza Period 2 - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Fort Hunter Liggett elk (general methods) — hunt 448",
+   "method": "all",
+   "units": [
+    "Fort Hunter Liggett"
+   ],
+   "huntCodes": [
+    "448"
+   ],
+   "start": "2026-11-21",
+   "end": "2026-11-29",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 448 Fort Hunter Liggett Period 2 - General Methods - Antlerless (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "elk",
+   "label": "Fort Hunter Liggett elk (general methods) — hunts 447, 471, 472",
+   "method": "all",
+   "units": [
+    "Fort Hunter Liggett"
+   ],
+   "huntCodes": [
+    "447",
+    "471",
+    "472"
+   ],
+   "start": "2026-12-22",
+   "end": "2027-01-03",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 447 Fort Hunter Liggett Period 3 - General Methods - Bull (Tule elk); 471 Fort Hunter Liggett Apprentice - General Methods - Antlerless (Tule elk); 472 Fort Hunter Liggett Apprentice - General Methods - Bull (Tule elk). Drawing tags only."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn Zone 2 (archery) — hunt 728",
+   "method": "archery",
+   "units": [
+    "Zone 2"
+   ],
+   "huntCodes": [
+    "728"
+   ],
+   "start": "2026-08-08",
+   "end": "2026-08-16",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 728 Zone 2 - Clear Lake - Archery - Buck. Drawing tags only."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn Zone 4 (archery) — hunt 745",
+   "method": "archery",
+   "units": [
+    "Zone 4"
+   ],
+   "huntCodes": [
+    "745"
+   ],
+   "start": "2026-08-08",
+   "end": "2026-08-16",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 745 Zone 4 - Lassen - Archery - Buck. Drawing tags only."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn Zone 5 (archery) — hunt 755",
+   "method": "archery",
+   "units": [
+    "Zone 5"
+   ],
+   "huntCodes": [
+    "755"
+   ],
+   "start": "2026-08-08",
+   "end": "2026-08-16",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 755 Zone 5 - Big Valley - Archery - Buck. Drawing tags only."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn Zone 6 (archery) — hunt 765",
+   "method": "archery",
+   "units": [
+    "Zone 6"
+   ],
+   "huntCodes": [
+    "765"
+   ],
+   "start": "2026-08-08",
+   "end": "2026-08-16",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 765 Zone 6 - Surprise Valley - Archery - Buck. Drawing tags only."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn Zone 1 (general methods) — hunt 710",
+   "method": "all",
+   "units": [
+    "Zone 1"
+   ],
+   "huntCodes": [
+    "710"
+   ],
+   "start": "2026-08-22",
+   "end": "2026-08-30",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 710 Zone 1 - Mount Dome - General Methods - Buck. Drawing tags only."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn Zone 2 (general methods) — hunt 720",
+   "method": "all",
+   "units": [
+    "Zone 2"
+   ],
+   "huntCodes": [
+    "720"
+   ],
+   "start": "2026-08-22",
+   "end": "2026-08-30",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 720 Zone 2 - Clear Lake - General Methods - Buck. Drawing tags only."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn Zone 3 (general methods) — hunt 730",
+   "method": "all",
+   "units": [
+    "Zone 3"
+   ],
+   "huntCodes": [
+    "730"
+   ],
+   "start": "2026-08-22",
+   "end": "2026-08-30",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 730 Zone 3 - Likely Tables Period 1 - General Methods - Buck. Drawing tags only."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn Zone 4 (general methods) — hunts 740, 790",
+   "method": "all",
+   "units": [
+    "Zone 4"
+   ],
+   "huntCodes": [
+    "740",
+    "790"
+   ],
+   "start": "2026-08-22",
+   "end": "2026-08-30",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 740 Zone 4 - Lassen Period 1 - General Methods - Buck; 790 Zone 4 - Lassen Apprentice - General Methods - Either-Sex. Drawing tags only."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn Zone 5 (general methods) — hunts 750, 780",
+   "method": "all",
+   "units": [
+    "Zone 5"
+   ],
+   "huntCodes": [
+    "750",
+    "780"
+   ],
+   "start": "2026-08-22",
+   "end": "2026-08-30",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 750 Zone 5 - Big Valley - General Methods - Buck; 780 Zone 5 - Big Valley Apprentice - General Methods - Either-Sex. Drawing tags only."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn Zone 6 (general methods) — hunts 760, 766",
+   "method": "all",
+   "units": [
+    "Zone 6"
+   ],
+   "huntCodes": [
+    "760",
+    "766"
+   ],
+   "start": "2026-08-22",
+   "end": "2026-08-30",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 760 Zone 6 - Surprise Valley - General Methods - Buck; 766 Zone 6 - Surprise Valley Apprentice - General Methods - Either-Sex. Drawing tags only."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Pronghorn Zone 4 (general methods) — hunt 742",
+   "method": "all",
+   "units": [
+    "Zone 4"
+   ],
+   "huntCodes": [
+    "742"
+   ],
+   "start": "2026-09-05",
+   "end": "2026-09-13",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 742 Zone 4 - Lassen Period 2 - General Methods - Buck. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 7 — hunt 507",
+   "method": "all",
+   "units": [
+    "Zone 7"
+   ],
+   "huntCodes": [
+    "507"
+   ],
+   "start": "2026-08-15",
+   "end": "2026-09-27",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 507 Zone 7 - White Mountains P1 - General Method - Ram. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 1 — hunt 501",
+   "method": "all",
+   "units": [
+    "Zone 1"
+   ],
+   "huntCodes": [
+    "501"
+   ],
+   "start": "2026-12-05",
+   "end": "2027-02-07",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 501 Zone 1 - Marble and Clipper Mountains - General Method - Ram. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 10 — hunt 512",
+   "method": "all",
+   "units": [
+    "Zone 10"
+   ],
+   "huntCodes": [
+    "512"
+   ],
+   "start": "2026-12-05",
+   "end": "2027-01-02",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 512 Zone 10 - Newberry, Rodman and Ord Mountains P1. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 11 — hunt 514",
+   "method": "all",
+   "units": [
+    "Zone 11"
+   ],
+   "huntCodes": [
+    "514"
+   ],
+   "start": "2026-12-05",
+   "end": "2027-02-07",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 514 Zone 11 - Granite and North Bristol Mountains. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 12 — hunt 515",
+   "method": "all",
+   "units": [
+    "Zone 12"
+   ],
+   "huntCodes": [
+    "515"
+   ],
+   "start": "2026-12-05",
+   "end": "2027-02-07",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 515 Zone 12 - Providence, Woods & Hackberry Mountains. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 13 — hunt 516",
+   "method": "all",
+   "units": [
+    "Zone 13"
+   ],
+   "huntCodes": [
+    "516"
+   ],
+   "start": "2026-12-05",
+   "end": "2027-02-07",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 516 Zone 13 - Castle Mountains and Piute Range. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 2 — hunt 502",
+   "method": "all",
+   "units": [
+    "Zone 2"
+   ],
+   "huntCodes": [
+    "502"
+   ],
+   "start": "2026-12-05",
+   "end": "2027-02-07",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 502 Zone 2 - Old Dad and Kelso Peak Mountains - General Method - Ram. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 3 — hunt 503",
+   "method": "all",
+   "units": [
+    "Zone 3"
+   ],
+   "huntCodes": [
+    "503"
+   ],
+   "start": "2026-12-05",
+   "end": "2027-02-07",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 503 Zone 3 - Clark and Kingston Mountain Ranges - General Method - Ram. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 4 — hunt 504",
+   "method": "all",
+   "units": [
+    "Zone 4"
+   ],
+   "huntCodes": [
+    "504"
+   ],
+   "start": "2026-12-05",
+   "end": "2027-02-07",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 504 Zone 4 - Orocopia Mountains - General Method - Ram. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 6 — hunt 506",
+   "method": "all",
+   "units": [
+    "Zone 6"
+   ],
+   "huntCodes": [
+    "506"
+   ],
+   "start": "2026-12-05",
+   "end": "2027-02-07",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 506 Zone 6 - Sheep Hole Mountains - General Method - Ram. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 8 — hunt 508",
+   "method": "all",
+   "units": [
+    "Zone 8"
+   ],
+   "huntCodes": [
+    "508"
+   ],
+   "start": "2026-12-05",
+   "end": "2027-02-07",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 508 Zone 8 - South Bristol Mountains - General Method - Ram. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 9 — hunt 509",
+   "method": "all",
+   "units": [
+    "Zone 9"
+   ],
+   "huntCodes": [
+    "509"
+   ],
+   "start": "2026-12-05",
+   "end": "2027-02-07",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 509 Zone 9 - Cady Mountains - General Method - Ram. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 5 — hunt 505",
+   "method": "all",
+   "units": [
+    "Zone 5"
+   ],
+   "huntCodes": [
+    "505"
+   ],
+   "start": "2026-12-19",
+   "end": "2027-02-21",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 505 Zone 5 - San Gorgonio Wilderness - General Method - Ram. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 7 — hunt 511",
+   "method": "all",
+   "units": [
+    "Zone 7"
+   ],
+   "huntCodes": [
+    "511"
+   ],
+   "start": "2027-01-02",
+   "end": "2027-02-07",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 511 Zone 7 - White Mountains P2 - General Method - Ram. Drawing tags only."
+  },
+  {
+   "species": "sheep",
+   "label": "Bighorn sheep Zone 10 — hunt 513",
+   "method": "all",
+   "units": [
+    "Zone 10"
+   ],
+   "huntCodes": [
+    "513"
+   ],
+   "start": "2027-01-03",
+   "end": "2027-02-07",
+   "year": 2026,
+   "sourceId": "d-digest-2026",
+   "note": "2026 Big Game Hunting Digest hunt table: 513 Zone 10 - Newberry, Rodman and Ord Mountains P2. Drawing tags only."
   }
  ],
  "coverage": [
@@ -725,6 +2778,68 @@
    "url": "https://wildlife.ca.gov/Hunting/Upland-Game-Birds",
    "dataYear": 2026,
    "retrieved": "2026-10-31"
+  },
+  {
+   "id": "d-deer-seasons-2026",
+   "title": "Approved 2026 Deer Seasons (by Zone; Area-Specific Archery Hunts; Additional Hunts)",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=168214&inline",
+   "pageUrl": "https://wildlife.ca.gov/Hunting/Deer",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Three PDFs (DocumentID 168214 by zone, 168216 area-specific archery hunts, 168215 additional hunts) with m/d/2026 dates. Used to cross-check the digest season dates on the 2026 deer rows (seasons_spotcheck.py)."
+  },
+  {
+   "id": "d-elk-dates-2026",
+   "title": "2026 Elk Hunt Dates and General Information",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=246668&inline",
+   "pageUrl": "https://wildlife.ca.gov/Hunting/Elk",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Hunt dates with years for every 2026 elk hunt code. Used to cross-check the digest season dates on the 2026 elk rows."
+  },
+  {
+   "id": "d-regs-2026",
+   "title": "2026-2027 California Mammal Hunting Regulations (Title 14 CCR; updated October 27, 2026)",
+   "publisher": "California Department of Fish and Wildlife",
+   "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=202568&inline",
+   "pageUrl": "https://wildlife.ca.gov/Regulations",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Section 362(b)(4) bighorn sheep season rules and the 2026 elk, pronghorn and bighorn sheep hunt tables, used to cross-check the digest season dates. Its elk table prints Goodale Period 1 (373) as 'Sep 12- Sep 17' and Lone Pine Period 3 (496) as 'Oct 03- Oct 11', unlike the digest and the 2026 Elk Hunt Dates sheet."
+  },
+  {
+   "id": "d-ccr-708-14",
+   "title": "Cal. Code Regs. tit. 14, § 708.14 - Big Game License Tag Drawing System",
+   "publisher": "California Fish and Game Commission (Title 14, California Code of Regulations)",
+   "url": "https://www.law.cornell.edu/regulations/california/14-CCR-708.14",
+   "retrieved": "2026-10-31",
+   "notes": "Standing Big Game Drawing deadlines (\"by June 2 each year\"; tag fees \"by 5:00 p.m. on July 15 each year\") used for the tentative 2027 key dates. Text read from Cornell LII's copy of the California Code of Regulations; the official OAL/Westlaw site (govt.westlaw.com/calregs) refused automated access on 2026-10-31."
+  },
+  {
+   "id": "d-ccr-708-9",
+   "title": "Cal. Code Regs. tit. 14, § 708.9 - Bighorn Sheep License Tags, Application, Distribution and Reporting Procedures",
+   "publisher": "California Fish and Game Commission (Title 14, California Code of Regulations)",
+   "url": "https://www.law.cornell.edu/regulations/california/14-CCR-708.9",
+   "retrieved": "2026-10-31",
+   "notes": "Standing Big Game Drawing deadlines (\"by June 2 each year\"; tag fees \"by 5:00 p.m. on July 15 each year\") used for the tentative 2027 key dates. Text read from Cornell LII's copy of the California Code of Regulations; the official OAL/Westlaw site (govt.westlaw.com/calregs) refused automated access on 2026-10-31."
+  },
+  {
+   "id": "d-ccr-708-10",
+   "title": "Cal. Code Regs. tit. 14, § 708.10 - Pronghorn Antelope License Tags, Application, Distribution and Reporting Procedures",
+   "publisher": "California Fish and Game Commission (Title 14, California Code of Regulations)",
+   "url": "https://www.law.cornell.edu/regulations/california/14-CCR-708.10",
+   "retrieved": "2026-10-31",
+   "notes": "Standing Big Game Drawing deadlines (\"by June 2 each year\"; tag fees \"by 5:00 p.m. on July 15 each year\") used for the tentative 2027 key dates. Text read from Cornell LII's copy of the California Code of Regulations; the official OAL/Westlaw site (govt.westlaw.com/calregs) refused automated access on 2026-10-31."
+  },
+  {
+   "id": "d-ccr-708-11",
+   "title": "Cal. Code Regs. tit. 14, § 708.11 - Elk License Tags, Application, Distribution and Reporting Procedures",
+   "publisher": "California Fish and Game Commission (Title 14, California Code of Regulations)",
+   "url": "https://www.law.cornell.edu/regulations/california/14-CCR-708.11",
+   "retrieved": "2026-10-31",
+   "notes": "Standing Big Game Drawing deadlines (\"by June 2 each year\"; tag fees \"by 5:00 p.m. on July 15 each year\") used for the tentative 2027 key dates. Text read from Cornell LII's copy of the California Code of Regulations; the official OAL/Westlaw site (govt.westlaw.com/calregs) refused automated access on 2026-10-31."
   },
   {
    "id": "d-digest-2026",

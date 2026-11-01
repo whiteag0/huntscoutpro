@@ -9,6 +9,13 @@
   "description": "Unit 1A, Revillagigedo Island, Achilles Mountain area — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 1A beginning at a point at the outlet of Beaver Falls Creek and continuing west along the north bank of Beaver Falls Creek, then along the north shores of Lower Silvis Lake and Upper Silvis Lake, then southwest along the valley until meeting Whitman Creek, then west along the west bank of Whitman ...",
   "sex": "either",
   "seasonDates": "2026: Aug. 15-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2026-08-15",
+    "end": "2026-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -28,6 +35,13 @@
   "description": "Unit 1A, Revillagigedo Island, Deer Mountain area — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 1A bounded on the north beginning at the north banks of Roosevelt Lagoon, Naha River and Heckman Lake to the inlet of Naha River into Heckman Lake; then southeast along the valley to Salt Lagoon at the head of George Inlet, then south along the west coastline of George Inlet to the outlet of ...",
   "sex": "either",
   "seasonDates": "2026: Aug. 15-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2026-08-15",
+    "end": "2026-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 31,
@@ -47,6 +61,13 @@
   "description": "Units 1A and 1B, Cleveland Peninsula — Legal animal: Billy — Hunt Area: that portion of Unit 1A and 1B on the Cleveland Peninsula south of the divide between Yes Bay and Santa Anna Inlet.",
   "sex": "male",
   "seasonDates": "2026: Aug. 1-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2026-08-01",
+    "end": "2026-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -66,6 +87,13 @@
   "description": "Unit 7, Gilpatrick Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -85,6 +113,13 @@
   "description": "Unit 7, Seattle Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -104,6 +139,13 @@
   "description": "Unit 7, Mills Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -123,6 +165,13 @@
   "description": "Unit 7, Crescent Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 9,
@@ -142,6 +191,13 @@
   "description": "Unit 7, Grant Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 9,
@@ -161,6 +217,13 @@
   "description": "Unit 7, Lost Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 11,
@@ -180,6 +243,13 @@
   "description": "Unit 7, Victor Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -198,6 +268,13 @@
   "description": "Unit 7, Nellie Juan Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -216,6 +293,13 @@
   "description": "Unit 7, Whidbey Bay — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -235,6 +319,13 @@
   "description": "Unit 7, Resurrection Peninsula — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 45,
@@ -253,6 +344,13 @@
   "description": "Unit 7, Seward — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 16,
@@ -272,6 +370,13 @@
   "description": "Unit 7, Petrof Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 14,
@@ -290,6 +395,13 @@
   "description": "Unit 7, Brown Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -308,6 +420,13 @@
   "description": "Unit 15C, Skilak Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -326,6 +445,13 @@
   "description": "Unit 15C, Indian Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -345,6 +471,13 @@
   "description": "Unit 15C, Tustumena Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 17,
@@ -364,6 +497,13 @@
   "description": "Unit 15C, Fox River — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 14,
@@ -383,6 +523,13 @@
   "description": "Unit 15C, Bradley Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -402,6 +549,13 @@
   "description": "Unit 15C, Dixon Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 40,
@@ -421,6 +575,13 @@
   "description": "Unit 15C, Halibut Cove — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 24,
@@ -440,6 +601,13 @@
   "description": "Unit 15C, Sadie Cove — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 20,
@@ -458,6 +626,13 @@
   "description": "Unit 15C, Port Dick — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -476,6 +651,13 @@
   "description": "Unit 15C, Seldovia — Residents Only — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -495,6 +677,13 @@
   "description": "Unit 8, Wild Creek-Center Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-20",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -513,6 +702,13 @@
   "description": "Unit 8, Crown Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-20",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -531,6 +727,13 @@
   "description": "Unit 8, Hidden Basin-East Terror Lk. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-20",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -549,6 +752,13 @@
   "description": "Unit 8, Uganik River — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-20",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 70,
@@ -567,6 +777,13 @@
   "description": "Unit 8, Kiliuda Bay — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-20",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -585,6 +802,13 @@
   "description": "Unit 8, South Road System — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-20",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 80,
@@ -603,6 +827,13 @@
   "description": "Unit 8, North Road System — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2026: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2026-08-20",
+    "end": "2026-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -621,6 +852,13 @@
   "description": "Unit 13D — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 13D west of the Richardson Hwy and that portion of 13D east of the Richardson Hwy north of the Tiekel River and west of the line beginning at the confluence of the Tiekel and Tsina Rivers running due south to the boundary of Unit 13D.",
   "sex": "either",
   "seasonDates": "2026: Aug. 10-Nov. 30",
+  "seasonRanges": [
+   {
+    "start": "2026-08-10",
+    "end": "2026-11-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 15,
@@ -639,6 +877,13 @@
   "description": "Unit 14C, East Eklutna — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the drainage of the East Fork of Eklutna River.",
   "sex": "either",
   "seasonDates": "2026: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -658,6 +903,13 @@
   "description": "Unit 14C, Eagle River — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the Eagle River drainage upstream from and including Icicle Creek drainage, but excluding Raven Creek drainage.",
   "sex": "either",
   "seasonDates": "2026: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -677,6 +929,13 @@
   "description": "Unit 14C, Bird Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the Bird Creek drainage including Penguin Creek drainage.",
   "sex": "either",
   "seasonDates": "2026: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -696,6 +955,13 @@
   "description": "Unit 14C, Lake George — Nonresidents Only — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the drainages of the Knik River upstream from, but not including, Big Timber Creek drainage.",
   "sex": "either",
   "seasonDates": "2026: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 7,
@@ -714,6 +980,13 @@
   "description": "Unit 14A, Metal Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14A southeast of the Matanuska River to the ridge dividing Metal Creek and Grasshopper Creek.",
   "sex": "either",
   "seasonDates": "2026: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 20,
@@ -732,6 +1005,13 @@
   "description": "Unit 14A, Marcus Baker — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14A east of the ridge dividing Metal Creek and Grasshopper Creek.",
   "sex": "either",
   "seasonDates": "2026: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -750,6 +1030,13 @@
   "description": "Unit 1A, Revillagigedo Island, Achilles Mountain area — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 1A beginning at a point at the outlet of Beaver Falls Creek and continuing west along the north bank of Beaver Falls Creek, then along the north shores of Lower Silvis Lake and Upper Silvis Lake, then southwest along the valley until meeting Whitman Creek, then west along the west bank of Whit- ...",
   "sex": "either",
   "seasonDates": "2025: Aug. 15-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2025-08-15",
+    "end": "2025-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -769,6 +1056,13 @@
   "description": "Unit 1A, Revillagigedo Island, Deer Mountain area — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 1A bounded on the north beginning at the north banks of Roosevelt Lagoon, Naha River and Heckman Lake to the inlet of Naha River into Heckman Lake; then southeast along the valley to Salt Lagoon at the head of George Inlet, then south along the west coastline of George Inlet to the outlet of ...",
   "sex": "either",
   "seasonDates": "2025: Aug. 15-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2025-08-15",
+    "end": "2025-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 23,
@@ -789,6 +1083,13 @@
   "description": "Units 1A and 1B, Cleveland Peninsula — Legal animal: Billy — Hunt Area: that portion of Unit 1A and 1B on the Cleveland Peninsula south of the divide between Yes Bay and Santa Anna Inlet.",
   "sex": "male",
   "seasonDates": "2025: Aug. 1-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2025-08-01",
+    "end": "2025-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -808,6 +1109,13 @@
   "description": "Unit 7, Gilpatrick Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -827,6 +1135,13 @@
   "description": "Unit 7, Mills Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 7,
@@ -845,6 +1160,13 @@
   "description": "Unit 7, Crescent Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 9,
@@ -864,6 +1186,13 @@
   "description": "Unit 7, Grant Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 7,
@@ -882,6 +1211,13 @@
   "description": "Unit 7, Lost Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -900,6 +1236,13 @@
   "description": "Unit 7, Victor Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -918,6 +1261,13 @@
   "description": "Unit 7, Nellie Juan Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -936,6 +1286,13 @@
   "description": "Unit 7, Whidbey Bay — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -954,6 +1311,13 @@
   "description": "Unit 7, Resurrection Peninsula — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 45,
@@ -972,6 +1336,13 @@
   "description": "Unit 7, Seward — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 14,
@@ -990,6 +1361,13 @@
   "description": "Unit 7, Petrof Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 14,
@@ -1008,6 +1386,13 @@
   "description": "Unit 7, Brown Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -1026,6 +1411,13 @@
   "description": "Unit 15C, Skilak Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -1044,6 +1436,13 @@
   "description": "Unit 15C, Indian Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 11,
@@ -1062,6 +1461,13 @@
   "description": "Unit 15C, Tustumena Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 16,
@@ -1080,6 +1486,13 @@
   "description": "Unit 15C, Fox River — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 18,
@@ -1098,6 +1511,13 @@
   "description": "Unit 15C, Bradley Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -1116,6 +1536,13 @@
   "description": "Unit 15C, Dixon Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 45,
@@ -1134,6 +1561,13 @@
   "description": "Unit 15C, Halibut Cove — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 24,
@@ -1152,6 +1586,13 @@
   "description": "Unit 15C, Sadie Cove — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 20,
@@ -1170,6 +1611,13 @@
   "description": "Unit 15C, Port Dick — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -1188,6 +1636,13 @@
   "description": "Unit 15C, Seldovia — Residents Only — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 16,
@@ -1206,6 +1661,13 @@
   "description": "Unit 8, Wild Creek-Center Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-20",
+    "end": "2025-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -1224,6 +1686,13 @@
   "description": "Unit 8, Crown Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-20",
+    "end": "2025-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -1242,6 +1711,13 @@
   "description": "Unit 8, Hidden Basin-East Terror Lk. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-20",
+    "end": "2025-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -1260,6 +1736,13 @@
   "description": "Unit 8, Uganik River — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-20",
+    "end": "2025-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 70,
@@ -1278,6 +1761,13 @@
   "description": "Unit 8, Kiliuda Bay — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-20",
+    "end": "2025-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -1296,6 +1786,13 @@
   "description": "Unit 8, South Road System — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-20",
+    "end": "2025-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 80,
@@ -1314,6 +1811,13 @@
   "description": "Unit 8, North Road System — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2025: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2025-08-20",
+    "end": "2025-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -1332,6 +1836,13 @@
   "description": "Unit 13D — Legal animal: Either sex, taking of nannies with kids is prohibited",
   "sex": "either",
   "seasonDates": "2025: Aug. 10-Nov. 30",
+  "seasonRanges": [
+   {
+    "start": "2025-08-10",
+    "end": "2025-11-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 15,
@@ -1350,6 +1861,13 @@
   "description": "Unit 14C, East Eklutna — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the drainage of the East Fork of Eklutna River.",
   "sex": "either",
   "seasonDates": "2025: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1369,6 +1887,13 @@
   "description": "Unit 14C, Eagle River — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the Eagle River drainage upstream from and including Icicle Creek drainage, but excluding Raven Creek drainage.",
   "sex": "either",
   "seasonDates": "2025: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -1387,6 +1912,13 @@
   "description": "Unit 14C, Glacier Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the upper Glacier Creek drainage including Winner Creek drainage, but excluding Crow Creek drainage.",
   "sex": "either",
   "seasonDates": "2025: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -1405,6 +1937,13 @@
   "description": "Unit 14C, Bird Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the Bird Creek drainage including Penguin Creek drainage.",
   "sex": "either",
   "seasonDates": "2025: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -1424,6 +1963,13 @@
   "description": "Unit 14C, Lake George — Nonresidents Only — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the drainages of the Knik River up- stream from, but not including, Big Timber Creek drainage.",
   "sex": "either",
   "seasonDates": "2025: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2025-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 7,
@@ -1442,6 +1988,13 @@
   "description": "Unit 14A, Metal Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14A southeast of the Matanuska River to the ridge dividing Metal Creek and Grasshopper Creek.",
   "sex": "either",
   "seasonDates": "2025: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2025-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 20,
@@ -1460,6 +2013,13 @@
   "description": "Unit 14A, Marcus Baker — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14A east of the ridge dividing Metal Creek and Grasshopper Creek.",
   "sex": "either",
   "seasonDates": "2025: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2025-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -1478,6 +2038,13 @@
   "description": "Unit 1A, Revillagigedo Island, Achilles Mountain area — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 1A beginning at a point at the outlet of Beaver Falls Creek and continuing west along the north bank of Beaver Falls Creek, then along the north shores of Lower Silvis Lake and Upper Silvis Lake, then southwest along the valley until meeting Whitman Creek, then west along the west bank of Whit- ...",
   "sex": "either",
   "seasonDates": "2024: Aug. 15-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2024-08-15",
+    "end": "2024-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1497,6 +2064,13 @@
   "description": "Unit 1A, Revillagigedo Island, Deer Mountain area — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 1A bounded on the north beginning at the north banks of Roosevelt Lagoon, Naha River and Heckman Lake to the inlet of Naha River into Heckman Lake; then southeast along the valley to Salt Lagoon at the head of George Inlet, then south along the west coastline of George Inlet to the outlet of ...",
   "sex": "either",
   "seasonDates": "2024: Aug. 15-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2024-08-15",
+    "end": "2024-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 23,
@@ -1517,6 +2091,13 @@
   "description": "Units 1A and 1B, Cleveland Peninsula — Legal animal: Billy — Hunt Area: that portion of Unit 1A and 1B on the Cleveland Peninsula south of the divide between Yes Bay and Santa Anna Inlet.",
   "sex": "male",
   "seasonDates": "2024: Aug. 1-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2024-08-01",
+    "end": "2024-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1536,6 +2117,13 @@
   "description": "Unit 7, Mills Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 7,
@@ -1554,6 +2142,13 @@
   "description": "Unit 7, Crescent Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 9,
@@ -1572,6 +2167,13 @@
   "description": "Unit 7, Grant Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 7,
@@ -1590,6 +2192,13 @@
   "description": "Unit 7, Cecil Rhodes Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -1609,6 +2218,13 @@
   "description": "Unit 7, Lost Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -1627,6 +2243,13 @@
   "description": "Unit 7, Victor Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -1646,6 +2269,13 @@
   "description": "Unit 7, Nellie Juan Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -1664,6 +2294,13 @@
   "description": "Unit 7, Whidbey Bay — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 40,
@@ -1682,6 +2319,13 @@
   "description": "Unit 7, Resurrection Peninsula — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 45,
@@ -1700,6 +2344,13 @@
   "description": "Unit 7, Seward — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 14,
@@ -1718,6 +2369,13 @@
   "description": "Unit 7, Petrof Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 14,
@@ -1736,6 +2394,13 @@
   "description": "Unit 7, Brown Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 20,
@@ -1754,6 +2419,13 @@
   "description": "Unit 15C, Skilak Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -1772,6 +2444,13 @@
   "description": "Unit 15C, Indian Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 11,
@@ -1790,6 +2469,13 @@
   "description": "Unit 15C, Tustumena Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 16,
@@ -1808,6 +2494,13 @@
   "description": "Unit 15C, Fox River — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 18,
@@ -1826,6 +2519,13 @@
   "description": "Unit 15C, Bradley Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -1844,6 +2544,13 @@
   "description": "Unit 15C, Dixon Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 45,
@@ -1862,6 +2569,13 @@
   "description": "Unit 15C, Halibut Cove — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 22,
@@ -1880,6 +2594,13 @@
   "description": "Unit 15C, Sadie Cove — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 14,
@@ -1898,6 +2619,13 @@
   "description": "Unit 15C, Port Dick — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 28,
@@ -1916,6 +2644,13 @@
   "description": "Unit 15C, Seldovia — Residents Only — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 16,
@@ -1935,6 +2670,13 @@
   "description": "Unit 8, Wild Creek-Center Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-20",
+    "end": "2024-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -1953,6 +2695,13 @@
   "description": "Unit 8, Crown Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-20",
+    "end": "2024-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -1971,6 +2720,13 @@
   "description": "Unit 8, Hidden Basin-East Terror Lk. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-20",
+    "end": "2024-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -1989,6 +2745,13 @@
   "description": "Unit 8, Uganik River — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-20",
+    "end": "2024-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 70,
@@ -2007,6 +2770,13 @@
   "description": "Unit 8, Kiliuda Bay — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-20",
+    "end": "2024-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -2025,6 +2795,13 @@
   "description": "Unit 8, South Road System — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-20",
+    "end": "2024-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 80,
@@ -2043,6 +2820,13 @@
   "description": "Unit 8, North Road System — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2024: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2024-08-20",
+    "end": "2024-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -2061,6 +2845,13 @@
   "description": "Unit 13D — Legal animal: Either sex, taking of nannies with kids is prohibited",
   "sex": "either",
   "seasonDates": "2024: Aug. 10-Nov. 30",
+  "seasonRanges": [
+   {
+    "start": "2024-08-10",
+    "end": "2024-11-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -2080,6 +2871,13 @@
   "description": "Unit 14C, East Eklutna — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the drainage of the East Fork of Eklutna River.",
   "sex": "either",
   "seasonDates": "2024: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -2099,6 +2897,13 @@
   "description": "Unit 14C, Eagle River — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the Eagle River drainage upstream from and including Icicle Creek drainage, but excluding Raven Creek drainage.",
   "sex": "either",
   "seasonDates": "2024: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -2117,6 +2922,13 @@
   "description": "Unit 14C, Glacier Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the upper Glacier Creek drainage including Winner Creek drainage, but excluding Crow Creek drainage.",
   "sex": "either",
   "seasonDates": "2024: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -2135,6 +2947,13 @@
   "description": "Unit 14C, Bird Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the Bird Creek drainage including Penguin Creek drainage.",
   "sex": "either",
   "seasonDates": "2024: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -2154,6 +2973,13 @@
   "description": "Unit 14C, Lake George — Nonresidents Only — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the drainages of the Knik River up- stream from, but not including, Big Timber Creek drainage.",
   "sex": "either",
   "seasonDates": "2024: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2024-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -2172,6 +2998,13 @@
   "description": "Unit 14A, Metal Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14A southeast of the Matanuska River to the ridge dividing Metal Creek and Grasshopper Creek.",
   "sex": "either",
   "seasonDates": "2024: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2024-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 20,
@@ -2190,6 +3023,13 @@
   "description": "Unit 14A, Marcus Baker — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14A east of the ridge dividing Metal Creek and Grasshopper Creek.",
   "sex": "either",
   "seasonDates": "2024: Sept. 1-Sept. 30",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2024-09-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -2208,6 +3048,13 @@
   "description": "Unit 1A, Revillagigedo Island, Achilles Mountain area — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 1A beginning at a point at the outlet of Beaver Falls Creek and continuing west along the north bank of Beaver Falls Creek, then along the north shores of Lower Silvis Lake and Upper Silvis Lake, then southwest along the valley until meeting Whitman Creek, then west along the west bank of Whit- ...",
   "sex": "either",
   "seasonDates": "2023: Aug. 15-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2023-08-15",
+    "end": "2023-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -2227,6 +3074,13 @@
   "description": "Unit 1A, Revillagigedo Island, Deer Mountain area — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 1A bounded on the north beginning at the north banks of Roosevelt Lagoon, Naha River and Heckman Lake to the inlet of Naha River into Heckman Lake; then southeast along the valley to Salt Lagoon at the head of George Inlet, then south along the west coastline of George Inlet to the outlet of ...",
   "sex": "either",
   "seasonDates": "2023: Aug. 15-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2023-08-15",
+    "end": "2023-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 24,
@@ -2247,6 +3101,13 @@
   "description": "Units 1A and 1B, Cleveland Peninsula — Legal animal: Billy — Hunt Area: that portion of Unit 1A and 1B on the Cleveland Peninsula south of the divide between Yes Bay and Santa Anna Inlet.",
   "sex": "male",
   "seasonDates": "2023: Aug. 1-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2023-08-01",
+    "end": "2023-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2265,6 +3126,13 @@
   "description": "Unit 7, Mills Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 7,
@@ -2284,6 +3152,13 @@
   "description": "Unit 7, Crescent Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 7,
@@ -2303,6 +3178,13 @@
   "description": "Unit 7, Grant Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -2321,6 +3203,13 @@
   "description": "Unit 7, Cecil Rhodes Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -2340,6 +3229,13 @@
   "description": "Unit 7, Lost Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -2358,6 +3254,13 @@
   "description": "Unit 7, Nellie Juan Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -2377,6 +3280,13 @@
   "description": "Unit 7, Whidbey Bay — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -2395,6 +3305,13 @@
   "description": "Unit 7, Resurrection Peninsula — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 45,
@@ -2414,6 +3331,13 @@
   "description": "Unit 7, Seward — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -2432,6 +3356,13 @@
   "description": "Unit 7, Petrof Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 14,
@@ -2451,6 +3382,13 @@
   "description": "Unit 7, Brown Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 20,
@@ -2469,6 +3407,13 @@
   "description": "Unit 15C, Skilak Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -2488,6 +3433,13 @@
   "description": "Unit 15C, Indian Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -2507,6 +3459,13 @@
   "description": "Unit 15C, Tustumena Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 16,
@@ -2526,6 +3485,13 @@
   "description": "Unit 15C, Fox River — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 18,
@@ -2545,6 +3511,13 @@
   "description": "Unit 15C, Bradley Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -2564,6 +3537,13 @@
   "description": "Unit 15C, Dixon Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 40,
@@ -2583,6 +3563,13 @@
   "description": "Unit 15C, Halibut Cove — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 22,
@@ -2602,6 +3589,13 @@
   "description": "Unit 15C, Sadie Cove — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 14,
@@ -2621,6 +3615,13 @@
   "description": "Unit 15C, Port Dick — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 28,
@@ -2640,6 +3641,13 @@
   "description": "Unit 15C, Seldovia — Residents Only — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 28,
@@ -2658,6 +3666,13 @@
   "description": "Unit 8, Wild Creek-Center Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-20",
+    "end": "2023-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -2676,6 +3691,13 @@
   "description": "Unit 8, Crown Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-20",
+    "end": "2023-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -2694,6 +3716,13 @@
   "description": "Unit 8, Hidden Basin-East Terror Lk. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-20",
+    "end": "2023-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -2712,6 +3741,13 @@
   "description": "Unit 8, Uganik River — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-20",
+    "end": "2023-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 70,
@@ -2730,6 +3766,13 @@
   "description": "Unit 8, Kiliuda Bay — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-20",
+    "end": "2023-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -2748,6 +3791,13 @@
   "description": "Unit 8, South Road System — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-20",
+    "end": "2023-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 80,
@@ -2766,6 +3816,13 @@
   "description": "Unit 8, North Road System — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2023: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2023-08-20",
+    "end": "2023-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -2784,6 +3841,13 @@
   "description": "Unit 13D — Legal animal: Either sex, taking of nannies with kids is prohibited",
   "sex": "either",
   "seasonDates": "2023: Aug. 10-Nov. 30",
+  "seasonRanges": [
+   {
+    "start": "2023-08-10",
+    "end": "2023-11-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 18,
@@ -2802,6 +3866,13 @@
   "description": "Unit 14C, East Eklutna — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the drainage of the East Fork of Eklutna River.",
   "sex": "either",
   "seasonDates": "2023: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -2821,6 +3892,13 @@
   "description": "Unit 14C, Eagle River — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the Eagle River drainage upstream from and including Icicle Creek drainage, but excluding Raven Creek drainage.",
   "sex": "either",
   "seasonDates": "2023: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -2839,6 +3917,13 @@
   "description": "Unit 14C, Glacier Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the upper Glacier Creek drainage including Winner Creek drainage, but excluding Crow Creek drainage.",
   "sex": "either",
   "seasonDates": "2023: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -2857,6 +3942,13 @@
   "description": "Unit 14C, Bird Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the Bird Creek drainage including Penguin Creek drainage.",
   "sex": "either",
   "seasonDates": "2023: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -2876,6 +3968,13 @@
   "description": "Unit 14C, Lake George — Nonresidents Only — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the drainages of the Knik River up- stream from, but not including, Big Timber Creek drainage.",
   "sex": "either",
   "seasonDates": "2023: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2023-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -2894,6 +3993,13 @@
   "description": "Unit 14A, Metal Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14A southeast of the Matanuska River to the ridge dividing Metal Creek and Grasshopper Creek.",
   "sex": "either",
   "seasonDates": "2023: Sept. 1-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2023-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 20,
@@ -2912,6 +4018,13 @@
   "description": "Unit 14A, Marcus Baker — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14A east of the ridge dividing Metal Creek and Grasshopper Creek.",
   "sex": "either",
   "seasonDates": "2023: Sept. 1-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2023-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -2930,6 +4043,13 @@
   "description": "Unit 1A, Revillagigedo Island East — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 1A beginning at a point at the outlet of Beaver Falls Creek and continuing west along the north bank of Beaver Falls Creek, then along the north shores of Lower Silvis Lake and Upper Silvis Lake, then southwest along the valley until meeting Whitman Creek, then west along the west bank of Whit- ...",
   "sex": "either",
   "seasonDates": "2022: Aug. 15-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2022-08-15",
+    "end": "2022-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -2949,6 +4069,13 @@
   "description": "Unit 1A, Revillagigedo Island South — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 1A bounded on the north beginning at the north banks of Roosevelt Lagoon, Naha River and Heckman Lake to the inlet of Naha River into Heckman Lake; then southeast along the valley to Salt Lagoon at the head of George Inlet, then south along the west coastline of George Inlet to the outlet of ...",
   "sex": "either",
   "seasonDates": "2022: Aug. 15-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2022-08-15",
+    "end": "2022-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 26,
@@ -2969,6 +4096,13 @@
   "description": "Units 1A and 1B, Cleveland Peninsula — Legal animal: Billy — Hunt Area: that portion of Unit 1A and 1B on the Cleveland Peninsula south of the divide between Yes Bay and Santa Anna Inlet.",
   "sex": "male",
   "seasonDates": "2022: Aug. 1-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2022-08-01",
+    "end": "2022-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 2,
@@ -2987,6 +4121,13 @@
   "description": "Unit 7, Resurrection Creek, West — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 1,
@@ -3006,6 +4147,13 @@
   "description": "Unit 7, Mills Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -3024,6 +4172,13 @@
   "description": "Unit 7, Crescent Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 7,
@@ -3043,6 +4198,13 @@
   "description": "Unit 7, Grant Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 7,
@@ -3062,6 +4224,13 @@
   "description": "Unit 7, Cecil Rhodes Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -3081,6 +4250,13 @@
   "description": "Unit 7, Lost Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 8,
@@ -3099,6 +4275,13 @@
   "description": "Unit 7, Nellie Juan Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -3118,6 +4301,13 @@
   "description": "Unit 7, Whidbey Bay — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 30,
@@ -3136,6 +4326,13 @@
   "description": "Unit 7, Resurrection Peninsula — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 40,
@@ -3154,6 +4351,13 @@
   "description": "Unit 7, Seward — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -3173,6 +4377,13 @@
   "description": "Unit 7, Petrof Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -3191,6 +4402,13 @@
   "description": "Unit 7, Brown Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 7, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 16,
@@ -3210,6 +4428,13 @@
   "description": "Unit 15C, Skilak Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -3228,6 +4453,13 @@
   "description": "Unit 15C, Indian Creek — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 9,
@@ -3247,6 +4479,13 @@
   "description": "Unit 15C, Tustumena Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 9,
@@ -3266,6 +4505,13 @@
   "description": "Unit 15C, Fox River — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -3285,6 +4531,13 @@
   "description": "Unit 15C, Bradley Lake — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 28,
@@ -3303,6 +4556,13 @@
   "description": "Unit 15C, Dixon Glacier — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 36,
@@ -3321,6 +4581,13 @@
   "description": "Unit 15C, Halibut Cove — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 20,
@@ -3340,6 +4607,13 @@
   "description": "Unit 15C, Sadie Cove — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -3358,6 +4632,13 @@
   "description": "Unit 15C, Port Dick — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 26,
@@ -3377,6 +4658,13 @@
   "description": "Unit 15C, Seldovia — Residents Only — Legal animal: Either sex, taking of nannies with kids is prohibited. If you harvest a nanny, you will be prohibited from hunting any goats in Units 7 and 15 for 5 regulatory years — Hunt Area: Unit 15C, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 28,
@@ -3396,6 +4684,13 @@
   "description": "Unit 8, Wild Creek-Center Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-20",
+    "end": "2022-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -3414,6 +4709,13 @@
   "description": "Unit 8, Crown Mtn. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-20",
+    "end": "2022-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -3432,6 +4734,13 @@
   "description": "Unit 8, Hidden Basin-East Terror Lk. — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-20",
+    "end": "2022-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 12,
@@ -3450,6 +4759,13 @@
   "description": "Unit 8, Uganik River — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-20",
+    "end": "2022-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 70,
@@ -3468,6 +4784,13 @@
   "description": "Unit 8, Kiliuda Bay — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-20",
+    "end": "2022-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -3486,6 +4809,13 @@
   "description": "Unit 8, South Road System — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-20",
+    "end": "2022-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 80,
@@ -3504,6 +4834,13 @@
   "description": "Unit 8, North Road System — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: Unit 8, see http://hunt.alaska.gov for individual areas and detailed maps.",
   "sex": "either",
   "seasonDates": "2022: Aug. 20-Oct. 25",
+  "seasonRanges": [
+   {
+    "start": "2022-08-20",
+    "end": "2022-10-25"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -3522,6 +4859,13 @@
   "description": "Unit 13D — Legal animal: Either sex, taking of nannies with kids is prohibited",
   "sex": "either",
   "seasonDates": "2022: Aug. 10-Nov. 30",
+  "seasonRanges": [
+   {
+    "start": "2022-08-10",
+    "end": "2022-11-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 35,
@@ -3540,6 +4884,13 @@
   "description": "Unit 14C, East Eklutna — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the drainage of the East Fork of Eklutna River.",
   "sex": "either",
   "seasonDates": "2022: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -3559,6 +4910,13 @@
   "description": "Unit 14C, Eagle River — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the Eagle River drainage upstream from and including Icicle Creek drainage, but excluding Raven Creek drainage.",
   "sex": "either",
   "seasonDates": "2022: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -3577,6 +4935,13 @@
   "description": "Unit 14C, Glacier Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the upper Glacier Creek drainage including Winner Creek drainage, but excluding Crow Creek drainage.",
   "sex": "either",
   "seasonDates": "2022: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 5,
@@ -3595,6 +4960,13 @@
   "description": "Unit 14C, Bird Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the Bird Creek drainage including Penguin Creek drainage.",
   "sex": "either",
   "seasonDates": "2022: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 4,
@@ -3614,6 +4986,13 @@
   "description": "Unit 14C, Lake George — Nonresidents Only — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14C within the drainages of the Knik River up- stream from, but not including, Big Timber Creek drainage.",
   "sex": "either",
   "seasonDates": "2022: Sept. 1-Oct. 15",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2022-10-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 6,
@@ -3632,6 +5011,13 @@
   "description": "Unit 14A, Metal Creek — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14A southeast of the Matanuska River to the ridge dividing Metal Creek and Grasshopper Creek.",
   "sex": "either",
   "seasonDates": "2022: Sept. 1-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2022-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 20,
@@ -3650,6 +5036,13 @@
   "description": "Unit 14A, Marcus Baker — Legal animal: Either sex, taking of nannies with kids is prohibited — Hunt Area: that portion of Unit 14A east of the ridge dividing Metal Creek and Grasshopper Creek.",
   "sex": "either",
   "seasonDates": "2022: Sept. 1-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2022-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 30,

@@ -8,6 +8,13 @@
   ],
   "description": "Unit 1C, South — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
   "seasonDates": "2026-2027: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2027-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -25,6 +32,13 @@
   ],
   "description": "Unit 2 — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
   "seasonDates": "2026: Sept. 1-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2026-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 60,
@@ -42,6 +56,13 @@
   ],
   "description": "Unit 2 — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
   "seasonDates": "2027: Jan. 1-June 30",
+  "seasonRanges": [
+   {
+    "start": "2027-01-01",
+    "end": "2027-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 200,
@@ -59,6 +80,13 @@
   ],
   "description": "Unit 3, Kuiu Island — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
   "seasonDates": "2026-2027: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2027-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 40,
@@ -76,6 +104,13 @@
   ],
   "description": "Unit 3, Kupreanof Island — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
   "seasonDates": "2026-2027: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2027-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 70,
@@ -95,6 +130,13 @@
   "method": "shotgun",
   "methodLabel": "Certified Shotgun Hunters Only",
   "seasonDates": "2026-2027: Sept. 1 thru June 15",
+  "seasonRanges": [
+   {
+    "start": "2026-09-01",
+    "end": "2027-06-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -114,6 +156,13 @@
   "method": "other",
   "methodLabel": "Certified Shotgun Hunters, Certified Bowhunters, or Certified Muzzleloader Hunters Only",
   "seasonDates": "2026: Oct. 1-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2026-10-01",
+    "end": "2026-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2026",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -131,6 +180,13 @@
   ],
   "description": "Unit 1C, South — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: that portion of Unit 1C from the south bank of Taku Inlet and the Taku River to the U.S./Canada border, then south to the Unit 1C/1B boundary at Cape Fanshaw.",
   "seasonDates": "2025-2026: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2026-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -148,6 +204,13 @@
   ],
   "description": "Unit 2 — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 2 ...",
   "seasonDates": "2025: Sept. 1-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2025-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 55,
@@ -165,6 +228,13 @@
   ],
   "description": "Unit 2 — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 2 ...",
   "seasonDates": "2026: Jan. 1-June 30",
+  "seasonRanges": [
+   {
+    "start": "2026-01-01",
+    "end": "2026-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 190,
@@ -182,6 +252,13 @@
   ],
   "description": "Unit 3, Kuiu Island — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 3, Kuiu Island ...",
   "seasonDates": "2025-2026: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2026-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 40,
@@ -199,6 +276,13 @@
   ],
   "description": "Unit 3, Kupreanof Island — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 3, Kupreanof Island ...",
   "seasonDates": "2025-2026: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2026-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 70,
@@ -218,6 +302,13 @@
   "method": "shotgun",
   "methodLabel": "Certified Shotgun Hunters Only",
   "seasonDates": "2025-2026: Sept. 1 thru June 15",
+  "seasonRanges": [
+   {
+    "start": "2025-09-01",
+    "end": "2026-06-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -237,6 +328,13 @@
   "method": "other",
   "methodLabel": "Certified Shotgun Hunters, Certified Bowhunters, or Certified Muzzleloader Hunters Only",
   "seasonDates": "2025: Oct. 1-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2025-10-01",
+    "end": "2025-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2025",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -255,6 +353,13 @@
   ],
   "description": "Unit 1C, South — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: that portion of Unit 1C from the south bank of Taku Inlet and the Taku River to the U.S./Canada border, then south to the Unit 1C/1B boundary at Cape Fanshaw.",
   "seasonDates": "2024-2025: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2025-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -272,6 +377,13 @@
   ],
   "description": "Unit 2 — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 2 ...",
   "seasonDates": "2024: Sept. 1-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2024-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 55,
@@ -289,6 +401,13 @@
   ],
   "description": "Unit 2 — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 2 ...",
   "seasonDates": "2025: Jan. 1-June 30",
+  "seasonRanges": [
+   {
+    "start": "2025-01-01",
+    "end": "2025-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 190,
@@ -306,6 +425,13 @@
   ],
   "description": "Unit 3, Kuiu Island — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 3, Kuiu Island ...",
   "seasonDates": "2024-2025: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2025-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 40,
@@ -323,6 +449,13 @@
   ],
   "description": "Unit 3, Kupreanof Island — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 3, Kupreanof Island ...",
   "seasonDates": "2024-2025: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2025-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 80,
@@ -342,6 +475,13 @@
   "method": "shotgun",
   "methodLabel": "Certified Shotgun Hunters Only",
   "seasonDates": "2024-2025: Sept. 1 thru June 15",
+  "seasonRanges": [
+   {
+    "start": "2024-09-01",
+    "end": "2025-06-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -361,6 +501,13 @@
   "method": "other",
   "methodLabel": "Certified Shotgun Hunters, Certified Bowhunters, or Certified Muzzleloader Hunters Only",
   "seasonDates": "2024: Oct. 1-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2024-10-01",
+    "end": "2024-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2024",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -378,6 +525,13 @@
   ],
   "description": "Unit 1C, South — Nonresidents Nonguided Only — Hunt Area: that portion of Unit 1C from the south bank of Taku Inlet and the Taku River to the U.S./Canada border, then south to the Unit 1C/1B boundary at Cape Fanshaw.",
   "seasonDates": "2023-2024: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2024-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -395,6 +549,13 @@
   ],
   "description": "Unit 2 — Nonresidents Nonguided Only — Hunt Area: Unit 2 ...",
   "seasonDates": "2023: Sept. 1-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2023-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 55,
@@ -412,6 +573,13 @@
   ],
   "description": "Unit 2 — Nonresidents Nonguided Only — Hunt Area: Unit 2 ...",
   "seasonDates": "2024: Jan. 1-June 30",
+  "seasonRanges": [
+   {
+    "start": "2024-01-01",
+    "end": "2024-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 190,
@@ -429,6 +597,13 @@
   ],
   "description": "Unit 3, Kuiu Island — Nonresidents Nonguided Only — Hunt Area: Unit 3, Kuiu Island ...",
   "seasonDates": "2023-2024: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2024-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 40,
@@ -447,6 +622,13 @@
   ],
   "description": "Unit 3, Kupreanof Island — Nonresidents Nonguided Only — Hunt Area: Unit 3, Kupreanof Island ...",
   "seasonDates": "2023-2024: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2024-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 80,
@@ -467,6 +649,13 @@
   "method": "shotgun",
   "methodLabel": "Certified Shotgun Hunters Only",
   "seasonDates": "2023-2024: Sept. 1 thru June 15",
+  "seasonRanges": [
+   {
+    "start": "2023-09-01",
+    "end": "2024-06-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -486,6 +675,13 @@
   "method": "other",
   "methodLabel": "Certified Shotgun Hunters or Certified Muzzleloader Hunters Only",
   "seasonDates": "2023: Oct. 1-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2023-10-01",
+    "end": "2023-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2023",
   "choice": "all",
   "total": {
    "quota": 3,
@@ -503,6 +699,13 @@
   ],
   "description": "Unit 1C, South — Nonresidents Nonguided Only — Hunt Area: that portion of Unit 1C from the south bank of Taku Inlet and the Taku River to the U.S./Canada border, then south to the Unit 1C/1B boundary at Cape Fanshaw.",
   "seasonDates": "2022-2023: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2023-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 10,
@@ -520,6 +723,13 @@
   ],
   "description": "Unit 2 — Nonresidents Nonguided Only — Hunt Area: Unit 2 ...",
   "seasonDates": "2022: Sept. 1-Dec. 31",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2022-12-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -537,6 +747,13 @@
   ],
   "description": "Unit 2 — Nonresidents Nonguided Only — Hunt Area: Unit 2 ...",
   "seasonDates": "2023: Jan. 1-June 30",
+  "seasonRanges": [
+   {
+    "start": "2023-01-01",
+    "end": "2023-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 180,
@@ -554,6 +771,13 @@
   ],
   "description": "Unit 3, Kuiu Island — Nonresidents Nonguided Only — Hunt Area: Unit 3, Kuiu Island ...",
   "seasonDates": "2022-2023: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2023-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 50,
@@ -571,6 +795,13 @@
   ],
   "description": "Unit 3, Kupreanof Island — Nonresidents Nonguided Only — Hunt Area: Unit 3, Kupreanof Island ...",
   "seasonDates": "2022-2023: Sept. 1 thru June 30",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2023-06-30"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 100,
@@ -590,6 +821,13 @@
   "method": "shotgun",
   "methodLabel": "Certified Shotgun Hunters Only",
   "seasonDates": "2022-2023: Sept. 1 thru June 15",
+  "seasonRanges": [
+   {
+    "start": "2022-09-01",
+    "end": "2023-06-15"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 25,
@@ -609,6 +847,13 @@
   "method": "other",
   "methodLabel": "Certified Shotgun Hunters or Certified Muzzleloader Hunters Only",
   "seasonDates": "2022: Oct. 1-Oct. 31",
+  "seasonRanges": [
+   {
+    "start": "2022-10-01",
+    "end": "2022-10-31"
+   }
+  ],
+  "seasonSourceId": "d-supp-2022",
   "choice": "all",
   "total": {
    "quota": 3,

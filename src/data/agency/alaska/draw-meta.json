@@ -23,6 +23,7 @@
    "keyDates": [
     {
      "label": "Drawing permit application period (online only)",
+     "kind": "application",
      "start": "2026-11-01",
      "end": "2026-12-15",
      "cycle": 2027,
@@ -32,6 +33,7 @@
     },
     {
      "label": "Deadline to ask ADF&G for an alternative to applying online",
+     "kind": "other",
      "date": "2026-11-20",
      "cycle": 2027,
      "status": "confirmed",
@@ -40,6 +42,7 @@
     },
     {
      "label": "Drawing results announced",
+     "kind": "results",
      "date": "2027-02-19",
      "cycle": 2027,
      "status": "tentative",
@@ -48,6 +51,7 @@
     },
     {
      "label": "Undersubscribed drawing permits posted",
+     "kind": "leftover",
      "date": "2027-03-05",
      "cycle": 2027,
      "status": "tentative",
@@ -56,12 +60,57 @@
     },
     {
      "label": "Tier II subsistence permit application period (residents only)",
+     "kind": "application",
+     "residency": "resident",
      "start": "2026-11-01",
      "end": "2026-12-15",
      "cycle": 2027,
      "status": "confirmed",
      "sourceId": "d-subs-2027",
      "note": "Online by 5 p.m. AKST December 15; paper applications must be postmarked November 1-30 and received by December 15."
+    },
+    {
+     "label": "Tier II paper applications: postmark window (must also be received by December 15)",
+     "kind": "application",
+     "residency": "resident",
+     "start": "2026-11-01",
+     "end": "2026-11-30",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-subs-2027",
+     "note": "Mailed Tier II applications must be postmarked between November 1 and November 30 (U.S. Postal Service postmark) and received by 5 p.m. AKST December 15; not accepted over the counter."
+    },
+    {
+     "label": "Copper Basin Community Subsistence Harvest moose hunt CM300: group coordinator applications",
+     "kind": "application",
+     "residency": "resident",
+     "start": "2026-10-01",
+     "end": "2026-12-15",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-subs-2027",
+     "note": "Online only, closes 5 p.m. AKST December 15. Groups need at least 25 members; Alaska residents only."
+    },
+    {
+     "label": "Copper Basin Community Subsistence Harvest moose hunt CM300: household applications",
+     "kind": "application",
+     "residency": "resident",
+     "start": "2026-11-01",
+     "end": "2026-12-15",
+     "cycle": 2027,
+     "status": "confirmed",
+     "sourceId": "d-subs-2027",
+     "note": "Online only, closes 5 p.m. AKST December 15. Households commit for two years; no member may hold other state moose permits or general-season moose harvest tickets."
+    },
+    {
+     "label": "Tier II and Community Subsistence Harvest results announced",
+     "kind": "results",
+     "residency": "resident",
+     "date": "2027-02-19",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-subs-2027",
+     "note": "The 2027-2028 subsistence supplement says results are announced on the third Friday of February (February 19, 2027). ADF&G's Draw Results page (retrieved 2026-10-31) says 'Friday, February 20' for the Draw, Tier I/II and Community Subsistence Harvest period."
     }
    ],
    "sourceIds": [
@@ -84,6 +133,7 @@
    "keyDates": [
     {
      "label": "Drawing permit application period (online only)",
+     "kind": "application",
      "start": "2026-11-01",
      "end": "2026-12-15",
      "cycle": 2027,
@@ -93,6 +143,7 @@
     },
     {
      "label": "Deadline to ask ADF&G for an alternative to applying online",
+     "kind": "other",
      "date": "2026-11-20",
      "cycle": 2027,
      "status": "confirmed",
@@ -101,6 +152,7 @@
     },
     {
      "label": "Drawing results announced",
+     "kind": "results",
      "date": "2027-02-19",
      "cycle": 2027,
      "status": "tentative",
@@ -109,6 +161,7 @@
     },
     {
      "label": "Undersubscribed drawing permits posted",
+     "kind": "leftover",
      "date": "2027-03-05",
      "cycle": 2027,
      "status": "tentative",
@@ -133,6 +186,7 @@
    "keyDates": [
     {
      "label": "Drawing permit application period (online only)",
+     "kind": "application",
      "start": "2026-11-01",
      "end": "2026-12-15",
      "cycle": 2027,
@@ -142,6 +196,7 @@
     },
     {
      "label": "Deadline to ask ADF&G for an alternative to applying online",
+     "kind": "other",
      "date": "2026-11-20",
      "cycle": 2027,
      "status": "confirmed",
@@ -150,6 +205,7 @@
     },
     {
      "label": "Drawing results announced",
+     "kind": "results",
      "date": "2027-02-19",
      "cycle": 2027,
      "status": "tentative",
@@ -158,6 +214,7 @@
     },
     {
      "label": "Undersubscribed drawing permits posted",
+     "kind": "leftover",
      "date": "2027-03-05",
      "cycle": 2027,
      "status": "tentative",
@@ -182,6 +239,7 @@
    "keyDates": [
     {
      "label": "Drawing permit application period (online only)",
+     "kind": "application",
      "start": "2026-11-01",
      "end": "2026-12-15",
      "cycle": 2027,
@@ -191,6 +249,7 @@
     },
     {
      "label": "Deadline to ask ADF&G for an alternative to applying online",
+     "kind": "other",
      "date": "2026-11-20",
      "cycle": 2027,
      "status": "confirmed",
@@ -199,6 +258,7 @@
     },
     {
      "label": "Drawing results announced",
+     "kind": "results",
      "date": "2027-02-19",
      "cycle": 2027,
      "status": "tentative",
@@ -207,6 +267,7 @@
     },
     {
      "label": "Undersubscribed drawing permits posted",
+     "kind": "leftover",
      "date": "2027-03-05",
      "cycle": 2027,
      "status": "tentative",
@@ -232,6 +293,7 @@
    "keyDates": [
     {
      "label": "Drawing permit application period (online only)",
+     "kind": "application",
      "start": "2026-11-01",
      "end": "2026-12-15",
      "cycle": 2027,
@@ -241,6 +303,7 @@
     },
     {
      "label": "Deadline to ask ADF&G for an alternative to applying online",
+     "kind": "other",
      "date": "2026-11-20",
      "cycle": 2027,
      "status": "confirmed",
@@ -249,6 +312,7 @@
     },
     {
      "label": "Drawing results announced",
+     "kind": "results",
      "date": "2027-02-19",
      "cycle": 2027,
      "status": "tentative",
@@ -257,6 +321,7 @@
     },
     {
      "label": "Undersubscribed drawing permits posted",
+     "kind": "leftover",
      "date": "2027-03-05",
      "cycle": 2027,
      "status": "tentative",
@@ -617,7 +682,43 @@
    "sourceId": "d-regs-2026"
   }
  ],
- "seasons": [],
+ "seasons": [
+  {
+   "species": "sheep",
+   "label": "General-season (harvest ticket) Dall sheep, full-curl ram",
+   "method": "all",
+   "start": "2026-08-10",
+   "end": "2026-09-20",
+   "year": 2026,
+   "sourceId": "d-regs-2026",
+   "note": "2026-2027 regulations: the standard general (harvest ticket) sheep season is Aug 10-Sept 20 with a full-curl ram bag limit (residents one ram; nonresidents one ram every four regulatory years, with a guide or qualifying resident relative). From July 1, 2026 hunters must complete ADF&G's Sheep Hunter Orientation before hunting these seasons. Some areas differ (Dalton Highway Corridor Management Area: Aug 10-Oct 5), are drawing-permit only or closed; check the unit pages."
+  },
+  {
+   "species": "sheep",
+   "label": "Youth-only general-season Dall sheep hunt, full-curl ram",
+   "method": "all",
+   "start": "2026-08-01",
+   "end": "2026-08-05",
+   "year": 2026,
+   "sourceId": "d-regs-2026",
+   "note": "Listed on the unit pages of the 2026-2027 regulations next to the Aug 10-Sept 20 general sheep seasons (harvest ticket, youth hunt only; full-curl ram)."
+  },
+  {
+   "species": "sheep",
+   "label": "Dalton Highway Corridor Management Area general-season Dall sheep, full-curl ram",
+   "method": "all",
+   "units": [
+    "24A",
+    "25A",
+    "26B"
+   ],
+   "start": "2026-08-10",
+   "end": "2026-10-05",
+   "year": 2026,
+   "sourceId": "d-regs-2026",
+   "note": "Portions of Units 24A, 25A and 26B within the Dalton Highway Corridor Management Area (harvest ticket; additional DHCMA restrictions apply). A youth-only hunt runs Aug 1-Aug 5."
+  }
+ ],
  "coverage": [
   {
    "species": "moose",
@@ -628,7 +729,7 @@
     2025,
     2026
    ],
-   "notes": "Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). Includes youth drawing hunts (YM). Hunts DM802-DM811 (Unit 21B Nowitna River, 2023-2026) and DM766 (Unit 20A Wood River CUA East, 2022-2025) are printed in tables whose cells could not be separated, so those rows carry only the GMU/area label and the counts. Season dates are omitted for 49 moose rows and the legal animal for 61 where the supplement cell could not be read unambiguously (mostly 2022 Unit 14A and the hunts above); JBER (14C) weapon certifications are printed in rotated text and are not captured."
+   "notes": "Season dates (seasonDates, as printed in the Y-(Y+1) supplement, with seasonRanges from seasons_ranges.py and seasonSourceId d-supp-Y) are on every row where the supplement cell could be read. Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). Includes youth drawing hunts (YM). Hunts DM802-DM811 (Unit 21B Nowitna River, 2023-2026) and DM766 (Unit 20A Wood River CUA East, 2022-2025) are printed in tables whose cells could not be separated, so those rows carry only the GMU/area label and the counts. Season dates are omitted for 49 moose rows and the legal animal for 61 where the supplement cell could not be read unambiguously (mostly 2022 Unit 14A and the hunts above); JBER (14C) weapon certifications are printed in rotated text and are not captured."
   },
   {
    "species": "sheep",
@@ -639,7 +740,7 @@
     2025,
     2026
    ],
-   "notes": "Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). Dall sheep."
+   "notes": "Season dates (seasonDates, as printed in the Y-(Y+1) supplement, with seasonRanges from seasons_ranges.py and seasonSourceId d-supp-Y) are on every row where the supplement cell could be read. Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). Dall sheep."
   },
   {
    "species": "goat",
@@ -650,7 +751,7 @@
     2025,
     2026
    ],
-   "notes": "Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). The supplement lists DG352 (Brown Mtn.) under the Unit 7 heading and DG354/DG356 as 15C; ADF&G's 2026 hunt pages give 15C and 15B for these, units are kept as the supplement prints them."
+   "notes": "Season dates (seasonDates, as printed in the Y-(Y+1) supplement, with seasonRanges from seasons_ranges.py and seasonSourceId d-supp-Y) are on every row where the supplement cell could be read. Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). The supplement lists DG352 (Brown Mtn.) under the Unit 7 heading and DG354/DG356 as 15C; ADF&G's 2026 hunt pages give 15C and 15B for these, units are kept as the supplement prints them."
   },
   {
    "species": "bear",
@@ -661,7 +762,7 @@
     2025,
     2026
    ],
-   "notes": "Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). Black bear only (DL hunts); the legal animal comes from the black bear page header in the 2024-2026 supplements (not printed there in 2022-2023). Brown/grizzly bear drawing hunts (DB, including Kodiak) are excluded because brown/grizzly bear is not a HuntScout species key."
+   "notes": "Season dates (seasonDates, as printed in the Y-(Y+1) supplement, with seasonRanges from seasons_ranges.py and seasonSourceId d-supp-Y) are on every row where the supplement cell could be read. Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). Black bear only (DL hunts); the legal animal comes from the black bear page header in the 2024-2026 supplements (not printed there in 2022-2023). Brown/grizzly bear drawing hunts (DB, including Kodiak) are excluded because brown/grizzly bear is not a HuntScout species key."
   },
   {
    "species": "elk",
@@ -672,7 +773,7 @@
     2025,
     2026
    ],
-   "notes": "Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). Unit 8 (Afognak, Raspberry islands) and Unit 3 (Etolin, Zarembo islands) elk drawing hunts."
+   "notes": "Season dates (seasonDates, as printed in the Y-(Y+1) supplement, with seasonRanges from seasons_ranges.py and seasonSourceId d-supp-Y) are on every row where the supplement cell could be read. Counts are ADF&G's per-hunt drawing results: Apps Received (applications, not unique applicants: one hunter may apply for the same hunt more than once and a party application covers two hunters) as total.applicants, Permits Available as total.quota, and % Drawn as published (whole percent; '<1' stored as null with a row note). No resident/nonresident split and no point data are published. Drawing year Y = applications Nov-Dec of Y-1, results in February of Y, hunts in the Y-(Y+1) regulatory year; counts from the back page of the (Y+1)-(Y+2) supplement, hunt details from the Y-(Y+1) supplement. Tier I/II subsistence, registration and general-season (harvest ticket) hunts are not drawings and are not in these rows. Caribou (DC/YC), bison (DI), muskox (DX) and emperor goose (DO) drawing hunts, brown/grizzly bear (DB) and wolf are not covered (no HuntScout species key). Unit 8 (Afognak, Raspberry islands) and Unit 3 (Etolin, Zarembo islands) elk drawing hunts."
   },
   {
    "species": "mule-deer",
