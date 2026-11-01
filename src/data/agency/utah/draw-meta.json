@@ -24,6 +24,7 @@
       "keyDates": [
         {
           "label": "Big game draw application period (permits and bonus/preference points)",
+          "kind": "application",
           "start": "2026-03-19",
           "end": "2026-04-23",
           "cycle": 2026,
@@ -33,6 +34,7 @@
         },
         {
           "label": "Big game draw results available",
+          "kind": "results",
           "date": "2026-05-31",
           "cycle": 2026,
           "status": "confirmed",
@@ -41,6 +43,7 @@
         },
         {
           "label": "Second chance to apply for big game bonus/preference points only",
+          "kind": "points",
           "start": "2026-06-09",
           "end": "2026-06-23",
           "cycle": 2026,
@@ -50,6 +53,7 @@
         },
         {
           "label": "Antlerless draw application period",
+          "kind": "application",
           "start": "2026-06-09",
           "end": "2026-06-23",
           "cycle": 2026,
@@ -58,6 +62,7 @@
         },
         {
           "label": "Antlerless draw results available",
+          "kind": "results",
           "date": "2026-07-08",
           "cycle": 2026,
           "status": "confirmed",
@@ -66,6 +71,7 @@
         },
         {
           "label": "General-season archery elk permits on sale (OTC)",
+          "kind": "license-sale",
           "date": "2026-07-07",
           "cycle": 2026,
           "status": "confirmed",
@@ -73,6 +79,7 @@
         },
         {
           "label": "General-season any bull elk permits on sale (OTC)",
+          "kind": "license-sale",
           "date": "2026-07-09",
           "cycle": 2026,
           "status": "confirmed",
@@ -80,6 +87,7 @@
         },
         {
           "label": "General-season spike bull elk permits on sale (OTC)",
+          "kind": "license-sale",
           "date": "2026-07-16",
           "cycle": 2026,
           "status": "confirmed",
@@ -87,6 +95,8 @@
         },
         {
           "label": "2027 sportsman permit drawing application period (bull elk)",
+          "kind": "application",
+          "residency": "resident",
           "start": "2026-10-20",
           "end": "2026-11-10",
           "cycle": 2027,
@@ -95,10 +105,23 @@
           "sourceId": "d-news-sportsman-2027"
         },
         {
+          "label": "2027 sportsman permit application withdrawal deadline (bull elk)",
+          "kind": "application-change",
+          "residency": "resident",
+          "date": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "sourceId": "d-sportsman-page-2027"
+        },
+        {
           "label": "2027 sportsman permit drawing results available (bull elk)",
+          "kind": "results",
+          "residency": "resident",
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
+          "note": "Results by email on Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -108,7 +131,9 @@
         "d-rule-r657-62",
         "d-points",
         "d-fees",
-        "d-news-sportsman-2027"
+        "d-field-regs-2026",
+        "d-news-sportsman-2027",
+        "d-sportsman-page-2027"
       ]
     },
     {
@@ -124,6 +149,7 @@
       "keyDates": [
         {
           "label": "Big game draw application period (permits and bonus/preference points)",
+          "kind": "application",
           "start": "2026-03-19",
           "end": "2026-04-23",
           "cycle": 2026,
@@ -133,6 +159,7 @@
         },
         {
           "label": "Big game draw results available",
+          "kind": "results",
           "date": "2026-05-31",
           "cycle": 2026,
           "status": "confirmed",
@@ -141,6 +168,7 @@
         },
         {
           "label": "Second chance to apply for big game bonus/preference points only",
+          "kind": "points",
           "start": "2026-06-09",
           "end": "2026-06-23",
           "cycle": 2026,
@@ -150,6 +178,7 @@
         },
         {
           "label": "Antlerless draw application period",
+          "kind": "application",
           "start": "2026-06-09",
           "end": "2026-06-23",
           "cycle": 2026,
@@ -158,6 +187,7 @@
         },
         {
           "label": "Antlerless draw results available",
+          "kind": "results",
           "date": "2026-07-08",
           "cycle": 2026,
           "status": "confirmed",
@@ -166,6 +196,7 @@
         },
         {
           "label": "Remaining general-season deer permits on sale",
+          "kind": "leftover",
           "date": "2026-07-07",
           "cycle": 2026,
           "status": "confirmed",
@@ -174,6 +205,8 @@
         },
         {
           "label": "2027 sportsman permit drawing application period (buck deer)",
+          "kind": "application",
+          "residency": "resident",
           "start": "2026-10-20",
           "end": "2026-11-10",
           "cycle": 2027,
@@ -182,10 +215,23 @@
           "sourceId": "d-news-sportsman-2027"
         },
         {
+          "label": "2027 sportsman permit application withdrawal deadline (buck deer)",
+          "kind": "application-change",
+          "residency": "resident",
+          "date": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "sourceId": "d-sportsman-page-2027"
+        },
+        {
           "label": "2027 sportsman permit drawing results available (buck deer)",
+          "kind": "results",
+          "residency": "resident",
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
+          "note": "Results by email on Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -195,7 +241,9 @@
         "d-rule-r657-62",
         "d-points",
         "d-fees",
-        "d-news-sportsman-2027"
+        "d-field-regs-2026",
+        "d-news-sportsman-2027",
+        "d-sportsman-page-2027"
       ]
     },
     {
@@ -211,6 +259,7 @@
       "keyDates": [
         {
           "label": "Big game draw application period (permits and bonus/preference points)",
+          "kind": "application",
           "start": "2026-03-19",
           "end": "2026-04-23",
           "cycle": 2026,
@@ -220,6 +269,7 @@
         },
         {
           "label": "Big game draw results available",
+          "kind": "results",
           "date": "2026-05-31",
           "cycle": 2026,
           "status": "confirmed",
@@ -228,6 +278,7 @@
         },
         {
           "label": "Second chance to apply for big game bonus/preference points only",
+          "kind": "points",
           "start": "2026-06-09",
           "end": "2026-06-23",
           "cycle": 2026,
@@ -237,6 +288,7 @@
         },
         {
           "label": "Antlerless draw application period",
+          "kind": "application",
           "start": "2026-06-09",
           "end": "2026-06-23",
           "cycle": 2026,
@@ -245,6 +297,7 @@
         },
         {
           "label": "Antlerless draw results available",
+          "kind": "results",
           "date": "2026-07-08",
           "cycle": 2026,
           "status": "confirmed",
@@ -253,6 +306,8 @@
         },
         {
           "label": "2027 sportsman permit drawing application period (buck pronghorn)",
+          "kind": "application",
+          "residency": "resident",
           "start": "2026-10-20",
           "end": "2026-11-10",
           "cycle": 2027,
@@ -261,10 +316,23 @@
           "sourceId": "d-news-sportsman-2027"
         },
         {
+          "label": "2027 sportsman permit application withdrawal deadline (buck pronghorn)",
+          "kind": "application-change",
+          "residency": "resident",
+          "date": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "sourceId": "d-sportsman-page-2027"
+        },
+        {
           "label": "2027 sportsman permit drawing results available (buck pronghorn)",
+          "kind": "results",
+          "residency": "resident",
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
+          "note": "Results by email on Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -274,7 +342,9 @@
         "d-rule-r657-62",
         "d-points",
         "d-fees",
-        "d-news-sportsman-2027"
+        "d-field-regs-2026",
+        "d-news-sportsman-2027",
+        "d-sportsman-page-2027"
       ]
     },
     {
@@ -289,6 +359,7 @@
       "keyDates": [
         {
           "label": "Big game draw application period (permits and bonus/preference points)",
+          "kind": "application",
           "start": "2026-03-19",
           "end": "2026-04-23",
           "cycle": 2026,
@@ -298,6 +369,7 @@
         },
         {
           "label": "Big game draw results available",
+          "kind": "results",
           "date": "2026-05-31",
           "cycle": 2026,
           "status": "confirmed",
@@ -306,6 +378,7 @@
         },
         {
           "label": "Second chance to apply for big game bonus/preference points only",
+          "kind": "points",
           "start": "2026-06-09",
           "end": "2026-06-23",
           "cycle": 2026,
@@ -315,6 +388,7 @@
         },
         {
           "label": "Antlerless draw application period",
+          "kind": "application",
           "start": "2026-06-09",
           "end": "2026-06-23",
           "cycle": 2026,
@@ -323,6 +397,7 @@
         },
         {
           "label": "Antlerless draw results available",
+          "kind": "results",
           "date": "2026-07-08",
           "cycle": 2026,
           "status": "confirmed",
@@ -331,6 +406,8 @@
         },
         {
           "label": "2027 sportsman permit drawing application period (bull moose)",
+          "kind": "application",
+          "residency": "resident",
           "start": "2026-10-20",
           "end": "2026-11-10",
           "cycle": 2027,
@@ -339,10 +416,23 @@
           "sourceId": "d-news-sportsman-2027"
         },
         {
+          "label": "2027 sportsman permit application withdrawal deadline (bull moose)",
+          "kind": "application-change",
+          "residency": "resident",
+          "date": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "sourceId": "d-sportsman-page-2027"
+        },
+        {
           "label": "2027 sportsman permit drawing results available (bull moose)",
+          "kind": "results",
+          "residency": "resident",
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
+          "note": "Results by email on Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -352,7 +442,9 @@
         "d-rule-r657-62",
         "d-points",
         "d-fees",
-        "d-news-sportsman-2027"
+        "d-field-regs-2026",
+        "d-news-sportsman-2027",
+        "d-sportsman-page-2027"
       ]
     },
     {
@@ -366,6 +458,7 @@
       "keyDates": [
         {
           "label": "Big game draw application period (permits and bonus/preference points)",
+          "kind": "application",
           "start": "2026-03-19",
           "end": "2026-04-23",
           "cycle": 2026,
@@ -375,6 +468,7 @@
         },
         {
           "label": "Big game draw results available",
+          "kind": "results",
           "date": "2026-05-31",
           "cycle": 2026,
           "status": "confirmed",
@@ -383,6 +477,7 @@
         },
         {
           "label": "Second chance to apply for big game bonus/preference points only",
+          "kind": "points",
           "start": "2026-06-09",
           "end": "2026-06-23",
           "cycle": 2026,
@@ -392,6 +487,7 @@
         },
         {
           "label": "Antlerless draw application period",
+          "kind": "application",
           "start": "2026-06-09",
           "end": "2026-06-23",
           "cycle": 2026,
@@ -400,6 +496,7 @@
         },
         {
           "label": "Antlerless draw results available",
+          "kind": "results",
           "date": "2026-07-08",
           "cycle": 2026,
           "status": "confirmed",
@@ -408,6 +505,8 @@
         },
         {
           "label": "2027 sportsman permit drawing application period (desert bighorn sheep and Rocky Mountain bighorn sheep, one permit each)",
+          "kind": "application",
+          "residency": "resident",
           "start": "2026-10-20",
           "end": "2026-11-10",
           "cycle": 2027,
@@ -416,10 +515,23 @@
           "sourceId": "d-news-sportsman-2027"
         },
         {
+          "label": "2027 sportsman permit application withdrawal deadline (desert bighorn sheep and Rocky Mountain bighorn sheep, one permit each)",
+          "kind": "application-change",
+          "residency": "resident",
+          "date": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "sourceId": "d-sportsman-page-2027"
+        },
+        {
           "label": "2027 sportsman permit drawing results available (desert bighorn sheep and Rocky Mountain bighorn sheep, one permit each)",
+          "kind": "results",
+          "residency": "resident",
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
+          "note": "Results by email on Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -429,7 +541,9 @@
         "d-rule-r657-62",
         "d-points",
         "d-fees",
-        "d-news-sportsman-2027"
+        "d-field-regs-2026",
+        "d-news-sportsman-2027",
+        "d-sportsman-page-2027"
       ]
     },
     {
@@ -443,6 +557,7 @@
       "keyDates": [
         {
           "label": "Big game draw application period (permits and bonus/preference points)",
+          "kind": "application",
           "start": "2026-03-19",
           "end": "2026-04-23",
           "cycle": 2026,
@@ -452,6 +567,7 @@
         },
         {
           "label": "Big game draw results available",
+          "kind": "results",
           "date": "2026-05-31",
           "cycle": 2026,
           "status": "confirmed",
@@ -460,6 +576,7 @@
         },
         {
           "label": "Second chance to apply for big game bonus/preference points only",
+          "kind": "points",
           "start": "2026-06-09",
           "end": "2026-06-23",
           "cycle": 2026,
@@ -469,6 +586,8 @@
         },
         {
           "label": "2027 sportsman permit drawing application period (mountain goat)",
+          "kind": "application",
+          "residency": "resident",
           "start": "2026-10-20",
           "end": "2026-11-10",
           "cycle": 2027,
@@ -477,10 +596,23 @@
           "sourceId": "d-news-sportsman-2027"
         },
         {
+          "label": "2027 sportsman permit application withdrawal deadline (mountain goat)",
+          "kind": "application-change",
+          "residency": "resident",
+          "date": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "sourceId": "d-sportsman-page-2027"
+        },
+        {
           "label": "2027 sportsman permit drawing results available (mountain goat)",
+          "kind": "results",
+          "residency": "resident",
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
+          "note": "Results by email on Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -489,7 +621,8 @@
         "d-rule-r657-62",
         "d-points",
         "d-fees",
-        "d-news-sportsman-2027"
+        "d-news-sportsman-2027",
+        "d-sportsman-page-2027"
       ]
     },
     {
@@ -503,6 +636,7 @@
       "keyDates": [
         {
           "label": "Black bear draw application period",
+          "kind": "application",
           "start": "2026-02-10",
           "end": "2026-02-24",
           "cycle": 2026,
@@ -512,20 +646,34 @@
         },
         {
           "label": "Black bear draw results available",
+          "kind": "results",
           "date": "2026-03-05",
           "cycle": 2026,
           "status": "confirmed",
           "sourceId": "d-bear-guide-2026"
         },
         {
-          "label": "Harvest-objective and remaining bear permits on sale",
+          "label": "Harvest-objective bear permits on sale (OTC)",
+          "kind": "license-sale",
           "date": "2026-03-10",
           "cycle": 2026,
           "status": "confirmed",
+          "note": "8 a.m. MDT.",
+          "sourceId": "d-bear-guide-2026"
+        },
+        {
+          "label": "Remaining limited-entry bear permits on sale, if available",
+          "kind": "leftover",
+          "date": "2026-03-10",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "8 a.m. MDT.",
           "sourceId": "d-bear-guide-2026"
         },
         {
           "label": "2027 sportsman permit drawing application period (black bear)",
+          "kind": "application",
+          "residency": "resident",
           "start": "2026-10-20",
           "end": "2026-11-10",
           "cycle": 2027,
@@ -534,10 +682,23 @@
           "sourceId": "d-news-sportsman-2027"
         },
         {
+          "label": "2027 sportsman permit application withdrawal deadline (black bear)",
+          "kind": "application-change",
+          "residency": "resident",
+          "date": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "sourceId": "d-sportsman-page-2027"
+        },
+        {
           "label": "2027 sportsman permit drawing results available (black bear)",
+          "kind": "results",
+          "residency": "resident",
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
+          "note": "Results by email on Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -545,7 +706,8 @@
         "d-bear-guide-2026",
         "d-rule-r657-62",
         "d-fees",
-        "d-news-sportsman-2027"
+        "d-news-sportsman-2027",
+        "d-sportsman-page-2027"
       ]
     },
     {
@@ -572,30 +734,63 @@
       "otcSummary": "Spring general-season turkey permits go on sale March 11, 2027 (spring general season May 3-31, 2027); fall management harvest permits went on sale Sept. 10, 2026. Buying a general-season permit does not cost bonus points.",
       "keyDates": [
         {
-          "label": "Limited-entry turkey draw application period",
+          "label": "Fall management harvest turkey permits on sale (OTC)",
+          "kind": "license-sale",
+          "date": "2026-09-10",
+          "cycle": 2026,
+          "status": "confirmed",
+          "note": "8 a.m. MDT; fall hunts Oct. 1, 2026 - Feb. 28, 2027.",
+          "sourceId": "d-turkey-guide-2026-27"
+        },
+        {
+          "label": "Limited-entry turkey draw application period (permits and bonus points)",
+          "kind": "application",
           "start": "2026-12-15",
           "end": "2026-12-29",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Opens 8 a.m. MDT Dec. 15, closes 11 p.m. MDT Dec. 29, 2026.",
+          "note": "Opens 8 a.m. MDT Dec. 15, closes 11 p.m. MDT Dec. 29, 2026 (times as printed by UDWR). Residents and nonresidents.",
+          "sourceId": "d-turkey-guide-2026-27"
+        },
+        {
+          "label": "Limited-entry turkey application edit/withdrawal deadline",
+          "kind": "application-change",
+          "date": "2026-12-29",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Deadline to withdraw or edit your application: Dec. 29, 11 p.m.",
           "sourceId": "d-turkey-guide-2026-27"
         },
         {
           "label": "Limited-entry turkey draw results available",
+          "kind": "results",
           "date": "2027-01-07",
           "cycle": 2027,
           "status": "confirmed",
           "sourceId": "d-turkey-guide-2026-27"
         },
         {
-          "label": "Remaining limited-entry and spring general-season turkey permits on sale",
+          "label": "Remaining limited-entry turkey permits on sale",
+          "kind": "leftover",
           "date": "2027-03-11",
           "cycle": 2027,
           "status": "confirmed",
+          "note": "Sale time not printed for remaining limited-entry permits.",
+          "sourceId": "d-turkey-guide-2026-27"
+        },
+        {
+          "label": "Spring general-season turkey permits on sale (OTC)",
+          "kind": "license-sale",
+          "date": "2027-03-11",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "8 a.m. MDT.",
           "sourceId": "d-turkey-guide-2026-27"
         },
         {
           "label": "2027 sportsman permit drawing application period (wild turkey, a two-bird permit)",
+          "kind": "application",
+          "residency": "resident",
           "start": "2026-10-20",
           "end": "2026-11-10",
           "cycle": 2027,
@@ -604,17 +799,31 @@
           "sourceId": "d-news-sportsman-2027"
         },
         {
+          "label": "2027 sportsman permit application withdrawal deadline (wild turkey, a two-bird permit)",
+          "kind": "application-change",
+          "residency": "resident",
+          "date": "2026-11-10",
+          "cycle": 2027,
+          "status": "confirmed",
+          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "sourceId": "d-sportsman-page-2027"
+        },
+        {
           "label": "2027 sportsman permit drawing results available (wild turkey, a two-bird permit)",
+          "kind": "results",
+          "residency": "resident",
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
+          "note": "Results by email on Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
       "sourceIds": [
         "d-turkey-guide-2026-27",
         "d-fees",
-        "d-news-sportsman-2027"
+        "d-news-sportsman-2027",
+        "d-sportsman-page-2027"
       ]
     }
   ],
@@ -980,6 +1189,7 @@
     {
       "species": "mule-deer",
       "label": "General-season buck deer: archery",
+      "method": "archery",
       "start": "2026-08-15",
       "end": "2026-09-11",
       "year": 2026,
@@ -988,6 +1198,7 @@
     {
       "species": "mule-deer",
       "label": "General-season buck deer: muzzleloader (and restricted muzzleloader)",
+      "method": "muzzleloader",
       "start": "2026-09-23",
       "end": "2026-10-01",
       "year": 2026,
@@ -996,6 +1207,7 @@
     {
       "species": "mule-deer",
       "label": "General-season buck deer: early any legal weapon (rifle)",
+      "method": "all",
       "start": "2026-10-07",
       "end": "2026-10-11",
       "year": 2026,
@@ -1004,14 +1216,77 @@
     {
       "species": "mule-deer",
       "label": "General-season buck deer: any legal weapon (rifle) (and restricted rifle)",
+      "method": "all",
       "start": "2026-10-17",
       "end": "2026-10-25",
       "year": 2026,
+      "note": "Restricted rifle units share these dates.",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "mule-deer",
+      "label": "Extended archery deer (either sex)",
+      "method": "archery",
+      "units": [
+        "Nine Mile, Green River Valley",
+        "Sanpete Valley",
+        "South Wasatch"
+      ],
+      "start": "2026-09-12",
+      "end": "2026-10-15",
+      "year": 2026,
+      "note": "Archery buck deer permit holders (and extended-archery-only permit DB0008) who complete the archery ethics course.",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "mule-deer",
+      "label": "Extended archery deer (either sex)",
+      "method": "archery",
+      "units": [
+        "Box Elder, West Bear River",
+        "Herriman South Valley",
+        "Ogden",
+        "Uinta Basin",
+        "Utah Lake",
+        "Wasatch Front",
+        "West Cache"
+      ],
+      "start": "2026-09-12",
+      "end": "2026-11-30",
+      "year": 2026,
+      "note": "Archery buck deer permit holders (and extended-archery-only permit DB0008) who complete the archery ethics course.",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "mule-deer",
+      "label": "Sportsman/statewide conservation buck deer: archery",
+      "method": "archery",
+      "huntCodes": [
+        "DB0007"
+      ],
+      "start": "2026-08-15",
+      "end": "2026-08-31",
+      "year": 2026,
+      "note": "Sportsman and statewide conservation permits; hunt on open units for the species (Antelope Island and other listed exclusions apply).",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "mule-deer",
+      "label": "Sportsman/statewide conservation buck deer: any legal weapon",
+      "method": "all",
+      "huntCodes": [
+        "DB0007"
+      ],
+      "start": "2026-09-01",
+      "end": "2027-01-15",
+      "year": 2026,
+      "note": "Sportsman and statewide conservation permits; hunt on open units for the species (Antelope Island and other listed exclusions apply).",
       "sourceId": "d-bg-guide-2026"
     },
     {
       "species": "elk",
       "label": "General-season any bull elk units: archery",
+      "method": "archery",
       "start": "2026-08-15",
       "end": "2026-09-16",
       "year": 2026,
@@ -1021,6 +1296,7 @@
     {
       "species": "elk",
       "label": "General-season any bull elk units: early any legal weapon (rifle)",
+      "method": "all",
       "start": "2026-10-03",
       "end": "2026-10-09",
       "year": 2026,
@@ -1029,6 +1305,7 @@
     {
       "species": "elk",
       "label": "General-season any bull elk units: late any legal weapon (rifle)",
+      "method": "all",
       "start": "2026-10-10",
       "end": "2026-10-16",
       "year": 2026,
@@ -1037,6 +1314,7 @@
     {
       "species": "elk",
       "label": "General-season any bull elk units: muzzleloader",
+      "method": "muzzleloader",
       "start": "2026-10-28",
       "end": "2026-11-05",
       "year": 2026,
@@ -1045,6 +1323,7 @@
     {
       "species": "elk",
       "label": "General-season spike elk units: archery",
+      "method": "archery",
       "start": "2026-08-15",
       "end": "2026-09-04",
       "year": 2026,
@@ -1053,6 +1332,7 @@
     {
       "species": "elk",
       "label": "General-season spike elk units: any legal weapon (rifle)",
+      "method": "all",
       "start": "2026-10-03",
       "end": "2026-10-15",
       "year": 2026,
@@ -1061,6 +1341,7 @@
     {
       "species": "elk",
       "label": "General-season spike elk units: muzzleloader",
+      "method": "muzzleloader",
       "start": "2026-10-28",
       "end": "2026-11-05",
       "year": 2026,
@@ -1069,9 +1350,282 @@
     {
       "species": "elk",
       "label": "Draw-only youth any bull/hunter's choice elk",
+      "method": "all",
       "start": "2026-09-12",
       "end": "2026-09-22",
       "year": 2026,
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "elk",
+      "label": "Extended archery elk (any bull or antlerless)",
+      "method": "archery",
+      "units": [
+        "Uinta Basin",
+        "Wasatch Front"
+      ],
+      "start": "2026-08-15",
+      "end": "2026-12-15",
+      "year": 2026,
+      "note": "Online edition date (the print edition had Aug. 16, corrected June 3, 2026).",
+      "sourceId": "d-field-regs-2026"
+    },
+    {
+      "species": "elk",
+      "label": "Extended archery elk (any bull or antlerless)",
+      "method": "archery",
+      "units": [
+        "West Cache"
+      ],
+      "start": "2026-08-15",
+      "end": "2027-01-31",
+      "year": 2026,
+      "sourceId": "d-field-regs-2026"
+    },
+    {
+      "species": "elk",
+      "label": "General-season private-lands-only any bull elk (Uinta Basin)",
+      "method": "all",
+      "units": [
+        "Uinta Basin"
+      ],
+      "start": "2026-08-01",
+      "end": "2026-11-15",
+      "year": 2026,
+      "note": "Private lands only, with documented landowner permission (elk damage).",
+      "sourceId": "d-field-regs-2026"
+    },
+    {
+      "species": "elk",
+      "label": "Sportsman/statewide conservation bull elk: archery",
+      "method": "archery",
+      "huntCodes": [
+        "EB1000"
+      ],
+      "start": "2026-08-15",
+      "end": "2026-08-31",
+      "year": 2026,
+      "note": "Sportsman and statewide conservation permits; hunt on open units for the species (Antelope Island and other listed exclusions apply). No elk on Box Elder, Pilot Mtn.",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "elk",
+      "label": "Sportsman/statewide conservation bull elk: any legal weapon",
+      "method": "all",
+      "huntCodes": [
+        "EB1000"
+      ],
+      "start": "2026-09-01",
+      "end": "2027-01-15",
+      "year": 2026,
+      "note": "Sportsman and statewide conservation permits; hunt on open units for the species (Antelope Island and other listed exclusions apply). No elk on Box Elder, Pilot Mtn.",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "pronghorn",
+      "label": "Sportsman/statewide conservation buck pronghorn: archery",
+      "method": "archery",
+      "huntCodes": [
+        "PB1000"
+      ],
+      "start": "2026-08-15",
+      "end": "2026-08-31",
+      "year": 2026,
+      "note": "Sportsman and statewide conservation permits; hunt on open units for the species (Antelope Island and other listed exclusions apply).",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "pronghorn",
+      "label": "Sportsman/statewide conservation buck pronghorn: any legal weapon",
+      "method": "all",
+      "huntCodes": [
+        "PB1000"
+      ],
+      "start": "2026-09-01",
+      "end": "2026-11-15",
+      "year": 2026,
+      "note": "Sportsman and statewide conservation permits; hunt on open units for the species (Antelope Island and other listed exclusions apply).",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "moose",
+      "label": "Sportsman/statewide conservation bull moose",
+      "method": "all",
+      "huntCodes": [
+        "MB1000"
+      ],
+      "start": "2026-09-01",
+      "end": "2026-11-15",
+      "year": 2026,
+      "note": "Sportsman and statewide conservation permits; hunt on open units for the species (Antelope Island and other listed exclusions apply).",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "sheep",
+      "label": "Sportsman/statewide conservation Rocky Mountain bighorn sheep",
+      "method": "all",
+      "huntCodes": [
+        "RS0001"
+      ],
+      "start": "2026-09-01",
+      "end": "2026-12-31",
+      "year": 2026,
+      "note": "Sportsman and statewide conservation permits; hunt on open units for the species (Antelope Island and other listed exclusions apply). Not on Box Elder, Pilot Mtn.",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "sheep",
+      "label": "Sportsman/statewide conservation desert bighorn sheep",
+      "method": "all",
+      "huntCodes": [
+        "DS1000"
+      ],
+      "start": "2026-09-01",
+      "end": "2026-12-31",
+      "year": 2026,
+      "note": "Sportsman and statewide conservation permits; hunt on open units for the species (Antelope Island and other listed exclusions apply).",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "goat",
+      "label": "Sportsman/statewide conservation mountain goat",
+      "method": "all",
+      "huntCodes": [
+        "GO1000"
+      ],
+      "start": "2026-09-01",
+      "end": "2026-12-31",
+      "year": 2026,
+      "note": "Sportsman and statewide conservation permits; hunt on open units for the species (Antelope Island and other listed exclusions apply).",
+      "sourceId": "d-bg-guide-2026"
+    },
+    {
+      "species": "bear",
+      "label": "Harvest-objective bear, spring (no bait)",
+      "method": "all",
+      "units": [
+        "Chalk Creek/East Canyon/Morgan-South Rich",
+        "Nine Mile",
+        "North Slope, Three Corners/West Daggett",
+        "Wasatch Mtns, Avintaquin/Currant Creek",
+        "Yellowstone"
+      ],
+      "start": "2026-03-28",
+      "end": "2026-05-25",
+      "year": 2026,
+      "note": "Over-the-counter harvest-objective permit; each unit closes early when its harvest quota is met.",
+      "sourceId": "d-bear-guide-2026"
+    },
+    {
+      "species": "bear",
+      "label": "Harvest-objective bear, summer (no bait/no dogs)",
+      "method": "all",
+      "units": [
+        "Boulder/Kaiparowits",
+        "Cache/Ogden",
+        "Chalk Creek/East Canyon/Morgan-South Rich",
+        "Kamas/North Slope, Summit",
+        "Manti, North",
+        "Nebo",
+        "Wasatch Mtns, West-Central"
+      ],
+      "start": "2026-07-06",
+      "end": "2026-07-31",
+      "year": 2026,
+      "note": "Over-the-counter harvest-objective permit; each unit closes early when its harvest quota is met.",
+      "sourceId": "d-bear-guide-2026"
+    },
+    {
+      "species": "bear",
+      "label": "Harvest-objective bear (no bait)",
+      "method": "all",
+      "units": [
+        "Chalk Creek/East Canyon/Morgan-South Rich"
+      ],
+      "start": "2026-08-01",
+      "end": "2026-08-31",
+      "year": 2026,
+      "note": "Same hunt also open Nov. 2-8, 2026.",
+      "sourceId": "d-bear-guide-2026"
+    },
+    {
+      "species": "bear",
+      "label": "Harvest-objective bear (no bait/no dogs)",
+      "method": "all",
+      "units": [
+        "Book Cliffs, Bitter Creek/South"
+      ],
+      "start": "2026-08-15",
+      "end": "2026-10-01",
+      "year": 2026,
+      "sourceId": "d-bear-guide-2026"
+    },
+    {
+      "species": "bear",
+      "label": "Harvest-objective bear, fall (no bait/no dogs)",
+      "method": "all",
+      "units": [
+        "Beaver",
+        "Boulder/Kaiparowits",
+        "Cache/Ogden",
+        "Chalk Creek/East Canyon/Morgan-South Rich",
+        "Diamond Mtn/Vernal/Bonanza",
+        "Fillmore, Pahvant",
+        "Fishlake/Thousand Lakes",
+        "Kamas/North Slope, Summit",
+        "La Sal Mtns",
+        "Manti, North",
+        "Manti, South/San Rafael, North",
+        "Mt Dutton",
+        "Nebo",
+        "Nine Mile",
+        "North Slope, Three Corners/West Daggett",
+        "Panguitch Lake/Zion",
+        "San Juan",
+        "Wasatch Mtns, Avintaquin/Currant Creek",
+        "Wasatch Mtns, West-Central",
+        "Yellowstone"
+      ],
+      "start": "2026-09-01",
+      "end": "2026-10-25",
+      "year": 2026,
+      "note": "Over-the-counter harvest-objective permit; each unit closes early when its harvest quota is met.",
+      "sourceId": "d-bear-guide-2026"
+    },
+    {
+      "species": "bear",
+      "label": "Harvest-objective bear (no bait)",
+      "method": "all",
+      "units": [
+        "Chalk Creek/East Canyon/Morgan-South Rich"
+      ],
+      "start": "2026-11-02",
+      "end": "2026-11-08",
+      "year": 2026,
+      "note": "Same hunt also open Aug. 1-31, 2026.",
+      "sourceId": "d-bear-guide-2026"
+    },
+    {
+      "species": "lion",
+      "label": "Cougar hunting, pursuit and trapping (units not designated as restricted pursuit units)",
+      "method": "all",
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "year": 2026,
+      "note": "UDWR: 'Year-round' (no permit; hunting or combination license required). Shown as calendar 2026. In the restricted pursuit units (Book Cliffs, La Sal, San Juan) cougar pursuit and hunting Mar. 28 - Nov. 1, 2026 carries a no-dogs restriction except for hunters with valid bear permits.",
+      "sourceId": "d-bear-guide-2026"
+    },
+    {
+      "species": "turkey",
+      "label": "Sportsman/statewide conservation bearded turkey (2-bird permit)",
+      "method": "all",
+      "huntCodes": [
+        "TK0001"
+      ],
+      "start": "2026-04-01",
+      "end": "2026-05-31",
+      "year": 2026,
+      "note": "Sportsman and statewide conservation permits; hunt on open units for the species (Antelope Island and other listed exclusions apply).",
       "sourceId": "d-bg-guide-2026"
     },
     {
@@ -1080,6 +1634,7 @@
       "start": "2026-10-01",
       "end": "2027-02-28",
       "year": 2026,
+      "note": "Central, Northern, Southeastern and Southern regions (specified areas, mostly private land).",
       "sourceId": "d-turkey-guide-2026-27"
     },
     {
@@ -1088,6 +1643,15 @@
       "start": "2027-04-10",
       "end": "2027-04-29",
       "year": 2027,
+      "sourceId": "d-turkey-guide-2026-27"
+    },
+    {
+      "species": "turkey",
+      "label": "Spring general-season youth turkey hunt",
+      "start": "2027-04-30",
+      "end": "2027-05-02",
+      "year": 2027,
+      "note": "Youth 17 or younger on July 31, 2027 with a general-season (or unfilled limited-entry) permit.",
       "sourceId": "d-turkey-guide-2026-27"
     },
     {
@@ -1634,6 +2198,25 @@
       "dataYear": 2027,
       "retrieved": "2026-10-31",
       "notes": "UDWR news release published Oct. 13, 2026: 2027 sportsman permit applications Oct. 20 (8 a.m. MDT) - Nov. 10, 2026 (11 p.m. MST), results Nov. 19; Utah residents only; one statewide permit each for bison, black bear, buck deer, buck pronghorn, bull elk, bull moose, desert bighorn sheep, mountain goat, Rocky Mountain bighorn sheep and wild turkey; $10 non-refundable application fee per species; no bonus points earned or used."
+    },
+    {
+      "id": "d-sportsman-page-2027",
+      "title": "Sportsman permits",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/sportsmanpermits",
+      "dataYear": 2027,
+      "retrieved": "2026-10-31",
+      "notes": "Page last updated Oct. 13, 2026: 'The following dates and deadlines have been updated for the 2027 sportsman permits.' Application period opens Oct. 20, 2026 8 a.m. MDT; application and withdrawal deadline Nov. 10, 2026 11 p.m. MST; results by email Nov. 19, 2026. Utah residents only."
+    },
+    {
+      "id": "d-field-regs-2026",
+      "title": "Utah Big Game Field Regulations Guidebook 2026",
+      "publisher": "Utah Division of Wildlife Resources",
+      "url": "https://wildlife.utah.gov/guidebooks/field_regs.pdf",
+      "pageUrl": "https://wildlife.utah.gov/guidebooks",
+      "dataYear": 2026,
+      "retrieved": "2026-10-31",
+      "notes": "Version 2026.2, published May 29, 2026 (online edition with the June 3 and July 22, 2026 corrections). Season dates pp. 8-9 (general-season, extended archery, sportsman and statewide conservation) and pp. 49-51 (elk hunts)."
     }
   ]
 }
