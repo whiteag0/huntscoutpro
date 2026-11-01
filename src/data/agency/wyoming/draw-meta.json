@@ -124,6 +124,39 @@
      "note": "2027 dates not yet published by WGFD as of 2026-10-31"
     },
     {
+     "label": "Nonresident application period",
+     "kind": "application",
+     "residency": "nonresident",
+     "start": "2027-01-04",
+     "end": "2027-02-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of January through January 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. January 1, 2027 is New Year's Day, so applications open Monday, January 4, 2027. January 31, 2027 is a Sunday, so the deadline moves to Monday, February 1, 2027.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
+     "label": "Resident application period",
+     "kind": "application",
+     "residency": "resident",
+     "start": "2027-01-04",
+     "end": "2027-06-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of January through May 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. January 1, 2027 is New Year's Day, so applications open Monday, January 4, 2027. May 31, 2027 is Memorial Day, so the deadline moves to Tuesday, June 1, 2027.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
+     "label": "Preference point only purchase period",
+     "kind": "points",
+     "residency": "nonresident",
+     "start": "2027-07-01",
+     "end": "2027-11-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of July through October 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. October 31, 2027 is a Sunday, so the deadline moves to Monday, November 1, 2027. Nonresident full-price elk points only.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
      "label": "2027 Super Tag and Super Tag Trifecta raffle ticket sales",
      "kind": "other",
      "start": "2026-02-17",
@@ -149,6 +182,7 @@
     "d-wy-draw-odds-index",
     "d-wy-2026-black-bear-brochure",
     "d-wy-2027-nr-preference-point-prices",
+    "d-wy-ch44-license-issuance",
     "d-wy-super-tag-raffle-page",
     "d-wy-ch7-elk"
    ]
@@ -232,6 +266,27 @@
      "note": "2027 dates not yet published by WGFD as of 2026-10-31"
     },
     {
+     "label": "Initial drawing application period (resident and nonresident)",
+     "kind": "application",
+     "start": "2027-01-04",
+     "end": "2027-06-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of January through May 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. January 1, 2027 is New Year's Day, so applications open Monday, January 4, 2027. May 31, 2027 is Memorial Day, so the deadline moves to Tuesday, June 1, 2027.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
+     "label": "Preference point only purchase period",
+     "kind": "points",
+     "residency": "nonresident",
+     "start": "2027-07-01",
+     "end": "2027-11-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of July through October 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. October 31, 2027 is a Sunday, so the deadline moves to Monday, November 1, 2027. Nonresident full-price deer points only.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
      "label": "2027 Super Tag and Super Tag Trifecta raffle ticket sales",
      "kind": "other",
      "start": "2026-02-17",
@@ -257,6 +312,7 @@
     "d-wy-draw-odds-index",
     "d-wy-2026-black-bear-brochure",
     "d-wy-2027-nr-preference-point-prices",
+    "d-wy-ch44-license-issuance",
     "d-wy-super-tag-raffle-page",
     "d-wy-ch6-deer"
    ]
@@ -340,6 +396,27 @@
      "note": "2027 dates not yet published by WGFD as of 2026-10-31"
     },
     {
+     "label": "Initial drawing application period (resident and nonresident)",
+     "kind": "application",
+     "start": "2027-01-04",
+     "end": "2027-06-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of January through May 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. January 1, 2027 is New Year's Day, so applications open Monday, January 4, 2027. May 31, 2027 is Memorial Day, so the deadline moves to Tuesday, June 1, 2027.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
+     "label": "Preference point only purchase period",
+     "kind": "points",
+     "residency": "nonresident",
+     "start": "2027-07-01",
+     "end": "2027-11-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of July through October 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. October 31, 2027 is a Sunday, so the deadline moves to Monday, November 1, 2027. Nonresident full-price deer points only.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
      "label": "2027 Super Tag and Super Tag Trifecta raffle ticket sales",
      "kind": "other",
      "start": "2026-02-17",
@@ -365,6 +442,7 @@
     "d-wy-draw-odds-index",
     "d-wy-2026-black-bear-brochure",
     "d-wy-2027-nr-preference-point-prices",
+    "d-wy-ch44-license-issuance",
     "d-wy-super-tag-raffle-page",
     "d-wy-ch6-deer"
    ]
@@ -448,6 +526,27 @@
      "note": "2027 dates not yet published by WGFD as of 2026-10-31"
     },
     {
+     "label": "Initial drawing application period (resident and nonresident)",
+     "kind": "application",
+     "start": "2027-01-04",
+     "end": "2027-06-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of January through May 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. January 1, 2027 is New Year's Day, so applications open Monday, January 4, 2027. May 31, 2027 is Memorial Day, so the deadline moves to Tuesday, June 1, 2027.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
+     "label": "Preference point only purchase period",
+     "kind": "points",
+     "residency": "nonresident",
+     "start": "2027-07-01",
+     "end": "2027-11-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of July through October 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. October 31, 2027 is a Sunday, so the deadline moves to Monday, November 1, 2027. Nonresident full-price antelope points only (Section 18(e) 'Preference Point Only - Nonresident').",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
      "label": "2027 Super Tag and Super Tag Trifecta raffle ticket sales",
      "kind": "other",
      "start": "2026-02-17",
@@ -473,6 +572,7 @@
     "d-wy-draw-odds-index",
     "d-wy-2026-black-bear-brochure",
     "d-wy-2027-nr-preference-point-prices",
+    "d-wy-ch44-license-issuance",
     "d-wy-super-tag-raffle-page",
     "d-wy-ch5-antelope"
    ]
@@ -526,6 +626,35 @@
      "note": "2027 dates not yet published by WGFD as of 2026-10-31; Resident and nonresident moose points"
     },
     {
+     "label": "Application period (resident and nonresident)",
+     "kind": "application",
+     "start": "2027-01-04",
+     "end": "2027-04-30",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of January through April 30; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. January 1, 2027 is New Year's Day, so applications open Monday, January 4, 2027.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
+     "label": "Modify/withdraw deadline",
+     "kind": "application-change",
+     "date": "2027-04-30",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18(d)-(e) (last date to modify/withdraw: April 30); WGFD hasn't announced the 2027 dates yet.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
+     "label": "Preference point only purchase period",
+     "kind": "points",
+     "start": "2027-07-01",
+     "end": "2027-11-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of July through October 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. October 31, 2027 is a Sunday, so the deadline moves to Monday, November 1, 2027. Resident and nonresident moose points.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
      "label": "2027 Super Tag and Super Tag Trifecta raffle ticket sales",
      "kind": "other",
      "start": "2026-02-17",
@@ -550,6 +679,7 @@
     "d-wy-application-dates-page",
     "d-wy-draw-odds-index",
     "d-wy-2026-black-bear-brochure",
+    "d-wy-ch44-license-issuance",
     "d-wy-super-tag-raffle-page",
     "d-wy-ch8-moose"
    ]
@@ -603,6 +733,35 @@
      "note": "2027 dates not yet published by WGFD as of 2026-10-31; Full-price bighorn sheep points, residents and nonresidents"
     },
     {
+     "label": "Application period (resident and nonresident)",
+     "kind": "application",
+     "start": "2027-01-04",
+     "end": "2027-04-30",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of January through April 30; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. January 1, 2027 is New Year's Day, so applications open Monday, January 4, 2027.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
+     "label": "Modify/withdraw deadline",
+     "kind": "application-change",
+     "date": "2027-04-30",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18(d)-(e) (last date to modify/withdraw: April 30); WGFD hasn't announced the 2027 dates yet.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
+     "label": "Preference point only purchase period",
+     "kind": "points",
+     "start": "2027-07-01",
+     "end": "2027-11-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of July through October 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. October 31, 2027 is a Sunday, so the deadline moves to Monday, November 1, 2027. Full-price bighorn sheep points, residents and nonresidents.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
      "label": "2027 Super Tag and Super Tag Trifecta raffle ticket sales",
      "kind": "other",
      "start": "2026-02-17",
@@ -627,6 +786,7 @@
     "d-wy-application-dates-page",
     "d-wy-draw-odds-index",
     "d-wy-2026-black-bear-brochure",
+    "d-wy-ch44-license-issuance",
     "d-wy-super-tag-raffle-page",
     "d-wy-ch9-sheep-goat"
    ]
@@ -669,6 +829,25 @@
      "note": "2027 dates not yet published by WGFD as of 2026-10-31"
     },
     {
+     "label": "Application period (resident and nonresident)",
+     "kind": "application",
+     "start": "2027-01-04",
+     "end": "2027-04-30",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of January through April 30; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. January 1, 2027 is New Year's Day, so applications open Monday, January 4, 2027.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
+     "label": "Modify/withdraw deadline",
+     "kind": "application-change",
+     "date": "2027-04-30",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18(d)-(e) (last date to modify/withdraw: April 30); WGFD hasn't announced the 2027 dates yet.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
      "label": "2027 Super Tag and Super Tag Trifecta raffle ticket sales",
      "kind": "other",
      "start": "2026-02-17",
@@ -693,6 +872,7 @@
     "d-wy-application-dates-page",
     "d-wy-draw-odds-index",
     "d-wy-2026-black-bear-brochure",
+    "d-wy-ch44-license-issuance",
     "d-wy-super-tag-raffle-page",
     "d-wy-ch9-sheep-goat"
    ]
@@ -743,6 +923,26 @@
      "status": "tentative",
      "sourceId": "d-wy-2026-application-booklet",
      "note": "2027 dates not yet published by WGFD as of 2026-10-31"
+    },
+    {
+     "label": "Spring turkey application period",
+     "kind": "application",
+     "start": "2027-01-04",
+     "end": "2027-02-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of January through January 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. January 1, 2027 is New Year's Day, so applications open Monday, January 4, 2027. January 31, 2027 is a Sunday, so the deadline moves to Monday, February 1, 2027.",
+     "sourceId": "d-wy-ch44-license-issuance"
+    },
+    {
+     "label": "Fall turkey application period",
+     "kind": "application",
+     "start": "2027-04-01",
+     "end": "2027-06-01",
+     "cycle": 2027,
+     "status": "tentative",
+     "note": "Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of April through May 31; a deadline on a day Headquarters is closed for license sales moves to the next business day); WGFD hasn't announced the 2027 dates yet. May 31, 2027 is Memorial Day, so the deadline moves to Tuesday, June 1, 2027.",
+     "sourceId": "d-wy-ch44-license-issuance"
     }
    ],
    "sourceIds": [
@@ -750,6 +950,7 @@
     "d-wy-application-dates-page",
     "d-wy-ch20-wild-turkey",
     "d-wy-draw-odds-index",
+    "d-wy-ch44-license-issuance",
     "d-wy-ch20-wild-turkey-2025"
    ]
   },
@@ -4218,12 +4419,9 @@
   },
   {
    "species": "elk",
-   "label": "Elk limited quota - regular season",
+   "label": "Elk youth only (full price youth license holders) - regular season",
    "units": [
     "77"
-   ],
-   "huntCodes": [
-    "077-Youth only"
    ],
    "start": "2026-11-26",
    "end": "2026-11-29",
@@ -9945,6 +10143,15 @@
    "dataYear": 2027,
    "retrieved": "2026-10-31",
    "notes": "Raffle page: 'The next raffle opens February 17, 2026 / Entry deadline - February 1, 2027'"
+  },
+  {
+   "id": "d-wy-ch44-license-issuance",
+   "title": "Chapter 44 - Regulation for Issuance of Licenses, Permits, Stamps, Tags, Preference Points and Competitive Raffle Chances",
+   "publisher": "Wyoming Game and Fish Commission",
+   "url": "https://wgfd.wyo.gov/media/34010/download",
+   "pageUrl": "https://wgfd.wyo.gov/regulations",
+   "retrieved": "2026-10-31",
+   "notes": "Commission regulation dated July 15, 2026 (regulations page: 'CH 44 July 2026'); Section 18 sets the recurring application, modify/withdraw and preference-point-only dates used for the tentative 2027-cycle key dates"
   },
   {
    "id": "d-wy-2027-nr-preference-point-prices",

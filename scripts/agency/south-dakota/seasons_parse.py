@@ -195,7 +195,11 @@ def hunt_dates(cat, code, unit, typ, S, refuge, pst_exc):
             parts, rs, special = [S["WRD-58D"]["printed"]], seg(S["WRD-58D"]), True
         else:
             parts, rs, special = [S[base]["printed"]], seg(S[base], "Regular season"), False
-        if typ in ANTLERLESS_ONLY | ANTLERLESS_COMBO and not special:
+        # The antlerless-only season applies to antlerless tags in every West River unit, 30A and
+        # 58D included: the sheet lists no unit exception for it, and ARSD 41:06:20:01 opens it to
+        # "any hunter possessing a valid antlerless deer or antlerless whitetail deer tag in any West
+        # River unit".
+        if typ in ANTLERLESS_ONLY | ANTLERLESS_COMBO:
             a = S[base + "-ANTLERLESS"]
             lab = "Antlerless-only season" + (" (antlerless tag only)" if typ in ANTLERLESS_COMBO else "")
             parts.append(f"{lab}: {a['printed']}")

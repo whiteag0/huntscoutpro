@@ -42,6 +42,11 @@ META_SOURCES = [
     {"id": "d-wy-super-tag-raffle-page", "title": "Wyoming Super Tag Raffle", "publisher": P,
      "url": f"{BASE}/licenses-applications/wyoming-super-tag-raffle", "pageUrl": f"{BASE}/licenses-applications", "dataYear": 2027,
      "retrieved": R, "notes": "Raffle page: 'The next raffle opens February 17, 2026 / Entry deadline - February 1, 2027'"},
+    {"id": "d-wy-ch44-license-issuance", "title": "Chapter 44 - Regulation for Issuance of Licenses, Permits, Stamps, Tags, "
+     "Preference Points and Competitive Raffle Chances", "publisher": "Wyoming Game and Fish Commission",
+     "url": f"{BASE}/media/34010/download", "pageUrl": f"{BASE}/regulations", "retrieved": R,
+     "notes": ("Commission regulation dated July 15, 2026 (regulations page: 'CH 44 July 2026'); Section 18 sets the recurring "
+               "application, modify/withdraw and preference-point-only dates used for the tentative 2027-cycle key dates")},
     {"id": "d-wy-2027-nr-preference-point-prices", "title": "Commissioners vote to increase non-resident preference point prices",
      "publisher": P, "url": f"{BASE}/news-events/commissioners-vote-increase-non-resident-preference-point-prices",
      "dataYear": 2027, "retrieved": R,
@@ -343,9 +348,82 @@ NOTES = {
 }
 
 
+# 2027 cycle from the standing rule: Chapter 44 (dated July 15, 2026), Section 18. (a) "The Department shall begin
+# accepting completed applications at 8:00 a.m. on the first business day of the month or the specified date listed in
+# subsections (d) and (e)"; (b) "Completed applications shall not be accepted after 12:00 midnight ... on the respective
+# application deadline dates listed in subsection (e). If the deadline date occurs on a day when Headquarters has been
+# closed for license sales, the ELS shall be available until 12:00 midnight ... on the next business day."; (e) table
+# (beginning month / last date to accept applications / last date to modify-withdraw): antelope, deer, resident elk
+# January / May 31 / May 31; nonresident elk January / January 31 / May 8; moose, bighorn sheep, mountain goat
+# January / April 30 / April 30; preference point only July / October 31; wild turkey spring January / January 31 /
+# January 31, fall April / May 31 / May 31. The rule reproduces every 2026 booklet date (Jan 2, Feb 2, Apr 30, Jun 1,
+# Jul 1, Nov 2, Apr 1). 2027 calendar: Jan 1 (Fri) is New Year's Day -> first business day Mon Jan 4; Jan 31 is a
+# Sunday -> Mon Feb 1; Apr 30 is a Friday; May 31 is Memorial Day (Mon) -> Tue Jun 1; Jul 1 is a Thursday; Oct 31 is a
+# Sunday -> Mon Nov 1; Apr 1 is a Thursday. Left out: results (no date in the rule), leftover drawing (Section 20(b):
+# "determined on an annual basis by the Fiscal Division Chief"), and modify/withdraw deadlines whose rule date falls on
+# a weekend or holiday (nonresident elk May 8 is a Saturday; May 31 and January 31) because Section 18(b)'s
+# next-business-day shift is written for application deadlines and the rule does not say whether it moves those.
+CH44 = "d-wy-ch44-license-issuance"
+R18 = ("Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of {open_month} "
+       "through {close}; a deadline on a day Headquarters is closed for license sales moves to the next business day); "
+       "WGFD hasn't announced the 2027 dates yet.")
+
+
+def rule27(label, start, end, open_month, close, kind="application", res=None, extra=None):
+    note = R18.format(open_month=open_month, close=close) + (" " + extra if extra else "")
+    return _kind({"label": label, "start": start, "end": end, "cycle": 2027, "status": "tentative", "note": note,
+                  "sourceId": CH44}, kind, res)
+
+
+def mod27(label, date, rule_date):
+    note = (f"Set by WGFD Commission Chapter 44, Section 18(d)-(e) (last date to modify/withdraw: {rule_date}); "
+            "WGFD hasn't announced the 2027 dates yet.")
+    return _kind({"label": label, "date": date, "cycle": 2027, "status": "tentative", "note": note, "sourceId": CH44},
+                 "application-change", None)
+
+
+JAN = "January 1, 2027 is New Year's Day, so applications open Monday, January 4, 2027."
+MAY31 = "May 31, 2027 is Memorial Day, so the deadline moves to Tuesday, June 1, 2027."
+PP27_NOTE = "October 31, 2027 is a Sunday, so the deadline moves to Monday, November 1, 2027."
+INITIAL27 = rule27("Initial drawing application period (resident and nonresident)", "2027-01-04", "2027-06-01", "January", "May 31",
+                   extra=JAN + " " + MAY31)
+
+
+def pp27(note, res=None):
+    return rule27("Preference point only purchase period", "2027-07-01", "2027-11-01", "July", "October 31", kind="points", res=res,
+                  extra=PP27_NOTE + " " + note)
+
+
+RULE27 = {
+    "elk": [rule27("Nonresident application period", "2027-01-04", "2027-02-01", "January", "January 31", res="nonresident",
+                   extra=JAN + " January 31, 2027 is a Sunday, so the deadline moves to Monday, February 1, 2027."),
+            rule27("Resident application period", "2027-01-04", "2027-06-01", "January", "May 31", res="resident",
+                   extra=JAN + " " + MAY31),
+            pp27("Nonresident full-price elk points only.", res="nonresident")],
+    "mule-deer": [INITIAL27, pp27("Nonresident full-price deer points only.", res="nonresident")],
+    "whitetail": [INITIAL27, pp27("Nonresident full-price deer points only.", res="nonresident")],
+    "pronghorn": [INITIAL27, pp27("Nonresident full-price antelope points only (Section 18(e) 'Preference Point Only - Nonresident').",
+                                  res="nonresident")],
+    "moose": [rule27("Application period (resident and nonresident)", "2027-01-04", "2027-04-30", "January", "April 30", extra=JAN),
+              mod27("Modify/withdraw deadline", "2027-04-30", "April 30"),
+              pp27("Resident and nonresident moose points.")],
+    "sheep": [rule27("Application period (resident and nonresident)", "2027-01-04", "2027-04-30", "January", "April 30", extra=JAN),
+              mod27("Modify/withdraw deadline", "2027-04-30", "April 30"),
+              pp27("Full-price bighorn sheep points, residents and nonresidents.")],
+    "goat": [rule27("Application period (resident and nonresident)", "2027-01-04", "2027-04-30", "January", "April 30", extra=JAN),
+             mod27("Modify/withdraw deadline", "2027-04-30", "April 30")],
+    "turkey": [rule27("Spring turkey application period", "2027-01-04", "2027-02-01", "January", "January 31",
+                      extra=JAN + " January 31, 2027 is a Sunday, so the deadline moves to Monday, February 1, 2027."),
+               rule27("Fall turkey application period", "2027-04-01", "2027-06-01", "April", "May 31", extra=MAY31)],
+}
+
+
 def main():
     raw, repo = sys.argv[1], sys.argv[2]
     for sp in SPECIES:
+        if sp["species"] in RULE27:
+            sp["keyDates"] = sp["keyDates"] + [dict(k) for k in RULE27[sp["species"]]]
+            sp["sourceIds"] = sp["sourceIds"] + [CH44]
         if sp["species"] in SUPER_TAG_SPECIES:
             sp["keyDates"] = sp["keyDates"] + super_tag()
             sp["sourceIds"] = sp["sourceIds"] + [ST]

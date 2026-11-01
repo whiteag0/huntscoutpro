@@ -364,13 +364,17 @@ def main():
                 name = SPECIES_LABEL[sp]
                 if gen:
                     cls = f"{name} general license" + (" (youth only)" if youth else "")
+                elif youth and not re.search(r"\d", r["type"]):
+                    # e.g. Elk Area 77 "Youth only" (National Elk Refuge permits for full price youth
+                    # elk license holders): not a limited quota type, so no hunt code.
+                    cls = f"{name} youth only (full price youth license holders)"
                 elif r["type"]:
                     cls = f"{name} limited quota"
                 else:
                     cls = f"{name} general and unused limited quota licenses"
                 label = f"{cls} - {'special archery season' if s['kind'] == 'archery' else 'regular season'}"
                 code = None
-                if not gen and r["type"]:
+                if not gen and re.fullmatch(r"\d+", r["type"]):
                     code = code_for.get((DRAW_FILE_CHAPTER[sp], tuple(r["areas"]), r["type"])) or f"{int(r['areas'][0]):03d}-{r['type']}"
                 for a in r["areas"]:
                     add(sp, label, "archery" if archery else None, s["start"], s["end"], 2026, a, code, r["sourceId"])
