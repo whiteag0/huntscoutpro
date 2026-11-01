@@ -7,9 +7,8 @@
 import { useEffect, useSyncExternalStore } from "react";
 import type { DrawRecord, SpeciesInfo } from "@/data/agency/schema";
 import { todayIso } from "@/lib/agency-format";
-import { nextApplicationDeadline } from "@/lib/planner-agency";
+import { fitFor, planCycleFor } from "@/lib/planner-agency";
 import type { PlannedHunt, PlannerResidency } from "@/lib/planner-schema";
-import { track } from "@/lib/analytics";
 
 interface Entry {
   slug: string;
@@ -20,8 +19,6 @@ interface Entry {
 interface IndexState {
   status: "idle" | "loading" | "ready" | "error";
   entries: Entry[];
-  /** "slug|CODE" currently being added. */
-  adding: string[];
 }
 
 export interface Toast {
@@ -32,7 +29,7 @@ export interface Toast {
   link: boolean;
 }
 
-let index: IndexState = { status: "idle", entries: [], adding: [] };
+let index: IndexState = { status: "idle", entries: [] };
 let toast: Toast | null = null;
 let loadedAt = 0;
 let inflight: Promise<void> | null = null;
@@ -50,9 +47,10 @@ function setIndex(next: Partial<IndexState>) {
   emit();
 }
 
-const codeKey = (slug: string, code: string) => `${slug}|${code.trim().toUpperCase()}`;
 const toEntry = (h: PlannedHunt): Entry | null =>
-  h.agency ? { slug: h.agency.stateSlug, code: h.agency.huntCode.trim().toUpperCase(), cycle: h.agency.deadline?.cycle ?? null } : null;
+  h.agency && (h.agency.kind ?? "draw") === "draw"
+    ? { slug: h.agency.stateSlug, code: h.agency.huntCode.trim().toUpperCase(), cycle: h.agency.planCycle ?? h.agency.deadline?.cycle ?? null }
+    : null;
 
 let toastTimer: ReturnType<typeof setTimeout> | null = null;
 export function showToast(kind: Toast["kind"], message: string, link = false) {
@@ -94,9 +92,9 @@ export function refreshPlannerIndex(force = false): Promise<void> {
   return inflight;
 }
 
-/** The planning cycle an add would get: the agency's next application date for this species/residency. */
-export function plannedCycle(info: Pick<SpeciesInfo, "keyDates">, residency: PlannerResidency, row: Pick<DrawRecord, "description" | "seasonDates">): number | null {
-  return nextApplicationDeadline(info, residency, todayIso(), row.description, row.seasonDates)?.cycle ?? null;
+/** The cycle planning this hunt today would get (same rule the server uses). */
+export function plannedCycle(info: Pick<SpeciesInfo, "keyDates">, residency: PlannerResidency, row: Pick<DrawRecord, "description" | "seasonDates" | "seasonRanges">): number | null {
+  return planCycleFor(info, residency, todayIso(), fitFor("draw", row.description, row));
 }
 
 /** Same rule as sameAgencyHunt(): same state + hunt code, and the same cycle when both are known. */
@@ -116,50 +114,6 @@ export function useToast() {
   return useSyncExternalStore(subscribe, () => toast, () => null);
 }
 
-export function plannerState(slug: string, code: string, cycle: number | null): "in" | "adding" | "out" {
-  if (index.adding.includes(codeKey(slug, code))) return "adding";
+export function plannerState(slug: string, code: string, cycle: number | null): "in" | "out" {
   return hasEntry(slug, code, cycle) ? "in" : "out";
-}
-
-/** Add a hunt from a draw row. Reports the outcome in the toast. */
-export async function addToPlanner(opts: { slug: string; stateName: string; info: SpeciesInfo; row: DrawRecord; residency: PlannerResidency }) {
-  const { slug, stateName, info, row, residency } = opts;
-  const k = codeKey(slug, row.huntCode);
-  if (index.adding.includes(k)) return;
-  setIndex({ adding: [...index.adding, k] });
-  try {
-    const res = await fetch("/api/planner/entries", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ state: slug, species: info.species, residency, row }),
-    });
-    const body = (await res.json().catch(() => ({}))) as { status?: string; hunt?: PlannedHunt; error?: string };
-    if (!res.ok) {
-      const msg =
-        res.status === 401
-          ? "Sign in to add hunts to your planner."
-          : res.status === 403
-            ? "Saving hunts to your planner is part of Pro."
-            : body.error || "Couldn't add to your planner. Try again.";
-      showToast("error", msg);
-      return;
-    }
-    const entry = body.hunt ? toEntry(body.hunt) : null;
-    if (entry && !hasEntry(entry.slug, entry.code, entry.cycle)) setIndex({ entries: [...index.entries, entry] });
-    const d = body.hunt?.agency?.deadline;
-    if (body.status === "duplicate") {
-      showToast("info", `${row.huntCode} is already in your planner.`, true);
-    } else {
-      track("planner_add", { state: slug, species: info.species, deadline: !!d });
-      showToast(
-        "success",
-        `Added ${stateName} ${row.huntCode} to your planner${d ? `, with the ${body.hunt?.agency?.agencyShortName || "agency"} ${d.cycle} application date.` : ". No upcoming agency application date in our data matches it yet."}`,
-        true
-      );
-    }
-  } catch {
-    showToast("error", "You're offline or the site couldn't be reached. Nothing was added.");
-  } finally {
-    setIndex({ adding: index.adding.filter((x) => x !== k) });
-  }
 }

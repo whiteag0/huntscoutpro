@@ -359,5 +359,17 @@ export function usePlannerSync({ ready, email, isPro }: { ready: boolean; email:
     else void pull();
   }, [pull, save]);
 
-  return { data, status, update, retry, notice, dismissNotice: () => setNotice(null), account };
+  /** Send any waiting change now and wait for it (before a server-side change such as a refresh). */
+  const flush = useCallback(async () => {
+    const s = r.current;
+    for (let i = 0; i < 20 && s.saving; i++) await new Promise((res) => setTimeout(res, 150));
+    if (account && s.dirty) await save();
+  }, [account, save]);
+
+  /** Re-read the account copy (after the server changed it). */
+  const reload = useCallback(async () => {
+    await pull();
+  }, [pull]);
+
+  return { data, status, update, retry, flush, reload, notice, setNotice, dismissNotice: () => setNotice(null), account };
 }

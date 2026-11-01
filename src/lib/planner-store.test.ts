@@ -1,7 +1,7 @@
 // Run with: npm test. Uses the local-folder backend in a temp dir; nothing touches the network.
 import { test, before, after } from "node:test";
 import assert from "node:assert/strict";
-import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import type { PlannedHunt } from "@/lib/planner-schema";
@@ -44,7 +44,35 @@ test("read empty, write v1, stale write is refused with the current doc", async 
   );
   const raw = JSON.parse(await readFile(path.join(dir, plannerPath(email)), "utf8"));
   assert.equal(raw.version, 2);
-  assert.equal(raw.schema, 1);
+  assert.equal(raw.schema, 2);
+});
+
+test("a schema-1 document already in storage loads unchanged and is written back as schema 2", async () => {
+  const { readPlanner, writePlanner, plannerPath } = await store();
+  const email = "v1@example.com";
+  const v1Doc = {
+    schema: 1,
+    version: 7,
+    updatedAt: "2026-10-31T18:00:00.000Z",
+    data: {
+      hunts: [{ ...hunt("h1", "glassing knob above the creek"), status: "applied", preferencePointsOwned: 4 }],
+      budget: [{ id: "b1", huntId: "h1", category: "Travel", description: "Gas", amount: 120 }],
+      checklist: [{ id: "c1", category: "Safety", label: "First aid kit", checked: true, custom: false }],
+      deleted: ["x1"],
+    },
+  };
+  const file = path.join(dir, plannerPath(email));
+  await mkdir(path.dirname(file), { recursive: true });
+  await writeFile(file, JSON.stringify(v1Doc), "utf8");
+  const doc = await readPlanner(email);
+  assert.equal(doc.schema, 2);
+  assert.equal(doc.version, 7);
+  assert.deepEqual(doc.data, v1Doc.data);
+  const next = await writePlanner(email, doc.data, 7);
+  assert.equal(next.version, 8);
+  const raw = JSON.parse(await readFile(file, "utf8"));
+  assert.equal(raw.schema, 2);
+  assert.deepEqual(raw.data, v1Doc.data);
 });
 
 test("invalid data and oversized planners are rejected without writing", async () => {
