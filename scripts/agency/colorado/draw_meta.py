@@ -19,6 +19,9 @@ BG = "d-brochure-biggame-2026"
 SG = "d-brochure-sheepgoat-2026"
 TK = "d-brochure-turkey-2026"
 LN = "d-brochure-lion-2026"
+W2 = "d-regs-w2-2026"
+W3 = "d-regs-w3-2026"
+BGSS = "d-bgss-2025-2029"
 
 BROCHURES = [
     {"id": BG, "title": "2026 Colorado Big Game Hunting (brochure)", "publisher": PUB,
@@ -37,6 +40,21 @@ BROCHURES = [
      "url": "https://cpw.widen.net/s/wdhnb9pcvs/colorado-mountain-lion-hunting-brochure",
      "pageUrl": "https://cpw.state.co.us/activities/hunting/big-game/hunting-mountain-lion", "dataYear": 2026, "retrieved": RET,
      "notes": "License fees, season dates and harvest-limit groups for the April 2026–March 2027 license year."},
+    {"id": W2, "title": "Chapter W-2 – Big Game (Colorado Parks and Wildlife regulations)", "publisher": PUB,
+     "url": "https://cpw.widen.net/s/s97gq9wqrf/chapter-w-2---big-game-regulations",
+     "pageUrl": "https://cpw.state.co.us/rules-and-regulations", "dataYear": 2026, "retrieved": RET,
+     "notes": "Copy linked on CPW's Rules and Regulations page (PDF created 2026-05-08; effective July 1, 2026). Season tables by hunt code "
+              "(#218 sheep, #219 desert sheep, #227 goat, #237–#239 bear, #248–#250 deer, #255–#257 elk, #261–#262 pronghorn, #270 moose) "
+              "with 2026 license numbers, and 'License year 2025–2029' tables of the standard season dates; #206 draw rules."},
+    {"id": W3, "title": "Chapter W-3 – Furbearers and Small Game, Except Migratory Birds (Colorado Parks and Wildlife regulations)", "publisher": PUB,
+     "url": "https://cpw.widen.net/s/kmpdszcx6j/ch03",
+     "pageUrl": "https://cpw.state.co.us/rules-and-regulations", "dataYear": 2026, "retrieved": RET,
+     "notes": "Adopted July 16, 2026, effective Sept. 1, 2026. #322 Wild Turkey: 2026 spring, fall and late season hunt-code tables (open/close dates) and application rules."},
+    {"id": BGSS, "title": "2025 - 2029 Big Game Season Structure", "publisher": PUB,
+     "url": "https://cpw.state.co.us/sites/default/files/dam/ifgylu070o/final_bgss2025-2029.pdf",
+     "pageUrl": "https://cpw.state.co.us/SeasonStructure", "dataYear": 2027, "retrieved": RET,
+     "notes": "Final season structure adopted by the Parks and Wildlife Commission in June 2024 (minor moose cleanup Nov. 2024); "
+              "lists each standard deer, elk, pronghorn, moose, bear and lion season's dates for 2025–2029. Annual regulations set hunt codes and licenses."},
 ]
 for y, ts, orig in [(2022, "20220328164312", "https://cpw.state.co.us/Documents/RulesRegs/Brochure/BigGame/biggame.pdf"),
                     (2023, "20230329171230", "https://cpw.state.co.us/Documents/RulesRegs/Brochure/BigGame/biggame.pdf"),
@@ -48,8 +66,12 @@ for y, ts, orig in [(2022, "20220328164312", "https://cpw.state.co.us/Documents/
         "notes": f"Internet Archive capture of CPW's {y} brochure (CPW replaces the file at the same link every year). Used only for the {y} 'Limited Licenses — White-tailed (deer) only' hunt code table that sorts deer hunt codes into the whitetail file."})
 
 
-def window(label, start, end, cycle, src, note=NOT_2027):
-    d = {"label": label, "cycle": cycle, "status": "confirmed", "sourceId": src, "note": note}
+def window(label, start, end, cycle, src, note=NOT_2027, kind=None, residency=None):
+    d = {"label": label, "kind": kind, "cycle": cycle, "status": "confirmed", "sourceId": src, "note": note}
+    if residency:
+        d["residency"] = residency
+    if not kind:
+        raise ValueError("key date without kind: " + label)
     if start == end:
         d["date"] = start
     else:
@@ -58,27 +80,35 @@ def window(label, start, end, cycle, src, note=NOT_2027):
 
 
 def bg_dates(point_code, secondary=True):
+    """2026 big game brochure p.2 'At a Glance — Important Dates: 2026' and p.4 'Important Dates'."""
     k = [
-        window("Primary draw application period (apply by 8 p.m. MT on the last day)", "2026-03-01", "2026-04-07", 2026, BG),
-        window(f"Preference-point-only application (enter {point_code} as first choice in the primary draw)", "2026-03-01", "2026-04-07", 2026, BG),
-        window("Primary draw results posted to CPW accounts", "2026-05-26", "2026-05-29", 2026, BG),
-        window("Primary draw surrender deadline (11:59 p.m. MT)", "2026-06-01", "2026-06-01", 2026, BG),
-        window("Primary draw license payment deadline (11:59 p.m. MT)", "2026-06-12", "2026-06-12", 2026, BG),
+        window("Qualifying licenses on sale (required before applying)", "2026-03-01", "2026-03-01", 2026, BG, kind="license-sale"),
+        window("Primary draw application period (apply by 8 p.m. MT on the last day)", "2026-03-01", "2026-04-07", 2026, BG, kind="application"),
+        window(f"Preference-point-only application (enter {point_code} as first choice in the primary draw)", "2026-03-01", "2026-04-07", 2026, BG, kind="points"),
+        window("Primary draw application correction deadline (8 p.m. MT)", "2026-04-07", "2026-04-07", 2026, BG, kind="application-change"),
+        window("Primary draw results posted to CPW accounts", "2026-05-26", "2026-05-29", 2026, BG, kind="results"),
+        window("Primary draw surrender deadline (11:59 p.m. MT)", "2026-06-01", "2026-06-01", 2026, BG, kind="surrender"),
+        window("Primary draw license payment deadline (11:59 p.m. MT)", "2026-06-12", "2026-06-12", 2026, BG, kind="payment"),
     ]
     if secondary:
-        k += [window("Secondary draw application period (no preference points)", "2026-06-18", "2026-06-30", 2026, BG),
-              window("Secondary draw results posted", "2026-07-07", "2026-07-07", 2026, BG)]
-    k.append(window("Leftover limited and over-the-counter licenses on sale (9 a.m. MT)", "2026-08-04", "2026-08-04", 2026, BG))
+        k += [window("Secondary draw application period (no preference points; 8 p.m. MT deadline, corrections by the same time)", "2026-06-18", "2026-06-30", 2026, BG, kind="leftover"),
+              window("Secondary draw results posted", "2026-07-07", "2026-07-07", 2026, BG, kind="results"),
+              window("Secondary draw surrender deadline (11:59 p.m. MT)", "2026-07-09", "2026-07-09", 2026, BG, kind="surrender"),
+              window("Secondary draw license payment deadline (11:59 p.m. MT)", "2026-07-21", "2026-07-21", 2026, BG, kind="payment")]
+    k.append(window("Leftover limited and over-the-counter licenses on sale (9 a.m. MT)", "2026-08-04", "2026-08-04", 2026, BG, kind="leftover"))
     return k
 
 
 def sg_dates(point_code):
+    """2026 sheep & goat brochure p.6 and back cover 'Dates to know'."""
     return [
-        window("Primary draw application period (apply by 8 p.m. MT on the last day)", "2026-03-01", "2026-04-07", 2026, SG),
-        window(f"Preference-point-only application (enter {point_code} as first choice)", "2026-03-01", "2026-04-07", 2026, SG),
-        window("Draw results posted to CPW accounts", "2026-04-23", "2026-04-23", 2026, SG),
-        window("Surrender deadline (11:59 p.m. MT)", "2026-04-27", "2026-04-27", 2026, SG),
-        window("License / preference point payment deadline (11:59 p.m. MT)", "2026-05-07", "2026-05-07", 2026, SG),
+        window("Qualifying licenses on sale (required before applying)", "2026-03-01", "2026-03-01", 2026, SG, kind="license-sale"),
+        window("Primary draw application period (apply by 8 p.m. MT on the last day)", "2026-03-01", "2026-04-07", 2026, SG, kind="application"),
+        window(f"Preference-point-only application (enter {point_code} as first choice)", "2026-03-01", "2026-04-07", 2026, SG, kind="points"),
+        window("Application correction deadline (8 p.m. MT)", "2026-04-07", "2026-04-07", 2026, SG, kind="application-change"),
+        window("Draw results posted to CPW accounts", "2026-04-23", "2026-04-23", 2026, SG, kind="results"),
+        window("Surrender deadline (11:59 p.m. MT)", "2026-04-27", "2026-04-27", 2026, SG, kind="surrender"),
+        window("License / preference point payment deadline (11:59 p.m. MT)", "2026-05-07", "2026-05-07", 2026, SG, kind="payment"),
     ]
 
 
@@ -148,7 +178,8 @@ SPECIES = [
      "nonresidentNote": "Nonresident license $845.16.",
      "otcSummary": "Annual licenses went on sale March 25, 2026; season Nov. 23, 2026–March 31, 2027 (no April season in 2027); one lion per license year.",
      "keyDates": [window("Annual mountain lion licenses on sale", "2026-03-25", "2026-03-25", 2026, LN,
-                         "2026–27 license year; the 2027–28 brochure was not yet published by Colorado Parks and Wildlife as of 2026-10-31.")],
+                         "2026–27 license year; the 2027–28 brochure was not yet published by Colorado Parks and Wildlife as of 2026-10-31.",
+                         kind="license-sale")],
      "sourceIds": [LN]},
     {"species": "turkey", "displayName": "Wild turkey (spring & fall)", "drawSystem": "preference", "pointsMatter": True, "pointName": "preference point",
      "drawSystemSummary": "Limited spring and fall turkey licenses are drawn separately by preference points (most points first, first choice only; groups use the member with the fewest points). Up to two points can be gained per year by applying in both seasons; point-only codes are T-M-999-99-P (spring) and T-E-999-99-P (fall).",
@@ -156,12 +187,21 @@ SPECIES = [
      "nonresidentNote": "Nonresident spring or fall license $194.21, youth $130.39; application fee $11.49.",
      "otcSummary": "OTC spring licenses (on sale March 1, 2026; Apr. 11–May 31) and OTC fall/late licenses (on sale June 18, 2026; fall code T-E-000-U2-R) are sold for the units shown on CPW's maps.",
      "keyDates": [
-         window("Spring limited draw application period (8 p.m. MT deadline)", "2026-01-02", "2026-02-03", 2026, TK),
-         window("Spring draw results posted (by)", "2026-02-11", "2026-02-11", 2026, TK),
-         window("Spring license payment deadline", "2026-02-25", "2026-02-25", 2026, TK),
-         window("Fall limited draw application period (8 p.m. MT deadline)", "2026-05-01", "2026-05-29", 2026, TK),
-         window("Fall draw results posted (by)", "2026-06-04", "2026-06-04", 2026, TK),
-         window("Fall license payment deadline", "2026-06-18", "2026-06-18", 2026, TK)],
+         # 2026 turkey brochure p.8 and back cover
+         window("Spring limited draw application period (8 p.m. MT deadline)", "2026-01-02", "2026-02-03", 2026, TK, kind="application"),
+         window("Spring preference-point-only application (T-M-999-99-P as first choice)", "2026-01-02", "2026-02-03", 2026, TK, kind="points"),
+         window("Spring application correction deadline (8 p.m. MT)", "2026-02-03", "2026-02-03", 2026, TK, kind="application-change"),
+         window("Spring draw results posted (by)", "2026-02-11", "2026-02-11", 2026, TK, kind="results"),
+         window("Spring surrender deadline (11:59 p.m. MT)", "2026-02-13", "2026-02-13", 2026, TK, kind="surrender"),
+         window("Spring license payment deadline", "2026-02-25", "2026-02-25", 2026, TK, kind="payment"),
+         window("Spring over-the-counter license sales begin", "2026-03-01", "2026-03-01", 2026, TK, kind="license-sale"),
+         window("Fall limited draw application period (8 p.m. MT deadline)", "2026-05-01", "2026-05-29", 2026, TK, kind="application"),
+         window("Fall preference-point-only application (T-E-999-99-P as first choice)", "2026-05-01", "2026-05-29", 2026, TK, kind="points"),
+         window("Fall application correction deadline (8 p.m. MT)", "2026-05-29", "2026-05-29", 2026, TK, kind="application-change"),
+         window("Fall draw results posted (by)", "2026-06-04", "2026-06-04", 2026, TK, kind="results"),
+         window("Fall surrender deadline (11:59 p.m. MT)", "2026-06-06", "2026-06-06", 2026, TK, kind="surrender"),
+         window("Fall license payment deadline", "2026-06-18", "2026-06-18", 2026, TK, kind="payment"),
+         window("Fall/late over-the-counter license sales begin", "2026-06-18", "2026-06-18", 2026, TK, kind="license-sale")],
      "sourceIds": [TK]},
 ]
 
@@ -224,35 +264,96 @@ fee("lion", "Mountain lion license — nonresident", "nonresident", 845.16, LN)
 SEASONS = []
 
 
-def season(sp, label, s, e, src, note=None, year=2026):
-    d = {"species": sp, "label": label, "start": s, "end": e, "year": year, "sourceId": src}
+def season(sp, label, s, e, src, note=None, year=None, method=None, units=None, huntCodes=None):
+    d = {"species": sp, "label": label}
+    if method:
+        d["method"] = method
+    if units:
+        d["units"] = units
+    if huntCodes:
+        d["huntCodes"] = huntCodes
+    d.update({"start": s, "end": e, "year": year or int(s[:4]), "sourceId": src})
     if note:
         d["note"] = note
     SEASONS.append(d)
 
 
+# ---- 2026: big game brochure p.2 "Season Dates: 2026" and the species pages (BG), checked against the
+# Chapter W-2 "License year" tables (W2). Hunt codes with other dates carry them on their draw rows.
 UNL = "Unless otherwise noted in the hunt code tables."
-for sp in ("elk", "mule-deer", "bear"):
-    season(sp, "Archery", "2026-09-02", "2026-09-30", BG, UNL)
-    season(sp, "Muzzleloader", "2026-09-12", "2026-09-20", BG, UNL if sp != "bear" else None)
-for sp in ("elk", "mule-deer", "bear"):
-    season(sp, "First rifle season", "2026-10-14", "2026-10-18", BG, "Deer: in select GMUs (see rifle hunt code tables)." if sp == "mule-deer" else None)
-    season(sp, "Second rifle season", "2026-10-24", "2026-11-01", BG)
-    season(sp, "Third rifle season", "2026-11-07", "2026-11-15", BG)
-    season(sp, "Fourth rifle season", "2026-11-18", "2026-11-22", BG)
-season("mule-deer", "Plains rifle", "2026-10-24", "2026-11-03", BG)
-season("bear", "September rifle (limited)", "2026-09-02", "2026-09-30", BG, UNL)
-season("bear", "September plains rifle (over-the-counter)", "2026-09-02", "2026-11-22", BG)
-season("pronghorn", "Archery", "2026-08-15", "2026-09-20", BG, UNL)
-season("pronghorn", "Muzzleloader", "2026-09-21", "2026-09-29", BG)
-season("pronghorn", "Rifle", "2026-10-03", "2026-10-11", BG, UNL + " Some hunts have early or late rifle dates.")
-season("moose", "Archery", "2026-09-12", "2026-09-30", BG)
-season("moose", "Muzzleloader", "2026-09-12", "2026-09-20", BG)
-season("moose", "Rifle", "2026-10-01", "2026-10-14", BG, UNL)
+WEST = "West of I-25 and GMU 140."
+for sp in ("elk", "mule-deer", "whitetail", "bear"):
+    season(sp, "Archery", "2026-09-02", "2026-09-30", BG, UNL + (" Deer: " + WEST + " (plains archery below)" if sp in ("mule-deer", "whitetail") else ""), method="archery")
+    season(sp, "Muzzleloader", "2026-09-12", "2026-09-20", BG, UNL if sp != "bear" else None, method="muzzleloader")
+for sp in ("elk", "mule-deer", "whitetail", "bear"):
+    deer = sp in ("mule-deer", "whitetail")
+    season(sp, "First rifle season", "2026-10-14", "2026-10-18", BG, "Deer: in select GMUs (see rifle hunt code tables)." if deer else None, method="rifle")
+    season(sp, "Second rifle season", "2026-10-24", "2026-11-01", BG, method="rifle")
+    season(sp, "Third rifle season", "2026-11-07", "2026-11-15", BG, method="rifle")
+    season(sp, "Fourth rifle season", "2026-11-18", "2026-11-22", BG, method="rifle")
+for sp in ("mule-deer", "whitetail"):
+    season(sp, "Plains archery", "2026-10-01", "2026-12-31", W2, "East of I-25 except GMU 140. Archery is closed while plains rifle seasons are open: "
+           "Oct. 1–23, Nov. 4–30 and Dec. 15–31 in most plains units (Oct. 1–23 and Nov. 4–Dec. 31, or Oct. 1–Nov. 30 and Dec. 15–31, in others; see hunt codes).", method="archery")
+    season(sp, "Plains muzzleloader", "2026-10-10", "2026-10-18", W2, "East of I-25 except GMU 140. " + UNL, method="muzzleloader")
+    season(sp, "Plains rifle", "2026-10-24", "2026-11-03", BG, "East of I-25 except GMU 140. " + UNL, method="rifle")
+    season(sp, "Late plains rifle", "2026-12-01", "2026-12-14", W2, "East of I-25 except GMU 140, in the units with late plains hunt codes. " + UNL, method="rifle")
+ELK_PLAINS_2026 = ("87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 105, 106, 107, 109, 110, 111, 112, 113, 114, 115, "
+                   "116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 129, 130, 132, 135, 136, 137, 138, 139, 143, 144, 145, 146, 147, 951").split(", ")
+BEAR_PLAINS_2026 = ("87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 109, 110, 111, 112, 113, 114, 115, "
+                    "116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 132, 133, 134, 135, 136, 137, 138, 139, 141, 142, "
+                    "143, 144, 145, 146, 147, 951").split(", ")
+season("elk", "Plains rifle (east of I-25)", "2026-09-01", "2027-01-31", W2, "Either-sex, over the counter (E-E-087-U5-R), W-2 #257.", year=2026,
+       method="rifle", units=ELK_PLAINS_2026, huntCodes=["EE087U5R"])
+season("bear", "September rifle (limited)", "2026-09-02", "2026-09-30", BG, UNL, method="rifle")
+season("bear", "September plains rifle (over-the-counter)", "2026-09-02", "2026-11-22", W2, "Over the counter (B-E-087-U6-R), W-2 #239 C.",
+       method="rifle", units=BEAR_PLAINS_2026, huntCodes=["BE087U6R"])
+season("pronghorn", "Archery", "2026-08-15", "2026-09-20", BG, UNL + " Aug. 15–31 bucks only; doe licenses Sept. 1–20.", method="archery")
+season("pronghorn", "Muzzleloader", "2026-09-21", "2026-09-29", BG, method="muzzleloader")
+season("pronghorn", "Rifle", "2026-10-03", "2026-10-11", BG, UNL + " Some hunts have early or late rifle dates.", method="rifle")
+season("pronghorn", "Second rifle season", "2026-10-17", "2026-10-25", W2, "Second regular rifle hunt codes in Chapter W-2 #262 A.2.", method="rifle",
+       units=["6", "16", "17", "161", "171", "87", "88"], huntCodes=["AF006O2R", "AM087O2R", "AM088O2R"])
+season("moose", "Archery", "2026-09-12", "2026-09-30", BG, method="archery")
+season("moose", "Muzzleloader", "2026-09-12", "2026-09-20", BG, method="muzzleloader")
+season("moose", "Rifle", "2026-10-01", "2026-10-14", BG, UNL, method="rifle")
+for i, (a, b) in enumerate([("2026-10-14", "2026-10-18"), ("2026-10-24", "2026-11-01"), ("2026-11-07", "2026-11-15"), ("2026-11-18", "2026-11-22")], 1):
+    season("moose", f"Late antlerless rifle, part {i} of 4 (concurrent with deer/elk rifle season {i})", a, b, W2, "Antlerless late-season hunt codes in Chapter W-2 #270.",
+           method="rifle", huntCodes=["MF006L1R", "MF012L1R", "MF015L1R", "MF018L1R", "MF028L1R", "MF037L1R", "MF038L1R", "MF041L1R", "MF051L1R", "MF052L1R"])
 season("turkey", "Spring season", "2026-04-11", "2026-05-31", TK, "Some limited hunt codes have shorter dates (see hunt code table).")
 season("turkey", "Fall season", "2026-09-01", "2026-10-23", TK, "West of I-25 and GMU 140: Sept. 1–Oct. 4; east of I-25 except GMU 140: Sept. 1–Oct. 23.")
-season("turkey", "Late season", "2026-12-15", "2027-01-15", TK)
-season("lion", "Mountain lion season (2026–27 license year)", "2026-11-23", "2027-03-31", LN, "Units close when their harvest-limit group reaches its limit.")
+season("turkey", "Late season", "2026-12-15", "2027-01-15", TK, year=2026)
+season("lion", "Mountain lion season (2026–27 license year)", "2026-11-23", "2027-03-31", LN, "Units close when their harvest-limit group reaches its limit.", year=2026, method="all")
+
+# ---- 2027: the standard season dates CPW has already set. Chapter W-2's "License year 2025–2029" tables (W2)
+# and the 2025–2029 Big Game Season Structure (BGSS). The 2027 hunt codes, licenses and any hunt-specific
+# dates come with the 2027 regulations and brochure, not yet published on 2026-10-31.
+N27 = "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+for sp in ("elk", "mule-deer", "whitetail", "bear"):
+    season(sp, "Archery", "2027-09-02", "2027-09-30", W2, N27 + (" Deer: " + WEST if sp in ("mule-deer", "whitetail") else ""), method="archery")
+    season(sp, "Muzzleloader", "2027-09-11", "2027-09-19", W2, N27, method="muzzleloader")
+for sp in ("elk", "mule-deer", "whitetail", "bear"):
+    deer = sp in ("mule-deer", "whitetail")
+    season(sp, "First rifle season", "2027-10-13", "2027-10-17", W2, N27 + (" Deer: in select GMUs." if deer else ""), method="rifle")
+    season(sp, "Second rifle season", "2027-10-23", "2027-10-31", W2, N27, method="rifle")
+    season(sp, "Third rifle season", "2027-11-06", "2027-11-14", W2, N27, method="rifle")
+    season(sp, "Fourth rifle season", "2027-11-17", "2027-11-21", W2, N27, method="rifle")
+for sp in ("mule-deer", "whitetail"):
+    season(sp, "Plains archery", "2027-10-01", "2027-12-31", BGSS, N27 + " East of I-25 except GMU 140; closed during plains rifle seasons: Oct. 1–29, Nov. 10–30 and Dec. 15–31 "
+           "(or Oct. 1–29 and Nov. 10–Dec. 31, or Oct. 1–Nov. 30 and Dec. 15–31, depending on the unit's rifle seasons).", method="archery")
+    season(sp, "Plains muzzleloader", "2027-10-09", "2027-10-17", W2, N27 + " East of I-25 except GMU 140.", method="muzzleloader")
+    season(sp, "Plains rifle", "2027-10-30", "2027-11-09", W2, N27 + " East of I-25 except GMU 140.", method="rifle")
+    season(sp, "Late plains rifle", "2027-12-01", "2027-12-14", W2, N27 + " East of I-25 except GMU 140 (Dec. 1–14 annually).", method="rifle")
+season("elk", "Plains rifle (east of I-25)", "2027-09-01", "2028-01-31", BGSS, N27 + " East of I-25 except select GMUs (Sept. 1–Jan. 31 annually).", year=2027, method="rifle")
+season("bear", "September rifle (limited)", "2027-09-02", "2027-09-30", W2, N27 + " (Sept. 2–30 annually)", method="rifle")
+season("bear", "September plains rifle (over-the-counter)", "2027-09-02", "2027-11-21", W2, N27, method="rifle")
+season("pronghorn", "Archery", "2027-08-15", "2027-09-20", W2, N27 + " Aug. 15–31 bucks only; doe licenses Sept. 1–20 (annual dates).", method="archery")
+season("pronghorn", "Muzzleloader", "2027-09-21", "2027-09-29", W2, N27 + " (Sept. 21–29 annually)", method="muzzleloader")
+season("pronghorn", "Rifle", "2027-10-02", "2027-10-10", W2, N27, method="rifle")
+season("pronghorn", "Second rifle season", "2027-10-16", "2027-10-24", W2, N27 + " Only in units with second-rifle hunt codes.", method="rifle")
+season("moose", "Archery", "2027-09-11", "2027-09-30", BGSS, N27, method="archery")
+season("moose", "Muzzleloader", "2027-09-11", "2027-09-19", BGSS, N27, method="muzzleloader")
+season("moose", "Rifle", "2027-10-01", "2027-10-14", W2, N27 + " (Oct. 1–14 annually)", method="rifle")
+for i, (a, b) in enumerate([("2027-10-13", "2027-10-17"), ("2027-10-23", "2027-10-31"), ("2027-11-06", "2027-11-14"), ("2027-11-17", "2027-11-21")], 1):
+    season("moose", f"Late antlerless rifle, part {i} of 4 (concurrent with deer/elk rifle season {i})", a, b, BGSS, N27 + " Optional season, only where CPW offers late antlerless moose hunt codes.", method="rifle")
 
 COMMON = ("Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; "
           "total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). "
@@ -261,7 +362,10 @@ COMMON = ("Counts are CPW primary-draw, first-choice results from the Draw Recap
           "units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. "
           "Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code "
           "(e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn "
-          "totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included.")
+          "totals match exactly, for every year. Secondary-draw results are not included. For the latest year, seasonDates/seasonRanges "
+          "are the hunt code's dates in CPW's Chapter W-2 (big game) or W-3 (turkey) season tables, read by "
+          "scripts/agency/colorado/seasons_parse.py; Ranching for Wildlife hunts, which the regulations do not date, use the brochure's "
+          "RFW tables (seasonSourceId says which).")
 SP_NOTES = {
     "elk": "",
     "mule-deer": " Contains every limited deer hunt code except those listed in that year's 'White-tailed deer only' brochure table; CPW deer licenses are not species-specific unless so listed.",

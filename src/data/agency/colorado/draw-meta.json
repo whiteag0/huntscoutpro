@@ -23,7 +23,17 @@
    "otcSummary": "2026: unlimited OTC archery licenses for either-sex (E-E-000-U1-A) and antlerless (E-F-000-U1-A) elk are resident-only in the listed GMUs; nonresidents may hunt OTC archery only east of I-25 (E-E-087-U1-A, E-F-133-U1-A). Unlimited OTC bull licenses for the 2nd and 3rd rifle seasons (E-M-000-U2-R, E-M-000-U3-R) in listed GMUs, plus OTC plains either-sex rifle and GMU 128 bull rifle licenses. OTC sales opened Aug. 4, 2026. CPW's Commission approved draw-process changes that take effect in 2028 (cpw.state.co.us/2028-draw).",
    "keyDates": [
     {
+     "label": "Qualifying licenses on sale (required before applying)",
+     "kind": "license-sale",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-03-01"
+    },
+    {
      "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -33,6 +43,7 @@
     },
     {
      "label": "Preference-point-only application (enter E-P-999-99-P as first choice in the primary draw)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -41,7 +52,17 @@
      "end": "2026-04-07"
     },
     {
+     "label": "Primary draw application correction deadline (8 p.m. MT)",
+     "kind": "application-change",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-04-07"
+    },
+    {
      "label": "Primary draw results posted to CPW accounts",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -51,6 +72,7 @@
     },
     {
      "label": "Primary draw surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -59,6 +81,7 @@
     },
     {
      "label": "Primary draw license payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -66,7 +89,8 @@
      "date": "2026-06-12"
     },
     {
-     "label": "Secondary draw application period (no preference points)",
+     "label": "Secondary draw application period (no preference points; 8 p.m. MT deadline, corrections by the same time)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -76,6 +100,7 @@
     },
     {
      "label": "Secondary draw results posted",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -83,7 +108,26 @@
      "date": "2026-07-07"
     },
     {
+     "label": "Secondary draw surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-09"
+    },
+    {
+     "label": "Secondary draw license payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-21"
+    },
+    {
      "label": "Leftover limited and over-the-counter licenses on sale (9 a.m. MT)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -112,7 +156,17 @@
    "otcSummary": "No over-the-counter mule deer licenses; CPW states most deer licenses are limited and available only through the draw(s). Leftover limited licenses go on sale Aug. 4. CPW's Commission approved draw-process changes that take effect in 2028 (cpw.state.co.us/2028-draw).",
    "keyDates": [
     {
+     "label": "Qualifying licenses on sale (required before applying)",
+     "kind": "license-sale",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-03-01"
+    },
+    {
      "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -122,6 +176,7 @@
     },
     {
      "label": "Preference-point-only application (enter D-P-999-99-P as first choice in the primary draw)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -130,7 +185,17 @@
      "end": "2026-04-07"
     },
     {
+     "label": "Primary draw application correction deadline (8 p.m. MT)",
+     "kind": "application-change",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-04-07"
+    },
+    {
      "label": "Primary draw results posted to CPW accounts",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -140,6 +205,7 @@
     },
     {
      "label": "Primary draw surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -148,6 +214,7 @@
     },
     {
      "label": "Primary draw license payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -155,7 +222,8 @@
      "date": "2026-06-12"
     },
     {
-     "label": "Secondary draw application period (no preference points)",
+     "label": "Secondary draw application period (no preference points; 8 p.m. MT deadline, corrections by the same time)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -165,6 +233,7 @@
     },
     {
      "label": "Secondary draw results posted",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -172,7 +241,26 @@
      "date": "2026-07-07"
     },
     {
+     "label": "Secondary draw surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-09"
+    },
+    {
+     "label": "Secondary draw license payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-21"
+    },
+    {
      "label": "Leftover limited and over-the-counter licenses on sale (9 a.m. MT)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -201,7 +289,17 @@
    "otcSummary": "CPW also sells over-the-counter white-tailed-deer-only late rifle licenses in certain units where mule deer are the main management species (2026 brochure p.33).",
    "keyDates": [
     {
+     "label": "Qualifying licenses on sale (required before applying)",
+     "kind": "license-sale",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-03-01"
+    },
+    {
      "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -211,6 +309,7 @@
     },
     {
      "label": "Preference-point-only application (enter D-P-999-99-P as first choice in the primary draw)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -219,7 +318,17 @@
      "end": "2026-04-07"
     },
     {
+     "label": "Primary draw application correction deadline (8 p.m. MT)",
+     "kind": "application-change",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-04-07"
+    },
+    {
      "label": "Primary draw results posted to CPW accounts",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -229,6 +338,7 @@
     },
     {
      "label": "Primary draw surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -237,6 +347,7 @@
     },
     {
      "label": "Primary draw license payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -244,7 +355,8 @@
      "date": "2026-06-12"
     },
     {
-     "label": "Secondary draw application period (no preference points)",
+     "label": "Secondary draw application period (no preference points; 8 p.m. MT deadline, corrections by the same time)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -254,6 +366,7 @@
     },
     {
      "label": "Secondary draw results posted",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -261,7 +374,26 @@
      "date": "2026-07-07"
     },
     {
+     "label": "Secondary draw surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-09"
+    },
+    {
+     "label": "Secondary draw license payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-21"
+    },
+    {
      "label": "Leftover limited and over-the-counter licenses on sale (9 a.m. MT)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -294,7 +426,17 @@
    "otcSummary": "2026: unlimited OTC either-sex archery licenses (A-E-000-U1-A), Aug. 15–Sept. 20 (bucks only Aug. 15–31), valid in the GMUs listed in the brochure (p.54).",
    "keyDates": [
     {
+     "label": "Qualifying licenses on sale (required before applying)",
+     "kind": "license-sale",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-03-01"
+    },
+    {
      "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -304,6 +446,7 @@
     },
     {
      "label": "Preference-point-only application (enter A-P-999-99-P as first choice in the primary draw)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -312,7 +455,17 @@
      "end": "2026-04-07"
     },
     {
+     "label": "Primary draw application correction deadline (8 p.m. MT)",
+     "kind": "application-change",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-04-07"
+    },
+    {
      "label": "Primary draw results posted to CPW accounts",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -322,6 +475,7 @@
     },
     {
      "label": "Primary draw surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -330,6 +484,7 @@
     },
     {
      "label": "Primary draw license payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -337,7 +492,8 @@
      "date": "2026-06-12"
     },
     {
-     "label": "Secondary draw application period (no preference points)",
+     "label": "Secondary draw application period (no preference points; 8 p.m. MT deadline, corrections by the same time)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -347,6 +503,7 @@
     },
     {
      "label": "Secondary draw results posted",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -354,7 +511,26 @@
      "date": "2026-07-07"
     },
     {
+     "label": "Secondary draw surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-09"
+    },
+    {
+     "label": "Secondary draw license payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-21"
+    },
+    {
      "label": "Leftover limited and over-the-counter licenses on sale (9 a.m. MT)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -383,7 +559,17 @@
    "otcSummary": "None; moose licenses are available only by draw (plus auction/raffle licenses). In 2026 some moose quota was reserved for 2025 license holders affected by the 2025 fires ('G' season hunt codes).",
    "keyDates": [
     {
+     "label": "Qualifying licenses on sale (required before applying)",
+     "kind": "license-sale",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-03-01"
+    },
+    {
      "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -393,6 +579,7 @@
     },
     {
      "label": "Preference-point-only application (enter M-P-999-99-P as first choice in the primary draw)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -401,7 +588,17 @@
      "end": "2026-04-07"
     },
     {
+     "label": "Primary draw application correction deadline (8 p.m. MT)",
+     "kind": "application-change",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-04-07"
+    },
+    {
      "label": "Primary draw results posted to CPW accounts",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -411,6 +608,7 @@
     },
     {
      "label": "Primary draw surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -419,6 +617,7 @@
     },
     {
      "label": "Primary draw license payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -427,6 +626,7 @@
     },
     {
      "label": "Leftover limited and over-the-counter licenses on sale (9 a.m. MT)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -455,7 +655,17 @@
    "otcSummary": "2026: OTC bear licenses include add-on archery and muzzleloader licenses for holders of a deer or elk license for the same method with an overlapping GMU, an add-on rifle license for E-E-061-E1-R holders, OTC September plains rifle (Sept. 2–Nov. 22) and private-land-only rifle hunts, and OTC rifle licenses during the regular rifle seasons in listed units (p.62–66).",
    "keyDates": [
     {
+     "label": "Qualifying licenses on sale (required before applying)",
+     "kind": "license-sale",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-03-01"
+    },
+    {
      "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -465,6 +675,7 @@
     },
     {
      "label": "Preference-point-only application (enter B-P-999-99-P as first choice in the primary draw)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -473,7 +684,17 @@
      "end": "2026-04-07"
     },
     {
+     "label": "Primary draw application correction deadline (8 p.m. MT)",
+     "kind": "application-change",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-04-07"
+    },
+    {
      "label": "Primary draw results posted to CPW accounts",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -483,6 +704,7 @@
     },
     {
      "label": "Primary draw surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -491,6 +713,7 @@
     },
     {
      "label": "Primary draw license payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -498,7 +721,8 @@
      "date": "2026-06-12"
     },
     {
-     "label": "Secondary draw application period (no preference points)",
+     "label": "Secondary draw application period (no preference points; 8 p.m. MT deadline, corrections by the same time)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -508,6 +732,7 @@
     },
     {
      "label": "Secondary draw results posted",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -515,7 +740,26 @@
      "date": "2026-07-07"
     },
     {
+     "label": "Secondary draw surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-09"
+    },
+    {
+     "label": "Secondary draw license payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-biggame-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-07-21"
+    },
+    {
      "label": "Leftover limited and over-the-counter licenses on sale (9 a.m. MT)",
+     "kind": "leftover",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-biggame-2026",
@@ -544,7 +788,17 @@
    "otcSummary": "None; draw only (plus auction/raffle licenses).",
    "keyDates": [
     {
+     "label": "Qualifying licenses on sale (required before applying)",
+     "kind": "license-sale",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-03-01"
+    },
+    {
      "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-sheepgoat-2026",
@@ -554,6 +808,7 @@
     },
     {
      "label": "Preference-point-only application (enter S-P-999-99-P as first choice)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-sheepgoat-2026",
@@ -562,7 +817,17 @@
      "end": "2026-04-07"
     },
     {
+     "label": "Application correction deadline (8 p.m. MT)",
+     "kind": "application-change",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-04-07"
+    },
+    {
      "label": "Draw results posted to CPW accounts",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-sheepgoat-2026",
@@ -571,6 +836,7 @@
     },
     {
      "label": "Surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-sheepgoat-2026",
@@ -579,6 +845,7 @@
     },
     {
      "label": "License / preference point payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-sheepgoat-2026",
@@ -612,7 +879,17 @@
    "otcSummary": "None; draw only (plus auction/raffle licenses).",
    "keyDates": [
     {
+     "label": "Qualifying licenses on sale (required before applying)",
+     "kind": "license-sale",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-03-01"
+    },
+    {
      "label": "Primary draw application period (apply by 8 p.m. MT on the last day)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-sheepgoat-2026",
@@ -622,6 +899,7 @@
     },
     {
      "label": "Preference-point-only application (enter G-P-999-99-P as first choice)",
+     "kind": "points",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-sheepgoat-2026",
@@ -630,7 +908,17 @@
      "end": "2026-04-07"
     },
     {
+     "label": "Application correction deadline (8 p.m. MT)",
+     "kind": "application-change",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-sheepgoat-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-04-07"
+    },
+    {
      "label": "Draw results posted to CPW accounts",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-sheepgoat-2026",
@@ -639,6 +927,7 @@
     },
     {
      "label": "Surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-sheepgoat-2026",
@@ -647,6 +936,7 @@
     },
     {
      "label": "License / preference point payment deadline (11:59 p.m. MT)",
+     "kind": "payment",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-sheepgoat-2026",
@@ -675,6 +965,7 @@
    "keyDates": [
     {
      "label": "Annual mountain lion licenses on sale",
+     "kind": "license-sale",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-lion-2026",
@@ -699,6 +990,7 @@
    "keyDates": [
     {
      "label": "Spring limited draw application period (8 p.m. MT deadline)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-turkey-2026",
@@ -707,7 +999,27 @@
      "end": "2026-02-03"
     },
     {
+     "label": "Spring preference-point-only application (T-M-999-99-P as first choice)",
+     "kind": "points",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-01-02",
+     "end": "2026-02-03"
+    },
+    {
+     "label": "Spring application correction deadline (8 p.m. MT)",
+     "kind": "application-change",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-02-03"
+    },
+    {
      "label": "Spring draw results posted (by)",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-turkey-2026",
@@ -715,7 +1027,17 @@
      "date": "2026-02-11"
     },
     {
+     "label": "Spring surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-02-13"
+    },
+    {
      "label": "Spring license payment deadline",
+     "kind": "payment",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-turkey-2026",
@@ -723,7 +1045,17 @@
      "date": "2026-02-25"
     },
     {
+     "label": "Spring over-the-counter license sales begin",
+     "kind": "license-sale",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-03-01"
+    },
+    {
      "label": "Fall limited draw application period (8 p.m. MT deadline)",
+     "kind": "application",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-turkey-2026",
@@ -732,7 +1064,27 @@
      "end": "2026-05-29"
     },
     {
+     "label": "Fall preference-point-only application (T-E-999-99-P as first choice)",
+     "kind": "points",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "start": "2026-05-01",
+     "end": "2026-05-29"
+    },
+    {
+     "label": "Fall application correction deadline (8 p.m. MT)",
+     "kind": "application-change",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-05-29"
+    },
+    {
      "label": "Fall draw results posted (by)",
+     "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-turkey-2026",
@@ -740,7 +1092,26 @@
      "date": "2026-06-04"
     },
     {
+     "label": "Fall surrender deadline (11:59 p.m. MT)",
+     "kind": "surrender",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-06"
+    },
+    {
      "label": "Fall license payment deadline",
+     "kind": "payment",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-brochure-turkey-2026",
+     "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
+     "date": "2026-06-18"
+    },
+    {
+     "label": "Fall/late over-the-counter license sales begin",
+     "kind": "license-sale",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-brochure-turkey-2026",
@@ -1163,6 +1534,7 @@
   {
    "species": "elk",
    "label": "Archery",
+   "method": "archery",
    "start": "2026-09-02",
    "end": "2026-09-30",
    "year": 2026,
@@ -1172,6 +1544,7 @@
   {
    "species": "elk",
    "label": "Muzzleloader",
+   "method": "muzzleloader",
    "start": "2026-09-12",
    "end": "2026-09-20",
    "year": 2026,
@@ -1181,15 +1554,37 @@
   {
    "species": "mule-deer",
    "label": "Archery",
+   "method": "archery",
    "start": "2026-09-02",
    "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Unless otherwise noted in the hunt code tables. Deer: West of I-25 and GMU 140. (plains archery below)"
+  },
+  {
+   "species": "mule-deer",
+   "label": "Muzzleloader",
+   "method": "muzzleloader",
+   "start": "2026-09-12",
+   "end": "2026-09-20",
    "year": 2026,
    "sourceId": "d-brochure-biggame-2026",
    "note": "Unless otherwise noted in the hunt code tables."
   },
   {
-   "species": "mule-deer",
+   "species": "whitetail",
+   "label": "Archery",
+   "method": "archery",
+   "start": "2026-09-02",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Unless otherwise noted in the hunt code tables. Deer: West of I-25 and GMU 140. (plains archery below)"
+  },
+  {
+   "species": "whitetail",
    "label": "Muzzleloader",
+   "method": "muzzleloader",
    "start": "2026-09-12",
    "end": "2026-09-20",
    "year": 2026,
@@ -1199,6 +1594,7 @@
   {
    "species": "bear",
    "label": "Archery",
+   "method": "archery",
    "start": "2026-09-02",
    "end": "2026-09-30",
    "year": 2026,
@@ -1208,6 +1604,7 @@
   {
    "species": "bear",
    "label": "Muzzleloader",
+   "method": "muzzleloader",
    "start": "2026-09-12",
    "end": "2026-09-20",
    "year": 2026,
@@ -1216,6 +1613,7 @@
   {
    "species": "elk",
    "label": "First rifle season",
+   "method": "rifle",
    "start": "2026-10-14",
    "end": "2026-10-18",
    "year": 2026,
@@ -1224,6 +1622,7 @@
   {
    "species": "elk",
    "label": "Second rifle season",
+   "method": "rifle",
    "start": "2026-10-24",
    "end": "2026-11-01",
    "year": 2026,
@@ -1232,6 +1631,7 @@
   {
    "species": "elk",
    "label": "Third rifle season",
+   "method": "rifle",
    "start": "2026-11-07",
    "end": "2026-11-15",
    "year": 2026,
@@ -1240,6 +1640,7 @@
   {
    "species": "elk",
    "label": "Fourth rifle season",
+   "method": "rifle",
    "start": "2026-11-18",
    "end": "2026-11-22",
    "year": 2026,
@@ -1248,6 +1649,7 @@
   {
    "species": "mule-deer",
    "label": "First rifle season",
+   "method": "rifle",
    "start": "2026-10-14",
    "end": "2026-10-18",
    "year": 2026,
@@ -1257,6 +1659,7 @@
   {
    "species": "mule-deer",
    "label": "Second rifle season",
+   "method": "rifle",
    "start": "2026-10-24",
    "end": "2026-11-01",
    "year": 2026,
@@ -1265,6 +1668,7 @@
   {
    "species": "mule-deer",
    "label": "Third rifle season",
+   "method": "rifle",
    "start": "2026-11-07",
    "end": "2026-11-15",
    "year": 2026,
@@ -1273,6 +1677,44 @@
   {
    "species": "mule-deer",
    "label": "Fourth rifle season",
+   "method": "rifle",
+   "start": "2026-11-18",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "First rifle season",
+   "method": "rifle",
+   "start": "2026-10-14",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "Deer: in select GMUs (see rifle hunt code tables)."
+  },
+  {
+   "species": "whitetail",
+   "label": "Second rifle season",
+   "method": "rifle",
+   "start": "2026-10-24",
+   "end": "2026-11-01",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "Third rifle season",
+   "method": "rifle",
+   "start": "2026-11-07",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026"
+  },
+  {
+   "species": "whitetail",
+   "label": "Fourth rifle season",
+   "method": "rifle",
    "start": "2026-11-18",
    "end": "2026-11-22",
    "year": 2026,
@@ -1281,6 +1723,7 @@
   {
    "species": "bear",
    "label": "First rifle season",
+   "method": "rifle",
    "start": "2026-10-14",
    "end": "2026-10-18",
    "year": 2026,
@@ -1289,6 +1732,7 @@
   {
    "species": "bear",
    "label": "Second rifle season",
+   "method": "rifle",
    "start": "2026-10-24",
    "end": "2026-11-01",
    "year": 2026,
@@ -1297,6 +1741,7 @@
   {
    "species": "bear",
    "label": "Third rifle season",
+   "method": "rifle",
    "start": "2026-11-07",
    "end": "2026-11-15",
    "year": 2026,
@@ -1305,6 +1750,7 @@
   {
    "species": "bear",
    "label": "Fourth rifle season",
+   "method": "rifle",
    "start": "2026-11-18",
    "end": "2026-11-22",
    "year": 2026,
@@ -1312,15 +1758,156 @@
   },
   {
    "species": "mule-deer",
+   "label": "Plains archery",
+   "method": "archery",
+   "start": "2026-10-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-regs-w2-2026",
+   "note": "East of I-25 except GMU 140. Archery is closed while plains rifle seasons are open: Oct. 1–23, Nov. 4–30 and Dec. 15–31 in most plains units (Oct. 1–23 and Nov. 4–Dec. 31, or Oct. 1–Nov. 30 and Dec. 15–31, in others; see hunt codes)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Plains muzzleloader",
+   "method": "muzzleloader",
+   "start": "2026-10-10",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-regs-w2-2026",
+   "note": "East of I-25 except GMU 140. Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "mule-deer",
    "label": "Plains rifle",
+   "method": "rifle",
    "start": "2026-10-24",
    "end": "2026-11-03",
    "year": 2026,
-   "sourceId": "d-brochure-biggame-2026"
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "East of I-25 except GMU 140. Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Late plains rifle",
+   "method": "rifle",
+   "start": "2026-12-01",
+   "end": "2026-12-14",
+   "year": 2026,
+   "sourceId": "d-regs-w2-2026",
+   "note": "East of I-25 except GMU 140, in the units with late plains hunt codes. Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "whitetail",
+   "label": "Plains archery",
+   "method": "archery",
+   "start": "2026-10-01",
+   "end": "2026-12-31",
+   "year": 2026,
+   "sourceId": "d-regs-w2-2026",
+   "note": "East of I-25 except GMU 140. Archery is closed while plains rifle seasons are open: Oct. 1–23, Nov. 4–30 and Dec. 15–31 in most plains units (Oct. 1–23 and Nov. 4–Dec. 31, or Oct. 1–Nov. 30 and Dec. 15–31, in others; see hunt codes)."
+  },
+  {
+   "species": "whitetail",
+   "label": "Plains muzzleloader",
+   "method": "muzzleloader",
+   "start": "2026-10-10",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-regs-w2-2026",
+   "note": "East of I-25 except GMU 140. Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "whitetail",
+   "label": "Plains rifle",
+   "method": "rifle",
+   "start": "2026-10-24",
+   "end": "2026-11-03",
+   "year": 2026,
+   "sourceId": "d-brochure-biggame-2026",
+   "note": "East of I-25 except GMU 140. Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "whitetail",
+   "label": "Late plains rifle",
+   "method": "rifle",
+   "start": "2026-12-01",
+   "end": "2026-12-14",
+   "year": 2026,
+   "sourceId": "d-regs-w2-2026",
+   "note": "East of I-25 except GMU 140, in the units with late plains hunt codes. Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "elk",
+   "label": "Plains rifle (east of I-25)",
+   "method": "rifle",
+   "units": [
+    "87",
+    "88",
+    "89",
+    "90",
+    "91",
+    "92",
+    "93",
+    "94",
+    "95",
+    "96",
+    "97",
+    "98",
+    "99",
+    "100",
+    "101",
+    "102",
+    "103",
+    "105",
+    "106",
+    "107",
+    "109",
+    "110",
+    "111",
+    "112",
+    "113",
+    "114",
+    "115",
+    "116",
+    "117",
+    "118",
+    "119",
+    "120",
+    "121",
+    "122",
+    "123",
+    "124",
+    "125",
+    "126",
+    "127",
+    "129",
+    "130",
+    "132",
+    "135",
+    "136",
+    "137",
+    "138",
+    "139",
+    "143",
+    "144",
+    "145",
+    "146",
+    "147",
+    "951"
+   ],
+   "huntCodes": [
+    "EE087U5R"
+   ],
+   "start": "2026-09-01",
+   "end": "2027-01-31",
+   "year": 2026,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Either-sex, over the counter (E-E-087-U5-R), W-2 #257."
   },
   {
    "species": "bear",
    "label": "September rifle (limited)",
+   "method": "rifle",
    "start": "2026-09-02",
    "end": "2026-09-30",
    "year": 2026,
@@ -1330,23 +1917,91 @@
   {
    "species": "bear",
    "label": "September plains rifle (over-the-counter)",
+   "method": "rifle",
+   "units": [
+    "87",
+    "88",
+    "89",
+    "90",
+    "91",
+    "92",
+    "93",
+    "94",
+    "95",
+    "96",
+    "97",
+    "98",
+    "99",
+    "100",
+    "101",
+    "102",
+    "103",
+    "104",
+    "105",
+    "106",
+    "107",
+    "109",
+    "110",
+    "111",
+    "112",
+    "113",
+    "114",
+    "115",
+    "116",
+    "117",
+    "118",
+    "119",
+    "120",
+    "121",
+    "122",
+    "123",
+    "124",
+    "125",
+    "126",
+    "127",
+    "128",
+    "129",
+    "130",
+    "132",
+    "133",
+    "134",
+    "135",
+    "136",
+    "137",
+    "138",
+    "139",
+    "141",
+    "142",
+    "143",
+    "144",
+    "145",
+    "146",
+    "147",
+    "951"
+   ],
+   "huntCodes": [
+    "BE087U6R"
+   ],
    "start": "2026-09-02",
    "end": "2026-11-22",
    "year": 2026,
-   "sourceId": "d-brochure-biggame-2026"
+   "sourceId": "d-regs-w2-2026",
+   "note": "Over the counter (B-E-087-U6-R), W-2 #239 C."
   },
   {
    "species": "pronghorn",
    "label": "Archery",
+   "method": "archery",
    "start": "2026-08-15",
    "end": "2026-09-20",
    "year": 2026,
    "sourceId": "d-brochure-biggame-2026",
-   "note": "Unless otherwise noted in the hunt code tables."
+   "note": "Unless otherwise noted in the hunt code tables. Aug. 15–31 bucks only; doe licenses Sept. 1–20."
   },
   {
    "species": "pronghorn",
    "label": "Muzzleloader",
+   "method": "muzzleloader",
    "start": "2026-09-21",
    "end": "2026-09-29",
    "year": 2026,
@@ -1355,6 +2010,7 @@
   {
    "species": "pronghorn",
    "label": "Rifle",
+   "method": "rifle",
    "start": "2026-10-03",
    "end": "2026-10-11",
    "year": 2026,
@@ -1362,8 +2018,33 @@
    "note": "Unless otherwise noted in the hunt code tables. Some hunts have early or late rifle dates."
   },
   {
+   "species": "pronghorn",
+   "label": "Second rifle season",
+   "method": "rifle",
+   "units": [
+    "6",
+    "16",
+    "17",
+    "161",
+    "171",
+    "87",
+    "88"
+   ],
+   "huntCodes": [
+    "AF006O2R",
+    "AM087O2R",
+    "AM088O2R"
+   ],
+   "start": "2026-10-17",
+   "end": "2026-10-25",
+   "year": 2026,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Second regular rifle hunt codes in Chapter W-2 #262 A.2."
+  },
+  {
    "species": "moose",
    "label": "Archery",
+   "method": "archery",
    "start": "2026-09-12",
    "end": "2026-09-30",
    "year": 2026,
@@ -1372,6 +2053,7 @@
   {
    "species": "moose",
    "label": "Muzzleloader",
+   "method": "muzzleloader",
    "start": "2026-09-12",
    "end": "2026-09-20",
    "year": 2026,
@@ -1380,11 +2062,100 @@
   {
    "species": "moose",
    "label": "Rifle",
+   "method": "rifle",
    "start": "2026-10-01",
    "end": "2026-10-14",
    "year": 2026,
    "sourceId": "d-brochure-biggame-2026",
    "note": "Unless otherwise noted in the hunt code tables."
+  },
+  {
+   "species": "moose",
+   "label": "Late antlerless rifle, part 1 of 4 (concurrent with deer/elk rifle season 1)",
+   "method": "rifle",
+   "huntCodes": [
+    "MF006L1R",
+    "MF012L1R",
+    "MF015L1R",
+    "MF018L1R",
+    "MF028L1R",
+    "MF037L1R",
+    "MF038L1R",
+    "MF041L1R",
+    "MF051L1R",
+    "MF052L1R"
+   ],
+   "start": "2026-10-14",
+   "end": "2026-10-18",
+   "year": 2026,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Antlerless late-season hunt codes in Chapter W-2 #270."
+  },
+  {
+   "species": "moose",
+   "label": "Late antlerless rifle, part 2 of 4 (concurrent with deer/elk rifle season 2)",
+   "method": "rifle",
+   "huntCodes": [
+    "MF006L1R",
+    "MF012L1R",
+    "MF015L1R",
+    "MF018L1R",
+    "MF028L1R",
+    "MF037L1R",
+    "MF038L1R",
+    "MF041L1R",
+    "MF051L1R",
+    "MF052L1R"
+   ],
+   "start": "2026-10-24",
+   "end": "2026-11-01",
+   "year": 2026,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Antlerless late-season hunt codes in Chapter W-2 #270."
+  },
+  {
+   "species": "moose",
+   "label": "Late antlerless rifle, part 3 of 4 (concurrent with deer/elk rifle season 3)",
+   "method": "rifle",
+   "huntCodes": [
+    "MF006L1R",
+    "MF012L1R",
+    "MF015L1R",
+    "MF018L1R",
+    "MF028L1R",
+    "MF037L1R",
+    "MF038L1R",
+    "MF041L1R",
+    "MF051L1R",
+    "MF052L1R"
+   ],
+   "start": "2026-11-07",
+   "end": "2026-11-15",
+   "year": 2026,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Antlerless late-season hunt codes in Chapter W-2 #270."
+  },
+  {
+   "species": "moose",
+   "label": "Late antlerless rifle, part 4 of 4 (concurrent with deer/elk rifle season 4)",
+   "method": "rifle",
+   "huntCodes": [
+    "MF006L1R",
+    "MF012L1R",
+    "MF015L1R",
+    "MF018L1R",
+    "MF028L1R",
+    "MF037L1R",
+    "MF038L1R",
+    "MF041L1R",
+    "MF051L1R",
+    "MF052L1R"
+   ],
+   "start": "2026-11-18",
+   "end": "2026-11-22",
+   "year": 2026,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Antlerless late-season hunt codes in Chapter W-2 #270."
   },
   {
    "species": "turkey",
@@ -1415,11 +2186,472 @@
   {
    "species": "lion",
    "label": "Mountain lion season (2026–27 license year)",
+   "method": "all",
    "start": "2026-11-23",
    "end": "2027-03-31",
    "year": 2026,
    "sourceId": "d-brochure-lion-2026",
    "note": "Units close when their harvest-limit group reaches its limit."
+  },
+  {
+   "species": "elk",
+   "label": "Archery",
+   "method": "archery",
+   "start": "2027-09-02",
+   "end": "2027-09-30",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "elk",
+   "label": "Muzzleloader",
+   "method": "muzzleloader",
+   "start": "2027-09-11",
+   "end": "2027-09-19",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Archery",
+   "method": "archery",
+   "start": "2027-09-02",
+   "end": "2027-09-30",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). Deer: West of I-25 and GMU 140."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Muzzleloader",
+   "method": "muzzleloader",
+   "start": "2027-09-11",
+   "end": "2027-09-19",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "whitetail",
+   "label": "Archery",
+   "method": "archery",
+   "start": "2027-09-02",
+   "end": "2027-09-30",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). Deer: West of I-25 and GMU 140."
+  },
+  {
+   "species": "whitetail",
+   "label": "Muzzleloader",
+   "method": "muzzleloader",
+   "start": "2027-09-11",
+   "end": "2027-09-19",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "bear",
+   "label": "Archery",
+   "method": "archery",
+   "start": "2027-09-02",
+   "end": "2027-09-30",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "bear",
+   "label": "Muzzleloader",
+   "method": "muzzleloader",
+   "start": "2027-09-11",
+   "end": "2027-09-19",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "elk",
+   "label": "First rifle season",
+   "method": "rifle",
+   "start": "2027-10-13",
+   "end": "2027-10-17",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "elk",
+   "label": "Second rifle season",
+   "method": "rifle",
+   "start": "2027-10-23",
+   "end": "2027-10-31",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "elk",
+   "label": "Third rifle season",
+   "method": "rifle",
+   "start": "2027-11-06",
+   "end": "2027-11-14",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "elk",
+   "label": "Fourth rifle season",
+   "method": "rifle",
+   "start": "2027-11-17",
+   "end": "2027-11-21",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "First rifle season",
+   "method": "rifle",
+   "start": "2027-10-13",
+   "end": "2027-10-17",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). Deer: in select GMUs."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Second rifle season",
+   "method": "rifle",
+   "start": "2027-10-23",
+   "end": "2027-10-31",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Third rifle season",
+   "method": "rifle",
+   "start": "2027-11-06",
+   "end": "2027-11-14",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Fourth rifle season",
+   "method": "rifle",
+   "start": "2027-11-17",
+   "end": "2027-11-21",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "whitetail",
+   "label": "First rifle season",
+   "method": "rifle",
+   "start": "2027-10-13",
+   "end": "2027-10-17",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). Deer: in select GMUs."
+  },
+  {
+   "species": "whitetail",
+   "label": "Second rifle season",
+   "method": "rifle",
+   "start": "2027-10-23",
+   "end": "2027-10-31",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "whitetail",
+   "label": "Third rifle season",
+   "method": "rifle",
+   "start": "2027-11-06",
+   "end": "2027-11-14",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "whitetail",
+   "label": "Fourth rifle season",
+   "method": "rifle",
+   "start": "2027-11-17",
+   "end": "2027-11-21",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "bear",
+   "label": "First rifle season",
+   "method": "rifle",
+   "start": "2027-10-13",
+   "end": "2027-10-17",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "bear",
+   "label": "Second rifle season",
+   "method": "rifle",
+   "start": "2027-10-23",
+   "end": "2027-10-31",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "bear",
+   "label": "Third rifle season",
+   "method": "rifle",
+   "start": "2027-11-06",
+   "end": "2027-11-14",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "bear",
+   "label": "Fourth rifle season",
+   "method": "rifle",
+   "start": "2027-11-17",
+   "end": "2027-11-21",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Plains archery",
+   "method": "archery",
+   "start": "2027-10-01",
+   "end": "2027-12-31",
+   "year": 2027,
+   "sourceId": "d-bgss-2025-2029",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). East of I-25 except GMU 140; closed during plains rifle seasons: Oct. 1–29, Nov. 10–30 and Dec. 15–31 (or Oct. 1–29 and Nov. 10–Dec. 31, or Oct. 1–Nov. 30 and Dec. 15–31, depending on the unit's rifle seasons)."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Plains muzzleloader",
+   "method": "muzzleloader",
+   "start": "2027-10-09",
+   "end": "2027-10-17",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). East of I-25 except GMU 140."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Plains rifle",
+   "method": "rifle",
+   "start": "2027-10-30",
+   "end": "2027-11-09",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). East of I-25 except GMU 140."
+  },
+  {
+   "species": "mule-deer",
+   "label": "Late plains rifle",
+   "method": "rifle",
+   "start": "2027-12-01",
+   "end": "2027-12-14",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). East of I-25 except GMU 140 (Dec. 1–14 annually)."
+  },
+  {
+   "species": "whitetail",
+   "label": "Plains archery",
+   "method": "archery",
+   "start": "2027-10-01",
+   "end": "2027-12-31",
+   "year": 2027,
+   "sourceId": "d-bgss-2025-2029",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). East of I-25 except GMU 140; closed during plains rifle seasons: Oct. 1–29, Nov. 10–30 and Dec. 15–31 (or Oct. 1–29 and Nov. 10–Dec. 31, or Oct. 1–Nov. 30 and Dec. 15–31, depending on the unit's rifle seasons)."
+  },
+  {
+   "species": "whitetail",
+   "label": "Plains muzzleloader",
+   "method": "muzzleloader",
+   "start": "2027-10-09",
+   "end": "2027-10-17",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). East of I-25 except GMU 140."
+  },
+  {
+   "species": "whitetail",
+   "label": "Plains rifle",
+   "method": "rifle",
+   "start": "2027-10-30",
+   "end": "2027-11-09",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). East of I-25 except GMU 140."
+  },
+  {
+   "species": "whitetail",
+   "label": "Late plains rifle",
+   "method": "rifle",
+   "start": "2027-12-01",
+   "end": "2027-12-14",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). East of I-25 except GMU 140 (Dec. 1–14 annually)."
+  },
+  {
+   "species": "elk",
+   "label": "Plains rifle (east of I-25)",
+   "method": "rifle",
+   "start": "2027-09-01",
+   "end": "2028-01-31",
+   "year": 2027,
+   "sourceId": "d-bgss-2025-2029",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). East of I-25 except select GMUs (Sept. 1–Jan. 31 annually)."
+  },
+  {
+   "species": "bear",
+   "label": "September rifle (limited)",
+   "method": "rifle",
+   "start": "2027-09-02",
+   "end": "2027-09-30",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). (Sept. 2–30 annually)"
+  },
+  {
+   "species": "bear",
+   "label": "September plains rifle (over-the-counter)",
+   "method": "rifle",
+   "start": "2027-09-02",
+   "end": "2027-11-21",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Archery",
+   "method": "archery",
+   "start": "2027-08-15",
+   "end": "2027-09-20",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). Aug. 15–31 bucks only; doe licenses Sept. 1–20 (annual dates)."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Muzzleloader",
+   "method": "muzzleloader",
+   "start": "2027-09-21",
+   "end": "2027-09-29",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). (Sept. 21–29 annually)"
+  },
+  {
+   "species": "pronghorn",
+   "label": "Rifle",
+   "method": "rifle",
+   "start": "2027-10-02",
+   "end": "2027-10-10",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "pronghorn",
+   "label": "Second rifle season",
+   "method": "rifle",
+   "start": "2027-10-16",
+   "end": "2027-10-24",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). Only in units with second-rifle hunt codes."
+  },
+  {
+   "species": "moose",
+   "label": "Archery",
+   "method": "archery",
+   "start": "2027-09-11",
+   "end": "2027-09-30",
+   "year": 2027,
+   "sourceId": "d-bgss-2025-2029",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "moose",
+   "label": "Muzzleloader",
+   "method": "muzzleloader",
+   "start": "2027-09-11",
+   "end": "2027-09-19",
+   "year": 2027,
+   "sourceId": "d-bgss-2025-2029",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31)."
+  },
+  {
+   "species": "moose",
+   "label": "Rifle",
+   "method": "rifle",
+   "start": "2027-10-01",
+   "end": "2027-10-14",
+   "year": 2027,
+   "sourceId": "d-regs-w2-2026",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). (Oct. 1–14 annually)"
+  },
+  {
+   "species": "moose",
+   "label": "Late antlerless rifle, part 1 of 4 (concurrent with deer/elk rifle season 1)",
+   "method": "rifle",
+   "start": "2027-10-13",
+   "end": "2027-10-17",
+   "year": 2027,
+   "sourceId": "d-bgss-2025-2029",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). Optional season, only where CPW offers late antlerless moose hunt codes."
+  },
+  {
+   "species": "moose",
+   "label": "Late antlerless rifle, part 2 of 4 (concurrent with deer/elk rifle season 2)",
+   "method": "rifle",
+   "start": "2027-10-23",
+   "end": "2027-10-31",
+   "year": 2027,
+   "sourceId": "d-bgss-2025-2029",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). Optional season, only where CPW offers late antlerless moose hunt codes."
+  },
+  {
+   "species": "moose",
+   "label": "Late antlerless rifle, part 3 of 4 (concurrent with deer/elk rifle season 3)",
+   "method": "rifle",
+   "start": "2027-11-06",
+   "end": "2027-11-14",
+   "year": 2027,
+   "sourceId": "d-bgss-2025-2029",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). Optional season, only where CPW offers late antlerless moose hunt codes."
+  },
+  {
+   "species": "moose",
+   "label": "Late antlerless rifle, part 4 of 4 (concurrent with deer/elk rifle season 4)",
+   "method": "rifle",
+   "start": "2027-11-17",
+   "end": "2027-11-21",
+   "year": 2027,
+   "sourceId": "d-bgss-2025-2029",
+   "note": "Standard 2027 season set in advance; 2027 hunt codes and any hunt-specific dates are not yet published (2026-10-31). Optional season, only where CPW offers late antlerless moose hunt codes."
   }
  ],
  "coverage": [
@@ -1432,7 +2664,7 @@
     2025,
     2026
    ],
-   "notes": "4917 hunt-code rows (2022: 862, 2023: 1003, 2024: 990, 2025: 1023, 2026: 1039). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included."
+   "notes": "4917 hunt-code rows (2022: 862, 2023: 1003, 2024: 990, 2025: 1023, 2026: 1039). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results are not included. For the latest year, seasonDates/seasonRanges are the hunt code's dates in CPW's Chapter W-2 (big game) or W-3 (turkey) season tables, read by scripts/agency/colorado/seasons_parse.py; Ranching for Wildlife hunts, which the regulations do not date, use the brochure's RFW tables (seasonSourceId says which)."
   },
   {
    "species": "mule-deer",
@@ -1443,7 +2675,7 @@
     2025,
     2026
    ],
-   "notes": "4430 hunt-code rows (2022: 864, 2023: 876, 2024: 882, 2025: 901, 2026: 907). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included. Contains every limited deer hunt code except those listed in that year's 'White-tailed deer only' brochure table; CPW deer licenses are not species-specific unless so listed."
+   "notes": "4430 hunt-code rows (2022: 864, 2023: 876, 2024: 882, 2025: 901, 2026: 907). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results are not included. For the latest year, seasonDates/seasonRanges are the hunt code's dates in CPW's Chapter W-2 (big game) or W-3 (turkey) season tables, read by scripts/agency/colorado/seasons_parse.py; Ranching for Wildlife hunts, which the regulations do not date, use the brochure's RFW tables (seasonSourceId says which). Contains every limited deer hunt code except those listed in that year's 'White-tailed deer only' brochure table; CPW deer licenses are not species-specific unless so listed."
   },
   {
    "species": "whitetail",
@@ -1454,7 +2686,7 @@
     2025,
     2026
    ],
-   "notes": "419 hunt-code rows (2022: 83, 2023: 84, 2024: 84, 2025: 84, 2026: 84). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included. Hunt codes listed in each year's brochure 'Limited Licenses — White-tailed (deer) only' table (2022–2025 brochures read from Internet Archive captures of CPW's URL). Season-choice deer codes with a white-tailed-only December window stay in mule-deer."
+   "notes": "419 hunt-code rows (2022: 83, 2023: 84, 2024: 84, 2025: 84, 2026: 84). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results are not included. For the latest year, seasonDates/seasonRanges are the hunt code's dates in CPW's Chapter W-2 (big game) or W-3 (turkey) season tables, read by scripts/agency/colorado/seasons_parse.py; Ranching for Wildlife hunts, which the regulations do not date, use the brochure's RFW tables (seasonSourceId says which). Hunt codes listed in each year's brochure 'Limited Licenses — White-tailed (deer) only' table (2022–2025 brochures read from Internet Archive captures of CPW's URL). Season-choice deer codes with a white-tailed-only December window stay in mule-deer."
   },
   {
    "species": "pronghorn",
@@ -1465,7 +2697,7 @@
     2025,
     2026
    ],
-   "notes": "1520 hunt-code rows (2022: 314, 2023: 316, 2024: 293, 2025: 295, 2026: 302). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included."
+   "notes": "1520 hunt-code rows (2022: 314, 2023: 316, 2024: 293, 2025: 295, 2026: 302). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results are not included. For the latest year, seasonDates/seasonRanges are the hunt code's dates in CPW's Chapter W-2 (big game) or W-3 (turkey) season tables, read by scripts/agency/colorado/seasons_parse.py; Ranching for Wildlife hunts, which the regulations do not date, use the brochure's RFW tables (seasonSourceId says which)."
   },
   {
    "species": "moose",
@@ -1476,7 +2708,7 @@
     2025,
     2026
    ],
-   "notes": "446 hunt-code rows (2022: 75, 2023: 80, 2024: 86, 2025: 98, 2026: 107). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included. byPoints.points = preference points + weighted points as CPW lists them; above 3 points the draw is weighted-random. Many moose hunt codes are float groups (archery/muzzleloader/rifle codes sharing one quota). Hunt-level resident/nonresident quotas are CPW-published. A few hunts have point-level rows summing 1 below CPW's Total Choice 1 (noted per row)."
+   "notes": "446 hunt-code rows (2022: 75, 2023: 80, 2024: 86, 2025: 98, 2026: 107). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results are not included. For the latest year, seasonDates/seasonRanges are the hunt code's dates in CPW's Chapter W-2 (big game) or W-3 (turkey) season tables, read by scripts/agency/colorado/seasons_parse.py; Ranching for Wildlife hunts, which the regulations do not date, use the brochure's RFW tables (seasonSourceId says which). byPoints.points = preference points + weighted points as CPW lists them; above 3 points the draw is weighted-random. Many moose hunt codes are float groups (archery/muzzleloader/rifle codes sharing one quota). Hunt-level resident/nonresident quotas are CPW-published. A few hunts have point-level rows summing 1 below CPW's Total Choice 1 (noted per row)."
   },
   {
    "species": "bear",
@@ -1487,7 +2719,7 @@
     2025,
     2026
    ],
-   "notes": "644 hunt-code rows (2022: 129, 2023: 127, 2024: 129, 2025: 129, 2026: 130). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included."
+   "notes": "644 hunt-code rows (2022: 129, 2023: 127, 2024: 129, 2025: 129, 2026: 130). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results are not included. For the latest year, seasonDates/seasonRanges are the hunt code's dates in CPW's Chapter W-2 (big game) or W-3 (turkey) season tables, read by scripts/agency/colorado/seasons_parse.py; Ranching for Wildlife hunts, which the regulations do not date, use the brochure's RFW tables (seasonSourceId says which)."
   },
   {
    "species": "sheep",
@@ -1498,7 +2730,7 @@
     2025,
     2026
    ],
-   "notes": "642 hunt-code rows (2022: 127, 2023: 126, 2024: 133, 2025: 128, 2026: 128). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included. Rocky Mountain bighorn (S...) and desert bighorn (C...) in one file. RM: byPoints.points = preference + weighted points; desert: random draw, no byPoints/minPoints. Several RM hunts have point-level rows summing 1–2 below CPW's Total Choice 1 (noted per row)."
+   "notes": "642 hunt-code rows (2022: 127, 2023: 126, 2024: 133, 2025: 128, 2026: 128). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results are not included. For the latest year, seasonDates/seasonRanges are the hunt code's dates in CPW's Chapter W-2 (big game) or W-3 (turkey) season tables, read by scripts/agency/colorado/seasons_parse.py; Ranching for Wildlife hunts, which the regulations do not date, use the brochure's RFW tables (seasonSourceId says which). Rocky Mountain bighorn (S...) and desert bighorn (C...) in one file. RM: byPoints.points = preference + weighted points; desert: random draw, no byPoints/minPoints. Several RM hunts have point-level rows summing 1–2 below CPW's Total Choice 1 (noted per row)."
   },
   {
    "species": "goat",
@@ -1509,7 +2741,7 @@
     2025,
     2026
    ],
-   "notes": "239 hunt-code rows (2022: 47, 2023: 48, 2024: 48, 2025: 48, 2026: 48). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included. byPoints.points = preference + weighted points; above 3 points the draw is weighted-random. GEG08O1A 2025/2026 point rows sum 1 below CPW's total (noted)."
+   "notes": "239 hunt-code rows (2022: 47, 2023: 48, 2024: 48, 2025: 48, 2026: 48). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results are not included. For the latest year, seasonDates/seasonRanges are the hunt code's dates in CPW's Chapter W-2 (big game) or W-3 (turkey) season tables, read by scripts/agency/colorado/seasons_parse.py; Ranching for Wildlife hunts, which the regulations do not date, use the brochure's RFW tables (seasonSourceId says which). byPoints.points = preference + weighted points; above 3 points the draw is weighted-random. GEG08O1A 2025/2026 point rows sum 1 below CPW's total (noted)."
   },
   {
    "species": "lion",
@@ -1525,7 +2757,7 @@
     2025,
     2026
    ],
-   "notes": "332 hunt-code rows (2022: 68, 2023: 66, 2024: 66, 2025: 66, 2026: 66). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results and per-hunt season dates are not included. Spring (TM...) and fall (TE...) limited draws in one file; each year has both."
+   "notes": "332 hunt-code rows (2022: 68, 2023: 66, 2024: 66, 2025: 66, 2026: 66). Counts are CPW primary-draw, first-choice results from the Draw Recap reports. resident/nonresident = CPW's adult columns; total = adult + youth general applications (landowner LPP vouchers excluded; youth and LPP numbers are in each row's note). Odds are computed as drawn / applicants (oddsComputed). minPoints = CPW's published 'Drawn Out At' level for adults; hybrid-draw winners can draw below it, which shows in byPoints. Hunt codes are printed without dashes as in the recap (EE001E1R = E-E-001-E1-R); units = the GMU in the hunt code, which CPW defines as the lowest valid GMU, so multi-GMU hunts cover more units than listed. Hunt codes CPW reports together as a float group are one row with space-separated codes. The preference-point-only code (e.g. EP99999P) is excluded; with it, the hunt-code sums reproduce CPW's statewide first-choice applicant totals exactly, and drawn totals match exactly, for every year. Secondary-draw results are not included. For the latest year, seasonDates/seasonRanges are the hunt code's dates in CPW's Chapter W-2 (big game) or W-3 (turkey) season tables, read by scripts/agency/colorado/seasons_parse.py; Ranching for Wildlife hunts, which the regulations do not date, use the brochure's RFW tables (seasonSourceId says which). Spring (TM...) and fall (TE...) limited draws in one file; each year has both."
   }
  ],
  "sources": [
@@ -1568,6 +2800,36 @@
    "dataYear": 2026,
    "retrieved": "2026-10-31",
    "notes": "License fees, season dates and harvest-limit groups for the April 2026–March 2027 license year."
+  },
+  {
+   "id": "d-regs-w2-2026",
+   "title": "Chapter W-2 – Big Game (Colorado Parks and Wildlife regulations)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/s97gq9wqrf/chapter-w-2---big-game-regulations",
+   "pageUrl": "https://cpw.state.co.us/rules-and-regulations",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Copy linked on CPW's Rules and Regulations page (PDF created 2026-05-08; effective July 1, 2026). Season tables by hunt code (#218 sheep, #219 desert sheep, #227 goat, #237–#239 bear, #248–#250 deer, #255–#257 elk, #261–#262 pronghorn, #270 moose) with 2026 license numbers, and 'License year 2025–2029' tables of the standard season dates; #206 draw rules."
+  },
+  {
+   "id": "d-regs-w3-2026",
+   "title": "Chapter W-3 – Furbearers and Small Game, Except Migratory Birds (Colorado Parks and Wildlife regulations)",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.widen.net/s/kmpdszcx6j/ch03",
+   "pageUrl": "https://cpw.state.co.us/rules-and-regulations",
+   "dataYear": 2026,
+   "retrieved": "2026-10-31",
+   "notes": "Adopted July 16, 2026, effective Sept. 1, 2026. #322 Wild Turkey: 2026 spring, fall and late season hunt-code tables (open/close dates) and application rules."
+  },
+  {
+   "id": "d-bgss-2025-2029",
+   "title": "2025 - 2029 Big Game Season Structure",
+   "publisher": "Colorado Parks and Wildlife",
+   "url": "https://cpw.state.co.us/sites/default/files/dam/ifgylu070o/final_bgss2025-2029.pdf",
+   "pageUrl": "https://cpw.state.co.us/SeasonStructure",
+   "dataYear": 2027,
+   "retrieved": "2026-10-31",
+   "notes": "Final season structure adopted by the Parks and Wildlife Commission in June 2024 (minor moose cleanup Nov. 2024); lists each standard deer, elk, pronghorn, moose, bear and lion season's dates for 2025–2029. Annual regulations set hunt codes and licenses."
   },
   {
    "id": "d-brochure-biggame-2022",
