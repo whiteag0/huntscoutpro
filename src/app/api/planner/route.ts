@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { NO_STORE, plannerMember, readJsonBody } from "@/lib/planner-auth";
-import { MAX_PLANNER_BYTES } from "@/lib/planner-schema";
+import { MAX_PLANNER_BYTES, MAX_PLANNER_SIZE_TEXT, PLANNER_SCHEMA } from "@/lib/planner-schema";
 import {
   PlannerConflictError,
   PlannerInvalidError,
@@ -25,13 +25,24 @@ export async function GET() {
   }
 }
 
-/** Replace the planner: { version: <version it was based on>, data }. 409 with { current } when stale. */
+/**
+ * Replace the planner: { schema, version: <version it was based on>, data }. 409 with { current } when stale.
+ * `schema` must be the current planner schema: a page loaded before an upgrade reads newer
+ * documents with its older validation (dropping fields it doesn't know, e.g. a hunt's own
+ * checklist), so its writes are refused until it reloads instead of erasing them.
+ */
 export async function PUT(req: Request) {
   const m = await plannerMember();
   if ("error" in m) return m.error;
   const parsed = await readJsonBody(req, MAX_PLANNER_BYTES + 16 * 1024);
   if ("error" in parsed) return parsed.error;
-  const body = parsed.body as { version?: unknown; data?: unknown } | null;
+  const body = parsed.body as { schema?: unknown; version?: unknown; data?: unknown } | null;
+  if (body?.schema !== PLANNER_SCHEMA) {
+    return NextResponse.json(
+      { error: "HuntScout was updated. Reload this page to keep saving; your changes are kept on this device." },
+      { status: 400, headers: NO_STORE }
+    );
+  }
   const version = body?.version;
   if (typeof version !== "number" || !Number.isInteger(version) || version < 0) {
     return NextResponse.json({ error: "Missing version." }, { status: 400, headers: NO_STORE });
@@ -49,7 +60,7 @@ function failure(err: unknown, what: "read" | "save") {
     return NextResponse.json({ error: "Your planner changed on another device or tab.", current: err.current }, { status: 409, headers: NO_STORE });
   }
   if (err instanceof PlannerTooLargeError) {
-    return NextResponse.json({ error: `Your planner is over the ${MAX_PLANNER_BYTES / 1024} KB limit. Remove some entries or notes and it will save.` }, { status: 413, headers: NO_STORE });
+    return NextResponse.json({ error: `Your planner is over the ${MAX_PLANNER_SIZE_TEXT} limit. Remove some entries or notes and it will save.` }, { status: 413, headers: NO_STORE });
   }
   if (err instanceof PlannerInvalidError) {
     return NextResponse.json({ error: err.message }, { status: 400, headers: NO_STORE });

@@ -2,7 +2,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { DrawRecord, KeyDate, SpeciesInfo } from "@/data/agency/schema";
-import { buildAgencyHunt, feesFor, isApplicationLabel, nextApplicationDeadline, oddsNote, sanitizeDrawRow, type PlannerState } from "@/lib/planner-agency";
+import { buildAgencyHunt, feesFor, isApplicationLabel, nextApplicationDeadline, oddsNote, type PlannerState } from "@/lib/planner-agency";
 
 const kd = (k: Partial<KeyDate> & { label: string }): KeyDate => ({ cycle: 2027, status: "confirmed", sourceId: "d-dates", ...k });
 
@@ -172,15 +172,4 @@ test("buildAgencyHunt fills deadline, cycle, source links and fees from agency d
   const none = buildAgencyHunt({ state: STATE, info: { ...ELK, keyDates: [] }, row: ROW, residency: "resident", today: "2026-10-31", now: "x", id: "abc124" });
   assert.equal(none.agency!.deadline, null);
   assert.equal(none.applicationDeadline, "");
-});
-
-test("sanitizeDrawRow keeps a well-formed row and rejects mismatches", () => {
-  const r = sanitizeDrawRow({ ...ROW, byPoints: [{ points: 3, resident: { applicants: 4, drawn: 1 } }, { points: "x" }] }, "elk")!;
-  assert.equal(r.huntCode, "EE001E1R");
-  assert.equal(r.resident!.applicants, 173);
-  assert.deepEqual(r.byPoints, [{ points: 3, resident: { applicants: 4, drawn: 1 }, nonresident: null }]);
-  assert.equal(sanitizeDrawRow(ROW, "mule-deer"), null);
-  assert.equal(sanitizeDrawRow({ ...ROW, year: "2025" }, "elk"), null);
-  assert.equal(sanitizeDrawRow({ ...ROW, huntCode: "" }, "elk"), null);
-  assert.equal(sanitizeDrawRow({ ...ROW, resident: { applicants: -5, drawn: 1 } }, "elk")!.resident!.applicants, undefined);
 });

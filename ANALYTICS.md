@@ -34,7 +34,11 @@ In Clarity, filter recordings by **Custom events** (event names below) or **Cust
 | `reminders_toggle` | Deadline reminders switched on/off | `enabled` |
 | `calendar_filter` | Calendar filters changed | `filter`, `value` |
 | `free_reminders_signup` | Free deadline-reminder form accepted (confirmation email sent) | `state`, `source`, `species` (count) |
-| `planner_add` | "Add to my planner" saved a hunt to the account | `state`, `species`, `deadline` (agency date filled in) |
+| `planner_add` | (older clients) "Add to my planner" saved a hunt to the account in one tap | `state`, `species`, `deadline` (agency date filled in) |
+| `plan_start` | The guided "Plan a hunt" flow opens (/planner/new) | `from` (`planner`, `draw_table`, `empty`, `direct`), `state`, `species` when prefilled |
+| `plan_save` | A planned hunt was saved from the review screen | `state`, `species`, `kind` (`draw`, `otc`, `custom`), `residency`, `published` (agency dates for the planned cycle are out), `storage` (`account` or `browser`) |
+| `planner_refresh` | Saved hunts were re-checked against current agency data | `auto` (background check on opening the planner), `hunts` (checked), `updated` (hunts whose agency dates changed) |
+| `ics_download` | A calendar (.ics) file was downloaded | `scope` (`planner` or `hunt`), `events` |
 
 No event carries a name, email, phone number or free text: `sanitizeProps` drops keys like `email`/`name`/`phone`/`notes` and any value containing `@`. Signed-in visitors are linked in Clarity by `clarity('identify', sha256(lowercased email))`, computed in the browser.
 

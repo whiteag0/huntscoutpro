@@ -2,9 +2,11 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
+  PLANNER_SCHEMA,
   deadlinesOf,
   findAgencyDuplicate,
   mergePlanners,
+  migratePlannerData,
   nextDeadline,
   sanitizePlannerData,
   sanitizePlannerDoc,
@@ -155,4 +157,157 @@ test("deadlines sort by real date; next deadline skips passed ones", () => {
   assert.equal(nextDeadline(hunts, "2026-10-31")!.hunt.id, "manual");
   assert.equal(nextDeadline(hunts, "2026-12-16")!.hunt.id, "late");
   assert.equal(nextDeadline(hunts, "2027-04-08"), undefined);
+});
+
+// ------------------------------------------------------------
+// Schema 2
+// ------------------------------------------------------------
+
+test("migration: a schema-1 document (agency entry, manual entry, budget, gear) loads unchanged as schema 2", () => {
+  const v1 = {
+    schema: 1,
+    version: 12,
+    updatedAt: "2026-10-31T20:00:00.000Z",
+    data: {
+      hunts: [
+        hunt({ id: "a1", agency: agency(), applicationDeadline: "2027-04-07", status: "applied", notes: "Hunt with Dad\nsecond line", preferencePointsOwned: 5, updatedAt: "2026-10-31T19:00:00.000Z" }),
+        hunt({ id: "m1", state: "Montana", unit: "270", season: "archery", applicationDeadline: "2027-04-01", seasonDates: "Sep 5 - Oct 18", status: "not-drawn" }),
+        hunt({ id: "a2", agency: agency({ huntCode: "EE002E1R", deadline: null }), applicationDeadline: "2027-03-15" }),
+      ],
+      budget: [{ id: "b1", huntId: "a1", category: "License", description: "Elk license — resident adult (2026)", amount: 70.4, licenseYear: 2026, sourceUrl: "https://cpw.state.co.us/fees.pdf" }],
+      checklist: [{ id: "c1", category: "Safety", label: "First aid kit", checked: true, custom: false }],
+      deleted: ["gone"],
+    },
+  };
+  const doc = sanitizePlannerDoc(v1)!;
+  assert.equal(doc.schema, PLANNER_SCHEMA);
+  assert.equal(PLANNER_SCHEMA, 2);
+  assert.equal(doc.version, 12);
+  assert.equal(doc.updatedAt, v1.updatedAt);
+  assert.deepEqual(doc.data, v1.data);
+  // And it is stable: sanitizing the migrated data again changes nothing.
+  assert.deepEqual(sanitizePlannerData(doc.data), doc.data);
+  assert.equal(migratePlannerData(v1.data, 1), v1.data);
+  assert.equal(sanitizePlannerDoc({ ...v1, schema: 3 }), null);
+});
+
+test("schema 2 fields are validated and capped", () => {
+  const a = agency({
+    kind: "draw",
+    planCycle: 2027,
+    datesCycle: 2026,
+    cyclePublished: false,
+    keyDates: [
+      { kind: "application", label: "Primary draw application period", start: "2026-03-01", end: "2026-04-07", cycle: 2026, status: "confirmed", src: 0 },
+      { kind: "bogus" as never, label: "Odd", date: "2026-05-01", end: "2026-05-01", cycle: 2026, status: "confirmed", src: 99 },
+      { kind: "results", label: "", end: "2026-05-01", cycle: 2026, status: "confirmed" },
+      ...Array.from({ length: 40 }, (_, i) => ({ kind: "other" as const, label: `x${i}`, end: "2026-01-01", cycle: 2026, status: "confirmed" as const })),
+    ],
+    seasons: [
+      { label: "Rifle", start: "2026-10-14", end: "2026-10-18", year: 2026, scope: "statewide", src: 0 },
+      { label: "Backwards", start: "2026-10-18", end: "2026-10-14", year: 2026, scope: "hunt" },
+    ],
+    links: ["https://cpw.state.co.us/brochure.pdf", "javascript:alert(1)"],
+    requirements: ["Hunter education is required.", "y".repeat(1000)],
+    minPoints: 250,
+    oddsPct: 140,
+  });
+  const h = sanitizePlannerData({
+    hunts: [
+      {
+        ...hunt({ id: "a1", agency: a }),
+        status: "tag-purchased",
+        drawing: "winter",
+        stepsDone: ["apply", "apply", "BAD KEY!", "req-1x2"],
+        tasks: [{ id: "t1", label: "Scout", done: true }, { id: "t1", label: "dup", done: false }, { id: "t2", label: "" }],
+        customDates: [{ id: "c1", label: "Flights", date: "2027-01-10", end: "2027-01-09" }, { id: "c2", label: "Bad", date: "Jan 10" }],
+      },
+      { ...hunt({ id: "h2" }), status: "hunted" },
+      { ...hunt({ id: "h3" }), status: "eaten" },
+    ],
+  })!;
+  const ag = h.hunts[0].agency!;
+  assert.equal(ag.keyDates!.length, 30);
+  assert.equal(ag.keyDates![0].src, 0);
+  assert.equal(ag.keyDates![1].kind, "other");
+  assert.equal(ag.keyDates![1].src, undefined);
+  assert.deepEqual(ag.seasons!.map((s) => s.label), ["Rifle"]);
+  assert.deepEqual(ag.links, ["https://cpw.state.co.us/brochure.pdf", ""]);
+  assert.equal(ag.requirements![1].length, 400);
+  assert.deepEqual([ag.minPoints, ag.oddsPct, ag.planCycle, ag.datesCycle, ag.cyclePublished], [99, 100, 2027, 2026, false]);
+  assert.deepEqual(h.hunts.map((x) => x.status), ["tag-purchased", "hunted", "planning"]);
+  assert.equal(h.hunts[0].drawing, undefined);
+  assert.deepEqual(h.hunts[0].stepsDone, ["apply", "req-1x2"]);
+  assert.deepEqual(h.hunts[0].tasks, [{ id: "t1", label: "Scout", done: true }]);
+  assert.deepEqual(h.hunts[0].customDates, [{ id: "c1", label: "Flights", date: "2027-01-10" }]);
+  // A general/OTC entry has no hunt code or draw year; a draw entry must have both.
+  const otc = agency({ kind: "otc", huntCode: "", drawYear: 0, deadline: null });
+  assert.ok(sanitizePlannerData({ hunts: [hunt({ id: "o1", agency: otc })] })!.hunts[0].agency);
+  assert.equal(sanitizePlannerData({ hunts: [hunt({ id: "d1", state: "", agency: agency({ huntCode: "" }) })] })!.hunts.length, 0);
+});
+
+test("duplicates: general/OTC entries match by state + species + residency + cycle; custom entries never", () => {
+  const otc = (o: Partial<AgencyRef> = {}) => agency({ kind: "otc", huntCode: "", drawYear: 0, deadline: null, planCycle: 2027, ...o });
+  const hunts = [hunt({ id: "o1", species: "elk", agency: otc() })];
+  assert.ok(findAgencyDuplicate(hunts, otc(), "elk"));
+  assert.equal(findAgencyDuplicate(hunts, otc(), "bear"), undefined);
+  assert.equal(findAgencyDuplicate(hunts, otc({ residency: "nonresident" }), "elk"), undefined);
+  assert.equal(findAgencyDuplicate(hunts, otc({ planCycle: 2028 }), "elk"), undefined);
+  assert.equal(findAgencyDuplicate(hunts, agency(), "elk"), undefined);
+  const custom = agency({ kind: "custom", huntCode: "", drawYear: 0 });
+  assert.equal(findAgencyDuplicate([hunt({ id: "c1", agency: custom })], custom), undefined);
+  // Merge keeps two custom entries and collapses two copies of the same OTC entry.
+  const m = mergePlanners(
+    data({ hunts: [hunt({ id: "c1", agency: custom }), hunt({ id: "o1", agency: otc() })] }),
+    data({ hunts: [hunt({ id: "c2", agency: custom }), hunt({ id: "o2", agency: otc() }), hunt({ id: "o3", species: "bear", agency: otc() })] })
+  );
+  assert.deepEqual(m.hunts.map((x) => x.id), ["c1", "o1", "c2", "o3"]);
+  // planCycle (v2) decides the cycle match when present.
+  assert.ok(findAgencyDuplicate([hunt({ id: "a1", agency: agency({ deadline: null, planCycle: 2027 }) })], agency()));
+  assert.equal(findAgencyDuplicate([hunt({ id: "a1", agency: agency({ deadline: null, planCycle: 2028 }) })], agency()), undefined);
+});
+
+test("merge: a refresh elsewhere and a member edit here both survive (the agency block goes by refreshedAt)", () => {
+  // The server refreshed the hunt (new agency block) while this device, offline, edited the notes.
+  const base = hunt({ id: "h1", notes: "", status: "planning", updatedAt: "2026-10-30T10:00:00.000Z", agency: agency({ planCycle: 2027, keyDates: [] }) });
+  const refreshed: PlannedHunt = {
+    ...base,
+    agency: agency({ planCycle: 2027, cyclePublished: true, keyDates: [], refreshedAt: "2026-11-02T00:00:00.000Z" }),
+    applicationDeadline: "2027-04-07",
+  };
+  const edited: PlannedHunt = { ...base, notes: "Camp at the trailhead", status: "applied", updatedAt: "2026-11-01T09:00:00.000Z" };
+  for (const [x, y, prefer] of [
+    [refreshed, edited, "b"],
+    [edited, refreshed, "a"],
+    [refreshed, edited, "a"],
+  ] as const) {
+    const m = mergePlanners(data({ hunts: [x] }), data({ hunts: [y] }), prefer).hunts[0];
+    assert.equal(m.notes, "Camp at the trailhead");
+    assert.equal(m.status, "applied");
+    assert.equal(m.agency!.refreshedAt, "2026-11-02T00:00:00.000Z");
+    assert.equal(m.agency!.cyclePublished, true);
+  }
+});
+
+test("merge: a copy saved by a page from before schema 2 doesn't erase v2 member fields", () => {
+  const v2 = hunt({
+    id: "h1",
+    status: "tag-purchased",
+    updatedAt: "2026-11-01T00:00:00.000Z",
+    tasks: [{ id: "t1", label: "Scout", done: true }],
+    customDates: [{ id: "c1", label: "Flights", date: "2027-01-10" }],
+    stepsDone: ["apply"],
+    drawing: "fall",
+    agency: agency({ keyDates: [], planCycle: 2027 }),
+  });
+  // The old page coerced the unknown status to "planning", dropped the v2 fields and edited the notes later.
+  const stripped: PlannedHunt = { ...v2 };
+  for (const k of ["tasks", "customDates", "stepsDone", "drawing"] as const) delete stripped[k];
+  const old: PlannedHunt = { ...stripped, status: "planning", notes: "edited on the old page", updatedAt: "2026-11-02T00:00:00.000Z", agency: agency() };
+  const m = mergePlanners(data({ hunts: [v2] }), data({ hunts: [old] }), "b").hunts[0];
+  assert.equal(m.notes, "edited on the old page");
+  assert.equal(m.status, "tag-purchased");
+  assert.deepEqual([m.tasks, m.customDates, m.stepsDone, m.drawing], [v2.tasks, v2.customDates, v2.stepsDone, "fall"]);
+  // Same build time, but only one copy has the v2 agency fields: that one is kept.
+  assert.deepEqual(m.agency!.keyDates, []);
 });

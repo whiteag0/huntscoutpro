@@ -76,7 +76,7 @@ const DATA_DIR = path.join(process.cwd(), ".agency-gz");
 
 export type TableKind = "draw" | "harvest";
 
-function hasTable(slug: string, kind: TableKind, species: Species): boolean {
+export function hasTable(slug: string, kind: TableKind, species: Species): boolean {
   return Object.hasOwn(AGENCY_FILES, slug) && AGENCY_FILES[slug][kind].includes(species);
 }
 
