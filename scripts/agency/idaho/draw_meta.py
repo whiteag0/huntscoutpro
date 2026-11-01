@@ -127,7 +127,8 @@ SOURCES = [
         "dataYear": 2026,
         "retrieved": RETRIEVED,
         "notes": "JSON behind the Hunt Planner filter page (type=1, general seasons): 462 deer hunt opportunities, one per unit, tag, "
-                 "weapon, antler class and season. Grouped into seasons[] entries by tag, weapon, antler class and dates.",
+                 "weapon, antler class and season. Grouped into seasons[] entries by the species IDFG lists for the hunt ('White-tailed Deer' -> whitetail, "
+                 "'Mule and White-tailed Deer' -> mule-deer), tag, weapon, antler class and dates.",
     },
     {
         "id": "d-huntlist-general-elk",
@@ -173,6 +174,18 @@ SOURCES = [
                  "season dates. No longer at this URL (HTTP 404 on 2026-10-31); copy from the Internet Archive capture "
                  "web.archive.org/web/20261016001452/https://idfg.idaho.gov/sites/default/files/seasons-rules-upland-game-2024-2025.pdf.",
     },
+    {
+        "id": "d-idapa-13-01-04",
+        "title": "IDAPA 13.01.04 – Rules Governing Licensing (Idaho Administrative Code)",
+        "publisher": PUB,
+        "url": "https://adminrules.idaho.gov/rules/current/13/130104.pdf",
+        "pageUrl": "https://adminrules.idaho.gov/rules/current/13/",
+        "retrieved": RETRIEVED,
+        "notes": "Current rule text (sections 330 and 801 carry effective date 7-1-26). Section 801.05.b fixes the Super Hunt (Special "
+                 "Controlled Hunt Program) application deadlines every year: May 31 for the June drawing and August 10 for the August "
+                 "drawing. Section 330.01 leaves all other controlled hunt application periods, tag claim deadlines and leftover sales to "
+                 "dates the Department publishes.",
+    },
 ]
 
 BG = "d-rules-big-game-2026"
@@ -182,7 +195,7 @@ UPL = "d-rules-upland-2026-27"
 NOT_YET = "2027 dates not yet published by IDFG as of 2026-10-31."
 
 
-def kd(label, cycle, sid, date=None, start=None, end=None, note=None, kind=None, residency=None):
+def kd(label, cycle, sid, date=None, start=None, end=None, note=None, kind=None, residency=None, status="confirmed"):
     d = {"label": label}
     if kind:
         d["kind"] = kind
@@ -192,7 +205,7 @@ def kd(label, cycle, sid, date=None, start=None, end=None, note=None, kind=None,
         d["date"] = date
     if start:
         d["start"], d["end"] = start, end
-    d.update({"cycle": cycle, "status": "confirmed", "sourceId": sid})
+    d.update({"cycle": cycle, "status": status, "sourceId": sid})
     if note:
         d["note"] = note
     return d
@@ -217,6 +230,21 @@ NR_DRAW = [
             "The 2026 Big Game Seasons & Rules (p.57) also says 'Hunting licenses for 2027 will go on sale December 1, 2026.'"),
 ]
 
+IDAPA = "d-idapa-13-01-04"
+SUPER_HUNT = [
+    kd("Super Hunt (Special Controlled Hunt) entry deadline for the June drawing", 2027, IDAPA, date="2027-05-31",
+       kind="application", status="tentative",
+       note="Set by IDAPA 13.01.04.801.05.b (entries received \"by no later than 11:59 pm Mountain time May 31 of the current calendar year will "
+            "be eligible only for the first drawing held in June\"; \"Applications received after August 10 will be eligible for the drawing held in "
+            "June of the following year\"); IDFG hasn't announced the 2027 dates yet. Open to residents and nonresidents, no license needed; the rule "
+            "names no weekend or holiday extension (May 31, 2027 is Memorial Day). The rule does not say when IDFG starts selling 2027 entries, so only the deadline is given. Drawing dates are set in the Commission proclamation."),
+    kd("Super Hunt (Special Controlled Hunt) entries for the August drawing", 2027, IDAPA, start="2027-06-01", end="2027-08-10",
+       kind="application", status="tentative",
+       note="Set by IDAPA 13.01.04.801.05.b (entries \"received after May 31 and by no later than 11:59 pm Mountain time, August 10, of the current "
+            "calendar year will be eligible only for the second drawing held in August\"); IDFG hasn't announced the 2027 dates yet. "
+            "Drawing dates are set in the Commission proclamation."),
+]
+
 GEN_RES_DEER = ("Residents buy general season deer tags over the counter; resident general deer and uncapped elk tags go on sale in early July "
                 "after controlled hunt results are released.")
 NR_DEER_ELK = ("Since the 2026 season, nonresident general season deer and elk tags are issued through the Nonresident Tag Drawing "
@@ -238,8 +266,8 @@ SPECIES = [
                         "five days after capped tags go on sale before buying one.",
         "nonresidentNote": NR_DEER_ELK,
         "otcSummary": "Resident general elk zone tags (capped zones limited, first-come first-served); leftover controlled tags after the second drawing.",
-        "keyDates": DEER_ELK_CONTROLLED + NR_DRAW,
-        "sourceIds": [BG, NRS, "d-odds-elk"],
+        "keyDates": DEER_ELK_CONTROLLED + NR_DRAW + SUPER_HUNT,
+        "sourceIds": [BG, NRS, IDAPA, "d-odds-elk"],
     },
     {
         "species": "mule-deer",
@@ -250,8 +278,8 @@ SPECIES = [
         "residentNote": GEN_RES_DEER,
         "nonresidentNote": NR_DEER_ELK,
         "otcSummary": "Resident general season deer tags; leftover controlled tags after the second drawing.",
-        "keyDates": DEER_ELK_CONTROLLED + NR_DRAW,
-        "sourceIds": [BG, NRS, "d-odds-deer"],
+        "keyDates": DEER_ELK_CONTROLLED + NR_DRAW + SUPER_HUNT,
+        "sourceIds": [BG, NRS, IDAPA, "d-odds-deer"],
     },
     {
         "species": "whitetail",
@@ -262,8 +290,8 @@ SPECIES = [
         "residentNote": GEN_RES_DEER,
         "nonresidentNote": NR_DEER_ELK + " The Nonresident Tag Drawing has separate white-tailed deer hunt codes by unit.",
         "otcSummary": "Resident general season deer tags (white-tailed deer tag options listed in the deer seasons).",
-        "keyDates": DEER_ELK_CONTROLLED + NR_DRAW,
-        "sourceIds": [BG, NRS, "d-odds-deer"],
+        "keyDates": DEER_ELK_CONTROLLED + NR_DRAW + SUPER_HUNT,
+        "sourceIds": [BG, NRS, IDAPA, "d-odds-deer"],
     },
     {
         "species": "pronghorn",
@@ -274,8 +302,8 @@ SPECIES = [
         "pointsMatter": False,
         "nonresidentNote": "Nonresidents get no more than 10% of tags in a controlled hunt (one tag in hunts with 19 or fewer tags).",
         "otcSummary": "None for general seasons; leftover controlled tags go on sale after the second drawing.",
-        "keyDates": DEER_ELK_CONTROLLED,
-        "sourceIds": [BG, "d-odds-pronghorn"],
+        "keyDates": DEER_ELK_CONTROLLED + SUPER_HUNT,
+        "sourceIds": [BG, IDAPA, "d-odds-pronghorn"],
     },
     {
         "species": "moose",
@@ -295,8 +323,8 @@ SPECIES = [
             kd("Successful applicants notified by", 2026, MSG, date="2026-06-10", note=NOT_YET, kind="results"),
             kd("Second drawing application period", 2026, MSG, start="2026-06-15", end="2026-06-25", note=NOT_YET, kind="leftover"),
             kd("Leftover tags from second drawing go on sale", 2026, MSG, date="2026-07-10", note=NOT_YET, kind="leftover"),
-        ],
-        "sourceIds": [MSG, "d-odds-moose"],
+        ] + SUPER_HUNT,
+        "sourceIds": [MSG, IDAPA, "d-odds-moose"],
     },
     {
         "species": "sheep",
@@ -314,6 +342,7 @@ SPECIES = [
             kd("Moose, bighorn sheep and mountain goat application period", 2026, MSG, start="2026-04-01", end="2026-04-30", note=NOT_YET, kind="application"),
             kd("Successful applicants notified by", 2026, MSG, date="2026-06-10", note=NOT_YET, kind="results"),
             kd("Second drawing application period", 2026, MSG, start="2026-06-15", end="2026-06-25", note=NOT_YET, kind="leftover"),
+            kd("Leftover tags from second drawing go on sale", 2026, MSG, date="2026-07-10", note=NOT_YET, kind="leftover"),
         ],
         "sourceIds": [MSG, "d-odds-rm-sheep", "d-odds-ca-sheep"],
     },
@@ -332,6 +361,7 @@ SPECIES = [
             kd("Moose, bighorn sheep and mountain goat application period", 2026, MSG, start="2026-04-01", end="2026-04-30", note=NOT_YET, kind="application"),
             kd("Successful applicants notified by", 2026, MSG, date="2026-06-10", note=NOT_YET, kind="results"),
             kd("Second drawing application period", 2026, MSG, start="2026-06-15", end="2026-06-25", note=NOT_YET, kind="leftover"),
+            kd("Leftover tags from second drawing go on sale", 2026, MSG, date="2026-07-10", note=NOT_YET, kind="leftover"),
         ],
         "sourceIds": [MSG, "d-odds-goat"],
     },
@@ -349,10 +379,15 @@ SPECIES = [
                note="Published for the 2027 spring controlled hunts in the 2026 Big Game Seasons & Rules.", kind="application"),
             kd("Leftover spring black bear controlled hunt tags on sale 10 a.m. MT", 2027, BG, date="2027-04-01", kind="leftover",
                note="The 2026 Big Game Seasons & Rules (valid July 2026 - June 2027) lists 'April 1: Leftover tags for spring bear go on sale at "
-                    "10 a.m. Mountain Time' (p.108) and the 2027 spring controlled hunts (p.72); the year is not printed next to April 1. "
+                    "10 a.m. Mountain Time' (p.108) and the 2027 spring controlled hunts (p.72); the year is not printed next to April 1, but the "
+                    "same brochure's cover gives the spring black bear application period as 'January 15 - February 15, 2027' and its "
+                    "Controlled Hunt Important Dates table puts the spring bear leftover sale (Apr 1) after that period, so the sale is April 1, 2027. "
                     "Spring bear tags have no purchase deadline (bought before hunting)."),
             kd("Fall black bear controlled hunt application period", 2026, BG, start="2026-05-01", end="2026-06-05", note=NOT_YET, kind="application"),
             kd("Deadline to buy drawn fall bear controlled hunt tags", 2026, BG, date="2026-08-01", note=NOT_YET, kind="payment"),
+            kd("Fall black bear controlled hunt second application period", 2026, BG, start="2026-08-05", end="2026-08-15", note=NOT_YET, kind="leftover"),
+            kd("Fall bear second drawing results posted; leftover tags on sale 10 a.m. MT", 2026, BG, date="2026-08-25",
+               note="IDFG: August 25 or next business day. " + NOT_YET, kind="leftover"),
         ],
         "sourceIds": [BG, "d-odds-bear"],
     },

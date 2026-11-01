@@ -108,11 +108,31 @@
      "status": "confirmed",
      "sourceId": "d-nr-supplement-2027",
      "note": "Nonresidents must hold a 2027 hunting license valid for big game to apply in the Nonresident Tag Drawing (supplement p.3). The 2026 Big Game Seasons & Rules (p.57) also says 'Hunting licenses for 2027 will go on sale December 1, 2026.'"
+    },
+    {
+     "label": "Super Hunt (Special Controlled Hunt) entry deadline for the June drawing",
+     "kind": "application",
+     "date": "2027-05-31",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-idapa-13-01-04",
+     "note": "Set by IDAPA 13.01.04.801.05.b (entries received \"by no later than 11:59 pm Mountain time May 31 of the current calendar year will be eligible only for the first drawing held in June\"; \"Applications received after August 10 will be eligible for the drawing held in June of the following year\"); IDFG hasn't announced the 2027 dates yet. Open to residents and nonresidents, no license needed; the rule names no weekend or holiday extension (May 31, 2027 is Memorial Day). The rule does not say when IDFG starts selling 2027 entries, so only the deadline is given. Drawing dates are set in the Commission proclamation."
+    },
+    {
+     "label": "Super Hunt (Special Controlled Hunt) entries for the August drawing",
+     "kind": "application",
+     "start": "2027-06-01",
+     "end": "2027-08-10",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-idapa-13-01-04",
+     "note": "Set by IDAPA 13.01.04.801.05.b (entries \"received after May 31 and by no later than 11:59 pm Mountain time, August 10, of the current calendar year will be eligible only for the second drawing held in August\"); IDFG hasn't announced the 2027 dates yet. Drawing dates are set in the Commission proclamation."
     }
    ],
    "sourceIds": [
     "d-rules-big-game-2026",
     "d-nr-supplement-2027",
+    "d-idapa-13-01-04",
     "d-odds-elk"
    ]
   },
@@ -213,11 +233,31 @@
      "status": "confirmed",
      "sourceId": "d-nr-supplement-2027",
      "note": "Nonresidents must hold a 2027 hunting license valid for big game to apply in the Nonresident Tag Drawing (supplement p.3). The 2026 Big Game Seasons & Rules (p.57) also says 'Hunting licenses for 2027 will go on sale December 1, 2026.'"
+    },
+    {
+     "label": "Super Hunt (Special Controlled Hunt) entry deadline for the June drawing",
+     "kind": "application",
+     "date": "2027-05-31",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-idapa-13-01-04",
+     "note": "Set by IDAPA 13.01.04.801.05.b (entries received \"by no later than 11:59 pm Mountain time May 31 of the current calendar year will be eligible only for the first drawing held in June\"; \"Applications received after August 10 will be eligible for the drawing held in June of the following year\"); IDFG hasn't announced the 2027 dates yet. Open to residents and nonresidents, no license needed; the rule names no weekend or holiday extension (May 31, 2027 is Memorial Day). The rule does not say when IDFG starts selling 2027 entries, so only the deadline is given. Drawing dates are set in the Commission proclamation."
+    },
+    {
+     "label": "Super Hunt (Special Controlled Hunt) entries for the August drawing",
+     "kind": "application",
+     "start": "2027-06-01",
+     "end": "2027-08-10",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-idapa-13-01-04",
+     "note": "Set by IDAPA 13.01.04.801.05.b (entries \"received after May 31 and by no later than 11:59 pm Mountain time, August 10, of the current calendar year will be eligible only for the second drawing held in August\"); IDFG hasn't announced the 2027 dates yet. Drawing dates are set in the Commission proclamation."
     }
    ],
    "sourceIds": [
     "d-rules-big-game-2026",
     "d-nr-supplement-2027",
+    "d-idapa-13-01-04",
     "d-odds-deer"
    ]
   },
@@ -318,11 +358,31 @@
      "status": "confirmed",
      "sourceId": "d-nr-supplement-2027",
      "note": "Nonresidents must hold a 2027 hunting license valid for big game to apply in the Nonresident Tag Drawing (supplement p.3). The 2026 Big Game Seasons & Rules (p.57) also says 'Hunting licenses for 2027 will go on sale December 1, 2026.'"
+    },
+    {
+     "label": "Super Hunt (Special Controlled Hunt) entry deadline for the June drawing",
+     "kind": "application",
+     "date": "2027-05-31",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-idapa-13-01-04",
+     "note": "Set by IDAPA 13.01.04.801.05.b (entries received \"by no later than 11:59 pm Mountain time May 31 of the current calendar year will be eligible only for the first drawing held in June\"; \"Applications received after August 10 will be eligible for the drawing held in June of the following year\"); IDFG hasn't announced the 2027 dates yet. Open to residents and nonresidents, no license needed; the rule names no weekend or holiday extension (May 31, 2027 is Memorial Day). The rule does not say when IDFG starts selling 2027 entries, so only the deadline is given. Drawing dates are set in the Commission proclamation."
+    },
+    {
+     "label": "Super Hunt (Special Controlled Hunt) entries for the August drawing",
+     "kind": "application",
+     "start": "2027-06-01",
+     "end": "2027-08-10",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-idapa-13-01-04",
+     "note": "Set by IDAPA 13.01.04.801.05.b (entries \"received after May 31 and by no later than 11:59 pm Mountain time, August 10, of the current calendar year will be eligible only for the second drawing held in August\"); IDFG hasn't announced the 2027 dates yet. Drawing dates are set in the Commission proclamation."
     }
    ],
    "sourceIds": [
     "d-rules-big-game-2026",
     "d-nr-supplement-2027",
+    "d-idapa-13-01-04",
     "d-odds-deer"
    ]
   },
@@ -372,10 +432,30 @@
      "status": "confirmed",
      "sourceId": "d-rules-big-game-2026",
      "note": "IDFG: August 25 or next business day. 2027 dates not yet published by IDFG as of 2026-10-31."
+    },
+    {
+     "label": "Super Hunt (Special Controlled Hunt) entry deadline for the June drawing",
+     "kind": "application",
+     "date": "2027-05-31",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-idapa-13-01-04",
+     "note": "Set by IDAPA 13.01.04.801.05.b (entries received \"by no later than 11:59 pm Mountain time May 31 of the current calendar year will be eligible only for the first drawing held in June\"; \"Applications received after August 10 will be eligible for the drawing held in June of the following year\"); IDFG hasn't announced the 2027 dates yet. Open to residents and nonresidents, no license needed; the rule names no weekend or holiday extension (May 31, 2027 is Memorial Day). The rule does not say when IDFG starts selling 2027 entries, so only the deadline is given. Drawing dates are set in the Commission proclamation."
+    },
+    {
+     "label": "Super Hunt (Special Controlled Hunt) entries for the August drawing",
+     "kind": "application",
+     "start": "2027-06-01",
+     "end": "2027-08-10",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-idapa-13-01-04",
+     "note": "Set by IDAPA 13.01.04.801.05.b (entries \"received after May 31 and by no later than 11:59 pm Mountain time, August 10, of the current calendar year will be eligible only for the second drawing held in August\"); IDFG hasn't announced the 2027 dates yet. Drawing dates are set in the Commission proclamation."
     }
    ],
    "sourceIds": [
     "d-rules-big-game-2026",
+    "d-idapa-13-01-04",
     "d-odds-pronghorn"
    ]
   },
@@ -426,10 +506,30 @@
      "status": "confirmed",
      "sourceId": "d-rules-msg-2025-26",
      "note": "2027 dates not yet published by IDFG as of 2026-10-31."
+    },
+    {
+     "label": "Super Hunt (Special Controlled Hunt) entry deadline for the June drawing",
+     "kind": "application",
+     "date": "2027-05-31",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-idapa-13-01-04",
+     "note": "Set by IDAPA 13.01.04.801.05.b (entries received \"by no later than 11:59 pm Mountain time May 31 of the current calendar year will be eligible only for the first drawing held in June\"; \"Applications received after August 10 will be eligible for the drawing held in June of the following year\"); IDFG hasn't announced the 2027 dates yet. Open to residents and nonresidents, no license needed; the rule names no weekend or holiday extension (May 31, 2027 is Memorial Day). The rule does not say when IDFG starts selling 2027 entries, so only the deadline is given. Drawing dates are set in the Commission proclamation."
+    },
+    {
+     "label": "Super Hunt (Special Controlled Hunt) entries for the August drawing",
+     "kind": "application",
+     "start": "2027-06-01",
+     "end": "2027-08-10",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-idapa-13-01-04",
+     "note": "Set by IDAPA 13.01.04.801.05.b (entries \"received after May 31 and by no later than 11:59 pm Mountain time, August 10, of the current calendar year will be eligible only for the second drawing held in August\"); IDFG hasn't announced the 2027 dates yet. Drawing dates are set in the Commission proclamation."
     }
    ],
    "sourceIds": [
     "d-rules-msg-2025-26",
+    "d-idapa-13-01-04",
     "d-odds-moose"
    ]
   },
@@ -467,6 +567,15 @@
      "kind": "leftover",
      "start": "2026-06-15",
      "end": "2026-06-25",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-rules-msg-2025-26",
+     "note": "2027 dates not yet published by IDFG as of 2026-10-31."
+    },
+    {
+     "label": "Leftover tags from second drawing go on sale",
+     "kind": "leftover",
+     "date": "2026-07-10",
      "cycle": 2026,
      "status": "confirmed",
      "sourceId": "d-rules-msg-2025-26",
@@ -517,6 +626,15 @@
      "status": "confirmed",
      "sourceId": "d-rules-msg-2025-26",
      "note": "2027 dates not yet published by IDFG as of 2026-10-31."
+    },
+    {
+     "label": "Leftover tags from second drawing go on sale",
+     "kind": "leftover",
+     "date": "2026-07-10",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-rules-msg-2025-26",
+     "note": "2027 dates not yet published by IDFG as of 2026-10-31."
     }
    ],
    "sourceIds": [
@@ -550,7 +668,7 @@
      "cycle": 2027,
      "status": "confirmed",
      "sourceId": "d-rules-big-game-2026",
-     "note": "The 2026 Big Game Seasons & Rules (valid July 2026 - June 2027) lists 'April 1: Leftover tags for spring bear go on sale at 10 a.m. Mountain Time' (p.108) and the 2027 spring controlled hunts (p.72); the year is not printed next to April 1. Spring bear tags have no purchase deadline (bought before hunting)."
+     "note": "The 2026 Big Game Seasons & Rules (valid July 2026 - June 2027) lists 'April 1: Leftover tags for spring bear go on sale at 10 a.m. Mountain Time' (p.108) and the 2027 spring controlled hunts (p.72); the year is not printed next to April 1, but the same brochure's cover gives the spring black bear application period as 'January 15 - February 15, 2027' and its Controlled Hunt Important Dates table puts the spring bear leftover sale (Apr 1) after that period, so the sale is April 1, 2027. Spring bear tags have no purchase deadline (bought before hunting)."
     },
     {
      "label": "Fall black bear controlled hunt application period",
@@ -570,6 +688,25 @@
      "status": "confirmed",
      "sourceId": "d-rules-big-game-2026",
      "note": "2027 dates not yet published by IDFG as of 2026-10-31."
+    },
+    {
+     "label": "Fall black bear controlled hunt second application period",
+     "kind": "leftover",
+     "start": "2026-08-05",
+     "end": "2026-08-15",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-rules-big-game-2026",
+     "note": "2027 dates not yet published by IDFG as of 2026-10-31."
+    },
+    {
+     "label": "Fall bear second drawing results posted; leftover tags on sale 10 a.m. MT",
+     "kind": "leftover",
+     "date": "2026-08-25",
+     "cycle": 2026,
+     "status": "confirmed",
+     "sourceId": "d-rules-big-game-2026",
+     "note": "IDFG: August 25 or next business day. 2027 dates not yet published by IDFG as of 2026-10-31."
     }
    ],
    "sourceIds": [
@@ -1100,18 +1237,6 @@
    "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
    "method": "all",
    "units": [
-    "4A"
-   ],
-   "start": "2026-10-01",
-   "end": "2026-10-31",
-   "year": 2026,
-   "sourceId": "d-huntlist-general-deer"
-  },
-  {
-   "species": "mule-deer",
-   "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
-   "method": "all",
-   "units": [
     "21",
     "21A",
     "28",
@@ -1161,9 +1286,7 @@
    "method": "all",
    "units": [
     "22",
-    "31",
-    "32",
-    "32A"
+    "32"
    ],
    "start": "2026-10-10",
    "end": "2026-10-24",
@@ -1190,13 +1313,6 @@
    "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
    "method": "all",
    "units": [
-    "1",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "9",
     "19A",
     "23",
     "24",
@@ -1209,8 +1325,7 @@
     "46",
     "48",
     "49",
-    "52A",
-    "Unit 2, except Farragut SP"
+    "52A"
    ],
    "start": "2026-10-10",
    "end": "2026-10-31",
@@ -1225,15 +1340,11 @@
     "19A",
     "21",
     "21A",
-    "23",
     "24",
     "25",
     "28",
     "29",
     "30",
-    "33",
-    "34",
-    "35",
     "36",
     "36A",
     "36B",
@@ -1270,37 +1381,6 @@
   },
   {
    "species": "mule-deer",
-   "label": "General Any Weapon deer, Regular Deer Tag: Antlerless",
-   "method": "all",
-   "units": [
-    "4",
-    "7",
-    "9"
-   ],
-   "start": "2026-10-10",
-   "end": "2026-11-09",
-   "year": 2026,
-   "sourceId": "d-huntlist-general-deer"
-  },
-  {
-   "species": "mule-deer",
-   "label": "General Any Weapon deer, Regular Deer Tag: Antlerless",
-   "method": "all",
-   "units": [
-    "1",
-    "3",
-    "4A",
-    "5",
-    "6",
-    "Unit 2, except Farragut SP"
-   ],
-   "start": "2026-10-10",
-   "end": "2026-12-01",
-   "year": 2026,
-   "sourceId": "d-huntlist-general-deer"
-  },
-  {
-   "species": "mule-deer",
    "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
    "method": "all",
    "units": [
@@ -1327,23 +1407,6 @@
    ],
    "start": "2026-11-01",
    "end": "2026-11-14",
-   "year": 2026,
-   "sourceId": "d-huntlist-general-deer"
-  },
-  {
-   "species": "mule-deer",
-   "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
-   "method": "all",
-   "units": [
-    "1",
-    "3",
-    "4A",
-    "5",
-    "6",
-    "Unit 2, except Farragut SP"
-   ],
-   "start": "2026-11-15",
-   "end": "2026-12-01",
    "year": 2026,
    "sourceId": "d-huntlist-general-deer"
   },
@@ -1400,16 +1463,7 @@
    "label": "General Archery deer, Regular Deer Tag: Antlerless",
    "method": "archery",
    "units": [
-    "1",
-    "3",
-    "4",
-    "4A",
-    "5",
-    "6",
-    "7",
-    "9",
-    "22",
-    "Unit 2, except Farragut SP"
+    "22"
    ],
    "start": "2026-08-30",
    "end": "2026-09-30",
@@ -1503,18 +1557,6 @@
   },
   {
    "species": "mule-deer",
-   "label": "General Archery deer, Regular Deer Tag: Antlerless",
-   "method": "archery",
-   "units": [
-    "Unit 2, Farragut SP only"
-   ],
-   "start": "2026-11-01",
-   "end": "2026-12-01",
-   "year": 2026,
-   "sourceId": "d-huntlist-general-deer"
-  },
-  {
-   "species": "mule-deer",
    "label": "General Archery deer, Regular Deer Tag: Antlerless or Antlered",
    "method": "archery",
    "units": [
@@ -1542,24 +1584,6 @@
    "label": "General Archery deer, Regular Deer Tag: Antlerless or Antlered",
    "method": "archery",
    "units": [
-    "60A",
-    "62",
-    "64",
-    "65",
-    "66",
-    "67",
-    "69"
-   ],
-   "start": "2026-11-20",
-   "end": "2026-12-19",
-   "year": 2026,
-   "sourceId": "d-huntlist-general-deer"
-  },
-  {
-   "species": "mule-deer",
-   "label": "General Archery deer, Regular Deer Tag: Antlerless or Antlered",
-   "method": "archery",
-   "units": [
     "28"
    ],
    "start": "2026-12-01",
@@ -1570,26 +1594,6 @@
   {
    "species": "mule-deer",
    "label": "General Archery deer, Regular Deer Tag: Antlered",
-   "method": "archery",
-   "units": [
-    "1",
-    "3",
-    "4",
-    "4A",
-    "5",
-    "6",
-    "7",
-    "9",
-    "Unit 2, except Farragut SP"
-   ],
-   "start": "2026-12-10",
-   "end": "2026-12-24",
-   "year": 2026,
-   "sourceId": "d-huntlist-general-deer"
-  },
-  {
-   "species": "mule-deer",
-   "label": "General Archery deer, Regular Deer Tag: Antlerless",
    "method": "archery",
    "units": [
     "1",
@@ -1647,34 +1651,6 @@
   },
   {
    "species": "mule-deer",
-   "label": "General Muzzleloader deer, Regular Deer Tag: Antlerless",
-   "method": "muzzleloader",
-   "units": [
-    "4",
-    "7",
-    "9"
-   ],
-   "start": "2026-11-10",
-   "end": "2026-12-01",
-   "year": 2026,
-   "sourceId": "d-huntlist-general-deer"
-  },
-  {
-   "species": "mule-deer",
-   "label": "General Muzzleloader deer, Regular Deer Tag: Antlered",
-   "method": "muzzleloader",
-   "units": [
-    "4",
-    "7",
-    "9"
-   ],
-   "start": "2026-11-15",
-   "end": "2026-12-01",
-   "year": 2026,
-   "sourceId": "d-huntlist-general-deer"
-  },
-  {
-   "species": "mule-deer",
    "label": "General Short-Range Weapon deer, Regular Deer Tag: Antlerless or Antlered",
    "method": "other",
    "units": [
@@ -1718,6 +1694,113 @@
    ],
    "start": "2026-10-10",
    "end": "2026-11-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
+   "method": "all",
+   "units": [
+    "4A"
+   ],
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlerless",
+   "method": "all",
+   "units": [
+    "31",
+    "32A"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
+   "method": "all",
+   "units": [
+    "1",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "9",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlerless",
+   "method": "all",
+   "units": [
+    "23",
+    "33",
+    "34",
+    "35"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-31",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlerless",
+   "method": "all",
+   "units": [
+    "4",
+    "7",
+    "9"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-11-09",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlerless",
+   "method": "all",
+   "units": [
+    "1",
+    "3",
+    "4A",
+    "5",
+    "6",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-10-10",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Any Weapon deer, Regular Deer Tag: Antlered",
+   "method": "all",
+   "units": [
+    "1",
+    "3",
+    "4A",
+    "5",
+    "6",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-11-15",
+   "end": "2026-12-01",
    "year": 2026,
    "sourceId": "d-huntlist-general-deer"
   },
@@ -1942,6 +2025,76 @@
   },
   {
    "species": "whitetail",
+   "label": "General Archery deer, Regular Deer Tag: Antlerless",
+   "method": "archery",
+   "units": [
+    "1",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-08-30",
+   "end": "2026-09-30",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Archery deer, Regular Deer Tag: Antlerless",
+   "method": "archery",
+   "units": [
+    "Unit 2, Farragut SP only"
+   ],
+   "start": "2026-11-01",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Archery deer, Regular Deer Tag: Antlerless or Antlered",
+   "method": "archery",
+   "units": [
+    "60A",
+    "62",
+    "64",
+    "65",
+    "66",
+    "67",
+    "69"
+   ],
+   "start": "2026-11-20",
+   "end": "2026-12-19",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Archery deer, Regular Deer Tag: Antlerless",
+   "method": "archery",
+   "units": [
+    "1",
+    "3",
+    "4",
+    "4A",
+    "5",
+    "6",
+    "7",
+    "9",
+    "Unit 2, except Farragut SP"
+   ],
+   "start": "2026-12-10",
+   "end": "2026-12-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
    "label": "General Archery deer, White-tailed Deer Tag: Antlerless",
    "method": "archery",
    "units": [
@@ -2118,6 +2271,34 @@
    ],
    "start": "2026-12-10",
    "end": "2026-12-24",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Muzzleloader deer, Regular Deer Tag: Antlerless",
+   "method": "muzzleloader",
+   "units": [
+    "4",
+    "7",
+    "9"
+   ],
+   "start": "2026-11-10",
+   "end": "2026-12-01",
+   "year": 2026,
+   "sourceId": "d-huntlist-general-deer"
+  },
+  {
+   "species": "whitetail",
+   "label": "General Muzzleloader deer, Regular Deer Tag: Antlered",
+   "method": "muzzleloader",
+   "units": [
+    "4",
+    "7",
+    "9"
+   ],
+   "start": "2026-11-15",
+   "end": "2026-12-01",
    "year": 2026,
    "sourceId": "d-huntlist-general-deer"
   },
@@ -4893,7 +5074,7 @@
    "pageUrl": "https://idfg.idaho.gov/ifwis/huntplanner/filter",
    "dataYear": 2026,
    "retrieved": "2026-10-31",
-   "notes": "JSON behind the Hunt Planner filter page (type=1, general seasons): 462 deer hunt opportunities, one per unit, tag, weapon, antler class and season. Grouped into seasons[] entries by tag, weapon, antler class and dates."
+   "notes": "JSON behind the Hunt Planner filter page (type=1, general seasons): 462 deer hunt opportunities, one per unit, tag, weapon, antler class and season. Grouped into seasons[] entries by the species IDFG lists for the hunt ('White-tailed Deer' -> whitetail, 'Mule and White-tailed Deer' -> mule-deer), tag, weapon, antler class and dates."
   },
   {
    "id": "d-huntlist-general-elk",
@@ -4964,6 +5145,15 @@
    "dataYear": 2024,
    "retrieved": "2026-10-31",
    "notes": "'2024 & 2025 Spring/Fall Controlled Hunts' turkey tables (pp.24-25), one set of dates for both years, used for draw-row season dates. No longer at this URL (HTTP 404 on 2026-10-31); copy from the Internet Archive capture web.archive.org/web/20261016001452/https://idfg.idaho.gov/sites/default/files/seasons-rules-upland-game-2024-2025.pdf."
+  },
+  {
+   "id": "d-idapa-13-01-04",
+   "title": "IDAPA 13.01.04 – Rules Governing Licensing (Idaho Administrative Code)",
+   "publisher": "Idaho Department of Fish and Game",
+   "url": "https://adminrules.idaho.gov/rules/current/13/130104.pdf",
+   "pageUrl": "https://adminrules.idaho.gov/rules/current/13/",
+   "retrieved": "2026-10-31",
+   "notes": "Current rule text (sections 330 and 801 carry effective date 7-1-26). Section 801.05.b fixes the Super Hunt (Special Controlled Hunt Program) application deadlines every year: May 31 for the June drawing and August 10 for the August drawing. Section 330.01 leaves all other controlled hunt application periods, tag claim deadlines and leftover sales to dates the Department publishes."
   }
  ]
 }

@@ -3,7 +3,13 @@
 season dates for controlled hunts the Hunt Planner list does not carry.
 
 Usage (pdfplumber needed for the fill step):
-  python -I seasons_ranges.py <raw_seasons_dir> <repo_root> [--check]
+  python -I seasons_ranges.py <raw_seasons_dir> <repo_root> [--check] [--huntlist=<dir>]
+
+--huntlist=<dir> holds the Hunt Planner controlled-hunt list JSON, one file per game id
+(hl_<game>.json from .../api/1.1/list/?game=<game>&type=2&start=2022-1-1&end=2027-12-31&limit=5000&offset=0).
+With it, each segment of a multi-segment Hunt Planner hunt whose segments differ in weapon gets the agency's
+weapon wording as its label ("Archery", "Any Weapon", "Muzzleloader", "Short-Range Weapons"); without it,
+labels already in the file are kept when the segment dates are unchanged.
 
 <raw_seasons_dir> = agency-raw/idaho/seasons, holding:
   seasons-rules-moose-sheep-goat-2025-26.pdf   (re-downloaded from idfg.idaho.gov 2026-10-31)
@@ -247,6 +253,43 @@ def with_keys(row, updates):
     return out
 
 
+HL_GAMES = {"mule-deer": 1, "whitetail": 1, "elk": 2, "pronghorn": 3, "moose": 6, "sheep": 119, "goat": 8}
+
+
+def load_huntlist(d):
+    """(game, draw year, hunt no) -> {(start, end): {weapon, ...}}. A Hunt Planner row opening in January or
+    February belongs to the previous year's drawing (the January/February "Extra" hunts)."""
+    out = {}
+    if not d:
+        return out
+    for g in set(HL_GAMES.values()):
+        with open(os.path.join(d, f"hl_{g}.json"), encoding="utf-8") as fh:
+            rows = json.load(fh)["rows"]
+        for x in rows:
+            def iso(t):
+                m, dd, y = t.split("/")
+                return f"20{y}-{int(m):02d}-{int(dd):02d}"
+            o, c = iso(x["open"]), iso(x["close"])
+            dy = int(o[:4]) - (1 if int(o[5:7]) <= 2 else 0)
+            out.setdefault((g, dy, x["number"]), {}).setdefault((o, c), set()).add(x["method"])
+    return out
+
+
+def label_segments(rng, segs):
+    """Add the weapon label to each segment when the hunt's segments differ in weapon; None if they can't be matched."""
+    if len(rng) < 2 or not segs:
+        return rng
+    ws = []
+    for g in rng:
+        w = segs.get((g["start"], g["end"]))
+        if not w or len(w) != 1:
+            return None
+        ws.append(next(iter(w)))
+    if len(set(ws)) == 1:
+        return rng
+    return [dict(g, label=w) for g, w in zip(rng, ws)]
+
+
 def dates_source(row):
     n = row.get("note") or ""
     for needle, sid in NOTE_SOURCES:
@@ -262,6 +305,8 @@ def dump(rows):
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     check = "--check" in sys.argv
+    hl_dir = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--huntlist=")), None)
+    huntlist = load_huntlist(hl_dir)
     raw, repo = args
     ddir = os.path.join(repo, "src", "data", "agency", "idaho", "draw")
     msg = load_msg(raw)
@@ -341,6 +386,18 @@ def main():
                     print(f"  UNPARSED {sp} {r['year']} {r['huntCode']}: {sd!r}")
                 else:
                     assert render(rng) == sd, (sd, rng)
+                    old = r.get("seasonRanges") or []
+                    if huntlist and sp in HL_GAMES and len(rng) > 1:
+                        lab = label_segments(rng, huntlist.get((HL_GAMES[sp], r["year"], r["huntCode"])))
+                        if lab is None:
+                            bump(f"unlabeled_{sp}")
+                            print(f"  no weapon match {sp} {r['year']} {r['huntCode']}: {sd!r}")
+                        else:
+                            rng = lab
+                            if any("label" in g for g in rng):
+                                bump(f"labeled_{sp}")
+                    elif [(g["start"], g["end"]) for g in old] == [(g["start"], g["end"]) for g in rng]:
+                        rng = old  # keep labels already in the file
                     upd["seasonRanges"] = rng
                     src = upd.get("seasonSourceId") or r.get("seasonSourceId") or dates_source(r)
                     if src != r["sourceId"]:

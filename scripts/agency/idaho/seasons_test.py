@@ -82,6 +82,17 @@ class Brochure(unittest.TestCase):
         self.assertEqual(list(out2), ["species", "seasonDates", "seasonRanges", "sex", "choice", "sourceId"])
 
 
+class Labels(unittest.TestCase):
+    def test_label_segments(self):
+        rng = [{"start": "2026-08-30", "end": "2026-09-30"}, {"start": "2026-10-10", "end": "2026-12-01"}]
+        segs = {("2026-08-30", "2026-09-30"): {"Archery"}, ("2026-10-10", "2026-12-01"): {"Any Weapon"}}
+        self.assertEqual([g["label"] for g in S.label_segments(rng, segs)], ["Archery", "Any Weapon"])
+        same = {k: {"Muzzleloader"} for k in segs}
+        self.assertEqual(S.label_segments(rng, same), rng)  # one weapon throughout: no labels
+        self.assertIsNone(S.label_segments(rng, {("2026-08-30", "2026-09-30"): {"Archery"}}))  # unmatched segment
+        self.assertEqual(S.label_segments(rng[:1], segs), rng[:1])
+
+
 class General(unittest.TestCase):
     def test_unit_ids(self):
         self.assertEqual(G.unit_ids("Unit 1"), ["1"])
@@ -110,7 +121,11 @@ class DrawFiles(unittest.TestCase):
                 if r.get("seasonDates"):
                     self.assertIn("seasonRanges", r, (f, r["year"], r["huntCode"]))
                     self.assertEqual(S.render(r["seasonRanges"]), r["seasonDates"])
-                    self.assertEqual(S.parse(r["seasonDates"], r["year"]), r["seasonRanges"])
+                    plain = [{"start": g["start"], "end": g["end"]} for g in r["seasonRanges"]]
+                    self.assertEqual(S.parse(r["seasonDates"], r["year"]), plain)
+                    labels = [g.get("label") for g in r["seasonRanges"]]
+                    if any(labels):  # weapon labels only on multi-segment hunts whose segments differ in weapon
+                        self.assertTrue(all(labels) and len(labels) > 1 and len(set(labels)) > 1, (f, r["year"], r["huntCode"]))
                     n += 1
                 else:
                     self.assertNotIn("seasonRanges", r)

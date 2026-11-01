@@ -24,9 +24,19 @@ import sys
 
 # Season-date conflicts between UDWR documents, found by seasons_spotcheck.py (check B). The row keeps the
 # draw-odds system's dates (its sourceId); the note records what the guidebook prints.
+BEAR_JULY = ("Season dates: UDWR's draw-odds system gives the summer harvest-objective segment as July 5-31, 2026 (shown); the 2026 "
+             "Black Bear, Cougar and Furbearer Guidebook harvest-objective hunt table prints July 6-July 31 for this unit. Confirm with UDWR.")
 CONFLICT_NOTES = {
     (2026, "RS6700"): ("Season dates: UDWR's draw-odds system gives Nov. 11-18, 2026 (shown); the 2026 Big Game Application "
                        "Guidebook hunt table prints Nov. 9-Nov. 16 for RS6700. Confirm with UDWR."),
+    # Multiseason bear permits: "All open seasons" incl. the unit's harvest-objective seasons (found by the 2026-10-31 verifier).
+    (2026, "BR7303"): BEAR_JULY,
+    (2026, "BR7305"): BEAR_JULY,
+    (2026, "BR7310"): BEAR_JULY,
+    (2026, "BR7316"): BEAR_JULY,
+    (2026, "BR7320"): BEAR_JULY,
+    (2026, "BR7321"): BEAR_JULY,
+    (2026, "BR7325"): BEAR_JULY,
 }
 
 SEG = re.compile(r"^(\d{4}-\d{2}-\d{2}) to (\d{4}-\d{2}-\d{2})(?: \(([^()]+)\))?$")

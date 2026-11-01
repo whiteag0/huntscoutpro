@@ -57,7 +57,7 @@
      "sourceId": "d-or-regs-2026",
      "start": "2026-07-01",
      "end": "2026-11-30",
-     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application; ODFW preference points page, d-or-points: \"Points can be purchased Dec. 1-May 15 and from July 1-Nov. 30\"). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
     },
     {
      "label": "Leftover controlled tags on sale online (10 a.m. PT)",
@@ -67,6 +67,25 @@
      "sourceId": "d-or-regs-2026",
      "date": "2026-07-01",
      "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Controlled hunt application deadline",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "date": "2027-05-15",
+     "note": "Set by OAR 635-060-0008(2) (\"The application deadline for pronghorn antelope, bighorn sheep, Rocky Mountain goat, deer and elk controlled hunts is May 15, each year.\"; 635-060-0005(5): \"no later than midnight of the deadline dates\"); ODFW hasn't announced the 2027 dates yet. May 15, 2027 is a Saturday; the rule has no weekend shift."
+    },
+    {
+     "label": "Point Saver purchase period (after the draw)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "start": "2027-07-01",
+     "end": "2027-11-30",
+     "note": "Set by OAR 635-060-0023(12)(a) (\"a hunter may purchase one preference point for the current year, for each series (100, 200, 400, 600, and 700) from July 1 through November 30 if they did not apply during the controlled hunt drawing for that series\"); ODFW hasn't announced the 2027 dates yet."
     }
    ],
    "sourceIds": [
@@ -76,7 +95,8 @@
     "d-or-premium",
     "d-or-how-read",
     "d-or-bg-seasons",
-    "d-or-news-2027-regs-adopted"
+    "d-or-news-2027-regs-adopted",
+    "d-or-oar-635-060"
    ]
   },
   {
@@ -125,7 +145,7 @@
      "sourceId": "d-or-regs-2026",
      "start": "2026-07-01",
      "end": "2026-11-30",
-     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application; ODFW preference points page, d-or-points: \"Points can be purchased Dec. 1-May 15 and from July 1-Nov. 30\"). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
     },
     {
      "label": "Leftover controlled tags on sale online (10 a.m. PT)",
@@ -135,6 +155,25 @@
      "sourceId": "d-or-regs-2026",
      "date": "2026-07-01",
      "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Controlled hunt application deadline",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "date": "2027-05-15",
+     "note": "Set by OAR 635-060-0008(2) (\"The application deadline for pronghorn antelope, bighorn sheep, Rocky Mountain goat, deer and elk controlled hunts is May 15, each year.\"; 635-060-0005(5): \"no later than midnight of the deadline dates\"); ODFW hasn't announced the 2027 dates yet. May 15, 2027 is a Saturday; the rule has no weekend shift."
+    },
+    {
+     "label": "Point Saver purchase period (after the draw)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "start": "2027-07-01",
+     "end": "2027-11-30",
+     "note": "Set by OAR 635-060-0023(12)(a) (\"a hunter may purchase one preference point for the current year, for each series (100, 200, 400, 600, and 700) from July 1 through November 30 if they did not apply during the controlled hunt drawing for that series\"); ODFW hasn't announced the 2027 dates yet."
     }
    ],
    "sourceIds": [
@@ -144,7 +183,8 @@
     "d-or-premium",
     "d-or-how-read",
     "d-or-bg-seasons",
-    "d-or-news-2027-regs-adopted"
+    "d-or-news-2027-regs-adopted",
+    "d-or-oar-635-060"
    ]
   },
   {
@@ -193,7 +233,7 @@
      "sourceId": "d-or-regs-2026",
      "start": "2026-07-01",
      "end": "2026-11-30",
-     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application; ODFW preference points page, d-or-points: \"Points can be purchased Dec. 1-May 15 and from July 1-Nov. 30\"). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
     },
     {
      "label": "Leftover controlled tags on sale online (10 a.m. PT)",
@@ -203,13 +243,33 @@
      "sourceId": "d-or-regs-2026",
      "date": "2026-07-01",
      "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Controlled hunt application deadline",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "date": "2027-05-15",
+     "note": "Set by OAR 635-060-0008(2) (\"The application deadline for pronghorn antelope, bighorn sheep, Rocky Mountain goat, deer and elk controlled hunts is May 15, each year.\"; 635-060-0005(5): \"no later than midnight of the deadline dates\"); ODFW hasn't announced the 2027 dates yet. May 15, 2027 is a Saturday; the rule has no weekend shift."
+    },
+    {
+     "label": "Point Saver purchase period (after the draw)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "start": "2027-07-01",
+     "end": "2027-11-30",
+     "note": "Set by OAR 635-060-0023(12)(a) (\"a hunter may purchase one preference point for the current year, for each series (100, 200, 400, 600, and 700) from July 1 through November 30 if they did not apply during the controlled hunt drawing for that series\"); ODFW hasn't announced the 2027 dates yet."
     }
    ],
    "sourceIds": [
     "d-or-regs-2026",
     "d-or-how-apply",
     "d-or-points",
-    "d-or-news-2027-regs-adopted"
+    "d-or-news-2027-regs-adopted",
+    "d-or-oar-635-060"
    ]
   },
   {
@@ -258,7 +318,7 @@
      "sourceId": "d-or-regs-2026",
      "start": "2026-07-01",
      "end": "2026-11-30",
-     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application; ODFW preference points page, d-or-points: \"Points can be purchased Dec. 1-May 15 and from July 1-Nov. 30\"). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
     },
     {
      "label": "Leftover controlled tags on sale online (10 a.m. PT)",
@@ -268,6 +328,25 @@
      "sourceId": "d-or-regs-2026",
      "date": "2026-07-01",
      "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Controlled hunt application deadline",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "date": "2027-05-15",
+     "note": "Set by OAR 635-060-0008(2) (\"The application deadline for pronghorn antelope, bighorn sheep, Rocky Mountain goat, deer and elk controlled hunts is May 15, each year.\"; 635-060-0005(5): \"no later than midnight of the deadline dates\"); ODFW hasn't announced the 2027 dates yet. May 15, 2027 is a Saturday; the rule has no weekend shift."
+    },
+    {
+     "label": "Point Saver purchase period (after the draw)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "start": "2027-07-01",
+     "end": "2027-11-30",
+     "note": "Set by OAR 635-060-0023(12)(a) (\"a hunter may purchase one preference point for the current year, for each series (100, 200, 400, 600, and 700) from July 1 through November 30 if they did not apply during the controlled hunt drawing for that series\"); ODFW hasn't announced the 2027 dates yet."
     }
    ],
    "sourceIds": [
@@ -275,7 +354,8 @@
     "d-or-how-apply",
     "d-or-points",
     "d-or-premium",
-    "d-or-news-2027-regs-adopted"
+    "d-or-news-2027-regs-adopted",
+    "d-or-oar-635-060"
    ]
   },
   {
@@ -333,7 +413,7 @@
      "sourceId": "d-or-regs-2026",
      "start": "2026-07-01",
      "end": "2026-11-30",
-     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+     "note": "ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application; ODFW preference points page, d-or-points: \"Points can be purchased Dec. 1-May 15 and from July 1-Nov. 30\"). 2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
     },
     {
      "label": "General season fall bear tag sale deadline",
@@ -342,6 +422,34 @@
      "status": "confirmed",
      "sourceId": "d-or-regs-2026",
      "date": "2026-10-02"
+    },
+    {
+     "label": "Spring bear controlled hunt application deadline",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "date": "2027-02-10",
+     "note": "Set by OAR 635-060-0008(1) (\"The application deadline for spring black bear controlled hunts is February 10, each year.\"; 635-060-0005(5): \"no later than midnight of the deadline dates\"); ODFW hasn't announced the 2027 dates yet."
+    },
+    {
+     "label": "Spring bear controlled tag sales begin (successful applicants)",
+     "kind": "payment",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "date": "2027-02-20",
+     "note": "Set by OAR 635-060-0009(1) (\"Spring black bear controlled hunts tag sales begin February 20, each year and end at 11:59 pm, Pacific Time, the day before the season start date for which the tag is valid.\"); ODFW hasn't announced the 2027 dates yet. The end date depends on the 2027 season opener, which is not yet published."
+    },
+    {
+     "label": "Point Saver purchase period (after the draw)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "start": "2027-07-01",
+     "end": "2027-11-30",
+     "note": "Set by OAR 635-060-0023(12)(a) (\"a hunter may purchase one preference point for the current year, for each series (100, 200, 400, 600, and 700) from July 1 through November 30 if they did not apply during the controlled hunt drawing for that series\"); ODFW hasn't announced the 2027 dates yet."
     }
    ],
    "sourceIds": [
@@ -350,7 +458,8 @@
     "d-or-points",
     "d-or-how-read",
     "d-or-bg-seasons",
-    "d-or-news-2027-regs-adopted"
+    "d-or-news-2027-regs-adopted",
+    "d-or-oar-635-060"
    ]
   },
   {
@@ -389,12 +498,22 @@
      "sourceId": "d-or-regs-2026",
      "date": "2026-05-25",
      "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Controlled hunt application deadline",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "date": "2027-05-15",
+     "note": "Set by OAR 635-060-0008(2) (\"The application deadline for pronghorn antelope, bighorn sheep, Rocky Mountain goat, deer and elk controlled hunts is May 15, each year.\"; 635-060-0005(5): \"no later than midnight of the deadline dates\"); ODFW hasn't announced the 2027 dates yet. May 15, 2027 is a Saturday; the rule has no weekend shift."
     }
    ],
    "sourceIds": [
     "d-or-regs-2026",
     "d-or-how-apply",
-    "d-or-news-2027-regs-adopted"
+    "d-or-news-2027-regs-adopted",
+    "d-or-oar-635-060"
    ]
   },
   {
@@ -433,12 +552,22 @@
      "sourceId": "d-or-regs-2026",
      "date": "2026-05-25",
      "note": "2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on Sept. 18, 2026; the printed booklet is due in late November 2026."
+    },
+    {
+     "label": "Controlled hunt application deadline",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-or-oar-635-060",
+     "date": "2027-05-15",
+     "note": "Set by OAR 635-060-0008(2) (\"The application deadline for pronghorn antelope, bighorn sheep, Rocky Mountain goat, deer and elk controlled hunts is May 15, each year.\"; 635-060-0005(5): \"no later than midnight of the deadline dates\"); ODFW hasn't announced the 2027 dates yet. May 15, 2027 is a Saturday; the rule has no weekend shift."
     }
    ],
    "sourceIds": [
     "d-or-regs-2026",
     "d-or-how-apply",
-    "d-or-news-2027-regs-adopted"
+    "d-or-news-2027-regs-adopted",
+    "d-or-oar-635-060"
    ]
   },
   {
@@ -1868,6 +1997,14 @@
    "dataYear": 2026,
    "retrieved": "2026-10-31",
    "notes": "Draft proposal; used only for the name of 2025 hunt 916A (Central Cascades)."
+  },
+  {
+   "id": "d-or-oar-635-060",
+   "title": "OAR Chapter 635, Division 60: Game Mammal and Game Bird Controlled Hunt Regulations",
+   "publisher": "Oregon Secretary of State, Oregon Administrative Rules (ODFW rules, chapter 635)",
+   "url": "https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=2952",
+   "retrieved": "2026-10-31",
+   "notes": "Current rules read 2026-10-31: 635-060-0008 Application Deadline Dates (last amended DFW 160-2022, eff. 12/29/2022), 635-060-0009 Successful Applicants (DFW 154-2020, eff. 12/18/2020), 635-060-0023 Modified Preference Point System (DFW 183-2021, eff. 12/30/2021). 635-060-0005(5): applications are due 'no later than midnight of the deadline dates'. The rules set no weekend or holiday shift."
   }
  ]
 }

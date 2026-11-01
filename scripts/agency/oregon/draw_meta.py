@@ -84,17 +84,26 @@ sources += [
     {"id": "d-or-draft-2026-goat", "title": "Proposed 2026 900 Series Rocky Mountain Goat Controlled Tags (DRAFT)", "publisher": ODFW,
      "url": "https://dfw.state.or.us/news/docs/2025/2026%20Rocky%20Mtn%20Goat%20DRAFT.pdf", "dataYear": 2026, "retrieved": RET,
      "notes": "Draft proposal; used only for the name of 2025 hunt 916A (Central Cascades)."},
+    {"id": "d-or-oar-635-060", "title": "OAR Chapter 635, Division 60: Game Mammal and Game Bird Controlled Hunt Regulations",
+     "publisher": "Oregon Secretary of State, Oregon Administrative Rules (ODFW rules, chapter 635)",
+     "url": "https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=2952", "retrieved": RET,
+     "notes": ("Current rules read 2026-10-31: 635-060-0008 Application Deadline Dates (last amended DFW 160-2022, eff. 12/29/2022), "
+               "635-060-0009 Successful Applicants (DFW 154-2020, eff. 12/18/2020), 635-060-0023 Modified Preference Point System "
+               "(DFW 183-2021, eff. 12/30/2021). 635-060-0005(5): applications are due 'no later than midnight of the deadline dates'. "
+               "The rules set no weekend or holiday shift.")},
 ]
+OAR = "d-or-oar-635-060"
+NOTE_OAR = "ODFW hasn't announced the 2027 dates yet."
 
 R26 = "d-or-regs-2026"
 
 
-def kd(label, kind, cycle, src, date=None, start=None, end=None, note=NOTE27, residency=None):
+def kd(label, kind, cycle, src, date=None, start=None, end=None, note=NOTE27, residency=None, status="confirmed"):
     """kind = KeyDateKind (schema.ts); residency only when ODFW limits the date to one residency (none do)."""
     d = {"label": label, "kind": kind}
     if residency:
         d["residency"] = residency
-    d.update({"cycle": cycle, "status": "confirmed", "sourceId": src})
+    d.update({"cycle": cycle, "status": status, "sourceId": src})
     if date:
         d["date"] = date
     else:
@@ -110,8 +119,31 @@ main_dates = [
     kd("Online application changes allowed through", "application-change", 2026, R26, date="2026-05-25"),
 ]
 point_saver = kd("Point Saver purchase period (after the draw)", "points", 2026, R26, start="2026-07-01", end="2026-11-30",
-                 note="ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application). " + NOTE27)
+                 note=("ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application; ODFW preference points page, d-or-points: "
+                       "\"Points can be purchased Dec. 1-May 15 and from July 1-Nov. 30\"). " + NOTE27))
 leftover = kd("Leftover controlled tags on sale online (10 a.m. PT)", "leftover", 2026, R26, date="2026-07-01")
+
+# 2027 dates fixed by standing rule (OAR 635-060, read 2026-10-31). Tentative until ODFW publishes the 2027 booklet.
+# Results (booklet: June 12 in 2026, June 20 in 2022), the change deadline and leftover sales are not fixed by rule, so none are added;
+# 635-060-0009(2) only says other-species tag sales begin "no later than June 20", so no payment date is added for them either.
+app27 = kd("Controlled hunt application deadline", "application", 2027, OAR, date="2027-05-15", status="tentative",
+           note=("Set by OAR 635-060-0008(2) (\"The application deadline for pronghorn antelope, bighorn sheep, Rocky Mountain goat, "
+                 "deer and elk controlled hunts is May 15, each year.\"; 635-060-0005(5): \"no later than midnight of the deadline "
+                 "dates\"); " + NOTE_OAR + " May 15, 2027 is a Saturday; the rule has no weekend shift."))
+point_saver27 = kd("Point Saver purchase period (after the draw)", "points", 2027, OAR, start="2027-07-01", end="2027-11-30",
+                   status="tentative",
+                   note=("Set by OAR 635-060-0023(12)(a) (\"a hunter may purchase one preference point for the current year, for each "
+                         "series (100, 200, 400, 600, and 700) from July 1 through November 30 if they did not apply during the "
+                         "controlled hunt drawing for that series\"); " + NOTE_OAR))
+bear27 = [
+    kd("Spring bear controlled hunt application deadline", "application", 2027, OAR, date="2027-02-10", status="tentative",
+       note=("Set by OAR 635-060-0008(1) (\"The application deadline for spring black bear controlled hunts is February 10, each "
+             "year.\"; 635-060-0005(5): \"no later than midnight of the deadline dates\"); " + NOTE_OAR)),
+    kd("Spring bear controlled tag sales begin (successful applicants)", "payment", 2027, OAR, date="2027-02-20", status="tentative",
+       note=("Set by OAR 635-060-0009(1) (\"Spring black bear controlled hunts tag sales begin February 20, each year and end at "
+             "11:59 pm, Pacific Time, the day before the season start date for which the tag is valid.\"); " + NOTE_OAR +
+             " The end date depends on the 2027 season opener, which is not yet published.")),
+]
 
 NR_DEER_ELK = ("A maximum of 5% of tags in controlled deer, elk and bear hunts can go to nonresidents; nonresidents get no preference "
                "other than their points. Guides and Outfitters Program tags (equal to half the nonresident tags drawn the previous year) reduce "
@@ -128,28 +160,28 @@ species = [
      "otcSummary": "General-season elk tags are sold over the counter: general archery (Aug. 29 - Sept. 27, 2026), West Cascade (Nov. 7-13), Coast 1st (Nov. 14-17) and 2nd (Nov. 21-27) seasons, and the Eastern Oregon Rocky Mountain 2nd season (spike only, listed units, Nov. 7-15). A General Season Antlerless Elk Damage tag is also sold. Premium elk (M series) is a separate random draw for one extra tag per unit. "
                    "For 2027 (adopted Sept. 18, 2026): the any-legal-weapon coast elk spike-only bag limit moves from the second to "
                    "the first period, and antlerless elk are removed from the General Archery Season Tag bag limit in the West Cascades hunt.",
-     "keyDates": main_dates + [point_saver, leftover],
+     "keyDates": main_dates + [point_saver, leftover, app27, point_saver27],
      "sourceIds": [R26, "d-or-how-apply", "d-or-points", "d-or-premium", "d-or-how-read", "d-or-bg-seasons"]},
     {"species": "mule-deer", "displayName": "Deer (mule deer; black-tailed deer in western Oregon)", "drawSystem": "hybrid", "pointsMatter": True,
      "pointName": "preference point", "drawSystemSummary": HYBRID + " Controlled buck deer is the 100 series and antlerless deer the 600 series (separate points for each).",
      "residentNote": "Residents hold at least 95% of tags in each controlled deer hunt. A 600 series antlerless tag can be held in addition to one 100 series (general or controlled) buck tag.",
      "nonresidentNote": NR_DEER_ELK,
      "otcSummary": "Starting in 2026 all Eastern Oregon deer hunting, rifle and archery, is by controlled hunt in Deer Hunt Areas. Over-the-counter general tags remain for Western Oregon (units 10-30): any legal weapon buck season Oct. 3 - Nov. 6, 2026 and general archery from Aug. 29. Premium deer (L series) is a separate random draw.",
-     "keyDates": main_dates + [point_saver, leftover],
+     "keyDates": main_dates + [point_saver, leftover, app27, point_saver27],
      "sourceIds": [R26, "d-or-how-apply", "d-or-points", "d-or-premium", "d-or-how-read", "d-or-bg-seasons"]},
     {"species": "whitetail", "displayName": "White-tailed deer", "drawSystem": "hybrid", "pointsMatter": True,
      "pointName": "preference point", "drawSystemSummary": HYBRID + " White-tailed deer hunts are part of the 100 (buck) and 600 (antlerless) deer series and use the same deer points.",
      "residentNote": "Same deer series rules as other controlled deer hunts.",
      "nonresidentNote": NR_DEER_ELK,
      "otcSummary": "No over-the-counter whitetail-specific tag. White-tailed deer are illegal to harvest in all Western Oregon units except Melrose Unit (23) controlled hunts that list white-tailed deer in the bag limit; Eastern Oregon whitetail hunts are controlled.",
-     "keyDates": main_dates + [point_saver, leftover],
+     "keyDates": main_dates + [point_saver, leftover, app27, point_saver27],
      "sourceIds": [R26, "d-or-how-apply", "d-or-points"]},
     {"species": "pronghorn", "displayName": "Pronghorn antelope", "drawSystem": "hybrid", "pointsMatter": True,
      "pointName": "preference point", "drawSystemSummary": HYBRID + " Controlled pronghorn is the 400 series; one controlled pronghorn tag per person per year through the draw.",
      "residentNote": "Residents hold at least 97% of tags in each controlled pronghorn hunt.",
      "nonresidentNote": "A maximum of 3% of pronghorn tags can go to nonresidents. Nonresidents may apply for Premium pronghorn (N series) with equal odds.",
      "otcSummary": "None. All pronghorn hunting is by controlled hunt; Premium pronghorn (N series) is a separate random draw.",
-     "keyDates": main_dates + [point_saver, leftover],
+     "keyDates": main_dates + [point_saver, leftover, app27, point_saver27],
      "sourceIds": [R26, "d-or-how-apply", "d-or-points", "d-or-premium"]},
     {"species": "bear", "displayName": "Black bear", "drawSystem": "hybrid", "pointsMatter": True,
      "pointName": "preference point", "drawSystemSummary": "Spring black bear (700 series) is a preference-point draw: 75% of tags to first-choice applicants with the most points, 25% at random among the rest of the first-choice applicants. Fall bear is a general season with over-the-counter tags.",
@@ -163,21 +195,21 @@ species = [
          kd("Spring bear controlled tag sale deadline", "payment", 2026, R26, date="2026-03-31"),
          point_saver,
          kd("General season fall bear tag sale deadline", "other", 2026, R26, date="2026-10-02", note=None),
-     ],
+     ] + bear27 + [point_saver27],
      "sourceIds": [R26, "d-or-how-apply", "d-or-points", "d-or-how-read", "d-or-bg-seasons"]},
     {"species": "sheep", "displayName": "Bighorn sheep (California & Rocky Mountain)", "drawSystem": "random", "pointsMatter": False,
      "drawSystemSummary": "500 series: random draw with no preference points. A person may draw only one controlled bighorn ram tag in a lifetime (ewe hunts excluded). No party applications.",
      "residentNote": "Residents receive 90-95% of bighorn tags.",
      "nonresidentNote": "No less than 5% and no more than 10% of all bighorn sheep tags go to nonresidents; most individual hunts have no nonresident tag (see each hunt's tag numbers).",
      "otcSummary": "None. Auction and raffle tags are sold separately (not part of the draw).",
-     "keyDates": main_dates,
+     "keyDates": main_dates + [app27],
      "sourceIds": [R26, "d-or-how-apply"]},
     {"species": "goat", "displayName": "Rocky Mountain goat", "drawSystem": "random", "pointsMatter": False,
      "drawSystemSummary": "900 series: random draw with no preference points. Once-in-a-lifetime tag; online orientation required; no party applications.",
      "residentNote": "Residents receive 90-95% of mountain goat tags.",
      "nonresidentNote": "No less than 5% and no more than 10% of all Rocky Mountain goat tags go to nonresidents; most individual hunts have no nonresident tag.",
      "otcSummary": "None. Auction and raffle tags are sold separately.",
-     "keyDates": main_dates,
+     "keyDates": main_dates + [app27],
      "sourceIds": [R26, "d-or-how-apply"]},
     {"species": "lion", "displayName": "Cougar", "drawSystem": "otc", "pointsMatter": False,
      "drawSystemSummary": "No draw. General Season Cougar tags (and one Additional tag) are sold over the counter; the statewide season runs all year and zones close if their mortality quota is reached.",
@@ -195,10 +227,12 @@ species = [
      "sourceIds": ["d-or-gamebird-2026"]},
 ]
 
-# the 2027-status note in keyDates cites the adoption release
+# the 2027-status note in keyDates cites the adoption release; rule-based 2027 dates cite OAR 635-060
 for _s in species:
     if any(NOTE27 in (d.get("note") or "") for d in _s["keyDates"]) or _s["species"] == "elk":
         _s["sourceIds"].append(REGS27)
+    if any(d["sourceId"] == OAR for d in _s["keyDates"]):
+        _s["sourceIds"].append(OAR)
 
 
 def fee(sp, item, res, amt, note=None, src=R26, year=2026):

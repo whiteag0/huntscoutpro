@@ -775,7 +775,7 @@
           "date": "2027-03-11",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "8 a.m. MDT.",
+          "note": "Sale time not printed for remaining limited-entry permits.",
           "sourceId": "d-turkey-guide-2026-27"
         },
         {
@@ -1385,6 +1385,7 @@
     {
       "species": "elk",
       "label": "General-season private-lands-only any bull elk (Uinta Basin)",
+      "method": "all",
       "units": [
         "Uinta Basin"
       ],

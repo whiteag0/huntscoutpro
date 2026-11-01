@@ -7,7 +7,7 @@ build(raw) reads, from <raw> = agency-raw/idaho/seasons (all fetched 2026-10-31)
   seasons-rules-big-game-2026.pdf     "Black Bear Seasons for Fall 2026 and Spring 2027" (pp.69-71),
                                       "July 2026 - June 2027 Mountain Lion Seasons" (pp.75-76)  -> d-rules-big-game-2026
   wb-seasons-rules-big-game-2025.pdf  "Black Bear Seasons for Fall 2025 and Spring 2026" (spring 2026 only) -> d-rules-big-game-2025
-Deer and elk: one entry per (tag, season type, weapon, antler class, open, close) with the Hunt Planner areas
+Deer and elk: one entry per (species, tag, season type, weapon, antler class, open, close) with the Hunt Planner areas
 listed in `units` ("Unit 1" -> "1"; anything else, e.g. "Portion of Unit 50", kept verbatim).
 Bear: one entry per take-season date range with the units printed for it. Lion: the take season is printed
 as July 1 - June 30 for every unit, so one statewide entry (the script fails if any unit differs).
@@ -79,7 +79,14 @@ def hunt_planner(path, species_for, label_for, sid):
 
 def deer(raw):
     def sp(r):
-        return "whitetail" if r["tag"] == "White-tailed Deer Tag" else "mule-deer"
+        # By the species IDFG lists for the hunt ('game'), not the tag: some Regular Deer Tag seasons (e.g. the
+        # Panhandle Nov 15 - Dec 1 any-weapon season) are white-tailed deer only. Same rule as the controlled hunts:
+        # whitetail = hunts IDFG lists for 'White-tailed Deer' only; mule-deer = 'Mule and White-tailed Deer'.
+        if r["game"] == "White-tailed Deer":
+            return "whitetail"
+        if r["game"] in ("Mule and White-tailed Deer", "Mule Deer"):
+            return "mule-deer"
+        raise SystemExit(f"unexpected deer game {r['game']!r}")
 
     def label(tag, season, method, orn):
         return f"{season} deer, {tag}: {orn}"
