@@ -33,6 +33,7 @@ import {
   type StateListItem,
 } from "@/data/state-list";
 import { markOnboardedLocally } from "@/components/OnboardingGate";
+import { track } from "@/lib/analytics";
 
 const STEPS = [
   { id: "where", title: "Where you hunt", short: "Where", icon: MapPin },
@@ -160,7 +161,7 @@ function TextQuestion({
   onChange: (v: string) => void;
 }) {
   return (
-    <div className="space-y-2">
+    <div className="space-y-2" data-clarity-mask="true">
       <label htmlFor={id} className="block text-base font-semibold text-foreground">
         {label}
       </label>
@@ -313,6 +314,7 @@ export default function WelcomePage() {
     setSave({ kind: "saving" });
     try {
       await post({ preferences: prefs });
+      track("welcome_submit", { action: editing ? "update" : "submit", states: prefs.states.length, species_count: prefs.species.length });
       const first = prefs.states[0] ? stateBySlug(prefs.states[0]) : undefined;
       const to = first ? `/states/${first.slug}` : "/states";
       setSave({ kind: "done", to, label: first ? first.name : "your states" });
@@ -331,6 +333,7 @@ export default function WelcomePage() {
     setSave({ kind: "skipping" });
     try {
       await post({ skip: true });
+      track("welcome_submit", { action: "skip" });
       setSave({ kind: "done", to: "/states", label: "the states" });
       router.push("/states");
     } catch (e) {
@@ -370,7 +373,7 @@ export default function WelcomePage() {
       <CenteredCard>
         <h1 className="text-2xl font-bold mb-2">This page is for Pro members</h1>
         <p className="text-muted-foreground mb-6">
-          We couldn&apos;t find a membership on <span className="text-foreground font-medium">{user.email}</span>. If
+          We couldn&apos;t find a membership on <span className="text-foreground font-medium" data-clarity-mask="true">{user.email}</span>. If
           you&apos;ve already purchased, check that you&apos;re signed in with the Google account you used at checkout.
           Your account page can re-check it for you.
         </p>
@@ -390,7 +393,7 @@ export default function WelcomePage() {
         <div className="mx-auto w-14 h-14 rounded-full bg-green-500/20 flex items-center justify-center mb-5">
           <Check className="w-7 h-7 text-green-500" aria-hidden="true" />
         </div>
-        <h1 className="text-2xl font-bold mb-2" role="status">
+        <h1 className="text-2xl font-bold mb-2" role="status" data-clarity-mask="true">
           {firstName ? `You're all set, ${firstName}.` : "You're all set."}
         </h1>
         <p className="text-muted-foreground mb-6">Taking you to {save.label}…</p>
@@ -436,7 +439,7 @@ export default function WelcomePage() {
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mt-4 mb-2">
             {editing ? "Your hunting profile" : "Let’s tailor HuntScout Pro to your hunts"}
           </h1>
-          <p className="text-muted-foreground text-base sm:text-lg">
+          <p className="text-muted-foreground text-base sm:text-lg" data-clarity-mask="true">
             {editing
               ? "Update your answers anytime. We use them to keep your states, species and units up front."
               : `${firstName ? `Welcome, ${firstName}. ` : ""}A few quick questions, about 2 minutes. Answer what you know and skip the rest.`}

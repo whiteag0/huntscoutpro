@@ -4,6 +4,7 @@ import { useState, Suspense } from "react";
 import { signIn } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
 import { Crosshair, Mail, Lock, AlertCircle } from "lucide-react";
+import { track } from "@/lib/analytics";
 
 function SignInForm() {
   const searchParams = useSearchParams();
@@ -22,6 +23,7 @@ function SignInForm() {
     e.preventDefault();
     setError("");
     setLoading(true);
+    track("sign_in_click", { method: "admin" });
 
     const result = await signIn("credentials", {
       email,
@@ -53,7 +55,10 @@ function SignInForm() {
         <div className="bg-card border border-border rounded-2xl p-6 shadow-lg space-y-5">
           {/* Google sign-in */}
           <button
-            onClick={() => signIn("google", { callbackUrl })}
+            onClick={() => {
+              track("sign_in_click", { method: "google", from: "signin" });
+              signIn("google", { callbackUrl });
+            }}
             className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl border border-border bg-background hover:bg-muted transition-colors font-semibold text-sm cursor-pointer"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -77,7 +82,7 @@ function SignInForm() {
             </summary>
             <div className="pt-4">
             {/* Email/Password form */}
-            <form onSubmit={handleCredentialsLogin} className="space-y-4">
+            <form onSubmit={handleCredentialsLogin} className="space-y-4" data-clarity-mask="true">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">
                   Email

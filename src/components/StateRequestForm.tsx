@@ -8,6 +8,7 @@ import { STATE_LIST } from "@/data/state-list";
 import { COMING_SOON_STATES } from "@/lib/agency-format";
 import { METHOD_OPTIONS } from "@/lib/preferences-schema";
 import { STATE_REQUEST_LIMITS, type StateRequest } from "@/lib/state-request-schema";
+import { track } from "@/lib/analytics";
 
 const SPECIES_IDS = Object.keys(SPECIES_LABELS) as Species[];
 
@@ -119,6 +120,7 @@ export function StateRequestForm({ stateSlug }: { stateSlug?: string }) {
         return;
       }
       setStatus("sent");
+      track("request_state_submit", { state: form.state, species_count: form.species.length, notify: form.notify, signed_in: !!session });
     } catch {
       setMessage("We couldn't reach the server. Check your connection and try again.");
       setStatus("error");
@@ -127,7 +129,7 @@ export function StateRequestForm({ stateSlug }: { stateSlug?: string }) {
 
   if (status === "sent") {
     return (
-      <div className="text-center py-8 px-4">
+      <div className="text-center py-8 px-4" data-clarity-mask="true">
         <CheckCircle2 className="w-12 h-12 text-success mx-auto mb-3" aria-hidden />
         <h3 className="text-xl font-bold text-foreground">Request received</h3>
         <p className="mt-2 text-muted-foreground max-w-md mx-auto">
@@ -139,7 +141,7 @@ export function StateRequestForm({ stateSlug }: { stateSlug?: string }) {
   }
 
   return (
-    <form onSubmit={submit} noValidate className="space-y-5">
+    <form onSubmit={submit} noValidate className="space-y-5" data-clarity-mask="true">
       {/* Honeypot: hidden from people, irresistible to bots. */}
       <div aria-hidden className="absolute -left-[9999px] w-px h-px overflow-hidden">
         <label>

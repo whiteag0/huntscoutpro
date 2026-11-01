@@ -1,0 +1,91 @@
+# Quality gates for every pull request and every push to main. See CONTRIBUTING.md.
+# Uses no secrets: the build gets placeholder values that only let it compile.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Checks (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        # No "engines" in package.json. Node 20 is left out on purpose: it reached end of
+        # life in April 2026, and `npm test` needs --experimental-strip-types (Node 22.6+).
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Validate agency data (every state)
+        shell: bash
+        run: |
+          shopt -s nullglob
+          dirs=(src/data/agency/*/)
+          if [ ${#dirs[@]} -eq 0 ]; then
+            echo "::error::No state directories found under src/data/agency"
+            exit 1
+          fi
+          failed=()
+          for d in "${dirs[@]}"; do
+            state=$(basename "$d")
+            echo "::group::$state"
+            if ! node scripts/agency/validate.mjs "$state"; then failed+=("$state"); fi
+            echo "::endgroup::"
+          done
+          if [ ${#failed[@]} -gt 0 ]; then
+            echo "::error::Agency data validation failed for: ${failed[*]} (open the group above for the errors)"
+            exit 1
+          fi
+          echo "All ${#dirs[@]} states passed validation."
+
+      - name: Type check
+        run: npx tsc --noEmit -p .
+
+      - name: Lint
+        run: npx eslint src
+
+      - name: Tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+          # Placeholders, not secrets. Stripe, Resend and CRON_SECRET are deliberately
+          # unset: the build does not need them.
+          AUTH_SECRET: ci-placeholder-not-a-secret
+          AUTH_URL: http://localhost:3000
+          GOOGLE_CLIENT_ID: ci-placeholder
+          GOOGLE_CLIENT_SECRET: ci-placeholder
+
+      # `npm run build` regenerates these first (prebuild). Vercel does the same, so a
+      # stale copy cannot break production, but local dev and the type check above read
+      # the committed one.
+      - name: Generated agency index is up to date
+        shell: bash
+        run: |
+          if ! git diff --quiet -- src/data/agency/index.generated.ts src/data/agency/live.generated.ts src/data/agency/stats.generated.json; then
+            git diff --stat -- src/data/agency/
+            echo "::warning::src/data/agency/*.generated.* is out of date. Run: node scripts/agency/build-index.mjs and commit the result."
+          fi

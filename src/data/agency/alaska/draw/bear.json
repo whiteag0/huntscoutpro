@@ -1,0 +1,620 @@
+[
+ {
+  "species": "bear",
+  "year": 2026,
+  "huntCode": "DL018",
+  "units": [
+   "1C"
+  ],
+  "description": "Unit 1C, South — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
+  "seasonDates": "2026-2027: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 10,
+   "applicants": 48,
+   "oddsPct": 21
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "bear",
+  "year": 2026,
+  "huntCode": "DL027",
+  "units": [
+   "2"
+  ],
+  "description": "Unit 2 — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
+  "seasonDates": "2026: Sept. 1-Dec. 31",
+  "choice": "all",
+  "total": {
+   "quota": 60,
+   "applicants": 624,
+   "oddsPct": 10
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "bear",
+  "year": 2026,
+  "huntCode": "DL028",
+  "units": [
+   "2"
+  ],
+  "description": "Unit 2 — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
+  "seasonDates": "2027: Jan. 1-June 30",
+  "choice": "all",
+  "total": {
+   "quota": 200,
+   "applicants": 2571,
+   "oddsPct": 8
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "bear",
+  "year": 2026,
+  "huntCode": "DL029",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Kuiu Island — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
+  "seasonDates": "2026-2027: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 40,
+   "applicants": 964,
+   "oddsPct": 4
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "bear",
+  "year": 2026,
+  "huntCode": "DL030",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Kupreanof Island — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
+  "seasonDates": "2026-2027: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 70,
+   "applicants": 446,
+   "oddsPct": 16
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "bear",
+  "year": 2026,
+  "huntCode": "DL455",
+  "units": [
+   "14C"
+  ],
+  "description": "Unit 14C, Joint Base Elmendorf Richardson (JBER) — Certified Shotgun Hunters Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
+  "method": "shotgun",
+  "methodLabel": "Certified Shotgun Hunters Only",
+  "seasonDates": "2026-2027: Sept. 1 thru June 15",
+  "choice": "all",
+  "total": {
+   "quota": 25,
+   "applicants": 1152,
+   "oddsPct": 2
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "bear",
+  "year": 2026,
+  "huntCode": "DL457",
+  "units": [
+   "14C"
+  ],
+  "description": "Unit 14C, McHugh Creek — Certified Shotgun Hunters, Certified Bowhunters, or Certified Muzzleloader Hunters Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 14C, McHugh Creek: all drainages into McHugh Creek, excluding that area within a 1/2 mile of the Seward Hwy or within a 1/4 mile of a developed facility.",
+  "method": "other",
+  "methodLabel": "Certified Shotgun Hunters, Certified Bowhunters, or Certified Muzzleloader Hunters Only",
+  "seasonDates": "2026: Oct. 1-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 3,
+   "applicants": 578,
+   "oddsPct": 1
+  },
+  "sourceId": "d-supp-2027"
+ },
+ {
+  "species": "bear",
+  "year": 2025,
+  "huntCode": "DL018",
+  "units": [
+   "1C"
+  ],
+  "description": "Unit 1C, South — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: that portion of Unit 1C from the south bank of Taku Inlet and the Taku River to the U.S./Canada border, then south to the Unit 1C/1B boundary at Cape Fanshaw.",
+  "seasonDates": "2025-2026: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 10,
+   "applicants": 74,
+   "oddsPct": 14
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "bear",
+  "year": 2025,
+  "huntCode": "DL027",
+  "units": [
+   "2"
+  ],
+  "description": "Unit 2 — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 2 ...",
+  "seasonDates": "2025: Sept. 1-Dec. 31",
+  "choice": "all",
+  "total": {
+   "quota": 55,
+   "applicants": 797,
+   "oddsPct": 7
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "bear",
+  "year": 2025,
+  "huntCode": "DL028",
+  "units": [
+   "2"
+  ],
+  "description": "Unit 2 — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 2 ...",
+  "seasonDates": "2026: Jan. 1-June 30",
+  "choice": "all",
+  "total": {
+   "quota": 190,
+   "applicants": 2072,
+   "oddsPct": 9
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "bear",
+  "year": 2025,
+  "huntCode": "DL029",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Kuiu Island — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 3, Kuiu Island ...",
+  "seasonDates": "2025-2026: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 40,
+   "applicants": 879,
+   "oddsPct": 5
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "bear",
+  "year": 2025,
+  "huntCode": "DL030",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Kupreanof Island — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 3, Kupreanof Island ...",
+  "seasonDates": "2025-2026: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 70,
+   "applicants": 524,
+   "oddsPct": 13
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "bear",
+  "year": 2025,
+  "huntCode": "DL455",
+  "units": [
+   "14C"
+  ],
+  "description": "Unit 14C, Joint Base Elmendorf Richardson (JBER) — Certified Shotgun Hunters Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
+  "method": "shotgun",
+  "methodLabel": "Certified Shotgun Hunters Only",
+  "seasonDates": "2025-2026: Sept. 1 thru June 15",
+  "choice": "all",
+  "total": {
+   "quota": 25,
+   "applicants": 1220,
+   "oddsPct": 2
+  },
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "bear",
+  "year": 2025,
+  "huntCode": "DL457",
+  "units": [
+   "14C"
+  ],
+  "description": "Unit 14C, McHugh Creek — Certified Shotgun Hunters, Certified Bowhunters, or Certified Muzzleloader Hunters Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 14C, McHugh Creek: all drainages into McHugh Creek, excluding that area within a 1/2 mile of the Seward Hwy or within a 1/4 mile of a developed facility.",
+  "method": "other",
+  "methodLabel": "Certified Shotgun Hunters, Certified Bowhunters, or Certified Muzzleloader Hunters Only",
+  "seasonDates": "2025: Oct. 1-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 3,
+   "applicants": 636,
+   "oddsPct": null
+  },
+  "note": "ADF&G published % drawn as \"<1\".",
+  "sourceId": "d-supp-2026"
+ },
+ {
+  "species": "bear",
+  "year": 2024,
+  "huntCode": "DL018",
+  "units": [
+   "1C"
+  ],
+  "description": "Unit 1C, South — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: that portion of Unit 1C from the south bank of Taku Inlet and the Taku River to the U.S./Canada border, then south to the Unit 1C/1B boundary at Cape Fanshaw.",
+  "seasonDates": "2024-2025: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 10,
+   "applicants": 42,
+   "oddsPct": 24
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "bear",
+  "year": 2024,
+  "huntCode": "DL027",
+  "units": [
+   "2"
+  ],
+  "description": "Unit 2 — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 2 ...",
+  "seasonDates": "2024: Sept. 1-Dec. 31",
+  "choice": "all",
+  "total": {
+   "quota": 55,
+   "applicants": 522,
+   "oddsPct": 11
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "bear",
+  "year": 2024,
+  "huntCode": "DL028",
+  "units": [
+   "2"
+  ],
+  "description": "Unit 2 — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 2 ...",
+  "seasonDates": "2025: Jan. 1-June 30",
+  "choice": "all",
+  "total": {
+   "quota": 190,
+   "applicants": 2177,
+   "oddsPct": 9
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "bear",
+  "year": 2024,
+  "huntCode": "DL029",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Kuiu Island — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 3, Kuiu Island ...",
+  "seasonDates": "2024-2025: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 40,
+   "applicants": 789,
+   "oddsPct": 5
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "bear",
+  "year": 2024,
+  "huntCode": "DL030",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Kupreanof Island — Nonresidents Nonguided Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 3, Kupreanof Island ...",
+  "seasonDates": "2024-2025: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 80,
+   "applicants": 498,
+   "oddsPct": 16
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "bear",
+  "year": 2024,
+  "huntCode": "DL455",
+  "units": [
+   "14C"
+  ],
+  "description": "Unit 14C, Joint Base Elmendorf Richardson (JBER) — Certified Shotgun Hunters Only — Legal animal: Any black bear except cubs or females accompanied by cubs",
+  "method": "shotgun",
+  "methodLabel": "Certified Shotgun Hunters Only",
+  "seasonDates": "2024-2025: Sept. 1 thru June 15",
+  "choice": "all",
+  "total": {
+   "quota": 25,
+   "applicants": 1145,
+   "oddsPct": 2
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "bear",
+  "year": 2024,
+  "huntCode": "DL457",
+  "units": [
+   "14C"
+  ],
+  "description": "Unit 14C, McHugh Creek — Certified Shotgun Hunters, Certified Bowhunters, or Certified Muzzleloader Hunters Only — Legal animal: Any black bear except cubs or females accompanied by cubs — Hunt Area: Unit 14C, McHugh Creek: all drainages into McHugh Creek, excluding that area within a 1/2 mile of the Seward Hwy or within a 1/4 mile of a developed facility.",
+  "method": "other",
+  "methodLabel": "Certified Shotgun Hunters, Certified Bowhunters, or Certified Muzzleloader Hunters Only",
+  "seasonDates": "2024: Oct. 1-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 3,
+   "applicants": 553,
+   "oddsPct": 1
+  },
+  "sourceId": "d-supp-2025"
+ },
+ {
+  "species": "bear",
+  "year": 2023,
+  "huntCode": "DL018",
+  "units": [
+   "1C"
+  ],
+  "description": "Unit 1C, South — Nonresidents Nonguided Only — Hunt Area: that portion of Unit 1C from the south bank of Taku Inlet and the Taku River to the U.S./Canada border, then south to the Unit 1C/1B boundary at Cape Fanshaw.",
+  "seasonDates": "2023-2024: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 10,
+   "applicants": 45,
+   "oddsPct": 22
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "bear",
+  "year": 2023,
+  "huntCode": "DL027",
+  "units": [
+   "2"
+  ],
+  "description": "Unit 2 — Nonresidents Nonguided Only — Hunt Area: Unit 2 ...",
+  "seasonDates": "2023: Sept. 1-Dec. 31",
+  "choice": "all",
+  "total": {
+   "quota": 55,
+   "applicants": 511,
+   "oddsPct": 11
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "bear",
+  "year": 2023,
+  "huntCode": "DL028",
+  "units": [
+   "2"
+  ],
+  "description": "Unit 2 — Nonresidents Nonguided Only — Hunt Area: Unit 2 ...",
+  "seasonDates": "2024: Jan. 1-June 30",
+  "choice": "all",
+  "total": {
+   "quota": 190,
+   "applicants": 1993,
+   "oddsPct": 10
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "bear",
+  "year": 2023,
+  "huntCode": "DL029",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Kuiu Island — Nonresidents Nonguided Only — Hunt Area: Unit 3, Kuiu Island ...",
+  "seasonDates": "2023-2024: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 40,
+   "applicants": 529,
+   "oddsPct": 8
+  },
+  "note": "The 2023-2024 supplement advertised 50 permits; the results table lists 40 permits available.",
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "bear",
+  "year": 2023,
+  "huntCode": "DL030",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Kupreanof Island — Nonresidents Nonguided Only — Hunt Area: Unit 3, Kupreanof Island ...",
+  "seasonDates": "2023-2024: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 80,
+   "applicants": 607,
+   "oddsPct": 13
+  },
+  "note": "The 2023-2024 supplement advertised 100 permits; the results table lists 80 permits available.",
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "bear",
+  "year": 2023,
+  "huntCode": "DL455",
+  "units": [
+   "14C"
+  ],
+  "description": "Unit 14C, Joint Base Elmendorf Richardson (JBER) — Certified Shotgun Hunters Only",
+  "method": "shotgun",
+  "methodLabel": "Certified Shotgun Hunters Only",
+  "seasonDates": "2023-2024: Sept. 1 thru June 15",
+  "choice": "all",
+  "total": {
+   "quota": 25,
+   "applicants": 1080,
+   "oddsPct": 2
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "bear",
+  "year": 2023,
+  "huntCode": "DL457",
+  "units": [
+   "14C"
+  ],
+  "description": "Unit 14C, McHugh Creek — Certified Shotgun Hunters or Certified Muzzleloader Hunters Only — Hunt Area: Unit 14C, McHugh Creek: all drainages into McHugh Creek, excluding that area within a 1/2 mile of the Seward Hwy or within a 1/2 mile of a developed facility.",
+  "method": "other",
+  "methodLabel": "Certified Shotgun Hunters or Certified Muzzleloader Hunters Only",
+  "seasonDates": "2023: Oct. 1-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 3,
+   "applicants": 307,
+   "oddsPct": 1
+  },
+  "sourceId": "d-supp-2024"
+ },
+ {
+  "species": "bear",
+  "year": 2022,
+  "huntCode": "DL018",
+  "units": [
+   "1C"
+  ],
+  "description": "Unit 1C, South — Nonresidents Nonguided Only — Hunt Area: that portion of Unit 1C from the south bank of Taku Inlet and the Taku River to the U.S./Canada border, then south to the Unit 1C/1B boundary at Cape Fanshaw.",
+  "seasonDates": "2022-2023: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 10,
+   "applicants": 65,
+   "oddsPct": 15
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "bear",
+  "year": 2022,
+  "huntCode": "DL027",
+  "units": [
+   "2"
+  ],
+  "description": "Unit 2 — Nonresidents Nonguided Only — Hunt Area: Unit 2 ...",
+  "seasonDates": "2022: Sept. 1-Dec. 31",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 610,
+   "oddsPct": 8
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "bear",
+  "year": 2022,
+  "huntCode": "DL028",
+  "units": [
+   "2"
+  ],
+  "description": "Unit 2 — Nonresidents Nonguided Only — Hunt Area: Unit 2 ...",
+  "seasonDates": "2023: Jan. 1-June 30",
+  "choice": "all",
+  "total": {
+   "quota": 180,
+   "applicants": 1682,
+   "oddsPct": 11
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "bear",
+  "year": 2022,
+  "huntCode": "DL029",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Kuiu Island — Nonresidents Nonguided Only — Hunt Area: Unit 3, Kuiu Island ...",
+  "seasonDates": "2022-2023: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 50,
+   "applicants": 627,
+   "oddsPct": 8
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "bear",
+  "year": 2022,
+  "huntCode": "DL030",
+  "units": [
+   "3"
+  ],
+  "description": "Unit 3, Kupreanof Island — Nonresidents Nonguided Only — Hunt Area: Unit 3, Kupreanof Island ...",
+  "seasonDates": "2022-2023: Sept. 1 thru June 30",
+  "choice": "all",
+  "total": {
+   "quota": 100,
+   "applicants": 539,
+   "oddsPct": 19
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "bear",
+  "year": 2022,
+  "huntCode": "DL455",
+  "units": [
+   "14C"
+  ],
+  "description": "Unit 14C, Joint Base Elmendorf Richardson (JBER) — Certified Shotgun Hunters Only",
+  "method": "shotgun",
+  "methodLabel": "Certified Shotgun Hunters Only",
+  "seasonDates": "2022-2023: Sept. 1 thru June 15",
+  "choice": "all",
+  "total": {
+   "quota": 25,
+   "applicants": 1040,
+   "oddsPct": 2
+  },
+  "sourceId": "d-supp-2023"
+ },
+ {
+  "species": "bear",
+  "year": 2022,
+  "huntCode": "DL457",
+  "units": [
+   "14C"
+  ],
+  "description": "Unit 14C, McHugh Creek — Certified Shotgun Hunters or Certified Muzzleloader Hunters Only — Hunt Area: Unit 14C, McHugh Creek: all drainages into McHugh Creek, excluding that area within a 1/2 mile of the Seward Hwy or within a 1/2 mile of a developed facility.",
+  "method": "other",
+  "methodLabel": "Certified Shotgun Hunters or Certified Muzzleloader Hunters Only",
+  "seasonDates": "2022: Oct. 1-Oct. 31",
+  "choice": "all",
+  "total": {
+   "quota": 3,
+   "applicants": 255,
+   "oddsPct": 1
+  },
+  "sourceId": "d-supp-2023"
+ }
+]

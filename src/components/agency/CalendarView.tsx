@@ -6,6 +6,7 @@ import { CalendarDays, ExternalLink } from "lucide-react";
 import { SPECIES_LABELS, type Species } from "@/data/types";
 import { formatDate, todayIso } from "@/lib/agency-format";
 import { pill } from "@/components/agency/mobile";
+import { track } from "@/lib/analytics";
 
 export interface CalendarItem {
   kind: "date" | "season";
@@ -64,16 +65,16 @@ export function CalendarView({ items, states }: { items: CalendarItem[]; states:
 
       <div className="mt-6 bg-card border border-border rounded-xl p-3 sm:p-4 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-end sm:gap-4">
         <div className="col-span-2 grid grid-cols-2 gap-1 sm:flex">
-          <button className={pill(kind === "date")} onClick={() => setKind("date")}>
+          <button className={pill(kind === "date")} onClick={() => { setKind("date"); track("calendar_filter", { filter: "kind", value: "date" }); }}>
             Application dates
           </button>
-          <button className={pill(kind === "season")} onClick={() => setKind("season")}>
+          <button className={pill(kind === "season")} onClick={() => { setKind("season"); track("calendar_filter", { filter: "kind", value: "season" }); }}>
             Seasons
           </button>
         </div>
         <label className="text-sm">
           <span className="block text-xs font-semibold text-muted-foreground mb-1">State</span>
-          <select className="w-full sm:w-auto min-h-10 sm:min-h-0 px-2 py-1.5 border border-border rounded-lg bg-background text-base sm:text-sm" value={state} onChange={(e) => setState(e.target.value)}>
+          <select className="w-full sm:w-auto min-h-10 sm:min-h-0 px-2 py-1.5 border border-border rounded-lg bg-background text-base sm:text-sm" value={state} onChange={(e) => { setState(e.target.value); track("calendar_filter", { filter: "state", value: e.target.value }); }}>
             <option value="all">All states</option>
             {states.map((s) => (
               <option key={s.slug} value={s.slug}>
@@ -84,7 +85,7 @@ export function CalendarView({ items, states }: { items: CalendarItem[]; states:
         </label>
         <label className="text-sm">
           <span className="block text-xs font-semibold text-muted-foreground mb-1">Species</span>
-          <select className="w-full sm:w-auto min-h-10 sm:min-h-0 px-2 py-1.5 border border-border rounded-lg bg-background text-base sm:text-sm" value={species} onChange={(e) => setSpecies(e.target.value as Species | "all")}>
+          <select className="w-full sm:w-auto min-h-10 sm:min-h-0 px-2 py-1.5 border border-border rounded-lg bg-background text-base sm:text-sm" value={species} onChange={(e) => { setSpecies(e.target.value as Species | "all"); track("calendar_filter", { filter: "species", value: e.target.value }); }}>
             <option value="all">All species</option>
             {speciesInData.map((s) => (
               <option key={s} value={s}>
@@ -94,7 +95,7 @@ export function CalendarView({ items, states }: { items: CalendarItem[]; states:
           </select>
         </label>
         <label className="col-span-2 text-sm inline-flex min-h-10 sm:min-h-0 items-center gap-2 cursor-pointer">
-          <input type="checkbox" checked={showPast} onChange={(e) => setShowPast(e.target.checked)} className="h-4 w-4 accent-[var(--primary)]" />
+          <input type="checkbox" checked={showPast} onChange={(e) => { setShowPast(e.target.checked); track("calendar_filter", { filter: "show_past", value: e.target.checked }); }} className="h-4 w-4 accent-[var(--primary)]" />
           Show past dates
         </label>
       </div>

@@ -1,0 +1,176 @@
+# Daily check that www.huntscoutpro.com is up and its key routes answer the way they should.
+# Keeps ONE issue, "Site health check failing" (label site-health): opens or comments on it
+# when a check fails, and closes it on the next green run. See CONTRIBUTING.md.
+name: Site health
+
+on:
+  schedule:
+    - cron: "30 13 * * *" # daily 13:30 UTC (6:30/7:30 am in Colorado), before the 14:00 UTC reminder cron
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+concurrency:
+  group: site-health
+  cancel-in-progress: false
+
+env:
+  BASE_URL: https://www.huntscoutpro.com
+  ISSUE_TITLE: Site health check failing
+  ISSUE_LABEL: site-health
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check production URLs
+        id: check
+        shell: bash
+        run: |
+          set -uo pipefail
+          base="${BASE_URL%/}"
+          tmp="${RUNNER_TEMP:-/tmp}"
+          body="$tmp/site-health-body"
+          report="$tmp/site-health-report.md"
+          total=0
+          failed=0
+          rows=""
+
+          # probe METHOD PATH [extra curl args...]: sets $code (000 = no HTTP response).
+          # curl retries timeouts, refused connections, 408, 429 and 5xx up to twice (at most
+          # ~85 s per check), so a total outage still finishes well inside the job timeout.
+          probe() {
+            local method=$1 path=$2
+            shift 2
+            : > "$body"
+            code=$(curl -sS -o "$body" -w '%{http_code}' -X "$method" "$@" \
+              -A "HuntScout-site-health (GitHub Actions)" \
+              --connect-timeout 10 --max-time 25 --retry 2 --retry-delay 5 --retry-max-time 60 --retry-connrefused \
+              "$base$path" 2>"$tmp/site-health-curl-err") || true
+            code=${code:-000}
+          }
+          record() { # NAME EXPECTED OK(0/1) DETAIL
+            total=$((total + 1))
+            if [ "$3" = 0 ]; then
+              rows+="| \`$1\` | $2 | $4 | pass |"$'\n'
+            else
+              failed=$((failed + 1))
+              rows+="| \`$1\` | $2 | $4 | **FAIL** |"$'\n'
+              echo "::error::$1: expected $2, got $4"
+            fi
+          }
+          got() { # what came back, for the report
+            if [ "$code" = 000 ]; then
+              printf 'no response (%s)' "$(tail -n 1 "$tmp/site-health-curl-err" | head -c 150 | tr '|' ' ')"
+            else
+              printf 'HTTP %s' "$code"
+            fi
+          }
+
+          # Pages: 200 and the HTML actually names the site (catches blank or error pages served as 200).
+          for path in / /states /states/colorado /states/idaho /shortlist /calendar /pricing; do
+            probe GET "$path"
+            if [ "$code" = 200 ] && grep -q "HuntScout" "$body"; then
+              record "GET $path" "200, page names HuntScout" 0 "HTTP 200"
+            elif [ "$code" = 200 ]; then
+              record "GET $path" "200, page names HuntScout" 1 "HTTP 200 but no \"HuntScout\" in the page"
+            else
+              record "GET $path" "200, page names HuntScout" 1 "$(got)"
+            fi
+          done
+
+          # Agency data API, signed out: a preview object with at least one official row.
+          path="/api/agency/colorado/elk?kind=draw"
+          probe GET "$path"
+          if [ "$code" = 200 ] && jq -e '.preview == true and (.rows | length) > 0 and .total > 0' "$body" > /dev/null 2>&1; then
+            record "GET $path" "200, preview JSON with rows" 0 "HTTP 200, $(jq -r '"\(.rows | length) preview rows of \(.total)"' "$body")"
+          elif [ "$code" = 200 ]; then
+            record "GET $path" "200, preview JSON with rows" 1 "HTTP 200 but not a preview with rows: $(head -c 120 "$body" | tr '\n|' '  ')"
+          else
+            record "GET $path" "200, preview JSON with rows" 1 "$(got)"
+          fi
+
+          # Reminder cron without credentials must be refused. 500 means CRON_SECRET is missing in Vercel.
+          path="/api/cron/deadline-reminders"
+          probe GET "$path"
+          case "$code" in
+            401) record "GET $path (no auth)" 401 0 "HTTP 401" ;;
+            500) record "GET $path (no auth)" 401 1 "HTTP 500: CRON_SECRET is probably not set in Vercel" ;;
+            *)   record "GET $path (no auth)" 401 1 "$(got)" ;;
+          esac
+
+          # Stripe webhook with a bad signature must be rejected. 503 means Stripe keys are missing in Vercel.
+          path="/api/webhook"
+          probe POST "$path" -H "Content-Type: application/json" -H "Stripe-Signature: t=0,v1=site-health-check" --data '{}'
+          case "$code" in
+            400) record "POST $path (bad signature)" 400 0 "HTTP 400" ;;
+            503) record "POST $path (bad signature)" 400 1 "HTTP 503: STRIPE_SECRET_KEY or STRIPE_WEBHOOK_SECRET is probably not set in Vercel" ;;
+            *)   record "POST $path (bad signature)" 400 1 "$(got)" ;;
+          esac
+
+          {
+            if [ "$failed" -eq 0 ]; then
+              echo "### Site health: all $total checks passed"
+            else
+              echo "### Site health: $failed of $total checks failed"
+            fi
+            echo
+            echo "Base URL: $base · checked $(date -u '+%Y-%m-%d %H:%M UTC')"
+            echo
+            echo "| Check | Expected | Got | Result |"
+            echo "|---|---|---|---|"
+            printf '%s' "$rows"
+          } > "$report"
+          cat "$report"
+          cat "$report" >> "${GITHUB_STEP_SUMMARY:-/dev/null}"
+          {
+            echo "failed=$failed"
+            echo "total=$total"
+            echo "report=$report"
+          } >> "${GITHUB_OUTPUT:-/dev/null}"
+
+      - name: Open, update or close the "Site health check failing" issue
+        if: always() && steps.check.outputs.failed != ''
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          FAILED: ${{ steps.check.outputs.failed }}
+          TOTAL: ${{ steps.check.outputs.total }}
+          REPORT: ${{ steps.check.outputs.report }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          # Exact-title match over open issues (the search index can lag behind a just-opened issue).
+          number=$(gh issue list --state open --limit 200 --json number,title \
+            --jq "[.[] | select(.title == \"$ISSUE_TITLE\")][0].number // empty")
+          if [ "$FAILED" != 0 ]; then
+            gh label create "$ISSUE_LABEL" --color D93F0B \
+              --description "Production site health check is failing" 2>/dev/null || true
+            msg="$RUNNER_TEMP/site-health-issue.md"
+            {
+              echo "**$FAILED of $TOTAL production checks failed.** [Workflow run]($RUN_URL)"
+              echo
+              tail -n +3 "$REPORT"
+              echo
+              echo "This issue closes itself on the next run where every check passes. To re-check now: Actions → Site health → Run workflow."
+            } > "$msg"
+            if [ -n "$number" ]; then
+              gh issue comment "$number" --body-file "$msg"
+            else
+              gh issue create --title "$ISSUE_TITLE" --label "$ISSUE_LABEL" --body-file "$msg"
+            fi
+          elif [ -n "$number" ]; then
+            gh issue close "$number" --reason completed \
+              --comment "All $TOTAL production checks passed again. [Workflow run]($RUN_URL)"
+          else
+            echo "All checks passed and no issue is open: nothing to do."
+          fi
+
+      - name: Fail the run when a check failed
+        if: always() && steps.check.outputs.failed != '0'
+        run: |
+          echo "::error::${{ steps.check.outputs.failed || 'unknown number of' }} site health check(s) failed. See the job summary."
+          exit 1

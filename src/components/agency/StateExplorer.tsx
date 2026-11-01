@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { BadgeCheck, Loader2, Search } from "lucide-react";
 import { SPECIES_LABELS, type Species } from "@/data/types";
@@ -15,6 +15,7 @@ import { HarvestTable } from "@/components/agency/HarvestTable";
 import { SpeciesInfoPanel } from "@/components/agency/SpeciesInfoPanel";
 import { SourceNotes, footnoteIndex } from "@/components/agency/SourceNotes";
 import { HScroll, ShowMore, pill } from "@/components/agency/mobile";
+import { setSpecies as tagSpecies, setStateSlug, track } from "@/lib/analytics";
 
 type Tab = "draw" | "harvest";
 
@@ -25,6 +26,14 @@ export function StateExplorer({ state, species: speciesList, initialSpecies }: {
   const [species, setSpecies] = useState<Species>(speciesList.some((s) => s.species === initial) ? initial : speciesList[0]?.species);
   const info = speciesList.find((s) => s.species === species)!;
   const { data, error, loading } = useSpeciesData(state.slug, species);
+
+  useEffect(() => {
+    setStateSlug(state.slug);
+    track("state_view", { state: state.slug });
+  }, [state.slug]);
+  useEffect(() => {
+    tagSpecies(species);
+  }, [species]);
 
   const [tabChoice, setTab] = useState<Tab>("draw");
   const [residency, setResidency] = useState<DrawResidency>("resident");
@@ -37,6 +46,7 @@ export function StateExplorer({ state, species: speciesList, initialSpecies }: {
 
   const chooseSpecies = (s: Species) => {
     setSpecies(s);
+    track("species_select", { state: state.slug, species: s });
     setDrawYear(null);
     setHarvestYear(null);
     setMethod("");
@@ -147,11 +157,11 @@ export function StateExplorer({ state, species: speciesList, initialSpecies }: {
       />
 
       <div className="grid grid-cols-2 gap-2 mb-4 sm:flex sm:flex-wrap sm:items-center" role="tablist" aria-label="Data type">
-        <button role="tab" aria-selected={tab === "draw"} className={`${pill(tab === "draw")} flex-col sm:flex-row sm:gap-1 text-center disabled:opacity-50 disabled:cursor-not-allowed`} onClick={() => setTab("draw")} disabled={!!data && data.totals.drawRows === 0}>
+        <button role="tab" aria-selected={tab === "draw"} className={`${pill(tab === "draw")} flex-col sm:flex-row sm:gap-1 text-center disabled:opacity-50 disabled:cursor-not-allowed`} onClick={() => { setTab("draw"); track("data_tab", { tab: "draw", state: state.slug, species }); }} disabled={!!data && data.totals.drawRows === 0}>
           Draw results{" "}
           {data && <span className="block sm:inline text-xs sm:text-sm opacity-80">({data.totals.drawRows ? yrsLabel(years(data.draw).length) : "none"})</span>}
         </button>
-        <button role="tab" aria-selected={tab === "harvest"} className={`${pill(tab === "harvest")} flex-col sm:flex-row sm:gap-1 text-center disabled:opacity-50 disabled:cursor-not-allowed`} onClick={() => setTab("harvest")} disabled={!!data && data.totals.harvestRows === 0}>
+        <button role="tab" aria-selected={tab === "harvest"} className={`${pill(tab === "harvest")} flex-col sm:flex-row sm:gap-1 text-center disabled:opacity-50 disabled:cursor-not-allowed`} onClick={() => { setTab("harvest"); track("data_tab", { tab: "harvest", state: state.slug, species }); }} disabled={!!data && data.totals.harvestRows === 0}>
           Harvest by {state.unitTerm}{" "}
           {data && <span className="block sm:inline text-xs sm:text-sm opacity-80">({data.totals.harvestRows ? yrsLabel(years(data.harvest).length) : "none"})</span>}
         </button>

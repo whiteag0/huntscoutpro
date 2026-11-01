@@ -12,7 +12,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "States | HuntScout Pro",
-  description: "Official draw results and harvest data for 12 western draw states, straight from state wildlife agency reports.",
+  description: `Official draw results and harvest data for ${LIVE_STATE_SLUGS.length} western draw states, straight from state wildlife agency reports.`,
 };
 
 const HERO_BG = "https://images.unsplash.com/photo-1641113994135-a9f230b1f9b0?w=2400&q=80";

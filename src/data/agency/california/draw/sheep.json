@@ -1,0 +1,980 @@
+[
+ {
+  "species": "sheep",
+  "year": 2022,
+  "huntCode": "501",
+  "units": [
+   "Zone 1"
+  ],
+  "description": "Zone 1 - Marble/Clipper Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 5,
+   "applicants": 2739
+  },
+  "note": "Quota split: 4 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 20: 294, 19: 104, 18: 62, 17: 65, 16: 71, 15: 72, 14: 58, 13: 67, 12: 70, 11: 63, 10: 77, 9: 91, 8: 92, 7: 110, 6: 120, 5: 148, 4: 169, 3: 183, 2: 217, 1: 251, 0: 355.",
+  "sourceId": "d-stats-sheep-all-hunts-2022"
+ },
+ {
+  "species": "sheep",
+  "year": 2022,
+  "huntCode": "502",
+  "units": [
+   "Zone 2"
+  ],
+  "description": "Zone 2 - Old Dad and Kelso Peak Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 1119
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 20: 85, 19: 61, 18: 40, 17: 50, 16: 42, 15: 30, 14: 41, 13: 39, 12: 36, 11: 31, 10: 35, 9: 42, 8: 37, 7: 40, 6: 34, 5: 44, 4: 31, 3: 68, 2: 79, 1: 86, 0: 168.",
+  "sourceId": "d-stats-sheep-all-hunts-2022"
+ },
+ {
+  "species": "sheep",
+  "year": 2022,
+  "huntCode": "503",
+  "units": [
+   "Zone 3"
+  ],
+  "description": "Zone 3 - Clark and Kingston Mountain Ranges - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 4,
+   "applicants": 1308
+  },
+  "note": "Quota split: 3 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 20: 191, 19: 73, 18: 37, 17: 48, 16: 32, 15: 36, 14: 31, 13: 29, 12: 37, 11: 44, 10: 32, 9: 50, 8: 39, 7: 39, 6: 43, 5: 51, 4: 70, 3: 77, 2: 85, 1: 99, 0: 165.",
+  "sourceId": "d-stats-sheep-all-hunts-2022"
+ },
+ {
+  "species": "sheep",
+  "year": 2022,
+  "huntCode": "504",
+  "units": [
+   "Zone 4"
+  ],
+  "description": "Zone 4 - Orocopia Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 1262
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 20: 43, 19: 50, 18: 42, 17: 34, 16: 35, 15: 38, 14: 33, 13: 35, 12: 33, 11: 44, 10: 55, 9: 55, 8: 38, 7: 63, 6: 68, 5: 63, 4: 80, 3: 88, 2: 90, 1: 119, 0: 156.",
+  "sourceId": "d-stats-sheep-all-hunts-2022"
+ },
+ {
+  "species": "sheep",
+  "year": 2022,
+  "huntCode": "507",
+  "units": [
+   "Zone 7"
+  ],
+  "description": "Zone 7 - White Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 2831
+  },
+  "note": "Quota split: 5 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 20: 133, 19: 72, 18: 73, 17: 70, 16: 59, 15: 65, 14: 63, 13: 49, 12: 81, 11: 78, 10: 88, 9: 84, 8: 95, 7: 126, 6: 122, 5: 172, 4: 194, 3: 198, 2: 283, 1: 294, 0: 432.",
+  "sourceId": "d-stats-sheep-all-hunts-2022"
+ },
+ {
+  "species": "sheep",
+  "year": 2022,
+  "huntCode": "508",
+  "units": [
+   "Zone 8"
+  ],
+  "description": "Zone 8 - South Bristol Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 1064
+  },
+  "note": "Quota split: 1 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 20: 68, 19: 40, 18: 33, 17: 28, 16: 25, 15: 32, 14: 24, 13: 41, 12: 18, 11: 19, 10: 35, 9: 35, 8: 44, 7: 44, 6: 55, 5: 61, 4: 65, 3: 77, 2: 91, 1: 98, 0: 131.",
+  "sourceId": "d-stats-sheep-all-hunts-2022"
+ },
+ {
+  "species": "sheep",
+  "year": 2022,
+  "huntCode": "509",
+  "units": [
+   "Zone 9"
+  ],
+  "description": "Zone 9 - Cady Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 873
+  },
+  "note": "Quota split: 1 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 20: 65, 19: 25, 18: 23, 17: 26, 16: 27, 15: 27, 14: 21, 13: 18, 12: 21, 11: 32, 10: 30, 9: 37, 8: 31, 7: 45, 6: 39, 5: 40, 4: 57, 3: 72, 2: 65, 1: 70, 0: 102.",
+  "sourceId": "d-stats-sheep-all-hunts-2022"
+ },
+ {
+  "species": "sheep",
+  "year": 2022,
+  "huntCode": "510",
+  "units": [
+   "Zone 10"
+  ],
+  "description": "Zone 10 - Newberry, Rodman and Ord Mountains",
+  "method": "all",
+  "methodLabel": "General Method",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 1938
+  },
+  "note": "Quota split: 5 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 20: 403, 19: 102, 18: 77, 17: 68, 16: 51, 15: 42, 14: 43, 13: 45, 12: 49, 11: 38, 10: 50, 9: 39, 8: 44, 7: 55, 6: 62, 5: 70, 4: 89, 3: 106, 2: 128, 1: 150, 0: 227.",
+  "sourceId": "d-stats-sheep-all-hunts-2022"
+ },
+ {
+  "species": "sheep",
+  "year": 2023,
+  "huntCode": "501",
+  "units": [
+   "Zone 1"
+  ],
+  "description": "Zone 1 - Marble and Clipper Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 2173
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 21: 118, 20: 60, 19: 45, 18: 42, 17: 44, 16: 50, 15: 42, 14: 55, 13: 54, 12: 42, 11: 55, 10: 69, 9: 68, 8: 82, 7: 88, 6: 113, 5: 137, 4: 144, 3: 169, 2: 184, 1: 192, 0: 320.",
+  "sourceId": "d-stats-sheep-all-hunts-2023"
+ },
+ {
+  "species": "sheep",
+  "year": 2023,
+  "huntCode": "502",
+  "units": [
+   "Zone 2"
+  ],
+  "description": "Zone 2 - Old Dad and Kelso Peak Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 909
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 21: 59, 20: 64, 19: 33, 18: 32, 17: 30, 16: 30, 15: 30, 14: 37, 13: 17, 12: 20, 11: 22, 10: 28, 9: 35, 8: 32, 7: 28, 6: 36, 5: 33, 4: 51, 3: 68, 2: 62, 1: 73, 0: 89.",
+  "sourceId": "d-stats-sheep-all-hunts-2023"
+ },
+ {
+  "species": "sheep",
+  "year": 2023,
+  "huntCode": "503",
+  "units": [
+   "Zone 3"
+  ],
+  "description": "Zone 3 - Clark and Kingston Mountain Ranges - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 4,
+   "applicants": 1747
+  },
+  "note": "Quota split: 3 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 21: 278, 20: 97, 19: 60, 18: 66, 17: 46, 16: 48, 15: 37, 14: 35, 13: 53, 12: 45, 11: 40, 10: 61, 9: 48, 8: 51, 7: 55, 6: 65, 5: 72, 4: 88, 3: 94, 2: 99, 1: 121, 0: 188.",
+  "sourceId": "d-stats-sheep-all-hunts-2023"
+ },
+ {
+  "species": "sheep",
+  "year": 2023,
+  "huntCode": "504",
+  "units": [
+   "Zone 4"
+  ],
+  "description": "Zone 4 - Orocopia Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 1322
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 21: 45, 20: 56, 19: 52, 18: 41, 17: 36, 16: 36, 15: 37, 14: 31, 13: 31, 12: 34, 11: 57, 10: 44, 9: 45, 8: 53, 7: 60, 6: 53, 5: 82, 4: 78, 3: 83, 2: 98, 1: 111, 0: 159.",
+  "sourceId": "d-stats-sheep-all-hunts-2023"
+ },
+ {
+  "species": "sheep",
+  "year": 2023,
+  "huntCode": "507",
+  "units": [
+   "Zone 7"
+  ],
+  "description": "Zone 7 - White Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 2726
+  },
+  "note": "Quota split: 5 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 21: 123, 20: 66, 19: 64, 18: 54, 17: 55, 16: 64, 15: 60, 14: 56, 13: 64, 12: 67, 11: 80, 10: 91, 9: 80, 8: 94, 7: 118, 6: 158, 5: 165, 4: 175, 3: 209, 2: 233, 1: 268, 0: 382.",
+  "sourceId": "d-stats-sheep-all-hunts-2023"
+ },
+ {
+  "species": "sheep",
+  "year": 2023,
+  "huntCode": "508",
+  "units": [
+   "Zone 8"
+  ],
+  "description": "Zone 8 - South Bristol Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 546
+  },
+  "note": "Quota split: 1 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 21: 33, 20: 15, 19: 13, 18: 10, 17: 13, 16: 13, 15: 11, 14: 15, 13: 11, 12: 16, 11: 16, 10: 23, 9: 21, 8: 21, 7: 29, 6: 36, 5: 26, 4: 34, 3: 34, 2: 55, 1: 41, 0: 60.",
+  "sourceId": "d-stats-sheep-all-hunts-2023"
+ },
+ {
+  "species": "sheep",
+  "year": 2023,
+  "huntCode": "509",
+  "units": [
+   "Zone 9"
+  ],
+  "description": "Zone 9 - Cady Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 1325
+  },
+  "note": "Quota split: 1 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 21: 90, 20: 51, 19: 29, 18: 45, 17: 39, 16: 35, 15: 26, 14: 40, 13: 33, 12: 38, 11: 42, 10: 45, 9: 45, 8: 59, 7: 68, 6: 52, 5: 61, 4: 91, 3: 98, 2: 92, 1: 102, 0: 144.",
+  "sourceId": "d-stats-sheep-all-hunts-2023"
+ },
+ {
+  "species": "sheep",
+  "year": 2023,
+  "huntCode": "510",
+  "units": [
+   "Zone 10"
+  ],
+  "description": "Zone 10 - Newberry, Rodman and Ord Mountains",
+  "method": "all",
+  "methodLabel": "General Method",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 2275
+  },
+  "note": "Quota split: 5 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 21: 465, 20: 108, 19: 80, 18: 76, 17: 78, 16: 53, 15: 58, 14: 34, 13: 57, 12: 59, 11: 60, 10: 56, 9: 58, 8: 58, 7: 75, 6: 83, 5: 109, 4: 93, 3: 133, 2: 128, 1: 139, 0: 215.",
+  "sourceId": "d-stats-sheep-all-hunts-2023"
+ },
+ {
+  "species": "sheep",
+  "year": 2024,
+  "huntCode": "501",
+  "units": [
+   "Zone 1"
+  ],
+  "description": "Zone 1 - Marble and Clipper Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 1913
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 22: 71, 21: 61, 20: 47, 19: 27, 18: 48, 17: 42, 16: 42, 15: 59, 14: 44, 13: 44, 12: 53, 11: 57, 10: 57, 9: 68, 8: 55, 7: 87, 6: 104, 5: 122, 4: 124, 3: 150, 2: 141, 1: 161, 0: 249.",
+  "sourceId": "d-stats-sheep-all-hunts-2024"
+ },
+ {
+  "species": "sheep",
+  "year": 2024,
+  "huntCode": "502",
+  "units": [
+   "Zone 2"
+  ],
+  "description": "Zone 2 - Old Dad and Kelso Peak Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 1054
+  },
+  "note": "Quota split: 1 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 22: 92, 21: 73, 20: 38, 19: 48, 18: 40, 17: 37, 16: 34, 15: 36, 14: 25, 13: 27, 12: 31, 11: 30, 10: 31, 9: 39, 8: 35, 7: 43, 6: 42, 5: 47, 4: 51, 3: 54, 2: 47, 1: 48, 0: 106.",
+  "sourceId": "d-stats-sheep-all-hunts-2024"
+ },
+ {
+  "species": "sheep",
+  "year": 2024,
+  "huntCode": "503",
+  "units": [
+   "Zone 3"
+  ],
+  "description": "Zone 3 - Clark and Kingston Mountain Ranges - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 3,
+   "applicants": 1435
+  },
+  "note": "Quota split: 2 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 22: 182, 21: 73, 20: 46, 19: 49, 18: 49, 17: 28, 16: 28, 15: 28, 14: 31, 13: 29, 12: 28, 11: 42, 10: 42, 9: 42, 8: 64, 7: 65, 6: 53, 5: 63, 4: 81, 3: 77, 2: 82, 1: 92, 0: 161.",
+  "sourceId": "d-stats-sheep-all-hunts-2024"
+ },
+ {
+  "species": "sheep",
+  "year": 2024,
+  "huntCode": "504",
+  "units": [
+   "Zone 4"
+  ],
+  "description": "Zone 4 - Orocopia Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 1232
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 22: 45, 21: 43, 20: 44, 19: 26, 18: 31, 17: 38, 16: 27, 15: 22, 14: 36, 13: 34, 12: 40, 11: 40, 10: 46, 9: 49, 8: 58, 7: 44, 6: 79, 5: 70, 4: 68, 3: 76, 2: 86, 1: 94, 0: 136.",
+  "sourceId": "d-stats-sheep-all-hunts-2024"
+ },
+ {
+  "species": "sheep",
+  "year": 2024,
+  "huntCode": "506",
+  "units": [
+   "Zone 6"
+  ],
+  "description": "Zone 6 - Sheep Hole Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 364
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 22: 5, 21: 13, 20: 8, 19: 10, 18: 2, 17: 7, 16: 7, 15: 13, 14: 4, 13: 11, 12: 8, 11: 8, 10: 9, 9: 10, 8: 14, 7: 10, 6: 15, 5: 15, 4: 25, 3: 25, 2: 40, 1: 43, 0: 62.",
+  "sourceId": "d-stats-sheep-all-hunts-2024"
+ },
+ {
+  "species": "sheep",
+  "year": 2024,
+  "huntCode": "507",
+  "units": [
+   "Zone 7"
+  ],
+  "description": "Zone 7 - White Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 4,
+   "applicants": 2232
+  },
+  "note": "Quota split: 3 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 22: 68, 21: 48, 20: 45, 19: 41, 18: 42, 17: 41, 16: 40, 15: 45, 14: 61, 13: 53, 12: 68, 11: 76, 10: 55, 9: 70, 8: 81, 7: 117, 6: 128, 5: 152, 4: 164, 3: 176, 2: 177, 1: 208, 0: 276.",
+  "sourceId": "d-stats-sheep-all-hunts-2024"
+ },
+ {
+  "species": "sheep",
+  "year": 2024,
+  "huntCode": "508",
+  "units": [
+   "Zone 8"
+  ],
+  "description": "Zone 8 - South Bristol Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 997
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 22: 46, 21: 30, 20: 25, 19: 24, 18: 30, 17: 24, 16: 17, 15: 29, 14: 13, 13: 25, 12: 22, 11: 30, 10: 26, 9: 38, 8: 47, 7: 55, 6: 43, 5: 65, 4: 75, 3: 70, 2: 68, 1: 78, 0: 117.",
+  "sourceId": "d-stats-sheep-all-hunts-2024"
+ },
+ {
+  "species": "sheep",
+  "year": 2024,
+  "huntCode": "509",
+  "units": [
+   "Zone 9"
+  ],
+  "description": "Zone 9 - Cady Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 856
+  },
+  "note": "Quota split: 1 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 22: 71, 21: 32, 20: 15, 19: 25, 18: 25, 17: 19, 16: 19, 15: 27, 14: 24, 13: 24, 12: 27, 11: 30, 10: 33, 9: 31, 8: 34, 7: 31, 6: 43, 5: 55, 4: 62, 3: 48, 2: 43, 1: 58, 0: 80.",
+  "sourceId": "d-stats-sheep-all-hunts-2024"
+ },
+ {
+  "species": "sheep",
+  "year": 2024,
+  "huntCode": "510",
+  "units": [
+   "Zone 10"
+  ],
+  "description": "Zone 10 - Newberry, Rodman and Ord Mountains",
+  "method": "all",
+  "methodLabel": "General Method",
+  "choice": "all",
+  "total": {
+   "quota": 6,
+   "applicants": 2453
+  },
+  "note": "Quota split: 5 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 22: 540, 21: 118, 20: 85, 19: 84, 18: 64, 17: 63, 16: 64, 15: 33, 14: 59, 13: 56, 12: 68, 11: 62, 10: 51, 9: 71, 8: 73, 7: 82, 6: 90, 5: 83, 4: 110, 3: 105, 2: 121, 1: 142, 0: 229.",
+  "sourceId": "d-stats-sheep-all-hunts-2024"
+ },
+ {
+  "species": "sheep",
+  "year": 2025,
+  "huntCode": "501",
+  "units": [
+   "Zone 1"
+  ],
+  "description": "Zone 1 - Marble and Clipper Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 1515
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 23: 48, 22: 46, 21: 30, 20: 21, 19: 46, 18: 29, 17: 27, 16: 39, 15: 36, 14: 29, 13: 39, 12: 57, 11: 49, 10: 50, 9: 51, 8: 57, 7: 89, 6: 82, 5: 99, 4: 96, 3: 97, 2: 98, 1: 140, 0: 160.",
+  "sourceId": "d-stats-sheep-all-hunts-2025"
+ },
+ {
+  "species": "sheep",
+  "year": 2025,
+  "huntCode": "502",
+  "units": [
+   "Zone 2"
+  ],
+  "description": "Zone 2 - Old Dad and Kelso Peak Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 3,
+   "applicants": 971
+  },
+  "note": "Quota split: 2 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 23: 116, 22: 73, 21: 31, 20: 39, 19: 40, 18: 35, 17: 32, 16: 30, 15: 25, 14: 28, 13: 15, 12: 17, 11: 26, 10: 24, 9: 22, 8: 33, 7: 32, 6: 45, 5: 44, 4: 43, 3: 32, 2: 45, 1: 59, 0: 85.",
+  "sourceId": "d-stats-sheep-all-hunts-2025"
+ },
+ {
+  "species": "sheep",
+  "year": 2025,
+  "huntCode": "503",
+  "units": [
+   "Zone 3"
+  ],
+  "description": "Zone 3 - Clark and Kingston Mountain Ranges - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 4,
+   "applicants": 1535
+  },
+  "note": "Quota split: 3 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 23: 203, 22: 71, 21: 42, 20: 47, 19: 47, 18: 22, 17: 23, 16: 36, 15: 25, 14: 33, 13: 27, 12: 51, 11: 43, 10: 50, 9: 62, 8: 54, 7: 77, 6: 61, 5: 74, 4: 72, 3: 64, 2: 86, 1: 105, 0: 160.",
+  "sourceId": "d-stats-sheep-all-hunts-2025"
+ },
+ {
+  "species": "sheep",
+  "year": 2025,
+  "huntCode": "504",
+  "units": [
+   "Zone 4"
+  ],
+  "description": "Zone 4 - Orocopia Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 799
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 23: 32, 22: 26, 21: 23, 20: 18, 19: 21, 18: 21, 17: 20, 16: 13, 15: 19, 14: 21, 13: 22, 12: 29, 11: 23, 10: 20, 9: 31, 8: 30, 7: 41, 6: 50, 5: 46, 4: 48, 3: 54, 2: 49, 1: 57, 0: 85.",
+  "sourceId": "d-stats-sheep-all-hunts-2025"
+ },
+ {
+  "species": "sheep",
+  "year": 2025,
+  "huntCode": "505",
+  "units": [
+   "Zone 5"
+  ],
+  "description": "Zone 5 - San Gorgonio Wilderness - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 793
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 23: 24, 22: 26, 21: 24, 20: 20, 19: 18, 18: 20, 17: 25, 16: 21, 15: 19, 14: 15, 13: 15, 12: 18, 11: 27, 10: 28, 9: 37, 8: 27, 7: 33, 6: 41, 5: 41, 4: 36, 3: 42, 2: 44, 1: 63, 0: 129.",
+  "sourceId": "d-stats-sheep-all-hunts-2025"
+ },
+ {
+  "species": "sheep",
+  "year": 2025,
+  "huntCode": "506",
+  "units": [
+   "Zone 6"
+  ],
+  "description": "Zone 6 - Sheep Hole Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 569
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 23: 8, 22: 16, 21: 13, 20: 13, 19: 14, 18: 12, 17: 4, 16: 12, 15: 12, 14: 11, 13: 12, 12: 13, 11: 11, 10: 17, 9: 22, 8: 28, 7: 21, 6: 25, 5: 31, 4: 40, 3: 35, 2: 33, 1: 55, 0: 111.",
+  "sourceId": "d-stats-sheep-all-hunts-2025"
+ },
+ {
+  "species": "sheep",
+  "year": 2025,
+  "huntCode": "507",
+  "units": [
+   "Zone 7"
+  ],
+  "description": "Zone 7 - White Mountains - General Method - Ram P1",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 3,
+   "applicants": 1419
+  },
+  "note": "Quota split: 2 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 23: 37, 22: 24, 21: 24, 20: 25, 19: 26, 18: 28, 17: 26, 16: 27, 15: 33, 14: 28, 13: 41, 12: 38, 11: 33, 10: 49, 9: 43, 8: 78, 7: 77, 6: 92, 5: 92, 4: 86, 3: 101, 2: 100, 1: 136, 0: 175.",
+  "sourceId": "d-stats-sheep-all-hunts-2025"
+ },
+ {
+  "species": "sheep",
+  "year": 2025,
+  "huntCode": "508",
+  "units": [
+   "Zone 8"
+  ],
+  "description": "Zone 8 - South Bristol Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 380
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 23: 13, 22: 11, 21: 8, 20: 7, 19: 4, 18: 8, 17: 11, 16: 6, 15: 4, 14: 9, 13: 8, 12: 20, 11: 12, 10: 14, 9: 14, 8: 19, 7: 15, 6: 33, 5: 25, 4: 22, 3: 25, 2: 30, 1: 22, 0: 40.",
+  "sourceId": "d-stats-sheep-all-hunts-2025"
+ },
+ {
+  "species": "sheep",
+  "year": 2025,
+  "huntCode": "509",
+  "units": [
+   "Zone 9"
+  ],
+  "description": "Zone 9 - Cady Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 754
+  },
+  "note": "Quota split: 1 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 23: 64, 22: 28, 21: 23, 20: 22, 19: 17, 18: 22, 17: 22, 16: 21, 15: 17, 14: 22, 13: 22, 12: 19, 11: 29, 10: 22, 9: 34, 8: 33, 7: 34, 6: 37, 5: 39, 4: 39, 3: 36, 2: 53, 1: 42, 0: 57.",
+  "sourceId": "d-stats-sheep-all-hunts-2025"
+ },
+ {
+  "species": "sheep",
+  "year": 2025,
+  "huntCode": "511",
+  "units": [
+   "Zone 7"
+  ],
+  "description": "Zone 7 - White Mountains - General Method - Ram P2",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 469
+  },
+  "note": "Quota split: 1 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 23: 16, 22: 11, 21: 4, 20: 14, 19: 10, 18: 8, 17: 10, 16: 11, 15: 16, 14: 10, 13: 17, 12: 15, 11: 15, 10: 22, 9: 24, 8: 22, 7: 28, 6: 22, 5: 28, 4: 26, 3: 30, 2: 26, 1: 34, 0: 50.",
+  "sourceId": "d-stats-sheep-all-hunts-2025"
+ },
+ {
+  "species": "sheep",
+  "year": 2025,
+  "huntCode": "512",
+  "units": [
+   "Zone 10"
+  ],
+  "description": "Zone 10 - Newberry, Rodman and Ord Mountains",
+  "method": "all",
+  "methodLabel": "General Method",
+  "choice": "all",
+  "total": {
+   "quota": 4,
+   "applicants": 1297
+  },
+  "note": "Quota split: 3 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 23: 252, 22: 68, 21: 46, 20: 31, 19: 36, 18: 39, 17: 29, 16: 26, 15: 31, 14: 32, 13: 47, 12: 31, 11: 30, 10: 41, 9: 41, 8: 57, 7: 51, 6: 46, 5: 46, 4: 51, 3: 49, 2: 53, 1: 61, 0: 103.",
+  "sourceId": "d-stats-sheep-all-hunts-2025"
+ },
+ {
+  "species": "sheep",
+  "year": 2025,
+  "huntCode": "513",
+  "units": [
+   "Zone 10"
+  ],
+  "description": "Zone 10 - Newberry, Rodman and Ord Mountains P2",
+  "method": "all",
+  "methodLabel": "General Method",
+  "choice": "all",
+  "total": {
+   "quota": 4,
+   "applicants": 1091
+  },
+  "note": "Quota split: 3 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 23: 216, 22: 47, 21: 38, 20: 34, 19: 32, 18: 21, 17: 22, 16: 23, 15: 24, 14: 33, 13: 35, 12: 29, 11: 31, 10: 36, 9: 33, 8: 37, 7: 31, 6: 48, 5: 47, 4: 54, 3: 42, 2: 51, 1: 50, 0: 77.",
+  "sourceId": "d-stats-sheep-all-hunts-2025"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "501",
+  "units": [
+   "Zone 1"
+  ],
+  "description": "Zone 1 - Marble and Clipper Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 1436
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 33, 23: 39, 22: 26, 21: 18, 20: 31, 19: 29, 18: 22, 17: 36, 16: 24, 15: 33, 14: 34, 13: 52, 12: 43, 11: 43, 10: 54, 9: 55, 8: 64, 7: 78, 6: 85, 5: 91, 4: 79, 3: 84, 2: 92, 1: 103, 0: 188.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "502",
+  "units": [
+   "Zone 2"
+  ],
+  "description": "Zone 2 - Old Dad and Kelso Peak Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 3,
+   "applicants": 885
+  },
+  "note": "Quota split: 2 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 106, 23: 55, 22: 34, 21: 33, 20: 34, 19: 24, 18: 25, 17: 20, 16: 19, 15: 23, 14: 14, 13: 23, 12: 16, 11: 27, 10: 16, 9: 24, 8: 27, 7: 30, 6: 39, 5: 28, 4: 45, 3: 35, 2: 49, 1: 46, 0: 93.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "503",
+  "units": [
+   "Zone 3"
+  ],
+  "description": "Zone 3 - Clark and Kingston Mountain Ranges - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 4,
+   "applicants": 1469
+  },
+  "note": "Quota split: 3 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 176, 23: 58, 22: 39, 21: 36, 20: 27, 19: 28, 18: 35, 17: 28, 16: 17, 15: 33, 14: 24, 13: 41, 12: 29, 11: 51, 10: 50, 9: 64, 8: 60, 7: 60, 6: 73, 5: 50, 4: 63, 3: 61, 2: 83, 1: 101, 0: 182.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "504",
+  "units": [
+   "Zone 4"
+  ],
+  "description": "Zone 4 - Orocopia Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 669
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 21, 23: 22, 22: 18, 21: 8, 20: 9, 19: 17, 18: 17, 17: 11, 16: 19, 15: 21, 14: 12, 13: 17, 12: 16, 11: 22, 10: 30, 9: 23, 8: 36, 7: 38, 6: 40, 5: 36, 4: 29, 3: 43, 2: 40, 1: 44, 0: 80.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "505",
+  "units": [
+   "Zone 5"
+  ],
+  "description": "Zone 5 - San Gorgonio Wilderness - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 851
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 13, 23: 27, 22: 24, 21: 18, 20: 22, 19: 16, 18: 19, 17: 20, 16: 17, 15: 19, 14: 20, 13: 25, 12: 20, 11: 25, 10: 33, 9: 29, 8: 28, 7: 40, 6: 35, 5: 45, 4: 55, 3: 46, 2: 68, 1: 74, 0: 113.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "506",
+  "units": [
+   "Zone 6"
+  ],
+  "description": "Zone 6 - Sheep Hole Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 372
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 6, 23: 6, 22: 11, 21: 7, 20: 9, 19: 6, 18: 8, 17: 4, 16: 7, 15: 6, 14: 3, 13: 10, 12: 8, 11: 7, 10: 9, 9: 13, 8: 8, 7: 19, 6: 16, 5: 16, 4: 14, 3: 30, 2: 23, 1: 45, 0: 81.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "507",
+  "units": [
+   "Zone 7"
+  ],
+  "description": "Zone 7 - White Mountains P1 - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 1372
+  },
+  "note": "Quota split: 1 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 22, 23: 22, 22: 26, 21: 26, 20: 23, 19: 20, 18: 26, 17: 31, 16: 25, 15: 25, 14: 30, 13: 28, 12: 31, 11: 43, 10: 49, 9: 54, 8: 67, 7: 62, 6: 82, 5: 95, 4: 80, 3: 85, 2: 94, 1: 111, 0: 215.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "508",
+  "units": [
+   "Zone 8"
+  ],
+  "description": "Zone 8 - South Bristol Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 657
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 15, 23: 21, 22: 15, 21: 11, 20: 12, 19: 10, 18: 9, 17: 20, 16: 14, 15: 9, 14: 22, 13: 27, 12: 21, 11: 18, 10: 25, 9: 18, 8: 31, 7: 39, 6: 34, 5: 41, 4: 43, 3: 40, 2: 43, 1: 39, 0: 80.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "509",
+  "units": [
+   "Zone 9"
+  ],
+  "description": "Zone 9 - Cady Mountains - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 562
+  },
+  "note": "Quota split: 1 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 58, 23: 22, 22: 18, 21: 11, 20: 9, 19: 11, 18: 12, 17: 13, 16: 10, 15: 16, 14: 15, 13: 20, 12: 26, 11: 20, 10: 23, 9: 25, 8: 26, 7: 33, 6: 33, 5: 22, 4: 23, 3: 31, 2: 21, 1: 24, 0: 40.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "511",
+  "units": [
+   "Zone 7"
+  ],
+  "description": "Zone 7 - White Mountains P2 - General Method - Ram",
+  "method": "all",
+  "methodLabel": "General Methods",
+  "sex": "male",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 631
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 9, 23: 9, 22: 6, 21: 19, 20: 20, 19: 9, 18: 10, 17: 12, 16: 16, 15: 11, 14: 19, 13: 21, 12: 26, 11: 16, 10: 24, 9: 26, 8: 32, 7: 33, 6: 25, 5: 31, 4: 46, 3: 31, 2: 52, 1: 39, 0: 89.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "512",
+  "units": [
+   "Zone 10"
+  ],
+  "description": "Zone 10 - Newberry, Rodman and Ord Mountains P1",
+  "method": "all",
+  "methodLabel": "General Method",
+  "choice": "all",
+  "total": {
+   "quota": 4,
+   "applicants": 1122
+  },
+  "note": "Quota split: 3 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 200, 23: 47, 22: 35, 21: 43, 20: 32, 19: 25, 18: 23, 17: 22, 16: 21, 15: 28, 14: 32, 13: 27, 12: 28, 11: 26, 10: 25, 9: 36, 8: 36, 7: 35, 6: 36, 5: 54, 4: 44, 3: 46, 2: 44, 1: 64, 0: 113.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "513",
+  "units": [
+   "Zone 10"
+  ],
+  "description": "Zone 10 - Newberry, Rodman and Ord Mountains P2",
+  "method": "all",
+  "methodLabel": "General Method",
+  "choice": "all",
+  "total": {
+   "quota": 4,
+   "applicants": 859
+  },
+  "note": "Quota split: 3 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 168, 23: 43, 22: 31, 21: 27, 20: 23, 19: 17, 18: 18, 17: 15, 16: 18, 15: 21, 14: 21, 13: 14, 12: 13, 11: 21, 10: 18, 9: 31, 8: 33, 7: 31, 6: 29, 5: 34, 4: 31, 3: 27, 2: 43, 1: 45, 0: 87.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "514",
+  "units": [
+   "Zone 11"
+  ],
+  "description": "Zone 11 - Granite and North Bristol Mountains",
+  "method": "all",
+  "methodLabel": "General Method",
+  "choice": "all",
+  "total": {
+   "quota": 1,
+   "applicants": 300
+  },
+  "note": "Quota split: 0 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 9, 23: 9, 22: 7, 21: 10, 20: 9, 19: 13, 18: 2, 17: 12, 16: 12, 15: 9, 14: 14, 13: 7, 12: 7, 11: 8, 10: 12, 9: 9, 8: 9, 7: 15, 6: 14, 5: 12, 4: 12, 3: 7, 2: 15, 1: 14, 0: 53.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "515",
+  "units": [
+   "Zone 12"
+  ],
+  "description": "Zone 12 - Providence, Woods & Hackberry Mountains",
+  "method": "all",
+  "methodLabel": "General Method",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 713
+  },
+  "note": "Quota split: 1 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 88, 23: 34, 22: 16, 21: 20, 20: 22, 19: 22, 18: 16, 17: 16, 16: 22, 15: 20, 14: 21, 13: 12, 12: 21, 11: 23, 10: 26, 9: 29, 8: 31, 7: 24, 6: 34, 5: 30, 4: 23, 3: 35, 2: 32, 1: 35, 0: 61.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ },
+ {
+  "species": "sheep",
+  "year": 2026,
+  "huntCode": "516",
+  "units": [
+   "Zone 13"
+  ],
+  "description": "Zone 13 - Castle Mountains and Piute Range",
+  "method": "all",
+  "methodLabel": "General Method",
+  "choice": "all",
+  "total": {
+   "quota": 2,
+   "applicants": 513
+  },
+  "note": "Quota split: 1 preference-point tags, 1 random (draw-by-choice) tags. CDFW does not publish the number of tags drawn for elk, pronghorn or bighorn sheep hunts. One hunt choice per application. Applicants by preference points (CDFW; 'a-b' = unrounded party point average between a and b): 24: 52, 23: 25, 22: 11, 21: 11, 20: 15, 19: 19, 18: 5, 17: 10, 16: 10, 15: 15, 14: 10, 13: 10, 12: 13, 11: 17, 10: 13, 9: 15, 8: 18, 7: 24, 6: 18, 5: 25, 4: 28, 3: 18, 2: 28, 1: 30, 0: 73.",
+  "sourceId": "d-stats-sheep-all-hunts-2026"
+ }
+]
