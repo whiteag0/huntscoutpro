@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { getEntitlement } from "@/lib/entitlement";
-import { readPreferences, REMINDERS_OFF_KEY } from "@/lib/preferences";
-import { setRemindersOff } from "@/lib/members";
+import { readPreferences } from "@/lib/preferences";
+import { remindersOffFor, setRemindersOff } from "@/lib/members";
 import { getAllStateData } from "@/lib/agency";
 import { todayIso } from "@/lib/agency-format";
 import { nextReminderDates } from "@/lib/reminders";
@@ -29,7 +29,8 @@ export async function GET() {
     return NextResponse.json({ available: false, enabled: false, states: [], species: [], residency: "", homeState: "", upcoming: [] });
   }
   try {
-    const { preferences, metadata } = await readPreferences(m.ent.paymentIntentId);
+    // Off when any purchase carries the flag, exactly like the daily job decides.
+    const [{ preferences }, off] = await Promise.all([readPreferences(m.ent.paymentIntentId), remindersOffFor(m.email)]);
     const prefs = {
       states: preferences?.states ?? [],
       species: preferences?.species ?? [],
@@ -38,7 +39,7 @@ export async function GET() {
     };
     // Next date per live state, filtered exactly like the daily emails.
     const upcoming = nextReminderDates({ email: m.email, ...prefs }, await getAllStateData(), todayIso());
-    return NextResponse.json({ available: true, enabled: metadata[REMINDERS_OFF_KEY] !== "1", ...prefs, upcoming });
+    return NextResponse.json({ available: true, enabled: !off, ...prefs, upcoming });
   } catch (err) {
     console.error("Reminder settings read failed:", err);
     return NextResponse.json({ error: "Couldn't load your reminder settings." }, { status: 502 });

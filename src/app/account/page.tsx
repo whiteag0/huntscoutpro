@@ -12,7 +12,7 @@ import {
   type HuntingPreferences,
 } from "@/lib/preferences-schema";
 import { stateByAbbrev, stateBySlug } from "@/data/state-list";
-import { formatDate as formatIsoDay, isLiveState } from "@/lib/agency-format";
+import { formatDate as formatIsoDay, isLiveState, todayIso } from "@/lib/agency-format";
 
 function formatDate(iso: string | null | undefined) {
   if (!iso) return null;
@@ -27,7 +27,7 @@ type PrefsLoad =
 interface UpcomingDate {
   state: string;
   stateName: string;
-  next: { label: string; end: string; daysLeft: number } | null;
+  next: { label: string; start?: string; end: string; daysLeft: number } | null;
 }
 
 interface ReminderSettings {
@@ -451,6 +451,14 @@ export default function AccountPage() {
   );
 }
 
+/** "opens Dec 15, closes Dec 29, 2026" for a window not open yet, "closes Nov 2, 2026" for an open one, else the single date. */
+function nextWhen(next: { start?: string; end: string }): string {
+  if (!next.start) return formatIsoDay(next.end);
+  if (next.start <= todayIso()) return `closes ${formatIsoDay(next.end)}`;
+  const sameYear = next.start.slice(0, 4) === next.end.slice(0, 4);
+  return `opens ${formatIsoDay(next.start, !sameYear)}, closes ${formatIsoDay(next.end)}`;
+}
+
 /** Which of the member's states and species reminders cover. */
 function ReminderCoverage({ settings, email }: { settings: ReminderSettings; email: string }) {
   const live = settings.states.filter(isLiveState);
@@ -488,7 +496,7 @@ function ReminderCoverage({ settings, email }: { settings: ReminderSettings; ema
                       <span className="font-medium">{name(slug)}</span>
                       <span className="text-muted-foreground">
                         {up?.next
-                          ? ` · next: ${up.next.label}, ${formatIsoDay(up.next.end)}`
+                          ? ` · next: ${up.next.label}, ${nextWhen(up.next)}`
                           : " · no upcoming application dates published by the agency yet"}
                       </span>
                     </li>

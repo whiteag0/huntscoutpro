@@ -130,3 +130,39 @@ test("setRemindersOff stamps every HuntScout purchase for that email, and clears
 
   assert.equal(await setRemindersOff("nobody@example.com", true, fakeStripe([]).client), 0);
 });
+
+test("an opt-out on any purchase holds after a renewal; preferences come from the purchase with the latest access end", async () => {
+  const { client } = fakeStripe([
+    // Unsubscribed on the first purchase, then renewed (new PaymentIntent without the flag).
+    session({ email: "renew@example.com", daysAgo: 400, md: prefs("utah", { hs_reminders_off: "1" }) }),
+    session({ email: "renew@example.com", daysAgo: 10, md: prefs("utah") }),
+    // Older purchase sold with a longer access period: it is the one getEntitlement() picks.
+    session({ email: "long@example.com", daysAgo: 100, md: prefs("wyoming") }),
+    session({ email: "long@example.com", daysAgo: 10, md: prefs("idaho") }),
+  ]);
+  // Give the older long@ purchase 36 months of access.
+  const { members, stats } = await listMembersWithPreferences(
+    {
+      ...client,
+      checkout: {
+        sessions: {
+          list: ((params: unknown) => {
+            const it = (client.checkout.sessions.list as unknown as (p: unknown) => AsyncIterable<Stripe.Checkout.Session>)(params);
+            return {
+              async *[Symbol.asyncIterator]() {
+                for await (const s of it) {
+                  if (s.customer_details?.email === "long@example.com" && s.created < nowSec - 50 * DAY) {
+                    yield { ...s, metadata: { ...s.metadata, entitlementMonths: "36" } } as Stripe.Checkout.Session;
+                  } else yield s;
+                }
+              },
+            };
+          }) as unknown as MemberStripe["checkout"]["sessions"]["list"],
+        },
+      },
+    },
+    NOW
+  );
+  assert.deepEqual(members.map((m) => [m.email, m.states]), [["long@example.com", ["wyoming"]]]);
+  assert.equal(stats.optedOut, 1);
+});

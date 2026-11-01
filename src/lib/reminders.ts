@@ -55,6 +55,8 @@ export const REMIND_DAYS_BEFORE = [14, 3] as const;
 
 /** Key dates members apply, buy points or must act by. */
 export const ACTIONABLE_LABEL = /appl|apply|deadline|point/i;
+/** Labels that match ACTIONABLE_LABEL but aren't something the member does ("Successful applicants notified by", "Draw results posted"). */
+const NOT_ACTIONABLE = /\bnotified\b|\bnotification\b|\bresults?\b/i;
 
 const ISO_DAY = /^\d{4}-\d{2}-\d{2}$/;
 const NONRES = /\bnon-?\s?residents?\b/gi;
@@ -92,8 +94,9 @@ export function memberResidencyIn(member: Pick<ReminderMember, "residency" | "ho
   return member.residency === "resident" || member.residency === "nonresident" ? member.residency : "both";
 }
 
+/** The window end or the single date. A start-only date has no deadline to remind about. */
 function keyEnd(k: KeyDate): string {
-  return k.end || k.date || k.start || "";
+  return k.end || k.date || "";
 }
 
 /**
@@ -116,7 +119,7 @@ function openKeyDates(member: ReminderMember, st: ReminderState, today: string) 
     if (wanted.size > 0 && !wanted.has(info.species)) continue;
     for (const k of info.keyDates) {
       if (k.cycle < year) continue;
-      if (!ACTIONABLE_LABEL.test(k.label)) continue;
+      if (!ACTIONABLE_LABEL.test(k.label) || NOT_ACTIONABLE.test(k.label)) continue;
       const end = keyEnd(k);
       if (!isIsoDay(end) || end < today) continue;
       const only = labelResidency(k.label);
@@ -186,7 +189,8 @@ export interface NextDate {
   state: string;
   stateName: string;
   /** Soonest actionable key date that hasn't ended, or null when the agency hasn't published one we have. */
-  next: { label: string; end: string; daysLeft: number } | null;
+  /** start is set when the date is a window (start–end) rather than a single date. */
+  next: { label: string; start?: string; end: string; daysLeft: number } | null;
 }
 
 /** For the account page: each of the member's live states and the next date reminders will cover. */
@@ -201,7 +205,14 @@ export function nextReminderDates(member: ReminderMember, states: readonly Remin
     out.push({
       state: st.slug,
       stateName: st.name,
-      next: soonest ? { label: soonest.k.label, end: soonest.end, daysLeft: daysBetween(today, soonest.end) } : null,
+      next: soonest
+        ? {
+            label: soonest.k.label,
+            ...(soonest.k.start && soonest.k.end ? { start: soonest.k.start } : {}),
+            end: soonest.end,
+            daysLeft: daysBetween(today, soonest.end),
+          }
+        : null,
     });
   }
   return out;

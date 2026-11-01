@@ -59,7 +59,10 @@ export async function listMembersWithPreferences(
   const since = new Date(now);
   since.setUTCMonth(since.getUTCMonth() - LOOKBACK_MONTHS);
 
-  const latest = new Map<string, Stripe.Checkout.Session>();
+  const latest = new Map<string, { s: Stripe.Checkout.Session; end: Date }>();
+  // Emails with the opt-out flag on ANY of their HuntScout purchases. A renewal
+  // creates a new PaymentIntent without the flag; the unsubscribe must still hold.
+  const optedOut = new Set<string>();
   const list = client.checkout.sessions.list({
     status: "complete",
     created: { gte: Math.floor(since.getTime() / 1000) },
@@ -70,22 +73,26 @@ export async function listMembersWithPreferences(
   for await (const s of list) {
     stats.sessions++;
     if (!isHuntScoutSession(s) || s.payment_status !== "paid") continue;
+    const email = buyerEmail(s);
+    const pi = paymentIntentOf(s);
+    if (!email || !pi) continue;
+    const key = normalizeEmail(email);
+    if (pi.metadata?.[REMINDERS_OFF_KEY] === "1") optedOut.add(key);
     const end = sessionAccessEnd(s);
     if (!end || end.getTime() <= now.getTime()) continue;
-    const email = buyerEmail(s);
-    if (!email || !paymentIntentOf(s)) continue;
     stats.active++;
-    const key = normalizeEmail(email);
+    // Same pick as getEntitlement(): the purchase with the latest access end is
+    // the PaymentIntent /welcome and My Account read and write preferences on.
     const prev = latest.get(key);
-    if (!prev || s.created > prev.created) latest.set(key, s);
+    if (!prev || end > prev.end || (end.getTime() === prev.end.getTime() && s.created > prev.s.created)) latest.set(key, { s, end });
   }
   stats.unique = latest.size;
 
   const members: Member[] = [];
-  for (const s of latest.values()) {
+  for (const [key, { s, end }] of latest) {
     const pi = paymentIntentOf(s)!;
     const md = (pi.metadata || {}) as Record<string, string>;
-    if (md[REMINDERS_OFF_KEY] === "1") {
+    if (optedOut.has(key)) {
       stats.optedOut++;
       continue;
     }
@@ -103,7 +110,7 @@ export async function listMembersWithPreferences(
       homeState: prefs.homeState,
       paymentIntentId: pi.id,
       sessionId: s.id,
-      accessEnd: sessionAccessEnd(s)!.toISOString(),
+      accessEnd: end.toISOString(),
     });
   }
   stats.members = members.length;
@@ -129,6 +136,12 @@ export async function memberPaymentIntents(rawEmail: string, client: MemberStrip
     }
   }
   return [...found.values()];
+}
+
+/** True when any of this email's HuntScout purchases carries the opt-out flag (same rule as the daily job). */
+export async function remindersOffFor(rawEmail: string, client: MemberStripe | null = stripe): Promise<boolean> {
+  const pis = await memberPaymentIntents(rawEmail, client);
+  return pis.some((pi) => pi.metadata?.[REMINDERS_OFF_KEY] === "1");
 }
 
 /** Turn deadline reminders off (or back on) on all of a member's purchases. Returns how many were updated. */

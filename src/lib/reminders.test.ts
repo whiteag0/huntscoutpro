@@ -206,3 +206,34 @@ test("nextReminderDates: soonest open date per live state, null when none publis
     { state: "utah", stateName: "Utah", next: { label: "Bonus point only deadline", end: "2026-10-30", daysLeft: 2 } },
   ]);
 });
+
+test("notification/results labels and start-only dates never produce a reminder", () => {
+  const st: ReminderState = {
+    ...UTAH,
+    species: [
+      {
+        ...UTAH.species[0],
+        keyDates: [
+          kd({ label: "Successful applicants notified by", date: "2026-11-10" }),
+          kd({ label: "Point results posted", date: "2026-11-10" }),
+          kd({ label: "Application period opens", start: "2026-11-10" }),
+          kd({ label: "Application deadline", date: "2026-11-10" }),
+        ],
+      },
+    ],
+  };
+  assert.deepEqual(labels(member(), "2026-10-27", [st]), ["Application deadline|closes|14"]);
+});
+
+test("nextReminderDates carries the window start so the card can say opens/closes", () => {
+  const st: ReminderState = {
+    ...UTAH,
+    species: [{ ...UTAH.species[0], keyDates: [kd({ label: "Limited-entry turkey draw application period", start: "2026-12-15", end: "2026-12-29" })] }],
+  };
+  assert.deepEqual(nextReminderDates(member(), [st], "2026-10-31")[0].next, {
+    label: "Limited-entry turkey draw application period",
+    start: "2026-12-15",
+    end: "2026-12-29",
+    daysLeft: 59,
+  });
+});
