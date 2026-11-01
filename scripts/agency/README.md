@@ -185,13 +185,16 @@ already there. A page that succeeds for the first time, or whose URL changed in
    without a read, which a weekly schedule can hit. In that case the workflow downloads the
    `agency-freshness-snapshot` artifact from the last successful run instead. That needs
    `actions: read`.
-2. Runs `freshness.mjs`, saves the snapshot to the cache, uploads the snapshot and report
-   as an artifact (kept 90 days) and writes the report to the job summary.
+2. Runs `freshness.mjs` and writes the report to the job summary.
 3. If there are new document links or new mentions, it creates the `agency-data` label if
    missing. It then comments on the open issue titled **"Agency data updates available"**,
    or opens that issue if none is open. It uses `GITHUB_TOKEN` (`contents: read`,
    `issues: write`). Baseline runs and runs with only failures or data-age flags do not
    touch the issue; they appear in the job summary.
+4. Saves the new snapshot to the cache, but only when the issue step succeeded or had
+   nothing to do. If `gh` fails, the old snapshot stays current and next week's run
+   reports the same items again. The snapshot and report are also uploaded as an artifact
+   (kept 90 days); the fallback in step 1 only reads artifacts from successful runs.
 
 The first run is the baseline. To start over, delete the `agency-freshness-*` caches
 (**Actions → Caches**) and the artifacts, then run the workflow.

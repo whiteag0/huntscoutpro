@@ -56,23 +56,6 @@ jobs:
         id: fresh
         run: node scripts/agency/freshness.mjs --state-file "$SNAPSHOT" --report-file "$REPORT"
 
-      - name: Save snapshot (cache)
-        if: always() && hashFiles('.agency-freshness/snapshot.json') != ''
-        uses: actions/cache/save@v4
-        with:
-          path: .agency-freshness/snapshot.json
-          key: agency-freshness-${{ github.run_id }}
-
-      - name: Keep snapshot and report as an artifact
-        if: always() && hashFiles('.agency-freshness/snapshot.json') != ''
-        uses: actions/upload-artifact@v4
-        with:
-          name: agency-freshness-snapshot
-          path: |
-            .agency-freshness/snapshot.json
-            .agency-freshness/report.md
-          retention-days: 90
-
       - name: Job summary
         if: always() && hashFiles('.agency-freshness/report.md') != ''
         run: cat "$REPORT" >> "$GITHUB_STEP_SUMMARY"
@@ -102,3 +85,23 @@ jobs:
           else
             gh issue create --repo "$GITHUB_REPOSITORY" --title "$TITLE" --label agency-data --body-file .agency-freshness/issue.md
           fi
+
+      # Save only after the issue step succeeded (or had nothing to do). If gh fails, the
+      # old snapshot stays current, so next week's run reports the same items again
+      # instead of silently treating them as already seen.
+      - name: Save snapshot (cache)
+        if: success() && hashFiles('.agency-freshness/snapshot.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .agency-freshness/snapshot.json
+          key: agency-freshness-${{ github.run_id }}
+
+      - name: Keep snapshot and report as an artifact
+        if: always() && hashFiles('.agency-freshness/snapshot.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: agency-freshness-snapshot
+          path: |
+            .agency-freshness/snapshot.json
+            .agency-freshness/report.md
+          retention-days: 90
