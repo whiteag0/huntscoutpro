@@ -133,10 +133,38 @@
      "sourceId": "d-brochure-biggame-2026",
      "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
      "date": "2026-08-04"
+    },
+    {
+     "label": "Primary draw application deadline (8 p.m. MT)",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Preference-point-only application deadline (E-P-999-99-P as first choice; 8 p.m. MT)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet. A preference-point-only application is a first-choice application in that regular drawing (#206.B.4.j).",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Secondary draw application deadline (8 p.m. MT)",
+     "kind": "leftover",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.6.g, Chapter W-2 (\"Secondary draw applications must be submitted no later than 8:00 PM Mountain Time, the last business day in June\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-06-30"
     }
    ],
    "sourceIds": [
     "d-brochure-biggame-2026",
+    "d-regs-w2-2026",
     "d-recap-elk-2022",
     "d-recap-elk-2023",
     "d-recap-elk-2024",
@@ -266,10 +294,38 @@
      "sourceId": "d-brochure-biggame-2026",
      "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
      "date": "2026-08-04"
+    },
+    {
+     "label": "Primary draw application deadline (8 p.m. MT)",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Preference-point-only application deadline (D-P-999-99-P as first choice; 8 p.m. MT)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet. A preference-point-only application is a first-choice application in that regular drawing (#206.B.4.j).",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Secondary draw application deadline (8 p.m. MT)",
+     "kind": "leftover",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.6.g, Chapter W-2 (\"Secondary draw applications must be submitted no later than 8:00 PM Mountain Time, the last business day in June\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-06-30"
     }
    ],
    "sourceIds": [
     "d-brochure-biggame-2026",
+    "d-regs-w2-2026",
     "d-recap-deer-2022",
     "d-recap-deer-2023",
     "d-recap-deer-2024",
@@ -399,10 +455,38 @@
      "sourceId": "d-brochure-biggame-2026",
      "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
      "date": "2026-08-04"
+    },
+    {
+     "label": "Primary draw application deadline (8 p.m. MT)",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Preference-point-only application deadline (D-P-999-99-P as first choice; 8 p.m. MT)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet. A preference-point-only application is a first-choice application in that regular drawing (#206.B.4.j).",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Secondary draw application deadline (8 p.m. MT)",
+     "kind": "leftover",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.6.g, Chapter W-2 (\"Secondary draw applications must be submitted no later than 8:00 PM Mountain Time, the last business day in June\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-06-30"
     }
    ],
    "sourceIds": [
     "d-brochure-biggame-2026",
+    "d-regs-w2-2026",
     "d-brochure-biggame-2022",
     "d-brochure-biggame-2023",
     "d-brochure-biggame-2024",
@@ -536,10 +620,38 @@
      "sourceId": "d-brochure-biggame-2026",
      "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
      "date": "2026-08-04"
+    },
+    {
+     "label": "Primary draw application deadline (8 p.m. MT)",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Preference-point-only application deadline (A-P-999-99-P as first choice; 8 p.m. MT)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet. A preference-point-only application is a first-choice application in that regular drawing (#206.B.4.j).",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Secondary draw application deadline (8 p.m. MT)",
+     "kind": "leftover",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.6.g, Chapter W-2 (\"Secondary draw applications must be submitted no later than 8:00 PM Mountain Time, the last business day in June\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-06-30"
     }
    ],
    "sourceIds": [
     "d-brochure-biggame-2026",
+    "d-regs-w2-2026",
     "d-recap-pronghorn-2022",
     "d-recap-pronghorn-2023",
     "d-recap-pronghorn-2024",
@@ -632,10 +744,29 @@
      "sourceId": "d-brochure-biggame-2026",
      "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
      "date": "2026-08-04"
+    },
+    {
+     "label": "Primary draw application deadline (8 p.m. MT)",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Preference-point-only application deadline (M-P-999-99-P as first choice; 8 p.m. MT)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet. A preference-point-only application is a first-choice application in that regular drawing (#206.B.4.j).",
+     "date": "2027-04-06"
     }
    ],
    "sourceIds": [
     "d-brochure-biggame-2026",
+    "d-regs-w2-2026",
     "d-recap-moose-2022",
     "d-recap-moose-2023",
     "d-recap-moose-2024",
@@ -765,10 +896,38 @@
      "sourceId": "d-brochure-biggame-2026",
      "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
      "date": "2026-08-04"
+    },
+    {
+     "label": "Primary draw application deadline (8 p.m. MT)",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Preference-point-only application deadline (B-P-999-99-P as first choice; 8 p.m. MT)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet. A preference-point-only application is a first-choice application in that regular drawing (#206.B.4.j).",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Secondary draw application deadline (8 p.m. MT)",
+     "kind": "leftover",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.6.g, Chapter W-2 (\"Secondary draw applications must be submitted no later than 8:00 PM Mountain Time, the last business day in June\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-06-30"
     }
    ],
    "sourceIds": [
     "d-brochure-biggame-2026",
+    "d-regs-w2-2026",
     "d-recap-bear-2022",
     "d-recap-bear-2023",
     "d-recap-bear-2024",
@@ -826,7 +985,7 @@
      "date": "2026-04-07"
     },
     {
-     "label": "Draw results posted to CPW accounts",
+     "label": "Draw results posted to CPW accounts (by)",
      "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
@@ -851,10 +1010,29 @@
      "sourceId": "d-brochure-sheepgoat-2026",
      "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
      "date": "2026-05-07"
+    },
+    {
+     "label": "Primary draw application deadline (8 p.m. MT)",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Preference-point-only application deadline (S-P-999-99-P as first choice; 8 p.m. MT)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet. A preference-point-only application is a first-choice application in that regular drawing (#206.B.4.j).",
+     "date": "2027-04-06"
     }
    ],
    "sourceIds": [
     "d-brochure-sheepgoat-2026",
+    "d-regs-w2-2026",
     "d-recap-rmsheep-2022",
     "d-recap-rmsheep-2023",
     "d-recap-rmsheep-2024",
@@ -917,7 +1095,7 @@
      "date": "2026-04-07"
     },
     {
-     "label": "Draw results posted to CPW accounts",
+     "label": "Draw results posted to CPW accounts (by)",
      "kind": "results",
      "cycle": 2026,
      "status": "confirmed",
@@ -942,10 +1120,29 @@
      "sourceId": "d-brochure-sheepgoat-2026",
      "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
      "date": "2026-05-07"
+    },
+    {
+     "label": "Primary draw application deadline (8 p.m. MT)",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Preference-point-only application deadline (G-P-999-99-P as first choice; 8 p.m. MT)",
+     "kind": "points",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w2-2026",
+     "note": "Set by CPW rule #206.B.3.c, Chapter W-2 (\"Applications for the regular drawing must be submitted appropriately no later than 8:00 PM Mountain Time on the first Tuesday in April\"); CPW hasn't announced the 2027 date yet. A preference-point-only application is a first-choice application in that regular drawing (#206.B.4.j).",
+     "date": "2027-04-06"
     }
    ],
    "sourceIds": [
     "d-brochure-sheepgoat-2026",
+    "d-regs-w2-2026",
     "d-recap-goat-2022",
     "d-recap-goat-2023",
     "d-recap-goat-2024",
@@ -1117,10 +1314,29 @@
      "sourceId": "d-brochure-turkey-2026",
      "note": "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates.",
      "date": "2026-06-18"
+    },
+    {
+     "label": "Spring limited draw application deadline (8 p.m. MT)",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w3-2026",
+     "note": "Set by CPW rule #322.B.2.c.1, Chapter W-3 (\"Applications for limited licenses must be received by phone or online no later than 8:00 PM Mountain Time, on the first Tuesday in February annually\"); CPW hasn't announced the 2027 date yet.",
+     "date": "2027-02-02"
+    },
+    {
+     "label": "Fall limited draw application deadline (8 p.m. MT)",
+     "kind": "application",
+     "cycle": 2027,
+     "status": "tentative",
+     "sourceId": "d-regs-w3-2026",
+     "note": "Set by CPW rule #322.B.2.d.1, Chapter W-3 (\"Applications for limited licenses must be received by phone or online no later than 8:00 PM Mountain Time, on the last business day in May annually\"); CPW hasn't announced the 2027 date yet. May 31, 2027 is Memorial Day, a state holiday, so the last business day is Friday, May 28.",
+     "date": "2027-05-28"
     }
    ],
    "sourceIds": [
     "d-brochure-turkey-2026",
+    "d-regs-w3-2026",
     "d-recap-sturkey-2022",
     "d-recap-sturkey-2023",
     "d-recap-sturkey-2024",
@@ -2177,10 +2393,18 @@
   },
   {
    "species": "turkey",
-   "label": "Late season",
+   "label": "Late season (private land only)",
+   "units": [
+    "112",
+    "113"
+   ],
+   "huntCodes": [
+    "TF000U2R"
+   ],
    "start": "2026-12-15",
    "end": "2027-01-15",
    "year": 2026,
+   "note": "Over-the-counter beardless licenses valid on private land only in GMUs 112 and 113 (T-F-000-U2-R), Chapter W-3 #322.",
    "sourceId": "d-brochure-turkey-2026"
   },
   {

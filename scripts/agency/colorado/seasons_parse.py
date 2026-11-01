@@ -47,6 +47,7 @@ CONFLICTS = {
     "DM851O1R": "Chapter W-2 #250 gives no special dates (first rifle, 10/14-10/18/2026); the brochure prints Oct. 10-14.",
     "EF054P5R": "Chapter W-2 #257 prints 09/01/2026 - 11/22/2026; the brochure prints Aug. 31-Nov. 22.",
     "SMS61O1R": "Chapter W-2 #218 prints 09/01/2026 - 09/20/2026; the brochure prints Sept. 1-20 and Dec. 1-31.",
+    "SFS34O1A": "Chapter W-2 #218 prints 10/01 - 10/14 annually; the brochure prints Oct. 1-15.",
 }
 BROCHURES = [("bg-brochure-hunts.json", "d-brochure-biggame-2026"), ("sg-brochure-hunts.json", "d-brochure-sheepgoat-2026"),
              ("turkey-brochure-hunts.json", "d-brochure-turkey-2026")]
