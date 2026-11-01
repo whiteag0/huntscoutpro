@@ -12,6 +12,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   hasPlannerContent,
   mergePlanners,
+  PLANNER_SCHEMA,
   samePlanner,
   sanitizePlannerData,
   type PlannerData,
@@ -143,7 +144,7 @@ export function usePlannerSync({ ready, email, isPro }: { ready: boolean; email:
           res = await fetch("/api/planner", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ version: s.baseVersion, data: sent }),
+            body: JSON.stringify({ schema: PLANNER_SCHEMA, version: s.baseVersion, data: sent }),
           });
         } catch {
           setStatus({ kind: "offline" });
@@ -296,7 +297,7 @@ export function usePlannerSync({ ready, email, isPro }: { ready: boolean; email:
     const onHide = () => {
       const s = r.current;
       if (!s.dirty || !s.data || s.saving) return;
-      const payload = JSON.stringify({ version: s.baseVersion, data: s.data });
+      const payload = JSON.stringify({ schema: PLANNER_SCHEMA, version: s.baseVersion, data: s.data });
       // keepalive bodies are capped at 64 KB; bigger planners sync on the next visit.
       if (payload.length < 60_000) {
         try {

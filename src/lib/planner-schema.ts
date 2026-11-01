@@ -231,8 +231,13 @@ export interface PlannerDoc {
 export const PLANNER_SCHEMA = 2;
 /** Older schemas sanitizePlannerDoc can still read (migrated on load). */
 export const PLANNER_SCHEMAS_READ: readonly number[] = [1, 2];
-/** Largest stored planner document, in bytes of JSON. */
-export const MAX_PLANNER_BYTES = 200 * 1024;
+/**
+ * Largest stored planner document, in bytes of JSON. A planned hunt's agency block is
+ * 3-8 KB, so this fits the 150-hunt limit with room for notes and budget lines.
+ */
+export const MAX_PLANNER_BYTES = 1024 * 1024;
+/** The size cap in words, for messages ("1 MB"). */
+export const MAX_PLANNER_SIZE_TEXT = MAX_PLANNER_BYTES >= 1024 * 1024 ? `${MAX_PLANNER_BYTES / (1024 * 1024)} MB` : `${MAX_PLANNER_BYTES / 1024} KB`;
 export const PLANNER_LIMITS = {
   hunts: 150,
   budget: 600,
@@ -650,8 +655,12 @@ export function mergePlanners(a: PlannerData, b: PlannerData, prefer: "a" | "b" 
   for (const h of second.hunts) huntsById.set(h.id, h);
   for (const h of first.hunts) {
     const other = huntsById.get(h.id);
-    if (other && other.updatedAt && h.updatedAt && other.updatedAt > h.updatedAt) continue;
-    huntsById.set(h.id, h);
+    if (!other) {
+      huntsById.set(h.id, h);
+      continue;
+    }
+    // The member's edits: the newer copy wins. The agency block is picked on its own (see combineHunt).
+    huntsById.set(h.id, other.updatedAt && h.updatedAt && other.updatedAt > h.updatedAt ? combineHunt(other, h) : combineHunt(h, other));
   }
   // Collapse duplicates; remember which id each dropped one became.
   const alias = new Map<string, string>();
@@ -722,6 +731,78 @@ export function mergePlanners(a: PlannerData, b: PlannerData, prefer: "a" | "b" 
     budget: budget.slice(0, PLANNER_LIMITS.budget),
     checklist: checklist.slice(0, PLANNER_LIMITS.checklist),
     deleted,
+  };
+}
+
+/** When an agency block was last built from agency data (planned or refreshed), as ms; 0 when unknown. */
+function agencyStamp(a: AgencyRef): number {
+  const t = Date.parse(a.refreshedAt || a.addedAt);
+  return Number.isFinite(t) ? t : 0;
+}
+
+/** A copy written by a page from before schema 2: none of the v2 member fields are present. */
+const isV1Shaped = (h: PlannedHunt) => h.tasks === undefined && h.customDates === undefined && h.stepsDone === undefined;
+const V2_STATUSES: readonly HuntStatus[] = ["tag-purchased", "hunted"];
+
+/**
+ * One hunt from two copies. `mine` is the copy whose member edits win (the newer
+ * updatedAt); `other` is the other copy.
+ * - The agency block is the more recently built one (a refresh on the server or
+ *   another device doesn't count as a member edit, and a member edit doesn't
+ *   undo a refresh), with the fields derived from it (see withAgencyBlock).
+ * - A v1-shaped `mine` (saved by a page loaded before the v2 planner) keeps the
+ *   v2 checklist, own dates, ticked steps, drawing answer and v2 status from `other`,
+ *   which that page couldn't show or keep.
+ */
+function combineHunt(mine: PlannedHunt, other: PlannedHunt): PlannedHunt {
+  let out = mine;
+  if (isV1Shaped(mine) && !isV1Shaped(other)) {
+    out = {
+      ...out,
+      ...(other.tasks ? { tasks: other.tasks } : {}),
+      ...(other.customDates ? { customDates: other.customDates } : {}),
+      ...(other.stepsDone ? { stepsDone: other.stepsDone } : {}),
+      ...(other.drawing && !out.drawing ? { drawing: other.drawing } : {}),
+      ...(V2_STATUSES.includes(other.status) && out.status === "planning" ? { status: other.status } : {}),
+    };
+  }
+  const a = out.agency;
+  const b = other.agency;
+  if (a && b && a !== b) {
+    const sa = agencyStamp(a);
+    const sb = agencyStamp(b);
+    if (sb > sa || (sb === sa && a.keyDates === undefined && b.keyDates !== undefined)) out = withAgencyBlock(out, b);
+  }
+  return out;
+}
+
+/**
+ * The hunt with `fresh` as its agency block and the fields derived from it
+ * updated (the application deadline and, for draw hunts, the printed season
+ * dates). Everything the member entered stays; an application date the member
+ * typed while the agency had none is kept as one of their own dates when the
+ * agency's date replaces it.
+ */
+export function withAgencyBlock(h: PlannedHunt, fresh: AgencyRef): PlannedHunt {
+  const old = h.agency;
+  const derived = !!old?.deadline && h.applicationDeadline === old.deadline.end;
+  let applicationDeadline = h.applicationDeadline;
+  let customDates = h.customDates;
+  if (fresh.deadline) {
+    if (h.applicationDeadline && !derived && h.applicationDeadline !== fresh.deadline.end) {
+      const mine: CustomDate = { id: `own${h.applicationDeadline.replace(/-/g, "")}`, label: "Application deadline you entered", date: h.applicationDeadline };
+      if (!(customDates || []).some((c) => c.id === mine.id)) customDates = [...(customDates || []), mine];
+    }
+    applicationDeadline = fresh.deadline.end;
+  } else if (derived) {
+    applicationDeadline = "";
+  }
+  return {
+    ...h,
+    agency: fresh,
+    applicationDeadline,
+    seasonDates: (fresh.kind ?? "draw") === "draw" ? fresh.seasonText || h.seasonDates : h.seasonDates,
+    ...(customDates ? { customDates } : {}),
   };
 }
 

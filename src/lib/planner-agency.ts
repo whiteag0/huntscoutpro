@@ -39,18 +39,44 @@ const NOT_APPLICATION = /point[-\s]?only|point purchase|without applying|leftove
  * Separate drawings an agency runs alongside its main draw. A hunt from the draw
  * table is only matched to one of these when its own description names it too.
  */
-const SPECIAL_DRAWINGS = [/general[-\s]season/i, /sportsman/i, /landowner/i, /governor/i, /conservation/i, /\bexpo\b/i, /raffle/i, /\bDAV\b/, /\byouth\b/i, /antlerless/i];
-/** Second / secondary rounds are for leftovers; a planned hunt's date is the main application. */
-const LATER_ROUND = /\bsecond(ary)?\b/i;
+const SPECIAL_DRAWINGS = [
+  /general[-\s]season/i,
+  /sportsman/i,
+  /landowner/i,
+  /governor/i,
+  /conservation/i,
+  /\bexpo\b/i,
+  /raffle/i,
+  /\bDAV\b/,
+  /\byouth\b/i,
+  /antlerless/i,
+  // Alaska's Tier II subsistence permits, Nevada's restricted nonresident guided draw, South Dakota's
+  // special buck and access-permit drawings, Washington's multi-season tags, Montana's B licenses.
+  /\btier\s*(ii|2)\b/i,
+  /\brestricted\b/i,
+  /special buck/i,
+  /access permit/i,
+  /multi[-\s]season/i,
+  /\bB licen[cs]e/i,
+];
+/** Second (and later) rounds are for leftovers; a planned hunt's date is the main application. */
+const LATER_ROUND = /\b(second(ary)?|third|fourth|fifth)\b/i;
 const SPRING = /\bspring\b/i;
 const FALL = /\bfall\b/i;
 
 type HuntSeason = "spring" | "fall" | null;
 
-/** The season a key-date label is limited to ("Spring turkey ... application period"), if exactly one. */
+/**
+ * The season a key-date label is limited to ("Spring turkey ... application period"), if exactly one.
+ * Parentheses are left out: "Controlled hunt first application period (deer, elk, pronghorn, fall bear)"
+ * lists species, it isn't a fall-only date.
+ */
 function labelSeason(label: string): HuntSeason {
-  const sp = SPRING.test(label);
-  const fa = FALL.test(label);
+  return seasonIn(label.replace(/\([^)]*\)/g, " "));
+}
+function seasonIn(text: string): HuntSeason {
+  const sp = SPRING.test(text);
+  const fa = FALL.test(text);
   return sp && !fa ? "spring" : fa && !sp ? "fall" : null;
 }
 
@@ -59,7 +85,7 @@ function labelSeason(label: string): HuntSeason {
  * month (Mar-Jun spring, Aug-Dec fall). Null when neither tells.
  */
 function huntSeason(description: string, seasonDates?: string): HuntSeason {
-  const named = labelSeason(description);
+  const named = seasonIn(description);
   if (named) return named;
   const m = /^\d{4}-(\d{2})-\d{2}/.exec(seasonDates || "");
   const month = m ? Number(m[1]) : 0;
@@ -198,13 +224,15 @@ const SEASON_OF: Partial<Record<string, PlannerSeason>> = { rifle: "rifle", arch
 export function keyDateKind(k: Pick<KeyDate, "label" | "kind">): AgencyDateKind {
   if (k.kind) return k.kind;
   const l = k.label;
-  if (/point[-\s]?only|points? only|point purchase|without applying/i.test(l)) return "points";
-  if (/surrender|return (a |the )?(drawn )?(license|tag)/i.test(l)) return "surrender";
-  if (/leftover|\bsecond(ary)?\b.*\b(draw|drawing|application|round)|remaining/i.test(l)) return "leftover";
-  if (/result|notified|notification|posted|announced/i.test(l)) return "results";
-  if (/payment|\bpay\b|deadline to (buy|purchase)|purchase deadline|must be purchased/i.test(l)) return "payment";
+  if (/point[-\s]?only|points? only|point purchase|point saver|without applying/i.test(l)) return "points";
+  if (/surrender|return (a |the )?(drawn )?(license|tag)|\b(license|tag) return\b/i.test(l)) return "surrender";
+  if (/leftover|\b(second(ary)?|third|fourth|fifth)\b.*\b(draw|drawing|application|round)|remaining/i.test(l)) return "leftover";
+  if (/result|notified|notification|\bnotices?\b|posted|announced|mailed|by mail\b/i.test(l)) return "results";
+  if (/payment|\bpay\b|deadline to (buy|purchase)|purchase deadline|must be purchased|\b(tag|license|permit) sale deadline/i.test(l)) return "payment";
   if (/on sale|over[- ]the[- ]counter|\bOTC\b|first[- ]come/i.test(l)) return "license-sale";
-  if (/withdraw|modif|correction|amend/i.test(l)) return "application-change";
+  if (/withdraw|modif|correction|amend|\bchanges?\b/i.test(l)) return "application-change";
+  // Deadlines that aren't the application: harvest reports, asking for a paper application, orientations.
+  if (/\breport(s|ing)?\b|alternative to applying|\bask\b|\brequest\b|orientation/i.test(l)) return "other";
   if (/appl|deadline|drawing|\bdraw\b/i.test(l)) return "application";
   return "other";
 }
@@ -226,12 +254,35 @@ export interface HuntFit {
   description: string;
   /** Spring or fall when known: from the member's answer, the description, or the season dates. */
   season: DrawingSeason | null;
+  /** The row's weapon, when the agency gives one ("rifle", "archery", ...). */
+  method?: string;
+  /** The application round the hunt's description names ("Second Application Period" = 2); 1 when it names none. */
+  round?: number;
+}
+
+const ROUNDS: Record<string, number> = { first: 1, second: 2, secondary: 2, third: 3, fourth: 4, fifth: 5 };
+const ROUND_RE = /\b(first|second(?:ary)?|third|fourth|fifth)\b[\s-]+(?:application|draw|drawing|round)/i;
+/** The application round a label or description names ("Deer third draw application period" = 3), else null. */
+function roundOf(text: string): number | null {
+  const m = ROUND_RE.exec(text);
+  return m ? ROUNDS[m[1].toLowerCase()] : null;
 }
 
 /** The hunt's season from the member's answer, else its description, else its season dates. */
-export function fitFor(kind: PlanKind, description: string, row?: Pick<DrawRecord, "seasonDates" | "seasonRanges"> | null, drawing?: DrawingSeason | null): HuntFit {
+export function fitFor(
+  kind: PlanKind,
+  description: string,
+  row?: Pick<DrawRecord, "seasonDates" | "seasonRanges"> & Partial<Pick<DrawRecord, "method">> | null,
+  drawing?: DrawingSeason | null
+): HuntFit {
   const dates = row?.seasonRanges?.[0]?.start || row?.seasonDates;
-  return { kind, description, season: drawing || huntSeason(description, dates) };
+  return {
+    kind,
+    description,
+    season: drawing || huntSeason(description, dates),
+    ...(row?.method ? { method: row.method } : {}),
+    ...(kind === "draw" ? { round: roundOf(description) ?? 1 } : {}),
+  };
 }
 
 /** Seasons the species' application dates are split by ("Spring ... application period" / "Fall ..."). */
@@ -247,6 +298,27 @@ export function needsDrawingChoice(info: Pick<SpeciesInfo, "keyDates">, fit: Hun
   if (fit.season || fit.kind === "otc") return false;
   const s = applicationSeasons(info.keyDates);
   return s.has("spring") && s.has("fall");
+}
+
+/** Weapons a label is limited to when it leads with one ("Nonresident archery deer ...", "Resident firearm/muzzleloader antelope ..."). */
+const LABEL_METHOD = /^(?:(?:non-?\s?)?residents?\s+)?((?:archery|firearms?|rifle|muzzleloader|shotgun)(?:\s*\/\s*(?:archery|firearms?|rifle|muzzleloader|shotgun))*)\b/i;
+const FIREARMS = ["rifle", "muzzleloader", "shotgun"];
+function labelMethods(label: string): Set<string> | null {
+  const m = LABEL_METHOD.exec(label);
+  if (!m) return null;
+  const out = new Set<string>();
+  for (const w of m[1].toLowerCase().split(/\s*\/\s*/)) for (const x of /^firearm/.test(w) ? FIREARMS : [w]) out.add(x);
+  return out;
+}
+/** Whether a weapon-limited date (e.g. "Nonresident archery deer application period") is for this hunt's weapon. */
+function methodFitsLabel(label: string, fit: HuntFit): boolean {
+  if (fit.kind !== "draw") return true;
+  const allowed = labelMethods(label);
+  if (!allowed) return true;
+  const m = fit.method && fit.method !== "all" && fit.method !== "other" ? fit.method : /\barchery\b|\bbow\b/i.test(fit.description) ? "archery" : /muzzleloader/i.test(fit.description) ? "muzzleloader" : null;
+  // Weapon not given: the hunt isn't an archery-only hunt unless it says so.
+  if (!m) return !(allowed.size === 1 && allowed.has("archery"));
+  return allowed.has(m);
 }
 
 /**
@@ -265,6 +337,7 @@ function fitsPlan(k: KeyDate, fit: HuntFit, seasonsInUse: ReadonlySet<HuntSeason
   if (fit.kind === "draw" && kind === "license-sale") return false;
   if (!SPECIAL_DRAWINGS.every((re) => !re.test(k.label) || re.test(fit.description))) return false;
   if (kind === "application" && ownDrawings.length && !ownDrawings.some((re) => re.test(k.label))) return false;
+  if (!methodFitsLabel(k.label, fit)) return false;
   return true;
 }
 
@@ -278,6 +351,24 @@ export function relevantKeyDates(info: Pick<SpeciesInfo, "keyDates">, residency:
     const only = keyDateResidency(k);
     return (!only || only === residency) && fitsPlan(k, fit, seasonsInUse, ownDrawings);
   });
+}
+
+/** The first-round application window or deadline (not a second/leftover round). */
+const isFirstRoundApplication = (k: Pick<KeyDate, "label" | "kind">) => keyDateKind(k) === "application" && !LATER_ROUND.test(k.label);
+
+/**
+ * Which of the hunt's dates are its own application date. Usually the first-round
+ * application; for a hunt the agency lists in a later round ("West River Deer,
+ * Second Application Period"), that round's application period when the agency
+ * lists one.
+ */
+export function mainApplicationTest(dates: readonly KeyDate[], fit: Pick<HuntFit, "round">): (k: KeyDate) => boolean {
+  const r = fit.round ?? 1;
+  if (r > 1) {
+    const ofRound = (k: KeyDate) => roundOf(k.label) === r && (keyDateKind(k) === "application" || keyDateKind(k) === "leftover");
+    if (dates.some(ofRound)) return ofRound;
+  }
+  return isFirstRoundApplication;
 }
 
 /** Window end or single date; "" when the key date has neither (start-only notes). */
@@ -298,41 +389,49 @@ export interface CyclePick {
 }
 
 /**
- * The cycle to plan for: the soonest cycle whose application dates (or, with
- * none, any of its dates) haven't all passed. When every published cycle has
- * passed, the cycle being planned is the next one and the latest published
+ * The cycle to plan for: the soonest cycle whose application dates (or, when
+ * the agency lists no application date for the hunt in any cycle, any of its
+ * dates) haven't all passed. A cycle holding only other dates (another
+ * drawing's payment deadline, results) while the hunt's application date is
+ * listed for other cycles isn't one the hunt can be applied for yet. When every
+ * such cycle has passed, the cycle being planned is the next one and the latest
  * cycle's dates are returned with published = false, so they can be shown as
  * "2026 dates — 2027 not yet published", never as the upcoming deadline.
  */
-export function selectCycle(dates: readonly KeyDate[], today: string): CyclePick {
+export function selectCycle(dates: readonly KeyDate[], today: string, isMain: (k: KeyDate) => boolean = isFirstRoundApplication): CyclePick {
   const withEnd = dates.map((k) => ({ ...k, end: endOf(k) })).filter((k) => ISO.test(k.end));
-  const cycles = Array.from(new Set(withEnd.map((k) => k.cycle))).sort((a, b) => a - b);
-  if (!cycles.length) return { planCycle: null, datesCycle: null, published: false, dates: [] };
+  const allCycles = Array.from(new Set(withEnd.map((k) => k.cycle))).sort((a, b) => a - b);
+  if (!allCycles.length) return { planCycle: null, datesCycle: null, published: false, dates: [] };
   const rank = (k: KeyDate) => KIND_ORDER.indexOf(keyDateKind(k));
   const inCycle = (c: number) =>
     withEnd.filter((k) => k.cycle === c).sort((a, b) => (a.start || a.end).localeCompare(b.start || b.end) || rank(a) - rank(b) || a.label.localeCompare(b.label));
-  const primary = (c: number) => {
-    const all = inCycle(c);
-    const apps = all.filter((k) => keyDateKind(k) === "application" && !LATER_ROUND.test(k.label));
-    return apps.length ? apps : all;
-  };
+  const withApps = allCycles.filter((c) => inCycle(c).some(isMain));
+  const cycles = withApps.length ? withApps : allCycles;
   for (const c of cycles) {
-    if (primary(c).some((k) => k.end >= today)) return { planCycle: c, datesCycle: c, published: true, dates: inCycle(c) };
+    const primary = withApps.length ? inCycle(c).filter(isMain) : inCycle(c);
+    if (primary.some((k) => k.end >= today)) return { planCycle: c, datesCycle: c, published: true, dates: inCycle(c) };
   }
   const latest = cycles[cycles.length - 1];
   return { planCycle: latest + 1, datesCycle: latest, published: false, dates: inCycle(latest) };
 }
 
 /** The main application date to remind about: the soonest open application window in a published cycle. */
-function mainDeadline(pick: CyclePick, today: string): (KeyDate & { end: string }) | null {
+function mainDeadline(pick: CyclePick, today: string, isMain: (k: KeyDate) => boolean): (KeyDate & { end: string }) | null {
   if (!pick.published) return null;
-  const apps = pick.dates.filter((k) => keyDateKind(k) === "application" && !LATER_ROUND.test(k.label) && k.end >= today);
+  const apps = pick.dates.filter((k) => isMain(k) && k.end >= today);
   return apps.sort((a, b) => a.end.localeCompare(b.end) || a.label.localeCompare(b.label))[0] ?? null;
+}
+
+/** The hunt's dates and the cycle picked from them, by the same rules planAgency uses. */
+export function pickForHunt(info: Pick<SpeciesInfo, "keyDates">, residency: PlannerResidency, today: string, fit: HuntFit): { pick: CyclePick; isMain: (k: KeyDate) => boolean } {
+  const dates = relevantKeyDates(info, residency, fit);
+  const isMain = mainApplicationTest(dates, fit);
+  return { pick: selectCycle(dates, today, isMain), isMain };
 }
 
 /** The cycle an entry planned today would get (used by "Add to my planner" to tell if a hunt is already planned). */
 export function planCycleFor(info: Pick<SpeciesInfo, "keyDates">, residency: PlannerResidency, today: string, fit: HuntFit): number | null {
-  return selectCycle(relevantKeyDates(info, residency, fit), today).planCycle;
+  return pickForHunt(info, residency, today, fit).pick.planCycle;
 }
 
 // ------------------------------------------------------------
@@ -520,7 +619,7 @@ export function planAgency(input: PlanInput): PlanResult {
   if (kind === "draw" && !row) throw new Error("A draw hunt needs its agency row.");
   const description = clip(row ? row.description : kind === "otc" ? info.otcSummary || OTC_DESCRIPTION : input.customDescription || "", 600);
   const fit = fitFor(kind, kind === "otc" ? `${OTC_DESCRIPTION} ${description}` : description, row, input.drawing);
-  const pick = selectCycle(relevantKeyDates(info, residency, fit), today);
+  const { pick, isMain } = pickForHunt(info, residency, today, fit);
   const srcOf = (id: string) => sourceOf(st, id);
   const urlOf = (id: string) => srcOf(id)?.url || st.agency.url;
   const links: string[] = [];
@@ -547,7 +646,7 @@ export function planAgency(input: PlanInput): PlanResult {
       ...(src >= 0 ? { src } : {}),
     };
   });
-  const main = mainDeadline(pick, today);
+  const main = mainDeadline(pick, today, isMain);
   const mainSrc = main ? srcOf(main.sourceId) : undefined;
   const deadline: AgencyDeadline | null = main
     ? {

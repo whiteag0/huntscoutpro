@@ -57,7 +57,8 @@ test("refresh: newly published 2027 dates flow in, the member's edits stay", () 
   assert.deepEqual([hunt.agency!.planCycle, hunt.agency!.cyclePublished, hunt.agency!.deadline!.end], [2027, true, "2027-04-08"]);
   assert.equal(hunt.agency!.addedAt, h.agency!.addedAt);
   assert.equal(hunt.agency!.refreshedAt, "2027-01-05T00:00:00.000Z");
-  assert.equal(hunt.updatedAt, "2027-01-05T00:00:00.000Z");
+  // updatedAt marks the member's own edits; a refresh isn't one (so it can't win a merge over an edit made elsewhere).
+  assert.equal(hunt.updatedAt, h.updatedAt);
   // Member's fields untouched.
   for (const k of ["id", "status", "notes", "preferencePointsOwned", "preferencePointsNeeded", "stepsDone", "tasks"] as const) assert.deepEqual(hunt[k], h[k], k);
   // The date the member typed before CPW published becomes one of their own dates.

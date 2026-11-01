@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { NextResponse } from "next/server";
 import { todayIso } from "@/lib/agency-format";
 import { NO_STORE, plannerMember, readJsonBody } from "@/lib/planner-auth";
-import { findAgencyDuplicate, PLANNER_LIMITS, type PlannedHunt } from "@/lib/planner-schema";
+import { findAgencyDuplicate, MAX_PLANNER_SIZE_TEXT, PLANNER_LIMITS, type PlannedHunt } from "@/lib/planner-schema";
 import { assemblePlan, parsePlanRequest } from "@/lib/planner-server";
 import { PlannerConflictError, PlannerTooLargeError, PlannerUnavailableError, readPlanner, updatePlanner } from "@/lib/planner-store";
 
@@ -52,7 +52,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ status: result.status, hunt: result.hunt, version: doc.version }, { headers: NO_STORE });
   } catch (err) {
     if (err instanceof PlannerTooLargeError) {
-      return NextResponse.json({ error: "Your planner is full (200 KB). Remove some hunts or notes to add more." }, { status: 413, headers: NO_STORE });
+      return NextResponse.json({ error: `Your planner is full (${MAX_PLANNER_SIZE_TEXT}). Remove some hunts or notes to add more.` }, { status: 413, headers: NO_STORE });
     }
     if (err instanceof PlannerUnavailableError) {
       return NextResponse.json({ error: "Account sync is unavailable right now." }, { status: 503, headers: NO_STORE });

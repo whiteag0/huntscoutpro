@@ -266,3 +266,48 @@ test("duplicates: general/OTC entries match by state + species + residency + cyc
   assert.ok(findAgencyDuplicate([hunt({ id: "a1", agency: agency({ deadline: null, planCycle: 2027 }) })], agency()));
   assert.equal(findAgencyDuplicate([hunt({ id: "a1", agency: agency({ deadline: null, planCycle: 2028 }) })], agency()), undefined);
 });
+
+test("merge: a refresh elsewhere and a member edit here both survive (the agency block goes by refreshedAt)", () => {
+  // The server refreshed the hunt (new agency block) while this device, offline, edited the notes.
+  const base = hunt({ id: "h1", notes: "", status: "planning", updatedAt: "2026-10-30T10:00:00.000Z", agency: agency({ planCycle: 2027, keyDates: [] }) });
+  const refreshed: PlannedHunt = {
+    ...base,
+    agency: agency({ planCycle: 2027, cyclePublished: true, keyDates: [], refreshedAt: "2026-11-02T00:00:00.000Z" }),
+    applicationDeadline: "2027-04-07",
+  };
+  const edited: PlannedHunt = { ...base, notes: "Camp at the trailhead", status: "applied", updatedAt: "2026-11-01T09:00:00.000Z" };
+  for (const [x, y, prefer] of [
+    [refreshed, edited, "b"],
+    [edited, refreshed, "a"],
+    [refreshed, edited, "a"],
+  ] as const) {
+    const m = mergePlanners(data({ hunts: [x] }), data({ hunts: [y] }), prefer).hunts[0];
+    assert.equal(m.notes, "Camp at the trailhead");
+    assert.equal(m.status, "applied");
+    assert.equal(m.agency!.refreshedAt, "2026-11-02T00:00:00.000Z");
+    assert.equal(m.agency!.cyclePublished, true);
+  }
+});
+
+test("merge: a copy saved by a page from before schema 2 doesn't erase v2 member fields", () => {
+  const v2 = hunt({
+    id: "h1",
+    status: "tag-purchased",
+    updatedAt: "2026-11-01T00:00:00.000Z",
+    tasks: [{ id: "t1", label: "Scout", done: true }],
+    customDates: [{ id: "c1", label: "Flights", date: "2027-01-10" }],
+    stepsDone: ["apply"],
+    drawing: "fall",
+    agency: agency({ keyDates: [], planCycle: 2027 }),
+  });
+  // The old page coerced the unknown status to "planning", dropped the v2 fields and edited the notes later.
+  const stripped: PlannedHunt = { ...v2 };
+  for (const k of ["tasks", "customDates", "stepsDone", "drawing"] as const) delete stripped[k];
+  const old: PlannedHunt = { ...stripped, status: "planning", notes: "edited on the old page", updatedAt: "2026-11-02T00:00:00.000Z", agency: agency() };
+  const m = mergePlanners(data({ hunts: [v2] }), data({ hunts: [old] }), "b").hunts[0];
+  assert.equal(m.notes, "edited on the old page");
+  assert.equal(m.status, "tag-purchased");
+  assert.deepEqual([m.tasks, m.customDates, m.stepsDone, m.drawing], [v2.tasks, v2.customDates, v2.stepsDone, "fall"]);
+  // Same build time, but only one copy has the v2 agency fields: that one is kept.
+  assert.deepEqual(m.agency!.keyDates, []);
+});

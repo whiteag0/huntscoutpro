@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { todayIso } from "@/lib/agency-format";
 import { NO_STORE, plannerMember, readJsonBody } from "@/lib/planner-auth";
-import type { AgencyRef } from "@/lib/planner-schema";
+import { MAX_PLANNER_SIZE_TEXT, type AgencyRef } from "@/lib/planner-schema";
 import { refreshPlanner, type HuntUpdate } from "@/lib/planner-refresh";
 import { freshAgencyFor, type RowCache } from "@/lib/planner-server";
 import { PlannerConflictError, PlannerTooLargeError, PlannerUnavailableError, readPlanner, updatePlanner } from "@/lib/planner-store";
@@ -43,7 +43,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ updates: result, checked: targets.length, unmatched, version: saved.version }, { headers: NO_STORE });
   } catch (err) {
     if (err instanceof PlannerTooLargeError) {
-      return NextResponse.json({ error: "Your planner is over the 200 KB limit, so updated dates couldn't be saved. Remove some hunts or notes." }, { status: 413, headers: NO_STORE });
+      return NextResponse.json({ error: `Your planner is over the ${MAX_PLANNER_SIZE_TEXT} limit, so updated dates couldn't be saved. Remove some hunts or notes.` }, { status: 413, headers: NO_STORE });
     }
     if (err instanceof PlannerUnavailableError) {
       return NextResponse.json({ error: "Account sync is unavailable right now." }, { status: 503, headers: NO_STORE });

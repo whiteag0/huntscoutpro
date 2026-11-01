@@ -93,7 +93,7 @@ export function refreshPlannerIndex(force = false): Promise<void> {
 }
 
 /** The cycle planning this hunt today would get (same rule the server uses). */
-export function plannedCycle(info: Pick<SpeciesInfo, "keyDates">, residency: PlannerResidency, row: Pick<DrawRecord, "description" | "seasonDates" | "seasonRanges">): number | null {
+export function plannedCycle(info: Pick<SpeciesInfo, "keyDates">, residency: PlannerResidency, row: Pick<DrawRecord, "description" | "seasonDates" | "seasonRanges" | "method">): number | null {
   return planCycleFor(info, residency, todayIso(), fitFor("draw", row.description, row));
 }
 

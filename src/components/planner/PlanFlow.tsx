@@ -120,8 +120,30 @@ export function PlanFlow({ states, initial }: { states: FlowState[]; initial: Fl
         </div>
       </section>
       <DemoGate feature="the Hunt Planner">
-        <FlowBody states={states} initial={initial} />
+        <GatedFlow states={states} initial={initial} />
       </DemoGate>
+    </div>
+  );
+}
+
+/**
+ * The flow for members; everyone else sees a static picture of the first step behind the gate,
+ * so nothing calls the Pro-only planner APIs or counts as a plan_start.
+ */
+function GatedFlow({ states, initial }: { states: FlowState[]; initial: FlowInitial }) {
+  const { data: session } = useSession();
+  if (session?.user?.isPro) return <FlowBody states={states} initial={initial} />;
+  return (
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <h2 className="text-xl font-bold text-foreground mb-4">Which state?</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        {states.map((s) => (
+          <div key={s.slug} className="rounded-xl border border-border bg-card px-3 py-2.5">
+            <span className="block font-semibold text-foreground">{s.name}</span>
+            <span className="block text-xs text-muted-foreground">{s.agency}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -180,6 +202,7 @@ function FlowBody({ states, initial }: { states: FlowState[]; initial: FlowIniti
     return (
       <Shell step={step} idx={0} total={1} headingRef={headingRef} title="A state we don't cover yet" summary={[]} onEdit={go}>
         <ManualHunt
+          ready={!!sync.data}
           covered={states.map((s) => s.name)}
           onBack={() => setSlug("")}
           onSave={(h) => {
@@ -198,14 +221,15 @@ function FlowBody({ states, initial }: { states: FlowState[]; initial: FlowIniti
         <StatePick
           states={states}
           value={slug}
-          onPick={(s) => {
+          onPick={(s, advance) => {
             if (s !== slug) {
               setSpecies("");
               setHuntCode("");
             }
             setSlug(s);
-            if (s !== OTHER_STATE) go("species");
+            if (advance && s !== OTHER_STATE) go("species");
           }}
+          onNext={() => go("species")}
         />
       )}
       {step === "species" && st && (
@@ -213,11 +237,12 @@ function FlowBody({ states, initial }: { states: FlowState[]; initial: FlowIniti
           st={st}
           value={species}
           onBack={() => go("state")}
-          onPick={(s) => {
+          onPick={(s, advance) => {
             if (s !== species) setHuntCode("");
             setSpecies(s);
-            go("residency");
+            if (advance) go("residency");
           }}
+          onNext={() => go("residency")}
         />
       )}
       {step === "residency" && st && sp && (
@@ -225,10 +250,11 @@ function FlowBody({ states, initial }: { states: FlowState[]; initial: FlowIniti
           st={st}
           value={residency}
           onBack={() => go("species")}
-          onPick={(r) => {
+          onPick={(r, advance) => {
             setResidency(r);
-            go("hunt");
+            if (advance) go("hunt");
           }}
+          onNext={() => go("hunt")}
         />
       )}
       {step === "hunt" && st && sp && residency && (
@@ -358,15 +384,43 @@ function Shell({
   );
 }
 
-function StatePick({ states, value, onPick }: { states: FlowState[]; value: string; onPick: (slug: string) => void }) {
-  const name = useId();
+/**
+ * Picking an option moves to the next step, except when the change came from arrow keys
+ * (moving through a radio group selects as it goes): keyboard users continue with the button.
+ */
+function useArrowGuard() {
+  const arrow = useRef(false);
+  return {
+    groupProps: {
+      onKeyDown: (e: React.KeyboardEvent) => {
+        arrow.current = e.key.startsWith("Arrow");
+      },
+      onPointerDown: () => {
+        arrow.current = false;
+      },
+    },
+    advance: () => !arrow.current,
+  };
+}
+
+function ContinueButton({ disabled, onClick }: { disabled: boolean; onClick: () => void }) {
   return (
-    <fieldset>
+    <button type="button" disabled={disabled} onClick={onClick} className={primaryBtn}>
+      Continue <ChevronRight className="w-4 h-4" aria-hidden />
+    </button>
+  );
+}
+
+function StatePick({ states, value, onPick, onNext }: { states: FlowState[]; value: string; onPick: (slug: string, advance: boolean) => void; onNext: () => void }) {
+  const name = useId();
+  const guard = useArrowGuard();
+  return (
+    <fieldset {...guard.groupProps}>
       <legend className="sr-only">State</legend>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
         {states.map((s) => (
           <label key={s.slug} className={choiceCls}>
-            <input type="radio" name={name} value={s.slug} checked={value === s.slug} onChange={() => onPick(s.slug)} className="mt-1 accent-[var(--primary)]" />
+            <input type="radio" name={name} value={s.slug} checked={value === s.slug} onChange={() => onPick(s.slug, guard.advance())} className="mt-1 accent-[var(--primary)]" />
             <span className="min-w-0">
               <span className="block font-semibold text-foreground">{s.name}</span>
               <span className="block text-xs text-muted-foreground">{s.agency}</span>
@@ -374,22 +428,26 @@ function StatePick({ states, value, onPick }: { states: FlowState[]; value: stri
           </label>
         ))}
       </div>
-      <button type="button" onClick={() => onPick(OTHER_STATE)} className="mt-3 inline-flex min-h-10 items-center text-sm font-semibold text-primary hover:underline cursor-pointer">
-        Hunting a state we don&apos;t cover yet? Add it yourself
-      </button>
+      <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+        <button type="button" onClick={() => onPick(OTHER_STATE, true)} className="inline-flex min-h-10 items-center text-sm font-semibold text-primary hover:underline cursor-pointer">
+          Hunting a state we don&apos;t cover yet? Add it yourself
+        </button>
+        <ContinueButton disabled={!value || value === OTHER_STATE} onClick={onNext} />
+      </div>
     </fieldset>
   );
 }
 
-function SpeciesPick({ st, value, onPick, onBack }: { st: FlowState; value: string; onPick: (s: Species) => void; onBack: () => void }) {
+function SpeciesPick({ st, value, onPick, onBack, onNext }: { st: FlowState; value: string; onPick: (s: Species, advance: boolean) => void; onBack: () => void; onNext: () => void }) {
   const name = useId();
+  const guard = useArrowGuard();
   return (
-    <fieldset>
+    <fieldset {...guard.groupProps}>
       <legend className="sr-only">Species in {st.name}</legend>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {st.species.map((s) => (
           <label key={s.species} className={choiceCls}>
-            <input type="radio" name={name} value={s.species} checked={value === s.species} onChange={() => onPick(s.species)} className="mt-1 accent-[var(--primary)]" />
+            <input type="radio" name={name} value={s.species} checked={value === s.species} onChange={() => onPick(s.species, guard.advance())} className="mt-1 accent-[var(--primary)]" />
             <span className="min-w-0">
               <span className="block font-semibold text-foreground">{s.label}</span>
               <span className="block text-xs text-muted-foreground">
@@ -401,20 +459,23 @@ function SpeciesPick({ st, value, onPick, onBack }: { st: FlowState; value: stri
           </label>
         ))}
       </div>
-      <BackRow onBack={onBack} />
+      <BackRow onBack={onBack}>
+        <ContinueButton disabled={!value} onClick={onNext} />
+      </BackRow>
     </fieldset>
   );
 }
 
-function ResidencyPick({ st, value, onPick, onBack }: { st: FlowState; value: string; onPick: (r: PlannerResidency) => void; onBack: () => void }) {
+function ResidencyPick({ st, value, onPick, onBack, onNext }: { st: FlowState; value: string; onPick: (r: PlannerResidency, advance: boolean) => void; onBack: () => void; onNext: () => void }) {
   const name = useId();
+  const guard = useArrowGuard();
   return (
-    <fieldset>
+    <fieldset {...guard.groupProps}>
       <legend className="sr-only">Residency</legend>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {(["resident", "nonresident"] as const).map((r) => (
           <label key={r} className={choiceCls}>
-            <input type="radio" name={name} value={r} checked={value === r} onChange={() => onPick(r)} className="mt-1 accent-[var(--primary)]" />
+            <input type="radio" name={name} value={r} checked={value === r} onChange={() => onPick(r, guard.advance())} className="mt-1 accent-[var(--primary)]" />
             <span>
               <span className="block font-semibold text-foreground">{r === "resident" ? `${st.name} resident` : "Nonresident"}</span>
               <span className="block text-xs text-muted-foreground">Dates, fees and draw odds are shown for {r}s.</span>
@@ -422,7 +483,9 @@ function ResidencyPick({ st, value, onPick, onBack }: { st: FlowState; value: st
           </label>
         ))}
       </div>
-      <BackRow onBack={onBack} />
+      <BackRow onBack={onBack}>
+        <ContinueButton disabled={!value} onClick={onNext} />
+      </BackRow>
     </fieldset>
   );
 }
@@ -713,14 +776,17 @@ function Review({
         setErr(b.error || "Couldn't save this hunt. Try again.");
         return;
       }
-      track("plan_save", {
-        state: st.slug,
-        species: sp.species,
-        kind,
-        residency,
-        published: b.hunt.agency?.cyclePublished === true,
-        storage: "account",
-      });
+      // A duplicate saved nothing new (the member is taken to the hunt they already have).
+      if (b.status === "added") {
+        track("plan_save", {
+          state: st.slug,
+          species: sp.species,
+          kind,
+          residency,
+          published: b.hunt.agency?.cyclePublished === true,
+          storage: "account",
+        });
+      }
       onSaved(b.hunt.id, b.status === "duplicate");
     } catch {
       setErr("You're offline or the site couldn't be reached. Nothing was saved.");
@@ -857,7 +923,8 @@ function ReviewSection({ title, children }: { title: string; children: React.Rea
 }
 
 /** A hunt in a state without agency data: the member's own entry, saved like any other planner edit. */
-function ManualHunt({ covered: coveredNames, onSave, onBack }: { covered: string[]; onSave: (h: PlannedHunt) => void; onBack: () => void }) {
+/** `ready`: the member's planner has loaded (an edit before that would have nothing to apply to). */
+function ManualHunt({ ready, covered: coveredNames, onSave, onBack }: { ready: boolean; covered: string[]; onSave: (h: PlannedHunt) => void; onBack: () => void }) {
   const [state, setState] = useState("");
   const [species, setSpecies] = useState<Species>("elk");
   const [unit, setUnit] = useState("");
@@ -931,7 +998,7 @@ function ManualHunt({ covered: coveredNames, onSave, onBack }: { covered: string
         <button
           type="button"
           className={primaryBtn}
-          disabled={!state || !unit.trim()}
+          disabled={!ready || !state || !unit.trim()}
           onClick={() =>
             onSave({
               id: generateId(),

@@ -10,6 +10,8 @@ import { DATE_KIND_LABELS, huntTimeline, type TimelineItem } from "@/lib/planner
 
 export interface IcsEvent {
   uid: string;
+  /** The agency marks the date tentative (STATUS:TENTATIVE, and the summary says so). */
+  tentative?: boolean;
   /** First day, YYYY-MM-DD. */
   start: string;
   /** Last day (inclusive), YYYY-MM-DD. Same as start for a one-day event. */
@@ -69,6 +71,7 @@ export function buildCalendar(opts: { name: string; events: readonly IcsEvent[];
       `DTSTART;VALUE=DATE:${day(e.start)}`,
       `DTEND;VALUE=DATE:${day(nextDay(e.end))}`,
       `SUMMARY:${icsEscape(e.summary)}`,
+      ...(e.tentative ? ["STATUS:TENTATIVE"] : []),
       ...(e.description ? [`DESCRIPTION:${icsEscape(e.description)}`] : []),
       ...(e.url ? [`URL:${e.url.replace(/[\r\n]/g, "")}`] : []),
       "TRANSP:TRANSPARENT",
@@ -104,9 +107,10 @@ export function huntEvents(h: PlannedHunt, today: string, plannerUrl: string): I
   const a = h.agency;
   const out: IcsEvent[] = [];
   const link = `${plannerUrl.replace(/\/$/, "")}/hunt/${h.id}`;
-  for (const t of huntTimeline(h)) {
+  for (const t of huntTimeline(h, today)) {
     if (!exportable(t, today)) continue;
-    const what = t.kind === "season" ? `Season${t.label ? `: ${t.label}` : ""}` : t.label;
+    const what = `${t.kind === "season" ? `Season${t.label ? `: ${t.label}` : ""}` : t.label}${t.tentative ? " (tentative)" : ""}`;
+    const tentative = t.tentative ? { tentative: true } : {};
     const desc = [
       `${name}${a ? ` (${a.residency})` : ""}`,
       t.mine ? "Your date." : `${t.kind === "season" ? `${t.cycle} season dates` : `${DATE_KIND_LABELS[t.kind as keyof typeof DATE_KIND_LABELS] || "Agency date"} · ${t.cycle} cycle`}${t.tentative ? " (tentative)" : ""} from ${a?.agencyName || "the agency"}.`,
@@ -118,10 +122,10 @@ export function huntEvents(h: PlannedHunt, today: string, plannerUrl: string): I
       .join("\n");
     const base = `${h.id}-${t.key}`;
     if (t.kind !== "season" && t.start && t.start !== t.end) {
-      if (t.start >= today) out.push({ uid: `${base}-open@huntscoutpro.com`, start: t.start, end: t.start, summary: `Opens: ${what} — ${name}`, description: desc, url: t.sourceUrl || link });
-      out.push({ uid: `${base}-close@huntscoutpro.com`, start: t.end, end: t.end, summary: `Closes: ${what} — ${name}`, description: desc, url: t.sourceUrl || link });
+      if (t.start >= today) out.push({ uid: `${base}-open@huntscoutpro.com`, start: t.start, end: t.start, summary: `Opens: ${what} — ${name}`, description: desc, url: t.sourceUrl || link, ...tentative });
+      out.push({ uid: `${base}-close@huntscoutpro.com`, start: t.end, end: t.end, summary: `Closes: ${what} — ${name}`, description: desc, url: t.sourceUrl || link, ...tentative });
     } else {
-      out.push({ uid: `${base}@huntscoutpro.com`, start: t.start || t.end, end: t.end, summary: `${what} — ${name}`, description: desc, url: t.sourceUrl || link });
+      out.push({ uid: `${base}@huntscoutpro.com`, start: t.start || t.end, end: t.end, summary: `${what} — ${name}`, description: desc, url: t.sourceUrl || link, ...tentative });
     }
   }
   return out;

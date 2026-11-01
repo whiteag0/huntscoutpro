@@ -61,6 +61,7 @@ const NOT_ACTIONABLE = /\bnotified\b|\bnotification\b|\bresults?\b/i;
 const ISO_DAY = /^\d{4}-\d{2}-\d{2}$/;
 const NONRES = /\bnon-?\s?residents?\b/gi;
 const RES = /\bresidents?\b/i;
+const JOINED_NONRES = /\b(?:and|&)\s+non-?\s?residents?\b|\bnon-?\s?residents?\s+(?:and|&)\s+(?!non-?\s?residents?\b)/i;
 
 /** Calendar days from a to b (both YYYY-MM-DD), no timezone drift. */
 export function daysBetween(a: string, b: string): number {
@@ -73,6 +74,9 @@ export function daysBetween(a: string, b: string): number {
 
 /** Which residency a key-date label is limited to, if it says so. */
 export function labelResidency(label: string): "resident" | "nonresident" | "any" {
+  // "Elk permit and nonresident combination application period", "Nonresident and Unit 4 spring turkey
+  // application period": the date covers something else as well as the nonresident license, so everyone.
+  if (JOINED_NONRES.test(label)) return "any";
   const nonres = NONRES.test(label);
   NONRES.lastIndex = 0;
   const res = RES.test(label.replace(NONRES, " "));

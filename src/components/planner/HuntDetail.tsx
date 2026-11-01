@@ -58,7 +58,9 @@ function DetailBody({ id, flash }: { id: string; flash?: "saved" | "duplicate" }
   const today = todayIso();
   const hunt = data?.hunts.find((h) => h.id === id);
 
-  if (!data) {
+  // The copy in this browser can be older than the account (a hunt just saved from "Plan a hunt" is
+  // only on the server until the first load finishes): wait for it before saying the hunt is gone.
+  if (!data || (!hunt && status.kind === "loading")) {
     return (
       <div className="min-h-[50vh] flex items-center justify-center text-muted-foreground" role="status">
         <Loader2 className="w-5 h-5 animate-spin mr-2" aria-hidden /> Loading your hunt…
@@ -149,7 +151,7 @@ function DetailBody({ id, flash }: { id: string; flash?: "saved" | "duplicate" }
                 <span className="block mt-1 text-xs text-muted-foreground">Your status, notes, points, checklist and own dates weren&apos;t changed.</span>
               </>
             ) : refresh.result?.unmatched.includes(id) ? (
-              `${a?.huntCode} isn't in ${a?.agencyShortName || "the agency"}'s current data, so this hunt was kept as saved.`
+              `${a?.huntCode || "This hunt"} isn't in ${a?.agencyShortName || "the agency"}'s latest draw data (it may have been dropped or renumbered), so it was kept as saved.`
             ) : (
               `No changes: ${a?.agencyShortName || "the agency"}'s data for this hunt is the same as when you saved it.`
             )}
@@ -162,6 +164,8 @@ function DetailBody({ id, flash }: { id: string; flash?: "saved" | "duplicate" }
             <p className="mt-3 text-sm text-foreground">
               Next: <span className="font-semibold">{next.label}</span> · {dateRange(next.start, next.end)} ·{" "}
               <span className={TONE_CLASS[countdown(next, today).tone]}>{countdown(next, today).text}</span>
+              {next.tentative ? " · tentative" : ""}
+              {next.otherCycle ? ` · ${next.cycle} cycle` : ""}
             </p>
           )}
         </Card>

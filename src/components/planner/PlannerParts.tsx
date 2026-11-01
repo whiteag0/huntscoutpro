@@ -159,8 +159,8 @@ export function CycleNotice({ hunt }: { hunt: PlannedHunt }) {
       <span>
         {c.datesCycle ? (
           <>
-            <strong>{c.label}.</strong> These are last cycle&apos;s dates, for reference only; they aren&apos;t your {c.planCycle} deadlines and we don&apos;t guess
-            new ones. This hunt updates when {who} publishes {c.planCycle} dates.
+            <strong>{c.label}.</strong> These are {c.datesCycle} dates, for reference; they aren&apos;t your {c.planCycle} deadlines and we don&apos;t guess new
+            ones. Any {c.datesCycle} date that is still open shows a countdown. This hunt updates when {who} publishes {c.planCycle} dates.
           </>
         ) : (
           <>
@@ -191,7 +191,7 @@ export function DateList({
   include?: "all" | "dates" | "seasons";
   onRemoveCustom?: (customId: string) => void;
 }) {
-  const items = huntTimeline(hunt).filter((t) => (include === "all" ? true : include === "seasons" ? t.kind === "season" : t.kind !== "season"));
+  const items = huntTimeline(hunt, today).filter((t) => (include === "all" ? true : include === "seasons" ? t.kind === "season" : t.kind !== "season"));
   if (!items.length) return null;
   return (
     <ol className="divide-y divide-border rounded-lg border border-border bg-card">
@@ -217,7 +217,10 @@ export function DateList({
                 {muted ? (
                   <span> · {t.kind === "season" ? `${t.cycle} season` : `${t.cycle} cycle`}, for reference</span>
                 ) : (
-                  <span className={TONE_CLASS[cd.tone]}> · {cd.text}</span>
+                  <>
+                    {t.otherCycle && <span> · {t.cycle} cycle</span>}
+                    <span className={TONE_CLASS[cd.tone]}> · {cd.text}</span>
+                  </>
                 )}
                 {t.note && <span className="block">{t.note}</span>}
                 {t.sourceUrl && !t.mine && (
@@ -429,6 +432,7 @@ export function UpcomingStrip({ items, hunts, today }: { items: TimelineItem[]; 
                     <div className={`text-xs ${TONE_CLASS[cd.tone]}`}>
                       {formatDate(t.end)} · {cd.text}
                       {t.tentative ? " · tentative" : ""}
+                      {t.otherCycle ? ` · ${t.cycle} cycle` : ""}
                     </div>
                   </div>
                 </Link>

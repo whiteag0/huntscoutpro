@@ -47,7 +47,8 @@ export function DemoGate({ children, preview, feature = "this data" }: DemoGateP
       {/* Gated full content with gradient fade + CTA */}
       <div className="relative">
         {/* Show blurred/faded content behind the gate */}
-        <div className="pointer-events-none select-none" style={{ maxHeight: "400px", overflow: "hidden" }}>
+        {/* inert + aria-hidden: the blurred copy is decoration, not reachable by Tab or a screen reader. */}
+        <div className="pointer-events-none select-none" style={{ maxHeight: "400px", overflow: "hidden" }} inert aria-hidden="true">
           <div style={{
             filter: "blur(6px)",
             opacity: 0.4,

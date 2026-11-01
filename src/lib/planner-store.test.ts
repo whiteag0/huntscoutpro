@@ -80,7 +80,22 @@ test("invalid data and oversized planners are rejected without writing", async (
   const email = "b@example.com";
   await assert.rejects(() => writePlanner(email, "nope", 0), PlannerInvalidError);
   await assert.rejects(() => writePlanner(email, { hunts: "nope" }, 0), PlannerInvalidError);
-  const big = { hunts: Array.from({ length: 150 }, (_, i) => hunt(`h${i}`, "n".repeat(2000))) };
+  // Every list at its limit with long text: well over the cap.
+  const agency = (i: number) => ({
+    stateSlug: "utah",
+    huntCode: `EB${i}`,
+    drawYear: 2026,
+    units: Array.from({ length: 60 }, (_, u) => `Unit ${u} ${"x".repeat(30)}`),
+    description: "d".repeat(600),
+    oddsNote: "o".repeat(600),
+    drawSummary: "s".repeat(900),
+    residencyNote: "r".repeat(900),
+    otcSummary: "c".repeat(900),
+  });
+  const big = {
+    hunts: Array.from({ length: 150 }, (_, i) => ({ ...hunt(`h${i}`, "n".repeat(2000)), agency: agency(i) })),
+    budget: Array.from({ length: 600 }, (_, i) => ({ id: `b${i}`, huntId: "", category: "Other", description: "b".repeat(300), amount: 1 })),
+  };
   await assert.rejects(() => writePlanner(email, big, 0), PlannerTooLargeError);
   assert.equal((await readPlanner(email)).version, 0);
 });

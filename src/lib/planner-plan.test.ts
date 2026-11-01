@@ -314,3 +314,140 @@ test("timeline: same-day dates list the application before the point-only line",
   const { hunt } = buildPlannedHunt({ state: STATE, info: INFO, residency: "resident", today: TODAY, now: "x", kind: "draw", row: ROW, id: "o" });
   assert.deepEqual(huntTimeline(hunt).slice(0, 2).map((t) => t.kind), ["application", "points"]);
 });
+
+// ------------------------------------------------------------
+// Review fixes: label-read kinds, separate drawings, weapon-limited dates, rounds, cycles
+// ------------------------------------------------------------
+
+test("key date kinds: deadlines that aren't the application aren't read as one", () => {
+  const cases: [string, string][] = [
+    // Each of these was the "application deadline" an entry got from agency data.
+    ["Deadline to ask ADF&G for an alternative to applying online", "other"],
+    ["Deadline to report deer tags (2026 tags)", "other"],
+    ["Point Saver purchase period (after the draw)", "points"],
+    ["Spring draw hunt permit-tags mailed out by", "results"],
+    ["Deer: drawn tags and unsuccessful-applicant notices expected by mail", "results"],
+    ["Online application changes allowed through", "application-change"],
+    ["Spring bear controlled tag sale deadline", "payment"],
+    ["Elk license return deadline", "surrender"],
+    ["Deer third draw application period", "leftover"],
+    ["Deer fourth draw application period", "leftover"],
+    // Unchanged.
+    ["Leftover (first-come) spring applications accepted by mail (after 8:00 a.m. Arizona time)", "leftover"],
+    ["Successful elk applicants' payment notices mailed by", "results"],
+    ["Pronghorn & elk draw application deadline (11:59 p.m. Arizona time)", "application"],
+    ["Controlled hunt application deadline (11:59 p.m. PT)", "application"],
+  ];
+  for (const [label, kind] of cases) assert.equal(keyDateKind({ label }), kind, label);
+});
+
+test("deadline: ADF&G's paper-application request date isn't the application deadline", () => {
+  const info: SpeciesInfo = {
+    ...INFO,
+    keyDates: [
+      kd({ label: "Drawing permit application period (online only)", start: "2026-11-01", end: "2026-12-15", cycle: 2027 }),
+      kd({ label: "Deadline to ask ADF&G for an alternative to applying online", date: "2026-11-20", cycle: 2027 }),
+      kd({ label: "Tier II subsistence permit application period (residents only)", start: "2026-11-01", end: "2026-12-15", cycle: 2027 }),
+      kd({ label: "Drawing results announced", date: "2027-02-19", cycle: 2027, status: "tentative" }),
+    ],
+  };
+  const { agency } = planAgency({ state: STATE, info, residency: "resident", today: TODAY, now: "x", kind: "draw", row: { ...ROW, description: "Unit 13 — Residents Only — Bull moose" } });
+  assert.equal(agency.deadline!.label, "Drawing permit application period (online only)");
+  assert.equal(agency.deadline!.end, "2026-12-15");
+  // Tier II subsistence permits are a separate system, not this drawing.
+  assert.ok(!agency.keyDates!.some((k) => /Tier II/.test(k.label)));
+});
+
+test("cycle: another drawing's later-cycle payment dates don't make a cycle 'published' for this hunt", () => {
+  // Idaho: the 2027 dates are the nonresident general-season tag drawing's; a controlled hunt's 2027 application isn't out.
+  const idfg: Pick<SpeciesInfo, "keyDates"> = {
+    keyDates: [
+      kd({ label: "Controlled hunt first application period (deer, elk, pronghorn, fall bear)", start: "2026-05-01", end: "2026-06-05" }),
+      kd({ label: "Deadline to buy drawn controlled hunt tags", date: "2026-08-01" }),
+      kd({ label: "Nonresident general season deer/elk tag drawing — first application period (also DAV draw)", start: "2026-12-05", end: "2026-12-15", cycle: 2027 }),
+      kd({ label: "Nonresident draw — deadline to buy tags drawn in first period", date: "2027-01-20", cycle: 2027 }),
+    ],
+  };
+  const fit = fitFor("draw", "Controlled Hunt Antlered — Hunt Area 11", { seasonDates: "2026-10-10 to 2026-10-24" });
+  // The parenthesized "fall bear" doesn't make the controlled hunt period fall-only.
+  assert.ok(relevantKeyDates(idfg, "nonresident", fit).some((k) => k.label.startsWith("Controlled hunt first")));
+  const pick = selectCycle(relevantKeyDates(idfg, "nonresident", fit), TODAY);
+  assert.deepEqual([pick.planCycle, pick.datesCycle, pick.published], [2027, 2026, false]);
+  // Washington-style: the only 2027 date is a different tag's payment deadline.
+  const wdfw = [
+    kd({ label: "Special permit application submission period", start: "2026-04-20", end: "2026-05-27" }),
+    kd({ label: "Deadline to buy a drawn 2027 multi-season tag", date: "2027-07-31", cycle: 2027 }),
+  ];
+  const wa = relevantKeyDates({ keyDates: wdfw }, "resident", fitFor("draw", "Turnbull — Quality Elk Hunts — Any Bull"));
+  assert.deepEqual(wa.map((k) => k.label), ["Special permit application submission period"]);
+  assert.equal(selectCycle(wa, TODAY).published, false);
+});
+
+test("relevant dates: weapon-limited and separate drawings (South Dakota, Nevada, Montana)", () => {
+  const sd: Pick<SpeciesInfo, "keyDates"> = {
+    keyDates: [
+      kd({ label: "Special Buck first draw application period (East River ESD, West River WSD)", start: "2026-03-11", end: "2026-04-14" }),
+      kd({ label: "Nonresident archery deer (public/private land, ADNP-ST1) application period", start: "2026-05-13", end: "2026-06-09" }),
+      kd({ label: "West River, East River, Black Hills & CSP, Muzzleloader and Refuge deer - first draw application period", start: "2026-05-27", end: "2026-06-23" }),
+      kd({ label: "Archery deer access permit application period", start: "2026-06-10", end: "2026-07-01" }),
+      kd({ label: "Deer second draw application period", start: "2026-07-08", end: "2026-07-22" }),
+      kd({ label: "Deer third draw application period", start: "2026-07-29", end: "2026-08-12" }),
+    ],
+  };
+  const labels = (desc: string, method?: DrawRecord["method"]) => relevantKeyDates(sd, "nonresident", fitFor("draw", desc, { method })).map((k) => k.label.slice(0, 24));
+  assert.deepEqual(labels("East River Deer, First Application Period: 01A01"), ["West River, East River, ", "Deer second draw applica", "Deer third draw applicat"]);
+  assert.deepEqual(labels("Municipal Archery Deer, First Application Period", "archery"), [
+    "Nonresident archery deer",
+    "West River, East River, ",
+    "Deer second draw applica",
+    "Deer third draw applicat",
+  ]);
+  // In season (Jun 1, 2026) the first-period hunt's deadline is the first draw, not the archery date that closes sooner.
+  const first = planAgency({ state: STATE, info: { ...INFO, keyDates: sd.keyDates }, residency: "nonresident", today: "2026-06-01", now: "x", kind: "draw", row: { ...ROW, method: undefined, description: "East River Deer, First Application Period: 01A01" } }).agency;
+  assert.equal(first.deadline!.end, "2026-06-23");
+  // A hunt the agency lists in a later round: that round's application period is its deadline.
+  const third = planAgency({ state: STATE, info: { ...INFO, keyDates: sd.keyDates }, residency: "nonresident", today: "2026-06-01", now: "x", kind: "draw", row: { ...ROW, method: undefined, description: "West River Deer, Third Application Period: 27A" } }).agency;
+  assert.equal(third.deadline!.label, "Deer third draw application period");
+
+  const ndow = [
+    kd({ label: "Restricted Nonresident Guided Mule Deer Hunt application period", start: "2026-02-09", end: "2026-03-09" }),
+    kd({ label: "Big Game Main Draw application period (deadline 11:00 pm PT)", start: "2026-03-23", end: "2026-05-13" }),
+  ];
+  const nv = (desc: string) => relevantKeyDates({ keyDates: ndow }, "nonresident", fitFor("draw", desc)).map((k) => k.label.slice(0, 10));
+  assert.deepEqual(nv("NR Mule Deer Guided Antlered - Hunt 1235"), ["Big Game M"]);
+  assert.deepEqual(nv("NR Restricted Guided Antlered Mule Deer Hunt - Hunt 1235"), ["Restricted"]);
+
+  const fwp = [
+    kd({ label: "Elk permit and nonresident combination application period", start: "2026-03-01", end: "2026-04-01" }),
+    kd({ label: "Elk B license application period", start: "2026-03-01", end: "2026-06-01" }),
+  ];
+  const mt = (desc: string, r: "resident" | "nonresident") => relevantKeyDates({ keyDates: fwp }, r, fitFor("draw", desc)).map((k) => k.label.slice(0, 10));
+  // Residents apply for elk permits by Apr 1 too ("permit and nonresident combination" isn't nonresident-only).
+  assert.deepEqual(mt("Elk permit 101-50: Brow-tined Bull Elk", "resident"), ["Elk permit"]);
+  assert.deepEqual(mt("Elk permit 101-50: Brow-tined Bull Elk", "nonresident"), ["Elk permit"]);
+  assert.deepEqual(mt("Elk B license 007-00: Antlerless Elk", "nonresident"), ["Elk B lice"]);
+});
+
+test("timeline: a still-open date of the shown cycle counts as upcoming, with its cycle; keys survive a date change", () => {
+  const wgfd = [
+    kd({ label: "Resident application period", start: "2026-01-02", end: "2026-06-01" }),
+    kd({ label: "Preference point only purchase period", start: "2026-07-01", end: "2026-11-02" }),
+  ];
+  const { hunt } = buildPlannedHunt({ state: STATE, info: { ...INFO, keyDates: wgfd }, residency: "resident", today: TODAY, now: "x", kind: "draw", row: ROW, id: "wy" });
+  assert.equal(hunt.agency!.cyclePublished, false);
+  const pts = huntTimeline(hunt, TODAY).find((t) => t.kind === "points")!;
+  assert.deepEqual([pts.published, pts.otherCycle, pts.cycle], [true, true, 2026]);
+  assert.equal(huntTimeline(hunt, TODAY).find((t) => t.kind === "application")!.published, false);
+  assert.deepEqual(upcomingDeadlines([hunt], TODAY).map((t) => t.label), ["Preference point only purchase period"]);
+  // Without today (old callers): reference only.
+  assert.equal(huntTimeline(hunt).find((t) => t.kind === "points")!.published, false);
+  // The agency moving a date keeps the item's key (calendar UIDs build on it).
+  const moved = { ...hunt, agency: { ...hunt.agency!, keyDates: hunt.agency!.keyDates!.map((k) => (k.kind === "points" ? { ...k, end: "2026-11-09" } : k)) } };
+  assert.equal(huntTimeline(moved).find((t) => t.kind === "points")!.key, pts.key);
+});
+
+test("checklist steps say when the agency marks a date tentative", () => {
+  const info = { ...INFO, keyDates: [kd({ label: "Primary draw application period", start: "2027-03-01", end: "2027-04-07", cycle: 2027, status: "tentative" })] };
+  const { hunt } = buildPlannedHunt({ state: STATE, info, residency: "resident", today: TODAY, now: "x", kind: "draw", row: ROW, id: "t" });
+  assert.equal(huntSteps(hunt)[0].detail, "Closes Apr 7, 2027 (tentative)");
+});

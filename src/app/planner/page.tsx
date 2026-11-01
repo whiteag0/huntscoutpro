@@ -70,7 +70,7 @@ export default function PlannerPage() {
     return map;
   }, [checklist]);
   const allDates = useMemo(() => {
-    const items = hunts.flatMap((h) => huntTimeline(h)).filter((t) => t.end >= today && t.published && (t.kind !== "season" || t.scope !== "statewide"));
+    const items = hunts.flatMap((h) => huntTimeline(h, today)).filter((t) => t.end >= today && t.published && (t.kind !== "season" || t.scope !== "statewide"));
     return items.sort((x, y) => (x.start || x.end).localeCompare(y.start || y.end) || x.huntId.localeCompare(y.huntId));
   }, [hunts, today]);
 
@@ -299,6 +299,17 @@ export default function PlannerPage() {
                   </>
                 ) : (
                   `Checked ${refresh.result!.checked} hunt${refresh.result!.checked === 1 ? "" : "s"} against current agency data: nothing has changed.`
+                )}
+                {!refresh.error && refresh.result!.unmatched.length > 0 && (
+                  <p className="mt-2 text-muted-foreground">
+                    Not in the agency&apos;s latest draw data, so kept as saved (the hunt may have been dropped or renumbered):{" "}
+                    {refresh.result!.unmatched
+                      .map((id) => byId.get(id))
+                      .filter((h): h is PlannedHunt => !!h)
+                      .map((h) => huntTitle(h))
+                      .join(", ")}
+                    .
+                  </p>
                 )}
               </div>
               <button type="button" onClick={refresh.clear} className="-m-1.5 p-2 rounded-md text-muted-foreground hover:text-foreground cursor-pointer" aria-label="Dismiss">
@@ -657,6 +668,8 @@ function HuntCard({ hunt, next, today, budget, onStatus }: { hunt: PlannedHunt; 
             <span className="text-muted-foreground">Next:</span> <span className="font-medium text-foreground">{next.label}</span>
             <span className="block text-xs">
               {dateRange(next.start, next.end)} · <span className={TONE_CLASS[cd!.tone]}>{cd!.text}</span>
+              {next.tentative ? " · tentative" : ""}
+              {next.otherCycle ? ` · ${next.cycle} cycle` : ""}
             </span>
           </p>
         ) : c && !c.published ? (
@@ -701,6 +714,7 @@ function AllDates({ items, byId, today }: { items: TimelineItem[]; byId: Map<str
                     <div className="text-xs text-muted-foreground break-words">
                       {t.kind === "season" ? `Season${t.label ? `: ${t.label}` : ""}` : t.label} · {dateRange(t.start, t.end)} · <span className={TONE_CLASS[cd.tone]}>{cd.text}</span>
                       {t.tentative ? " · tentative" : ""}
+                      {t.otherCycle ? ` · ${t.cycle} cycle` : ""}
                       {t.sourceUrl && !t.mine && (
                         <>
                           {" · "}

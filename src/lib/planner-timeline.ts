@@ -99,8 +99,15 @@ export interface TimelineItem {
   end: string;
   /** Agency dates and seasons: their cycle / season year. */
   cycle?: number;
-  /** False for agency dates/seasons from a cycle other than the one being planned. Member dates are always true. */
+  /**
+   * False for agency dates/seasons from a cycle other than the one being planned. Member dates are
+   * always true. With `today` given, an agency date of the shown (reference) cycle that hasn't ended
+   * yet is true as well (e.g. a 2026 point-only purchase still open while 2027 isn't published), with
+   * `otherCycle` set so it is shown with its cycle.
+   */
   published: boolean;
+  /** An agency date from a cycle other than the one being planned (shown with its cycle year). */
+  otherCycle?: boolean;
   tentative?: boolean;
   /** Seasons: whether the dates are this hunt's own, its units', or the statewide season. */
   scope?: "hunt" | "units" | "statewide";
@@ -117,22 +124,34 @@ function hashKey(s: string): string {
   return h.toString(36);
 }
 
-/** Every date of one hunt, in date order. */
-export function huntTimeline(h: PlannedHunt): TimelineItem[] {
+/**
+ * Every date of one hunt, in date order. Keys don't contain the dates, so a
+ * date the agency moves keeps its key (and its calendar UID).
+ */
+export function huntTimeline(h: PlannedHunt, today?: string): TimelineItem[] {
   const out: TimelineItem[] = [];
   const a = h.agency;
+  const used = new Map<string, number>();
+  const unique = (k: string) => {
+    const n = used.get(k) ?? 0;
+    used.set(k, n + 1);
+    return n ? `${k}-${n + 1}` : k;
+  };
   if (a) {
     const cyc = cycleInfo(a);
     for (const d of agencyDatesOf(a)) {
+      const planned = cyc.published && (cyc.planCycle === null || d.cycle === cyc.planCycle);
+      const stillOpen = !planned && today !== undefined && d.end >= today && d.cycle === cyc.datesCycle;
       out.push({
-        key: `${d.kind}-${hashKey(`${d.label}|${d.start || ""}|${d.end}`)}`,
+        key: unique(`${d.kind}-${hashKey(`${d.label}|${d.cycle}|${d.residency || ""}`)}`),
         huntId: h.id,
         kind: d.kind,
         label: d.label,
         ...(d.start && d.start !== d.end ? { start: d.start } : {}),
         end: d.end,
         cycle: d.cycle,
-        published: cyc.published && (cyc.planCycle === null || d.cycle === cyc.planCycle),
+        published: planned || stillOpen,
+        ...(cyc.planCycle !== null && d.cycle !== cyc.planCycle ? { otherCycle: true } : {}),
         ...(d.status === "tentative" ? { tentative: true } : {}),
         ...(d.residency ? { residency: d.residency } : {}),
         ...(d.note ? { note: d.note } : {}),
@@ -142,7 +161,7 @@ export function huntTimeline(h: PlannedHunt): TimelineItem[] {
     }
     for (const s of a.seasons || []) {
       out.push({
-        key: `season-${hashKey(`${s.label}|${s.start}|${s.end}`)}`,
+        key: unique(`season-${hashKey(`${s.label}|${s.year}|${s.scope}`)}`),
         huntId: h.id,
         kind: "season",
         label: s.label,
@@ -204,7 +223,7 @@ export function countdown(item: Pick<TimelineItem, "start" | "end" | "kind">, to
 export function upcomingDeadlines(hunts: readonly PlannedHunt[], today: string, limit = 50): TimelineItem[] {
   const out: TimelineItem[] = [];
   for (const h of hunts) {
-    for (const t of huntTimeline(h)) {
+    for (const t of huntTimeline(h, today)) {
       if (t.end < today || !t.published) continue;
       if (t.mine || DEADLINE_KINDS.has(t.kind as AgencyDateKind)) out.push(t);
     }
@@ -214,7 +233,7 @@ export function upcomingDeadlines(hunts: readonly PlannedHunt[], today: string, 
 
 /** The next date of one hunt that hasn't passed: a published deadline, else any published date, else null. */
 export function nextForHunt(h: PlannedHunt, today: string): TimelineItem | null {
-  const live = huntTimeline(h).filter((t) => t.end >= today && t.published);
+  const live = huntTimeline(h, today).filter((t) => t.end >= today && t.published);
   const byEnd = (x: TimelineItem, y: TimelineItem) => x.end.localeCompare(y.end);
   return live.filter((t) => t.mine || DEADLINE_KINDS.has(t.kind as AgencyDateKind)).sort(byEnd)[0] ?? live.sort(byEnd)[0] ?? null;
 }
@@ -246,14 +265,21 @@ export function huntSteps(h: PlannedHunt): HuntStep[] {
   const cyc = cycleInfo(a);
   const dates = agencyDatesOf(a);
   const firstOf = (k: AgencyDateKind) => dates.find((d) => d.kind === k);
+  const tentative = (d: AgencyDate) => (d.status === "tentative" ? ` (tentative)` : "");
   const when = (d: AgencyDate | undefined, verb: string) =>
-    !d ? undefined : cyc.published ? `${verb} ${shortDate(d.end, true)}` : `${cyc.datesCycle} date was ${shortDate(d.end, true)}; ${cyc.planCycle} not yet published`;
+    !d
+      ? undefined
+      : cyc.published
+        ? `${verb} ${shortDate(d.end, true)}${tentative(d)}`
+        : `${cyc.datesCycle} date was ${shortDate(d.end, true)}${tentative(d)}; ${cyc.planCycle} not yet published`;
   const cycle = cyc.planCycle ? ` ${cyc.planCycle}` : "";
   if (kind === "otc") {
     const sale = firstOf("license-sale") || firstOf("leftover");
     steps.push({ key: "buy", label: `Buy the ${who(a)}${cycle} license/tag`, ...(sale ? { detail: when(sale, "On sale") } : {}) });
   } else {
-    const app = firstOf("application");
+    // The hunt's own application date (the deadline it was planned with), else the first application date listed.
+    const dl = a.deadline;
+    const app = (dl && dates.find((d) => d.label === dl.label && d.end === dl.end)) || firstOf("application");
     steps.push({ key: "apply", label: kind === "custom" ? `Apply or buy the${cycle} license/tag` : `Apply in the ${who(a)}${cycle} draw`, ...(app ? { detail: when(app, "Closes") } : {}) });
     if (kind === "draw") {
       const res = firstOf("results");

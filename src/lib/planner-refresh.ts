@@ -7,7 +7,7 @@
 // own dates and budget lines are never touched.
 
 import { formatDate } from "@/lib/agency-format";
-import { linkOf, type AgencyRef, type CustomDate, type PlannedHunt, type PlannerData } from "@/lib/planner-schema";
+import { linkOf, withAgencyBlock, type AgencyRef, type PlannedHunt, type PlannerData } from "@/lib/planner-schema";
 import { agencyDatesOf, cycleInfo } from "@/lib/planner-timeline";
 
 function span(start: string | undefined, end: string): string {
@@ -72,9 +72,10 @@ export function describeAgencyChanges(old: AgencyRef, fresh: AgencyRef): string[
 }
 
 /**
- * The hunt with a fresh agency block, keeping everything the member entered.
- * An application date the member typed while the agency hadn't published one
- * is kept as one of their own dates when the agency's date replaces it.
+ * The hunt with a fresh agency block, keeping everything the member entered
+ * (see withAgencyBlock). `updatedAt` isn't touched: it marks the member's own
+ * edits, so a refresh never makes this copy win over an edit made elsewhere
+ * (mergePlanners picks the agency block by its refreshedAt instead).
  * Returns the original object (and no changes) when nothing changed.
  */
 export function refreshHunt(h: PlannedHunt, fresh: AgencyRef, now: string): { hunt: PlannedHunt; changes: string[] } {
@@ -82,29 +83,7 @@ export function refreshHunt(h: PlannedHunt, fresh: AgencyRef, now: string): { hu
   if (!old) return { hunt: h, changes: [] };
   const changes = describeAgencyChanges(old, fresh);
   if (!changes.length) return { hunt: h, changes };
-
-  const derived = !!old.deadline && h.applicationDeadline === old.deadline.end;
-  let applicationDeadline = h.applicationDeadline;
-  let customDates = h.customDates;
-  if (fresh.deadline) {
-    if (h.applicationDeadline && !derived && h.applicationDeadline !== fresh.deadline.end) {
-      const mine: CustomDate = { id: `own${h.applicationDeadline.replace(/-/g, "")}`, label: "Application deadline you entered", date: h.applicationDeadline };
-      if (!(customDates || []).some((c) => c.id === mine.id)) customDates = [...(customDates || []), mine];
-    }
-    applicationDeadline = fresh.deadline.end;
-  } else if (derived) {
-    applicationDeadline = "";
-  }
-
-  const hunt: PlannedHunt = {
-    ...h,
-    agency: { ...fresh, addedAt: old.addedAt, refreshedAt: now },
-    applicationDeadline,
-    seasonDates: (fresh.kind ?? "draw") === "draw" ? fresh.seasonText || h.seasonDates : h.seasonDates,
-    ...(customDates ? { customDates } : {}),
-    updatedAt: now,
-  };
-  return { hunt, changes };
+  return { hunt: withAgencyBlock(h, { ...fresh, addedAt: old.addedAt, refreshedAt: now }), changes };
 }
 
 export interface HuntUpdate {

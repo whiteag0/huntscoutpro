@@ -120,9 +120,10 @@ export async function assemblePlan(req: PlanRequest, today: string, now: string,
 
 /**
  * A freshly built agency block for a saved hunt, from current data; null when
- * the hunt can't be matched any more (state/species gone, hunt code no longer
- * in the agency's tables). Uses the hunt code's latest published row, so new
- * draw results flow in too.
+ * the hunt can't be matched any more (state/species gone, or the hunt code isn't
+ * in the agency's latest draw year: a hunt the agency dropped or renumbered is
+ * kept as saved rather than re-planned from an old year's row). Uses the hunt
+ * code's latest published row, so new draw results flow in too.
  */
 export async function freshAgencyFor(h: PlannedHunt, today: string, now: string, cache?: RowCache): Promise<AgencyRef | null> {
   const a = h.agency;
@@ -133,6 +134,10 @@ export async function freshAgencyFor(h: PlannedHunt, today: string, now: string,
   const kind = a.kind ?? "draw";
   const row = kind === "draw" ? await findDrawRow(st.slug, info.species, a.huntCode, undefined, cache) : null;
   if (kind === "draw" && !row) return null;
+  if (row) {
+    const latest = (await drawRows(st.slug, info.species, cache)).reduce((y, r) => Math.max(y, r.year), 0);
+    if (row.year < latest) return null;
+  }
   // Compared with the saved block as it will be stored, so trimming/capping never reads as a change.
   return sanitizeAgencyRef(planAgency({ state: st, info, residency: a.residency, today, now, kind, row, drawing: h.drawing ?? null, customDescription: a.description }).agency) ?? null;
 }

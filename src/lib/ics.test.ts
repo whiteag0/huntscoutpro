@@ -122,3 +122,16 @@ test("hunt events: published windows become opens/closes, hunt seasons are multi
   const cal = plannerCalendar([withMine, fall, otc], "2026-10-31", NOW, "https://www.huntscoutpro.com/planner");
   assert.equal(cal.split("\r\n").filter((l) => l === "BEGIN:VEVENT").length, 4);
 });
+
+test("tentative agency dates say so in the summary and as STATUS:TENTATIVE", () => {
+  const info = { ...INFO, keyDates: [kd({ label: "Spring black bear controlled hunt application period", start: "2027-01-15", end: "2027-02-15", status: "tentative" })] };
+  const { hunt } = buildPlannedHunt({ state: STATE, info, residency: "resident", today: "2026-10-31", now: "x", kind: "draw", row: ROW, drawing: "spring", id: "bear1" });
+  const ev = huntEvents(hunt, "2026-10-31", "https://x/planner").filter((e) => !e.summary.startsWith("Season"));
+  assert.equal(ev.length, 2);
+  for (const e of ev) {
+    assert.match(e.summary, /\(tentative\)/);
+    assert.equal(e.tentative, true);
+  }
+  const cal = plannerCalendar([hunt], "2026-10-31", NOW, "https://x/planner");
+  assert.equal(cal.split("\r\n").filter((l) => l === "STATUS:TENTATIVE").length, 2);
+});
