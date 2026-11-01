@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -34,6 +34,15 @@ export const metadata: Metadata = {
     title: "HuntScout Pro \u2014 Know Before You Draw",
     description: SITE_DESCRIPTION,
   },
+};
+
+// Phones: render at device width (pinch-zoom stays enabled) and tint the
+// browser chrome to match the page background.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#faf7f4",
+  colorScheme: "light",
 };
 
 export default function RootLayout({

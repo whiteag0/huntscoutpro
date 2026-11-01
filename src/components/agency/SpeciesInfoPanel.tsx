@@ -2,6 +2,7 @@ import { CalendarDays, DollarSign, Info } from "lucide-react";
 import type { FeeItem, SeasonDate, SpeciesInfo } from "@/data/agency/schema";
 import { DRAW_SYSTEM_LABELS, formatDate, formatKeyDate, keyDateEnd, todayIso } from "@/lib/agency-format";
 import { Cite } from "@/components/agency/SourceNotes";
+import { ShowMore } from "@/components/agency/mobile";
 
 interface Props {
   info: SpeciesInfo;
@@ -21,12 +22,13 @@ export function SpeciesInfoPanel({ info, fees, seasons, cite }: Props) {
   const generalFees = fees.filter((f) => !f.species);
 
   return (
-    <div className="grid lg:grid-cols-3 gap-4 mb-6">
-      <div className="bg-card border border-border rounded-xl p-5">
+    <div className="grid lg:grid-cols-3 gap-3 sm:gap-4 mb-6">
+      <div className="bg-card border border-border rounded-xl p-4 sm:p-5">
         <div className="flex items-center gap-2 text-sm font-semibold text-foreground mb-2">
           <Info className="w-4 h-4 text-gold" aria-hidden />
           How the draw works
         </div>
+        <ShowMore collapsed={150} moreLabel="Read the full draw summary" lessLabel="Show less">
         {info.displayName && <div className="text-xs text-muted-foreground mb-2">Covers: {info.displayName}</div>}
         <div className="inline-flex px-2 py-0.5 rounded-full text-xs font-semibold bg-gold/15 text-foreground border border-gold/30 mb-2">
           {DRAW_SYSTEM_LABELS[info.drawSystem]}
@@ -52,13 +54,15 @@ export function SpeciesInfoPanel({ info, fees, seasons, cite }: Props) {
             <b className="text-foreground">Over the counter:</b> {info.otcSummary}
           </p>
         )}
+        </ShowMore>
       </div>
 
-      <div className="bg-card border border-border rounded-xl p-5">
+      <div className="bg-card border border-border rounded-xl p-4 sm:p-5">
         <div className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
           <CalendarDays className="w-4 h-4 text-gold" aria-hidden />
           Key dates {latestCycle ? `(${latestCycle} cycle)` : ""}
         </div>
+        <ShowMore collapsed={220} moreLabel={`Show all ${dates.length + seasons.length} dates`} lessLabel="Show fewer dates">
         {sharedNote && <p className="text-xs text-muted-foreground bg-muted/60 rounded-md px-2 py-1.5 mb-3">{sharedNote}</p>}
         {dates.length === 0 ? (
           <p className="text-sm text-muted-foreground">The agency hasn&apos;t published application dates for this species.</p>
@@ -96,9 +100,10 @@ export function SpeciesInfoPanel({ info, fees, seasons, cite }: Props) {
             </ul>
           </>
         )}
+        </ShowMore>
       </div>
 
-      <div className="bg-card border border-border rounded-xl p-5">
+      <div className="bg-card border border-border rounded-xl p-4 sm:p-5">
         <div className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
           <DollarSign className="w-4 h-4 text-gold" aria-hidden />
           License &amp; application fees
@@ -106,6 +111,7 @@ export function SpeciesInfoPanel({ info, fees, seasons, cite }: Props) {
         {speciesFees.length + generalFees.length === 0 ? (
           <p className="text-sm text-muted-foreground">See the agency fee schedule.</p>
         ) : (
+          <ShowMore collapsed={200} moreLabel={`Show all ${speciesFees.length + generalFees.length} fees`} lessLabel="Show fewer fees">
           <table className="w-full text-sm">
             <tbody>
               {[...speciesFees, ...generalFees].map((f, i) => (
@@ -123,6 +129,7 @@ export function SpeciesInfoPanel({ info, fees, seasons, cite }: Props) {
               ))}
             </tbody>
           </table>
+          </ShowMore>
         )}
       </div>
     </div>

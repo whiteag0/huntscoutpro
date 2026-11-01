@@ -12,17 +12,13 @@ import { drawHistory, drawStats, harvestMethodKey, headlineHarvestRows, minPoint
 import { DemoGate } from "@/components/DemoGate";
 import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { Cite, SourceNotes, footnoteIndex } from "@/components/agency/SourceNotes";
-
-const pill = (on: boolean) =>
-  `px-3 py-1.5 rounded-lg text-sm font-medium border transition cursor-pointer ${
-    on ? "bg-primary text-primary-foreground border-primary" : "bg-card text-foreground border-border hover:border-primary/50"
-  }`;
+import { HScroll, pill, useIsNarrow } from "@/components/agency/mobile";
 
 function PointTable({ r, residency }: { r: DrawRecord; residency: DrawResidency }) {
   const rows = (r.byPoints || []).filter((p) => p[residency]?.applicants).sort((a, b) => b.points - a.points);
   if (!rows.length) return <p className="text-xs text-muted-foreground">No {residency} applicants by point level published for {r.year}.</p>;
   return (
-    <table className="text-xs w-full max-w-md">
+    <table className="text-xs w-full max-w-md tabular-nums">
       <thead className="text-muted-foreground">
         <tr>
           <th className="text-left py-1 pr-3">Points</th>
@@ -52,6 +48,7 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
   const species = speciesList.find((s) => s.species === requested)?.species || speciesList[0].species;
   const info = speciesList.find((s) => s.species === species)!;
   const { data, loading, error } = useSpeciesData(state.slug, species);
+  const narrow = useIsNarrow();
   const [residency, setResidency] = useState<DrawResidency>("resident");
   const [openHunt, setOpenHunt] = useState<string | null>(null);
   const name = unitNameOf(state.unitNames[species], unit);
@@ -80,11 +77,11 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <nav className="text-sm text-muted-foreground mb-4">
-        <Link href="/states" className="text-primary hover:underline">
+        <Link href="/states" className="text-primary hover:underline py-2">
           States
         </Link>
         {" / "}
-        <Link href={`/states/${state.slug}?species=${species}`} className="text-primary hover:underline">
+        <Link href={`/states/${state.slug}?species=${species}`} className="text-primary hover:underline py-2">
           {state.name}
         </Link>
         {" / "}
@@ -92,7 +89,7 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
           {state.unitTerm} {unit}
         </span>
       </nav>
-      <h1 className="text-3xl font-bold text-foreground">
+      <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
         {state.name} {state.unitTerm} {unit}
         {name ? <span className="text-muted-foreground font-normal">: {name}</span> : null}
       </h1>
@@ -100,13 +97,19 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
         {SPECIES_LABELS[species]} draw results and harvest, as published by {state.agency.name}.
       </p>
 
-      <div className="flex gap-2 overflow-x-auto pb-2 mb-6">
+      <HScroll className="mb-6" innerProps={{ "aria-label": "Species" } as React.HTMLAttributes<HTMLDivElement>}>
         {speciesList.map((s) => (
-          <Link key={s.species} href={`/states/${state.slug}/units/${encodeURIComponent(unit)}?species=${s.species}`} title={s.displayName} className={`${pill(s.species === species)} whitespace-nowrap`}>
+          <Link
+            key={s.species}
+            href={`/states/${state.slug}/units/${encodeURIComponent(unit)}?species=${s.species}`}
+            title={s.displayName}
+            aria-current={s.species === species ? "page" : undefined}
+            className={`${pill(s.species === species)} whitespace-nowrap shrink-0`}
+          >
             {SPECIES_LABELS[s.species]}
           </Link>
         ))}
-      </div>
+      </HScroll>
 
       {loading && !data ? (
         <div className="flex items-center justify-center py-16 text-muted-foreground">
@@ -116,11 +119,11 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
         <div className="bg-card border border-border rounded-xl p-8 text-center text-danger">{error}</div>
       ) : (
         <DemoGate feature={`${state.unitTerm} ${unit} history`}>
-          <section className="bg-card border border-border rounded-xl p-5 mb-6">
+          <section className="bg-card border border-border rounded-xl p-4 sm:p-5 mb-6">
             <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
               <h2 className="text-lg font-bold text-foreground">Harvest history</h2>
               {categories.length > 1 && (
-                <select className="px-2 py-1.5 border border-border rounded-lg bg-background text-sm" value={cat} onChange={(e) => setCategory(e.target.value)}>
+                <select aria-label="Harvest category" className="min-h-10 sm:min-h-0 max-w-full px-2 py-1.5 border border-border rounded-lg bg-background text-base sm:text-sm" value={cat} onChange={(e) => setCategory(e.target.value)}>
                   {categories.map((c) => (
                     <option key={c}>{c}</option>
                   ))}
@@ -134,15 +137,15 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
             ) : (
               <>
                 {series.length > 1 && (
-                  <div className="h-64 mb-4">
+                  <div className="h-56 sm:h-64 mb-4 -mx-1 sm:mx-0">
                     <ResponsiveContainer width="100%" height="100%">
-                      <LineChart data={series} margin={{ top: 5, right: 10, left: 0, bottom: 5 }}>
+                      <LineChart data={series} margin={{ top: 5, right: narrow ? 0 : 10, left: narrow ? -8 : 0, bottom: 5 }}>
                         <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                        <XAxis dataKey="year" />
-                        <YAxis yAxisId="n" />
-                        <YAxis yAxisId="p" orientation="right" domain={[0, 100]} unit="%" />
+                        <XAxis dataKey="year" tick={{ fontSize: narrow ? 11 : 12 }} interval="preserveStartEnd" minTickGap={narrow ? 12 : 5} />
+                        <YAxis yAxisId="n" width={narrow ? 44 : 60} tick={{ fontSize: narrow ? 11 : 12 }} />
+                        <YAxis yAxisId="p" orientation="right" domain={[0, 100]} unit="%" width={narrow ? 40 : 60} tick={{ fontSize: narrow ? 11 : 12 }} />
                         <Tooltip />
-                        <Legend />
+                        <Legend wrapperStyle={{ fontSize: narrow ? 12 : 14 }} />
                         <Line yAxisId="n" type="monotone" dataKey="Hunters" stroke="var(--chart-4)" connectNulls={false} isAnimationActive={false} />
                         <Line yAxisId="n" type="monotone" dataKey="Harvest" stroke="var(--chart-2)" connectNulls={false} isAnimationActive={false} />
                         <Line yAxisId="p" type="monotone" dataKey="Success %" stroke="var(--chart-3)" strokeWidth={2} connectNulls={false} isAnimationActive={false} />
@@ -177,7 +180,7 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
             )}
           </section>
 
-          <section className="bg-card border border-border rounded-xl p-5">
+          <section className="bg-card border border-border rounded-xl p-4 sm:p-5">
             <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
               <h2 className="text-lg font-bold text-foreground">Hunts that include {state.unitTerm} {unit}</h2>
               <div className="flex gap-1">
@@ -195,25 +198,38 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
                 {Array.from(hunts.entries()).map(([code, list]) => (
                   <div key={code} className="border border-border rounded-lg p-3">
                     <div className="flex flex-wrap items-baseline justify-between gap-2">
-                      <div>
-                        <span className="font-mono font-semibold">{code}</span>
-                        <span className="text-sm text-muted-foreground"> · {list[0].description}</span>
+                      <div className="min-w-0">
+                        <span className="font-mono font-semibold break-all">{code}</span>
+                        <span className="block sm:inline text-sm text-muted-foreground">
+                          <span className="hidden sm:inline"> · </span>
+                          {list[0].description}
+                        </span>
                       </div>
                       {info.pointsMatter && list.some((r) => r.byPoints?.length) && (
-                        <button className="text-xs text-primary hover:underline cursor-pointer" onClick={() => setOpenHunt(openHunt === code ? null : code)}>
+                        <button
+                          aria-expanded={openHunt === code}
+                          className="min-h-10 sm:min-h-0 -my-2 sm:my-0 text-xs font-medium text-primary hover:underline cursor-pointer"
+                          onClick={() => setOpenHunt(openHunt === code ? null : code)}
+                        >
                           {openHunt === code ? "Hide" : "Show"} odds by point level
                         </button>
                       )}
                     </div>
-                    <table className="w-full text-sm mt-2">
+                    <div className="overflow-x-auto -mx-3 px-3">
+                    <table className="w-full min-w-[260px] text-sm mt-2">
                       <thead className="text-muted-foreground text-xs">
                         <tr>
                           <th className="text-left py-1">Draw</th>
-                          <th className="text-right py-1">Quota</th>
-                          <th className="text-right py-1">Applicants</th>
-                          <th className="text-right py-1">Drawn</th>
-                          <th className="text-right py-1">Odds</th>
-                          {info.pointsMatter && <th className="text-right py-1">Min pts</th>}
+                          <th className="text-right py-1 pl-2">Quota</th>
+                          <th className="text-right py-1 pl-2">
+                            <span className="sm:hidden">Apps</span>
+                            <span className="hidden sm:inline">Applicants</span>
+                          </th>
+                          <th className="text-right py-1 pl-2">Drawn</th>
+                          <th className="text-right py-1 pl-3">Odds</th>
+                          {info.pointsMatter && (
+<th className="text-right py-1 pl-2 whitespace-nowrap">Min pts</th>
+                          )}
                         </tr>
                       </thead>
                       <tbody>
@@ -221,21 +237,22 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
                           const { stats, pool } = drawStats(r, residency);
                           return (
                             <tr key={r.year} className="border-t border-border">
-                              <td className="py-1 font-semibold">
+                              <td className="py-1.5 font-semibold whitespace-nowrap">
                                 {r.year}
                                 <Cite n={cite(r.sourceId)} />
-                                {pool === "total" && <span className="text-[10px] text-muted-foreground font-normal"> (all applicants)</span>}
+                                {pool === "total" && <span className="block sm:inline text-[10px] text-muted-foreground font-normal"> (all applicants)</span>}
                               </td>
-                              <td className="py-1 text-right tabular-nums">{fmtNum(stats?.quota)}</td>
-                              <td className="py-1 text-right tabular-nums">{fmtNum(stats?.applicants)}</td>
-                              <td className="py-1 text-right tabular-nums">{fmtNum(stats?.drawn)}</td>
-                              <td className="py-1 text-right tabular-nums">{fmtPct(oddsOf(stats))}</td>
-                              {info.pointsMatter && <td className="py-1 text-right tabular-nums">{minPointsDrawn(r, residency) ?? "—"}</td>}
+                              <td className="py-1.5 pl-2 text-right tabular-nums">{fmtNum(stats?.quota)}</td>
+                              <td className="py-1.5 pl-2 text-right tabular-nums">{fmtNum(stats?.applicants)}</td>
+                              <td className="py-1.5 pl-2 text-right tabular-nums">{fmtNum(stats?.drawn)}</td>
+                              <td className="py-1.5 pl-3 text-right tabular-nums font-semibold">{fmtPct(oddsOf(stats))}</td>
+                              {info.pointsMatter && <td className="py-1.5 pl-2 text-right tabular-nums">{minPointsDrawn(r, residency) ?? "—"}</td>}
                             </tr>
                           );
                         })}
                       </tbody>
                     </table>
+                    </div>
                     {openHunt === code && (
                       <div className="mt-3">
                         <div className="text-xs font-semibold mb-1">{list[0].year} {residency} applicants by point level</div>

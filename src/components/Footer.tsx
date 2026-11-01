@@ -50,12 +50,12 @@ function FooterColumn({
       <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">
         {title}
       </h3>
-      <ul className="space-y-2">
+      <ul className="sm:space-y-2">
         {links.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
-              className="text-sm text-white/60 hover:text-white transition-colors duration-200"
+              className="inline-flex min-h-10 items-center sm:min-h-0 text-sm text-white/60 hover:text-white transition-colors duration-200"
             >
               {link.label}
             </Link>
@@ -89,7 +89,7 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main footer */}
-        <div className="py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="py-10 sm:py-12 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 sm:gap-8">
           <FooterColumn title="Product" links={productLinks} />
           <FooterColumn title="States" links={stateLinks} />
           <FooterColumn
@@ -100,7 +100,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar — single line on desktop */}
-        <div className="border-t border-white/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="border-t border-white/10 pt-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <Crosshair className="w-4 h-4 text-gold" />
             <span className="text-sm font-semibold">HuntScout Pro</span>

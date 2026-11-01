@@ -88,7 +88,7 @@ export default async function TurkeyPage() {
                   </span>
                 </div>
               )}
-              <Link href={`/states/${s.slug}?species=turkey`} className="mt-4 pt-3 border-t border-border text-sm font-semibold text-primary inline-flex items-center gap-1 hover:underline">
+              <Link href={`/states/${s.slug}?species=turkey`} className="mt-4 pt-3 min-h-11 border-t border-border text-sm font-semibold text-primary inline-flex items-center gap-1 hover:underline">
                 {s.name} turkey data <ArrowRight className="w-4 h-4" aria-hidden />
               </Link>
             </div>
