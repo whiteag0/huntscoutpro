@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "validate:data": "node -e \"const fs=require('node:fs'),cp=require('node:child_process');const dir='src/data/agency';const states=fs.readdirSync(dir,{withFileTypes:true}).filter(d=>d.isDirectory()).map(d=>d.name).sort();if(!states.length){console.error('No state directories in '+dir);process.exit(1)}const bad=states.filter(s=>cp.spawnSync(process.execPath,['scripts/agency/validate.mjs',s],{stdio:'inherit'}).status!==0);if(bad.length){console.error('Validation failed for: '+bad.join(', '));process.exit(1)}console.log('All '+states.length+' states passed validation.')\"",
     "test": "npm run test:lib && npm run test:shortlist",
     "test:lib": "node --experimental-strip-types --no-warnings --import ./scripts/test/register.mjs --test src/lib/*.test.ts",
     "test:shortlist": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --disable-warning=ExperimentalWarning --import ./tests/register.mjs --test tests/shortlist-core.test.ts"
