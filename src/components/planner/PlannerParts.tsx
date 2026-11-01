@@ -131,7 +131,7 @@ export function CycleBadge({ hunt }: { hunt: PlannedHunt }) {
   if (c.published) return <span className="inline-flex items-center rounded-full border border-success/30 bg-success/10 px-2 py-0.5 text-xs font-medium text-success">{c.datesCycle} dates published</span>;
   return (
     <span className="inline-flex items-center rounded-full border border-warning/40 bg-warning/10 px-2 py-0.5 text-xs font-medium text-[#7a5a07]">
-      {c.datesCycle ? `Waiting on ${c.planCycle} dates` : "No agency dates yet"}
+      {c.datesCycle ? `Waiting on ${c.planCycle ?? c.datesCycle + 1} dates` : "No agency dates yet"}
     </span>
   );
 }

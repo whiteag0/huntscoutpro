@@ -6,7 +6,7 @@ import "server-only";
 
 import { getStateData, readTable, type StateData } from "@/lib/agency";
 import type { DrawRecord, SpeciesInfo } from "@/data/agency/schema";
-import { buildPlannedHunt, planAgency } from "@/lib/planner-agency";
+import { buildPlannedHunt, huntResidencyOnly, planAgency } from "@/lib/planner-agency";
 import { PLAN_KINDS, sanitizeAgencyRef, type AgencyRef, type DrawingSeason, type PlanKind, type PlannedHunt, type PlannerResidency } from "@/lib/planner-schema";
 
 export interface PlanRequest {
@@ -98,6 +98,8 @@ export async function assemblePlan(req: PlanRequest, today: string, now: string,
   if (req.kind === "draw") {
     row = await findDrawRow(st.slug, info.species, req.huntCode || "", req.drawYear, cache);
     if (!row) return { ok: false, status: 404, error: `Hunt ${req.huntCode} isn't in ${st.agency.shortName || st.agency.name}'s draw data.` };
+    const only = huntResidencyOnly(row.description);
+    if (only && only !== req.residency) return { ok: false, status: 400, error: `Hunt ${row.huntCode} is for ${only}s only.` };
   }
   if (req.kind === "custom" && !req.description && !req.unit) return { ok: false, status: 400, error: "Describe the hunt (unit, season or license)." };
   const { hunt, needsDrawing } = buildPlannedHunt({

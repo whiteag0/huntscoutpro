@@ -53,6 +53,9 @@ const SPECIAL_DRAWINGS = [
   // Alaska's Tier II subsistence permits, Nevada's restricted nonresident guided draw, South Dakota's
   // special buck and access-permit drawings, Washington's multi-season tags, Montana's B licenses.
   /\btier\s*(ii|2)\b/i,
+  // Alaska's community subsistence harvest hunts (e.g. Copper Basin CM300) have their own application.
+  /community subsistence/i,
+  /\bCSH\b/,
   /\brestricted\b/i,
   /special buck/i,
   /access permit/i,
@@ -108,6 +111,25 @@ function fitsHunt(label: string, huntDescription: string, seasonDates: string | 
     if (hs ? hs !== ls : seasonsInUse.has(ls === "spring" ? "fall" : "spring")) return false;
   }
   return SPECIAL_DRAWINGS.every((re) => !re.test(label) || re.test(huntDescription));
+}
+
+// Hunts the agency limits to one residency, as their descriptions say it
+// ("Nonresidents Only", "nonresident-only hunt", Nevada "NR ..."/"Res ...",
+// Kansas "(nonresident)", Wyoming "Nonresident Special license").
+const NONRESIDENT_ONLY = [
+  /^\s*(?:\d{4}\s+)?(?:NR|non-?\s?residents?)\b/i,
+  /\bnon-?\s?residents?\b(?:\s+[\w-]+){0,4}\s+only\b/i,
+  /\bnon-?\s?resident-only\b/i,
+  /\(non-?\s?resident\)/i,
+  /\bnon-?\s?resident\s+(?:special license|permits?|tenant|landowner|archery|general|spring|fall|mule deer stamp)\b/i,
+];
+const RESIDENT_ONLY = [/^\s*(?:\d{4}\s+)?(?:Res|residents?)\b/i, /(?<!non-?\s?)\bresidents?\b(?:\s+[\w-]+){0,3}\s+only\b/i, /\bresident-only\b/i, /\(resident\)/i];
+
+/** The residency a hunt is limited to, when its description says so; null when open to both. */
+export function huntResidencyOnly(description: string): PlannerResidency | null {
+  if (NONRESIDENT_ONLY.some((re) => re.test(description))) return "nonresident";
+  if (RESIDENT_ONLY.some((re) => re.test(description))) return "resident";
+  return null;
 }
 
 export function isApplicationLabel(label: string): boolean {
@@ -426,7 +448,11 @@ function mainDeadline(pick: CyclePick, today: string, isMain: (k: KeyDate) => bo
 export function pickForHunt(info: Pick<SpeciesInfo, "keyDates">, residency: PlannerResidency, today: string, fit: HuntFit): { pick: CyclePick; isMain: (k: KeyDate) => boolean } {
   const dates = relevantKeyDates(info, residency, fit);
   const isMain = mainApplicationTest(dates, fit);
-  return { pick: selectCycle(dates, today, isMain), isMain };
+  const pick = selectCycle(dates, today, isMain);
+  // A drawn hunt the agency lists no application date for (in any cycle): its other dates
+  // (a point purchase window, results) don't make a cycle one it can be applied in.
+  if (fit.kind === "draw" && pick.published && !dates.some(isMain)) return { pick: { ...pick, planCycle: pick.datesCycle === null ? null : pick.datesCycle + 1, published: false }, isMain };
+  return { pick, isMain };
 }
 
 /** The cycle an entry planned today would get (used by "Add to my planner" to tell if a hunt is already planned). */

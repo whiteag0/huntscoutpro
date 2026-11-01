@@ -2,7 +2,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { DrawRecord, KeyDate, SpeciesInfo } from "@/data/agency/schema";
-import { buildAgencyHunt, feesFor, isApplicationLabel, nextApplicationDeadline, oddsNote, type PlannerState } from "@/lib/planner-agency";
+import { buildAgencyHunt, feesFor, huntResidencyOnly, isApplicationLabel, nextApplicationDeadline, oddsNote, planAgency, type PlannerState } from "@/lib/planner-agency";
 
 const kd = (k: Partial<KeyDate> & { label: string }): KeyDate => ({ cycle: 2027, status: "confirmed", sourceId: "d-dates", ...k });
 
@@ -172,4 +172,44 @@ test("buildAgencyHunt fills deadline, cycle, source links and fees from agency d
   const none = buildAgencyHunt({ state: STATE, info: { ...ELK, keyDates: [] }, row: ROW, residency: "resident", today: "2026-10-31", now: "x", id: "abc124" });
   assert.equal(none.agency!.deadline, null);
   assert.equal(none.applicationDeadline, "");
+});
+
+test("hunts limited to one residency are recognised from the agency's description", () => {
+  const nr = [
+    "Unit 6A, Cape Suckling to Palm Point — Nonresidents Only",
+    "Units 20D, 13B, and 20A — Nonresidents guided by resident relatives Only",
+    "EE003V1A: elk, either sex, GMU 3, nonresident-only hunt 1 (V1), archery, List A",
+    "NR Elk Antlerless - Hunt 4211, Units 061, 071, Archery",
+    "Unit 1 - Whitetail Either Sex (nonresident)",
+    "ANY ELK (Nonresident Special license)",
+    "East River Nonresident Landowner-Own-Land, First Application Period: ER101 - ANY DEER",
+    "Unit 4 - Nonresident Tenant Permits (2026 Unit 4 Spring Turkey Season)",
+  ];
+  const res = ["Unit 6C — Residents Only — Legal animal: Bull", "Res Elk Antlered - Hunt 4151, Units 061", "Unit 2A — Resident Youth Hunters Only"];
+  const open = [
+    "EE001O1A: elk, either sex, GMU 1, season 1 (O1), archery, List A",
+    "Hunt Area: Unit 21E Nonresident hunters applying for DM8 must be guided",
+    "Antlerless Elk - North Slope, Greendale - Any Legal Weapon",
+  ];
+  for (const d of nr) assert.equal(huntResidencyOnly(d), "nonresident", d);
+  for (const d of res) assert.equal(huntResidencyOnly(d), "resident", d);
+  for (const d of open) assert.equal(huntResidencyOnly(d), null, d);
+});
+
+test("Alaska community subsistence (CSH) dates are a separate drawing, not a regular hunt's deadline", () => {
+  const MOOSE: SpeciesInfo = {
+    species: "moose",
+    drawSystem: "random",
+    drawSystemSummary: "",
+    pointsMatter: false,
+    sourceIds: ["d-dates"],
+    keyDates: [
+      kd({ label: "Drawing permit application period (online only)", kind: "application", start: "2026-11-01", end: "2026-12-15" }),
+      kd({ label: "Copper Basin Community Subsistence Harvest moose hunt CM300: group coordinator applications", kind: "application", residency: "resident", start: "2026-10-01", end: "2026-12-15" }),
+    ],
+  };
+  const row = { species: "moose", year: 2026, huntCode: "DM167", units: ["6C"], description: "Unit 6C — Residents Only — Legal animal: Bull", choice: "all", total: { quota: 10, applicants: 100 }, sourceId: "d-dates" } as unknown as DrawRecord;
+  const st = { slug: "alaska", name: "Alaska", agency: { name: "ADF&G", shortName: "ADF&G", url: "https://adfg.alaska.gov" }, unitTerm: "Unit", species: [MOOSE], fees: [], sources: [] } as unknown as PlannerState;
+  const { agency } = planAgency({ state: st, info: MOOSE, residency: "resident", today: "2026-10-31", now: "2026-10-31T12:00:00Z", kind: "draw", row });
+  assert.equal(agency.deadline?.label, "Drawing permit application period (online only)");
 });
