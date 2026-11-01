@@ -79,7 +79,7 @@ test("random draws rank by the pool's odds and skip hunts nobody drew or without
   assert.equal(a.rankOdds, 20);
   assert.equal(a.minPoints, null, "points don't matter, so no minimum is reported");
   assert.deepEqual(classifyHunt(draw("R2", { nonresident: { applicants: 100, drawn: 0 } }), "nonresident", false, null), { excluded: "not-drawn" });
-  assert.deepEqual(classifyHunt(draw("R3", { nonresident: { quota: 4 } }), "nonresident", false, null), { excluded: "no-figures" });
+  assert.deepEqual(classifyHunt(draw("R3", { nonresident: { quota: 4 } }), "nonresident", false, null), { excluded: "no-odds" });
   // Resident-only hunt: a nonresident has no pool.
   assert.deepEqual(classifyHunt(draw("R4", { resident: { applicants: 10, drawn: 5 } }), "nonresident", false, null), { excluded: "no-figures" });
 });
@@ -123,7 +123,7 @@ test("classifyState: counts, stretch toggle and ordering", () => {
   assert.deepEqual(off.hunts.map((h) => h.huntCode), ["B", "A", "F"]);
   assert.deepEqual(
     { ...off.counts },
-    { hunts: 6, drewAtPoints: 2, minAtOrBelow: 0, pointsUnknown: 1, stretch: 1, ranked: 0, notDrawnAtLevel: 1, notDrawn: 0, noFigures: 1 }
+    { hunts: 6, drewAtPoints: 2, allDrew: 0, minAtOrBelow: 0, pointsUnknown: 1, stretch: 1, ranked: 0, notDrawnAtLevel: 1, notDrawn: 0, noFigures: 1, noOdds: 0 }
   );
   const on = classifyState({ rows, residency: "nonresident", pointsMatter: true, points: 5, includeStretch: true });
   assert.deepEqual(on.hunts.map((h) => h.huntCode), ["B", "A", "F", "C"]);
@@ -185,4 +185,24 @@ test("pool without its own quota shows the hunt's total quota, flagged", () => {
   const own = hunt(classifyHunt(draw("Q2", { nonresident: { quota: 3, applicants: 10, drawn: 2 }, total: { quota: 11 } }), "nonresident", false, null));
   assert.equal(own.quota, 3);
   assert.equal(own.quotaIsTotal, false);
+});
+
+test("every applicant in the pool drew: not reported as 'not drawn at your level' (Oregon-style phase-limited point table)", () => {
+  // 155 applied at 0 points and the preference-phase table shows none drawn, but all 267 first-choice applicants drew.
+  const r = draw("OR", { nonresident: { applicants: 267, drawn: 267, minPoints: 1 }, byPoints: pts([0, 155, 0], [1, 80, 80], [2, 32, 32]) });
+  const h = hunt(classifyHunt(r, "nonresident", true, 0));
+  assert.equal(h.status, "all-drew");
+  assert.equal(h.rankOdds, 100);
+  assert.deepEqual(h.atPoints, { points: 0, applicants: 155, drawn: 0, pct: 0 });
+  // Nobody at your level applied: the pool count says nothing about your level, so the table rules still apply.
+  const far = draw("OR2", { nonresident: { applicants: 1, drawn: 1 }, byPoints: pts([4, 1, 1]) });
+  assert.deepEqual(classifyHunt(far, "nonresident", true, 0), { excluded: "not-drawn-at-level" });
+});
+
+test("quotas and applicants without drawn counts are excluded as no-odds, not as missing figures (Wyoming resident-style)", () => {
+  const rows = [draw("Q1", { resident: { quota: 83, applicants: 975 }, nonresident: { quota: 7, applicants: 381, minPoints: 17 } }), draw("Q2", { resident: { quota: 5 } })];
+  const s = classifyState({ rows, residency: "resident", pointsMatter: true, points: 0, includeStretch: false });
+  assert.equal(s.hunts.length, 0);
+  assert.equal(s.counts.noOdds, 2);
+  assert.equal(s.counts.noFigures, 0);
 });

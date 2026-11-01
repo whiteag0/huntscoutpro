@@ -13,6 +13,7 @@ const INITIAL_HUNTS = 5;
 
 const STATUS: Record<HuntStatus, { label: string; className: string; icon: typeof Info }> = {
   "drew-at-points": { label: "Drew at your points", className: "bg-success/10 text-success border-success/30", icon: CheckCircle2 },
+  "all-drew": { label: "Every applicant drew", className: "bg-success/10 text-success border-success/30", icon: CheckCircle2 },
   "min-at-or-below": { label: "Drew at or below your points", className: "bg-success/10 text-success border-success/30", icon: CheckCircle2 },
   "points-unknown": { label: "Point level not published", className: "bg-muted text-muted-foreground border-border", icon: HelpCircle },
   stretch: { label: "Stretch hunt", className: "bg-warning/10 text-warning border-warning/30", icon: TrendingUp },
@@ -47,10 +48,16 @@ function StatusBadge({ status }: { status: HuntStatus }) {
 /** One plain sentence on why the hunt is on the list, from the published figures. */
 function why(h: ShortlistHunt, st: ShortlistState): string | null {
   const who = h.pool === "total" ? "applicants" : `${st.residency} applicants`;
+  // Pool counts can be first-choice only; point tables may cover other choices (see the agency notes).
+  const poolWho = `${h.choice === "first" ? "first-choice " : ""}${who}`;
   switch (h.status) {
     case "drew-at-points":
       return h.atPoints
         ? `${h.year}: ${fmtNum(h.atPoints.drawn)} of ${fmtNum(h.atPoints.applicants)} ${who} with ${pointWord(st, h.atPoints.points)} drew (${fmtPct(h.atPoints.pct)}).`
+        : null;
+    case "all-drew":
+      return h.atPoints
+        ? `${h.year}: ${fmtNum(h.drawn)} drawn for ${fmtNum(h.applicants)} ${poolWho}, so everyone who applied drew. The agency's point table lists ${fmtNum(h.atPoints.drawn)} of ${fmtNum(h.atPoints.applicants)} with ${pointWord(st, h.atPoints.points)} as drawn${h.note ? "; see the agency notes for what it covers" : ""}.`
         : null;
     case "min-at-or-below":
       return `${h.year}: lowest point level drawn was ${h.minPoints}; you have ${st.points}. No ${who} at exactly your level were listed.`;
@@ -122,8 +129,12 @@ function HuntItem({ h, st, species }: { h: ShortlistHunt; st: ShortlistState; sp
       <dl className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-2 mt-3">
         <Stat label={h.quotaIsTotal ? "Total quota" : "Quota"} value={fmtNum(h.quota)} sub={h.quotaIsTotal ? "all applicants" : undefined} />
         <Stat label={h.choice === "first" ? "1st-choice apps" : "Applicants"} value={fmtNum(h.applicants)} sub={h.pool === "total" ? "combined pool" : undefined} />
-        <Stat label="Drawn" value={fmtNum(h.drawn)} />
-        <Stat label={`${h.year} odds`} value={fmtPct(h.odds)} sub={h.odds !== null && h.oddsComputed ? "drawn ÷ applicants" : undefined} />
+        <Stat label={h.choice === "first" ? "1st-choice drawn" : "Drawn"} value={fmtNum(h.drawn)} />
+        <Stat
+          label={`${h.year} ${h.choice === "first" ? "1st-choice odds" : "odds"}`}
+          value={fmtPct(h.odds)}
+          sub={h.odds !== null && h.oddsComputed ? "drawn ÷ applicants" : undefined}
+        />
         {st.pointsMatter && <Stat label="Min pts drawn" value={h.minPoints ?? "—"} />}
         {h.atPoints && (
           <Stat
@@ -146,6 +157,12 @@ function HuntItem({ h, st, species }: { h: ShortlistHunt; st: ShortlistState; sp
           />
         )}
       </dl>
+      {h.note && (
+        <details className="mt-2 text-xs text-muted-foreground">
+          <summary className="cursor-pointer select-none">Agency notes</summary>
+          <p className="mt-1 break-words">{h.note}</p>
+        </details>
+      )}
     </li>
   );
 }
@@ -154,6 +171,7 @@ function countsLine(st: ShortlistState): string[] {
   const c = st.counts;
   const out: string[] = [];
   if (c.drewAtPoints) out.push(`${plural(c.drewAtPoints, "hunt")} drew at your points`);
+  if (c.allDrew) out.push(`${plural(c.allDrew, "hunt")} where every applicant drew`);
   if (c.minAtOrBelow) out.push(`${plural(c.minAtOrBelow, "hunt")} drew at or below your points`);
   if (c.ranked) out.push(`${plural(c.ranked, "hunt")} ranked by odds`);
   if (c.pointsUnknown) out.push(`${plural(c.pointsUnknown, "hunt")} without point-level results`);
@@ -161,6 +179,7 @@ function countsLine(st: ShortlistState): string[] {
   if (c.notDrawnAtLevel) out.push(`${plural(c.notDrawnAtLevel, "hunt")} not drawn at your level`);
   if (c.notDrawn) out.push(`${plural(c.notDrawn, "hunt")} nobody drew`);
   if (c.noFigures) out.push(`${plural(c.noFigures, "hunt")} with no ${st.residency} figures`);
+  if (c.noOdds) out.push(`${plural(c.noOdds, "hunt")} with no ${st.residency} drawn count or odds`);
   return out;
 }
 
@@ -224,7 +243,9 @@ function StateCard({ st, species, limit }: { st: ShortlistState; species: Specie
         <p className="mt-4 rounded-xl border border-dashed border-border p-4 text-sm text-muted-foreground">
           {st.counts.hunts > 0 && st.counts.noFigures === st.counts.hunts
             ? `No ${st.residency} draw figures were published for these hunts.`
-            : st.pointsMatter && st.points !== null
+            : st.counts.hunts > 0 && st.counts.noFigures + st.counts.noOdds === st.counts.hunts
+              ? `No ${st.residency} drawn counts or odds were published for these hunts.`
+              : st.pointsMatter && st.points !== null
               ? `No ${SPECIES_LABELS[species].toLowerCase()} hunts here drew at your point level last year.`
               : `No ${SPECIES_LABELS[species].toLowerCase()} hunts here had published odds for ${st.residency} applicants last year.`}
           {st.counts.stretch > 0 && " Turn on stretch hunts to see the closest ones."}

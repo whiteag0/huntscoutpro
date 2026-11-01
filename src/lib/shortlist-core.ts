@@ -23,13 +23,19 @@ import {
  * - drew-at-points: the agency's point table shows applicants at exactly your level, and some drew.
  * - min-at-or-below: no applicants at your exact level were published, but the lowest point level drawn was at or below yours.
  * - points-unknown: points matter, but the agency publishes no point table or minimum for this hunt.
+ * - all-drew: applicants were listed at your level and every applicant in your pool drew, though the point
+ *   table (which some agencies limit to a preference phase or to other choices) shows fewer drawn at your level.
  * - stretch: not drawn at your level, but the lowest point level drawn was no more than 2 above yours.
  * - random: points don't affect this draw; ranked by the pool's overall odds.
  * - no-points-entered: points matter but you didn't enter any for this state; ranked by overall odds.
  */
-export type HuntStatus = "drew-at-points" | "min-at-or-below" | "points-unknown" | "stretch" | "random" | "no-points-entered";
+export type HuntStatus = "drew-at-points" | "all-drew" | "min-at-or-below" | "points-unknown" | "stretch" | "random" | "no-points-entered";
 
-export type ExcludedReason = "no-figures" | "not-drawn" | "not-drawn-at-level";
+/**
+ * - no-figures: the agency published nothing for the member's applicant pool.
+ * - no-odds: it published quotas or applicants for the pool, but not how many drew (or a rate), and no point-level result.
+ */
+export type ExcludedReason = "no-figures" | "no-odds" | "not-drawn" | "not-drawn-at-level";
 
 /** How far above your points a hunt's lowest drawn level may be to count as a stretch. */
 export const STRETCH_POINTS = 2;
@@ -89,6 +95,8 @@ export interface ShortlistCounts {
   /** Distinct hunts in the results year. */
   hunts: number;
   drewAtPoints: number;
+  /** Every applicant in the pool drew, though the point table shows fewer drawn at your level. */
+  allDrew: number;
   minAtOrBelow: number;
   pointsUnknown: number;
   /** Stretch hunts found (shown only when the member asks for them). */
@@ -99,6 +107,8 @@ export interface ShortlistCounts {
   notDrawn: number;
   /** No figures published for the member's applicant pool. */
   noFigures: number;
+  /** Quotas or applicants published for the pool, but no drawn count or odds. */
+  noOdds: number;
 }
 
 export interface ClassifiedState {
@@ -179,8 +189,11 @@ export function classifyHunt(r: DrawRecord, residency: DrawResidency, pointsMatt
     },
   });
 
+  // Every applicant in the pool drew (agency counts, not the point table).
+  const everyoneDrew = !!stats.applicants && stats.drawn != null && stats.drawn >= stats.applicants;
+
   if (!pointsMatter || points === null) {
-    if (odds === null && minPoints === null) return { excluded: "no-figures" };
+    if (odds === null && minPoints === null) return { excluded: "no-odds" };
     if (drawnNone) return { excluded: "not-drawn" };
     return make(pointsMatter ? "no-points-entered" : "random", odds);
   }
@@ -189,22 +202,27 @@ export function classifyHunt(r: DrawRecord, residency: DrawResidency, pointsMatt
   const at = hasTable ? oddsAtPoints(r, residency, points) : null;
   const atPoints = at ? { ...at, points } : null;
 
+  // Some agencies' point tables cover only the preference phase (Oregon) or other choices (Arizona),
+  // so the table can show fewer drawn at a level than the pool counts allow. When every applicant in
+  // the pool drew, say exactly that instead of "not drawn at your level".
+  if (atPoints && everyoneDrew && atPoints.drawn < atPoints.applicants) return make("all-drew", odds, atPoints);
   if (atPoints && atPoints.drawn > 0) return make("drew-at-points", atPoints.pct, atPoints);
   if (!atPoints && minPoints !== null && minPoints <= points) return make("min-at-or-below", odds);
   if (!atPoints && !hasTable && minPoints === null) {
-    if (odds === null) return { excluded: "no-figures" };
+    if (odds === null) return { excluded: "no-odds" };
     if (drawnNone) return { excluded: "not-drawn" };
     return make("points-unknown", odds);
   }
   // Published, and not drawn at the member's level.
   if (minPoints !== null && minPoints <= points + STRETCH_POINTS) return make("stretch", odds, atPoints);
-  if (!atPoints && minPoints === null && odds === null) return { excluded: "no-figures" };
+  if (!atPoints && minPoints === null && odds === null) return { excluded: "no-odds" };
   if (drawnNone) return { excluded: "not-drawn" };
   return { excluded: "not-drawn-at-level" };
 }
 
 const TIER: Record<HuntStatus, number> = {
   "drew-at-points": 0,
+  "all-drew": 0,
   "min-at-or-below": 0,
   random: 0,
   "no-points-entered": 0,
@@ -242,6 +260,7 @@ export function classifyState({ rows, residency, pointsMatter, points, includeSt
   const counts: ShortlistCounts = {
     hunts: 0,
     drewAtPoints: 0,
+    allDrew: 0,
     minAtOrBelow: 0,
     pointsUnknown: 0,
     stretch: 0,
@@ -249,6 +268,7 @@ export function classifyState({ rows, residency, pointsMatter, points, includeSt
     notDrawnAtLevel: 0,
     notDrawn: 0,
     noFigures: 0,
+    noOdds: 0,
   };
   if (year === null) return { drawYear: null, newerYearWithoutResults: null, hasPointTable: false, hasMinPoints: false, counts, hunts: [] };
 
@@ -259,12 +279,14 @@ export function classifyState({ rows, residency, pointsMatter, points, includeSt
     const c = classifyHunt(r, residency, pointsMatter, points);
     if ("excluded" in c) {
       if (c.excluded === "no-figures") counts.noFigures++;
+      else if (c.excluded === "no-odds") counts.noOdds++;
       else if (c.excluded === "not-drawn") counts.notDrawn++;
       else counts.notDrawnAtLevel++;
       continue;
     }
     const s = c.hunt.status;
     if (s === "drew-at-points") counts.drewAtPoints++;
+    else if (s === "all-drew") counts.allDrew++;
     else if (s === "min-at-or-below") counts.minAtOrBelow++;
     else if (s === "points-unknown") counts.pointsUnknown++;
     else if (s === "stretch") counts.stretch++;

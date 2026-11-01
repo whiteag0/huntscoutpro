@@ -108,6 +108,10 @@ function stateNotes(st: StateData, info: StateData["species"][number], r: Omit<S
     notes.push(`${agency} published no ${r.residency} figures for any of these hunts.`);
     return notes;
   }
+  if (r.counts.hunts > 0 && r.counts.noOdds > 0 && r.counts.noFigures + r.counts.noOdds === r.counts.hunts) {
+    notes.push(`${agency} published ${r.residency} quotas or applicant counts for these hunts but not how many drew, so there are no odds to list.`);
+    return notes;
+  }
   if (info.drawSystem === "otc") {
     notes.push(`${agency} sells most of these licenses over the counter; this list covers only the drawn hunts in its draw report.`);
   }
@@ -175,7 +179,9 @@ async function stateShortlist(st: StateData, q: ShortlistQuery): Promise<Shortli
     hunts,
   };
   const byId = new Map(st.sources.map((s) => [s.id, s]));
-  const ids = [...new Set([...hunts.map((h) => h.sourceId), ...hunts.flatMap((h) => (h.harvest ? [h.harvest.sourceId] : []))])];
+  // Cite the reports behind the hunts shown; with none shown, the reports behind that year's results.
+  const drawIds = hunts.length ? hunts.map((h) => h.sourceId) : rows.filter((r) => r.year === c.drawYear).map((r) => r.sourceId);
+  const ids = [...new Set([...drawIds, ...hunts.flatMap((h) => (h.harvest ? [h.harvest.sourceId] : []))])];
   const result: ShortlistState = {
     ...base,
     notes: stateNotes(st, info, base, q.includeStretch),
@@ -196,7 +202,7 @@ const bestOdds = (s: ShortlistState) => {
  */
 function stateGroup(s: ShortlistState): number {
   if (!s.hunts.length) return 4;
-  if (s.hunts.some((h) => h.status === "drew-at-points" || h.status === "min-at-or-below")) return 0;
+  if (s.hunts.some((h) => h.status === "drew-at-points" || h.status === "all-drew" || h.status === "min-at-or-below")) return 0;
   if (!s.pointsMatter) return 1;
   if (s.points === null) return 2;
   return 3;
