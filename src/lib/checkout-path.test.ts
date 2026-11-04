@@ -11,6 +11,10 @@ test("callback URLs stay on this site", () => {
   assert.equal(safeCallbackUrl("//evil.example/"), "/states");
   assert.equal(safeCallbackUrl("/\\evil.example/"), "/states");
   assert.equal(safeCallbackUrl("javascript:alert(1)"), "/states");
+  // Browsers strip tabs and newlines from URLs, which would turn these into //evil.example.
+  assert.equal(safeCallbackUrl("/\t/evil.example/"), "/states");
+  assert.equal(safeCallbackUrl("/\n/evil.example/"), "/states");
+  assert.equal(safeCallbackUrl("/pricing?checkout=1#top"), "/pricing?checkout=1#top");
   assert.equal(safeCallbackUrl("nope", "/pricing"), "/pricing");
 });
 

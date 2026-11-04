@@ -8,10 +8,18 @@ export const PRICING_CHECKOUT_PATH = `/pricing?${CHECKOUT_PARAM}=1`;
 
 const BASE = "https://huntscout.invalid";
 
-/** Same-site path to return to after sign-in, or the fallback (blocks javascript:, //host and /\host). */
+/**
+ * Same-site path to return to after sign-in, or the fallback. Resolved the way the browser will
+ * resolve it, so javascript:, //host, /\host and "/<tab>/host" (tabs and newlines are stripped) can't leave the site.
+ */
 export function safeCallbackUrl(raw: string | null | undefined, fallback = "/states"): string {
-  if (!raw || !raw.startsWith("/") || raw.startsWith("//") || raw.startsWith("/\\")) return fallback;
-  return raw;
+  if (!raw || !raw.startsWith("/")) return fallback;
+  try {
+    const u = new URL(raw, BASE);
+    return u.origin === BASE ? `${u.pathname}${u.search}${u.hash}` : fallback;
+  } catch {
+    return fallback;
+  }
 }
 
 /** /signin that comes back to `returnTo` (a same-site path). */

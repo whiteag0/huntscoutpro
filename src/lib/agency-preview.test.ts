@@ -140,4 +140,15 @@ test("preview copy quotes the true counts and years", () => {
   assert.equal(h.gate, "Showing 8 of 957 Colorado elk harvest rows for the 2025 season. Pro shows every row in all 2 seasons (2024–2025), each figure cited to the CPW report it came from.");
   const all = previewCopy({ ...base, kind: "harvest", shown: 1, meta: { year: 2022, years: [2022], yearTotal: 1, rankedBy: "harvest" } });
   assert.equal(all.caption, "Free preview: the only row for the 2022 season.");
+  assert.equal(all.gate, "Showing the only Colorado elk harvest row for the 2022 season. Pro adds the draw results by hunt code, each figure cited to the CPW report it came from.");
+});
+
+test("preview copy doesn't promise more hunt codes when the preview already shows them all", () => {
+  const base = { stateName: "Montana", species: "black bear", agency: "FWP", unitTerm: "Hunting District", kind: "draw" as const, shown: 2 };
+  const one = previewCopy({ ...base, hasOther: true, meta: { year: 2026, years: [2026], yearTotal: 2, rankedBy: "applicants" } });
+  assert.equal(one.gate, "Showing all 2 Montana black bear hunt codes in the 2026 draw. Pro adds harvest by Hunting District, each figure cited to the FWP report it came from.");
+  const many = previewCopy({ ...base, hasOther: false, meta: { year: 2026, years: [2026, 2025], yearTotal: 2, rankedBy: "applicants" } });
+  assert.equal(many.gate, "Showing all 2 Montana black bear hunt codes in the 2026 draw. Pro shows all 2 draw years (2025–2026), each figure cited to the FWP report it came from.");
+  const only = previewCopy({ ...base, hasOther: false, meta: { year: 2026, years: [2026], yearTotal: 2, rankedBy: "applicants" } });
+  assert.equal(only.gate, "Showing all 2 Montana black bear hunt codes in the 2026 draw.");
 });

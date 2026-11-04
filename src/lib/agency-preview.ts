@@ -142,6 +142,9 @@ export function previewCopy({ kind, meta, shown, stateName, species, agency, uni
   const all = shown >= yearTotal;
   const span = ys.length > 1 ? `${ys[ys.length - 1]}–${ys[0]}` : String(ys[0] ?? "");
   const cited = `each figure cited to the ${agency} report it came from`;
+  // When the preview already holds every row of its year, say so instead of "Showing 2 of 2", and only promise what Pro adds.
+  const gateText = (lead: string, more: string | null, other: string | null) =>
+    more ? `${lead} ${more}${other ? `, plus ${other}` : ""}, ${cited}.` : other ? `${lead} Pro adds ${other}, ${cited}.` : lead;
   if (kind === "draw") {
     const caption = all
       ? `Free preview: ${shown === 1 ? "the only hunt code" : `all ${n(shown)} hunt codes`} in the ${year} draw.`
@@ -150,7 +153,17 @@ export function previewCopy({ kind, meta, shown, stateName, species, agency, uni
         : rankedBy === "quota"
           ? `Free preview: the ${n(shown)} hunt codes with the largest quotas in the ${year} draw (${agency} didn't publish applicant counts for ${year}).`
           : `Free preview: ${n(shown)} hunt codes from the ${year} draw.`;
-    const gate = `Showing ${n(shown)} of ${n(yearTotal)} ${stateName} ${species} hunt codes in the ${year} draw. Pro shows every hunt code${ys.length > 1 ? ` in all ${ys.length} draw years (${span})` : ""}${hasOther ? `, plus harvest by ${unitTerm}` : ""}, ${cited}.`;
+    const gate = gateText(
+      all
+        ? `Showing ${shown === 1 ? "the only" : `all ${n(shown)}`} ${stateName} ${species} hunt ${shown === 1 ? "code" : "codes"} in the ${year} draw.`
+        : `Showing ${n(shown)} of ${n(yearTotal)} ${stateName} ${species} hunt codes in the ${year} draw.`,
+      all
+        ? ys.length > 1
+          ? `Pro shows all ${ys.length} draw years (${span})`
+          : null
+        : `Pro shows every hunt code${ys.length > 1 ? ` in all ${ys.length} draw years (${span})` : ""}`,
+      hasOther ? `harvest by ${unitTerm}` : null
+    );
     return { caption, gate };
   }
   const caption = all
@@ -158,6 +171,16 @@ export function previewCopy({ kind, meta, shown, stateName, species, agency, uni
     : rankedBy
       ? `Free preview: the ${n(shown)} rows with the most ${rankedBy} in the ${year} season.`
       : `Free preview: ${n(shown)} rows from the ${year} season.`;
-  const gate = `Showing ${n(shown)} of ${n(yearTotal)} ${stateName} ${species} harvest rows for the ${year} season. Pro shows every row${ys.length > 1 ? ` in all ${ys.length} seasons (${span})` : ""}${hasOther ? ", plus the draw results by hunt code" : ""}, ${cited}.`;
+  const gate = gateText(
+    all
+      ? `Showing ${shown === 1 ? "the only" : `all ${n(shown)}`} ${stateName} ${species} harvest ${shown === 1 ? "row" : "rows"} for the ${year} season.`
+      : `Showing ${n(shown)} of ${n(yearTotal)} ${stateName} ${species} harvest rows for the ${year} season.`,
+    all
+      ? ys.length > 1
+        ? `Pro shows all ${ys.length} seasons (${span})`
+        : null
+      : `Pro shows every row${ys.length > 1 ? ` in all ${ys.length} seasons (${span})` : ""}`,
+    hasOther ? "the draw results by hunt code" : null
+  );
   return { caption, gate };
 }
