@@ -1,12 +1,15 @@
 import type { MetadataRoute } from "next";
 import type { HarvestRecord } from "@/data/agency/schema";
-import { agencySlugs, getAllStateData, readTable, speciesWithData, type StateData } from "@/lib/agency";
-import { COMING_SOON_STATES, LIVE_STATE_SLUGS } from "@/lib/agency-format";
+import { getAllStateData, readTable, speciesWithData, type StateData } from "@/lib/agency";
+import { LIVE_STATE_SLUGS } from "@/lib/agency-format";
 import { canonicalUnit, isRealUnit } from "@/lib/agency-view";
 import { SITE } from "@/lib/emails/onboarding";
+import { hasTeaserData } from "@/lib/unit-teaser";
+import { getUnitTeasers } from "@/components/growth/unit-glance";
 
 // Built once at build time from the agency files. lastModified is the date each
 // state's facts were last checked against the agency (draw-meta lastReviewed).
+// Coming-soon state pages and units with no published figures are noindex, so they're left out.
 
 /** Google's limit is 50,000 per file; stay well under it and keep unit pages from swamping the rest. */
 const MAX_URLS = 5000;
@@ -26,10 +29,12 @@ const day = (iso: string) => new Date(`${iso}T00:00:00Z`);
 
 /**
  * Harvest units for a state, one per unit: ids written differently across reports are
- * merged (newest spelling wins) and each unit is linked under the first species that reports it.
+ * merged (newest spelling wins) and each unit is linked under the first species that reports it
+ * with figures (the unit page is noindex for a species without any).
  */
 async function unitPages(state: StateData): Promise<{ unit: string; species: string }[]> {
   const found = new Map<string, { unit: string; year: number; species: string }>();
+  const teasers = await getUnitTeasers(state, speciesWithData(state));
   for (const sp of speciesWithData(state)) {
     let rows: HarvestRecord[] = [];
     try {
@@ -40,6 +45,7 @@ async function unitPages(state: StateData): Promise<{ unit: string; species: str
     for (const r of rows) {
       if (!isRealUnit(r.unit) || r.unit.length > 60 || /[()]/.test(r.unit)) continue;
       const key = canonicalUnit(r.unit);
+      if (!hasTeaserData(teasers[sp.species]?.get(key))) continue;
       const cur = found.get(key);
       if (!cur) found.set(key, { unit: r.unit, year: r.year, species: sp.species });
       else if (cur.species === sp.species && r.year > cur.year) found.set(key, { ...cur, unit: r.unit, year: r.year });
@@ -66,12 +72,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   for (const s of states) {
     out.push({ url: `${SITE}/states/${s.slug}`, lastModified: day(s.lastReviewed), changeFrequency: "weekly", priority: 0.9 });
-  }
-
-  const live = new Set(agencySlugs());
-  for (const s of COMING_SOON_STATES) {
-    if (live.has(s.slug)) continue;
-    out.push({ url: `${SITE}/states/${s.slug}`, changeFrequency: "monthly", priority: 0.2 });
   }
 
   // Unit pages, round-robin across states so a cap trims every state evenly.

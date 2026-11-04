@@ -9,16 +9,17 @@ export function footnoteIndex(ids: Iterable<string>): Map<string, number> {
   return m;
 }
 
-export function Cite({ n }: { n?: number }) {
+/** `prefix` keeps footnote anchors unique when a page has more than one source list. */
+export function Cite({ n, prefix = "src" }: { n?: number; prefix?: string }) {
   if (!n) return null;
   return (
-    <a href={`#src-${n}`} className="ml-0.5 py-2 align-super text-[10px] font-semibold text-gold hover:underline" aria-label={`Source ${n}`}>
+    <a href={`#${prefix}-${n}`} className="ml-0.5 py-2 align-super text-[10px] font-semibold text-gold hover:underline" aria-label={`Source ${n}`}>
       [{n}]
     </a>
   );
 }
 
-export function SourceNotes({ sources, index, title = "Sources" }: { sources: SourceRef[]; index: Map<string, number>; title?: string }) {
+export function SourceNotes({ sources, index, title = "Sources", prefix = "src" }: { sources: SourceRef[]; index: Map<string, number>; title?: string; prefix?: string }) {
   const byId = new Map(sources.map((s) => [s.id, s]));
   const list = Array.from(index.entries())
     .map(([id, n]) => ({ n, s: byId.get(id) }))
@@ -30,7 +31,7 @@ export function SourceNotes({ sources, index, title = "Sources" }: { sources: So
       <h3 className="font-semibold text-foreground text-sm mb-2">{title}</h3>
       <ol className="space-y-1.5">
         {list.map(({ n, s }) => (
-          <li key={s.id} id={`src-${n}`} className="flex gap-2 scroll-mt-24">
+          <li key={s.id} id={`${prefix}-${n}`} className="flex gap-2 scroll-mt-24">
             <span className="font-semibold text-gold shrink-0">[{n}]</span>
             <span>
               <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-foreground hover:underline inline-flex items-center gap-1">

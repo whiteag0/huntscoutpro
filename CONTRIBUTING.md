@@ -39,6 +39,9 @@ UTC. To run it now, go to **Actions → Site health → Run workflow**. It expec
 
 - `/`, `/states`, `/states/colorado`, `/states/idaho`, `/shortlist`, `/calendar` and `/pricing`
   to return 200 with "HuntScout" in the page
+- `/states/colorado/units/061?species=elk` to return 200 with the free "at a glance" summary in
+  the HTML and without "doesn't publish" or "No drawn hunts" (empty-state copy must never come
+  from the signed-out preview)
 - `/api/agency/colorado/elk?kind=draw` to return 200 with the signed-out preview JSON
   (`preview: true` and at least one row)
 - `/api/cron/deadline-reminders` without credentials to return 401. A 500 means

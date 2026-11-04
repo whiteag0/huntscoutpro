@@ -106,8 +106,15 @@ export interface CoverageStats {
   states: number;
   /** Per species: live states covering it, distinct hunt codes in each state's latest draw year, distinct harvest units. */
   species: Partial<Record<Species, { states: number; huntCodes: number; units: number }>>;
+  /** Species counted together (e.g. deer = mule deer + whitetail), each state's codes and units counted once. */
+  groups: Record<string, { states: number; huntCodes: number; units: number }>;
+  /** Distinct latest-year hunt codes per state, summed; a code in two files of one group counts once. */
+  totalHuntCodes: number;
   drawYears: [number, number] | null;
   harvestYears: [number, number] | null;
+  /** [first, last] draw and harvest year in each state's files. */
+  drawYearsByState: Record<string, [number, number]>;
+  harvestYearsByState: Record<string, [number, number]>;
   /** Agency statewide turkey rows by state, newest first. */
   turkeyStatewide: Record<string, { rows: HarvestRecord[]; units: number; drawHunts: number }>;
 }

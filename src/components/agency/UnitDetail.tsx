@@ -12,7 +12,7 @@ import { drawHistory, drawStats, harvestMethodKey, headlineHarvestRows, minPoint
 import { DemoGate } from "@/components/DemoGate";
 import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { Cite, SourceNotes, footnoteIndex } from "@/components/agency/SourceNotes";
-import { HScroll, pill, useIsNarrow } from "@/components/agency/mobile";
+import { HScroll, LockedRows, pill, useIsNarrow } from "@/components/agency/mobile";
 import { AddToPlannerButton, PlannerToaster } from "@/components/planner/AddToPlanner";
 
 function PointTable({ r, residency }: { r: DrawRecord; residency: DrawResidency }) {
@@ -45,7 +45,20 @@ function PointTable({ r, residency }: { r: DrawRecord; residency: DrawResidency 
   );
 }
 
-export function UnitDetail({ state, unit, species: speciesList, requested }: { state: StateData; unit: string; species: SpeciesInfo[]; requested?: string }) {
+export function UnitDetail({
+  state,
+  unit,
+  species: speciesList,
+  requested,
+  summary,
+}: {
+  state: StateData;
+  unit: string;
+  species: SpeciesInfo[];
+  requested?: string;
+  /** Server-rendered free summary, shown to everyone above the tables. */
+  summary?: React.ReactNode;
+}) {
   const species = speciesList.find((s) => s.species === requested)?.species || speciesList[0].species;
   const info = speciesList.find((s) => s.species === species)!;
   const { data, loading, error } = useSpeciesData(state.slug, species);
@@ -112,6 +125,8 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
         ))}
       </HScroll>
 
+      {summary}
+
       {loading && !data ? (
         <div className="flex items-center justify-center py-16 text-muted-foreground">
           <Loader2 className="w-5 h-5 animate-spin mr-2" aria-hidden /> Loading…
@@ -131,7 +146,10 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
                 </select>
               )}
             </div>
-            {series.length === 0 ? (
+            {series.length === 0 && data?.preview ? (
+              // The preview holds a few statewide rows, not this unit's: never claim the agency has nothing.
+              <LockedRows />
+            ) : series.length === 0 ? (
               <p className="text-sm text-muted-foreground">
                 {state.agency.shortName} doesn&apos;t publish {SPECIES_LABELS[species].toLowerCase()} harvest for this {state.unitTerm} in the years we cover.
               </p>
@@ -192,7 +210,9 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
                 ))}
               </div>
             </div>
-            {hunts.size === 0 ? (
+            {hunts.size === 0 && data?.preview ? (
+              <LockedRows />
+            ) : hunts.size === 0 ? (
               <p className="text-sm text-muted-foreground">No drawn hunts for this {state.unitTerm} in the draw years we cover.</p>
             ) : (
               <div className="space-y-4">

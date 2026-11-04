@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+import { SITE } from "@/lib/emails/onboarding";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | HuntScout Pro",
+  description: "The terms for using HuntScout Pro, including the one-time Pro purchase, the 30-day refund and how agency data is presented.",
+  alternates: { canonical: `${SITE}/terms` },
+};
+
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-background">

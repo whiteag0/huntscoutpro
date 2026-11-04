@@ -27,6 +27,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       title,
       description,
       alternates: { canonical: url },
+      // Every coming-soon page is the same request form; /request-state is the one to index.
+      robots: { index: false },
       openGraph: { title, description, url, siteName: "HuntScout Pro", type: "website" },
     };
   }

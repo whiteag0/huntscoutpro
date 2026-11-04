@@ -81,6 +81,18 @@ jobs:
             fi
           done
 
+          # Unit page, signed out: the free summary is in the server HTML, and no empty-state copy
+          # ("doesn't publish", "No drawn hunts") built from the short preview. CPW publishes both for GMU 061 elk.
+          path="/states/colorado/units/061?species=elk"
+          probe GET "$path"
+          if [ "$code" = 200 ] && grep -q "at a glance" "$body" && ! grep -Eqi "doesn(&#x27;|&#39;|'|’)t publish|no drawn hunts" "$body"; then
+            record "GET $path" "200, free summary, no empty-state copy" 0 "HTTP 200"
+          elif [ "$code" = 200 ]; then
+            record "GET $path" "200, free summary, no empty-state copy" 1 "HTTP 200 but the summary is missing or the page says the data isn't published"
+          else
+            record "GET $path" "200, free summary, no empty-state copy" 1 "$(got)"
+          fi
+
           # Agency data API, signed out: a preview object with at least one official row.
           path="/api/agency/colorado/elk?kind=draw"
           probe GET "$path"

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getAllStateData, getCoverageStats, speciesWithData } from "@/lib/agency";
 import { LIVE_STATE_SLUGS } from "@/lib/agency-format";
 import { AGENCY_STATES, type Species } from "@/data/agency/schema";
@@ -5,7 +6,10 @@ import { stateBySlug } from "@/data/state-list";
 import { HomeClient } from "@/components/home/HomeClient";
 import type { HomeData, HomeSpeciesCard } from "@/components/home/types";
 import { SITE } from "@/lib/emails/onboarding";
+import { summarizeSpans } from "@/lib/coverage";
 import { jsonLdString } from "@/components/growth/state-glance";
+
+export const metadata: Metadata = { alternates: { canonical: SITE } };
 
 // Structured data for search engines: who publishes the site, and the site itself.
 const SITE_JSON_LD = [
@@ -34,11 +38,14 @@ const SITE_JSON_LD = [
 
 // Species cards on the marketing page. Counts come from getCoverageStats(), which is
 // computed from the published agency files at build time. A card with no data is hidden.
-const SPECIES_CARDS: { name: string; species: Species[]; image: string; href: string }[] = [
+// A card with several species reads its counts from the matching group (deer), so a hunt listed
+// in both the mule deer and whitetail files counts once.
+const SPECIES_CARDS: { name: string; species: Species[]; group?: string; image: string; href: string }[] = [
   { name: "Elk", species: ["elk"], image: "https://images.unsplash.com/photo-1633356984559-9877a6896ba8?w=1920&q=80", href: "/states" },
   {
     name: "Deer",
     species: ["mule-deer", "whitetail"],
+    group: "deer",
     image: "https://images.unsplash.com/photo-1700244909533-b7ab4e4bd9ae?w=1920&q=80",
     href: "/states",
   },
@@ -55,7 +62,7 @@ export default async function HomePage() {
   const speciesByState = new Map(states.map((s) => [s.slug, new Set(speciesWithData(s).map((sp) => sp.species))]));
 
   const speciesCards: HomeSpeciesCard[] = SPECIES_CARDS.flatMap((card) => {
-    const entries = card.species.map((sp) => stats.species[sp]).filter((e) => !!e);
+    const entries = card.group ? [stats.groups[card.group]].filter((e) => !!e) : card.species.map((sp) => stats.species[sp]).filter((e) => !!e);
     // States that publish any of the card's species (Deer = mule deer or whitetail), counted once.
     const stateCount = states.filter((s) => card.species.some((sp) => speciesByState.get(s.slug)?.has(sp))).length;
     const huntCodes = entries.reduce((n, e) => n + e.huntCodes, 0);
@@ -64,7 +71,7 @@ export default async function HomePage() {
     return [{ name: card.name, image: card.image, href: card.href, states: stateCount, huntCodes, units }];
   });
 
-  const totalHuntCodes = Object.values(stats.species).reduce((n, e) => n + (e?.huntCodes || 0), 0);
+  const totalHuntCodes = stats.totalHuntCodes;
   const speciesCount = Object.values(stats.species).filter((e) => e && e.states > 0).length;
   const liveSlugs = new Set(states.map((s) => s.slug));
 
@@ -72,8 +79,8 @@ export default async function HomePage() {
     stateCount: states.length,
     speciesCount,
     totalHuntCodes,
-    drawYears: stats.drawYears,
-    harvestYears: stats.harvestYears,
+    drawYears: summarizeSpans(stats.drawYearsByState),
+    harvestYears: summarizeSpans(stats.harvestYearsByState),
     liveStates: states.map((s) => ({
       slug: s.slug,
       name: s.name,
