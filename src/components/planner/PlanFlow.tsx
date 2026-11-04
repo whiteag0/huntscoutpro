@@ -909,7 +909,13 @@ function Review({
                   className="w-20 min-h-11 px-2 border border-border rounded-lg bg-background text-base"
                 />
                 <span className="text-xs text-muted-foreground">
-                  {pointsChoice !== null || !saved ? "Not in your saved points; enter yours" : saved.from === "planner" ? "From a hunt in your planner" : "From your saved points"}
+                  {!saved
+                    ? "Not in your saved points; enter yours"
+                    : pointsChoice !== null && pointsChoice !== saved.points
+                      ? `Your saved points: ${saved.points}`
+                      : saved.from === "planner"
+                        ? "From a hunt in your planner"
+                        : "From your saved points"}
                 </span>
               </label>
             )}

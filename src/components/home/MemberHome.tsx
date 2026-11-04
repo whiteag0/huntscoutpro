@@ -100,11 +100,11 @@ function ReportLine({ report }: { report: MemberProfile["report"] }) {
     <p className="flex items-start gap-2 text-sm text-foreground">
       <FileText className="w-4 h-4 text-gold shrink-0 mt-0.5" aria-hidden="true" />
       <span>
-        Your scouting report was emailed on {sent}. Changing your answers on{" "}
+        Your scouting report was emailed on {sent}. Saving new states, species, residency, methods, units or points on{" "}
         <Link href="/welcome" className="text-primary font-semibold hover:underline">
           your hunting profile
         </Link>{" "}
-        sends an updated one.
+        emails an updated one, if your last report went out more than a day before.
       </span>
     </p>
   );
@@ -125,9 +125,11 @@ function StartHere({ load }: { load: ProfileLoad }) {
         </h2>
       </div>
       <p className="text-sm text-muted-foreground mb-4">
-        {liveStates.length
+        {liveStates.length || load.status !== "ready" || profile?.error
           ? "Your next application deadlines, from the agencies' published dates for your states and species."
-          : "Your next application deadlines will show here once you tell us the states you hunt."}
+          : prefs?.states.length
+            ? "Your next application deadlines will show here once we publish agency data for one of your states."
+            : "Your next application deadlines will show here once you tell us the states you hunt."}
       </p>
 
       {load.status === "loading" ? (
@@ -136,6 +138,14 @@ function StartHere({ load }: { load: ProfileLoad }) {
           <div className="h-4 w-1/2 rounded bg-muted animate-pulse" />
           <div className="h-4 w-3/5 rounded bg-muted animate-pulse" />
         </div>
+      ) : profile?.error ? (
+        <p className="text-sm text-muted-foreground mb-5">
+          We couldn&apos;t load your deadlines right now.{" "}
+          <Link href="/calendar" className="text-primary font-semibold hover:underline">
+            See every agency date
+          </Link>
+          .
+        </p>
       ) : profile?.upcoming.length ? (
         <ul className="mb-5">
           {profile.upcoming.map((d) => (
@@ -147,6 +157,17 @@ function StartHere({ load }: { load: ProfileLoad }) {
           None of your states has an upcoming application deadline in the agency dates we have.{" "}
           <Link href="/calendar" className="text-primary font-semibold hover:underline">
             See every date
+          </Link>
+          .
+        </p>
+      ) : prefs?.states.length ? (
+        <p className="text-sm text-muted-foreground mb-5">
+          <Link href="/states" className="text-primary font-semibold hover:underline">
+            See the states with agency data
+          </Link>
+          , or{" "}
+          <Link href="/welcome" className="text-primary font-semibold hover:underline">
+            add one to your states
           </Link>
           .
         </p>

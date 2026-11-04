@@ -2,6 +2,7 @@ import { CalendarDays, ExternalLink, FileText } from "lucide-react";
 import type { StateData } from "@/lib/agency";
 import { fmtNum, fmtPct, formatDate } from "@/lib/agency-format";
 import { spanLabel, type GlanceSpecies, type StateGlance } from "@/components/growth/state-glance";
+import { ShowMore } from "@/components/agency/mobile";
 
 // Server-rendered public summary of a live state: draw system, next agency
 // dates, the agency's statewide harvest totals, years covered and sources.
@@ -111,6 +112,8 @@ export function StateAtAGlance({ state, glance }: { state: StateData; glance: St
           Statewide totals are the agency&apos;s own figures; results for each hunt code and {state.unitTerm} are in the draw and harvest tables.
         </p>
 
+        {/* Phones: it sits above the tables for non-members, so it starts short (the full text stays in the page). */}
+        <ShowMore until="sm" collapsed={640} onBackground moreLabel={`Show the full ${state.name} summary`} lessLabel="Show less">
         <div className="mt-5 grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {glance.species.map((s) => (
             <SpeciesCard key={s.species} s={s} />
@@ -142,6 +145,7 @@ export function StateAtAGlance({ state, glance }: { state: StateData; glance: St
             ))}
           </ul>
         </div>
+        </ShowMore>
       </div>
     </section>
   );

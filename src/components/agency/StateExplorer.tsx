@@ -112,7 +112,12 @@ export function StateExplorer({
   const homeName = profile?.preferences?.homeState ? stateByAbbrev(profile.preferences.homeState)?.name : undefined;
   const filled = [
     residencyChoice === null && profileResidency && `${profileResidency === "resident" ? "resident" : "nonresident"}${homeName ? ` (home state ${homeName})` : ""}`,
-    pointsChoice === null && savedPoints && maxPts > 0 && `${savedPoints.points} ${info.pointName || "point"}${savedPoints.points === 1 ? "" : "s"}${savedPoints.from === "planner" ? " from your planner" : ""}`,
+    pointsChoice === null &&
+      savedPoints &&
+      maxPts > 0 &&
+      `${savedPoints.points} ${info.pointName || "point"}${savedPoints.points === 1 ? "" : "s"}${savedPoints.from === "planner" ? " from your planner" : ""}${
+        savedPoints.points > maxPts ? ` (shown at ${maxPts}, the highest point level in these results)` : ""
+      }`,
   ].filter(Boolean);
 
   const openTab = (t: Tab) => {

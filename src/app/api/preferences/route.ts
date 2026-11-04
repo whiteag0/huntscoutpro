@@ -7,7 +7,7 @@ import { sendEmail, cancelScheduledEmail } from "@/lib/onboarding";
 import { preferencesNotification } from "@/lib/emails/onboarding";
 import { SPECIES_LABELS } from "@/data/types";
 import { pointsFromMetadata } from "@/lib/points";
-import { REPORT_ERROR_KEY, REPORT_PENDING_KEY, REPORT_PENDING_MS, REPORT_SENT_KEY, reportDecision, reportInputHash, type ReportDecision } from "@/lib/report-trigger";
+import { REPORT_PENDING_KEY, reportDecision, reportInputHash, reportStatus, type ReportDecision } from "@/lib/report-trigger";
 import { getAllStateData } from "@/lib/agency";
 import { todayIso } from "@/lib/agency-format";
 import { nextDeadlines } from "@/lib/reminders";
@@ -28,19 +28,6 @@ async function member() {
   return { session, email, ent };
 }
 
-/** Where the member's scouting report stands, from the markers on the purchase (no extra lookup). */
-function reportStatus(md: Record<string, string>): { sentAt: string | null; pending: boolean } {
-  const time = (v: string | undefined) => Date.parse((v || "").split(" ")[0]);
-  const sent = time(md[REPORT_SENT_KEY]);
-  const pending = time(md[REPORT_PENDING_KEY]);
-  const failed = time(md[REPORT_ERROR_KEY]);
-  return {
-    sentAt: Number.isNaN(sent) ? null : new Date(sent).toISOString(),
-    // Queued in the last few minutes and not yet sent or failed (the same test the save uses).
-    pending: !Number.isNaN(pending) && Date.now() - pending < REPORT_PENDING_MS && !(sent >= pending) && !(failed >= pending),
-  };
-}
-
 /**
  * The signed-in member's saved hunting preferences, plus what member home shows from them:
  * the next agency deadlines for their states and species, and their scouting report's status.
@@ -56,7 +43,7 @@ export async function GET() {
     const upcoming = preferences
       ? nextDeadlines({ email: m.email, ...preferences }, await getAllStateData(), todayIso())
       : [];
-    return NextResponse.json({ preferences, onboarded, upcoming, report: reportStatus(metadata) });
+    return NextResponse.json({ preferences, onboarded, upcoming, report: reportStatus(metadata, Date.now()) });
   } catch (err) {
     console.error("Preferences read failed:", err);
     return NextResponse.json({ error: "Couldn't load your preferences." }, { status: 502 });

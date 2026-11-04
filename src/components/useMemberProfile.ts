@@ -37,12 +37,19 @@ const REUSE_MS = 3_000;
 let baseCache: { email: string; at: number; p: Promise<Base> } | null = null;
 let plannerCache: { email: string; at: number; p: Promise<PlannerPoints[]> } | null = null;
 
+/** The tools wait for these answers before drawing their tables, so a slow lookup gives up and they use their usual defaults. */
+const TIMEOUT_MS = 6_000;
+
 async function getJson(url: string): Promise<Record<string, unknown> | null> {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
-    const res = await fetch(url, { cache: "no-store" });
+    const res = await fetch(url, { cache: "no-store", signal: ctrl.signal });
     return res.ok ? ((await res.json()) as Record<string, unknown>) : null;
   } catch {
     return null;
+  } finally {
+    clearTimeout(timer);
   }
 }
 
