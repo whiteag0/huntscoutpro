@@ -3,7 +3,7 @@ import { SITE } from "@/lib/emails/onboarding";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: "*", allow: "/", disallow: ["/api/", "/account", "/welcome", "/success"] }],
+    rules: [{ userAgent: "*", allow: "/", disallow: ["/api/", "/account", "/welcome", "/success", "/admin/"] }],
     sitemap: `${SITE}/sitemap.xml`,
   };
 }

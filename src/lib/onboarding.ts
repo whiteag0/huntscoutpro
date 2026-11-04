@@ -3,9 +3,12 @@ import { stripe } from "@/lib/stripe";
 import { PREFS_EMAIL_ID_KEY } from "@/lib/preferences";
 import { isHuntScoutSession, sessionAccessEnd } from "@/lib/entitlement";
 import { welcomeEmail, preferencesEmail, type RenderedEmail } from "@/lib/emails/onboarding";
+import { inboundAddress, isInboundConfigured, resendApiBase } from "@/lib/inbound/config";
 
 const FROM = process.env.EMAIL_FROM || "Adam White, HuntScout Pro <adam@huntscoutpro.com>";
-const REPLY_TO = process.env.EMAIL_REPLY_TO || "adam@huntscoutpro.com";
+// Replies go to the inbound address once it's set up (INBOUND_EMAIL.md), so each one gets an
+// AI-drafted answer for Adam to approve. Until then they go straight to Adam's inbox.
+const REPLY_TO = (isInboundConfigured() && inboundAddress()) || process.env.EMAIL_REPLY_TO || "adam@huntscoutpro.com";
 // Optional comma-separated BCC so the owner sees every onboarding email.
 const BCC = (process.env.ONBOARDING_BCC || "").split(",").map((s) => s.trim()).filter(Boolean);
 
@@ -64,7 +67,7 @@ export async function sendEmail({ to, email, idempotencyKey, scheduledAt, replyT
     return null;
   }
   for (let attempt = 0; ; attempt++) {
-    const res = await fetch("https://api.resend.com/emails", {
+    const res = await fetch(`${resendApiBase()}/emails`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${key}`,
@@ -109,7 +112,7 @@ export async function sendEmail({ to, email, idempotencyKey, scheduledAt, replyT
 export async function cancelScheduledEmail(id: string): Promise<void> {
   const key = process.env.RESEND_API_KEY;
   if (!key || !/^[0-9a-f-]{20,}$/i.test(id)) return;
-  const res = await fetch(`https://api.resend.com/emails/${id}/cancel`, {
+  const res = await fetch(`${resendApiBase()}/emails/${id}/cancel`, {
     method: "POST",
     headers: { Authorization: `Bearer ${key}` },
     signal: AbortSignal.timeout(10000),
