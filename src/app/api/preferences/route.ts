@@ -1,12 +1,14 @@
+import { createHash } from "node:crypto";
 import { NextRequest, NextResponse, after } from "next/server";
 import { auth } from "@/lib/auth";
 import { getEntitlement } from "@/lib/entitlement";
 import { sanitizePreferences, METHOD_OPTIONS, GOAL_OPTIONS, type HuntingPreferences } from "@/lib/preferences-schema";
-import { readPreferences, writePreferences, PREFS_EMAIL_ID_KEY } from "@/lib/preferences";
+import { readPreferences, writePreferences, PREFS_EMAIL_ID_KEY, PREFS_NOTIFY_ERROR_KEY } from "@/lib/preferences";
 import { sendEmail, cancelScheduledEmail } from "@/lib/onboarding";
 import { preferencesNotification } from "@/lib/emails/onboarding";
 import { SPECIES_LABELS } from "@/data/types";
 import { pointsFromMetadata } from "@/lib/points";
+import { stripe } from "@/lib/stripe";
 import { REPORT_PENDING_KEY, reportDecision, reportInputHash, reportStatus, type ReportDecision } from "@/lib/report-trigger";
 import { getAllStateData } from "@/lib/agency";
 import { todayIso } from "@/lib/agency-format";
@@ -36,14 +38,15 @@ export async function GET() {
   const m = await member();
   if ("error" in m) return m.error;
   if (!m.ent.paymentIntentId) {
-    return NextResponse.json({ preferences: null, onboarded: m.session!.user.onboarded === true, upcoming: [], report: null });
+    // stored: false — no purchase record to save answers on (manual grants).
+    return NextResponse.json({ preferences: null, onboarded: m.session!.user.onboarded === true, upcoming: [], report: null, stored: false });
   }
   try {
     const { preferences, onboarded, metadata } = await readPreferences(m.ent.paymentIntentId);
     const upcoming = preferences
       ? nextDeadlines({ email: m.email, ...preferences }, await getAllStateData(), todayIso())
       : [];
-    return NextResponse.json({ preferences, onboarded, upcoming, report: reportStatus(metadata, Date.now()) });
+    return NextResponse.json({ preferences, onboarded, upcoming, report: reportStatus(metadata, Date.now()), stored: true });
   } catch (err) {
     console.error("Preferences read failed:", err);
     return NextResponse.json({ error: "Couldn't load your preferences." }, { status: 502 });
@@ -65,6 +68,34 @@ function labelLines(p: HuntingPreferences): [string, string][] {
     ["Success looks like", label(p.goals, GOAL_OPTIONS)],
     ["Notes / feedback", p.notes],
   ];
+}
+
+/**
+ * Email the owner a member's answers. One retry; if both attempts fail, the failure is
+ * stamped on the PaymentIntent so the daily onboarding check (cron) reports it. A later
+ * save that sends clears the stamp. The idempotency key makes the retry safe when the
+ * first attempt was delivered but its response was lost.
+ */
+async function notifyOwner(opts: { email: string; name?: string | null; prefs: HuntingPreferences; paymentIntentId: string | null; hadError: boolean }) {
+  const email = preferencesNotification({ name: opts.name, email: opts.email, lines: labelLines(opts.prefs) });
+  const key = `hs-prefs-notify-${createHash("sha256").update(`${NOTIFY_TO}|${email.subject}|${email.text}`).digest("hex").slice(0, 40)}`;
+  let error: string | null = null;
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const id = await sendEmail({ to: NOTIFY_TO, replyTo: opts.email, email, idempotencyKey: key });
+      // null: no email service configured (local and preview); a retry can't help.
+      error = id ? null : "RESEND_API_KEY not set";
+      break;
+    } catch (err) {
+      error = err instanceof Error ? err.message : String(err);
+      console.error(`Preferences notification failed (attempt ${attempt + 1}):`, err);
+    }
+    if (attempt === 0) await new Promise((r) => setTimeout(r, 2000));
+  }
+  if (!stripe || !opts.paymentIntentId || (!error && !opts.hadError)) return;
+  await stripe.paymentIntents
+    .update(opts.paymentIntentId, { metadata: { [PREFS_NOTIFY_ERROR_KEY]: error ? `${new Date().toISOString()} ${error}`.slice(0, 480) : "" } })
+    .catch((err) => console.error(`Could not record the preferences notification status on ${opts.paymentIntentId}:`, err));
 }
 
 /** Save the /welcome form ({preferences}) or record a skip ({skip: true}). */
@@ -113,13 +144,17 @@ export async function POST(req: NextRequest) {
   }
 
   if (prefs) {
-    // The owner gets every submission (reply goes straight to the member), and
-    // the scheduled "tell us about your hunts" email is no longer needed.
-    await sendEmail({
-      to: NOTIFY_TO,
-      replyTo: m.email,
-      email: preferencesNotification({ name: m.session!.user.name, email: m.email, lines: labelLines(prefs) }),
-    }).catch((err) => console.error("Preferences notification failed:", err));
+    // The owner gets every submission (reply goes straight to the member), sent after the
+    // response so a retry doesn't slow the save. The scheduled "tell us about your hunts"
+    // email is no longer needed.
+    const notify = {
+      email: m.email,
+      name: m.session!.user.name,
+      prefs,
+      paymentIntentId: m.ent.paymentIntentId ?? null,
+      hadError: !!before[PREFS_NOTIFY_ERROR_KEY],
+    };
+    after(() => notifyOwner(notify));
     if (reminderId) await cancelScheduledEmail(reminderId).catch(() => {});
   }
 

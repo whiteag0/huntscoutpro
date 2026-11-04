@@ -7,10 +7,23 @@ import { normalizeEmail } from "@/lib/entitlement";
 import { selectFreeDigests, type FreeDigest, type FreeSelectionStats } from "@/lib/free-reminders-digest";
 import { deleteSubscriber, isStalePending, listSubscribers } from "@/lib/free-reminders-store";
 import { canSignFreeReminderLinks } from "@/lib/free-reminders-token";
-import { listMembersWithPreferences, type Member } from "@/lib/members";
-import { sendEmail } from "@/lib/onboarding";
+import { listMembersWithPreferences, listRecentPurchases, remindersOffFor, stampPaymentIntent, type Member } from "@/lib/members";
+import { OWNER_ALERTS_TO, sendEmail } from "@/lib/onboarding";
+import type { RenderedEmail } from "@/lib/emails/onboarding";
+import { onboardingCheckEmail, profileNudgeEmail } from "@/lib/emails/lifecycle";
+import {
+  CHECK_WINDOW_MS,
+  LIFECYCLE_LOOKBACK_MS,
+  NUDGE_KEYS,
+  findLifecycleIssues,
+  lifecycleCheckKey,
+  nudgeIdempotencyKey,
+  selectProfileNudges,
+  type LifecycleIssue,
+  type ProfileNudge,
+} from "@/lib/lifecycle";
 import { buildDigest, parseIsoDay, type Digest } from "@/lib/reminder-digest";
-import { canSignUnsubscribe } from "@/lib/reminder-unsubscribe";
+import { canSignUnsubscribe, unsubscribeUrl } from "@/lib/reminder-unsubscribe";
 import { stripe } from "@/lib/stripe";
 
 // Daily (vercel.json crons, 14:00 UTC) deadline reminder digests: one email per
@@ -20,6 +33,12 @@ import { stripe } from "@/lib/stripe";
 // Also sends free one-state subscribers (private Blob store, free-reminders/)
 // their digest by the same rules, skipping addresses Pro reminders already
 // cover. Pro digests go out first if time runs short.
+//
+// Lifecycle pass (src/lib/lifecycle.ts), on the same daily run because the Hobby
+// plan allows few crons: emails the owner a list of recent purchases whose
+// onboarding didn't finish (only when there are any; it goes out first), and
+// nudges members whose hunting profile has no states 3 and 7 days after purchase
+// (skipping anyone who turned reminder emails off).
 //
 // GET /api/cron/deadline-reminders            send today's digests
 // GET /api/cron/deadline-reminders?dryRun=1   list them without sending
@@ -77,6 +96,29 @@ export async function GET(req: NextRequest) {
   }
   const states = await getAllStateData();
 
+  // Lifecycle pass. A Stripe problem here never blocks the digests.
+  const lifecycle: { issues: LifecycleIssue[]; nudges: ProfileNudge[]; optedOut: number; error: string | null } = {
+    issues: [],
+    nudges: [],
+    optedOut: 0,
+    error: null,
+  };
+  if (stripe) {
+    try {
+      const nowMs = Date.now();
+      const recent = await listRecentPurchases(LIFECYCLE_LOOKBACK_MS);
+      lifecycle.issues = findLifecycleIssues(recent, nowMs);
+      for (const n of selectProfileNudges(recent, nowMs)) {
+        if (await remindersOffFor(n.record.email)) lifecycle.optedOut++;
+        else lifecycle.nudges.push(n);
+      }
+    } catch (err) {
+      console.error("deadline-reminders: lifecycle pass failed:", err);
+      lifecycle.error = "Couldn't list recent purchases from Stripe; onboarding check and nudges skipped.";
+    }
+  }
+  const checkRows = groupIssues(lifecycle.issues);
+
   const digests: { member: Member; digest: Digest }[] = [];
   for (const member of listed.members) {
     const digest = buildDigest(member, states, today);
@@ -124,6 +166,15 @@ export async function GET(req: NextRequest) {
     freePruned: 0,
     freeError: free.error,
     ...(stripe ? {} : { proError: "Stripe not configured; Pro members unknown (dry run only)." }),
+    checkIssues: lifecycle.issues.length,
+    checkSent: 0,
+    checkFailed: 0,
+    nudgesDue: lifecycle.nudges.length,
+    nudgesOptedOut: lifecycle.optedOut,
+    nudgeSent: 0,
+    nudgeFailed: 0,
+    nudgeDeferred: 0,
+    lifecycleError: lifecycle.error,
   };
 
   if (dryRun) {
@@ -150,39 +201,73 @@ export async function GET(req: NextRequest) {
         items: d.items,
         text: d.email.text,
       })),
+      check: checkRows,
+      nudges: lifecycle.nudges.map((n) => ({
+        email: n.record.email,
+        step: n.step,
+        species: n.species,
+        paidAt: new Date(n.record.paidAtMs).toISOString(),
+        idempotencyKey: nudgeIdempotencyKey(n.record.paymentIntentId, n.step),
+      })),
     });
   }
 
-  // Pro first, then free.
-  const queue = [
-    ...digests.map(({ member, digest }) => ({ kind: "pro" as const, to: member.email, digest })),
-    ...free.digests.map((d) => ({ kind: "free" as const, to: d.subscriber.email, digest: d })),
+  // The owner's check first (one email), then Pro digests, profile nudges, free digests.
+  type Item = {
+    kind: "check" | "pro" | "nudge" | "free";
+    to: string;
+    email: RenderedEmail;
+    idempotencyKey: string;
+    headers?: Record<string, string>;
+    /** Stamp the durable marker once Resend has accepted it. */
+    onSent?: () => Promise<void>;
+  };
+  const queue: Item[] = [
+    ...(checkRows.length
+      ? [{ kind: "check" as const, to: OWNER_ALERTS_TO, email: onboardingCheckEmail({ rows: checkRows, windowHours: CHECK_WINDOW_MS / 3_600_000 }), idempotencyKey: lifecycleCheckKey(lifecycle.issues, today) }]
+      : []),
+    ...digests.map(({ member, digest }) => ({ kind: "pro" as const, to: member.email, email: digest.email, idempotencyKey: digest.idempotencyKey, headers: digest.headers })),
+    ...lifecycle.nudges.map((n): Item => {
+      const unsub = unsubscribeUrl(n.record.email);
+      return {
+        kind: "nudge",
+        to: n.record.email,
+        email: profileNudgeEmail({ name: n.record.name, species: n.species, step: n.step, unsubscribeUrl: unsub }),
+        idempotencyKey: nudgeIdempotencyKey(n.record.paymentIntentId, n.step),
+        headers: { "List-Unsubscribe": `<${unsub}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" },
+        onSent: () => stampPaymentIntent(n.record.paymentIntentId, { [NUDGE_KEYS[n.step]]: new Date().toISOString() }),
+      };
+    }),
+    ...free.digests.map((d) => ({ kind: "free" as const, to: d.subscriber.email, email: d.email, idempotencyKey: d.idempotencyKey, headers: d.headers })),
   ];
   const failures: string[] = [];
   for (let i = 0; i < queue.length; i++) {
     if (Date.now() - started > SEND_BUDGET_MS) {
       const left = queue.slice(i);
       summary.deferred = left.filter((q) => q.kind === "pro").length;
+      summary.nudgeDeferred = left.filter((q) => q.kind === "nudge").length;
       summary.freeDeferred = left.filter((q) => q.kind === "free").length;
       break;
     }
-    const { kind, to, digest } = queue[i];
+    const { kind, to, email, idempotencyKey, headers, onSent } = queue[i];
     try {
-      await sendEmail({
-        to,
-        email: digest.email,
-        idempotencyKey: digest.idempotencyKey,
-        headers: digest.headers,
-        bcc: false,
-      });
+      await sendEmail({ to, email, idempotencyKey, headers, bcc: false });
       if (kind === "pro") summary.sent++;
-      else summary.freeSent++;
+      else if (kind === "free") summary.freeSent++;
+      else if (kind === "nudge") summary.nudgeSent++;
+      else summary.checkSent++;
     } catch (err) {
       if (kind === "pro") summary.failed++;
-      else summary.freeFailed++;
+      else if (kind === "free") summary.freeFailed++;
+      else if (kind === "nudge") summary.nudgeFailed++;
+      else summary.checkFailed++;
       failures.push(`${kind}:${mask(to)}`);
       console.error(`deadline-reminders: ${kind} send failed for ${mask(to)}:`, err);
+      if (i < queue.length - 1) await new Promise((r) => setTimeout(r, SEND_GAP_MS));
+      continue;
     }
+    // A lost marker could repeat a nudge after Resend's 24 h key window, so it's logged loudly.
+    if (onSent) await onSent().catch((err) => console.error(`deadline-reminders: couldn't mark ${kind} sent for ${mask(to)}:`, err));
     if (i < queue.length - 1) await new Promise((r) => setTimeout(r, SEND_GAP_MS));
   }
 
@@ -202,6 +287,20 @@ export async function GET(req: NextRequest) {
   if (summary.deferred || summary.freeDeferred) {
     console.error(`deadline-reminders: ran out of time, ${summary.deferred} Pro and ${summary.freeDeferred} free digests not sent today`);
   }
-  const partial = summary.failed || summary.deferred || summary.freeFailed || summary.freeDeferred || free.error;
+  const partial =
+    summary.failed || summary.deferred || summary.freeFailed || summary.freeDeferred || free.error ||
+    summary.checkFailed || summary.nudgeFailed || summary.nudgeDeferred || lifecycle.error;
   return NextResponse.json({ ...summary, failures }, { status: partial ? 207 : 200 });
+}
+
+/** One row per purchase for the owner's check email, problems combined. */
+function groupIssues(issues: readonly LifecycleIssue[]) {
+  const rows = new Map<string, { email: string; name: string | null; paidAtMs: number; paymentIntentId: string; problems: string[] }>();
+  for (const i of issues) {
+    const r = i.record;
+    const row = rows.get(r.paymentIntentId) ?? { email: r.email, name: r.name, paidAtMs: r.paidAtMs, paymentIntentId: r.paymentIntentId, problems: [] };
+    row.problems.push(i.problem);
+    rows.set(r.paymentIntentId, row);
+  }
+  return [...rows.values()];
 }

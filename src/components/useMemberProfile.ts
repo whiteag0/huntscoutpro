@@ -26,6 +26,8 @@ export interface MemberProfile {
   report: { sentAt: string | null; pending: boolean } | null;
   /** The saved answers couldn't be loaded (the tools fall back to their usual defaults). */
   error: boolean;
+  /** False when there is no purchase record to save answers on (manual grants), so a profile can't be filled in. */
+  stored: boolean;
 }
 
 /** none: not a Pro member (nothing to load). */
@@ -62,6 +64,7 @@ function loadBase(email: string): Promise<Base> {
     upcoming: Array.isArray(prefs?.upcoming) ? (prefs.upcoming as UpcomingDeadline[]) : [],
     report: (prefs?.report as MemberProfile["report"]) ?? null,
     error: !prefs,
+    stored: prefs?.stored !== false,
   }));
   baseCache = { email, at: Date.now(), p };
   return p;

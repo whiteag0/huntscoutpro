@@ -2,7 +2,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import type Stripe from "stripe";
-import { listMembersWithPreferences, setRemindersOff, type MemberStripe } from "@/lib/members";
+import { listMembersWithPreferences, listRecentPurchases, setRemindersOff, type MemberStripe } from "@/lib/members";
 
 const NOW = new Date("2026-10-31T15:00:00Z");
 const DAY = 86_400;
@@ -165,4 +165,26 @@ test("an opt-out on any purchase holds after a renewal; preferences come from th
   );
   assert.deepEqual(members.map((m) => [m.email, m.states]), [["long@example.com", ["wyoming"]]]);
   assert.equal(stats.optedOut, 1);
+});
+
+test("listRecentPurchases: paid HuntScout purchases in the window, refunds flagged, metadata kept", async () => {
+  const { client, calls } = fakeStripe([
+    session({ email: "new@example.com ", daysAgo: 2, md: { hs_onboarding_sent_at: "2026-10-29T15:01:00Z" }, name: "New Buyer" }),
+    session({ email: "refunded@example.com", daysAgo: 4, refunded: true }),
+    session({ email: "other@example.com", daysAgo: 1, product: "something_else" }),
+    session({ email: "unpaid@example.com", daysAgo: 1, paid: false }),
+  ]);
+  const got = await listRecentPurchases(10 * DAY * 1000, client, NOW);
+  const params = calls.list[0] as { created: { gte: number }; expand: string[] };
+  assert.equal(params.created.gte, nowSec - 10 * DAY);
+  assert.deepEqual(params.expand, ["data.payment_intent.latest_charge"]);
+  assert.deepEqual(
+    got.map((r) => [r.email, r.revoked, r.paidAtMs === (nowSec - (r.email.startsWith("new") ? 2 : 4) * DAY) * 1000]),
+    [
+      ["new@example.com", false, true],
+      ["refunded@example.com", true, true],
+    ]
+  );
+  assert.equal(got[0].name, "New Buyer");
+  assert.equal(got[0].metadata.hs_onboarding_sent_at, "2026-10-29T15:01:00Z");
 });

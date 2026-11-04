@@ -24,7 +24,7 @@ import { GOAL_OPTIONS, METHOD_OPTIONS, type HuntingPreferences } from "@/lib/pre
 import { stateByAbbrev, stateBySlug } from "@/data/state-list";
 import { formatDate, isLiveState } from "@/lib/agency-format";
 import type { UpcomingDeadline } from "@/lib/reminders";
-import { useMemberProfile, type MemberProfile, type ProfileLoad } from "@/components/useMemberProfile";
+import { profileOf, useMemberProfile, type MemberProfile, type ProfileLoad } from "@/components/useMemberProfile";
 
 /* ------------------------------------------------------------------ */
 /*  MEMBER HOME (Pro members never see the marketing page)             */
@@ -251,6 +251,35 @@ function SummaryRow({ label, children }: { label: string; children: React.ReactN
   );
 }
 
+/**
+ * Shown while the member's profile has no states: deadline reminders only cover the
+ * states in it (src/lib/members.ts), and the 3- and 7-day nudge emails ask for the same.
+ */
+function FinishProfileBanner({ hasSpecies }: { hasSpecies: boolean }) {
+  return (
+    <section
+      aria-labelledby="finish-profile-heading"
+      className="mb-8 flex flex-col sm:flex-row sm:items-center gap-4 rounded-2xl border border-gold/60 bg-gold/10 p-4 sm:p-5"
+    >
+      <div className="min-w-0 flex-1">
+        <h2 id="finish-profile-heading" className="font-semibold text-foreground">
+          Finish your hunting profile
+        </h2>
+        <p className="text-sm text-muted-foreground mt-1">
+          {hasSpecies ? "You've picked your species but no states yet. " : "You haven't told us where you hunt yet. "}
+          Deadline reminders only cover the states in your profile, and your personal scouting report is built from it. About 2 minutes.
+        </p>
+      </div>
+      <Link
+        href="/welcome"
+        className="inline-flex items-center justify-center gap-2 shrink-0 px-5 py-2.5 rounded-xl text-sm font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
+      >
+        Add my states <ArrowRight className="w-4 h-4" aria-hidden="true" />
+      </Link>
+    </section>
+  );
+}
+
 function YourHuntsCard({ load }: { load: ProfileLoad }) {
   const prefs = load.status === "ready" ? load.profile.preferences : null;
   const filled = hasAnswers(prefs);
@@ -397,6 +426,9 @@ export function MemberHome({
 }) {
   const profile = useMemberProfile();
   const until = formatLongDate(proExpiresAt);
+  const loaded = profileOf(profile);
+  // Members without a purchase record (manual grants) can't save a profile, so they'd never clear it.
+  const noStates = !!loaded && !loaded.error && loaded.stored && !loaded.preferences?.states.length;
 
   return (
     <div className="min-h-screen gradient-subtle">
@@ -411,6 +443,8 @@ export function MemberHome({
             Welcome back{firstName ? `, ${firstName}` : ""}
           </h1>
         </div>
+
+        {noStates && <FinishProfileBanner hasSpecies={!!loaded?.preferences?.species.length} />}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
           <div className="lg:col-span-2 space-y-4 sm:space-y-6 min-w-0">
