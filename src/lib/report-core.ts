@@ -1120,7 +1120,7 @@ export function buildReport(input: ReportInput): ScoutingReport {
   const bySlug = new Map(input.states.map((s) => [s.data.slug, s]));
   const liveChosen = prefs.states.map((s) => bySlug.get(s)).filter((s): s is ReportStateInput => !!s);
   const comingSoon = prefs.states.filter((s) => !bySlug.has(s)).map((s) => STATE_LIST.find((x) => x.slug === s)?.name || s);
-  const memberStates: MemberState[] = liveChosen.map((s) => ({ slug: s.data.slug, name: s.data.name, abbrev: s.data.abbrev }));
+  const memberStates: MemberState[] = liveChosen.map((s) => ({ slug: s.data.slug, name: s.data.name, abbrev: s.data.abbrev, unitTerm: s.data.unitTerm }));
   const { deep, overflow } = selectCombos(prefs, input.states);
 
   // Points: saved balances first, then what the free-text answer says.

@@ -14,6 +14,8 @@ export interface MemberState {
   slug: string;
   name: string;
   abbrev: string;
+  /** What the agency calls a unit ("GMU", "Hunt Area", "Hunting District"...), from its draw meta. */
+  unitTerm?: string;
 }
 
 // ------------------------------------------------------------
@@ -67,7 +69,11 @@ const ORDINAL = /^(?:st|nd|rd|th)$/i;
 
 /** Unit-like tokens in a run of text: "61", "061", "16A", "2-1", "H4A", "701W". */
 export function unitTokens(text: string): string[] {
-  const out: string[] = [];
+  return unitTokensAt(text).map((t) => t.tok);
+}
+
+function unitTokensAt(text: string): { tok: string; at: number }[] {
+  const out: { tok: string; at: number }[] = [];
   const re = /(?<![\w$.])([A-Z]{0,2}\d{1,4}[A-Z]{0,4}(?:-\d{1,2}[A-Z]?)?)(?![\w%])/gi;
   for (const m of text.matchAll(re)) {
     const tok = m[1];
@@ -77,7 +83,7 @@ export function unitTokens(text: string): string[] {
     if (ORDINAL.test(suffix)) continue;
     if (NOT_A_UNIT_AFTER.test(text.slice(m.index! + tok.length))) continue;
     if (!digits) continue;
-    out.push(tok);
+    out.push({ tok, at: m.index! });
   }
   return out;
 }
@@ -87,6 +93,29 @@ const LOOSE_PREFIX = /^(?:ZONE|AREA|DEER AREA|ELK AREA|SHEEP UNIT|GOAT UNIT|BBMU
 
 export function looseUnit(unit: string): string {
   return canonicalUnit(unit).replace(LOOSE_PREFIX, "");
+}
+
+// The kind of unit a word names. "GMU 61" with no state named shouldn't also match Wyoming
+// Hunt Area 61; "unit" is used loosely everywhere, so it doesn't narrow anything.
+type UnitKind = "gmu" | "area" | "district" | "zone" | "wmu";
+const KIND_WORDS = /\b(?:(GMUs?)|(hunt\s+areas?|areas?)|(hunting\s+districts?|districts?|HDs?)|(zones?)|(WMUs?))\b/gi;
+const KINDS: UnitKind[] = ["gmu", "area", "district", "zone", "wmu"];
+
+function kindOfTerm(term: string | undefined): UnitKind | null {
+  const t = (term || "").toLowerCase();
+  if (/\bgmu\b|\bunit\b/.test(t)) return "gmu";
+  if (/\barea\b/.test(t)) return "area";
+  if (/\bdistrict\b/.test(t)) return "district";
+  if (/\bzone\b/.test(t)) return "zone";
+  if (/\bwmu\b/.test(t)) return "wmu";
+  return null;
+}
+
+/** The unit kind named most recently before `at` in the text, if any. */
+function kindBefore(text: string, at: number): UnitKind | null {
+  let kind: UnitKind | null = null;
+  for (const m of text.slice(0, at).matchAll(KIND_WORDS)) kind = KINDS[m.slice(1).findIndex(Boolean)] ?? null;
+  return kind;
 }
 
 const GENERIC_NAMES = /^(statewide|all units|various|multiple|zone|area|unit|region)$/i;
@@ -129,10 +158,13 @@ export function matchUnits(text: string, states: readonly MemberState[], candida
 
   for (const seg of segmentByState(text, states)) {
     const targets = seg.slug ? [seg.slug] : states.map((s) => s.slug);
-    for (const tok of unitTokens(seg.text)) {
+    for (const { tok, at } of unitTokensAt(seg.text)) {
       const key = canonicalUnit(tok);
       let hit = false;
-      for (const slug of targets) {
+      // No state named: a unit word ("GMU", "area") narrows it to the states that use that word.
+      const kind = seg.slug ? null : kindBefore(seg.text, at);
+      const narrowed = kind ? targets.filter((slug) => kindOfTerm(states.find((s) => s.slug === slug)?.unitTerm) === kind) : [];
+      for (const slug of narrowed.length ? narrowed : targets) {
         const unit = indexFor(slug).get(key) ?? indexFor(slug).get(looseUnit(tok));
         if (unit) {
           add(slug, unit);
@@ -195,6 +227,17 @@ const POINT_WORD = String.raw`(?:pref(?:erence)?\.?\s*|bonus\s*|loyalty\s*)?(?:p
 const NUM_BEFORE = new RegExp(String.raw`(?<![\w.$-])(\d{1,2}|zero|no|one|two|three|four|five|six|seven|eight|nine|ten)\s*(?:\+\s*)?` + POINT_WORD, "gi");
 const NUM_AFTER = /\b(?:points?|pts?)\s*(?::|=|-|of|at)?\s*(\d{1,2})(?![\w.%])/gi;
 
+/** Words that make a bare number in a points answer something other than a point count. */
+const NOT_POINTS_CONTEXT = /\b(?:seasons?|rifle|archery|bow|muzzle\w*|units?|gmus?|wmus?|areas?|districts?|hds?|zones?|hunts?|years?|yrs?|days?|tags?|licen[cs]es?|choices?|weeks?|people|hunters?|kids|age)\b/i;
+const BARE_NUMBER = /(?<![\w.$/-])(\d{1,2})(?![\w.%/-])/g;
+
+/** "CO elk 3": a species and one bare number, with nothing suggesting it counts something else. */
+function barePointNumber(clause: string): number | null {
+  if (NOT_POINTS_CONTEXT.test(clause)) return null;
+  const nums = [...clause.matchAll(BARE_NUMBER)].map((m) => Number(m[1]));
+  return nums.length === 1 && nums[0] <= 40 ? nums[0] : null;
+}
+
 function pointNumbers(clause: string): number[] {
   const out: number[] = [];
   for (const m of clause.matchAll(NUM_BEFORE)) {
@@ -233,10 +276,15 @@ export function readPointsText(text: string, states: readonly MemberState[], spe
     for (const rawClause of seg.text.split(/[,;\n]|\.(?=\s|$)|\band\b/i)) {
       const clause = rawClause.trim();
       if (!clause) continue;
-      const nums = pointNumbers(clause);
+      const mentioned = speciesIn(clause, species);
+      let nums = pointNumbers(clause);
+      if (!nums.length && mentioned.length === 1) {
+        // The answer is to "what points do you hold", so "CO elk 3" means 3 points.
+        const bare = barePointNumber(clause);
+        if (bare !== null) nums = [bare];
+      }
       if (!nums.length) continue;
       const state = seg.slug ?? one(states)?.slug ?? null;
-      const mentioned = speciesIn(clause, species);
       const named = mentioned.filter((s) => species.length === 0 || species.includes(s));
       // A phrase about a species the member didn't pick isn't theirs to assign.
       const sp = one(named) ?? (mentioned.length === 0 ? one(species) : null);

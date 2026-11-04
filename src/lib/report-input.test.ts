@@ -84,3 +84,21 @@ test("species the member didn't pick are ignored", () => {
 test("out-of-range numbers aren't points", () => {
   assert.deepEqual(readPointsText("CO elk 99 points", [CO], ["elk"]).points, {});
 });
+
+test("a unit word narrows units with no state named to the states that use it", () => {
+  const co = { ...CO, unitTerm: "GMU" };
+  const wy = { ...WY, unitTerm: "Hunt Area" };
+  const candidates = (slug: string) => (slug === "colorado" ? ["61", "62", "7"] : slug === "wyoming" ? ["007", "061"] : []);
+  const r = matchUnits("GMU 61, 62; WY area 7", [co, wy], candidates);
+  assert.deepEqual(r.byState.colorado, ["61", "62"]);
+  assert.equal(r.byState.wyoming?.includes("61"), false);
+  // "unit" is loose: still tried everywhere.
+  assert.ok(matchUnits("unit 61", [co, wy], candidates).byState.wyoming);
+});
+
+test("a species and one bare number in the points answer is a point count", () => {
+  assert.deepEqual(readPointsText("CO elk 3, WY elk 2", [CO, WY], ["elk"]).points, { "colorado.elk": 3, "wyoming.elk": 2 });
+  assert.deepEqual(readPointsText("CO elk season 2", [CO], ["elk"]).points, {});
+  assert.deepEqual(readPointsText("CO elk 2nd rifle", [CO], ["elk"]).points, {});
+  assert.deepEqual(readPointsText("CO elk 3 or 4", [CO], ["elk"]).points, {});
+});
