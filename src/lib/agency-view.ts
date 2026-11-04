@@ -19,6 +19,62 @@ export function drawStats(r: DrawRecord, residency: DrawResidency): { stats: Dra
   return { stats: null, pool: residency };
 }
 
+/**
+ * Quota for the chosen pool. Some agencies print a quota only for the hunt as a whole; then the
+ * hunt's total quota is returned with `isTotal` set, so it can be labelled "Total quota (all pools)".
+ */
+export function poolQuota(r: DrawRecord, residency: DrawResidency): { quota: number | null; isTotal: boolean } {
+  const { stats, pool } = drawStats(r, residency);
+  if (stats?.quota != null || pool === "total") return { quota: stats?.quota ?? null, isTotal: false };
+  if (r.total?.quota != null) return { quota: r.total.quota, isTotal: true };
+  return { quota: null, isTotal: false };
+}
+
+const huntYearKey = (r: Pick<DrawRecord, "year" | "huntCode">) => `${r.year}|${r.huntCode}`;
+
+/**
+ * One row per hunt code and year, preferring the agency's first-choice figures. New Mexico and
+ * Nevada publish a first-choice row and an all-choice row for the same hunt.
+ */
+export function firstChoiceRows(rows: DrawRecord[]): DrawRecord[] {
+  const byKey = new Map<string, DrawRecord>();
+  for (const r of rows) {
+    const k = huntYearKey(r);
+    const cur = byKey.get(k);
+    if (!cur || (cur.choice !== "first" && r.choice === "first")) byKey.set(k, r);
+  }
+  return Array.from(byKey.values());
+}
+
+/** The all-choice rows firstChoiceRows() sets aside (hunts that also have a first-choice row), for a secondary line. */
+export function allChoiceCompanions(rows: DrawRecord[]): { get: (r: Pick<DrawRecord, "year" | "huntCode">) => DrawRecord | undefined } {
+  const first = new Set(rows.filter((r) => r.choice === "first").map(huntYearKey));
+  const m = new Map<string, DrawRecord>();
+  for (const r of rows) if (r.choice === "all" && first.has(huntYearKey(r))) m.set(huntYearKey(r), r);
+  return { get: (r) => m.get(huntYearKey(r)) };
+}
+
+/** The pool's figures carry odds, or the row has a point table or a lowest-points-drawn figure. */
+function hasOddsData(r: DrawRecord): boolean {
+  if ((r.byPoints?.length ?? 0) > 0) return true;
+  return [r.resident, r.nonresident, r.total].some((s) => !!s && (oddsOf(s) !== null || s.minPoints != null));
+}
+
+/**
+ * Newest draw year with any odds published (a rate, drawn and applicants, a point table or a lowest
+ * point level drawn), and the newest year in the table when that is later (quotas or applicants only
+ * so far). Like the shortlist's resultsYear(), but a year with applicants and no draw outcome doesn't count.
+ */
+export function oddsYear(rows: DrawRecord[]): { year: number | null; newer: number | null } {
+  let latest: number | null = null;
+  let withOdds: number | null = null;
+  for (const r of rows) {
+    if (latest === null || r.year > latest) latest = r.year;
+    if ((withOdds === null || r.year > withOdds) && hasOddsData(r)) withOdds = r.year;
+  }
+  return { year: withOdds, newer: latest !== null && withOdds !== null && latest > withOdds ? latest : null };
+}
+
 /** Odds in percent from the stats: published value, else drawn / applicants. */
 export function oddsOf(s: DrawResidencyStats | null): number | null {
   if (!s) return null;
@@ -58,10 +114,10 @@ export function years<T extends { year: number }>(rows: T[]): number[] {
   return Array.from(new Set(rows.map((r) => r.year))).sort((a, b) => b - a);
 }
 
-/** Group draw rows by hunt code across years, newest first. */
+/** Group draw rows by hunt code across years, newest first; one row per year (first-choice when published). */
 export function drawHistory(rows: DrawRecord[]): Map<string, DrawRecord[]> {
   const m = new Map<string, DrawRecord[]>();
-  for (const r of rows) {
+  for (const r of firstChoiceRows(rows)) {
     const list = m.get(r.huntCode) || [];
     list.push(r);
     m.set(r.huntCode, list);
@@ -91,6 +147,25 @@ export function defaultHarvestMethod(rows: HarvestRecord[]): string {
   if (allRows.length && allUnits.size >= 2) return harvestMethodKey(allRows[0]);
   const keys = methodsIn(rows);
   return keys.length > 1 ? EVERY_CATEGORY : keys[0] || "All";
+}
+
+/**
+ * Default harvest season: the newest one with rows for individual units (some agencies publish only a
+ * statewide total at first). When that season is reported only by hunt code but the season before it
+ * was reported mostly by unit (CPW switched in 2025), the newest season reported by unit is used, so
+ * the default view lines up with the earlier years. `byHuntInstead` is the hunt-code season passed over.
+ */
+export function defaultHarvestYear(rows: HarvestRecord[]): { year: number | undefined; byHuntInstead: number | null } {
+  const all = years(rows);
+  const unitYears = all.filter((y) => rows.some((r) => r.year === y && isRealUnit(r.unit)));
+  if (!unitYears.length) return { year: all[0], byHuntInstead: null };
+  const huntShare = (y: number) => {
+    const inYear = rows.filter((r) => r.year === y && isRealUnit(r.unit));
+    return inYear.filter((r) => r.hunt).length / inYear.length;
+  };
+  const [newest, before] = unitYears;
+  if (before !== undefined && huntShare(newest) === 1 && huntShare(before) < 0.5) return { year: before, byHuntInstead: newest };
+  return { year: newest, byHuntInstead: null };
 }
 
 const isWhole = (r: HarvestRecord) => (!r.sex || r.sex === "all") && (!r.residency || r.residency === "all");
@@ -156,4 +231,21 @@ export function unitNameOf(names: Record<string, string> | undefined, unit: stri
   const c = canonicalUnit(unit);
   const key = Object.keys(names).find((k) => canonicalUnit(k) === c);
   return key ? names[key] : undefined;
+}
+
+/**
+ * How well a hunt matches a search, for ordering results: 0 = a word is the hunt code or one of its
+ * units ("61" finds unit 061), 1 = the code holds that number as its own digits (EE061O1A, not
+ * EE161O1A), 2 = any other text match; null when a word isn't found at all.
+ */
+export function huntSearchRank(h: { code: string; units: string[]; description: string; seasonDates?: string }, query: string): number | null {
+  const words = query.toLowerCase().split(/\s+/).filter(Boolean);
+  const hay = `${h.code} ${h.units.join(" ")} ${h.description} ${h.seasonDates || ""}`.toLowerCase();
+  if (!words.every((w) => hay.includes(w))) return null;
+  let rank = 2;
+  for (const w of words) {
+    if (h.code.toLowerCase() === w || h.units.some((u) => sameUnit(u, w))) return 0;
+    if (/^\d+$/.test(w) && new RegExp(`(^|\\D)0*${w}(\\D|$)`).test(h.code)) rank = 1;
+  }
+  return rank;
 }

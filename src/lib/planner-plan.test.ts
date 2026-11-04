@@ -244,6 +244,8 @@ test("plan: published next-cycle dates are shown as such and the main applicatio
   assert.equal(a.deadline!.end, "2027-04-07");
   assert.equal(hunt.applicationDeadline, "2027-04-07");
   assert.equal(hunt.preferencePointsOwned, 4);
+  const unknown = buildPlannedHunt({ state: STATE, info, residency: "resident", today: TODAY, now: "2026-10-31T12:00:00.000Z", kind: "draw", row: ROW, id: "h2" }).hunt;
+  assert.equal(unknown.preferencePointsOwned, null, "no points given stays unknown, not 0");
   assert.equal(hunt.preferencePointsNeeded, 6);
   assert.equal(hunt.unit, "GMU 061");
   assert.equal(cycleInfo(a).label, "2027 dates");

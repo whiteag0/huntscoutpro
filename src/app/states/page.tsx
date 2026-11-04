@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, CalendarDays, Mail } from "lucide-react";
 import { SPECIES_LABELS } from "@/data/types";
-import { getAllStateData, speciesWithData } from "@/lib/agency";
+import { getAllStateData, getCoverageStats, speciesWithData } from "@/lib/agency";
+import { completenessSummary } from "@/lib/data-completeness";
+import { DataCompleteness } from "@/components/agency/DataCompleteness";
 import { COMING_SOON_STATES, DRAW_SYSTEM_LABELS, LIVE_STATE_SLUGS, formatKeyDate, nextKeyDate } from "@/lib/agency-format";
 import { Crosshair } from "@/components/ComingSoonState";
 
@@ -19,6 +21,7 @@ const HERO_BG = "https://images.unsplash.com/photo-1641113994135-a9f230b1f9b0?w=
 
 export default async function StatesPage() {
   const states = (await getAllStateData()).sort((a, b) => LIVE_STATE_SLUGS.indexOf(a.slug) - LIVE_STATE_SLUGS.indexOf(b.slug));
+  const { completeness } = await getCoverageStats();
 
   return (
     <div className="min-h-screen bg-background">
@@ -65,6 +68,7 @@ export default async function StatesPage() {
                     </span>
                   ))}
                 </div>
+                <DataCompleteness items={completenessSummary(completeness[s.slug])} agency={s.agency.shortName} className="mt-3" />
                 {next && (
                   <div className="mt-3 text-xs text-muted-foreground flex items-start gap-1.5">
                     <CalendarDays className="w-3.5 h-3.5 mt-0.5 text-gold shrink-0" aria-hidden />

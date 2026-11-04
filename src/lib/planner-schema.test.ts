@@ -311,3 +311,9 @@ test("merge: a copy saved by a page from before schema 2 doesn't erase v2 member
   // Same build time, but only one copy has the v2 agency fields: that one is kept.
   assert.deepEqual(m.agency!.keyDates, []);
 });
+
+test("points the member didn't give stay unknown (null), not 0", () => {
+  const d = sanitizePlannerData(data({ hunts: [hunt({ id: "p1", preferencePointsOwned: null }), hunt({ id: "p2", preferencePointsOwned: 4 })] }))!;
+  assert.equal(d.hunts[0].preferencePointsOwned, null);
+  assert.equal(d.hunts[1].preferencePointsOwned, 4);
+});

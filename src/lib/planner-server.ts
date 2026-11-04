@@ -6,6 +6,7 @@ import "server-only";
 
 import { getStateData, readTable, type StateData } from "@/lib/agency";
 import type { DrawRecord, SpeciesInfo } from "@/data/agency/schema";
+import { firstChoiceRows } from "@/lib/agency-view";
 import { buildPlannedHunt, huntResidencyOnly, planAgency } from "@/lib/planner-agency";
 import { PLAN_KINDS, sanitizeAgencyRef, type AgencyRef, type DrawingSeason, type PlanKind, type PlannedHunt, type PlannerResidency } from "@/lib/planner-schema";
 
@@ -76,7 +77,8 @@ function drawRows(slug: string, species: SpeciesInfo["species"], cache?: RowCach
 /** The agency's row for a hunt code: that draw year's when given and published, else the latest year's. */
 export async function findDrawRow(slug: string, species: SpeciesInfo["species"], huntCode: string, year?: number, cache?: RowCache): Promise<DrawRecord | null> {
   const code = huntCode.trim().toUpperCase();
-  const rows = (await drawRows(slug, species, cache)).filter((r) => r.huntCode.trim().toUpperCase() === code);
+  // First-choice figures when the agency publishes both first- and all-choice rows for a hunt.
+  const rows = firstChoiceRows((await drawRows(slug, species, cache)).filter((r) => r.huntCode.trim().toUpperCase() === code));
   if (!rows.length) return null;
   if (year) {
     const exact = rows.find((r) => r.year === year);

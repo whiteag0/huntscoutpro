@@ -7,7 +7,8 @@ import { Loader2, X } from "lucide-react";
 import { SPECIES_LABELS, type Species } from "@/data/types";
 import type { DrawRecord, HarvestRecord } from "@/data/agency/schema";
 import { fmtNum, fmtPct } from "@/lib/agency-format";
-import { drawHistory, drawStats, headlineHarvestRows, sameUnit, minPointsDrawn, oddsAtPoints, oddsOf, successOf, type DrawResidency } from "@/lib/agency-view";
+import { drawHistory, drawStats, headlineHarvestRows, sameUnit, minPointsDrawn, oddsAtPoints, oddsOf, poolQuota, successOf, type DrawResidency } from "@/lib/agency-view";
+import { huntResidencyOnly } from "@/lib/planner-agency";
 import { DemoGate } from "@/components/DemoGate";
 import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { SourceNotes, footnoteIndex, Cite } from "@/components/agency/SourceNotes";
@@ -61,15 +62,34 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
   const rowDefs: RowDef[] = [
     { label: unitTerm, render: (c) => c.latest.units.join(", ") || "—" },
     { label: "Latest draw", render: (c) => <>{c.latest.year}<Cite n={cite(c.latest.sourceId)} /></> },
-    { label: "Quota", render: (c) => fmtNum(drawStats(c.latest, residency).stats?.quota) },
-    { label: "Applicants", render: (c) => fmtNum(drawStats(c.latest, residency).stats?.applicants) },
+    {
+      label: "Quota",
+      render: (c) => {
+        const q = poolQuota(c.latest, residency);
+        return (
+          <>
+            {fmtNum(q.quota)}
+            {q.isTotal && <span className="block text-[11px] text-muted-foreground">Total quota (all pools)</span>}
+          </>
+        );
+      },
+    },
+    {
+      label: "Applicants",
+      render: (c) => (
+        <>
+          {fmtNum(drawStats(c.latest, residency).stats?.applicants)}
+          {c.latest.choice === "first" && <span className="block text-[11px] text-muted-foreground">1st choice</span>}
+        </>
+      ),
+    },
     { label: "Drawn", render: (c) => fmtNum(drawStats(c.latest, residency).stats?.drawn) },
-    { label: "Draw odds", render: (c) => <b>{fmtPct(oddsOf(drawStats(c.latest, residency).stats))}</b> },
+    { label: "Draw odds (all applicants)", render: (c) => <b>{fmtPct(oddsOf(drawStats(c.latest, residency).stats))}</b> },
     ...(pointsMatter
       ? [
           { label: "Min points drawn", render: (c: Col) => minPointsDrawn(c.latest, residency) ?? "—" },
           {
-            label: `Odds at ${points} pts`,
+            label: `Odds at your ${points} pts`,
             render: (c: Col) => {
               const o = oddsAtPoints(c.latest, residency, points);
               return o ? `${fmtPct(o.pct)} (${o.drawn}/${o.applicants})` : c.latest.byPoints ? "no applicants" : "not published";
@@ -103,6 +123,12 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
         ),
     },
   ];
+
+  // A hunt picked earlier can be limited to the other residency; say so instead of showing its figures as yours.
+  const limitNote = (c: Col) => {
+    const only = huntResidencyOnly(c.latest.description);
+    return only && only !== residency ? <span className="block mt-0.5 text-[11px] font-semibold text-warning">Limited to {only}s by the agency</span> : null;
+  };
 
   const swipeRef = useRef<HTMLDivElement>(null);
   const [activeRaw, setActive] = useState(0);
@@ -192,7 +218,10 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
                           <X className="w-4 h-4" aria-hidden />
                         </button>
                       </div>
-                      <p className="text-xs text-muted-foreground -mt-1">{c.latest.description}</p>
+                      <p className="text-xs text-muted-foreground -mt-1">
+                        {c.latest.description}
+                        {limitNote(c)}
+                      </p>
                       <dl className="mt-3 divide-y divide-border border-t border-border text-sm">
                         {rowDefs.map((row) => (
                           <div key={row.label} className="flex items-start justify-between gap-3 py-2">
@@ -226,7 +255,10 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
                               <X className="w-4 h-4" />
                             </button>
                           </div>
-                          <div className="text-xs font-normal text-muted-foreground">{c.latest.description}</div>
+                          <div className="text-xs font-normal text-muted-foreground">
+                            {c.latest.description}
+                            {limitNote(c)}
+                          </div>
                         </th>
                       ))}
                     </tr>

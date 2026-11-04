@@ -13,6 +13,7 @@ import { ArrowLeft, Check, ChevronRight, Loader2, Search, TriangleAlert } from "
 import { DemoGate } from "@/components/DemoGate";
 import { SPECIES_LABELS, SEASON_LABELS, SPECIES_SEASONS, type Season, type Species } from "@/data/types";
 import { todayIso } from "@/lib/agency-format";
+import { huntSearchRank } from "@/lib/agency-view";
 import { track } from "@/lib/analytics";
 import type { DrawingSeason, PlanKind, PlannedHunt, PlannerResidency } from "@/lib/planner-schema";
 import { huntSteps } from "@/lib/planner-timeline";
@@ -545,14 +546,17 @@ function HuntPick({
   }, [st.slug, sp.species, sp.hasDraw, residency]);
 
   const methods = useMemo(() => Array.from(new Set((list?.hunts || []).map((h) => h.method).filter((m): m is string => !!m))).sort(), [list]);
-  const matches = useMemo(() => {
-    const tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
-    return (list?.hunts || []).filter((h) => {
-      if (method && h.method !== method) return false;
-      const hay = `${h.code} ${h.units.join(" ")} ${h.description} ${h.seasonDates || ""}`.toLowerCase();
-      return tokens.every((t) => hay.includes(t));
-    });
-  }, [list, q, method]);
+  // Exact hunt code or unit matches first ("61" lists unit 61 before 161 and 461), then the rest in code order.
+  const matches = useMemo(
+    () =>
+      (list?.hunts || [])
+        .filter((h) => !method || h.method === method)
+        .map((h) => ({ h, rank: huntSearchRank(h, q) }))
+        .filter((x): x is { h: HuntOption; rank: number } => x.rank !== null)
+        .sort((a, b) => a.rank - b.rank)
+        .map((x) => x.h),
+    [list, q, method]
+  );
   const shown = matches.slice(0, 40);
   const pickedHunt = list?.hunts.find((h) => h.code === picked);
 
@@ -757,10 +761,13 @@ function Review({
       .then((b: { points?: Record<string, number> } | null) => {
         if (!live) return;
         const v = b?.points?.[`${st.slug}.${sp.species}`];
-        setPoints((p) => (p === null ? (typeof v === "number" ? v : 0) : p));
-        if (typeof v === "number") setPointsFromProfile(true);
+        // No saved value stays unknown (null), shown as "not given" rather than 0.
+        if (typeof v === "number") {
+          setPoints((p) => (p === null ? v : p));
+          setPointsFromProfile(true);
+        }
       })
-      .catch(() => live && setPoints((p) => (p === null ? 0 : p)));
+      .catch(() => {});
     return () => {
       live = false;
     };
@@ -770,7 +777,7 @@ function Review({
     setSaving(true);
     setErr(null);
     try {
-      const r = await fetch("/api/planner/entries", { method: "POST", headers: { "Content-Type": "application/json" }, body: body({ pointsOwned: points ?? 0, notes }) });
+      const r = await fetch("/api/planner/entries", { method: "POST", headers: { "Content-Type": "application/json" }, body: body({ pointsOwned: points, notes }) });
       const b = (await r.json().catch(() => ({}))) as { status?: string; hunt?: PlannedHunt; error?: string };
       if (!r.ok || !b.hunt) {
         setErr(b.error || "Couldn't save this hunt. Try again.");
@@ -875,13 +882,14 @@ function Review({
                   max={99}
                   inputMode="numeric"
                   value={points ?? ""}
-                  onChange={(e) => setPoints(Math.max(0, Math.min(99, parseInt(e.target.value) || 0)))}
+                  placeholder="—"
+                  onChange={(e) => setPoints(e.target.value.trim() === "" ? null : Math.max(0, Math.min(99, parseInt(e.target.value) || 0)))}
                   className="w-20 min-h-11 px-2 border border-border rounded-lg bg-background text-base"
                 />
                 <span className="text-xs text-muted-foreground">{pointsFromProfile ? "From your saved points" : "Not in your saved points; enter yours"}</span>
               </label>
             )}
-            <DrawFacts hunt={h} pointsOwned={points ?? 0} />
+            <DrawFacts hunt={h} pointsOwned={points} />
           </ReviewSection>
           {(huntSteps(h).length > 0 || (a.requirements || []).length > 0) && (
             <ReviewSection title="Your checklist will start with">
@@ -1007,7 +1015,7 @@ function ManualHunt({ ready, covered: coveredNames, onSave, onBack }: { ready: b
               unit: unit.trim(),
               season,
               preferencePointsNeeded: 0,
-              preferencePointsOwned: 0,
+              preferencePointsOwned: null,
               applicationDeadline: deadline,
               seasonDates,
               status: "planning",

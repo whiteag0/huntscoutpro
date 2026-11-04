@@ -369,7 +369,7 @@ export function FeeList({ hunt, budget, onAddFee }: { hunt: PlannedHunt; budget?
 }
 
 /** Last draw, lowest points drawn vs the member's points, draw system and residency notes. */
-export function DrawFacts({ hunt, pointsOwned }: { hunt: PlannedHunt; pointsOwned: number }) {
+export function DrawFacts({ hunt, pointsOwned }: { hunt: PlannedHunt; pointsOwned: number | null }) {
   const a = hunt.agency;
   if (!a) return null;
   const min = a.minPoints;
@@ -387,15 +387,19 @@ export function DrawFacts({ hunt, pointsOwned }: { hunt: PlannedHunt; pointsOwne
           )}
           {a.pointsMatter && (
             <p className="mt-1.5 text-foreground">
-              <span className="font-semibold">Your {pointName}s: {pointsOwned}</span>
+              <span className="font-semibold">Your {pointName}s: {pointsOwned ?? "not given"}</span>
               {min !== null && min !== undefined ? (
                 <>
                   {" "}
                   · lowest anyone drew with in {a.drawYear}: <span className="font-semibold">{min}</span>
-                  <span className={pointsOwned >= min ? "text-success" : "text-muted-foreground"}>
-                    {" "}
-                    ({pointsOwned >= min ? "you were at or above that level" : `${min - pointsOwned} below that level`}; past results don&apos;t guarantee the next draw)
-                  </span>
+                  {pointsOwned !== null ? (
+                    <span className={pointsOwned >= min ? "text-success" : "text-muted-foreground"}>
+                      {" "}
+                      ({pointsOwned >= min ? "you were at or above that level" : `${min - pointsOwned} below that level`}; past results don&apos;t guarantee the next draw)
+                    </span>
+                  ) : (
+                    <span className="text-muted-foreground"> (enter your points to compare)</span>
+                  )}
                 </>
               ) : (
                 <span className="text-muted-foreground"> · the agency doesn&apos;t publish the lowest points drawn for this hunt</span>
