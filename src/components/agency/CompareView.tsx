@@ -14,6 +14,8 @@ import { SourceNotes, footnoteIndex, Cite } from "@/components/agency/SourceNote
 import type { SourceRef } from "@/data/agency/schema";
 import { pill } from "@/components/agency/mobile";
 import { track } from "@/lib/analytics";
+import { profileOf, useMemberProfile } from "@/components/useMemberProfile";
+import { pointsIn, residencyIn } from "@/lib/member-defaults";
 
 interface Props {
   slug: string;
@@ -23,6 +25,9 @@ interface Props {
   pointsMatter: boolean;
   codes: string[];
   sources: SourceRef[];
+  /** From the link (?res=, ?pts=): the residency and points the state page was showing. */
+  residency?: DrawResidency;
+  points?: number;
 }
 
 /** Unit-level harvest for a hunt's single unit, latest season, all-methods row when published. */
@@ -38,12 +43,17 @@ type Col = { code: string; list: DrawRecord[]; latest: DrawRecord; harvest: Harv
 
 type RowDef = { label: string; render: (c: Col) => React.ReactNode };
 
-export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, codes, sources }: Props) {
+export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, codes, sources, residency: urlResidency, points: urlPoints }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const { data, loading, error } = useSpeciesData(slug, species);
-  const [residency, setResidency] = useState<DrawResidency>("resident");
-  const [points, setPoints] = useState(0);
+  // The link's values first, then the member's saved answers, then resident / 0.
+  const profileLoad = useMemberProfile({ planner: pointsMatter && urlPoints === undefined });
+  const profile = profileOf(profileLoad);
+  const [residencyChoice, setResidency] = useState<DrawResidency | null>(null);
+  const [pointsChoice, setPoints] = useState<number | null>(null);
+  const residency: DrawResidency = residencyChoice ?? urlResidency ?? residencyIn(profile?.preferences, slug) ?? "resident";
+  const points = pointsChoice ?? urlPoints ?? (profile ? pointsIn(profile.points, profile.planner, slug, species)?.points : undefined) ?? 0;
   useEffect(() => track("compare_open", { state: slug, species, hunts: codes.length }), [slug, species, codes.length]);
 
   const cols = useMemo((): Col[] => {
@@ -117,7 +127,7 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
 
   const remove = (code: string) => {
     const next = codes.filter((c) => c !== code);
-    router.replace(`${pathname}?state=${slug}&species=${species}&codes=${next.map(encodeURIComponent).join(",")}`);
+    router.replace(`${pathname}?state=${slug}&species=${species}&codes=${next.map(encodeURIComponent).join(",")}&res=${residency}${pointsMatter ? `&pts=${points}` : ""}`);
   };
 
   return (
@@ -147,7 +157,7 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
         )}
       </div>
 
-      {loading && !data ? (
+      {(loading && !data) || profileLoad.status === "loading" ? (
         <div className="flex items-center justify-center py-16 text-muted-foreground">
           <Loader2 className="w-5 h-5 animate-spin mr-2" aria-hidden /> Loading…
         </div>

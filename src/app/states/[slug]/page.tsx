@@ -70,8 +70,14 @@ export default async function StatePage({ params, searchParams }: Params) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(stateJsonLd(data, species, glance)) }} />
       {/* Hunt-specific seasons appear on each hunt row; the overview lists the general ones. */}
-      <StateExplorer key={slug} state={{ ...data, seasons: generalSeasons(data.seasons) }} species={species} initialSpecies={requested} />
-      <StateAtAGlance state={data} glance={glance} />
+      {/* The free summary sits above the gated tables for non-members and after them for members (StateExplorer places it). */}
+      <StateExplorer
+        key={slug}
+        state={{ ...data, seasons: generalSeasons(data.seasons) }}
+        species={species}
+        initialSpecies={requested}
+        summary={<StateAtAGlance state={data} glance={glance} />}
+      />
       {option && (
         <div className="max-w-7xl mx-auto px-4 pb-10">
           {/* Hidden for Pro members (client-side), whose reminders cover every state they follow. */}

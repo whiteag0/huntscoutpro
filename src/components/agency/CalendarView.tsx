@@ -7,6 +7,11 @@ import { SPECIES_LABELS, type Species } from "@/data/types";
 import { formatDate, todayIso } from "@/lib/agency-format";
 import { pill } from "@/components/agency/mobile";
 import { track } from "@/lib/analytics";
+import { profileOf, useMemberProfile } from "@/components/useMemberProfile";
+import { profileStates } from "@/lib/member-defaults";
+
+/** Filter value for "the states (or species) in my hunting profile". */
+const MINE = "mine";
 
 export interface CalendarItem {
   kind: "date" | "season";
@@ -32,8 +37,14 @@ const MONTHS = ["January", "February", "March", "April", "May", "June", "July", 
 
 export function CalendarView({ items, sources, states }: { items: CalendarItem[]; sources: CalendarSource[]; states: { slug: string; name: string }[] }) {
   const today = todayIso();
-  const [state, setState] = useState("all");
-  const [species, setSpecies] = useState<Species | "all">("all");
+  // Members start on the states and species they saved; picking a filter replaces that.
+  const prefs = profileOf(useMemberProfile())?.preferences;
+  const myStates = useMemo(() => profileStates(prefs, states.map((s) => s.slug)), [prefs, states]);
+  const mySpecies = useMemo(() => (prefs?.species || []).filter((s) => items.some((i) => i.species === s)), [prefs, items]);
+  const [stateChoice, setState] = useState<string | null>(null);
+  const [speciesChoice, setSpecies] = useState<string | null>(null);
+  const state = stateChoice ?? (myStates.length ? MINE : "all");
+  const species = speciesChoice ?? (mySpecies.length ? MINE : "all");
   const [kind, setKind] = useState<"date" | "season">("date");
   const [showPast, setShowPast] = useState(false);
 
@@ -42,9 +53,15 @@ export function CalendarView({ items, sources, states }: { items: CalendarItem[]
   const list = useMemo(
     () =>
       items
-        .filter((i) => i.kind === kind && (state === "all" || i.slug === state) && (species === "all" || i.species === species) && (showPast || i.end >= today))
+        .filter(
+          (i) =>
+            i.kind === kind &&
+            (state === "all" || (state === MINE ? myStates.includes(i.slug) : i.slug === state)) &&
+            (species === "all" || (species === MINE ? mySpecies.includes(i.species) : i.species === species)) &&
+            (showPast || i.end >= today)
+        )
         .sort((a, b) => a.start.localeCompare(b.start) || a.state.localeCompare(b.state)),
-    [items, kind, state, species, showPast, today]
+    [items, kind, state, species, showPast, today, myStates, mySpecies]
   );
 
   // Open windows first (soonest closing first), then upcoming/past grouped by start month.
@@ -80,6 +97,7 @@ export function CalendarView({ items, sources, states }: { items: CalendarItem[]
         <label className="text-sm">
           <span className="block text-xs font-semibold text-muted-foreground mb-1">State</span>
           <select className="w-full sm:w-auto min-h-10 sm:min-h-0 px-2 py-1.5 border border-border rounded-lg bg-background text-base sm:text-sm" value={state} onChange={(e) => { setState(e.target.value); track("calendar_filter", { filter: "state", value: e.target.value }); }}>
+            {myStates.length > 0 && <option value={MINE}>My states ({myStates.map((s) => states.find((x) => x.slug === s)?.name).join(", ")})</option>}
             <option value="all">All states</option>
             {states.map((s) => (
               <option key={s.slug} value={s.slug}>
@@ -90,7 +108,8 @@ export function CalendarView({ items, sources, states }: { items: CalendarItem[]
         </label>
         <label className="text-sm">
           <span className="block text-xs font-semibold text-muted-foreground mb-1">Species</span>
-          <select className="w-full sm:w-auto min-h-10 sm:min-h-0 px-2 py-1.5 border border-border rounded-lg bg-background text-base sm:text-sm" value={species} onChange={(e) => { setSpecies(e.target.value as Species | "all"); track("calendar_filter", { filter: "species", value: e.target.value }); }}>
+          <select className="w-full sm:w-auto min-h-10 sm:min-h-0 px-2 py-1.5 border border-border rounded-lg bg-background text-base sm:text-sm" value={species} onChange={(e) => { setSpecies(e.target.value); track("calendar_filter", { filter: "species", value: e.target.value }); }}>
+            {mySpecies.length > 0 && <option value={MINE}>My species ({mySpecies.map((s) => SPECIES_LABELS[s as Species] ?? s).join(", ")})</option>}
             <option value="all">All species</option>
             {speciesInData.map((s) => (
               <option key={s} value={s}>

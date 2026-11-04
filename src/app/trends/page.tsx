@@ -27,6 +27,14 @@ export default async function TrendsPage({ searchParams }: Search) {
   const sp = opt.species.find((s) => s.species === species) || opt.species[0];
   const data = await getStateData(opt.slug);
   return (
-    <TrendsView key={`${opt.slug}-${sp.species}`} options={options} slug={opt.slug} species={sp.species} pointsMatter={sp.pointsMatter} sources={data?.sources || []} />
+    <TrendsView
+      key={`${opt.slug}-${sp.species}`}
+      options={options}
+      slug={opt.slug}
+      species={sp.species}
+      pointsMatter={sp.pointsMatter}
+      sources={data?.sources || []}
+      fromUrl={!!state || !!species}
+    />
   );
 }

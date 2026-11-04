@@ -7,6 +7,7 @@ import {
   groupReminders,
   labelResidency,
   memberResidencyIn,
+  nextDeadlines,
   nextReminderDates,
   type ReminderMember,
   type ReminderState,
@@ -243,4 +244,28 @@ test("labelResidency: a nonresident license joined to another by 'and' is for ev
   assert.equal(labelResidency("Nonresident and Unit 4 spring turkey application period"), "any");
   assert.equal(labelResidency("Nonresident preference point purchase without applying for a combination license"), "nonresident");
   assert.equal(labelResidency("Nonresident draw — deadline to buy second-period tags and all DAV tags"), "nonresident");
+});
+
+test("nextDeadlines: soonest open dates across the member's states, a shared date listed once with its species", () => {
+  const m = member({ states: ["utah"], species: ["elk", "mule-deer"], homeState: "TX" });
+  const all = nextDeadlines(m, [UTAH, IDAHO], "2026-10-28", 10);
+  assert.deepEqual(
+    all.map((d) => `${d.label}|${d.end}|${d.daysLeft}`),
+    [
+      "Bonus point only deadline|2026-10-30|2",
+      "Nonresident general season application deadline|2026-11-10|13",
+      "Resident and nonresident youth application deadline|2026-11-10|13",
+      "Sportsman permit drawing application period|2026-11-10|13",
+      "Application deadline far away|2026-12-20|53",
+      "Limited-entry application period|2026-12-29|62",
+    ]
+  );
+  const sportsman = all.find((d) => d.label.startsWith("Sportsman"))!;
+  assert.deepEqual(sportsman.species, ["elk", "mule-deer"]);
+  assert.equal(sportsman.start, "2026-10-20");
+  assert.equal(sportsman.sourceUrl, "https://wildlife.utah.gov/guidebook.pdf");
+  assert.equal(nextDeadlines(m, [UTAH], "2026-10-28").length, 3);
+  // States not in the member's list, and members with no states, get nothing.
+  assert.deepEqual(nextDeadlines(member({ states: [] }), [UTAH], "2026-10-28"), []);
+  assert.equal(nextDeadlines(member({ states: ["idaho"] }), [UTAH, IDAHO], "2026-10-28")[0].sourceUrl, "https://idfg.idaho.gov");
 });
