@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Plan a hunt | HuntScout Pro",
   description: "Pick a state, species and hunt; HuntScout brings together the agency's application dates, season dates, fees and last draw results.",
   robots: { index: false },
+  alternates: { canonical: null },
 };
 
 type Search = Record<string, string | string[] | undefined>;

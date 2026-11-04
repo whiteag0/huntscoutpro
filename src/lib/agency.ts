@@ -4,6 +4,7 @@ import { gunzipSync } from "node:zlib";
 import path from "node:path";
 import { AGENCY_FILES } from "@/data/agency/index.generated";
 import STATS from "@/data/agency/stats.generated.json";
+import type { DrawCompleteness } from "@/lib/data-completeness";
 import type {
   Coverage,
   DrawMeta,
@@ -106,10 +107,19 @@ export interface CoverageStats {
   states: number;
   /** Per species: live states covering it, distinct hunt codes in each state's latest draw year, distinct harvest units. */
   species: Partial<Record<Species, { states: number; huntCodes: number; units: number }>>;
+  /** Species counted together (e.g. deer = mule deer + whitetail), each state's codes and units counted once. */
+  groups: Record<string, { states: number; huntCodes: number; units: number }>;
+  /** Distinct latest-year hunt codes per state, summed; a code in two files of one group counts once. */
+  totalHuntCodes: number;
   drawYears: [number, number] | null;
   harvestYears: [number, number] | null;
+  /** [first, last] draw and harvest year in each state's files. */
+  drawYearsByState: Record<string, [number, number]>;
+  harvestYearsByState: Record<string, [number, number]>;
   /** Agency statewide turkey rows by state, newest first. */
   turkeyStatewide: Record<string, { rows: HarvestRecord[]; units: number; drawHunts: number }>;
+  /** Per state and species: what the agency publishes in its latest draw with odds (hunt counts). */
+  completeness: Record<string, Record<string, DrawCompleteness>>;
 }
 
 /** Counts computed from the published agency files at build time (scripts/agency/build-index.mjs). */

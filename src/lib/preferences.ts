@@ -18,6 +18,8 @@ export const ONBOARDED_AT_KEY = "hs_onboarded_at";
 export const PREFS_EMAIL_ID_KEY = "hs_prefs_email_id";
 /** "1" on a member's PaymentIntent(s) when they turned deadline reminder emails off. */
 export const REMINDERS_OFF_KEY = "hs_reminders_off";
+/** "<ISO time> <error>" when the owner's copy of a form save failed twice; cleared by the next one that sends. */
+export const PREFS_NOTIFY_ERROR_KEY = "hs_prefs_notify_error";
 
 const LIST_FIELDS = ["states", "species", "methods", "goals"] as const;
 

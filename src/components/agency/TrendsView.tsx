@@ -11,8 +11,10 @@ import { drawHistory, drawStats, harvestMethodKey, headlineHarvestRows, minPoint
 import { DemoGate } from "@/components/DemoGate";
 import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { SourceNotes, footnoteIndex } from "@/components/agency/SourceNotes";
-import { pill } from "@/components/agency/mobile";
+import { LockedRows, pill } from "@/components/agency/mobile";
 import { track } from "@/lib/analytics";
+import { profileOf, useMemberProfile } from "@/components/useMemberProfile";
+import { profileStart, residencyIn } from "@/lib/member-defaults";
 
 // First column stays put while the year columns scroll sideways on a phone.
 const stickyTh = "sticky left-0 z-10 bg-muted text-left px-3 py-2.5 shadow-[1px_0_0_var(--border)]";
@@ -40,11 +42,39 @@ function Delta({ v, invert, suffix = "" }: { v: number | null; invert?: boolean;
   );
 }
 
-export function TrendsView({ options, slug, species, pointsMatter, sources }: { options: Option[]; slug: string; species: Species; pointsMatter: boolean; sources: SourceRef[] }) {
+export function TrendsView({
+  options,
+  slug,
+  species,
+  pointsMatter,
+  sources,
+  fromUrl,
+  teaser,
+}: {
+  options: Option[];
+  slug: string;
+  species: Species;
+  pointsMatter: boolean;
+  sources: SourceRef[];
+  /** The state or species came from the URL; otherwise a member starts from their saved state and species. */
+  fromUrl: boolean;
+  /** Server-rendered free example for non-members, shown above the gated tables. */
+  teaser?: React.ReactNode;
+}) {
   const router = useRouter();
   const opt = options.find((o) => o.slug === slug)!;
-  const { data, loading, error } = useSpeciesData(slug, species);
-  const [residency, setResidency] = useState<DrawResidency>("resident");
+  const profileLoad = useMemberProfile();
+  const profile = profileOf(profileLoad);
+  const start = fromUrl ? null : profileStart(profile?.preferences, options.map((o) => ({ slug: o.slug, species: o.species.map((s) => s.species) })));
+  const moving = !!start && (start.state !== slug || (!!start.species && start.species !== species));
+  const target = moving && start ? `/trends?state=${start.state}${start.species ? `&species=${start.species}` : ""}` : null;
+  useEffect(() => {
+    if (target) router.replace(target);
+  }, [target, router]);
+  // Hold the tables until we know where a member starts, so the default state's data isn't fetched for nothing.
+  const { data, loading, error } = useSpeciesData(slug, species, fromUrl || (profileLoad.status !== "loading" && !moving));
+  const [residencyChoice, setResidency] = useState<DrawResidency | null>(null);
+  const residency: DrawResidency = residencyChoice ?? residencyIn(profile?.preferences, slug) ?? "resident";
   useEffect(() => track("trends_view", { state: slug, species }), [slug, species]);
 
   const go = (s: string, spc?: Species) => {
@@ -140,14 +170,19 @@ export function TrendsView({ options, slug, species, pointsMatter, sources }: { 
         </Link>
       </div>
 
-      {loading && !data ? (
+      {teaser}
+
+      {(loading && !data) || profileLoad.status === "loading" ? (
         <div className="flex items-center justify-center py-16 text-muted-foreground">
           <Loader2 className="w-5 h-5 animate-spin mr-2" aria-hidden /> Loading…
         </div>
       ) : error ? (
         <div className="mt-6 bg-card border border-border rounded-xl p-8 text-center text-danger">{error}</div>
       ) : (
-        <DemoGate feature="draw and harvest trends">
+        <DemoGate
+          feature="draw and harvest trends"
+          description="Pro shows how the points needed and the draw odds have moved for each hunt across every published draw year, and how harvest success has changed by unit."
+        >
           <section className="mt-8">
             <h2 className="text-xl font-bold text-foreground mb-1">{pointsMatter ? "Point creep and draw odds" : "Draw odds by year"}</h2>
             <p className="text-sm text-muted-foreground mb-3">
@@ -156,7 +191,12 @@ export function TrendsView({ options, slug, species, pointsMatter, sources }: { 
                 : `${opt.name} doesn't use points for ${SPECIES_LABELS[species].toLowerCase()}, so only overall odds are shown. Hunts whose odds fell the most are listed first.`}
             </p>
             {drawTrends.length > 0 && drawYears.length > 2 && <p className="sm:hidden text-xs text-muted-foreground mb-2">Swipe the table sideways to see every year.</p>}
-            {drawTrends.length === 0 ? (
+            {drawTrends.length === 0 && data?.preview ? (
+              // The preview is one year of a few hunts, so it never shows a trend: don't say the agency lacks one.
+              <div className="bg-card border border-border rounded-xl p-6">
+                <LockedRows rows={6} />
+              </div>
+            ) : drawTrends.length === 0 ? (
               <p className="text-sm text-muted-foreground bg-card border border-border rounded-xl p-6">Not enough draw years published to show a trend.</p>
             ) : (
               <div className="bg-card border border-border rounded-xl overflow-x-auto overscroll-x-contain" role="region" aria-label="Scrollable table" tabIndex={0}>
@@ -213,7 +253,11 @@ export function TrendsView({ options, slug, species, pointsMatter, sources }: { 
               Success rate per season as published. On a computer, hover a cell for hunters and harvest; open a {opt.unitTerm} for the full numbers.
             </p>
             {harvestTrends.length > 0 && harvestYears.length > 3 && <p className="sm:hidden text-xs text-muted-foreground mb-2">Swipe the table sideways to see every season.</p>}
-            {harvestTrends.length === 0 ? (
+            {harvestTrends.length === 0 && data?.preview ? (
+              <div className="bg-card border border-border rounded-xl p-6">
+                <LockedRows rows={6} />
+              </div>
+            ) : harvestTrends.length === 0 ? (
               <p className="text-sm text-muted-foreground bg-card border border-border rounded-xl p-6">Not enough harvest seasons published to show a trend.</p>
             ) : (
               <div className="bg-card border border-border rounded-xl overflow-x-auto overscroll-x-contain" role="region" aria-label="Scrollable table" tabIndex={0}>

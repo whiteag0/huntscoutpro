@@ -26,13 +26,8 @@ import {
   type HuntingPreferences,
 } from "@/lib/preferences-schema";
 import { SPECIES_LABELS, type Species } from "@/data/types";
-import {
-  OTHER_STATES,
-  STATE_LIST,
-  WESTERN_DRAW_STATES,
-  stateBySlug,
-  type StateListItem,
-} from "@/data/state-list";
+import { STATE_LIST, stateBySlug, type StateListItem } from "@/data/state-list";
+import { COMING_SOON_STATES, LIVE_STATES, isLiveState } from "@/lib/agency-format";
 import { markOnboardedLocally } from "@/components/OnboardingGate";
 import { track } from "@/lib/analytics";
 
@@ -75,6 +70,15 @@ function toggle(list: string[], id: string, max: number = LIMITS.listItems): str
   return list.length >= max ? list : [...list, id];
 }
 
+/** The step to send the member back to, and why, when the answers so far can't be saved; else null. */
+function stepProblem(p: HuntingPreferences, throughStep: number): { step: number; message: string } | null {
+  // States are on step 1, species on step 2: either one is enough to save, so only check once both were asked.
+  if (throughStep >= 1 && p.states.length === 0 && p.species.length === 0) {
+    return { step: 1, message: "Pick at least one species here, or go back and pick a state, so we know where to start." };
+  }
+  return null;
+}
+
 // ---------------------------------------------------------------------------
 // Small presentational pieces
 // ---------------------------------------------------------------------------
@@ -102,11 +106,14 @@ function Chip({
   selected,
   disabled,
   onClick,
+  tag,
   children,
 }: {
   selected: boolean;
   disabled?: boolean;
   onClick: () => void;
+  /** Small trailing label, e.g. "Coming soon". */
+  tag?: string;
   children: React.ReactNode;
 }) {
   return (
@@ -123,6 +130,12 @@ function Chip({
     >
       {selected && <Check className="w-3.5 h-3.5 text-gold shrink-0" aria-hidden="true" />}
       {children}
+      {tag && (
+        <span className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+          <span className="sr-only">, </span>
+          {tag}
+        </span>
+      )}
     </button>
   );
 }
@@ -249,8 +262,13 @@ export default function WelcomePage() {
   };
 
   const goTo = (i: number) => {
+    const target = Math.max(0, Math.min(STEPS.length - 1, i));
+    // Moving forward checks the steps being left; going back never does.
+    const problem = target > step ? stepProblem(prefs, target - 1) : null;
     stepChanged.current = true;
-    setStep(Math.max(0, Math.min(STEPS.length - 1, i)));
+    setStep(problem ? problem.step : target);
+    // A message belongs to the step it was raised on: clear it when the step changes.
+    setError(problem ? problem.message : null);
     if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -308,9 +326,11 @@ export default function WelcomePage() {
 
   async function submit() {
     if (busy) return;
-    if (prefs.states.length === 0 && prefs.species.length === 0) {
-      setError("Pick at least one state or one species so we know where to start.");
-      if (step !== 0 && step !== 1) goTo(0);
+    const problem = stepProblem(prefs, STEPS.length - 1);
+    if (problem) {
+      stepChanged.current = true;
+      setStep(problem.step);
+      setError(problem.message);
       return;
     }
     setError(null);
@@ -318,7 +338,9 @@ export default function WelcomePage() {
     try {
       const result = await post({ preferences: prefs });
       track("welcome_submit", { action: editing ? "update" : "submit", states: prefs.states.length, species_count: prefs.species.length });
-      const first = prefs.states[0] ? stateBySlug(prefs.states[0]) : undefined;
+      // The first state with data on HuntScout; a "coming soon" pick isn't a useful first stop.
+      const firstLive = prefs.states.find(isLiveState);
+      const first = firstLive ? stateBySlug(firstLive) : undefined;
       const to = first ? `/states/${first.slug}` : "/states";
       const report = result.report === "queued";
       setSave({ kind: "done", to, label: first ? first.name : "your states", report });
@@ -447,13 +469,14 @@ export default function WelcomePage() {
   const CurrentIcon = current.icon;
   const stateLimitHit = prefs.states.length >= LIMITS.listItems;
 
-  const renderStateChips = (list: readonly StateListItem[]) => (
+  const renderStateChips = (list: readonly StateListItem[], tagComingSoon = true) => (
     <div className="flex flex-wrap gap-2">
       {list.map((s) => (
         <Chip
           key={s.slug}
           selected={prefs.states.includes(s.slug)}
           disabled={stateLimitHit}
+          tag={tagComingSoon && !isLiveState(s.slug) ? "Coming soon" : undefined}
           onClick={() => set("states", toggle(prefs.states, s.slug))}
         >
           {s.name}
@@ -571,7 +594,7 @@ export default function WelcomePage() {
               <>
                 <Question
                   title="Where will you hunt?"
-                  hint={"Pick every state you hunt or plan to apply in, even ones we don\u2019t cover yet. HuntScout Pro has agency data for the live western draw states; your picks help us decide which state to add next."}
+                  hint={`Pick every state you hunt or plan to apply in. HuntScout Pro has agency draw and harvest data for ${LIVE_STATES.length} states. Pick others too: they're marked "coming soon", and your picks help us decide which state to add next.`}
                 >
                   {prefs.states.length > 0 && (
                     <div className="rounded-xl bg-muted/60 p-3">
@@ -591,6 +614,7 @@ export default function WelcomePage() {
                                 aria-label={`Remove ${s?.name ?? slug}`}
                               >
                                 {s?.name ?? slug}
+                                {!isLiveState(slug) && <span className="font-medium opacity-80">(coming soon)</span>}
                                 <X className="w-3.5 h-3.5" aria-hidden="true" />
                               </button>
                             </li>
@@ -638,9 +662,9 @@ export default function WelcomePage() {
                     <div className="space-y-4">
                       <div>
                         <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-2">
-                          Western draw states
+                          Live on HuntScout ({LIVE_STATES.length} states)
                         </p>
-                        {renderStateChips(WESTERN_DRAW_STATES)}
+                        {renderStateChips(LIVE_STATES, false)}
                       </div>
                       <details className="group">
                         <summary className="cursor-pointer select-none text-xs font-semibold uppercase tracking-wide text-muted-foreground hover:text-foreground list-none inline-flex min-h-10 items-center gap-1">
@@ -648,9 +672,9 @@ export default function WelcomePage() {
                             className="w-3.5 h-3.5 transition-transform group-open:rotate-90"
                             aria-hidden="true"
                           />
-                          All other states
+                          Other states (coming soon)
                         </summary>
-                        <div className="mt-3">{renderStateChips(OTHER_STATES)}</div>
+                        <div className="mt-3">{renderStateChips(COMING_SOON_STATES, false)}</div>
                       </details>
                     </div>
                   )}

@@ -1,4 +1,5 @@
 // Serializable homepage data, computed on the server from the published agency files.
+import type { SpanSummary } from "@/lib/coverage";
 
 export interface HomeSpeciesCard {
   name: string;
@@ -25,8 +26,9 @@ export interface HomeData {
   stateCount: number;
   speciesCount: number;
   totalHuntCodes: number;
-  drawYears: [number, number] | null;
-  harvestYears: [number, number] | null;
+  /** Which draw and harvest years most states cover, and the full range. */
+  drawYears: SpanSummary | null;
+  harvestYears: SpanSummary | null;
   liveStates: HomeLiveState[];
   /** Names of the western draw states being built that aren't published yet. */
   upcomingStates: string[];

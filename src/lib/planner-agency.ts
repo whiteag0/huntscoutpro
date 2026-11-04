@@ -761,7 +761,7 @@ export function buildPlannedHunt(
     unit,
     season: (row?.method && SEASON_OF[row.method]) || "",
     preferencePointsNeeded: agency.minPoints ?? 0,
-    preferencePointsOwned: Math.max(0, Math.min(99, Math.round(input.pointsOwned || 0))),
+    preferencePointsOwned: input.pointsOwned == null ? null : Math.max(0, Math.min(99, Math.round(input.pointsOwned))),
     applicationDeadline: agency.deadline?.end || "",
     seasonDates: row?.seasonDates || "",
     status: "planning",

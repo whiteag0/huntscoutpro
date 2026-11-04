@@ -4,6 +4,7 @@ import { stripe } from "@/lib/stripe";
 import { isHuntScoutSession, normalizeEmail, sessionAccessEnd } from "@/lib/entitlement";
 import { preferencesFromMetadata, REMINDERS_OFF_KEY } from "@/lib/preferences";
 import type { ReminderMember } from "@/lib/reminders";
+import type { PurchaseRecord } from "@/lib/lifecycle";
 
 // Active HuntScout Pro members and their saved preferences, read straight from
 // Stripe (there is no database). The Stripe account is shared with other
@@ -116,6 +117,43 @@ export async function listMembersWithPreferences(
   stats.members = members.length;
   members.sort((a, b) => a.email.localeCompare(b.email));
   return { members, stats };
+}
+
+/**
+ * Paid HuntScout purchases made in the last `lookbackMs`, refunded ones flagged, for the
+ * daily lifecycle pass (src/lib/lifecycle.ts): the owner's onboarding check and profile nudges.
+ */
+export async function listRecentPurchases(lookbackMs: number, client: MemberStripe | null = stripe, now: Date = new Date()): Promise<PurchaseRecord[]> {
+  if (!client) throw new Error("Stripe not configured");
+  const records: PurchaseRecord[] = [];
+  const list = client.checkout.sessions.list({
+    status: "complete",
+    created: { gte: Math.floor((now.getTime() - lookbackMs) / 1000) },
+    limit: 100,
+    expand: ["data.payment_intent.latest_charge"],
+  });
+  for await (const s of list) {
+    if (!isHuntScoutSession(s) || s.payment_status !== "paid") continue;
+    const email = buyerEmail(s);
+    const pi = paymentIntentOf(s);
+    if (!email || !pi) continue;
+    records.push({
+      sessionId: s.id,
+      paymentIntentId: pi.id,
+      email: email.trim(),
+      name: s.metadata?.userName || s.customer_details?.name || null,
+      paidAtMs: (pi.created || s.created) * 1000,
+      revoked: !sessionAccessEnd(s),
+      metadata: (pi.metadata || {}) as Record<string, string>,
+    });
+  }
+  return records;
+}
+
+/** Stamp metadata on a PaymentIntent (e.g. a lifecycle email's sent marker). */
+export async function stampPaymentIntent(paymentIntentId: string, metadata: Record<string, string>, client: MemberStripe | null = stripe): Promise<void> {
+  if (!client) throw new Error("Stripe not configured");
+  await client.paymentIntents.update(paymentIntentId, { metadata });
 }
 
 /** Every paid HuntScout PaymentIntent bought with this email (any case variant Stripe stored). */

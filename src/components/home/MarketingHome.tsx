@@ -18,6 +18,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { PRICE } from "@/lib/promo";
+import { coveragePhrase } from "@/lib/coverage";
 import { Crosshair as BrandCrosshair } from "@/components/ComingSoonState";
 import type { HomeData } from "@/components/home/types";
 import { FreeRemindersSignup } from "@/components/growth/FreeRemindersSignup";
@@ -129,11 +130,6 @@ const PRICING_FEATURES = [
   "New states as they go live",
 ];
 
-function yearSpan(y: [number, number] | null): string | null {
-  if (!y) return null;
-  return y[0] === y[1] ? String(y[0]) : `${y[0]}–${y[1]}`;
-}
-
 function listNames(names: string[]): string {
   if (names.length <= 2) return names.join(" and ");
   return `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
@@ -146,16 +142,13 @@ function plural(n: number, word: string): string {
 const faqLink = "text-foreground font-medium underline underline-offset-2";
 
 function buildFaqs(data: HomeData): { q: string; a: React.ReactNode }[] {
-  const draw = yearSpan(data.drawYears);
-  const harvest = yearSpan(data.harvestYears);
   const live = data.liveStates.map((s) => s.name);
 
-  const years =
-    draw || harvest
-      ? `Right now we have ${[draw && `draw results from ${draw}`, harvest && `harvest results from ${harvest}`]
-          .filter(Boolean)
-          .join(" and ")}, depending on the state and species. Each state page lists exactly which years it has.`
-      : "It depends on the state and species. Each state page lists exactly which draw and harvest years it has.";
+  // Per-state spans from the agency files, so the copy never implies every state goes back to the earliest year.
+  const parts = [data.drawYears && coveragePhrase("draw results", data.drawYears), data.harvestYears && coveragePhrase("harvest results", data.harvestYears)].filter(Boolean);
+  const years = parts.length
+    ? `Right now ${parts.join(", and ")}. Years also vary by species, so each state page lists exactly which years it has.`
+    : "It depends on the state and species. Each state page lists exactly which draw and harvest years it has.";
 
   return [
     {

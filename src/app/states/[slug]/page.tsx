@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { stateBySlug } from "@/data/state-list";
-import { getStateData, speciesWithData } from "@/lib/agency";
+import { getCoverageStats, getStateData, speciesWithData } from "@/lib/agency";
+import { completenessSummary } from "@/lib/data-completeness";
 import { generalSeasons, isLiveState, keyDateEnd, todayIso } from "@/lib/agency-format";
 import { SITE } from "@/lib/emails/onboarding";
 import { stateOption } from "@/lib/free-reminders-options";
@@ -27,6 +28,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       title,
       description,
       alternates: { canonical: url },
+      // Every coming-soon page is the same request form; /request-state is the one to index.
+      robots: { index: false },
       openGraph: { title, description, url, siteName: "HuntScout Pro", type: "website" },
     };
   }
@@ -66,12 +69,20 @@ export default async function StatePage({ params, searchParams }: Params) {
   if (!data || species.length === 0) return <ComingSoonState state={st} />;
   const glance = await getStateGlance(data, species);
   const option = stateOption(data);
+  const completeness = completenessSummary((await getCoverageStats()).completeness[slug]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(stateJsonLd(data, species, glance)) }} />
       {/* Hunt-specific seasons appear on each hunt row; the overview lists the general ones. */}
-      <StateExplorer key={slug} state={{ ...data, seasons: generalSeasons(data.seasons) }} species={species} initialSpecies={requested} />
-      <StateAtAGlance state={data} glance={glance} />
+      {/* The free summary sits above the gated tables for non-members and after them for members (StateExplorer places it). */}
+      <StateExplorer
+        key={slug}
+        state={{ ...data, seasons: generalSeasons(data.seasons) }}
+        species={species}
+        initialSpecies={requested}
+        completeness={completeness}
+        summary={<StateAtAGlance state={data} glance={glance} />}
+      />
       {option && (
         <div className="max-w-7xl mx-auto px-4 pb-10">
           {/* Hidden for Pro members (client-side), whose reminders cover every state they follow. */}

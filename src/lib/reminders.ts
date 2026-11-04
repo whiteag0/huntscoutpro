@@ -236,6 +236,59 @@ export function nextReminderDates(member: ReminderMember, states: readonly Remin
   return out;
 }
 
+export interface UpcomingDeadline {
+  state: string;
+  stateName: string;
+  /** Every species this exact key date was published for, among the member's. */
+  species: Species[];
+  label: string;
+  /** Set when the date is a window (start–end) rather than a single date. */
+  start?: string;
+  end: string;
+  daysLeft: number;
+  cycle: number;
+  status: KeyDate["status"];
+  sourceUrl: string;
+}
+
+/**
+ * For the member home: the member's soonest actionable key dates across their live states
+ * and species (the same dates deadline reminders cover), soonest first. A date the agency
+ * published for several species is listed once.
+ */
+export function nextDeadlines(member: ReminderMember, states: readonly ReminderState[], today: string, max = 3): UpcomingDeadline[] {
+  if (!isIsoDay(today)) throw new Error(`today must be YYYY-MM-DD, got "${today}"`);
+  const order = new Map(member.states.map((s, i) => [s, i] as const));
+  const byKey = new Map<string, UpcomingDeadline>();
+  for (const st of states) {
+    if (!order.has(st.slug)) continue;
+    for (const { species, k, end } of openKeyDates(member, st, today)) {
+      const start = k.start && k.end ? k.start : undefined;
+      const key = [st.slug, k.label, start, end].join("|");
+      const seen = byKey.get(key);
+      if (seen) {
+        if (!seen.species.includes(species)) seen.species.push(species);
+        continue;
+      }
+      byKey.set(key, {
+        state: st.slug,
+        stateName: st.name,
+        species: [species],
+        label: k.label,
+        ...(start ? { start } : {}),
+        end,
+        daysLeft: daysBetween(today, end),
+        cycle: k.cycle,
+        status: k.status,
+        sourceUrl: st.sources.find((s) => s.id === k.sourceId)?.url || st.agency.url,
+      });
+    }
+  }
+  return [...byKey.values()]
+    .sort((a, b) => a.end.localeCompare(b.end) || (order.get(a.state) ?? 0) - (order.get(b.state) ?? 0) || a.label.localeCompare(b.label))
+    .slice(0, max);
+}
+
 export interface DigestEntry extends Omit<DueReminder, "species" | "state" | "stateName" | "agencyName"> {
   /** Every species this exact key date was published for. */
   species: Species[];

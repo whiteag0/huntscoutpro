@@ -8,11 +8,12 @@ import { SPECIES_LABELS } from "@/data/types";
 import type { DrawRecord, SpeciesInfo } from "@/data/agency/schema";
 import type { StateData } from "@/lib/agency";
 import { fmtNum, fmtPct } from "@/lib/agency-format";
-import { drawHistory, drawStats, harvestMethodKey, headlineHarvestRows, minPointsDrawn, oddsOf, sameUnit, successOf, unitNameOf, type DrawResidency } from "@/lib/agency-view";
+import { drawHistory, drawStats, harvestMethodKey, headlineHarvestRows, minPointsDrawn, oddsOf, poolQuota, sameUnit, successOf, unitNameOf, type DrawResidency } from "@/lib/agency-view";
+import { huntResidencyOnly } from "@/lib/planner-agency";
 import { DemoGate } from "@/components/DemoGate";
 import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { Cite, SourceNotes, footnoteIndex } from "@/components/agency/SourceNotes";
-import { HScroll, pill, useIsNarrow } from "@/components/agency/mobile";
+import { HScroll, LockedRows, pill, useIsNarrow } from "@/components/agency/mobile";
 import { AddToPlannerButton, PlannerToaster } from "@/components/planner/AddToPlanner";
 
 function PointTable({ r, residency }: { r: DrawRecord; residency: DrawResidency }) {
@@ -45,7 +46,20 @@ function PointTable({ r, residency }: { r: DrawRecord; residency: DrawResidency 
   );
 }
 
-export function UnitDetail({ state, unit, species: speciesList, requested }: { state: StateData; unit: string; species: SpeciesInfo[]; requested?: string }) {
+export function UnitDetail({
+  state,
+  unit,
+  species: speciesList,
+  requested,
+  summary,
+}: {
+  state: StateData;
+  unit: string;
+  species: SpeciesInfo[];
+  requested?: string;
+  /** Server-rendered free summary, shown to everyone above the tables. */
+  summary?: React.ReactNode;
+}) {
   const species = speciesList.find((s) => s.species === requested)?.species || speciesList[0].species;
   const info = speciesList.find((s) => s.species === species)!;
   const { data, loading, error } = useSpeciesData(state.slug, species);
@@ -66,7 +80,10 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
         .map((r) => ({ year: r.year, Hunters: r.hunters, Harvest: r.harvest, "Success %": successOf(r) === null ? null : Number(successOf(r)!.toFixed(1)), r })),
     [harvest, cat]
   );
-  const hunts = useMemo(() => drawHistory((data?.draw || []).filter((r) => r.units.some((u) => sameUnit(u, unit)))), [data, unit]);
+  const allHunts = useMemo(() => drawHistory((data?.draw || []).filter((r) => r.units.some((u) => sameUnit(u, unit)))), [data, unit]);
+  // Hunts the agency limits to the other residency (e.g. Alaska "Residents Only") aren't listed for this residency.
+  const hunts = useMemo(() => new Map(Array.from(allHunts).filter(([, list]) => (huntResidencyOnly(list[0].description) ?? residency) === residency)), [allHunts, residency]);
+  const hiddenForResidency = allHunts.size - hunts.size;
 
   const cited = useMemo(() => {
     const ids = [...harvest.map((r) => r.sourceId)];
@@ -112,6 +129,8 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
         ))}
       </HScroll>
 
+      {summary}
+
       {loading && !data ? (
         <div className="flex items-center justify-center py-16 text-muted-foreground">
           <Loader2 className="w-5 h-5 animate-spin mr-2" aria-hidden /> Loading…
@@ -131,7 +150,10 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
                 </select>
               )}
             </div>
-            {series.length === 0 ? (
+            {series.length === 0 && data?.preview ? (
+              // The preview holds a few statewide rows, not this unit's: never claim the agency has nothing.
+              <LockedRows />
+            ) : series.length === 0 ? (
               <p className="text-sm text-muted-foreground">
                 {state.agency.shortName} doesn&apos;t publish {SPECIES_LABELS[species].toLowerCase()} harvest for this {state.unitTerm} in the years we cover.
               </p>
@@ -192,8 +214,17 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
                 ))}
               </div>
             </div>
-            {hunts.size === 0 ? (
-              <p className="text-sm text-muted-foreground">No drawn hunts for this {state.unitTerm} in the draw years we cover.</p>
+            {hiddenForResidency > 0 && !data?.preview && (
+              <p className="text-xs text-muted-foreground mb-3">
+                {hiddenForResidency} {hiddenForResidency === 1 ? "hunt is" : "hunts are"} limited to {residency === "resident" ? "nonresidents" : "residents"} and not listed here.
+              </p>
+            )}
+            {hunts.size === 0 && data?.preview ? (
+              <LockedRows />
+            ) : hunts.size === 0 ? (
+              <p className="text-sm text-muted-foreground">
+                {allHunts.size === 0 ? `No drawn hunts for this ${state.unitTerm} in the draw years we cover.` : `No hunts here are open to ${residency}s.`}
+              </p>
             ) : (
               <div className="space-y-4">
                 {Array.from(hunts.entries()).map(([code, list]) => (
@@ -236,6 +267,7 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
                       <tbody>
                         {list.map((r) => {
                           const { stats, pool } = drawStats(r, residency);
+                          const quota = poolQuota(r, residency);
                           return (
                             <tr key={r.year} className="border-t border-border">
                               <td className="py-1.5 font-semibold whitespace-nowrap">
@@ -243,7 +275,14 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
                                 <Cite n={cite(r.sourceId)} />
                                 {pool === "total" && <span className="block sm:inline text-[10px] text-muted-foreground font-normal"> (all applicants)</span>}
                               </td>
-                              <td className="py-1.5 pl-2 text-right tabular-nums">{fmtNum(stats?.quota)}</td>
+                              <td className="py-1.5 pl-2 text-right tabular-nums">
+                                {fmtNum(quota.quota)}
+                                {quota.isTotal && (
+                                  <span className="block text-[10px] text-muted-foreground" title="Total quota (all pools)">
+                                    total, all pools
+                                  </span>
+                                )}
+                              </td>
                               <td className="py-1.5 pl-2 text-right tabular-nums">{fmtNum(stats?.applicants)}</td>
                               <td className="py-1.5 pl-2 text-right tabular-nums">{fmtNum(stats?.drawn)}</td>
                               <td className="py-1.5 pl-3 text-right tabular-nums font-semibold">{fmtPct(oddsOf(stats))}</td>

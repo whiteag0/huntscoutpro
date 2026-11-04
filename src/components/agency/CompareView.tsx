@@ -7,13 +7,16 @@ import { Loader2, X } from "lucide-react";
 import { SPECIES_LABELS, type Species } from "@/data/types";
 import type { DrawRecord, HarvestRecord } from "@/data/agency/schema";
 import { fmtNum, fmtPct } from "@/lib/agency-format";
-import { drawHistory, drawStats, headlineHarvestRows, sameUnit, minPointsDrawn, oddsAtPoints, oddsOf, successOf, type DrawResidency } from "@/lib/agency-view";
+import { drawHistory, drawStats, headlineHarvestRows, sameUnit, minPointsDrawn, oddsAtPoints, oddsOf, poolQuota, successOf, type DrawResidency } from "@/lib/agency-view";
+import { huntResidencyOnly } from "@/lib/planner-agency";
 import { DemoGate } from "@/components/DemoGate";
 import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { SourceNotes, footnoteIndex, Cite } from "@/components/agency/SourceNotes";
 import type { SourceRef } from "@/data/agency/schema";
 import { pill } from "@/components/agency/mobile";
 import { track } from "@/lib/analytics";
+import { profileOf, useMemberProfile } from "@/components/useMemberProfile";
+import { pointsIn, residencyIn } from "@/lib/member-defaults";
 
 interface Props {
   slug: string;
@@ -23,6 +26,9 @@ interface Props {
   pointsMatter: boolean;
   codes: string[];
   sources: SourceRef[];
+  /** From the link (?res=, ?pts=): the residency and points the state page was showing. */
+  residency?: DrawResidency;
+  points?: number;
 }
 
 /** Unit-level harvest for a hunt's single unit, latest season, all-methods row when published. */
@@ -38,12 +44,17 @@ type Col = { code: string; list: DrawRecord[]; latest: DrawRecord; harvest: Harv
 
 type RowDef = { label: string; render: (c: Col) => React.ReactNode };
 
-export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, codes, sources }: Props) {
+export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, codes, sources, residency: urlResidency, points: urlPoints }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const { data, loading, error } = useSpeciesData(slug, species);
-  const [residency, setResidency] = useState<DrawResidency>("resident");
-  const [points, setPoints] = useState(0);
+  // The link's values first, then the member's saved answers, then resident / 0.
+  const profileLoad = useMemberProfile({ planner: pointsMatter && urlPoints === undefined });
+  const profile = profileOf(profileLoad);
+  const [residencyChoice, setResidency] = useState<DrawResidency | null>(null);
+  const [pointsChoice, setPoints] = useState<number | null>(null);
+  const residency: DrawResidency = residencyChoice ?? urlResidency ?? residencyIn(profile?.preferences, slug) ?? "resident";
+  const points = pointsChoice ?? urlPoints ?? (profile ? pointsIn(profile.points, profile.planner, slug, species)?.points : undefined) ?? 0;
   useEffect(() => track("compare_open", { state: slug, species, hunts: codes.length }), [slug, species, codes.length]);
 
   const cols = useMemo((): Col[] => {
@@ -61,15 +72,34 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
   const rowDefs: RowDef[] = [
     { label: unitTerm, render: (c) => c.latest.units.join(", ") || "—" },
     { label: "Latest draw", render: (c) => <>{c.latest.year}<Cite n={cite(c.latest.sourceId)} /></> },
-    { label: "Quota", render: (c) => fmtNum(drawStats(c.latest, residency).stats?.quota) },
-    { label: "Applicants", render: (c) => fmtNum(drawStats(c.latest, residency).stats?.applicants) },
+    {
+      label: "Quota",
+      render: (c) => {
+        const q = poolQuota(c.latest, residency);
+        return (
+          <>
+            {fmtNum(q.quota)}
+            {q.isTotal && <span className="block text-[11px] text-muted-foreground">Total quota (all pools)</span>}
+          </>
+        );
+      },
+    },
+    {
+      label: "Applicants",
+      render: (c) => (
+        <>
+          {fmtNum(drawStats(c.latest, residency).stats?.applicants)}
+          {c.latest.choice === "first" && <span className="block text-[11px] text-muted-foreground">1st choice</span>}
+        </>
+      ),
+    },
     { label: "Drawn", render: (c) => fmtNum(drawStats(c.latest, residency).stats?.drawn) },
-    { label: "Draw odds", render: (c) => <b>{fmtPct(oddsOf(drawStats(c.latest, residency).stats))}</b> },
+    { label: "Draw odds (all applicants)", render: (c) => <b>{fmtPct(oddsOf(drawStats(c.latest, residency).stats))}</b> },
     ...(pointsMatter
       ? [
           { label: "Min points drawn", render: (c: Col) => minPointsDrawn(c.latest, residency) ?? "—" },
           {
-            label: `Odds at ${points} pts`,
+            label: `Odds at your ${points} pts`,
             render: (c: Col) => {
               const o = oddsAtPoints(c.latest, residency, points);
               return o ? `${fmtPct(o.pct)} (${o.drawn}/${o.applicants})` : c.latest.byPoints ? "no applicants" : "not published";
@@ -104,6 +134,12 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
     },
   ];
 
+  // A hunt picked earlier can be limited to the other residency; say so instead of showing its figures as yours.
+  const limitNote = (c: Col) => {
+    const only = huntResidencyOnly(c.latest.description);
+    return only && only !== residency ? <span className="block mt-0.5 text-[11px] font-semibold text-warning">Limited to {only}s by the agency</span> : null;
+  };
+
   const swipeRef = useRef<HTMLDivElement>(null);
   const [activeRaw, setActive] = useState(0);
   // Removing a hunt shrinks the list without a scroll event; keep the indicator in range.
@@ -117,7 +153,7 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
 
   const remove = (code: string) => {
     const next = codes.filter((c) => c !== code);
-    router.replace(`${pathname}?state=${slug}&species=${species}&codes=${next.map(encodeURIComponent).join(",")}`);
+    router.replace(`${pathname}?state=${slug}&species=${species}&codes=${next.map(encodeURIComponent).join(",")}&res=${residency}${pointsMatter ? `&pts=${points}` : ""}`);
   };
 
   return (
@@ -147,14 +183,17 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
         )}
       </div>
 
-      {loading && !data ? (
+      {(loading && !data) || profileLoad.status === "loading" ? (
         <div className="flex items-center justify-center py-16 text-muted-foreground">
           <Loader2 className="w-5 h-5 animate-spin mr-2" aria-hidden /> Loading…
         </div>
       ) : error ? (
         <div className="bg-card border border-border rounded-xl p-8 text-center text-danger">{error}</div>
       ) : (
-        <DemoGate feature="hunt comparisons">
+        <DemoGate
+          feature="hunt comparisons"
+          description="Pro lets you tick up to four hunts on any state's draw table and see them side by side: quota, applicants, drawn, odds, minimum points, odds by year and the unit's harvest, each cited to the agency report."
+        >
           {cols.length === 0 ? (
             <div className="bg-card border border-border rounded-xl p-8 text-center text-muted-foreground">
               Pick up to four hunts on the{" "}
@@ -192,7 +231,10 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
                           <X className="w-4 h-4" aria-hidden />
                         </button>
                       </div>
-                      <p className="text-xs text-muted-foreground -mt-1">{c.latest.description}</p>
+                      <p className="text-xs text-muted-foreground -mt-1">
+                        {c.latest.description}
+                        {limitNote(c)}
+                      </p>
                       <dl className="mt-3 divide-y divide-border border-t border-border text-sm">
                         {rowDefs.map((row) => (
                           <div key={row.label} className="flex items-start justify-between gap-3 py-2">
@@ -226,7 +268,10 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
                               <X className="w-4 h-4" />
                             </button>
                           </div>
-                          <div className="text-xs font-normal text-muted-foreground">{c.latest.description}</div>
+                          <div className="text-xs font-normal text-muted-foreground">
+                            {c.latest.description}
+                            {limitNote(c)}
+                          </div>
                         </th>
                       ))}
                     </tr>

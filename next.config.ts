@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
     "/api/agency/[state]/[species]": ["./.agency-gz/**/*"],
     "/api/shortlist": ["./.agency-gz/**/*"],
     "/shortlist": ["./.agency-gz/**/*"],
+    // Free summaries: statewide harvest on state pages, unit summaries and the /trends example hunt.
+    "/states/[slug]": ["./.agency-gz/**/*"],
+    "/states/[slug]/units/[unitId]": ["./.agency-gz/**/*"],
+    "/trends": ["./.agency-gz/**/*"],
     // The planner builds each entry's agency block from the server's own tables.
     "/api/planner/entries": ["./.agency-gz/**/*"],
     "/api/planner/refresh": ["./.agency-gz/**/*"],

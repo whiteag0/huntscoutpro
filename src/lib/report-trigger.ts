@@ -50,6 +50,20 @@ function stampTime(v: string | undefined): number {
   return Date.parse((v || "").split(" ")[0]);
 }
 
+/** A send queued moments ago (a double submit, or a quick second edit) that hasn't finished or failed yet. */
+function inFlight(metadata: Record<string, string | undefined>, nowMs: number): boolean {
+  const sentAt = stampTime(metadata[REPORT_SENT_KEY]);
+  const pendingAt = stampTime(metadata[REPORT_PENDING_KEY]);
+  const errorAt = stampTime(metadata[REPORT_ERROR_KEY]);
+  return !Number.isNaN(pendingAt) && nowMs - pendingAt < REPORT_PENDING_MS && !(sentAt >= pendingAt) && !(errorAt >= pendingAt);
+}
+
+/** Where the member's report stands, for member home: when the last one was emailed, and whether one is on its way. */
+export function reportStatus(metadata: Record<string, string | undefined>, nowMs: number): { sentAt: string | null; pending: boolean } {
+  const sentAt = stampTime(metadata[REPORT_SENT_KEY]);
+  return { sentAt: Number.isNaN(sentAt) ? null : new Date(sentAt).toISOString(), pending: inFlight(metadata, nowMs) };
+}
+
 /**
  * Whether saving the form should send a report now.
  * `metadata` is the PaymentIntent's metadata before this save (empty for members without one).
@@ -69,8 +83,7 @@ export function reportDecision(opts: {
   const sentAt = stampTime(metadata[REPORT_SENT_KEY]);
   const pendingAt = stampTime(metadata[REPORT_PENDING_KEY]);
   const errorAt = stampTime(metadata[REPORT_ERROR_KEY]);
-  // A send queued moments ago (a double submit, or a quick second edit) that hasn't finished or failed yet.
-  if (!Number.isNaN(pendingAt) && nowMs - pendingAt < REPORT_PENDING_MS && !(sentAt >= pendingAt) && !(errorAt >= pendingAt)) return "in-progress";
+  if (inFlight(metadata, nowMs)) return "in-progress";
   if (Number.isNaN(sentAt)) {
     // Answers saved before automatic reports existed (no report marker of any kind): re-saving them
     // unchanged doesn't send one; changing them does, as for any member.

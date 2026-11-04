@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Species } from "@/data/types";
 import { getStateData, speciesWithData } from "@/lib/agency";
 import { LIVE_STATES, isLiveState } from "@/lib/agency-format";
+import { parsePointValue } from "@/lib/points-schema";
 import { CompareView } from "@/components/agency/CompareView";
 
 export const metadata: Metadata = {
@@ -10,10 +11,10 @@ export const metadata: Metadata = {
   description: "Compare official draw results and harvest for up to four hunts side by side.",
 };
 
-type Search = { searchParams: Promise<{ state?: string; species?: string; codes?: string }> };
+type Search = { searchParams: Promise<{ state?: string; species?: string; codes?: string; res?: string; pts?: string }> };
 
 export default async function ComparePage({ searchParams }: Search) {
-  const { state, species, codes } = await searchParams;
+  const { state, species, codes, res, pts } = await searchParams;
   const data = state && isLiveState(state) ? await getStateData(state) : null;
   const info = data ? speciesWithData(data).find((s) => s.species === species) : undefined;
 
@@ -44,6 +45,8 @@ export default async function ComparePage({ searchParams }: Search) {
       pointsMatter={info.pointsMatter}
       codes={(codes || "").split(",").map((c) => decodeURIComponent(c).trim()).filter(Boolean).slice(0, 4)}
       sources={data.sources}
+      residency={res === "resident" || res === "nonresident" ? res : undefined}
+      points={parsePointValue(pts) ?? undefined}
     />
   );
 }

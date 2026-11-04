@@ -13,6 +13,7 @@ import {
   reportFilename,
   reportIdempotencyKey,
   reportInputHash,
+  reportStatus,
 } from "@/lib/report-trigger";
 
 const prefs = (p: Partial<HuntingPreferences> = {}): HuntingPreferences => ({ ...EMPTY_PREFERENCES, states: ["colorado"], species: ["elk"], ...p });
@@ -93,4 +94,18 @@ test("filenames are safe and fall back without a name", () => {
   assert.equal(reportFilename('Bad "name" <x>/\\'), "HuntScout Pro - Scouting Report - Bad name x.pdf");
   assert.equal(reportFilename(null), "HuntScout Pro - Scouting Report.pdf");
   assert.equal(reportFilename("José Núñez"), "HuntScout Pro - Scouting Report - Jose Nunez.pdf");
+});
+
+test("reportStatus: when the last report went out, and whether one is on its way", () => {
+  const at = (ms: number) => new Date(NOW - ms).toISOString();
+  assert.deepEqual(reportStatus({}, NOW), { sentAt: null, pending: false });
+  assert.deepEqual(reportStatus({ [REPORT_SENT_KEY]: at(86_400_000) }, NOW), { sentAt: at(86_400_000), pending: false });
+  assert.deepEqual(reportStatus({ [REPORT_PENDING_KEY]: at(30_000) }, NOW), { sentAt: null, pending: true });
+  // Queued after the last one went out: on its way again.
+  assert.deepEqual(reportStatus({ [REPORT_SENT_KEY]: at(86_400_000), [REPORT_PENDING_KEY]: at(30_000) }, NOW), { sentAt: at(86_400_000), pending: true });
+  // Finished, failed, or stale: no longer pending.
+  assert.equal(reportStatus({ [REPORT_PENDING_KEY]: at(30_000), [REPORT_SENT_KEY]: at(10_000) }, NOW).pending, false);
+  assert.equal(reportStatus({ [REPORT_PENDING_KEY]: at(30_000), [REPORT_ERROR_KEY]: `${at(10_000)} Resend 500` }, NOW).pending, false);
+  assert.equal(reportStatus({ [REPORT_PENDING_KEY]: at(REPORT_PENDING_MS) }, NOW).pending, false);
+  assert.equal(reportStatus({ [REPORT_SENT_KEY]: "garbage" }, NOW).sentAt, null);
 });
