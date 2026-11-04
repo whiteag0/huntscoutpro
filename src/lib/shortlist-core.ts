@@ -7,17 +7,20 @@
 import type { DrawRecord, HarvestRecord, Method, SexClass } from "@/data/agency/schema";
 import {
   drawStats,
+  firstChoiceRows,
   harvestMethodKey,
   headlineHarvestRows,
   isRealUnit,
   minPointsDrawn,
   oddsAtPoints,
   oddsOf,
+  poolQuota,
   sameUnit,
   successOf,
   type DrawResidency,
   type PointOdds,
 } from "./agency-view";
+import { huntResidencyOnly } from "./planner-agency";
 
 /**
  * - drew-at-points: the agency's point table shows applicants at exactly your level, and some drew.
@@ -142,13 +145,7 @@ export function resultsYear(rows: DrawRecord[]): { year: number | null; newer: n
 
 /** One row per hunt code for the year, preferring the agency's first-choice figures. */
 export function huntsForYear(rows: DrawRecord[], year: number): DrawRecord[] {
-  const byCode = new Map<string, DrawRecord>();
-  for (const r of rows) {
-    if (r.year !== year) continue;
-    const cur = byCode.get(r.huntCode);
-    if (!cur || (cur.choice !== "first" && r.choice === "first")) byCode.set(r.huntCode, r);
-  }
-  return Array.from(byCode.values());
+  return firstChoiceRows(rows.filter((r) => r.year === year));
 }
 
 export type Classified = { hunt: ShortlistHunt } | { excluded: ExcludedReason };
@@ -161,6 +158,7 @@ export function classifyHunt(r: DrawRecord, residency: DrawResidency, pointsMatt
   const minPoints = pointsMatter ? minPointsDrawn(r, residency) : null;
   const drawnNone = stats.drawn === 0 || (odds !== null && odds <= 0);
 
+  const quota = poolQuota(r, residency);
   const make = (status: HuntStatus, rankOdds: number | null, atPoints: ShortlistHunt["atPoints"] = null): { hunt: ShortlistHunt } => ({
     hunt: {
       huntCode: r.huntCode,
@@ -173,8 +171,8 @@ export function classifyHunt(r: DrawRecord, residency: DrawResidency, pointsMatt
       seasonDates: r.seasonDates,
       choice: r.choice,
       pool,
-      quota: stats.quota ?? (pool !== "total" ? r.total?.quota : null) ?? null,
-      quotaIsTotal: stats.quota == null && pool !== "total" && r.total?.quota != null,
+      quota: quota.quota,
+      quotaIsTotal: quota.isTotal,
       applicants: stats.applicants ?? null,
       drawn: stats.drawn ?? null,
       odds,
@@ -272,7 +270,8 @@ export function classifyState({ rows, residency, pointsMatter, points, includeSt
   };
   if (year === null) return { drawYear: null, newerYearWithoutResults: null, hasPointTable: false, hasMinPoints: false, counts, hunts: [] };
 
-  const yearRows = huntsForYear(rows, year);
+  // Hunts the agency limits to the other residency (e.g. Alaska "Residents Only") can't be applied for.
+  const yearRows = huntsForYear(rows, year).filter((r) => (huntResidencyOnly(r.description) ?? residency) === residency);
   counts.hunts = yearRows.length;
   const hunts: ShortlistHunt[] = [];
   for (const r of yearRows) {

@@ -206,3 +206,15 @@ test("quotas and applicants without drawn counts are excluded as no-odds, not as
   assert.equal(s.counts.noOdds, 2);
   assert.equal(s.counts.noFigures, 0);
 });
+
+test("hunts the agency limits to the other residency are left out (Alaska 'Residents Only')", () => {
+  const rows = [
+    draw("DM167", { description: "Unit 6C — Residents Only — Legal animal: Bull", total: { quota: 8, applicants: 2199, drawn: 8 } }),
+    draw("DM168", { description: "Unit 6C — Legal animal: Bull", total: { quota: 8, applicants: 900, drawn: 8 } }),
+  ];
+  const nr = classifyState({ rows, residency: "nonresident", pointsMatter: false, points: null, includeStretch: false });
+  assert.deepEqual(nr.hunts.map((h) => h.huntCode), ["DM168"]);
+  assert.equal(nr.counts.hunts, 1);
+  const res = classifyState({ rows, residency: "resident", pointsMatter: false, points: null, includeStretch: false });
+  assert.deepEqual(res.hunts.map((h) => h.huntCode).sort(), ["DM167", "DM168"]);
+});

@@ -59,7 +59,38 @@ const readRows = (s, kind, sp) => {
   const f = path.join(base, s, kind, `${sp}.json`);
   return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : [];
 };
-const stats = { states: states.length, species: {}, drawYears: null, harvestYears: null, turkeyStatewide: {} };
+const stats = { states: states.length, species: {}, drawYears: null, harvestYears: null, turkeyStatewide: {}, completeness: {} };
+
+// What the agency publishes in a species' latest draw with odds: hunt counts only, nothing estimated.
+// Mirrors oddsYear() and firstChoiceRows() in src/lib/agency-view.ts (keep them in step).
+const hasOdds = (s) => !!s && (s.oddsPct != null || (!!s.applicants && s.drawn != null));
+const pools = (r) => [r.resident, r.nonresident, r.total];
+const oddsData = (r) => (r.byPoints?.length ?? 0) > 0 || pools(r).some((s) => hasOdds(s) || (!!s && s.minPoints != null));
+function drawCompleteness(draw, pointsMatter) {
+  if (!draw.length) return null;
+  const latest = draw.reduce((m, r) => Math.max(m, r.year), 0);
+  const year = draw.filter(oddsData).reduce((m, r) => Math.max(m, r.year), 0) || null;
+  // Hunts in that year, or in the latest year when no year has odds (they count as hunts without odds).
+  const byCode = new Map();
+  for (const r of draw) {
+    if (r.year !== (year ?? latest)) continue;
+    const cur = byCode.get(r.huntCode);
+    if (!cur || (cur.choice !== "first" && r.choice === "first")) byCode.set(r.huntCode, r);
+  }
+  const rows = [...byCode.values()];
+  const count = (f) => rows.filter(f).length;
+  return {
+    pointsMatter: !!pointsMatter,
+    drawYear: year,
+    newer: year !== null && latest > year ? latest : null,
+    hunts: rows.length,
+    odds: count((r) => pools(r).some(hasOdds)),
+    // Odds for residents or nonresidents on their own: the pool's figures, or a point table (always split by residency).
+    split: count((r) => hasOdds(r.resident) || hasOdds(r.nonresident) || (r.byPoints?.length ?? 0) > 0),
+    pointTable: count((r) => (r.byPoints?.length ?? 0) > 0),
+    minPoints: count((r) => pools(r).some((s) => !!s && s.minPoints != null) || (r.byPoints?.length ?? 0) > 0),
+  };
+}
 const span = (cur, ys) => ys.reduce((m, y) => (m ? [Math.min(m[0], y), Math.max(m[1], y)] : [y, y]), cur);
 for (const s of states) {
   const meta = JSON.parse(fs.readFileSync(path.join(base, s, "draw-meta.json"), "utf8"));
@@ -74,6 +105,8 @@ for (const s of states) {
     cur.huntCodes += new Set(draw.filter((r) => r.year === latest).map((r) => r.huntCode)).size;
     cur.units += new Set(harvest.filter((r) => r.unit !== "Statewide").map((r) => r.unit)).size;
     stats.species[sp] = cur;
+    const dc = drawCompleteness(draw, info.pointsMatter);
+    if (dc) (stats.completeness[s] ||= {})[sp] = dc;
     stats.drawYears = span(stats.drawYears, draw.map((r) => r.year));
     stats.harvestYears = span(stats.harvestYears, harvest.map((r) => r.year));
     if (sp === "turkey") {

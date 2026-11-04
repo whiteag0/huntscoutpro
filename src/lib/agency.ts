@@ -4,6 +4,7 @@ import { gunzipSync } from "node:zlib";
 import path from "node:path";
 import { AGENCY_FILES } from "@/data/agency/index.generated";
 import STATS from "@/data/agency/stats.generated.json";
+import type { DrawCompleteness } from "@/lib/data-completeness";
 import type {
   Coverage,
   DrawMeta,
@@ -110,6 +111,8 @@ export interface CoverageStats {
   harvestYears: [number, number] | null;
   /** Agency statewide turkey rows by state, newest first. */
   turkeyStatewide: Record<string, { rows: HarvestRecord[]; units: number; drawHunts: number }>;
+  /** Per state and species: what the agency publishes in its latest draw with odds (hunt counts). */
+  completeness: Record<string, Record<string, DrawCompleteness>>;
 }
 
 /** Counts computed from the published agency files at build time (scripts/agency/build-index.mjs). */

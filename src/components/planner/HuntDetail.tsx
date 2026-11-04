@@ -387,6 +387,7 @@ function PointsBlock({ hunt, onChange }: { hunt: PlannedHunt; onChange: (p: Part
   const pointName = a?.pointName || "point";
   const min = a?.minPoints;
   const clamp = (v: string) => Math.max(0, Math.min(99, parseInt(v) || 0));
+  const owned = hunt.preferencePointsOwned;
   if (a && a.pointsMatter === false) {
     return <p className="text-sm text-muted-foreground">{a.agencyShortName || "The agency"}&apos;s draw for this species doesn&apos;t use points.</p>;
   }
@@ -394,15 +395,15 @@ function PointsBlock({ hunt, onChange }: { hunt: PlannedHunt; onChange: (p: Part
     <div className="flex flex-wrap items-end gap-x-6 gap-y-3 text-sm">
       <label>
         <span className="block text-xs font-semibold text-muted-foreground mb-1">Your {pointName}s</span>
-        <input type="number" min={0} max={99} inputMode="numeric" value={hunt.preferencePointsOwned} onChange={(e) => onChange({ preferencePointsOwned: clamp(e.target.value) })} className="w-24 min-h-11 px-2 border border-border rounded-lg bg-background text-base" />
+        <input type="number" min={0} max={99} inputMode="numeric" value={owned ?? ""} placeholder="—" onChange={(e) => onChange({ preferencePointsOwned: e.target.value.trim() === "" ? null : clamp(e.target.value) })} className="w-24 min-h-11 px-2 border border-border rounded-lg bg-background text-base" />
       </label>
       {a ? (
         <div>
           <span className="block text-xs font-semibold text-muted-foreground mb-1">Lowest drawn ({a.drawYear || "last draw"})</span>
           <span className="text-lg font-bold text-foreground tabular-nums">{min ?? "—"}</span>
           {min !== null && min !== undefined && (
-            <span className={`ml-2 ${hunt.preferencePointsOwned >= min ? "text-success" : "text-muted-foreground"}`}>
-              {hunt.preferencePointsOwned >= min ? "you're at or above it" : `${min - hunt.preferencePointsOwned} below it`}
+            <span className={`ml-2 ${owned !== null && owned >= min ? "text-success" : "text-muted-foreground"}`}>
+              {owned === null ? "enter your points to compare" : owned >= min ? "you're at or above it" : `${min - owned} below it`}
             </span>
           )}
         </div>

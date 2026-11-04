@@ -171,7 +171,8 @@ export interface PlannedHunt {
   unit: string;
   season: PlannerSeason;
   preferencePointsNeeded: number;
-  preferencePointsOwned: number;
+  /** null when the member didn't say how many points they hold (shown as "not given", never as 0). */
+  preferencePointsOwned: number | null;
   /** YYYY-MM-DD, or "" when unknown. For agency entries, the agency deadline's end. */
   applicationDeadline: string;
   seasonDates: string;
@@ -493,7 +494,7 @@ function sanitizeHunt(v: unknown): PlannedHunt | null {
     unit,
     season,
     preferencePointsNeeded: int(v.preferencePointsNeeded, 0, 99, 0),
-    preferencePointsOwned: int(v.preferencePointsOwned, 0, 99, 0),
+    preferencePointsOwned: v.preferencePointsOwned === null ? null : int(v.preferencePointsOwned, 0, 99, 0),
     applicationDeadline: agency?.deadline ? agency.deadline.end : isoDay(v.applicationDeadline),
     seasonDates: str(v.seasonDates, 200),
     status,

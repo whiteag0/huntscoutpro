@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import type { DrawRecord } from "@/data/agency/schema";
 import { getStateData, readTable } from "@/lib/agency";
-import { drawStats, minPointsDrawn, oddsOf } from "@/lib/agency-view";
+import { drawStats, firstChoiceRows, minPointsDrawn, oddsOf } from "@/lib/agency-view";
 import { NO_STORE, plannerMember } from "@/lib/planner-auth";
 import { huntResidencyOnly } from "@/lib/planner-agency";
 
@@ -39,9 +39,10 @@ export async function GET(req: NextRequest) {
   if (!st || !info) return NextResponse.json({ error: "Unknown state or species." }, { status: 404, headers: NO_STORE });
   const rows = await readTable<DrawRecord>(st.slug, "draw", info.species);
   const year = rows.reduce((y, r) => Math.max(y, r.year), 0);
-  const hunts: HuntOption[] = rows
+  // One entry per hunt code (first-choice figures when the agency also lists all-choice ones).
+  const hunts: HuntOption[] = firstChoiceRows(rows.filter((r) => r.year === year))
     // Hunts the agency limits to the other residency can't be applied for.
-    .filter((r) => r.year === year && (huntResidencyOnly(r.description) ?? residency) === residency)
+    .filter((r) => (huntResidencyOnly(r.description) ?? residency) === residency)
     .map((r) => {
       const { stats, pool } = drawStats(r, residency);
       return {

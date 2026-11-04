@@ -7,7 +7,8 @@ import { SPECIES_LABELS, type Species } from "@/data/types";
 import type { SpeciesInfo } from "@/data/agency/schema";
 import type { StateData } from "@/lib/agency";
 import { formatDate } from "@/lib/agency-format";
-import { EVERY_CATEGORY, defaultHarvestMethod, harvestMethodKey, headlineHarvestRows, isRealUnit, sameUnit, maxPointLevel, methodsIn, years, type DrawResidency } from "@/lib/agency-view";
+import { EVERY_CATEGORY, defaultHarvestMethod, defaultHarvestYear, firstChoiceRows, harvestMethodKey, headlineHarvestRows, isRealUnit, sameUnit, maxPointLevel, methodsIn, oddsYear, years, type DrawResidency } from "@/lib/agency-view";
+import { huntResidencyOnly } from "@/lib/planner-agency";
 import { DemoGate } from "@/components/DemoGate";
 import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { DrawTable } from "@/components/agency/DrawTable";
@@ -16,12 +17,24 @@ import { SpeciesInfoPanel } from "@/components/agency/SpeciesInfoPanel";
 import { SourceNotes, footnoteIndex } from "@/components/agency/SourceNotes";
 import { HScroll, ShowMore, pill } from "@/components/agency/mobile";
 import { setSpecies as tagSpecies, setStateSlug, track } from "@/lib/analytics";
+import type { CompletenessItem } from "@/lib/data-completeness";
+import { DataCompleteness } from "@/components/agency/DataCompleteness";
 
 type Tab = "draw" | "harvest";
 
 const yrsLabel = (n: number) => `${n} ${n === 1 ? "yr" : "yrs"}`;
 
-export function StateExplorer({ state, species: speciesList, initialSpecies }: { state: StateData; species: SpeciesInfo[]; initialSpecies?: string }) {
+export function StateExplorer({
+  state,
+  species: speciesList,
+  initialSpecies,
+  completeness = [],
+}: {
+  state: StateData;
+  species: SpeciesInfo[];
+  initialSpecies?: string;
+  completeness?: CompletenessItem[];
+}) {
   const initial = initialSpecies as Species;
   const [species, setSpecies] = useState<Species>(speciesList.some((s) => s.species === initial) ? initial : speciesList[0]?.species);
   const info = speciesList.find((s) => s.species === species)!;
@@ -62,21 +75,21 @@ export function StateExplorer({ state, species: speciesList, initialSpecies }: {
 
   const drawYears = useMemo(() => years(data?.draw || []), [data]);
   const harvestYears = useMemo(() => years(data?.harvest || []), [data]);
-  const dYear = drawYear ?? drawYears[0];
-  // Default to the newest season with unit-level rows; some agencies publish only a statewide total at first.
-  const unitYear = useMemo(() => harvestYears.find((y) => (data?.harvest || []).some((r) => r.year === y && isRealUnit(r.unit))), [data, harvestYears]);
-  const hYear = harvestYear ?? unitYear ?? harvestYears[0];
+  // Default to the newest draw with odds published; a newer year may list quotas only so far.
+  const odds = useMemo(() => oddsYear(data?.draw || []), [data]);
+  const dYear = drawYear ?? odds.year ?? drawYears[0];
+  const harvestDefault = useMemo(() => defaultHarvestYear(data?.harvest || []), [data]);
+  const hYear = harvestYear ?? harvestDefault.year;
   const maxPts = useMemo(() => maxPointLevel(data?.draw || []), [data]);
 
   const q = query.trim().toLowerCase();
+  // One row per hunt (first-choice figures when the agency also publishes all-choice ones), open to this residency.
+  const yearRows = useMemo(() => firstChoiceRows((data?.draw || []).filter((r) => r.year === dYear)), [data, dYear]);
+  const openRows = useMemo(() => yearRows.filter((r) => (huntResidencyOnly(r.description) ?? residency) === residency), [yearRows, residency]);
+  const hiddenForResidency = yearRows.length - openRows.length;
   const drawRows = useMemo(
-    () =>
-      (data?.draw || []).filter(
-        (r) =>
-          r.year === dYear &&
-          (!q || r.huntCode.toLowerCase().includes(q) || r.description.toLowerCase().includes(q) || r.units.some((u) => sameUnit(u, q)))
-      ),
-    [data, dYear, q]
+    () => openRows.filter((r) => !q || r.huntCode.toLowerCase().includes(q) || r.description.toLowerCase().includes(q) || r.units.some((u) => sameUnit(u, q))),
+    [openRows, q]
   );
 
   const harvestYearRows = useMemo(() => headlineHarvestRows((data?.harvest || []).filter((r) => r.year === hYear)), [data, hYear]);
@@ -132,6 +145,7 @@ export function StateExplorer({ state, species: speciesList, initialSpecies }: {
           </a>
           <span className="text-muted-foreground">· checked {formatDate(state.lastReviewed)}</span>
         </div>
+        <DataCompleteness items={completeness} agency={state.agency.shortName} className="mt-3 max-w-xl" />
       </header>
 
       <HScroll className="mb-6" innerProps={{ role: "tablist", "aria-label": "Species" }}>
@@ -210,9 +224,9 @@ export function StateExplorer({ state, species: speciesList, initialSpecies }: {
           </label>
         )}
         {tab === "harvest" && harvestMethods.length > 1 && (
-          <label className="text-sm">
+          <label className="text-sm min-w-0 max-w-full">
             <span className="block text-xs font-semibold text-muted-foreground mb-1">Category</span>
-            <select className="min-h-10 sm:min-h-0 max-w-full px-2 py-1.5 border border-border rounded-lg bg-background text-base sm:text-sm" value={activeMethod} onChange={(e) => setMethod(e.target.value)}>
+            <select className="min-h-10 sm:min-h-0 w-full max-w-full px-2 py-1.5 border border-border rounded-lg bg-background text-base sm:text-sm" value={activeMethod} onChange={(e) => setMethod(e.target.value)}>
               <option value={EVERY_CATEGORY}>{EVERY_CATEGORY}</option>
               {harvestMethods.map((m) => (
                 <option key={m} value={m}>
@@ -266,6 +280,36 @@ export function StateExplorer({ state, species: speciesList, initialSpecies }: {
       {tab === "draw" && info.pointsMatter && data && !data.draw.some((r) => r.byPoints?.length) && data.draw.length > 0 && (
         <p className="text-xs text-muted-foreground mb-3">
           {state.agency.shortName} publishes totals for these hunts but not applicants by point level, so odds at a specific point level aren&apos;t shown.
+        </p>
+      )}
+
+      {tab === "draw" && data && odds.newer !== null && odds.year !== null && dYear === odds.year && (
+        <p className="text-xs text-foreground bg-warning/10 border border-warning/30 rounded-lg px-3 py-2 mb-3">
+          {state.agency.shortName} hasn&apos;t published {odds.newer} draw odds yet; showing {odds.year}. Pick {odds.newer} under Year for the figures published so far.
+        </p>
+      )}
+      {tab === "draw" && data && odds.year !== null && dYear !== undefined && dYear > odds.year && (
+        <p className="text-xs text-foreground bg-warning/10 border border-warning/30 rounded-lg px-3 py-2 mb-3">
+          {state.agency.shortName} hasn&apos;t published {dYear} draw odds yet; this year shows only the figures released so far (quotas, and applicants where listed).
+        </p>
+      )}
+      {tab === "harvest" && data && harvestDefault.byHuntInstead !== null && hYear === harvestDefault.year && (
+        <p className="text-xs text-muted-foreground mb-3">
+          Showing {hYear}, the latest season {state.agency.shortName} reports by {state.unitTerm}. Its {harvestDefault.byHuntInstead} report is by hunt code; pick{" "}
+          {harvestDefault.byHuntInstead} under Year to see it.
+        </p>
+      )}
+      {tab === "draw" && data && !data.preview && odds.year === null && data.draw.length > 0 && (
+        <p className="text-xs text-foreground bg-warning/10 border border-warning/30 rounded-lg px-3 py-2 mb-3">
+          The {state.agency.shortName} figures for these {SPECIES_LABELS[species].toLowerCase()} hunts don&apos;t include how many applicants drew in any year we cover, so
+          there are no draw odds to show. The table lists the figures it does publish, such as quotas and applicants.
+        </p>
+      )}
+      {/* A preview holds only a few rows, so a count from it would be wrong. */}
+      {tab === "draw" && data && !data.preview && hiddenForResidency > 0 && (
+        <p className="text-xs text-muted-foreground mb-3">
+          {hiddenForResidency} {hiddenForResidency === 1 ? "hunt is" : "hunts are"} limited to {residency === "resident" ? "nonresidents" : "residents"} by the agency and not
+          listed here; switch to {residency === "resident" ? "Nonresident" : "Resident"} to see {hiddenForResidency === 1 ? "it" : "them"}.
         </p>
       )}
 

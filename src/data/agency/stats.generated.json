@@ -847,5 +847,1025 @@
    "units": 9,
    "drawHunts": 9
   }
+ },
+ "completeness": {
+  "alaska": {
+   "moose": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 104,
+    "odds": 87,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "sheep": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 47,
+    "odds": 31,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "goat": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 40,
+    "odds": 33,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "bear": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 7,
+    "odds": 7,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "elk": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 13,
+    "odds": 9,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   }
+  },
+  "arizona": {
+   "elk": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 252,
+    "odds": 242,
+    "split": 250,
+    "pointTable": 250,
+    "minPoints": 250
+   },
+   "pronghorn": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 68,
+    "odds": 67,
+    "split": 68,
+    "pointTable": 68,
+    "minPoints": 68
+   },
+   "mule-deer": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 125,
+    "odds": 125,
+    "split": 125,
+    "pointTable": 125,
+    "minPoints": 125
+   },
+   "whitetail": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 84,
+    "odds": 84,
+    "split": 84,
+    "pointTable": 84,
+    "minPoints": 84
+   },
+   "sheep": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 71,
+    "odds": 71,
+    "split": 71,
+    "pointTable": 71,
+    "minPoints": 71
+   },
+   "turkey": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 90,
+    "odds": 90,
+    "split": 90,
+    "pointTable": 90,
+    "minPoints": 90
+   }
+  },
+  "california": {
+   "mule-deer": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": 2026,
+    "hunts": 82,
+    "odds": 82,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 82
+   },
+   "elk": {
+    "pointsMatter": true,
+    "drawYear": null,
+    "newer": null,
+    "hunts": 87,
+    "odds": 0,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "pronghorn": {
+    "pointsMatter": true,
+    "drawYear": null,
+    "newer": null,
+    "hunts": 14,
+    "odds": 0,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "sheep": {
+    "pointsMatter": true,
+    "drawYear": null,
+    "newer": null,
+    "hunts": 15,
+    "odds": 0,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   }
+  },
+  "colorado": {
+   "elk": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 1039,
+    "odds": 1011,
+    "split": 1006,
+    "pointTable": 1006,
+    "minPoints": 1006
+   },
+   "mule-deer": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 907,
+    "odds": 892,
+    "split": 887,
+    "pointTable": 887,
+    "minPoints": 887
+   },
+   "whitetail": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 84,
+    "odds": 51,
+    "split": 48,
+    "pointTable": 48,
+    "minPoints": 48
+   },
+   "pronghorn": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 302,
+    "odds": 292,
+    "split": 290,
+    "pointTable": 290,
+    "minPoints": 290
+   },
+   "moose": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 107,
+    "odds": 107,
+    "split": 107,
+    "pointTable": 107,
+    "minPoints": 107
+   },
+   "bear": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 130,
+    "odds": 128,
+    "split": 128,
+    "pointTable": 128,
+    "minPoints": 128
+   },
+   "sheep": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 128,
+    "odds": 128,
+    "split": 128,
+    "pointTable": 124,
+    "minPoints": 124
+   },
+   "goat": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 48,
+    "odds": 48,
+    "split": 48,
+    "pointTable": 48,
+    "minPoints": 48
+   },
+   "turkey": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 66,
+    "odds": 63,
+    "split": 57,
+    "pointTable": 57,
+    "minPoints": 57
+   }
+  },
+  "idaho": {
+   "elk": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 182,
+    "odds": 182,
+    "split": 182,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "mule-deer": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 119,
+    "odds": 119,
+    "split": 119,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "whitetail": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 28,
+    "odds": 28,
+    "split": 28,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "pronghorn": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 54,
+    "odds": 54,
+    "split": 54,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "moose": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 94,
+    "odds": 94,
+    "split": 94,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "sheep": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 30,
+    "odds": 30,
+    "split": 30,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "goat": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 19,
+    "odds": 19,
+    "split": 19,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "bear": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 6,
+    "odds": 6,
+    "split": 6,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "turkey": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 16,
+    "odds": 16,
+    "split": 16,
+    "pointTable": 0,
+    "minPoints": 0
+   }
+  },
+  "kansas": {
+   "whitetail": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 18,
+    "odds": 18,
+    "split": 18,
+    "pointTable": 0,
+    "minPoints": 18
+   },
+   "mule-deer": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 6,
+    "odds": 5,
+    "split": 5,
+    "pointTable": 0,
+    "minPoints": 2
+   },
+   "pronghorn": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 12,
+    "odds": 11,
+    "split": 11,
+    "pointTable": 0,
+    "minPoints": 12
+   },
+   "turkey": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 8,
+    "odds": 8,
+    "split": 8,
+    "pointTable": 0,
+    "minPoints": 3
+   }
+  },
+  "montana": {
+   "elk": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 130,
+    "odds": 129,
+    "split": 129,
+    "pointTable": 129,
+    "minPoints": 129
+   },
+   "mule-deer": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 99,
+    "odds": 98,
+    "split": 98,
+    "pointTable": 98,
+    "minPoints": 98
+   },
+   "whitetail": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 41,
+    "odds": 40,
+    "split": 40,
+    "pointTable": 40,
+    "minPoints": 40
+   },
+   "pronghorn": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 96,
+    "odds": 96,
+    "split": 96,
+    "pointTable": 96,
+    "minPoints": 96
+   },
+   "moose": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 89,
+    "odds": 89,
+    "split": 89,
+    "pointTable": 89,
+    "minPoints": 89
+   },
+   "sheep": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 40,
+    "odds": 40,
+    "split": 40,
+    "pointTable": 40,
+    "minPoints": 40
+   },
+   "goat": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 31,
+    "odds": 31,
+    "split": 31,
+    "pointTable": 31,
+    "minPoints": 31
+   },
+   "bear": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 2,
+    "odds": 2,
+    "split": 2,
+    "pointTable": 2,
+    "minPoints": 2
+   },
+   "lion": {
+    "pointsMatter": false,
+    "drawYear": 2025,
+    "newer": null,
+    "hunts": 39,
+    "odds": 32,
+    "split": 32,
+    "pointTable": 32,
+    "minPoints": 32
+   }
+  },
+  "nevada": {
+   "mule-deer": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": null,
+    "hunts": 408,
+    "odds": 401,
+    "split": 401,
+    "pointTable": 401,
+    "minPoints": 401
+   },
+   "elk": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": null,
+    "hunts": 272,
+    "odds": 272,
+    "split": 272,
+    "pointTable": 242,
+    "minPoints": 242
+   },
+   "pronghorn": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": null,
+    "hunts": 185,
+    "odds": 184,
+    "split": 184,
+    "pointTable": 184,
+    "minPoints": 184
+   },
+   "sheep": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": null,
+    "hunts": 81,
+    "odds": 80,
+    "split": 80,
+    "pointTable": 77,
+    "minPoints": 77
+   },
+   "goat": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": null,
+    "hunts": 4,
+    "odds": 4,
+    "split": 4,
+    "pointTable": 4,
+    "minPoints": 4
+   },
+   "moose": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": null,
+    "hunts": 1,
+    "odds": 1,
+    "split": 1,
+    "pointTable": 1,
+    "minPoints": 1
+   },
+   "bear": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": null,
+    "hunts": 2,
+    "odds": 2,
+    "split": 2,
+    "pointTable": 2,
+    "minPoints": 2
+   }
+  },
+  "new-mexico": {
+   "elk": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 322,
+    "odds": 322,
+    "split": 322,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "mule-deer": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 307,
+    "odds": 305,
+    "split": 305,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "whitetail": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 30,
+    "odds": 30,
+    "split": 30,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "pronghorn": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 153,
+    "odds": 153,
+    "split": 153,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "sheep": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 4,
+    "odds": 4,
+    "split": 4,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "bear": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 7,
+    "odds": 0,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "turkey": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 8,
+    "odds": 0,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   }
+  },
+  "oregon": {
+   "elk": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 365,
+    "odds": 300,
+    "split": 301,
+    "pointTable": 301,
+    "minPoints": 301
+   },
+   "mule-deer": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 267,
+    "odds": 204,
+    "split": 204,
+    "pointTable": 204,
+    "minPoints": 204
+   },
+   "whitetail": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 29,
+    "odds": 29,
+    "split": 29,
+    "pointTable": 29,
+    "minPoints": 29
+   },
+   "pronghorn": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 79,
+    "odds": 53,
+    "split": 53,
+    "pointTable": 53,
+    "minPoints": 53
+   },
+   "bear": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 19,
+    "odds": 19,
+    "split": 19,
+    "pointTable": 19,
+    "minPoints": 19
+   },
+   "sheep": {
+    "pointsMatter": false,
+    "drawYear": null,
+    "newer": null,
+    "hunts": 30,
+    "odds": 0,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "goat": {
+    "pointsMatter": false,
+    "drawYear": null,
+    "newer": null,
+    "hunts": 12,
+    "odds": 0,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   }
+  },
+  "south-dakota": {
+   "elk": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 73,
+    "odds": 72,
+    "split": 72,
+    "pointTable": 72,
+    "minPoints": 72
+   },
+   "mule-deer": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 128,
+    "odds": 128,
+    "split": 128,
+    "pointTable": 128,
+    "minPoints": 128
+   },
+   "whitetail": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 289,
+    "odds": 285,
+    "split": 288,
+    "pointTable": 288,
+    "minPoints": 288
+   },
+   "pronghorn": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 32,
+    "odds": 32,
+    "split": 32,
+    "pointTable": 32,
+    "minPoints": 32
+   },
+   "sheep": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 3,
+    "odds": 3,
+    "split": 3,
+    "pointTable": 3,
+    "minPoints": 3
+   },
+   "lion": {
+    "pointsMatter": false,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 5,
+    "odds": 5,
+    "split": 5,
+    "pointTable": 0,
+    "minPoints": 5
+   },
+   "turkey": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 156,
+    "odds": 154,
+    "split": 123,
+    "pointTable": 123,
+    "minPoints": 154
+   }
+  },
+  "utah": {
+   "elk": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 382,
+    "odds": 382,
+    "split": 382,
+    "pointTable": 382,
+    "minPoints": 382
+   },
+   "mule-deer": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 319,
+    "odds": 318,
+    "split": 318,
+    "pointTable": 318,
+    "minPoints": 318
+   },
+   "pronghorn": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 112,
+    "odds": 112,
+    "split": 112,
+    "pointTable": 112,
+    "minPoints": 112
+   },
+   "moose": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 31,
+    "odds": 31,
+    "split": 31,
+    "pointTable": 31,
+    "minPoints": 31
+   },
+   "sheep": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 34,
+    "odds": 34,
+    "split": 34,
+    "pointTable": 34,
+    "minPoints": 34
+   },
+   "goat": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 17,
+    "odds": 17,
+    "split": 17,
+    "pointTable": 17,
+    "minPoints": 17
+   },
+   "bear": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 90,
+    "odds": 90,
+    "split": 90,
+    "pointTable": 90,
+    "minPoints": 90
+   },
+   "lion": {
+    "pointsMatter": false,
+    "drawYear": 2022,
+    "newer": null,
+    "hunts": 9,
+    "odds": 9,
+    "split": 9,
+    "pointTable": 0,
+    "minPoints": 9
+   },
+   "turkey": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 7,
+    "odds": 7,
+    "split": 7,
+    "pointTable": 7,
+    "minPoints": 7
+   }
+  },
+  "washington": {
+   "elk": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": 2026,
+    "hunts": 333,
+    "odds": 333,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "mule-deer": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": 2026,
+    "hunts": 420,
+    "odds": 420,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "whitetail": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": 2026,
+    "hunts": 49,
+    "odds": 49,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "moose": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": 2026,
+    "hunts": 28,
+    "odds": 28,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "sheep": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": 2026,
+    "hunts": 12,
+    "odds": 12,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "goat": {
+    "pointsMatter": true,
+    "drawYear": 2025,
+    "newer": 2026,
+    "hunts": 5,
+    "odds": 5,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "turkey": {
+    "pointsMatter": true,
+    "drawYear": 2021,
+    "newer": 2026,
+    "hunts": 1,
+    "odds": 1,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "bear": {
+    "pointsMatter": false,
+    "drawYear": 2021,
+    "newer": null,
+    "hunts": 21,
+    "odds": 21,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   }
+  },
+  "wyoming": {
+   "elk": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 416,
+    "odds": 47,
+    "split": 255,
+    "pointTable": 254,
+    "minPoints": 254
+   },
+   "mule-deer": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 126,
+    "odds": 18,
+    "split": 98,
+    "pointTable": 98,
+    "minPoints": 98
+   },
+   "whitetail": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 130,
+    "odds": 38,
+    "split": 54,
+    "pointTable": 54,
+    "minPoints": 54
+   },
+   "pronghorn": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 329,
+    "odds": 25,
+    "split": 242,
+    "pointTable": 242,
+    "minPoints": 242
+   },
+   "moose": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 36,
+    "odds": 1,
+    "split": 36,
+    "pointTable": 36,
+    "minPoints": 36
+   },
+   "sheep": {
+    "pointsMatter": true,
+    "drawYear": 2026,
+    "newer": null,
+    "hunts": 29,
+    "odds": 0,
+    "split": 22,
+    "pointTable": 22,
+    "minPoints": 22
+   },
+   "goat": {
+    "pointsMatter": false,
+    "drawYear": null,
+    "newer": null,
+    "hunts": 4,
+    "odds": 0,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   },
+   "turkey": {
+    "pointsMatter": false,
+    "drawYear": null,
+    "newer": null,
+    "hunts": 4,
+    "odds": 0,
+    "split": 0,
+    "pointTable": 0,
+    "minPoints": 0
+   }
+  }
  }
 }

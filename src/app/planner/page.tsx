@@ -656,7 +656,7 @@ function HuntCard({ hunt, next, today, budget, onStatus }: { hunt: PlannedHunt; 
         )}
         {a?.pointsMatter && (
           <span className="text-xs text-muted-foreground">
-            Points {hunt.preferencePointsOwned}
+            Points {hunt.preferencePointsOwned ?? "not given"}
             {a.minPoints != null ? ` · lowest drawn ${a.minPoints}` : ""}
           </span>
         )}
