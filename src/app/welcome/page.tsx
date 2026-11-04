@@ -10,6 +10,7 @@ import {
   ArrowRight,
   Check,
   Crosshair,
+  FileText,
   Loader2,
   MapPin,
   Search,
@@ -50,7 +51,7 @@ const RESIDENCY_OPTIONS = [
   { id: "both", label: "Both", hint: "Home state and out of state" },
 ] as const;
 
-type SaveState = { kind: "idle" } | { kind: "saving" | "skipping" } | { kind: "done"; to: string; label: string };
+type SaveState = { kind: "idle" } | { kind: "saving" | "skipping" } | { kind: "done"; to: string; label: string; report?: boolean };
 
 function withDefaults(raw: Partial<HuntingPreferences> | null | undefined): HuntingPreferences {
   const p = { ...EMPTY_PREFERENCES, ...(raw ?? {}) };
@@ -275,7 +276,7 @@ export default function WelcomePage() {
   const editing = alreadyOnboarded || !!user?.onboarded;
   const firstName = user?.name?.split(" ")[0] ?? null;
 
-  async function post(body: unknown) {
+  async function post(body: unknown): Promise<{ report?: string }> {
     const res = await fetch("/api/preferences", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -288,6 +289,7 @@ export default function WelcomePage() {
       } catch {}
       throw new Error(msg || `Request failed (${res.status})`);
     }
+    const data = (await res.json().catch(() => ({}))) as { report?: string };
     // The server has saved it, so this tab must never bounce back here, even if
     // the session refresh below fails (update() resolves null on a network error
     // and undefined if another session fetch is already in flight).
@@ -301,6 +303,7 @@ export default function WelcomePage() {
       } catch {}
       if (attempt === 0) await new Promise((r) => setTimeout(r, 600));
     }
+    return data;
   }
 
   async function submit() {
@@ -313,12 +316,14 @@ export default function WelcomePage() {
     setError(null);
     setSave({ kind: "saving" });
     try {
-      await post({ preferences: prefs });
+      const result = await post({ preferences: prefs });
       track("welcome_submit", { action: editing ? "update" : "submit", states: prefs.states.length, species_count: prefs.species.length });
       const first = prefs.states[0] ? stateBySlug(prefs.states[0]) : undefined;
       const to = first ? `/states/${first.slug}` : "/states";
-      setSave({ kind: "done", to, label: first ? first.name : "your states" });
-      router.push(to);
+      const report = result.report === "queued";
+      setSave({ kind: "done", to, label: first ? first.name : "your states", report });
+      // When a report is on its way, stay here so the member reads where to find it.
+      if (!report) router.push(to);
     } catch (e) {
       setSave({ kind: "idle" });
       setError(
@@ -396,10 +401,39 @@ export default function WelcomePage() {
         <h1 className="text-2xl font-bold mb-2" role="status" data-clarity-mask="true">
           {firstName ? `You're all set, ${firstName}.` : "You're all set."}
         </h1>
-        <p className="text-muted-foreground mb-6">Taking you to {save.label}…</p>
-        <Link href={save.to} className="inline-flex items-center gap-1 text-sm font-medium text-gold hover:underline">
-          Continue <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
-        </Link>
+        {save.report ? (
+          <>
+            <div className="text-left rounded-xl border border-gold/40 bg-gold/10 px-4 py-4 mb-6">
+              <p className="flex items-center gap-2 font-semibold text-foreground mb-1.5">
+                <FileText className="w-4 h-4 text-gold shrink-0" aria-hidden="true" />
+                Your personal scouting report is on its way
+              </p>
+              <p className="text-sm text-muted-foreground">
+                We&apos;re building a PDF report from the agencies&apos; own draw, harvest, date and fee data for your answers, and emailing it to{" "}
+                <span className="font-medium text-foreground break-all" data-clarity-mask="true">
+                  {user.email}
+                </span>{" "}
+                from adam@huntscoutpro.com. It usually arrives within a few minutes.
+              </p>
+              <p className="text-sm text-muted-foreground mt-2">
+                Not in your inbox? Check your spam or Promotions folder, and add adam@huntscoutpro.com to your contacts so reminders land too.
+              </p>
+            </div>
+            <Link
+              href={save.to}
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-xl font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
+            >
+              Start scouting {save.label} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+            </Link>
+          </>
+        ) : (
+          <>
+            <p className="text-muted-foreground mb-6">Taking you to {save.label}…</p>
+            <Link href={save.to} className="inline-flex items-center gap-1 text-sm font-medium text-gold hover:underline">
+              Continue <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+            </Link>
+          </>
+        )}
       </CenteredCard>
     );
   }
@@ -442,7 +476,7 @@ export default function WelcomePage() {
           <p className="text-muted-foreground text-base sm:text-lg" data-clarity-mask="true">
             {editing
               ? "Update your answers anytime. We use them to keep your states, species and units up front."
-              : `${firstName ? `Welcome, ${firstName}. ` : ""}A few quick questions, about 2 minutes. Answer what you know and skip the rest.`}
+              : `${firstName ? `Welcome, ${firstName}. ` : ""}A few quick questions, about 2 minutes. Answer what you know and skip the rest. When you save, we'll email you a personal scouting report built from your answers.`}
           </p>
           {loadWarning && (
             <p className="mt-3 text-sm text-muted-foreground flex items-start gap-2">

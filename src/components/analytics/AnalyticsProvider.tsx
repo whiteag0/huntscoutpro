@@ -12,6 +12,7 @@ import {
   adsConfigured,
   describePath,
   identify,
+  isPrivatePath,
   needsConsent,
   updateAdsConsent,
   setClarityConsent,
@@ -39,7 +40,9 @@ export function AnalyticsProvider() {
   const choice = useConsentChoice();
   const gpc = useGpc();
 
-  const known = country !== undefined;
+  // Nothing loads on owner-only pages (customer emails, signed links in the URL). Leaving them
+  // for a public page starts analytics as usual.
+  const known = country !== undefined && !isPrivatePath(pathname);
   const region = needsConsent(country);
   // Outside the consent region the default is on; anyone can opt out on the privacy page.
   const analytics: ConsentChoice = choice ?? (region ? "denied" : "granted");

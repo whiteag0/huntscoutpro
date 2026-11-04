@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import { auth } from "@/lib/auth";
 import { getEntitlement } from "@/lib/entitlement";
 import { sanitizePreferences, METHOD_OPTIONS, GOAL_OPTIONS, type HuntingPreferences } from "@/lib/preferences-schema";
@@ -6,8 +6,13 @@ import { readPreferences, writePreferences, PREFS_EMAIL_ID_KEY } from "@/lib/pre
 import { sendEmail, cancelScheduledEmail } from "@/lib/onboarding";
 import { preferencesNotification } from "@/lib/emails/onboarding";
 import { SPECIES_LABELS } from "@/data/types";
+import { pointsFromMetadata } from "@/lib/points";
+import { REPORT_PENDING_KEY, reportDecision, reportInputHash, type ReportDecision } from "@/lib/report-trigger";
 
 export const dynamic = "force-dynamic";
+// The personal scouting report is built and emailed after the response (next/server after()),
+// within this function's time budget: typically a few seconds, most of it rendering the PDF.
+export const maxDuration = 60;
 
 const NOTIFY_TO = process.env.PREFERENCES_NOTIFY_TO || "adam@huntscoutpro.com";
 
@@ -65,17 +70,37 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Pick at least one state or species." }, { status: 400 });
   }
 
-  // Durable copy on the purchase's PaymentIntent (when we have one).
+  // Durable copy on the purchase's PaymentIntent (when we have one). Whether this save sends the
+  // member's personal scouting report is decided against the record as it was before the save: the
+  // first save sends it; later saves only when the answers that shape it change, at most once a day.
+  // A queued send is stamped with the save so a double submit can't queue a second one. (Members
+  // without a purchase record have no record: their sends are deduplicated by the idempotency key.)
   let reminderId: string | undefined;
+  let before: Record<string, string> = {};
+  let report: ReportDecision = "nothing-to-report";
+  let savedPoints: ReturnType<typeof pointsFromMetadata> = {};
   if (m.ent.paymentIntentId) {
     try {
       const current = await readPreferences(m.ent.paymentIntentId);
+      before = current.metadata;
       reminderId = current.metadata[PREFS_EMAIL_ID_KEY];
-      await writePreferences(m.ent.paymentIntentId, prefs);
+      savedPoints = pointsFromMetadata(before);
+      if (prefs) {
+        report = reportDecision({
+          prefs,
+          metadata: before,
+          hash: reportInputHash(prefs, savedPoints),
+          previousHash: current.preferences ? reportInputHash(current.preferences, savedPoints) : null,
+          nowMs: Date.now(),
+        });
+      }
+      await writePreferences(m.ent.paymentIntentId, prefs, report === "send" ? { [REPORT_PENDING_KEY]: new Date().toISOString() } : {});
     } catch (err) {
       console.error("Preferences save failed:", err);
       return NextResponse.json({ error: "Couldn't save right now. Please try again." }, { status: 502 });
     }
+  } else if (prefs) {
+    report = reportDecision({ prefs, metadata: {}, hash: reportInputHash(prefs), nowMs: Date.now() });
   }
 
   if (prefs) {
@@ -89,5 +114,17 @@ export async function POST(req: NextRequest) {
     if (reminderId) await cancelScheduledEmail(reminderId).catch(() => {});
   }
 
-  return NextResponse.json({ ok: true });
+  // The member's personal scouting report: built and emailed in the background so saving stays
+  // fast. The report code (PDF renderer, fonts) loads only here, not on every GET or save.
+  if (prefs && report === "send") {
+    const to = m.email;
+    const name = m.session!.user.name;
+    const paymentIntentId = m.ent.paymentIntentId ?? null;
+    after(async () => {
+      const { sendMemberReport } = await import("@/lib/report");
+      await sendMemberReport({ to, name, prefs, savedPoints, paymentIntentId, previousMetadata: before });
+    });
+  }
+
+  return NextResponse.json({ ok: true, report: report === "send" ? "queued" : report });
 }

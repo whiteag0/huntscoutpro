@@ -3,9 +3,12 @@ import { stripe } from "@/lib/stripe";
 import { PREFS_EMAIL_ID_KEY } from "@/lib/preferences";
 import { isHuntScoutSession, sessionAccessEnd } from "@/lib/entitlement";
 import { welcomeEmail, preferencesEmail, type RenderedEmail } from "@/lib/emails/onboarding";
+import { inboundAddress, isInboundConfigured, resendApiBase } from "@/lib/inbound/config";
 
 const FROM = process.env.EMAIL_FROM || "Adam White, HuntScout Pro <adam@huntscoutpro.com>";
-const REPLY_TO = process.env.EMAIL_REPLY_TO || "adam@huntscoutpro.com";
+// Replies go to the inbound address once it's set up (INBOUND_EMAIL.md), so each one gets an
+// AI-drafted answer for Adam to approve. Until then they go straight to Adam's inbox.
+const REPLY_TO = (isInboundConfigured() && inboundAddress()) || process.env.EMAIL_REPLY_TO || "adam@huntscoutpro.com";
 // Optional comma-separated BCC so the owner sees every onboarding email.
 const BCC = (process.env.ONBOARDING_BCC || "").split(",").map((s) => s.trim()).filter(Boolean);
 
@@ -19,6 +22,24 @@ const SENT_KEY = "hs_onboarding_sent_at";
 // Email 2 goes out this long after purchase.
 const PREFERENCES_DELAY_MS = 24 * 60 * 60 * 1000;
 
+export interface EmailAttachment {
+  filename: string;
+  /** File bytes, base64-encoded (Resend's format). */
+  content: string;
+}
+
+/** A send Resend refused; `code` is Resend's error name (e.g. "invalid_idempotent_request"). */
+export class EmailSendError extends Error {
+  readonly status: number;
+  readonly code: string;
+  constructor(message: string, status: number, code: string) {
+    super(message);
+    this.name = "EmailSendError";
+    this.status = status;
+    this.code = code;
+  }
+}
+
 interface SendOptions {
   to: string;
   email: RenderedEmail;
@@ -29,20 +50,24 @@ interface SendOptions {
   headers?: Record<string, string>;
   /** Copy ONBOARDING_BCC (default true). Off for member digests, whose unsubscribe links are per member. */
   bcc?: boolean;
+  /** Files to attach (e.g. the personal scouting report PDF). */
+  attachments?: EmailAttachment[];
+  /** Request timeout; attachments make the request larger. */
+  timeoutMs?: number;
 }
 
 /**
  * Send through Resend's HTTP API. Returns the Resend email id, or null when
  * RESEND_API_KEY isn't configured.
  */
-export async function sendEmail({ to, email, idempotencyKey, scheduledAt, replyTo, headers, bcc = true }: SendOptions): Promise<string | null> {
+export async function sendEmail({ to, email, idempotencyKey, scheduledAt, replyTo, headers, bcc = true, attachments, timeoutMs = 10000 }: SendOptions): Promise<string | null> {
   const key = process.env.RESEND_API_KEY;
   if (!key) {
     console.warn(`RESEND_API_KEY not set; skipping "${email.subject}"`);
     return null;
   }
   for (let attempt = 0; ; attempt++) {
-    const res = await fetch("https://api.resend.com/emails", {
+    const res = await fetch(`${resendApiBase()}/emails`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${key}`,
@@ -59,8 +84,9 @@ export async function sendEmail({ to, email, idempotencyKey, scheduledAt, replyT
         text: email.text,
         ...(scheduledAt ? { scheduled_at: scheduledAt } : {}),
         ...(headers && Object.keys(headers).length ? { headers } : {}),
+        ...(attachments?.length ? { attachments } : {}),
       }),
-      signal: AbortSignal.timeout(10000),
+      signal: AbortSignal.timeout(timeoutMs),
     });
     if (!res.ok) {
       const body = await res.text().catch(() => "");
@@ -74,7 +100,7 @@ export async function sendEmail({ to, email, idempotencyKey, scheduledAt, replyT
         await new Promise((r) => setTimeout(r, 1500));
         continue;
       }
-      throw new Error(`Resend ${res.status} ${name}: ${body.slice(0, 300)}`);
+      throw new EmailSendError(`Resend ${res.status} ${name}: ${body.slice(0, 300)}`, res.status, name);
     }
     // Same key + same payload replays the original response (no second send).
     const data = (await res.json().catch(() => ({}))) as { id?: string };
@@ -86,7 +112,7 @@ export async function sendEmail({ to, email, idempotencyKey, scheduledAt, replyT
 export async function cancelScheduledEmail(id: string): Promise<void> {
   const key = process.env.RESEND_API_KEY;
   if (!key || !/^[0-9a-f-]{20,}$/i.test(id)) return;
-  const res = await fetch(`https://api.resend.com/emails/${id}/cancel`, {
+  const res = await fetch(`${resendApiBase()}/emails/${id}/cancel`, {
     method: "POST",
     headers: { Authorization: `Bearer ${key}` },
     signal: AbortSignal.timeout(10000),
