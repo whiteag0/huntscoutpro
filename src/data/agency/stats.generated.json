@@ -52,6 +52,14 @@
    "units": 921
   }
  },
+ "groups": {
+  "deer": {
+   "states": 14,
+   "huntCodes": 3946,
+   "units": 1751
+  }
+ },
+ "totalHuntCodes": 11157,
  "drawYears": [
   2020,
   2026
@@ -60,6 +68,122 @@
   2020,
   2026
  ],
+ "drawYearsByState": {
+  "alaska": [
+   2022,
+   2026
+  ],
+  "arizona": [
+   2023,
+   2026
+  ],
+  "california": [
+   2022,
+   2026
+  ],
+  "colorado": [
+   2022,
+   2026
+  ],
+  "idaho": [
+   2022,
+   2026
+  ],
+  "kansas": [
+   2022,
+   2026
+  ],
+  "montana": [
+   2022,
+   2026
+  ],
+  "nevada": [
+   2022,
+   2025
+  ],
+  "new-mexico": [
+   2022,
+   2026
+  ],
+  "oregon": [
+   2022,
+   2026
+  ],
+  "south-dakota": [
+   2022,
+   2026
+  ],
+  "utah": [
+   2021,
+   2026
+  ],
+  "washington": [
+   2020,
+   2026
+  ],
+  "wyoming": [
+   2022,
+   2026
+  ]
+ },
+ "harvestYearsByState": {
+  "alaska": [
+   2020,
+   2025
+  ],
+  "arizona": [
+   2020,
+   2025
+  ],
+  "california": [
+   2020,
+   2025
+  ],
+  "colorado": [
+   2020,
+   2025
+  ],
+  "idaho": [
+   2020,
+   2025
+  ],
+  "kansas": [
+   2020,
+   2026
+  ],
+  "montana": [
+   2020,
+   2025
+  ],
+  "nevada": [
+   2020,
+   2025
+  ],
+  "new-mexico": [
+   2020,
+   2025
+  ],
+  "oregon": [
+   2020,
+   2025
+  ],
+  "south-dakota": [
+   2020,
+   2026
+  ],
+  "utah": [
+   2020,
+   2026
+  ],
+  "washington": [
+   2020,
+   2025
+  ],
+  "wyoming": [
+   2020,
+   2026
+  ]
+ },
  "turkeyStatewide": {
   "arizona": {
    "rows": [],

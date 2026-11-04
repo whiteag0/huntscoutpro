@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import { ConsentSettings } from "@/components/analytics/ConsentSettings";
+import { SITE } from "@/lib/emails/onboarding";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | HuntScout Pro",
+  description: "What HuntScout Pro collects when you sign in, buy Pro or answer the hunting-profile questions, how it is used, and the analytics choices you have.",
+  alternates: { canonical: `${SITE}/privacy` },
+};
 
 export default function PrivacyPage() {
   return (

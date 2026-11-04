@@ -219,3 +219,21 @@ export function useProgressive(total: number, step = 40) {
     ) : null;
   return { shown, button };
 }
+
+/**
+ * Placeholder rows for a gated table when the preview has no rows for it. Bars only, no
+ * figures or "nothing published" copy: the preview can't tell whether the agency has data.
+ */
+export function LockedRows({ rows = 4 }: { rows?: number }) {
+  return (
+    <div className="space-y-2.5" aria-hidden>
+      {Array.from({ length: rows }, (_, i) => (
+        <div key={i} className="flex items-center gap-3">
+          <div className="h-3.5 w-16 rounded bg-muted" />
+          <div className="h-3.5 flex-1 rounded bg-muted" />
+          <div className="h-3.5 w-12 rounded bg-muted" />
+        </div>
+      ))}
+    </div>
+  );
+}

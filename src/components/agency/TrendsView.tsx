@@ -11,7 +11,7 @@ import { drawHistory, drawStats, harvestMethodKey, headlineHarvestRows, minPoint
 import { DemoGate } from "@/components/DemoGate";
 import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { SourceNotes, footnoteIndex } from "@/components/agency/SourceNotes";
-import { pill } from "@/components/agency/mobile";
+import { LockedRows, pill } from "@/components/agency/mobile";
 import { track } from "@/lib/analytics";
 import { profileOf, useMemberProfile } from "@/components/useMemberProfile";
 import { profileStart, residencyIn } from "@/lib/member-defaults";
@@ -49,6 +49,7 @@ export function TrendsView({
   pointsMatter,
   sources,
   fromUrl,
+  teaser,
 }: {
   options: Option[];
   slug: string;
@@ -57,6 +58,8 @@ export function TrendsView({
   sources: SourceRef[];
   /** The state or species came from the URL; otherwise a member starts from their saved state and species. */
   fromUrl: boolean;
+  /** Server-rendered free example for non-members, shown above the gated tables. */
+  teaser?: React.ReactNode;
 }) {
   const router = useRouter();
   const opt = options.find((o) => o.slug === slug)!;
@@ -167,6 +170,8 @@ export function TrendsView({
         </Link>
       </div>
 
+      {teaser}
+
       {(loading && !data) || profileLoad.status === "loading" ? (
         <div className="flex items-center justify-center py-16 text-muted-foreground">
           <Loader2 className="w-5 h-5 animate-spin mr-2" aria-hidden /> Loading…
@@ -186,7 +191,12 @@ export function TrendsView({
                 : `${opt.name} doesn't use points for ${SPECIES_LABELS[species].toLowerCase()}, so only overall odds are shown. Hunts whose odds fell the most are listed first.`}
             </p>
             {drawTrends.length > 0 && drawYears.length > 2 && <p className="sm:hidden text-xs text-muted-foreground mb-2">Swipe the table sideways to see every year.</p>}
-            {drawTrends.length === 0 ? (
+            {drawTrends.length === 0 && data?.preview ? (
+              // The preview is one year of a few hunts, so it never shows a trend: don't say the agency lacks one.
+              <div className="bg-card border border-border rounded-xl p-6">
+                <LockedRows rows={6} />
+              </div>
+            ) : drawTrends.length === 0 ? (
               <p className="text-sm text-muted-foreground bg-card border border-border rounded-xl p-6">Not enough draw years published to show a trend.</p>
             ) : (
               <div className="bg-card border border-border rounded-xl overflow-x-auto overscroll-x-contain" role="region" aria-label="Scrollable table" tabIndex={0}>
@@ -243,7 +253,11 @@ export function TrendsView({
               Success rate per season as published. On a computer, hover a cell for hunters and harvest; open a {opt.unitTerm} for the full numbers.
             </p>
             {harvestTrends.length > 0 && harvestYears.length > 3 && <p className="sm:hidden text-xs text-muted-foreground mb-2">Swipe the table sideways to see every season.</p>}
-            {harvestTrends.length === 0 ? (
+            {harvestTrends.length === 0 && data?.preview ? (
+              <div className="bg-card border border-border rounded-xl p-6">
+                <LockedRows rows={6} />
+              </div>
+            ) : harvestTrends.length === 0 ? (
               <p className="text-sm text-muted-foreground bg-card border border-border rounded-xl p-6">Not enough harvest seasons published to show a trend.</p>
             ) : (
               <div className="bg-card border border-border rounded-xl overflow-x-auto overscroll-x-contain" role="region" aria-label="Scrollable table" tabIndex={0}>
