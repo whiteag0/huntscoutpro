@@ -1,10 +1,11 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { after } from "next/server";
 import { accessFor } from "@/lib/inbound/admin-auth";
 import { getThread } from "@/lib/inbound/store";
 import { ReplyActionError, prepareDraft, saveDraft, sendReply, setThreadStatus } from "@/lib/inbound/service";
-import { isThreadId } from "@/lib/inbound/thread";
+import { isThreadId, type Thread } from "@/lib/inbound/thread";
 import { verifyActionToken } from "@/lib/inbound/tokens";
 
 // Owner actions on a reply thread. Every action re-checks access (admin session or a signed,
@@ -32,6 +33,18 @@ async function editorAccess(fd: FormData) {
   return { id, token, access };
 }
 
+/** The customer wrote again while the reply was going out: draft that message and tell the owner. */
+function draftFollowUp(sent: Thread) {
+  if (sent.status !== "pending") return;
+  after(async () => {
+    try {
+      await prepareDraft(sent.id, { notify: true });
+    } catch (err) {
+      console.error(`[inbound] follow-up drafting failed for ${sent.id}:`, err instanceof Error ? err.name : "error");
+    }
+  });
+}
+
 function failure(err: unknown): string {
   if (err instanceof ReplyActionError) return err.message;
   console.error("[inbound] admin action failed:", err instanceof Error ? err.name : "error");
@@ -53,7 +66,7 @@ export async function sendFromEditorAction(fd: FormData) {
   const { id, token, access } = await editorAccess(fd);
   let error = "";
   try {
-    await sendReply(id, { text: str(fd, "text"), nonce: access.ok && access.via === "token" ? access.token.n : undefined });
+    draftFollowUp(await sendReply(id, { text: str(fd, "text"), nonce: access.ok && access.via === "token" ? access.token.n : undefined }));
   } catch (err) {
     error = failure(err);
   }
@@ -104,7 +117,7 @@ export async function approveAction(fd: FormData) {
   if (!check.ok || check.token.th !== id) redirect(q({ error: check.ok ? "This link isn't valid." : check.error === "expired" ? "This link has expired." : "This link isn't valid." }));
   let error = "";
   try {
-    await sendReply(id, { expectRev: check.token.r, nonce: check.token.n });
+    draftFollowUp(await sendReply(id, { expectRev: check.token.r, nonce: check.token.n }));
   } catch (err) {
     error = failure(err);
   }

@@ -67,6 +67,17 @@ export interface Thread {
   sendingAt?: string;
   lastError?: string;
   sentCount: number;
+  /**
+   * Highest draft revision this thread has ever had. A sent reply clears `draft`, so without this
+   * the next draft would restart at revision 1: an older, unused approve link would then match it,
+   * and its "Reply ready" email would reuse an earlier Resend idempotency key and be refused.
+   */
+  lastRev?: number;
+}
+
+/** Revision for the next draft change: always above every earlier revision of this thread. */
+export function nextRev(t: Pick<Thread, "draft" | "lastRev">): number {
+  return Math.max(t.draft?.rev ?? 0, t.lastRev ?? 0) + 1;
 }
 
 /** Sortable, unguessable id: yyyymmddhhmmss-<16 hex>. */
@@ -120,7 +131,7 @@ export function threadBytes(t: Thread): number {
 }
 
 export function fitThread(t: Thread): Thread {
-  let out = { ...t, usedNonces: t.usedNonces.slice(-50) };
+  let out = { ...t, usedNonces: t.usedNonces.slice(-50), lastRev: Math.max(t.lastRev ?? 0, t.draft?.rev ?? 0) };
   for (let i = 0; i < out.messages.length && threadBytes(out) > INBOUND_LIMITS.threadBytes; i++) {
     const messages = out.messages.map((m, j) => (j === i ? { ...m, original: undefined, text: m.text.slice(0, 1000) } : m));
     out = { ...out, messages };

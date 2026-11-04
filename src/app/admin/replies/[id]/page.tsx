@@ -121,7 +121,7 @@ export default async function ReplyThreadPage({
           {d?.note && d.status === "ready" && (
             <div className="mb-3 rounded-xl border border-[#c9d3f0] bg-[#f6f8ff] px-4 py-3 text-sm text-foreground">
               <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-[#4a5a8a]">Note for you (not sent)</p>
-              <p className="whitespace-pre-wrap">{d.note}</p>
+              <p className="whitespace-pre-wrap" data-clarity-mask="true">{d.note}</p>
             </div>
           )}
 

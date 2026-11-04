@@ -6,9 +6,9 @@ import { generateText } from "ai";
 import { MockLanguageModelV4 } from "ai/test";
 import type { DrawRecord } from "@/data/agency/schema";
 import { svixSign, verifySvix } from "@/lib/inbound/svix";
-import { parseReceived, screenInbound, stripQuoted, threadingHeaders, replySubject, parseAddress, htmlToText, type ReceivedEmail } from "@/lib/inbound/message";
+import { addressedTo, parseReceived, screenInbound, stripQuoted, threadingHeaders, replySubject, parseAddress, htmlToText, type ReceivedEmail } from "@/lib/inbound/message";
 import { signActionToken, verifyActionToken } from "@/lib/inbound/tokens";
-import { appendMessage, cleanReplyText, fitThread, inboundMessage, newThread, newThreadId, threadBytes, type Thread } from "@/lib/inbound/thread";
+import { appendMessage, cleanReplyText, fitThread, inboundMessage, newThread, newThreadId, nextRev, threadBytes, type Thread } from "@/lib/inbound/thread";
 import { buildDraftContext, defang, detectMentions, type FactsState } from "@/lib/inbound/context";
 import { draftReply, parseModelOutput, type GenerateFn } from "@/lib/inbound/draft";
 import { REPLY_SYSTEM_PROMPT } from "@/lib/inbound/reply-prompt";
@@ -308,7 +308,7 @@ test("draft context: only relevant, upcoming agency facts for the customer's res
   assert.match(p, /Nonresident-only special date/);
   assert.match(p, /Nonresident elk license \(nonresident, 2026\): \$795\.36/);
   assert.ok(!p.includes("Resident elk license"), "a TX hunter applies as a nonresident in CO");
-  assert.match(p, /First rifle season: Oct 10, 2026 – Oct 14, 2026/);
+  assert.match(p, /First rifle season \(2026 season, already ended\): Oct 10, 2026 – Oct 14, 2026/);
   assert.ok(!p.includes("Hunt-specific season"), "hunt-specific seasons stay with their hunt");
   assert.match(p, /GMU 61 — 2026 draw results/);
   assert.match(p, /E-E-061-O1-R .* nonresident: 15 drawn of 300 applicants \(5%\), quota 20, lowest points drawn 9/);
@@ -402,4 +402,72 @@ test("approval email: subject, both messages, and approve/edit links", () => {
   assert.equal(failed.subject, "Needs a reply: Welcome to HuntScout Pro: how to sign in");
   assert.ok(!failed.html.includes("Approve &amp; send"));
   assert.match(failed.html, /Write reply/);
+});
+
+// ------------------------------------------------------------------ review fixes
+
+test("screen: mail not sent to the receiving domain is ignored (Resend posts every received email)", () => {
+  const inbound = "replies@in.huntscoutpro.com";
+  const r = (e: ReceivedEmail) => {
+    const x = screenInbound(e, parseReceived(e), { ownAddresses: [inbound], inboundAddress: inbound });
+    return x.accept ? "accepted" : x.reason;
+  };
+  assert.equal(r(base()), "accepted");
+  assert.equal(r(base({ to: ["Adam <Replies@IN.huntscoutpro.com>"] })), "accepted");
+  assert.equal(r(base({ to: ["someone@other-project.example"], cc: null })), "not-addressed");
+  assert.equal(r(base({ to: ["sales@abc123.resend.app"] })), "not-addressed");
+  // Bcc'd to us: only the Received headers name our address.
+  assert.equal(r(base({ to: ["friend@example.org"], received_for: ["replies@in.huntscoutpro.com"] })), "accepted");
+  assert.equal(addressedTo(base({ to: null, headers: { to: "replies@in.huntscoutpro.com" } }), inbound), true);
+});
+
+test("thread: draft revisions never repeat after a send (old approve links can't match a new draft)", () => {
+  const p = parseReceived(base())!;
+  let t: Thread = newThread(TID, p, p.receivedAt);
+  t = fitThread({ ...t, draft: { rev: 3, text: "Hi Pat", note: "", source: "ai", status: "ready", basedOn: 1, updatedAt: p.receivedAt } });
+  assert.equal(t.lastRev, 3);
+  // Sending clears the draft; the revision counter stays.
+  t = fitThread({ ...t, status: "sent", draft: null });
+  assert.equal(nextRev(t), 4);
+  assert.equal(nextRev({ draft: null }), 1);
+});
+
+test("tokens: a derived edit link can't outlive the link it came from", () => {
+  const nowMs = Date.parse("2026-11-03T15:00:00Z");
+  const approve = verifyActionToken(signActionToken({ purpose: "approve", threadId: TID, rev: 2, nowMs }, ENV), "approve", { nowMs, env: ENV });
+  assert.ok(approve.ok);
+  const edit = signActionToken({ purpose: "edit", threadId: TID, rev: 0, nowMs, nonce: approve.token.n, notAfterSec: approve.token.x }, ENV);
+  const e = verifyActionToken(edit, "edit", { nowMs, env: ENV });
+  assert.ok(e.ok && e.token.x === approve.token.x && e.token.n === approve.token.n);
+  assert.deepEqual(verifyActionToken(edit, "edit", { nowMs: approve.token.x * 1000 + 1000, env: ENV }), { ok: false, error: "expired" });
+});
+
+test("draft context: licenses and application fees not tied to a species are included; one pool isn't repeated", async () => {
+  const co: FactsState = {
+    ...COLORADO,
+    fees: [
+      ...COLORADO.fees,
+      { species: null, item: "Annual small game license (qualifying license)", residency: "nonresident", amountUsd: 104.86, licenseYear: 2026, sourceId: "d-fees" },
+      { species: null, item: "Application fee", residency: "resident", amountUsd: 8.93, licenseYear: 2026, sourceId: "d-fees" },
+    ],
+    seasons: [...COLORADO.seasons, { species: "elk", label: "Archery", start: "2027-09-02", end: "2027-09-30", year: 2027, sourceId: "d-regs" }],
+  };
+  const pooled: DrawRecord[] = [{ species: "elk", year: 2026, huntCode: "E-E-061-O1-A", units: ["61"], description: "Archery", choice: "all", total: { applicants: 50, drawn: 10 }, note: "Includes leftover licenses", sourceId: "d-draw" }];
+  const ctx = await buildDraftContext({
+    thread: threadFrom("Colorado elk in unit 61: what will it all cost?"),
+    membership: { kind: "none" },
+    preferences: null,
+    states: [co],
+    liveSlugs: ["colorado"],
+    today: "2026-11-04",
+    drawRows: async () => pooled,
+  });
+  const p = ctx.prompt;
+  assert.match(p, /Annual small game license \(qualifying license\) \(nonresident, 2026\): \$104\.86/);
+  assert.match(p, /Application fee \(resident, 2026\): \$8\.93/);
+  // A season still to come is listed and ended ones are dropped.
+  assert.match(p, /Archery \(2027 season\): Sep 2, 2027 – Sep 30, 2027/);
+  assert.ok(!p.includes("First rifle season"));
+  assert.equal((p.match(/all applicants: 10 drawn of 50/g) || []).length, 1);
+  assert.match(p, /note: Includes leftover licenses/);
 });

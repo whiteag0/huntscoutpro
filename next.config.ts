@@ -18,6 +18,8 @@ const nextConfig: NextConfig = {
     // Reply drafts quote draw results for units a customer mentions.
     "/api/inbound/email": ["./.agency-gz/**/*"],
     "/admin/replies/[id]": ["./.agency-gz/**/*"],
+    // Sending from the confirm page drafts any follow-up that arrived meanwhile.
+    "/admin/replies/[id]/approve": ["./.agency-gz/**/*"],
   },
   async redirects() {
     // The old /unit page showed generated data; unit pages now live under each state.

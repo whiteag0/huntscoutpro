@@ -7,7 +7,10 @@ import { INBOUND_LIMITS, OWN_DOMAIN, isEmailAddress } from "@/lib/inbound/config
 export interface ReceivedEmail {
   id: string;
   from: string;
-  to?: string[];
+  to?: string[] | null;
+  cc?: string[] | null;
+  /** Addresses taken from the Received headers (where the mail was actually delivered). */
+  received_for?: string[] | string | null;
   subject?: string | null;
   text?: string | null;
   html?: string | null;
@@ -175,7 +178,23 @@ export function parseReceived(e: ReceivedEmail): ParsedInbound | null {
 }
 
 export type ScreenResult = { accept: true } | { accept: false; reason: IgnoreReason };
-export type IgnoreReason = "invalid" | "own-mail" | "noreply-sender" | "auto-reply" | "bounce" | "bulk" | "mailing-list" | "spam";
+export type IgnoreReason = "invalid" | "own-mail" | "not-addressed" | "noreply-sender" | "auto-reply" | "bounce" | "bulk" | "mailing-list" | "spam";
+
+/**
+ * Was this mail sent to our receiving domain? Resend posts every email the account receives
+ * (any address on any receiving domain, including the managed *.resend.app one) to the webhook,
+ * so mail for other addresses or other projects on the same account must not get a draft.
+ */
+export function addressedTo(e: ReceivedEmail, inbound: string): boolean {
+  const domain = inbound.split("@")[1]?.toLowerCase();
+  if (!domain) return false;
+  const list = (v: unknown): string[] => (Array.isArray(v) ? v : typeof v === "string" ? v.split(",") : []).filter((x): x is string => typeof x === "string");
+  const all = [...list(e.to), ...list(e.cc), ...list(e.received_for), ...list(header(e.headers, "to")), ...list(header(e.headers, "cc"))];
+  return all.some((raw) => {
+    const a = parseAddress(raw);
+    return !!a && (a.email.split("@")[1] === domain);
+  });
+}
 
 const NOREPLY_LOCAL = /^(no-?reply|do-?not-?reply|donotreply|mailer-daemon|postmaster|bounces?|auto-?reply|autoresponder|daemon|notifications?|alerts?|news(letter)?|marketing|billing-noreply)([+._-].*)?$/i;
 const AUTO_SUBJECT =
@@ -188,9 +207,10 @@ const AUTO_SUBJECT =
 export function screenInbound(
   e: ReceivedEmail,
   parsed: ParsedInbound | null,
-  opts: { ownAddresses?: string[] } = {}
+  opts: { ownAddresses?: string[]; inboundAddress?: string | null } = {}
 ): ScreenResult {
   if (!parsed) return { accept: false, reason: "invalid" };
+  if (opts.inboundAddress && !addressedTo(e, opts.inboundAddress)) return { accept: false, reason: "not-addressed" };
   const h = e.headers;
   const [local, domain] = parsed.fromEmail.split("@");
   const own = new Set((opts.ownAddresses || []).map((a) => a.toLowerCase()));

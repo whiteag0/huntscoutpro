@@ -170,7 +170,9 @@ function drawLine(r: DrawRecord, residency: "resident" | "nonresident" | "both")
     const min = minPointsDrawn(r, side);
     return `${label}: ${stats.drawn ?? "?"} drawn of ${stats.applicants ?? "?"} applicants (${pct(oddsOf(stats))})${stats.quota != null ? `, quota ${stats.quota}` : ""}${min != null ? `, lowest points drawn ${min}` : ""}`;
   });
-  return `- ${r.huntCode} — ${r.description}${r.seasonDates ? ` — season ${r.seasonDates}` : ""}: ${parts.join("; ")} (${r.choice === "first" ? "first-choice applications" : "all choices"})`;
+  // Both sides fall back to the same all-applicants pool when the agency doesn't split by residency.
+  const unique = Array.from(new Set(parts));
+  return `- ${r.huntCode} — ${r.description}${r.seasonDates ? ` — season ${r.seasonDates}` : ""}: ${unique.join("; ")} (${r.choice === "first" ? "first-choice applications" : "all choices"})${r.note ? ` — note: ${r.note}` : ""}`;
 }
 
 export interface FactsInput {
@@ -206,6 +208,15 @@ export async function buildAgencyFacts(input: FactsInput): Promise<{ text: strin
     if (!chosen.length) {
       lines.push(`Species HuntScout Pro covers here: ${speciesHere.map((s) => SPECIES_LABELS[s.species]).join(", ")}.`);
     }
+    // Licenses and application fees that aren't tied to one species (qualifying licenses, habitat
+    // stamps, application fees). Without them a "what will it cost" answer lists only the tag.
+    const general = st.fees.filter((f) => !f.species).filter((f) => residency === "both" || f.residency === residency).slice(0, 8);
+    if (general.length) {
+      lines.push(`Licenses and fees not tied to one species (the agency may require some of these to apply):`);
+      for (const f of general) {
+        lines.push(`- Fee: ${f.item} (${f.residency}, ${f.licenseYear}): $${f.amountUsd.toFixed(2)}${f.note ? ` — ${f.note}` : ""} [source: ${sourceTitle(st, f.sourceId)}]`);
+      }
+    }
     for (const info of chosen) {
       const label = info.displayName || SPECIES_LABELS[info.species];
       lines.push(`### ${st.name} ${label}`);
@@ -233,10 +244,14 @@ export async function buildAgencyFacts(input: FactsInput): Promise<{ text: strin
       for (const f of fees) {
         lines.push(`- Fee: ${f.item} (${f.residency}, ${f.licenseYear}): $${f.amountUsd.toFixed(2)}${f.note ? ` — ${f.note}` : ""} [source: ${sourceTitle(st, f.sourceId)}]`);
       }
-      const seasons = generalSeasons(st.seasons.filter((s) => s.species === info.species)).slice(0, 6);
+      // Seasons still to come first (the data holds more than one year); ended ones are labelled.
+      const allSeasons = generalSeasons(st.seasons.filter((s) => s.species === info.species));
+      const ahead = allSeasons.filter((s) => s.end >= today).sort((a, b) => a.start.localeCompare(b.start));
+      const seasons = (ahead.length ? ahead : allSeasons.filter((s) => s.year === Math.max(...allSeasons.map((x) => x.year)))).slice(0, 6);
       for (const s of seasons) {
         const scope = seasonScope(s, st.unitTerm);
-        lines.push(`- Season: ${s.label}: ${formatDate(s.start)} – ${formatDate(s.end)}${scope ? ` (${scope})` : ""} [source: ${sourceTitle(st, s.sourceId)}]`);
+        const ended = s.end < today ? ", already ended" : "";
+        lines.push(`- Season: ${s.label} (${s.year} season${ended}): ${formatDate(s.start)} – ${formatDate(s.end)}${scope ? ` (${scope})` : ""} [source: ${sourceTitle(st, s.sourceId)}]`);
       }
       if (units.length && input.drawRows) {
         const rows = await input.drawRows(st.slug, info.species).catch(() => [] as DrawRecord[]);

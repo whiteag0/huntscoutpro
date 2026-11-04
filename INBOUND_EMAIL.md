@@ -67,13 +67,14 @@ Redeploy (Deployments > ⋯ > Redeploy) so the variables take effect.
 - **Approval.** "Approve & send" opens a confirmation page; only its Send button sends (mail scanners that open links can't send anything). The link works once, only for that exact draft, and expires after 3 days. If the draft was edited or the customer wrote again, the old link refuses and points you to the latest draft. Edit links last 7 days. Signed-in admins can always use /admin/replies.
 - **Sending.** From `Adam White, HuntScout Pro <adam@huntscoutpro.com>`, to the customer's From address only, subject `Re: ...`, with In-Reply-To/References so it threads, your signature, their message quoted, Reply-To the receiving address, BCC `ONBOARDING_BCC`. A follow-up from the customer lands in the same thread with a fresh draft.
 - **What the AI is told.** The conversation, membership status, saved preferences, and agency facts (key dates, fees, general seasons, and the latest draw results for any unit they name) with their sources. It's told to state only those facts, say when it doesn't know, never promise refunds or changes, and sign as Adam. It has no tools: it can't send mail or pick recipients. A short "Note for you" flags refund requests, unanswered questions and anything to check.
-- **Filtered out (no draft, no email to you).** Auto-replies and out-of-office, bounces, mailing lists/bulk, no-reply senders, mail from huntscoutpro.com, and mail that fails DMARC or SPF+DKIM. They're listed under **Filtered out** on /admin/replies; **Reopen** one to answer it.
-- **If the AI fails** (gateway down, limit reached) you still get the email, titled **Needs a reply: ...**, with a link to write the reply yourself.
+- **Filtered out (no draft, no email to you).** Mail that wasn't sent to the receiving domain (Resend posts every email the account receives to this webhook), auto-replies and out-of-office, bounces, mailing lists/bulk, no-reply senders, mail from huntscoutpro.com, and mail that fails DMARC or SPF+DKIM. They're listed under **Filtered out** on /admin/replies; **Reopen** one to answer it.
+- **If the AI fails** (gateway down, daily draft limit reached) you still get the email, titled **Needs a reply: ...**, with a link to write the reply yourself. A sender over the 8-a-day limit gets no draft and no email to you; their messages still wait on /admin/replies.
+- **Privacy.** Customer emails are sent to the AI model (Anthropic, through Vercel AI Gateway) to write drafts. Clarity, ad tags and Vercel Analytics don't run on /admin pages, whose links carry the signed tokens.
 - **Limits.** 8 drafts per sender a day, 100 drafts and 60 approval emails a day in total. Webhook signatures older than 5 minutes are refused. Logs record ids and reasons only, never addresses or message text.
 
 ## Turning it off
 
-Delete `RESEND_INBOUND_WEBHOOK_SECRET` (or `EMAIL_INBOUND_ADDRESS`) in Vercel and redeploy. Replies go straight back to adam@huntscoutpro.com.
+Delete `RESEND_INBOUND_WEBHOOK_SECRET` (or `EMAIL_INBOUND_ADDRESS`) in Vercel and redeploy. New emails then carry Reply-To adam@huntscoutpro.com again. Emails already sent still say Reply-To the receiving address, so customers can keep replying there: those replies only show in Resend (Emails > Receiving). To catch them, add a forward to adam@ in Resend for that address, or keep the feature on.
 
 ## Code
 

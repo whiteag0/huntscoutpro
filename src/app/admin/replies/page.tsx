@@ -19,6 +19,7 @@ const TABS: { id: "pending" | "sent" | "dismissed" | "ignored" | "all"; label: s
 ];
 
 const IGNORE_LABEL: Record<string, string> = {
+  "not-addressed": "not sent to the reply address",
   "noreply-sender": "no-reply sender",
   "auto-reply": "auto-reply",
   bounce: "bounce",

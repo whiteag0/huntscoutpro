@@ -34,7 +34,15 @@ function sig(key: string, body: string): string {
 }
 
 export function signActionToken(
-  input: { purpose: TokenPurpose; threadId: string; rev: number; nowMs?: number; nonce?: string },
+  input: {
+    purpose: TokenPurpose;
+    threadId: string;
+    rev: number;
+    nowMs?: number;
+    nonce?: string;
+    /** Expire no later than this (unix s), e.g. an edit link derived from an approve link. */
+    notAfterSec?: number;
+  },
   env: Env = process.env
 ): string {
   const key = secret(env);
@@ -44,7 +52,7 @@ export function signActionToken(
     p: input.purpose,
     th: input.threadId,
     r: input.purpose === "approve" ? input.rev : 0,
-    x: Math.floor(now / 1000) + TOKEN_TTL_SEC[input.purpose],
+    x: Math.min(Math.floor(now / 1000) + TOKEN_TTL_SEC[input.purpose], input.notAfterSec ?? Number.MAX_SAFE_INTEGER),
     n: input.nonce ?? randomBytes(12).toString("base64url"),
   };
   const body = Buffer.from(JSON.stringify(payload)).toString("base64url");

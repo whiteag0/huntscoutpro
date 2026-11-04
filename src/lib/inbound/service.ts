@@ -20,6 +20,7 @@ import {
   isSendStale,
   lastInbound,
   newThread,
+  nextRev,
   newThreadId,
   type Draft,
   type Thread,
@@ -44,7 +45,12 @@ export async function fetchReceivedEmail(id: string): Promise<ReceivedEmail> {
   if (!res.ok) throw new Error(`Resend receiving ${res.status}`);
   const text = await res.text();
   if (text.length > 30 * 1024 * 1024) throw new Error("Received email too large");
-  return JSON.parse(text) as ReceivedEmail;
+  try {
+    return JSON.parse(text) as ReceivedEmail;
+  } catch {
+    // JSON.parse's message quotes the input, which is the customer's email: keep it out of the logs.
+    throw new Error("Resend receiving: unreadable JSON");
+  }
 }
 
 export type IntakeResult =
@@ -57,7 +63,7 @@ export async function intakeReceived(resendId: unknown, deps: { fetchEmail?: typ
   const email = await (deps.fetchEmail ?? fetchReceivedEmail)(resendId);
   const parsed = parseReceived({ ...email, id: email.id || resendId });
   const own = [inboundAddress(), adminEmail(), "adam@huntscoutpro.com"].filter((x): x is string => !!x);
-  const screen = screenInbound(email, parsed, { ownAddresses: own });
+  const screen = screenInbound(email, parsed, { ownAddresses: own, inboundAddress: inboundAddress() });
   const dedupeKey = parsed?.messageId || `<resend-${resendId}@inbound.local>`;
   const now = new Date();
 
@@ -120,7 +126,7 @@ export async function intakeReceived(resendId: unknown, deps: { fetchEmail?: typ
 
 function skippedDraft(t: Thread, error: string): Draft {
   return {
-    rev: (t.draft?.rev ?? 0) + 1,
+    rev: nextRev(t),
     text: "",
     note: "",
     source: "manual",
@@ -196,7 +202,7 @@ export async function prepareDraft(threadId: string, opts: { notify?: boolean; g
       const res = await draftReply(ctx.prompt, { model, generate: opts.generate ?? pickGenerate() });
       if (!res.ok) log("draft failed", { threadId, error: res.error });
       draft = {
-        rev: (t0.draft?.rev ?? 0) + 1,
+        rev: nextRev(t0),
         text: res.text,
         note: res.note,
         source: "ai",
@@ -217,7 +223,7 @@ export async function prepareDraft(threadId: string, opts: { notify?: boolean; g
     if (t.status !== "pending") return null;
     // A newer message arrived while drafting: its own draft run replaces this one.
     if (inboundCount(t) !== basedOn && t.draft && t.draft.basedOn > basedOn) return null;
-    return { ...t, draft: { ...draft, rev: Math.max(draft.rev, (t.draft?.rev ?? 0) + 1) } };
+    return { ...t, draft: { ...draft, rev: Math.max(draft.rev, nextRev(t)) } };
   });
 
   if (opts.notify && saved.draft && saved.draft.basedOn === basedOn) await notifyOwner(saved);
@@ -277,7 +283,7 @@ export async function saveDraft(threadId: string, rawText: unknown): Promise<Thr
     if (t.draft?.text === text) return null;
     const draft: Draft = {
       ...(t.draft ?? { note: "", basedOn: inboundCount(t), status: "ready", rev: 0 }),
-      rev: (t.draft?.rev ?? 0) + 1,
+      rev: nextRev(t),
       text,
       source: t.draft?.source === "ai" || t.draft?.source === "edited" ? "edited" : "manual",
       status: text ? "ready" : (t.draft?.status ?? "ready"),
@@ -304,6 +310,7 @@ export async function setThreadStatus(threadId: string, status: "dismissed" | "p
 export async function sendReply(threadId: string, opts: { text?: unknown; expectRev?: number; nonce?: string }): Promise<Thread> {
   let finalText = "";
   let sendNo = 0;
+  let answered = 0;
   const claimed = await updateThread(threadId, (t) => {
     if (t.status === "sent" && opts.expectRev !== undefined) throw new ReplyActionError("This reply was already sent.");
     if (t.status === "sending" && !isSendStale(t)) throw new ReplyActionError("This reply is being sent right now.");
@@ -316,13 +323,14 @@ export async function sendReply(threadId: string, opts: { text?: unknown; expect
     if (finalText.length < 2) throw new ReplyActionError("The reply is empty.");
     if (!lastInbound(t)) throw new ReplyActionError("Nothing to reply to.");
     sendNo = t.sentCount + 1;
+    answered = inboundCount(t);
     const edited = opts.text !== undefined && finalText !== t.draft?.text;
     return {
       ...t,
       status: "sending",
       sendingAt: new Date().toISOString(),
       usedNonces: opts.nonce ? [...t.usedNonces, opts.nonce] : t.usedNonces,
-      draft: t.draft && edited ? { ...t.draft, text: finalText, rev: t.draft.rev + 1, source: "edited", updatedAt: new Date().toISOString() } : t.draft,
+      draft: t.draft && edited ? { ...t.draft, text: finalText, rev: nextRev(t), source: "edited", updatedAt: new Date().toISOString() } : t.draft,
       lastError: undefined,
     };
   });
@@ -340,6 +348,8 @@ export async function sendReply(threadId: string, opts: { text?: unknown; expect
       idempotencyKey: `hs-reply-${threadId}-${sendNo}-${createHash("sha256").update(finalText).digest("hex").slice(0, 16)}`,
     });
     if (!id) throw new Error("RESEND_API_KEY not set");
+    // A customer message that arrived while this was sending wasn't answered by it: the thread
+    // stays open for that one (the caller drafts it), instead of being marked sent and forgotten.
     const sent = await updateThread(threadId, (t) => ({
       ...appendMessage(t, {
         direction: "out",
@@ -350,7 +360,7 @@ export async function sendReply(threadId: string, opts: { text?: unknown; expect
         text: finalText,
         resendId: id === "sent" ? null : id,
       }),
-      status: "sent",
+      status: inboundCount(t) > answered ? "pending" : "sent",
       sendingAt: undefined,
       sentCount: t.sentCount + 1,
       draft: null,

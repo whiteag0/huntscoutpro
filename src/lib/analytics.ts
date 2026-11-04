@@ -310,6 +310,14 @@ const PAGE_TYPES: Record<string, PageType> = {
   signin: "signin", "request-state": "request_state", about: "about", privacy: "privacy", terms: "terms",
 };
 
+/**
+ * Owner-only pages (/admin): customer emails on screen and signed approve/edit tokens in the URL.
+ * No session recording, ad tags or page-view analytics run there.
+ */
+export function isPrivatePath(pathname: string | null | undefined): boolean {
+  return !!pathname && (pathname === "/admin" || pathname.startsWith("/admin/"));
+}
+
 /** Page type and state slug for a pathname, e.g. /states/utah/units/10 -> { type: "unit", state: "utah" }. */
 export function describePath(pathname: string | null | undefined): { type: PageType; state: string | null } {
   const parts = (pathname || "/").split("/").filter(Boolean);

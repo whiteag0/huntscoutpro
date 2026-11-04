@@ -46,12 +46,19 @@ export default async function ApproveReplyPage({
   }
 
   const thread = (await getThread(id).catch(() => null))?.thread ?? null;
-  // An edit link for the same thread, for when this draft needs changes.
-  const editHref = `/admin/replies/${id}?t=${encodeURIComponent(signActionToken({ purpose: "edit", threadId: id, rev: 0 }))}`;
+  const spent = !!thread && thread.usedNonces.includes(check.token.n);
+  // An edit link for the same thread, for when this draft needs changes. It shares this link's
+  // nonce and expiry, so it can't outlive the approve link or be minted from one already used:
+  // sending through either spends both.
+  const editHref = spent
+    ? null
+    : `/admin/replies/${id}?t=${encodeURIComponent(
+        signActionToken({ purpose: "edit", threadId: id, rev: 0, nonce: check.token.n, notAfterSec: check.token.x })
+      )}`;
 
   let problem: string | null = null;
   if (!thread) problem = "This thread doesn't exist.";
-  else if (thread.usedNonces.includes(check.token.n) || thread.status === "sent") problem = "This reply was already sent.";
+  else if (spent || thread.status === "sent") problem = "This reply was already sent.";
   else if (thread.status === "dismissed") problem = "This thread was dismissed.";
   else if (thread.status === "sending") problem = "This reply is being sent right now.";
   else if (thread.status !== "pending") problem = "This thread isn't waiting for a reply.";
@@ -64,8 +71,8 @@ export default async function ApproveReplyPage({
       <Shell title="Approve reply">
         <Notice kind={problem === "This reply was already sent." ? "ok" : "error"}>{problem}</Notice>
         {thread && thread.status === "pending" && (
-          <Link href={editHref} className={secondaryBtn}>
-            Review the latest draft
+          <Link href={editHref ?? `/admin/replies/${id}`} className={secondaryBtn}>
+            {editHref ? "Review the latest draft" : "Open the reply (sign-in required)"}
           </Link>
         )}
       </Shell>
@@ -110,9 +117,11 @@ export default async function ApproveReplyPage({
         <ConfirmSubmit formAction={approveAction} className={primaryBtn} pendingLabel="Sending…">
           Send reply
         </ConfirmSubmit>
-        <Link href={editHref} className={secondaryBtn}>
-          Edit first
-        </Link>
+        {editHref && (
+          <Link href={editHref} className={secondaryBtn}>
+            Edit first
+          </Link>
+        )}
       </form>
     </Shell>
   );
