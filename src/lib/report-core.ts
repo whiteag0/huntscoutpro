@@ -169,6 +169,7 @@ export interface HuntRow {
 export interface HistoryCell {
   odds: number | null;
   minPoints: number | null;
+  src: number | null;
 }
 
 export interface UnitDive {
@@ -241,8 +242,11 @@ export interface ComboSection {
     planCycle: number | null;
     nextApplication: DateRow | null;
     lastApplication: DateRow | null;
+    /** Other main applications whose new dates aren't published yet (last cycle's dates), when nextApplication is set. */
+    otherApplications: DateRow[];
   };
-  seasons: { year: number | null; rows: SeasonRow[]; forPlanCycle: boolean; methodFiltered: boolean };
+  /** specialOnly: every listed season is a special-area / eligibility hunt the agency prints without a hunt number. */
+  seasons: { year: number | null; rows: SeasonRow[]; forPlanCycle: boolean; methodFiltered: boolean; specialOnly: boolean };
   fees: { rows: FeeRow[]; speciesRange: { min: number; max: number; count: number } | null };
   units: UnitDive[];
   unitsAsked: boolean;
@@ -312,8 +316,13 @@ const n0 = (v: number) => v.toLocaleString("en-US");
 export const pctText = (v: number) => `${Number(v.toFixed(1))}%`;
 const speciesLabel = (s: string) => (SPECIES_LABELS as Record<string, string>)[s] || s;
 
-/** Separate drawings that aren't the main application for a species. */
-const SPECIAL = /super\s*hunt|raffle|landowner|governor|auction|\bexpo\b|sportsman|conservation|youth|tier\s*(ii|2)\b|\bDAV\b(?!.*first application)|apprentice|disabled|mentor|access permit/i;
+/**
+ * Separate drawings that aren't the main application for a species. A DAV (disabled
+ * veteran) date counts as special unless the label is a main drawing that also takes
+ * DAV applications (Idaho: "Nonresident general season deer/elk tag drawing — first
+ * application period (also DAV draw)").
+ */
+const SPECIAL = /super\s*hunt|raffle|landowner|governor|auction|\bexpo\b|sportsman|conservation|youth|tier\s*(ii|2)\b|^(?!.*(?:first application|also DAV)).*\bDAV\b|apprentice|disabled|mentor|access permit|multi-season|community subsistence|\bCSH\b/i;
 
 class SourceBook {
   private ids = new Map<string, number>();
@@ -401,6 +410,8 @@ function dateRow(st: StateData, k: KeyDate, book: SourceBook, status?: DateStatu
   };
 }
 
+const DAY_MS = 24 * 60 * 60 * 1000;
+
 const byDate = (a: DateRow, b: DateRow) => a.sort.localeCompare(b.sort) || KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind) || a.label.localeCompare(b.label);
 
 export function datesFor(st: StateData, info: SpeciesInfo, residency: DrawResidency, today: string, book: SourceBook): ComboSection["dates"] {
@@ -417,13 +428,23 @@ export function datesFor(st: StateData, info: SpeciesInfo, residency: DrawReside
   const past = mine.filter((k) => endOf(k) < today);
   const referenceCycle = past.length ? Math.max(...past.map((k) => k.cycle)) : null;
   const haveKinds = new Set(upcoming.filter((r) => !SPECIAL.test(r.label)).map((r) => r.kind));
+  // A main application with no upcoming counterpart is still unpublished, even when another
+  // application is (Idaho: the nonresident general-season drawing is published, the controlled
+  // hunt application isn't). Agencies relabel steps between cycles ("application period" /
+  // "application deadline"), so the counterpart is the upcoming main application that closes
+  // within 45 days of the same date a year later.
+  const upcomingAppEnds = upcoming.filter(isMainApp).map((r) => Date.parse(r.end));
+  const hasCounterpart = (r: DateRow) => {
+    const nextYear = Date.parse(r.end) + 365 * DAY_MS;
+    return upcomingAppEnds.some((e) => Math.abs(e - nextYear) <= 45 * DAY_MS);
+  };
   const reference =
     referenceCycle === null
       ? []
       : past
           .filter((k) => k.cycle === referenceCycle)
           .map((k) => dateRow(st, k, book, "reference"))
-          .filter((r) => !haveKinds.has(r.kind) || (r.kind === "application" && !nextApplication && !SPECIAL.test(r.label)))
+          .filter((r) => !haveKinds.has(r.kind) || (isMainApp(r) && !hasCounterpart(r)))
           .sort(byDate)
           .slice(0, REPORT_LIMITS.referenceDates);
   // The last cycle's main application: its earliest-closing one (later windows are second rounds or side draws).
@@ -442,8 +463,10 @@ export function datesFor(st: StateData, info: SpeciesInfo, residency: DrawReside
     planCycle,
     nextApplication,
     lastApplication: nextApplication ? null : lastApplication,
+    otherApplications: nextApplication ? reference.filter(isMainApp) : [],
   };
 }
+
 
 // ------------------------------------------------------------
 // Seasons and fees
@@ -477,6 +500,8 @@ function scopeOf(s: Pick<SeasonDate, "units" | "residency">, unitTerm: string): 
   return seasonScope(s, /s$/.test(unitTerm) ? unitTerm : `${unitTerm}s`, 8) || "Statewide / standard";
 }
 
+const SPECIAL_AREA_SEASON = /special-area\/eligibility hunt|prints without a hunt number/i;
+
 export function seasonsFor(
   st: StateData,
   species: string,
@@ -488,10 +513,16 @@ export function seasonsFor(
   const mine = (st.seasons || []).filter(
     (s) => s.species === species && !s.huntCodes?.length && (!s.residency || s.residency === residency) && ISO.test(s.start) && ISO.test(s.end)
   );
-  if (!mine.length) return { year: null, rows: [], forPlanCycle: false, methodFiltered: false };
+  if (!mine.length) return { year: null, rows: [], forPlanCycle: false, methodFiltered: false, specialOnly: false };
   const years = new Set(mine.map((s) => s.year));
   const year = planCycle !== null && years.has(planCycle) ? planCycle : Math.max(...years);
   let rows = mine.filter((s) => s.year === year);
+  // Special-area / eligibility hunts (Arizona's Hopi and Camp Navajo hunts) aren't the species' general
+  // seasons: left out when there are other seasons, and labelled as such when they're all there is.
+  const special = rows.filter((s) => SPECIAL_AREA_SEASON.test(s.note || ""));
+  let specialOnly = false;
+  if (special.length && special.length < rows.length) rows = rows.filter((s) => !SPECIAL_AREA_SEASON.test(s.note || ""));
+  else if (special.length) specialOnly = true;
   let methodFiltered = false;
   if (methods.length) {
     const kept = rows.filter((s) => {
@@ -507,6 +538,7 @@ export function seasonsFor(
     year,
     forPlanCycle: planCycle === year,
     methodFiltered,
+    specialOnly,
     rows: rows
       .sort((a, b) => a.start.localeCompare(b.start) || a.label.localeCompare(b.label))
       .slice(0, REPORT_LIMITS.seasons)
@@ -693,6 +725,11 @@ export function isAntlerless(r: Pick<DrawRecord, "sex" | "description">): boolea
   return ANTLERLESS_WORDS.test(d) && !MALE_OR_EITHER_WORDS.test(d.replace(/\bfemale\b/gi, ""));
 }
 
+/** A hunt the agency limits to private land ("private-land-only hunt 5 (P5)", "Unit 4 private land only"). */
+export function isPrivateLandOnly(r: Pick<DrawRecord, "description">): boolean {
+  return /private[-\s]lands?[-\s]only|(?:^|:)\s*private lands? (?:only|within)\b|antlerless deer private land\b/i.test(r.description);
+}
+
 const MALE_WORD: Partial<Record<string, string>> = { elk: "bull", moose: "bull", "mule-deer": "buck", whitetail: "buck", pronghorn: "buck", sheep: "ram", turkey: "bearded" };
 /** "bull and either-sex" for elk, "ram and either-sex" for sheep... */
 export function maleGroupName(species: string): string {
@@ -750,7 +787,7 @@ export function unitDive(
   if (year !== null) {
     const latest = huntsForYear(inUnit, year);
     const { rows: mine, filtered } = forMethods(latest, methods);
-    if (filtered) methodNote = `Showing ${methods.map((m) => METHOD_OPTIONS.find((o) => o.id === m)?.label.toLowerCase() || m).join(" and ")} hunts (and hunts open to any weapon); ${latest.length - mine.length} other ${st.unitTerm} ${unit} hunts are on HuntScout.`;
+    if (filtered) methodNote = `Showing ${methods.map((m) => METHOD_OPTIONS.find((o) => o.id === m)?.label.toLowerCase() || m).join(" and ")} hunts (and hunts open to any weapon); ${latest.length - mine.length} other ${st.unitTerm} ${unit} hunt${latest.length - mine.length === 1 ? " is" : "s are"} on HuntScout.`;
     const sorted = mine.sort(
       (a, b) =>
         (a.units.length === 1 ? 0 : 1) - (b.units.length === 1 ? 0 : 1) ||
@@ -764,8 +801,7 @@ export function unitDive(
     // Same hunt codes in earlier draws.
     const years = [...new Set(inUnit.map((r) => r.year))].filter((y) => y <= year).sort((a, b) => a - b).slice(-REPORT_LIMITS.historyYears);
     const byYear = new Map(years.map((y) => [y, new Map(huntsForYear(inUnit, y).map((r) => [r.huntCode, r]))]));
-    history.years = years;
-    history.rows = shown.map((r) => ({
+    const rows = shown.map((r) => ({
       huntCode: r.huntCode,
       cells: years.map((y) => {
         const row = byYear.get(y)?.get(r.huntCode);
@@ -773,13 +809,17 @@ export function unitDive(
         const { stats } = drawStats(row, residency);
         const odds = oddsOf(stats);
         const minPoints = pointsMatter ? minPointsDrawn(row, residency) : null;
-        return odds === null && minPoints === null ? null : { odds, minPoints };
+        return odds === null && minPoints === null ? null : { odds, minPoints, sourceId: row.sourceId };
       }),
     }));
-    // Drop the history table when it would only repeat the latest year.
-    if (years.length < 2 || history.rows.every((h) => h.cells.filter(Boolean).length < 2)) {
-      history.years = [];
-      history.rows = [];
+    // Drop the history table when it would only repeat the latest year. Sources are cited only
+    // for a table that is shown, so the source list has no entries nothing refers to.
+    if (years.length >= 2 && rows.some((h) => h.cells.filter(Boolean).length >= 2)) {
+      history.years = years;
+      history.rows = rows.map((h) => ({
+        huntCode: h.huntCode,
+        cells: h.cells.map((c) => (c ? { odds: c.odds, minPoints: c.minPoints, src: book.cite(st, c.sourceId) } : null)),
+      }));
     }
   }
   const series = unitHarvest(harvest, unit, methods, st, book);
@@ -836,12 +876,16 @@ function shortlistFor(
   if (c.counts.stretch > 0) notes.push(`${c.counts.stretch} more hunt${c.counts.stretch === 1 ? "" : "s"} drew at up to 2 points above yours (not listed).`);
   if (filtered) notes.push(`Limited to your methods (${methods.join(", ")}) and hunts open to any weapon.`);
   // Antlerless hunts often dominate by odds; keep most of the list for bucks, bulls, rams and either-sex hunts.
-  const primary = c.hunts.filter((h) => !isAntlerless(h));
-  const antlerless = c.hunts.filter((h) => isAntlerless(h));
+  // Hunts the agency limits to private land go after the others (stable: each group keeps its order),
+  // since they need access to private land.
+  const publicFirst = (hs: ShortlistHunt[]) => [...hs.filter((h) => !isPrivateLandOnly(h)), ...hs.filter((h) => isPrivateLandOnly(h))];
+  const primary = publicFirst(c.hunts.filter((h) => !isAntlerless(h)));
+  const antlerless = publicFirst(c.hunts.filter((h) => isAntlerless(h)));
   const max = REPORT_LIMITS.shortlist;
   const takeAntlerless = Math.min(antlerless.length, Math.max(3, max - primary.length));
   const top = [...primary.slice(0, max - takeAntlerless), ...antlerless.slice(0, takeAntlerless)];
   for (const h of top) if (h.units.length === 1 && harvest.length) h.harvest = pickHarvest([...harvest], h, residency);
+  if (top.some(isPrivateLandOnly)) notes.push(`Hunts ${agency} limits to private land are listed after the others in each group; they need access to private land.`);
   const atLevel = (h: ShortlistHunt) => h.status === "drew-at-points" || h.status === "all-drew" || h.status === "min-at-or-below";
   return {
     drawYear: c.drawYear,
@@ -892,8 +936,10 @@ function checklistFor(c: Omit<ComboSection, "checklist" | "sources">): string[] 
   const qualifying = first("license-sale", (r) => /qualif|required|before applying|licen[cs]es go on sale/i.test(r.label));
   if (qualifying) out.push(`${qualifying.label}: ${dateText(qualifying)}.`);
   for (const req of c.requirements.slice(0, 3)) out.push(req);
-  if (dates.nextApplication) out.push(`Apply: ${dates.nextApplication.label}, ${dateText(dates.nextApplication)}.`);
-  else if (dates.lastApplication) out.push(`Apply: ${dates.planCycle ?? "next"} dates not yet published. Last cycle: ${dates.lastApplication.label}, ${dates.lastApplication.when}.`);
+  if (dates.nextApplication) {
+    out.push(`Apply: ${dates.nextApplication.label}, ${dateText(dates.nextApplication)}.`);
+    for (const r of dates.otherApplications.slice(0, 2)) out.push(`Also apply: ${r.label}. ${dates.planCycle ?? "Next"} dates not yet published; last cycle: ${r.when}.`);
+  } else if (dates.lastApplication) out.push(`Apply: ${dates.planCycle ?? "next"} dates not yet published. Last cycle: ${dates.lastApplication.label}, ${dates.lastApplication.when}.`);
   const pts = first("points");
   if (pts && c.pointsMatter) out.push(`Point-only option: ${pts.label}, ${dateText(pts)}.`);
   const results = first("results");
@@ -911,6 +957,11 @@ function unitTitle(unitTerm: string, u: Pick<UnitDive, "unit" | "name">): string
   return `${unitTerm} ${u.unit}${u.name && u.name !== u.unit ? ` (${u.name})` : ""}`;
 }
 
+/** A label set inside parentheses: its own parentheses dropped ("All license types (pooled)" -> "All license types, pooled"). */
+export function unparen(label: string): string {
+  return label.replace(/\s*\(([^()]*)\)/g, ", $1").trim();
+}
+
 /** "4 or fewer points", "no points". */
 function upTo(points: number): string {
   return points === 0 ? "no points" : `${points} or fewer points`;
@@ -922,16 +973,20 @@ function andList(xs: readonly string[]): string {
 
 function takeawaysFor(combos: readonly ComboSection[]): { lead: string; text: string }[] {
   // Application dates first, one line per state and date (species with the same deadline share it).
-  const dated = new Map<string, { state: string; species: string[]; suffix: string; text: string }>();
+  const dated = new Map<string, { state: string; species: string[]; suffix: string; text: string; sort: string }>();
   for (const c of combos) {
     const d = c.dates;
     let suffix: string | null = null;
     let text = "";
+    // Soonest published deadline first; unpublished cycles after every published one.
+    const sort = d.nextApplication ? d.nextApplication.end : `~${d.lastApplication?.end ?? ""}`;
     if (d.nextApplication) {
       const a = d.nextApplication;
       const status =
         a.status === "confirmed" ? "Confirmed by the agency." : a.status === "rule" ? `Tentative: set by ${c.agencyShort} rule; the ${a.cycle} date isn't announced yet.` : "Tentative.";
-      suffix = `: apply by ${formatDate(a.end)}.`;
+      // A single date that opens applications ("applications go on sale Dec 1") isn't a deadline.
+      const opens = a.sort === a.end && /on sale|available|\bopens?\b|opening|\bbegins?\b|\bstarts?\b/i.test(a.label);
+      suffix = opens ? `: applications open ${formatDate(a.end)}.` : `: apply by ${formatDate(a.end)}.`;
       text = `${a.label}${a.sort !== a.end ? `, open ${a.when}` : ""}. ${status}`;
     } else if (d.lastApplication) {
       suffix = `: ${d.planCycle ?? "next"} application dates aren't published yet.`;
@@ -941,9 +996,11 @@ function takeawaysFor(combos: readonly ComboSection[]): { lead: string; text: st
     const key = `${c.stateSlug}|${suffix}|${text}`;
     const hit = dated.get(key);
     if (hit) hit.species.push(c.speciesLabel.toLowerCase());
-    else dated.set(key, { state: c.stateName, species: [c.speciesLabel.toLowerCase()], suffix, text });
+    else dated.set(key, { state: c.stateName, species: [c.speciesLabel.toLowerCase()], suffix, text, sort });
   }
-  const dates = [...dated.values()].map((x) => ({ lead: `${x.state} ${andList(x.species)}${x.suffix}`, text: x.text }));
+  const dates = [...dated.values()]
+    .sort((a, b) => a.sort.localeCompare(b.sort))
+    .map((x) => ({ lead: `${x.state} ${andList(x.species)}${x.suffix}`, text: x.text }));
 
   const perCombo: { lead: string; text: string }[][] = combos.map((c) => {
     const out: { lead: string; text: string }[] = [];
@@ -984,7 +1041,7 @@ function takeawaysFor(combos: readonly ComboSection[]): { lead: string; text: st
         });
       } else if (!c.pointsMatter) {
         out.push({
-          lead: `${title} doesn't use points (${c.drawSystemLabel.toLowerCase()}).`,
+          lead: `${title}: ${c.drawSystemLabel.toLowerCase()}.`,
           text: `Highest ${who} odds in the ${s.drawYear} draw: ${best.huntCode}${best.units.length ? ` (${c.unitTerm} ${best.units.slice(0, 3).join(", ")}${best.units.length > 3 ? " +" + (best.units.length - 3) : ""})` : ""}, ${best.result.charAt(0).toLowerCase()}${best.result.slice(1)}.`,
         });
       }
@@ -996,14 +1053,14 @@ function takeawaysFor(combos: readonly ComboSection[]): { lead: string; text: st
         const b = pts[pts.length - 1];
         out.push({
           lead: `${unitTitle(c.unitTerm, u)} ${c.speciesLabel.toLowerCase()} harvest success: ${pctText(b.success)} in ${b.year}.`,
-          text: `It was ${pctText(a.success)} in ${a.year} (${u.harvest!.label.toLowerCase()}, ${c.agencyShort} harvest reports).`,
+          text: `It was ${pctText(a.success)} in ${a.year} (${unparen(u.harvest!.label).toLowerCase()}, ${c.agencyShort} harvest reports).`,
         });
         break;
       }
     }
     if (!c.units.length && c.topUnits?.rows.length) {
       const t = c.topUnits.rows[0];
-      out.push({ lead: `Top ${c.stateName} ${c.speciesLabel.toLowerCase()} harvest success in ${c.topUnits.year}: ${c.unitTerm} ${t.unit}, ${pctText(t.success)}.`, text: `Among units with ${TOP_UNIT_MIN_HUNTERS}+ hunters (${c.topUnits.label}).` });
+      out.push({ lead: `Top ${c.stateName} ${c.speciesLabel.toLowerCase()} harvest success in ${c.topUnits.year}: ${c.unitTerm} ${t.unit}, ${pctText(t.success)}.`, text: `Among units with ${TOP_UNIT_MIN_HUNTERS}+ hunters (${unparen(c.topUnits.label)}).` });
     }
     return out;
   });
@@ -1031,6 +1088,7 @@ function glanceFor(combos: readonly ComboSection[]): GlanceRow[] {
     const d = c.dates;
     for (const r of d.upcoming) if (r.kind === "application" || r.kind === "points") add(c, r);
     if (!d.nextApplication && d.lastApplication) add(c, d.lastApplication);
+    for (const r of d.otherApplications) add(c, r);
   }
   return [...rows.values()].sort((a, b) => (a.status === "reference" ? 1 : 0) - (b.status === "reference" ? 1 : 0) || a.sort.localeCompare(b.sort)).slice(0, REPORT_LIMITS.glance);
 }
@@ -1144,6 +1202,7 @@ export function buildReport(input: ReportInput): ScoutingReport {
     for (const d of dives) {
       d.hunts.forEach((h) => (addSrc(h.src), addSrc(h.harvest?.src)));
       d.harvest?.points.forEach((p) => addSrc(p.src));
+      d.history.rows.forEach((h) => h.cells.forEach((cell) => addSrc(cell?.src)));
     }
     base.topUnits?.rows.forEach((r) => addSrc(r.src));
     base.shortlist?.rows.forEach((r) => addSrc(r.src));

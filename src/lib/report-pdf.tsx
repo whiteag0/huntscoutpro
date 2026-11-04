@@ -6,7 +6,7 @@ import path from "node:path";
 import React from "react";
 import { Circle, Document, Font, Line, Link, Page, Rect, StyleSheet, Svg, Text, View, renderToBuffer } from "@react-pdf/renderer";
 import { formatDate } from "@/lib/agency-format";
-import { TOP_UNIT_MIN_HUNTERS, maleGroupName, type ComboSection, type DateRow, type DateStatus, type ScoutingReport, type ShortlistRow, type UnitDive } from "@/lib/report-core";
+import { TOP_UNIT_MIN_HUNTERS, maleGroupName, unparen, type ComboSection, type DateRow, type DateStatus, type ScoutingReport, type ShortlistRow, type UnitDive } from "@/lib/report-core";
 
 // ------------------------------------------------------------
 // Fonts and palette
@@ -402,7 +402,7 @@ function UnitBlock({ c, u }: { c: ComboSection; u: UnitDive }) {
           />
           <Src
             ids={huntSrc}
-            note={[u.methodNote, u.moreHunts > 0 ? `${u.moreHunts} more ${c.unitTerm} ${u.unit} hunts are on HuntScout.` : "", atLabel ? `"none listed" = the agency's point table lists no ${c.residency} applicants at ${pts} points for that hunt.` : ""].filter(Boolean).join(" ")}
+            note={[u.methodNote, u.moreHunts > 0 ? `${u.moreHunts} more ${u.methodNote ? "matching " : ""}${c.unitTerm} ${u.unit} hunt${u.moreHunts === 1 ? " isn't" : "s aren't"} listed here; HuntScout has every hunt.` : "", atLabel ? `"none listed" = the agency's point table lists no ${c.residency} applicants at ${pts} points for that hunt.` : ""].filter(Boolean).join(" ")}
           />
         </Block>
       ) : (
@@ -421,6 +421,7 @@ function UnitBlock({ c, u }: { c: ComboSection; u: UnitDive }) {
               ...r.cells.map((cell) => (cell ? `${fmtP(cell.odds)}${c.pointsMatter && cell.minPoints !== null ? ` · ${cell.minPoints} pts` : ""}` : "—")),
             ])}
           />
+          <Src ids={u.history.rows.flatMap((r) => r.cells.map((cell) => cell?.src))} />
         </Block>
       ) : null}
     </>
@@ -515,9 +516,13 @@ function ComboBlock({ c }: { c: ComboSection }) {
 
       {c.seasons.rows.length ? (
         <Block
-          title={`${c.seasons.year} seasons${c.seasons.forPlanCycle ? "" : ` (${d.planCycle ?? "next"} not yet published)`}`}
+          title={`${c.seasons.year} ${c.seasons.specialOnly ? "special-area hunts" : "seasons"}${c.seasons.forPlanCycle ? "" : ` (${d.planCycle ?? "next"} not yet published)`}`}
           rows={c.seasons.rows.length}
-          intro={`Season dates ${c.agencyShort} lists statewide or by area rather than per hunt code${c.seasons.methodFiltered ? ", for your methods" : ""}. A drawn hunt's own dates are on HuntScout and, where published, in the draw tables below.`}
+          intro={
+            c.seasons.specialOnly
+              ? `${c.agencyShort} prints these ${c.speciesLabel.toLowerCase()} hunts without a hunt number: they are special-area or eligibility hunts, not the general seasons. Each numbered hunt's own dates are on HuntScout and, where published, in the draw tables below.`
+              : `Season dates ${c.agencyShort} lists statewide or by area rather than per hunt code${c.seasons.methodFiltered ? ", for your methods" : ""}. A drawn hunt's own dates are on HuntScout and, where published, in the draw tables below.`
+          }
         >
           <Table
             cols={[
@@ -574,7 +579,7 @@ function ComboBlock({ c }: { c: ComboSection }) {
         <Block
           title={`Top ${c.unitTerm}s by harvest success, ${c.topUnits.year}`}
           rows={c.topUnits.rows.length}
-          intro={`${c.unitsAsked ? "" : "You didn't name units we could match, so here are the "}${c.unitsAsked ? "U" : "u"}nits with ${TOP_UNIT_MIN_HUNTERS}+ reported hunters, ranked by ${c.agencyShort}'s published success rate (${c.topUnits.label.toLowerCase()}). Success rate alone says nothing about access, crowding or animal quality.`}
+          intro={`${c.unitsAsked ? "" : "You didn't name units we could match, so here are the "}${c.unitsAsked ? "U" : "u"}nits with ${TOP_UNIT_MIN_HUNTERS}+ reported hunters, ranked by ${c.agencyShort}'s published success rate (${unparen(c.topUnits.label).toLowerCase()}). Success rate alone says nothing about access, crowding or animal quality.`}
         >
           {(() => {
             const named = c.topUnits.rows.some((r) => r.name);
@@ -892,7 +897,7 @@ export function ReportDocument({ report: r }: { report: ScoutingReport }) {
                 <View style={{ flex: 1 }}>
                   <Text style={[s.small, { color: C.ink }]}>
                     {src.title}. {src.publisher}
-                    {src.dataYear ? `, ${src.dataYear}` : ""}. Retrieved {formatDate(src.retrieved)}.
+                    {src.dataYear ? ` (${src.dataYear} data)` : ""}. Retrieved {formatDate(src.retrieved)}.
                   </Text>
                   <Link src={src.url} style={{ fontSize: 6.6, color: C.goldDeep, textDecoration: "none" }}>
                     {wrapUrl(src.url)}

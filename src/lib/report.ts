@@ -134,7 +134,8 @@ export async function sendMemberReport(opts: {
     } catch (err) {
       // Same key, different bytes: a send with this key already went out (e.g. a double submit
       // racing an agency data deploy). Don't send twice; the first request stamps the record.
-      if (err instanceof EmailSendError && err.status === 409 && err.code === "invalid_idempotent_request") {
+      // Also when the other request still holds the key after sendEmail's retries (concurrent_idempotent_requests).
+      if (err instanceof EmailSendError && err.status === 409 && (err.code === "invalid_idempotent_request" || err.code === "concurrent_idempotent_requests")) {
         console.warn(`Report for ${paymentIntentId || "member"} already sent under ${key}`);
         return { status: "duplicate", pages: generated.pages, bytes: generated.pdf.length, timings: generated.timings };
       }

@@ -13,6 +13,11 @@ export const REPORT_SENT_KEY = "hs_report_sent_at";
 export const REPORT_HASH_KEY = "hs_report_hash";
 export const REPORT_EMAIL_ID_KEY = "hs_report_email_id";
 export const REPORT_ERROR_KEY = "hs_report_error";
+/** Stamped with the preferences when a send is queued: blocks a second send while the first is in flight. */
+export const REPORT_PENDING_KEY = "hs_report_pending_at";
+
+/** How long a queued send blocks another one (longer than the function's time limit). */
+export const REPORT_PENDING_MS = 10 * 60 * 1000;
 
 /** Minimum time between two automatic reports for the same member. */
 export const REPORT_MIN_INTERVAL_MS = 24 * 60 * 60 * 1000;
@@ -38,24 +43,40 @@ export function reportInputHash(prefs: HuntingPreferences, savedPoints: PointsMa
   return createHash("sha256").update(JSON.stringify(material)).digest("hex").slice(0, 32);
 }
 
-export type ReportDecision = "send" | "unchanged" | "too-soon" | "nothing-to-report";
+export type ReportDecision = "send" | "unchanged" | "too-soon" | "in-progress" | "nothing-to-report";
+
+/** The time at the start of a stamp ("2026-11-04T18:00:00.000Z" or "2026-11-04T18:00:00.000Z Resend 500 ..."). */
+function stampTime(v: string | undefined): number {
+  return Date.parse((v || "").split(" ")[0]);
+}
 
 /**
  * Whether saving the form should send a report now.
  * `metadata` is the PaymentIntent's metadata before this save (empty for members without one).
+ * `previousHash` is reportInputHash() of the answers saved before this save, when there were any.
  */
 export function reportDecision(opts: {
   prefs: HuntingPreferences | null;
   metadata: Record<string, string | undefined>;
   hash: string;
   nowMs: number;
+  previousHash?: string | null;
   force?: boolean;
 }): ReportDecision {
-  const { prefs, metadata, hash, nowMs, force } = opts;
+  const { prefs, metadata, hash, nowMs, previousHash, force } = opts;
   if (!prefs || (prefs.states.length === 0 && prefs.species.length === 0)) return "nothing-to-report";
   if (force) return "send";
-  const sentAt = Date.parse(metadata[REPORT_SENT_KEY] || "");
-  if (Number.isNaN(sentAt)) return "send";
+  const sentAt = stampTime(metadata[REPORT_SENT_KEY]);
+  const pendingAt = stampTime(metadata[REPORT_PENDING_KEY]);
+  const errorAt = stampTime(metadata[REPORT_ERROR_KEY]);
+  // A send queued moments ago (a double submit, or a quick second edit) that hasn't finished or failed yet.
+  if (!Number.isNaN(pendingAt) && nowMs - pendingAt < REPORT_PENDING_MS && !(sentAt >= pendingAt) && !(errorAt >= pendingAt)) return "in-progress";
+  if (Number.isNaN(sentAt)) {
+    // Answers saved before automatic reports existed (no report marker of any kind): re-saving them
+    // unchanged doesn't send one; changing them does, as for any member.
+    if (previousHash && previousHash === hash && Number.isNaN(pendingAt) && Number.isNaN(errorAt)) return "unchanged";
+    return "send";
+  }
   if (metadata[REPORT_HASH_KEY] === hash) return "unchanged";
   if (nowMs - sentAt < REPORT_MIN_INTERVAL_MS) return "too-soon";
   return "send";

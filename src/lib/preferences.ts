@@ -63,12 +63,14 @@ export async function readPreferences(paymentIntentId: string) {
   };
 }
 
-export async function writePreferences(paymentIntentId: string, prefs: HuntingPreferences | null) {
+/** `extra`: other metadata to stamp in the same update (e.g. the scouting report's queued marker). */
+export async function writePreferences(paymentIntentId: string, prefs: HuntingPreferences | null, extra: Record<string, string> = {}) {
   if (!stripe) throw new Error("Stripe not configured");
   await stripe.paymentIntents.update(paymentIntentId, {
     metadata: {
       ...(prefs ? toMetadata(prefs) : {}),
       [ONBOARDED_AT_KEY]: new Date().toISOString(),
+      ...extra,
     },
   });
 }

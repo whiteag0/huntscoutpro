@@ -10,6 +10,7 @@ import { drawStats, oddsOf, sameUnit } from "@/lib/agency-view";
 import {
   buildReport,
   isAntlerless,
+  isPrivateLandOnly,
   residencyFor,
   selectCombos,
   type ReportInput,
@@ -247,7 +248,7 @@ test("units: matched from the answer, hunts filtered to the member's methods, od
     u.hunts.map((h) => h.huntCode),
     ["EF061O1R", "EM061O1R"]
   );
-  assert.match(u.methodNote || "", /1 other GMU 61 hunts/);
+  assert.match(u.methodNote || "", /1 other GMU 61 hunt is on HuntScout/);
   const bull = u.hunts.find((h) => h.huntCode === "EM061O1R")!;
   assert.deepEqual([bull.applicants, bull.drawn, bull.odds, bull.minPoints], [100, 10, 10, 9]);
   assert.deepEqual(bull.atPoints, { points: 4, applicants: 20, drawn: 0, pct: 0 });
@@ -264,9 +265,10 @@ test("units: matched from the answer, hunts filtered to the member's methods, od
   assert.equal(u.harvest?.label, "All Manners of Take");
   // Draw history for the same hunt codes.
   assert.deepEqual(u.history.years, [2025, 2026]);
+  const drawSrc = r.sources.find((x) => x.title === "Testland Draw Recap")!.n;
   assert.deepEqual(u.history.rows.find((h) => h.huntCode === "EM061O1R")?.cells, [
-    { odds: 10, minPoints: 8 },
-    { odds: 10, minPoints: 9 },
+    { odds: 10, minPoints: 8, src: drawSrc },
+    { odds: 10, minPoints: 9, src: drawSrc },
   ]);
   assertCitations(r);
 });
@@ -358,6 +360,108 @@ test("antlerless detection uses the sex code, else the description", () => {
   assert.equal(isAntlerless({ description: "Cow/calf elk" }), true);
 });
 
+test("a main drawing that also takes DAV applications is the member's application; other unpublished applications stay listed", () => {
+  const info: SpeciesInfo = {
+    ...ELK,
+    keyDates: [
+      kd({ label: "Controlled hunt first application period", start: "2026-05-01", end: "2026-06-05", cycle: 2026 }),
+      kd({ label: "Nonresident general season tag drawing — first application period (also DAV draw)", start: "2026-12-05", end: "2026-12-15", residency: "nonresident" }),
+      kd({ label: "DAV tag drawing application", date: "2026-12-20", residency: "nonresident" }),
+      kd({ label: "Draw results posted", date: "2026-06-20", cycle: 2026 }),
+    ],
+  };
+  const st: ReportStateInput = { data: { ...TL, species: [info] }, drawSpecies: ["elk"], harvestSpecies: [] };
+  const r = buildReport({ name: null, prefs: prefs({ homeState: "TX", residency: "nonresident", units: "", points: "" }), today: "2026-11-04", states: [st], tables });
+  const d = r.combos[0].dates;
+  assert.equal(d.nextApplication?.label, "Nonresident general season tag drawing — first application period (also DAV draw)");
+  assert.deepEqual(
+    d.otherApplications.map((x) => [x.label, x.status]),
+    [["Controlled hunt first application period", "reference"]]
+  );
+  assert.ok(d.reference.some((x) => x.label === "Controlled hunt first application period"));
+  assert.match(r.takeaways[0].lead, /^Testland elk: apply by Dec 15, 2026\./);
+  const list = r.combos[0].checklist;
+  assert.ok(list.some((x) => x.startsWith("Apply: Nonresident general season tag drawing")));
+  assert.ok(list.some((x) => x.startsWith("Also apply: Controlled hunt first application period. 2027 dates not yet published; last cycle: May 1 – Jun 5, 2026")), list.join("\n"));
+  assert.deepEqual(
+    r.glance.map((g) => [g.label, g.status]),
+    [
+      ["Nonresident general season tag drawing — first application period (also DAV draw)", "confirmed"],
+      ["DAV tag drawing application", "confirmed"],
+      ["Controlled hunt first application period", "reference"],
+    ]
+  );
+});
+
+test("a single date that opens applications isn't called a deadline", () => {
+  const info: SpeciesInfo = {
+    ...ELK,
+    keyDates: [
+      kd({ label: "2027 special hunt permit applications go on sale", kind: "application", date: "2026-12-01" }),
+      kd({ label: "Special permit application submission period", start: "2026-04-20", end: "2026-05-27", cycle: 2026 }),
+    ],
+  };
+  const r = buildReport({ name: null, prefs: prefs({ units: "", points: "" }), today: "2026-11-04", states: [{ data: { ...TL, species: [info] }, drawSpecies: ["elk"], harvestSpecies: [] }], tables });
+  assert.match(r.takeaways[0].lead, /^Testland elk: applications open Dec 1, 2026\./);
+  assert.deepEqual(
+    r.combos[0].dates.otherApplications.map((x) => x.label),
+    ["Special permit application submission period"]
+  );
+});
+
+test("plan-at-a-glance dates: soonest deadline first, whatever order the member picked", () => {
+  const OTHER: StateData = {
+    ...TL,
+    slug: "otherland",
+    name: "Otherland",
+    abbrev: "OL",
+    species: [{ ...ELK, keyDates: [kd({ label: "Elk application deadline", date: "2026-12-10" })] }],
+  };
+  const r = buildReport({
+    name: null,
+    prefs: prefs({ states: ["testland", "otherland"], units: "", points: "" }),
+    today: "2026-11-04",
+    states: [...STATES, { data: OTHER, drawSpecies: ["elk"], harvestSpecies: [] }],
+    tables,
+  });
+  assert.deepEqual(
+    r.combos.map((c) => c.stateName),
+    ["Testland", "Otherland"]
+  );
+  assert.match(r.takeaways[0].lead, /^Otherland elk: apply by Dec 10, 2026\./);
+  assert.match(r.takeaways[1].lead, /^Testland elk: apply by Apr 6, 2027\./);
+});
+
+test("shortlist: private-land-only hunts after the public ones, with a note", () => {
+  const rows: DrawRecord[] = [
+    draw({ huntCode: "EE070P1R", year: 2026, units: ["70"], method: "rifle", sex: "either", description: "EE070P1R: elk, either sex, GMU 70, private-land-only hunt 1 (P1)", resident: { applicants: 5, drawn: 5, minPoints: 0 } }),
+    draw({ huntCode: "EE071O1R", year: 2026, units: ["71"], method: "rifle", sex: "either", description: "EE071O1R: elk, either sex, GMU 71, season 1", resident: { applicants: 50, drawn: 40, minPoints: 0 } }),
+  ];
+  const r = buildReport({ name: null, prefs: prefs({ units: "" }), today: "2026-11-04", states: STATES, tables: () => ({ draw: rows, harvest: [] }) });
+  const s = r.combos[0].shortlist!;
+  assert.deepEqual(
+    s.rows.map((x) => x.huntCode),
+    ["EE071O1R", "EE070P1R"]
+  );
+  assert.ok(s.notes.some((n) => /limits to private land are listed after the others/.test(n)));
+  assert.equal(isPrivateLandOnly({ description: "Unit 4 private land only" }), true);
+  assert.equal(isPrivateLandOnly({ description: "Controlled Hunt Antlered — Hunt Area 76: Private land within Unit 76" }), true);
+  assert.equal(isPrivateLandOnly({ description: "That portion of Unit 1 on or within one mile of private agricultural land" }), false);
+});
+
+test("seasons: special-area hunts printed without a hunt number aren't shown as the general seasons", () => {
+  const special = (label: string, start: string) => ({ species: "elk" as const, label, method: "rifle" as const, start, end: "2027-12-01", year: 2027, note: "Draw hunt TWD prints without a hunt number (special-area/eligibility hunt).", sourceId: "d-dates" });
+  const mixed = buildReport({ name: null, prefs: prefs(), today: "2026-11-04", states: [{ ...STATES[0], data: { ...TL, seasons: [...TL.seasons!, special("Tribal area hunt", "2027-11-20")] } }], tables }).combos[0].seasons;
+  assert.deepEqual(
+    mixed.rows.map((x) => x.label),
+    ["First rifle season"]
+  );
+  assert.equal(mixed.specialOnly, false);
+  const only = buildReport({ name: null, prefs: prefs(), today: "2026-11-04", states: [{ ...STATES[0], data: { ...TL, seasons: [special("Tribal area hunt", "2027-11-20")] } }], tables }).combos[0].seasons;
+  assert.equal(only.specialOnly, true);
+  assert.equal(only.rows.length, 1);
+});
+
 // ------------------------------------------------------------
 // Real agency data: every figure in a report matches its source row
 // ------------------------------------------------------------
@@ -415,5 +519,23 @@ test("real data: a Colorado report's hunt figures and citations match the agency
       // The hunt's citation is the row's own document.
       assert.equal(sourceIds.get(r.sources[h.src! - 1].url), row!.sourceId);
     }
+  }
+});
+
+test("real data: an Idaho nonresident's next application is the general-season tag drawing", { skip: !existsSync(path.join(DATA, "idaho", "draw-meta.json")) }, () => {
+  const id = realState("idaho");
+  const r = buildReport({
+    name: null,
+    prefs: { ...EMPTY_PREFERENCES, states: ["idaho"], residency: "nonresident", homeState: "TX", species: ["elk"] },
+    today: "2026-11-04",
+    states: [id],
+    tables: (slug, sp) => realTables(slug, sp),
+  });
+  assertCitations(r);
+  const d = r.combos[0].dates;
+  const want = id.data.species.find((s) => s.species === "elk")!.keyDates.find((k) => /general season deer\/elk tag drawing — first application/i.test(k.label));
+  if (want && (want.end || want.date || "") >= "2026-11-04") {
+    assert.equal(d.nextApplication?.label, want.label);
+    assert.ok(r.takeaways.some((t) => t.lead.startsWith("Idaho elk: apply by")));
   }
 });

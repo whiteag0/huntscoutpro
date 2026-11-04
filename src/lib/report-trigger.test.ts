@@ -3,8 +3,11 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { EMPTY_PREFERENCES, type HuntingPreferences } from "@/lib/preferences-schema";
 import {
+  REPORT_ERROR_KEY,
   REPORT_HASH_KEY,
   REPORT_MIN_INTERVAL_MS,
+  REPORT_PENDING_KEY,
+  REPORT_PENDING_MS,
   REPORT_SENT_KEY,
   reportDecision,
   reportFilename,
@@ -50,6 +53,28 @@ test("a failed send leaves no sent marker, so the next save retries", () => {
   const hash = reportInputHash(prefs());
   assert.equal(reportDecision({ prefs: prefs(), metadata: { hs_report_error: "2026-11-04 Resend 500" }, hash, nowMs: NOW }), "send");
   assert.equal(reportDecision({ prefs: prefs(), metadata: { [REPORT_SENT_KEY]: "garbage" }, hash, nowMs: NOW }), "send");
+});
+
+test("a queued send blocks another until it finishes, fails or goes stale", () => {
+  const hash = reportInputHash(prefs());
+  const pending = new Date(NOW - 30_000).toISOString();
+  assert.equal(reportDecision({ prefs: prefs(), metadata: { [REPORT_PENDING_KEY]: pending }, hash, nowMs: NOW }), "in-progress");
+  // A different answer saved right after is held too (at most one report in flight).
+  assert.equal(reportDecision({ prefs: prefs({ units: "GMU 61" }), metadata: { [REPORT_PENDING_KEY]: pending }, hash: "other", nowMs: NOW }), "in-progress");
+  // It failed: the next save retries.
+  assert.equal(reportDecision({ prefs: prefs(), metadata: { [REPORT_PENDING_KEY]: pending, [REPORT_ERROR_KEY]: `${new Date(NOW - 10_000).toISOString()} Resend 500` }, hash, nowMs: NOW }), "send");
+  // It went out: the usual rules apply.
+  assert.equal(reportDecision({ prefs: prefs(), metadata: { [REPORT_PENDING_KEY]: pending, [REPORT_SENT_KEY]: new Date(NOW - 10_000).toISOString(), [REPORT_HASH_KEY]: hash }, hash, nowMs: NOW }), "unchanged");
+  // The function died without a trace: retried once the marker is stale, even with the same answers.
+  assert.equal(reportDecision({ prefs: prefs(), metadata: { [REPORT_PENDING_KEY]: pending }, hash, previousHash: hash, nowMs: NOW + REPORT_PENDING_MS }), "send");
+});
+
+test("members who answered before automatic reports: unchanged answers don't send one, changed answers do", () => {
+  const hash = reportInputHash(prefs());
+  assert.equal(reportDecision({ prefs: prefs(), metadata: {}, hash, previousHash: hash, nowMs: NOW }), "unchanged");
+  assert.equal(reportDecision({ prefs: prefs({ units: "GMU 61" }), metadata: {}, hash: reportInputHash(prefs({ units: "GMU 61" })), previousHash: hash, nowMs: NOW }), "send");
+  // A first send that failed is retried even when the answers are the same.
+  assert.equal(reportDecision({ prefs: prefs(), metadata: { [REPORT_ERROR_KEY]: "2026-11-04T17:00:00.000Z Resend 500" }, hash, previousHash: hash, nowMs: NOW }), "send");
 });
 
 test("idempotency keys repeat for a retry and change for a new send", () => {
