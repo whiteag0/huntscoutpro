@@ -152,3 +152,27 @@ test("preview copy doesn't promise more hunt codes when the preview already show
   const only = previewCopy({ ...base, hasOther: false, meta: { year: 2026, years: [2026], yearTotal: 2, rankedBy: "applicants" } });
   assert.equal(only.gate, "Showing all 2 Montana black bear hunt codes in the 2026 draw.");
 });
+
+test("draw preview: opens on the newest year with odds, like a member's table", () => {
+  const rows = [
+    draw("Q1", 2026, { total: { applicants: null, quota: 40 } }),
+    draw("Q2", 2026, { total: { applicants: null, quota: 90 } }),
+    draw("Q1", 2025, { total: { applicants: 300, drawn: 30 } }),
+    draw("Q2", 2025, { total: { applicants: 100, drawn: 50 } }),
+  ];
+  const p = drawPreview(rows);
+  assert.equal(p.year, 2025);
+  assert.deepEqual(p.years, [2026, 2025]);
+  assert.equal(p.rankedBy, "applicants");
+  assert.deepEqual(p.rows.map((r) => `${r.huntCode}-${r.year}`), ["Q1-2025", "Q2-2025"]);
+});
+
+test("harvest preview: opens on the season a member's table opens on", () => {
+  const rows = [
+    harvest("1", 2025, 500, { hunt: "H1" }),
+    harvest("2", 2025, 400, { hunt: "H2" }),
+    harvest("1", 2024, 300),
+    harvest("2", 2024, 200),
+  ];
+  assert.equal(harvestPreview(rows).year, 2024);
+});

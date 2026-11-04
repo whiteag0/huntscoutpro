@@ -2,7 +2,7 @@
 // and the true counts the gate quotes. Pure (no data imports) so it can be tested;
 // the API route reads the table and passes the rows in.
 import type { DrawRecord, DrawResidencyStats, HarvestRecord } from "@/data/agency/schema";
-import { EVERY_CATEGORY, defaultHarvestMethod, harvestMethodKey, harvestSeriesKey, headlineHarvestRows, isRealUnit, years } from "@/lib/agency-view";
+import { EVERY_CATEGORY, defaultHarvestMethod, defaultHarvestYear, harvestMethodKey, harvestSeriesKey, headlineHarvestRows, isRealUnit, oddsYear, years } from "@/lib/agency-view";
 
 /** Legible rows a signed-out or non-member visitor gets per table. */
 export const PREVIEW_ROWS = 8;
@@ -52,13 +52,14 @@ function priorRows<T extends { year: number }>(all: T[], picked: T[], key: (r: T
 }
 
 /**
- * Draw preview: the latest draw year's most-applied-for hunt codes (by quota when the agency
- * published no applicant counts that year). Where a hunt is listed once for first-choice and
- * once for all-choice applications, only the first-choice row is used.
+ * Draw preview: the most-applied-for hunt codes (by quota when the agency published no applicant
+ * counts that year) from the year a member's table opens on: the newest draw with odds published
+ * (oddsYear), else the newest year. Where a hunt is listed once for first-choice and once for
+ * all-choice applications, only the first-choice row is used.
  */
 export function drawPreview(all: DrawRecord[], limit = PREVIEW_ROWS): TablePreview<DrawRecord> {
   const ys = years(all);
-  const year = ys[0] ?? null;
+  const year = oddsYear(all).year ?? ys[0] ?? null;
   const latest = all.filter((r) => r.year === year);
   const byCode = new Map<string, DrawRecord>();
   for (const r of latest) {
@@ -83,13 +84,14 @@ export function drawPreview(all: DrawRecord[], limit = PREVIEW_ROWS): TablePrevi
 }
 
 /**
- * Harvest preview: the newest season with unit-level rows (the season a member's table opens on),
+ * Harvest preview: the season a member's table opens on (defaultHarvestYear: the newest season
+ * reported by unit, unless that one is reported by hunt code only),
  * in the category a member sees by default, ranked by hunters (by harvest where the agency
  * reports no hunter counts).
  */
 export function harvestPreview(all: HarvestRecord[], limit = PREVIEW_ROWS): TablePreview<HarvestRecord> {
   const ys = years(all);
-  const year = ys.find((y) => all.some((r) => r.year === y && isRealUnit(r.unit))) ?? ys[0] ?? null;
+  const year = defaultHarvestYear(all).year ?? null;
   const yearRows = headlineHarvestRows(all.filter((r) => r.year === year));
   const method = defaultHarvestMethod(yearRows);
   const shown = method === EVERY_CATEGORY ? yearRows : yearRows.filter((r) => harvestMethodKey(r) === method);

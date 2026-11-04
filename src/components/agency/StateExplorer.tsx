@@ -113,6 +113,9 @@ export function StateExplorer({
   const dYear = drawYear ?? meta?.draw.year ?? odds.year ?? drawYears[0];
   const harvestDefault = useMemo(() => defaultHarvestYear(data?.harvest || []), [data]);
   const hYear = harvestYear ?? meta?.harvest.year ?? harvestDefault.year;
+  // A preview holds only its own year's rows, so a newer quota-only year comes from its year list.
+  const oddsShown = meta ? meta.draw.year : odds.year;
+  const newerDraw = meta ? (meta.draw.year !== null && (meta.draw.years[0] ?? 0) > meta.draw.year ? meta.draw.years[0] : null) : odds.newer;
   const lockedYear = (y: number) => !!meta && y !== (tab === "draw" ? meta.draw.year : meta.harvest.year);
   const maxPts = useMemo(() => maxPointLevel(data?.draw || []), [data]);
 
@@ -432,9 +435,10 @@ export function StateExplorer({
         </p>
       )}
 
-      {tab === "draw" && data && odds.newer !== null && odds.year !== null && dYear === odds.year && (
+      {tab === "draw" && data && newerDraw !== null && oddsShown != null && dYear === oddsShown && (
         <p className="text-xs text-foreground bg-warning/10 border border-warning/30 rounded-lg px-3 py-2 mb-3">
-          {state.agency.shortName} hasn&apos;t published {odds.newer} draw odds yet; showing {odds.year}. Pick {odds.newer} under Year for the figures published so far.
+          {state.agency.shortName} hasn&apos;t published {newerDraw} draw odds yet; showing {oddsShown}.
+          {meta ? "" : ` Pick ${newerDraw} under Year for the figures published so far.`}
         </p>
       )}
       {tab === "draw" && data && odds.year !== null && dYear !== undefined && dYear > odds.year && (
