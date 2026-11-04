@@ -178,8 +178,14 @@ export async function sendOnboardingEmails(s: Stripe.Checkout.Session): Promise<
         });
         stamps[PURCHASE_ALERT_KEY] = new Date().toISOString();
       } catch (err) {
-        alertError = err;
-        console.error(`Purchase alert failed for checkout ${s.id}:`, err);
+        if (err instanceof EmailSendError && err.status === 409 && err.code === "invalid_idempotent_request") {
+          // Same key, different payload (the states line changed after a send whose marker
+          // didn't stick): the alert already went out. Mark it instead of failing every retry.
+          stamps[PURCHASE_ALERT_KEY] = new Date().toISOString();
+        } else {
+          alertError = err;
+          console.error(`Purchase alert failed for checkout ${s.id}:`, err);
+        }
       }
     }
 

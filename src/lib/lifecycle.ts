@@ -4,8 +4,8 @@
 // purchases read from Stripe (src/lib/members.ts listRecentPurchases), so they're unit tested.
 import { createHash } from "node:crypto";
 import { normalizeEmail } from "@/lib/entitlement";
-import { ONBOARDED_AT_KEY, PREFS_NOTIFY_ERROR_KEY, preferencesFromMetadata } from "@/lib/preferences";
-import { REPORT_ERROR_KEY, REPORT_SENT_KEY } from "@/lib/report-trigger";
+import { PREFS_NOTIFY_ERROR_KEY, preferencesFromMetadata } from "@/lib/preferences";
+import { REPORT_ERROR_KEY, REPORT_PENDING_KEY, REPORT_SENT_KEY } from "@/lib/report-trigger";
 
 /** Purchases before this were onboarded by hand; never email them automatically. */
 export const ONBOARDING_SINCE = Date.parse("2026-10-08T00:00:00Z");
@@ -22,7 +22,7 @@ const DAY = 24 * HOUR;
 export const CHECK_WINDOW_MS = 48 * HOUR;
 /** Leave the webhook this long before calling a purchase's onboarding missing. */
 export const ONBOARDING_GRACE_MS = 30 * 60 * 1000;
-/** A saved form with no report this long after is reported. */
+/** A report queued by a form save and not sent this long after is reported. */
 export const REPORT_GRACE_MS = HOUR;
 /** Nudge 1 goes out from day 3, nudge 2 from day 7; each has 3 days to catch a missed cron run. */
 export const NUDGE_AFTER_MS = { 1: 3 * DAY, 2: 7 * DAY } as const;
@@ -69,7 +69,7 @@ function counts(r: PurchaseRecord): boolean {
 /**
  * Problems the owner should hear about, oldest first:
  * - paid in the last 48 h, over 30 min ago, and the onboarding emails were never stamped as sent;
- * - the /welcome form was saved in the last 48 h, over an hour ago, and no report was ever sent;
+ * - a /welcome save in the last 48 h, over an hour ago, queued a report and none went out after it;
  * - the owner's copy of a form save failed (after a retry) in the last 48 h.
  */
 export function findLifecycleIssues(records: readonly PurchaseRecord[], nowMs: number): LifecycleIssue[] {
@@ -85,14 +85,17 @@ export function findLifecycleIssues(records: readonly PurchaseRecord[], nowMs: n
         problem: "Welcome emails not sent. Automatic sending stops 20 hours after payment, so send them by hand.",
       });
     }
-    const prefs = preferencesFromMetadata(md);
-    const savedAt = stampTime(md[ONBOARDED_AT_KEY]);
-    if (prefs && (prefs.states.length || prefs.species.length) && recent(savedAt) && nowMs - savedAt > REPORT_GRACE_MS && !md[REPORT_SENT_KEY]) {
-      const why = stampMessage(md[REPORT_ERROR_KEY]);
+    // A save that queued a report stamps REPORT_PENDING_KEY (src/app/api/preferences/route.ts). Saves that
+    // didn't queue one (answers from before reports existed, re-saved unchanged) aren't missing a report.
+    const queuedAt = stampTime(md[REPORT_PENDING_KEY]);
+    const sentAt = stampTime(md[REPORT_SENT_KEY]);
+    if (recent(queuedAt) && nowMs - queuedAt > REPORT_GRACE_MS && !(sentAt >= queuedAt)) {
+      const errorAt = stampTime(md[REPORT_ERROR_KEY]);
+      const why = errorAt >= queuedAt ? stampMessage(md[REPORT_ERROR_KEY]) : "";
       issues.push({
         kind: "no-report",
         record: r,
-        problem: `Hunting profile saved, but no scouting report was sent.${why ? ` Last error: ${why.slice(0, 200)}` : ""}`,
+        problem: `Hunting profile saved, but the scouting report it queued wasn't sent.${why ? ` Last error: ${why.slice(0, 200)}` : ""}`,
       });
     }
     const notifyFailed = md[PREFS_NOTIFY_ERROR_KEY];

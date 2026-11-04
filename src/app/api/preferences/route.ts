@@ -32,11 +32,12 @@ export async function GET() {
   const m = await member();
   if ("error" in m) return m.error;
   if (!m.ent.paymentIntentId) {
-    return NextResponse.json({ preferences: null, onboarded: m.session!.user.onboarded === true });
+    // stored: false — no purchase record to save answers on (manual grants).
+    return NextResponse.json({ preferences: null, onboarded: m.session!.user.onboarded === true, stored: false });
   }
   try {
     const { preferences, onboarded } = await readPreferences(m.ent.paymentIntentId);
-    return NextResponse.json({ preferences, onboarded });
+    return NextResponse.json({ preferences, onboarded, stored: true });
   } catch (err) {
     console.error("Preferences read failed:", err);
     return NextResponse.json({ error: "Couldn't load your preferences." }, { status: 502 });

@@ -11,7 +11,7 @@ import {
   type PurchaseRecord,
 } from "@/lib/lifecycle";
 import { ONBOARDED_AT_KEY, PREFS_NOTIFY_ERROR_KEY } from "@/lib/preferences";
-import { REPORT_ERROR_KEY, REPORT_SENT_KEY } from "@/lib/report-trigger";
+import { REPORT_ERROR_KEY, REPORT_PENDING_KEY, REPORT_SENT_KEY } from "@/lib/report-trigger";
 
 const NOW = Date.parse("2026-11-04T15:00:00Z");
 const HOUR = 3_600_000;
@@ -44,24 +44,35 @@ test("missing onboarding is reported for purchases 30 min to 48 h old", () => {
   assert.deepEqual(kinds([fresh, missing, done, old, refunded, beforeLaunch]), [`no-onboarding:${missing.paymentIntentId}`]);
 });
 
-test("a saved profile with no report after an hour is reported, with the last error", () => {
+test("a report queued by a form save and not sent after an hour is reported, with the last error", () => {
   const prefs = { hs_pref_states: "colorado", hs_pref_species: "elk" };
-  const waiting = rec({ ageMs: 10 * HOUR, md: { ...onboarded(10 * HOUR), ...prefs, [ONBOARDED_AT_KEY]: iso(NOW - 20 * 60_000) } });
+  const saved = (agoMs: number) => ({ ...prefs, [ONBOARDED_AT_KEY]: iso(NOW - agoMs), [REPORT_PENDING_KEY]: iso(NOW - agoMs) });
+  const waiting = rec({ ageMs: 10 * HOUR, md: { ...onboarded(10 * HOUR), ...saved(20 * 60_000) } });
   const failed = rec({
     ageMs: 10 * HOUR,
-    md: { ...onboarded(10 * HOUR), ...prefs, [ONBOARDED_AT_KEY]: iso(NOW - 3 * HOUR), [REPORT_ERROR_KEY]: `${iso(NOW - 3 * HOUR)} Resend 500 boom` },
+    md: { ...onboarded(10 * HOUR), ...saved(3 * HOUR), [REPORT_ERROR_KEY]: `${iso(NOW - 3 * HOUR + 5000)} Resend 500 boom` },
   });
-  const sent = rec({ ageMs: 10 * HOUR, md: { ...onboarded(10 * HOUR), ...prefs, [ONBOARDED_AT_KEY]: iso(NOW - 3 * HOUR), [REPORT_SENT_KEY]: iso(NOW - 3 * HOUR) } });
+  // Queued, then nothing at all (the function died before it could stamp an error).
+  const silent = rec({ ageMs: 10 * HOUR, md: { ...onboarded(10 * HOUR), ...saved(3 * HOUR) } });
+  const sent = rec({ ageMs: 10 * HOUR, md: { ...onboarded(10 * HOUR), ...saved(3 * HOUR), [REPORT_SENT_KEY]: iso(NOW - 3 * HOUR + 9000) } });
+  // Answers saved before reports existed, re-saved unchanged: no report was due.
+  const legacy = rec({ ageMs: 5 * DAY, md: { ...onboarded(5 * DAY), ...prefs, [ONBOARDED_AT_KEY]: iso(NOW - 3 * HOUR) } });
   const skipped = rec({ ageMs: 10 * HOUR, md: { ...onboarded(10 * HOUR), [ONBOARDED_AT_KEY]: iso(NOW - 3 * HOUR) } });
   // Bought 5 days ago, saved the form yesterday: still checked (the save is recent).
-  const lateSave = rec({ ageMs: 5 * DAY, md: { ...onboarded(5 * DAY), ...prefs, [ONBOARDED_AT_KEY]: iso(NOW - 20 * HOUR) } });
-  const staleSave = rec({ ageMs: 5 * DAY, md: { ...onboarded(5 * DAY), ...prefs, [ONBOARDED_AT_KEY]: iso(NOW - 3 * DAY) } });
-  const issues = findLifecycleIssues([waiting, failed, sent, skipped, lateSave, staleSave], NOW);
+  const lateSave = rec({ ageMs: 5 * DAY, md: { ...onboarded(5 * DAY), ...saved(20 * HOUR) } });
+  const staleSave = rec({ ageMs: 5 * DAY, md: { ...onboarded(5 * DAY), ...saved(3 * DAY) } });
+  // An update queued a new report that failed; the first report and an older error don't hide it.
+  const update = rec({
+    ageMs: 5 * DAY,
+    md: { ...onboarded(5 * DAY), ...saved(2 * HOUR), [REPORT_SENT_KEY]: iso(NOW - 2 * DAY), [REPORT_ERROR_KEY]: `${iso(NOW - 3 * DAY)} old` },
+  });
+  const issues = findLifecycleIssues([waiting, failed, silent, sent, legacy, skipped, lateSave, staleSave, update], NOW);
   assert.deepEqual(
     issues.map((i) => `${i.kind}:${i.record.paymentIntentId}`).sort(),
-    [`no-report:${failed.paymentIntentId}`, `no-report:${lateSave.paymentIntentId}`].sort()
+    [failed, silent, lateSave, update].map((r) => `no-report:${r.paymentIntentId}`).sort()
   );
   assert.match(issues.find((i) => i.record === failed)!.problem, /Last error: Resend 500 boom/);
+  assert.doesNotMatch(issues.find((i) => i.record === update)!.problem, /Last error/);
 });
 
 test("a failed owner notification is reported for 48 h, and a cleared stamp isn't", () => {

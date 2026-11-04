@@ -267,7 +267,7 @@ export default function AccountPage() {
               <p className="text-foreground font-medium">Free account</p>
               <p className="text-sm text-muted-foreground mt-2">
                 You&apos;re signed in as{" "}
-                <span className="font-medium text-foreground break-all" data-clarity-mask="true">
+                <span className="font-medium text-foreground break-words" data-clarity-mask="true">
                   {email}
                 </span>
                 , and there&apos;s no HuntScout Pro purchase on this account.

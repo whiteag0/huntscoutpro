@@ -36,7 +36,7 @@ const QUICK_LAUNCH = [
 
 type PrefsLoad =
   | { state: "loading" }
-  | { state: "ready"; preferences: HuntingPreferences | null }
+  | { state: "ready"; preferences: HuntingPreferences | null; stored: boolean }
   | { state: "error" };
 
 function usePreferences(enabled: boolean): PrefsLoad {
@@ -48,7 +48,7 @@ function usePreferences(enabled: boolean): PrefsLoad {
       .then(async (res) => {
         if (!res.ok) throw new Error(String(res.status));
         const data = await res.json();
-        if (!cancelled) setLoad({ state: "ready", preferences: sanitizePreferences(data?.preferences) });
+        if (!cancelled) setLoad({ state: "ready", preferences: sanitizePreferences(data?.preferences), stored: data?.stored !== false });
       })
       .catch(() => {
         if (!cancelled) setLoad({ state: "error" });
@@ -275,7 +275,8 @@ export function MemberHome({
 }) {
   const prefs = usePreferences(true);
   const until = formatLongDate(proExpiresAt);
-  const noStates = prefs.state === "ready" && !prefs.preferences?.states.length;
+  // Members without a purchase record (manual grants) can't save a profile, so they'd never clear it.
+  const noStates = prefs.state === "ready" && prefs.stored && !prefs.preferences?.states.length;
 
   return (
     <div className="min-h-screen gradient-subtle">
