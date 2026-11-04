@@ -111,7 +111,8 @@ function ReportLine({ report }: { report: MemberProfile["report"] }) {
 }
 
 /** Member home's first card: the next deadlines for their states and species, and where to go next. */
-function StartHere({ load }: { load: ProfileLoad }) {
+/** `profileBanner`: the "Finish your hunting profile" banner is showing, so don't ask again here. */
+function StartHere({ load, profileBanner }: { load: ProfileLoad; profileBanner: boolean }) {
   const profile = load.status === "ready" ? load.profile : null;
   const prefs = profile?.preferences ?? null;
   const liveStates = (prefs?.states || []).filter(isLiveState);
@@ -171,7 +172,7 @@ function StartHere({ load }: { load: ProfileLoad }) {
           </Link>
           .
         </p>
-      ) : (
+      ) : profileBanner ? null : (
         <p className="text-sm text-muted-foreground mb-5">
           <Link href="/welcome" className="text-primary font-semibold hover:underline">
             Add your states and species
@@ -448,7 +449,7 @@ export function MemberHome({
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
           <div className="lg:col-span-2 space-y-4 sm:space-y-6 min-w-0">
-            <StartHere load={profile} />
+            <StartHere load={profile} profileBanner={noStates} />
             <YourHuntsCard load={profile} />
           </div>
 
