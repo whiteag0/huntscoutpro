@@ -196,7 +196,7 @@ export function UnitDetail({ state, unit, species: speciesList, requested }: { s
                 ))}
               </div>
             </div>
-            {hiddenForResidency > 0 && (
+            {hiddenForResidency > 0 && !data?.preview && (
               <p className="text-xs text-muted-foreground mb-3">
                 {hiddenForResidency} {hiddenForResidency === 1 ? "hunt is" : "hunts are"} limited to {residency === "resident" ? "nonresidents" : "residents"} and not listed here.
               </p>

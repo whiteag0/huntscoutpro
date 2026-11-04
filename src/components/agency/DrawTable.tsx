@@ -17,9 +17,10 @@ type SortState = { key: SortKey; dir: 1 | -1 };
 
 function SortTh({ k, children, right, sort, setSort, help, className = "" }: { k: SortKey; children: React.ReactNode; right?: boolean; sort: SortState; setSort: React.Dispatch<React.SetStateAction<SortState>>; help?: string; className?: string }) {
   return (
-    <th title={help} aria-sort={sort.key === k ? (sort.dir === 1 ? "ascending" : "descending") : undefined} className={`px-3 py-2.5 font-semibold whitespace-nowrap align-bottom ${right ? "text-right" : "text-left"} ${className}`}>
+    <th aria-sort={sort.key === k ? (sort.dir === 1 ? "ascending" : "descending") : undefined} className={`px-3 py-2.5 font-semibold whitespace-nowrap align-bottom ${right ? "text-right" : "text-left"} ${className}`}>
       <button
         type="button"
+        title={help}
         className="inline-flex items-center gap-1 hover:text-foreground cursor-pointer"
         onClick={() => setSort((s) => ({ key: k, dir: s.key === k ? ((-s.dir) as 1 | -1) : k === "code" ? 1 : -1 }))}
       >
@@ -351,7 +352,7 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
               <SortTh sort={sort} setSort={setSort} k="applicants" right help={allFirst ? HELP.firstApps : HELP.apps}>
                 {appsLabel}
               </SortTh>
-              <th title={HELP.drawn} className="px-3 py-2.5 text-right font-semibold align-bottom">Drawn</th>
+              <th title={HELP.drawn} className="px-3 py-2.5 text-right font-semibold align-bottom normal-case tracking-normal">Drawn</th>
               <SortTh sort={sort} setSort={setSort} k="odds" right help={HELP.odds}>
                 <span>
                   Draw odds
@@ -367,7 +368,7 @@ export function DrawTable({ rows, allRows, info, residency, points, stateSlug, u
                 <SortTh sort={sort} setSort={setSort} k="atPts" right help={HELP.atPts} className="bg-primary/10 text-foreground">
                   <span>
                     At your {points} pts
-                    <span className="block text-[10px] font-normal normal-case tracking-normal">your odds</span>
+                    <span className="block text-[10px] font-normal normal-case tracking-normal">your level only</span>
                   </span>
                 </SortTh>
               )}

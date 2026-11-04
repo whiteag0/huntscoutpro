@@ -46,7 +46,7 @@ export function completenessSummary(bySpecies: Record<string, DrawCompleteness> 
   });
 
   const odds = sum(list, "odds");
-  items.push({ label: "Draw odds", value: share(odds, hunts, "every hunt", "not published") });
+  items.push({ label: "Overall draw odds", value: share(odds, hunts, "every hunt", "not published") });
   if (odds > 0 || sum(list, "pointTable") > 0) items.push({ label: "Odds by residency", value: share(sum(list, "split"), hunts, "resident and nonresident separately", "one combined pool") });
 
   const points = list.filter((c) => c.pointsMatter);

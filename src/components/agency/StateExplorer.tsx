@@ -299,7 +299,14 @@ export function StateExplorer({
           {harvestDefault.byHuntInstead} under Year to see it.
         </p>
       )}
-      {tab === "draw" && hiddenForResidency > 0 && (
+      {tab === "draw" && data && !data.preview && odds.year === null && data.draw.length > 0 && (
+        <p className="text-xs text-foreground bg-warning/10 border border-warning/30 rounded-lg px-3 py-2 mb-3">
+          The {state.agency.shortName} figures for these {SPECIES_LABELS[species].toLowerCase()} hunts don&apos;t include how many applicants drew in any year we cover, so
+          there are no draw odds to show. The table lists the figures it does publish, such as quotas and applicants.
+        </p>
+      )}
+      {/* A preview holds only a few rows, so a count from it would be wrong. */}
+      {tab === "draw" && data && !data.preview && hiddenForResidency > 0 && (
         <p className="text-xs text-muted-foreground mb-3">
           {hiddenForResidency} {hiddenForResidency === 1 ? "hunt is" : "hunts are"} limited to {residency === "resident" ? "nonresidents" : "residents"} by the agency and not
           listed here; switch to {residency === "resident" ? "Nonresident" : "Resident"} to see {hiddenForResidency === 1 ? "it" : "them"}.
