@@ -5,14 +5,14 @@ import Link from "next/link";
 import { ArrowDown, ArrowUp } from "lucide-react";
 import type { HarvestRecord, Species } from "@/data/agency/schema";
 import { fmtNum, fmtPct, sortUnitIds } from "@/lib/agency-format";
-import { harvestMethodKey, isRealUnit, successOf, unitNameOf } from "@/lib/agency-view";
+import { harvestMethodKey, harvestSeriesKey, isRealUnit, successOf, unitNameOf } from "@/lib/agency-view";
 import { Cite } from "@/components/agency/SourceNotes";
 import { MobileSort, useIsNarrow, useProgressive } from "@/components/agency/mobile";
 
 type SortKey = "unit" | "hunters" | "harvest" | "success";
 
 /** Rows of the same unit/hunt/category across years. */
-export const seriesKey = (r: HarvestRecord) => [r.unit, r.hunt || "", harvestMethodKey(r), r.sex || "", r.residency || ""].join("|");
+export const seriesKey = harvestSeriesKey;
 
 type SortState = { key: SortKey; dir: 1 | -1 };
 

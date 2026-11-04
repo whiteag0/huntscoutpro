@@ -87,6 +87,7 @@ export default async function ShortlistPage({ searchParams }: Search) {
         <Intro />
         <DemoGate
           feature="your draw shortlist"
+          description="Pro runs this for your species, home state and points across every state we cover, and lists each hunt that drew at your point level last year with its quota, applicants, odds and the unit's harvest success, each cited to the agency report."
           preview={
             <p className="text-sm text-muted-foreground mb-4">
               Example below: {SPECIES_LABELS[SAMPLE_SPECIES].toLowerCase()}, applying from {stateByAbbrev(SAMPLE_HOME)?.name} with{" "}

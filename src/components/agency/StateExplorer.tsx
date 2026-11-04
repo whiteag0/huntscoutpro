@@ -19,6 +19,7 @@ import { HScroll, ShowMore, pill } from "@/components/agency/mobile";
 import { setSpecies as tagSpecies, setStateSlug, track } from "@/lib/analytics";
 import type { CompletenessItem } from "@/lib/data-completeness";
 import { DataCompleteness } from "@/components/agency/DataCompleteness";
+import { previewCopy } from "@/lib/agency-preview";
 
 type Tab = "draw" | "harvest";
 
@@ -73,13 +74,17 @@ export function StateExplorer({
   // Open whichever table this species actually has.
   const tab: Tab = data && data.totals.drawRows === 0 ? "harvest" : data && data.totals.harvestRows === 0 ? "draw" : tabChoice;
 
-  const drawYears = useMemo(() => years(data?.draw || []), [data]);
-  const harvestYears = useMemo(() => years(data?.harvest || []), [data]);
+  // Non-members get a preview: a few rows of one year, plus the true year list and counts.
+  const meta = data?.previewMeta;
+  const drawYears = useMemo(() => meta?.draw.years ?? years(data?.draw || []), [data, meta]);
+  const harvestYears = useMemo(() => meta?.harvest.years ?? years(data?.harvest || []), [data, meta]);
   // Default to the newest draw with odds published; a newer year may list quotas only so far.
+  // A preview holds one year only, so it opens on the preview's year.
   const odds = useMemo(() => oddsYear(data?.draw || []), [data]);
-  const dYear = drawYear ?? odds.year ?? drawYears[0];
+  const dYear = drawYear ?? meta?.draw.year ?? odds.year ?? drawYears[0];
   const harvestDefault = useMemo(() => defaultHarvestYear(data?.harvest || []), [data]);
-  const hYear = harvestYear ?? harvestDefault.year;
+  const hYear = harvestYear ?? meta?.harvest.year ?? harvestDefault.year;
+  const lockedYear = (y: number) => !!meta && y !== (tab === "draw" ? meta.draw.year : meta.harvest.year);
   const maxPts = useMemo(() => maxPointLevel(data?.draw || []), [data]);
 
   const q = query.trim().toLowerCase();
@@ -118,6 +123,49 @@ export function StateExplorer({
   const coverage = [...state.drawCoverage, ...state.harvestCoverage].filter((c) => c.species === species && c.notes);
   const toggleCompare = (code: string) =>
     setCompare((c) => (c.includes(code) ? c.filter((x) => x !== code) : c.length < 4 ? [...c, code] : c));
+
+  const table =
+    tab === "draw" ? (
+      <DrawTable
+        rows={drawRows}
+        allRows={data?.draw || []}
+        info={info}
+        residency={residency}
+        points={points}
+        stateSlug={state.slug}
+        unitTerm={state.unitTerm}
+        cite={cite}
+        compare={compare}
+        onToggleCompare={toggleCompare}
+      />
+    ) : (
+      <HarvestTable
+        rows={harvestRows}
+        allRows={data?.harvest || []}
+        species={species}
+        stateSlug={state.slug}
+        unitTerm={state.unitTerm}
+        unitNames={state.unitNames[species] || {}}
+        cite={cite}
+      />
+    );
+  // Gate and caption text from the preview's true counts (never from the preview rows alone).
+  const copy =
+    data && meta
+      ? previewCopy({
+          kind: tab,
+          meta: tab === "draw" ? meta.draw : meta.harvest,
+          shown:
+            tab === "draw"
+              ? new Set(data.draw.filter((r) => r.year === meta.draw.year).map((r) => r.huntCode)).size
+              : data.harvest.filter((r) => r.year === meta.harvest.year).length,
+          stateName: state.name,
+          species: SPECIES_LABELS[species].toLowerCase(),
+          agency: state.agency.shortName,
+          unitTerm: state.unitTerm,
+          hasOther: (tab === "draw" ? data.totals.harvestRows : data.totals.drawRows) > 0,
+        })
+      : null;
 
   return (
     <div className={`max-w-7xl mx-auto px-4 py-8 ${tab === "draw" && compare.length > 0 ? "pb-28 sm:pb-8" : ""}`}>
@@ -173,11 +221,11 @@ export function StateExplorer({
       <div className="grid grid-cols-2 gap-2 mb-4 sm:flex sm:flex-wrap sm:items-center" role="tablist" aria-label="Data type">
         <button role="tab" aria-selected={tab === "draw"} className={`${pill(tab === "draw")} flex-col sm:flex-row sm:gap-1 text-center disabled:opacity-50 disabled:cursor-not-allowed`} onClick={() => { setTab("draw"); track("data_tab", { tab: "draw", state: state.slug, species }); }} disabled={!!data && data.totals.drawRows === 0}>
           Draw results{" "}
-          {data && <span className="block sm:inline text-xs sm:text-sm opacity-80">({data.totals.drawRows ? yrsLabel(years(data.draw).length) : "none"})</span>}
+          {data && <span className="block sm:inline text-xs sm:text-sm opacity-80">({data.totals.drawRows ? yrsLabel(drawYears.length) : "none"})</span>}
         </button>
         <button role="tab" aria-selected={tab === "harvest"} className={`${pill(tab === "harvest")} flex-col sm:flex-row sm:gap-1 text-center disabled:opacity-50 disabled:cursor-not-allowed`} onClick={() => { setTab("harvest"); track("data_tab", { tab: "harvest", state: state.slug, species }); }} disabled={!!data && data.totals.harvestRows === 0}>
           Harvest by {state.unitTerm}{" "}
-          {data && <span className="block sm:inline text-xs sm:text-sm opacity-80">({data.totals.harvestRows ? yrsLabel(years(data.harvest).length) : "none"})</span>}
+          {data && <span className="block sm:inline text-xs sm:text-sm opacity-80">({data.totals.harvestRows ? yrsLabel(harvestYears.length) : "none"})</span>}
         </button>
       </div>
 
@@ -190,9 +238,9 @@ export function StateExplorer({
             onChange={(e) => (tab === "draw" ? setDrawYear(Number(e.target.value)) : setHarvestYear(Number(e.target.value)))}
           >
             {(tab === "draw" ? drawYears : harvestYears).map((y) => (
-              <option key={y} value={y}>
+              <option key={y} value={y} disabled={lockedYear(y)}>
                 {y}
-                {tab === "harvest" && !(data?.harvest || []).some((r) => r.year === y && isRealUnit(r.unit)) ? " (statewide only)" : ""}
+                {lockedYear(y) ? " (Pro)" : tab === "harvest" && !(data?.harvest || []).some((r) => r.year === y && isRealUnit(r.unit)) ? " (statewide only)" : ""}
               </option>
             ))}
           </select>
@@ -277,7 +325,7 @@ export function StateExplorer({
         </div>
       )}
 
-      {tab === "draw" && info.pointsMatter && data && !data.draw.some((r) => r.byPoints?.length) && data.draw.length > 0 && (
+      {tab === "draw" && info.pointsMatter && data && !meta && !data.draw.some((r) => r.byPoints?.length) && data.draw.length > 0 && (
         <p className="text-xs text-muted-foreground mb-3">
           {state.agency.shortName} publishes totals for these hunts but not applicants by point level, so odds at a specific point level aren&apos;t shown.
         </p>
@@ -331,31 +379,30 @@ export function StateExplorer({
       ) : error ? (
         <div className="bg-card border border-border rounded-xl p-8 text-center text-danger">{error}</div>
       ) : data ? (
-        <DemoGate feature={`${state.name} draw results and harvest data`}>
-          {tab === "draw" ? (
-            <DrawTable
-              rows={drawRows}
-              allRows={data.draw}
-              info={info}
-              residency={residency}
-              points={points}
-              stateSlug={state.slug}
-              unitTerm={state.unitTerm}
-              cite={cite}
-              compare={compare}
-              onToggleCompare={toggleCompare}
-            />
-          ) : (
-            <HarvestTable
-              rows={harvestRows}
-              allRows={data.harvest}
-              species={species}
-              stateSlug={state.slug}
-              unitTerm={state.unitTerm}
-              unitNames={state.unitNames[species] || {}}
-              cite={cite}
-            />
-          )}
+        <DemoGate
+          feature={`${state.name} draw results and harvest data`}
+          description={copy?.gate}
+          preview={
+            copy && (
+              <>
+                <p className="text-sm font-medium text-foreground mb-3">{copy.caption}</p>
+                {/* Only the preview's own rows are filtered here, so a miss must not read as "no such hunt". */}
+                {q && (tab === "draw" ? drawRows : harvestRows).length === 0 ? (
+                  <div className="bg-card border border-border rounded-xl p-8 text-center text-muted-foreground">
+                    None of the free preview rows match &ldquo;{query.trim()}&rdquo;. Pro searches all {(tab === "draw" ? meta!.draw : meta!.harvest).yearTotal.toLocaleString("en-US")}.
+                  </div>
+                ) : (
+                  table
+                )}
+                <p className="text-xs text-muted-foreground mt-3">
+                  Numbers are exactly as {state.agency.shortName} published them; a dash means the agency didn&apos;t report that figure.
+                </p>
+              </>
+            )
+          }
+          tail={copy && <LockedRows />}
+        >
+          {table}
           <p className="text-xs text-muted-foreground mt-3">
             {tab === "draw"
               ? `${drawRows.length} ${drawRows.length === 1 ? "hunt" : "hunts"} in the ${dYear} draw.`
@@ -366,6 +413,22 @@ export function StateExplorer({
       ) : null}
 
       <SourceNotes sources={state.sources} index={cited} />
+    </div>
+  );
+}
+
+/** Row-shaped placeholders blurred under the free preview: no figures, just the shape of the rows Pro adds. */
+function LockedRows() {
+  return (
+    <div className="bg-card border border-border rounded-xl divide-y divide-border">
+      {[64, 48, 72, 56].map((w, i) => (
+        <div key={i} className="flex items-center gap-4 px-3 py-4">
+          <div className="h-3 rounded bg-muted-foreground/30" style={{ width: `${w * 2}px` }} />
+          <div className="ml-auto h-3 w-16 rounded bg-muted-foreground/20" />
+          <div className="hidden sm:block h-3 w-16 rounded bg-muted-foreground/20" />
+          <div className="hidden sm:block h-3 w-12 rounded bg-muted-foreground/20" />
+        </div>
+      ))}
     </div>
   );
 }

@@ -147,7 +147,10 @@ export function TrendsView({ options, slug, species, pointsMatter, sources }: { 
       ) : error ? (
         <div className="mt-6 bg-card border border-border rounded-xl p-8 text-center text-danger">{error}</div>
       ) : (
-        <DemoGate feature="draw and harvest trends">
+        <DemoGate
+          feature="draw and harvest trends"
+          description="Pro shows how the points needed and the draw odds have moved for each hunt across every published draw year, and how harvest success has changed by unit."
+        >
           <section className="mt-8">
             <h2 className="text-xl font-bold text-foreground mb-1">{pointsMatter ? "Point creep and draw odds" : "Draw odds by year"}</h2>
             <p className="text-sm text-muted-foreground mb-3">

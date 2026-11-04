@@ -10,7 +10,7 @@ import { SPECIES_LABELS } from "@/data/types";
 import { todayIso } from "@/lib/agency-format";
 import { linkOf, type AgencyFee, type HuntStatus, type PlannedHunt } from "@/lib/planner-schema";
 import { cycleInfo, huntSteps, nextForHunt, countdown } from "@/lib/planner-timeline";
-import { BUDGET_CATEGORIES, generateId } from "@/components/planner/defaults";
+import { BUDGET_CATEGORIES, PLANNER_GATE, generateId } from "@/components/planner/defaults";
 import { usePlannerSync } from "@/components/planner/usePlannerSync";
 import { downloadCalendar, usePlannerRefresh } from "@/components/planner/actions";
 import {
@@ -41,7 +41,7 @@ const PIPELINE: HuntStatus[][] = [["planning"], ["applied"], ["drawn", "alternat
 export function HuntDetail({ id, flash }: { id: string; flash?: "saved" | "duplicate" }) {
   return (
     <div className="min-h-screen bg-background">
-      <DemoGate feature="the Hunt Planner">
+      <DemoGate feature="the Hunt Planner" description={PLANNER_GATE}>
         <DetailBody id={id} flash={flash} />
       </DemoGate>
     </div>

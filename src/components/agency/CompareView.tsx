@@ -180,7 +180,10 @@ export function CompareView({ slug, stateName, unitTerm, species, pointsMatter, 
       ) : error ? (
         <div className="bg-card border border-border rounded-xl p-8 text-center text-danger">{error}</div>
       ) : (
-        <DemoGate feature="hunt comparisons">
+        <DemoGate
+          feature="hunt comparisons"
+          description="Pro lets you tick up to four hunts on any state's draw table and see them side by side: quota, applicants, drawn, odds, minimum points, odds by year and the unit's harvest, each cited to the agency report."
+        >
           {cols.length === 0 ? (
             <div className="bg-card border border-border rounded-xl p-8 text-center text-muted-foreground">
               Pick up to four hunts on the{" "}

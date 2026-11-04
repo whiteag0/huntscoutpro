@@ -2,24 +2,38 @@
 
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-import { Lock, Eye, ArrowRight } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Eye } from "lucide-react";
+import { CheckoutButton } from "@/components/CheckoutButton";
+import { PRICE } from "@/lib/promo";
+import { signInHref } from "@/lib/checkout-path";
 
 interface DemoGateProps {
   children: React.ReactNode;
   /** Content shown to everyone (the "teaser" above the gate) */
   preview?: React.ReactNode;
+  /**
+   * Shown blurred under the preview instead of `children`, as a short strip. Use it when the
+   * preview already holds the legible rows and the children would only repeat them.
+   */
+  tail?: React.ReactNode;
   /** Feature name shown in the upgrade prompt */
   feature?: string;
+  /** What this gate hides and what Pro adds, in a sentence or two. */
+  description?: React.ReactNode;
 }
+
+const DEFAULT_DESCRIPTION = "Pro unlocks the full agency draw and harvest tables, with every figure cited to its source.";
 
 /**
  * DemoGate — shows a preview of the content with a fade-to-blur paywall.
- * - Not signed in: shows preview + sign-in / Pro CTA
- * - Signed in but not pro: shows preview + upgrade CTA
+ * - Not signed in: shows preview + Pro checkout (sign-in first) and a sign-in link for members
+ * - Signed in but not pro: shows preview + Pro checkout
  * - Pro user: shows full content
  */
-export function DemoGate({ children, preview, feature = "this data" }: DemoGateProps) {
+export function DemoGate({ children, preview, tail, feature = "this data", description = DEFAULT_DESCRIPTION }: DemoGateProps) {
   const { data: session, status } = useSession();
+  const pathname = usePathname();
 
   // Only block on the very first load. A refetch via update() also reports
   // "loading" but keeps the session, and must not unmount a member's content.
@@ -44,17 +58,16 @@ export function DemoGate({ children, preview, feature = "this data" }: DemoGateP
       {/* Always-visible preview section */}
       {preview && <div className="mb-0">{preview}</div>}
 
-      {/* Gated full content with gradient fade + CTA */}
-      <div className="relative">
-        {/* Show blurred/faded content behind the gate */}
+      {/* Gated content, blurred behind a gradient, with the CTA stacked in the same grid cell so it never overflows a short strip */}
+      <div className="relative grid">
         {/* inert + aria-hidden: the blurred copy is decoration, not reachable by Tab or a screen reader. */}
-        <div className="pointer-events-none select-none" style={{ maxHeight: "400px", overflow: "hidden" }} inert aria-hidden="true">
-          <div style={{
-            filter: "blur(6px)",
-            opacity: 0.4,
-          }}>
-            {children}
-          </div>
+        <div
+          className="[grid-area:1/1] pointer-events-none select-none"
+          style={{ maxHeight: tail ? "240px" : "400px", overflow: "hidden" }}
+          inert
+          aria-hidden="true"
+        >
+          <div style={{ filter: "blur(6px)", opacity: 0.4 }}>{tail ?? children}</div>
         </div>
 
         {/* Gradient fade overlay */}
@@ -65,55 +78,42 @@ export function DemoGate({ children, preview, feature = "this data" }: DemoGateP
           }}
         />
 
-        {/* CTA overlay */}
-        <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pb-8">
-          <div className="relative z-10 text-center px-4 sm:px-8 py-8 max-w-md">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-medium mb-4">
-              <Eye className="w-3.5 h-3.5" />
-              Preview
+        {/* CTA */}
+        <div className="[grid-area:1/1] self-end relative z-10 flex justify-center pb-8 pt-16">
+          <div className="text-center px-4 sm:px-8 pt-8 max-w-md">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 text-xs font-medium mb-4">
+              <Eye className="w-3.5 h-3.5" aria-hidden />
+              {tail ? "Free preview" : "Preview"}
             </div>
 
-            {!session ? (
-              <>
-                <h3 className="text-xl font-bold mb-2 text-foreground">
-                  Unlock {feature}
-                </h3>
-                <p className="text-sm text-muted-foreground mb-5">
-                  You&apos;re seeing a short preview. Pro unlocks the full agency tables, with every figure cited to its source. Sign in with Google, then get Pro.
-                </p>
-                <div className="flex flex-col sm:flex-row items-center gap-3 justify-center">
-                  <Link
-                    href="/signin"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
-                  >
-                    Sign In Free
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <Link
-                    href="/pricing"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-muted-foreground hover:text-foreground border border-border hover:border-amber-500/30 transition-all"
-                  >
-                    <Lock className="w-3.5 h-3.5" />
-                    See Pro Pricing
-                  </Link>
-                </div>
-              </>
-            ) : (
-              <>
-                <h3 className="text-xl font-bold mb-2 text-foreground">
-                  Unlock full access to {feature}
-                </h3>
-                <p className="text-sm text-muted-foreground mb-5">
-                  You&apos;re seeing a short preview. Pro unlocks the full agency draw and harvest tables, with every figure cited to its source.
-                </p>
-                <Link
-                  href="/pricing"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
+            <h3 className="text-xl font-bold mb-2 text-foreground">{session ? `Unlock full access to ${feature}` : `Unlock ${feature}`}</h3>
+            <p className="text-sm text-muted-foreground mb-5">{description}</p>
+            <CheckoutButton
+              source="demo_gate"
+              className="inline-flex min-h-11 items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all cursor-pointer disabled:opacity-60"
+            >
+              {PRICE.ctaText}
+            </CheckoutButton>
+            <p className="mt-3 text-xs text-muted-foreground">
+              2 years of access, no auto-renewal.{" "}
+              <Link href="/pricing" className="font-medium text-primary hover:underline">
+                What&apos;s included
+              </Link>
+            </p>
+            {!session && (
+              <p className="mt-2 text-sm text-muted-foreground">
+                Already Pro?{" "}
+                {/* The href is refreshed on click so the query string (species, filters) comes back too. */}
+                <a
+                  href={signInHref(pathname)}
+                  onClick={(e) => {
+                    e.currentTarget.href = signInHref(window.location.pathname + window.location.search);
+                  }}
+                  className="inline-flex min-h-10 items-center font-semibold text-primary hover:underline"
                 >
-                  <Lock className="w-4 h-4" />
-                  Unlock Pro — $14.99
-                </Link>
-              </>
+                  Sign in
+                </a>
+              </p>
             )}
           </div>
         </div>

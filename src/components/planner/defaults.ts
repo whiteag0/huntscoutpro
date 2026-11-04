@@ -1,5 +1,9 @@
 import type { ChecklistItem, HuntStatus } from "@/lib/planner-schema";
 
+/** What the planner's Pro gate says it unlocks. */
+export const PLANNER_GATE =
+  "Pro's planner builds each hunt from the agency's application dates, season dates, fees and last draw results, keeps every deadline in order with a budget and gear checklist, exports dates to your calendar and saves to your account.";
+
 export function generateId(): string {
   return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 }

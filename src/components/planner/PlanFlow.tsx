@@ -17,7 +17,7 @@ import { huntSearchRank } from "@/lib/agency-view";
 import { track } from "@/lib/analytics";
 import type { DrawingSeason, PlanKind, PlannedHunt, PlannerResidency } from "@/lib/planner-schema";
 import { huntSteps } from "@/lib/planner-timeline";
-import { US_STATES, generateId } from "@/components/planner/defaults";
+import { PLANNER_GATE, US_STATES, generateId } from "@/components/planner/defaults";
 import { usePlannerSync } from "@/components/planner/usePlannerSync";
 import { CycleNotice, DateList, DrawFacts, FeeList, SeasonBlock, SourceLink, huntTitle } from "@/components/planner/PlannerParts";
 
@@ -120,7 +120,7 @@ export function PlanFlow({ states, initial }: { states: FlowState[]; initial: Fl
           </p>
         </div>
       </section>
-      <DemoGate feature="the Hunt Planner">
+      <DemoGate feature="the Hunt Planner" description={PLANNER_GATE}>
         <GatedFlow states={states} initial={initial} />
       </DemoGate>
     </div>

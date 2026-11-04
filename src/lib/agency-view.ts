@@ -133,6 +133,9 @@ export function methodsIn(rows: HarvestRecord[]): string[] {
 
 export const harvestMethodKey = (r: HarvestRecord) => r.methodLabel || r.method || "All";
 
+/** One harvest line followed across seasons: same unit, hunt, category, sex and residency. */
+export const harvestSeriesKey = (r: HarvestRecord) => [r.unit, r.hunt || "", harvestMethodKey(r), r.sex || "", r.residency || ""].join("|");
+
 /** Default harvest view: the agency's all-methods rows when they exist, otherwise the first method published. */
 /** Pseudo-category: show every published row for the season, with the category in its own column. */
 export const EVERY_CATEGORY = "Every category";
