@@ -84,7 +84,9 @@ export function teaserHarvest(rows: HarvestRecord[]): TeaserHarvest | null {
   if (!pool) return null;
   const year = Math.max(...pool.map((r) => r.year));
   const r = pool.filter((x) => x.year === year).sort((a, b) => size(b) - size(a))[0];
-  const success = successOf(r);
+  const computed = r.successPct == null || !!r.successComputed;
+  // Harvest ÷ hunters isn't a success rate where a hunter can take more than one animal (turkey bags), so it's left out.
+  const success = computed && r.hunters != null && r.harvest != null && r.harvest > r.hunters ? null : successOf(r);
   return {
     year,
     hunt: r.hunt || null,
@@ -93,7 +95,7 @@ export function teaserHarvest(rows: HarvestRecord[]): TeaserHarvest | null {
     hunters: r.hunters,
     harvest: r.harvest,
     successPct: success,
-    successComputed: r.successPct == null || !!r.successComputed,
+    successComputed: computed,
     sourceId: r.sourceId,
   };
 }
@@ -162,13 +164,12 @@ export function buildUnitTeasers(harvest: HarvestRecord[], draw: DrawRecord[]): 
   return out;
 }
 
-/** The next agency date that hasn't passed, soonest first (same rule as the state page). */
+/**
+ * The next agency date that hasn't passed. Dates on the same day keep the agency's listed order,
+ * so the main application deadline comes before a points-only one.
+ */
 export function nextAgencyDate(dates: KeyDate[], today: string): KeyDate | null {
-  return (
-    [...dates]
-      .filter((k) => keyDateEnd(k) >= today && formatKeyDate(k))
-      .sort((a, b) => keyDateEnd(a).localeCompare(keyDateEnd(b)) || a.label.localeCompare(b.label))[0] || null
-  );
+  return [...dates].filter((k) => keyDateEnd(k) >= today && formatKeyDate(k)).sort((a, b) => keyDateEnd(a).localeCompare(keyDateEnd(b)))[0] || null;
 }
 
 export interface TrendPoint {
@@ -187,15 +188,17 @@ export interface TrendExample {
   applicants: number;
   applicantsYear: number;
   choice: DrawRecord["choice"];
+  /** "points" when the line is the lowest point level drawn, "odds" when it's overall odds only. */
+  metric: "points" | "odds";
   points: TrendPoint[];
 }
 
 /**
  * One hunt to show non-members on /trends: of the hunts with the metric in at least two of the
- * newest five draw years, the one with the most applicants in its newest year. The metric is the
- * minimum points drawn when points matter, else the published (or drawn ÷ applicants) odds.
+ * newest five draw years and the newest such results, the one with the most applicants that year. The metric is the
+ * minimum points drawn when `byPoints`, else the published (or drawn ÷ applicants) odds.
  */
-export function trendExample(rows: DrawRecord[], pointsMatter: boolean, residency: DrawResidency = "resident"): TrendExample | null {
+export function trendExample(rows: DrawRecord[], byPoints: boolean, residency: DrawResidency = "resident"): TrendExample | null {
   const ys = years(rows).slice(0, 5);
   const byCode = new Map<string, DrawRecord[]>();
   for (const y of ys) {
@@ -204,15 +207,17 @@ export function trendExample(rows: DrawRecord[], pointsMatter: boolean, residenc
   let best: TrendExample | null = null;
   for (const [code, list] of byCode) {
     const points = list
-      .map((r) => ({ r, minPoints: pointsMatter ? minPointsDrawn(r, residency) : null, oddsPct: oddsOf(drawStats(r, residency).stats) }))
-      .filter((p) => (pointsMatter ? p.minPoints !== null : p.oddsPct !== null))
+      .map((r) => ({ r, minPoints: byPoints ? minPointsDrawn(r, residency) : null, oddsPct: oddsOf(drawStats(r, residency).stats) }))
+      .filter((p) => (byPoints ? p.minPoints !== null : p.oddsPct !== null))
       .sort((a, b) => a.r.year - b.r.year);
     if (points.length < 2) continue;
     const newest = points[points.length - 1].r;
     const { stats, pool } = drawStats(newest, residency);
     const applicants = stats?.applicants ?? 0;
     if (!applicants) continue;
-    if (best && (applicants < best.applicants || (applicants === best.applicants && code >= best.huntCode))) continue;
+    // The newest results first (a hunt last reported years ago isn't the example), then demand.
+    const sameYear = best && newest.year === best.applicantsYear;
+    if (best && !(newest.year > best.applicantsYear || (sameYear && (applicants > best.applicants || (applicants === best.applicants && code < best.huntCode))))) continue;
     best = {
       huntCode: code,
       description: newest.description,
@@ -221,8 +226,26 @@ export function trendExample(rows: DrawRecord[], pointsMatter: boolean, residenc
       applicants,
       applicantsYear: newest.year,
       choice: newest.choice,
+      metric: byPoints ? "points" : "odds",
       points: points.map((p) => ({ year: p.r.year, minPoints: p.minPoints, oddsPct: p.oddsPct, sourceId: p.r.sourceId })),
     };
   }
   return best;
+}
+
+/**
+ * The /trends example for a species: point creep for residents, else nonresidents (Wyoming
+ * residents have no elk points), else overall odds where the agency publishes no point levels.
+ */
+export function freeTrendExample(rows: DrawRecord[], pointsMatter: boolean): TrendExample | null {
+  const tries: [boolean, DrawResidency][] = [
+    ...(pointsMatter ? ([[true, "resident"], [true, "nonresident"]] as [boolean, DrawResidency][]) : []),
+    [false, "resident"],
+    [false, "nonresident"],
+  ];
+  for (const [byPoints, residency] of tries) {
+    const ex = trendExample(rows, byPoints, residency);
+    if (ex) return ex;
+  }
+  return null;
 }

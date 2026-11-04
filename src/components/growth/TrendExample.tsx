@@ -19,7 +19,7 @@ export function TrendExample({
 }: {
   stateName: string;
   agency: string;
-  info: Pick<SpeciesInfo, "species" | "pointsMatter" | "pointName">;
+  info: Pick<SpeciesInfo, "species" | "pointName">;
   example: Example;
   sources: SourceRef[];
 }) {
@@ -27,7 +27,10 @@ export function TrendExample({
   const cited = footnoteIndex(example.points.map((p) => p.sourceId));
   const who = example.pool === "total" ? "all applicants" : example.residency === "resident" ? "residents" : "nonresidents";
   const apps = example.choice === "first" ? "first-choice applicants" : "applicants";
-  const pointName = info.pointName || "point";
+  const byPoints = example.metric === "points";
+  const hasOdds = example.points.some((p) => p.oddsPct != null);
+  // A plain point name only: some agencies' names list several kinds ("bonus point (…); preference point (…)").
+  const pointName = info.pointName && !/[(;/]/.test(info.pointName) ? info.pointName : "point";
   return (
     <section aria-labelledby="trend-example" className="mt-8 bg-card border border-border rounded-xl p-4 sm:p-5">
       <div className="flex items-center gap-2 text-primary mb-1">
@@ -35,22 +38,22 @@ export function TrendExample({
         <span className="text-xs font-bold tracking-[0.2em]">FREE EXAMPLE</span>
       </div>
       <h2 id="trend-example" className="text-lg font-bold text-foreground">
-        {info.pointsMatter ? "Point creep" : "Draw odds"}: <span className="font-mono break-all">{example.huntCode}</span>
+        {byPoints ? "Point creep" : "Draw odds"}: <span className="font-mono break-all">{example.huntCode}</span>
       </h2>
       {example.description && example.description !== example.huntCode && <p className="text-sm text-muted-foreground">{example.description}</p>}
       <p className="text-sm text-muted-foreground mt-2 max-w-3xl">
         The {stateName} {label} hunt with the most {example.pool === "total" ? "" : `${example.residency} `}
         {apps} in {example.applicantsYear} ({fmtNum(example.applicants)}), among hunts with at least two years of results.{" "}
-        {info.pointsMatter
-          ? `The lowest ${pointName} level ${who} drew at, and ${who}' overall odds, as ${agency} published them.`
+        {byPoints
+          ? `The lowest ${pointName} level ${who} drew at${hasOdds ? `, and ${who}' overall odds` : ""}, as ${agency} published them.`
           : `Overall odds for ${who}, as ${agency} published them.`}
       </p>
       <table className="mt-3 w-full max-w-md text-sm tabular-nums">
         <thead className="text-muted-foreground text-xs">
           <tr>
             <th className="text-left py-1.5 pr-3">Draw year</th>
-            {info.pointsMatter && <th className="text-right py-1.5 pr-3">Lowest points drawn</th>}
-            <th className="text-right py-1.5">Odds</th>
+            {byPoints && <th className="text-right py-1.5 pr-3">Lowest points drawn</th>}
+            {hasOdds && <th className="text-right py-1.5">Odds</th>}
           </tr>
         </thead>
         <tbody>
@@ -60,8 +63,8 @@ export function TrendExample({
                 {p.year}
                 <Cite n={cited.get(p.sourceId)} prefix={PREFIX} />
               </td>
-              {info.pointsMatter && <td className="py-1.5 pr-3 text-right">{p.minPoints ?? "—"}</td>}
-              <td className="py-1.5 text-right">{fmtPct(p.oddsPct)}</td>
+              {byPoints && <td className="py-1.5 pr-3 text-right">{p.minPoints ?? "—"}</td>}
+              {hasOdds && <td className="py-1.5 text-right">{fmtPct(p.oddsPct)}</td>}
             </tr>
           ))}
         </tbody>

@@ -146,7 +146,10 @@ export function UnitAtAGlance({
             </Fact>
           </dl>
           <p className="text-xs text-muted-foreground mt-4">
-            Figures as {state.agency.name} published them. Every hunt code, each year&apos;s results{info.pointsMatter ? " and odds by point level" : ""} are in the Pro tables below.
+            Figures as {state.agency.name} published them.{" "}
+            {teaser.huntCodes || teaser.topHunt
+              ? `Every hunt code and each year's results${info.pointsMatter ? ", with odds by point level," : ""} are in the Pro tables below.`
+              : "Each year's harvest results are in the Pro tables below."}
           </p>
         </>
       )}

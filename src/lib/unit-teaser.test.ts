@@ -3,7 +3,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import type { DrawRecord, HarvestRecord, KeyDate } from "@/data/agency/schema";
-import { buildUnitTeasers, hasTeaserData, nextAgencyDate, teaserHarvest, teaserTopHunt, trendExample, unitTeaser } from "@/lib/unit-teaser";
+import { buildUnitTeasers, freeTrendExample, hasTeaserData, nextAgencyDate, teaserHarvest, teaserTopHunt, trendExample, unitTeaser } from "@/lib/unit-teaser";
 
 const hv = (r: Partial<HarvestRecord> & { year: number; unit: string }): HarvestRecord => ({
   species: "elk",
@@ -138,6 +138,53 @@ test("trend example: the most-applied hunt with the metric in at least two years
     ]
   );
   assert.equal(trendExample([dr({ year: 2025, huntCode: "A", resident: { applicants: 1, drawn: 1 } })], false), null);
+  // A bigger hunt whose point levels stop in an older year loses to one with current results.
+  const recent = trendExample(
+    [
+      dr({ year: 2022, huntCode: "OLD", resident: { applicants: 9000, drawn: 9, minPoints: 4 } }),
+      dr({ year: 2023, huntCode: "OLD", resident: { applicants: 9000, drawn: 9, minPoints: 4 } }),
+      dr({ year: 2026, huntCode: "OLD", resident: { applicants: 9000, drawn: 9 } }),
+      dr({ year: 2025, huntCode: "NEW", resident: { applicants: 50, drawn: 9, minPoints: 1 } }),
+      dr({ year: 2026, huntCode: "NEW", resident: { applicants: 60, drawn: 9, minPoints: 2 } }),
+    ],
+    true
+  );
+  assert.equal(recent?.huntCode, "NEW");
+});
+
+test("harvest line: harvest ÷ hunters over 100% (multi-bird bags) isn't shown as success; a published figure is", () => {
+  const h = teaserHarvest([hv({ year: 2023, unit: "Marin", hunters: 159, harvest: 172, successPct: null })]);
+  assert.equal(h?.harvest, 172);
+  assert.equal(h?.successPct, null);
+  assert.equal(teaserHarvest([hv({ year: 2023, unit: "Marin", hunters: 159, harvest: 172, successPct: 108 })])?.successPct, 108);
+});
+
+test("next agency date: same-day dates keep the agency's listed order", () => {
+  const kd = (label: string): KeyDate => ({ label, date: "2027-04-06", cycle: 2027, status: "tentative", sourceId: "d" });
+  assert.equal(nextAgencyDate([kd("Primary draw application deadline"), kd("Preference-point-only application deadline")], "2026-11-04")?.label, "Primary draw application deadline");
+});
+
+test("free trend example: residents' point creep, else nonresidents', else overall odds", () => {
+  // Residents have no points for this species (Wyoming elk): use the nonresident line.
+  const nr = freeTrendExample(
+    [
+      dr({ year: 2024, huntCode: "7-1", resident: { applicants: 900, drawn: 90 }, nonresident: { applicants: 400, drawn: 40, minPoints: 6 } }),
+      dr({ year: 2025, huntCode: "7-1", resident: { applicants: 950, drawn: 90 }, nonresident: { applicants: 420, drawn: 40, minPoints: 7 } }),
+    ],
+    true
+  );
+  assert.equal(nr?.residency, "nonresident");
+  assert.equal(nr?.metric, "points");
+  assert.deepEqual(nr?.points.map((p) => p.minPoints), [6, 7]);
+  // No point levels published at all: overall odds for residents.
+  const odds = freeTrendExample(
+    [dr({ year: 2024, huntCode: "X", resident: { applicants: 100, drawn: 10 } }), dr({ year: 2025, huntCode: "X", resident: { applicants: 100, drawn: 5 } })],
+    true
+  );
+  assert.equal(odds?.metric, "odds");
+  assert.equal(odds?.residency, "resident");
+  assert.deepEqual(odds?.points.map((p) => p.oddsPct), [10, 5]);
+  assert.equal(freeTrendExample([dr({ year: 2025, huntCode: "X", resident: { quota: 4 } })], true), null);
 });
 
 // The published Colorado files: GMU 061 elk has hunts and harvest, so its free summary is never empty.
