@@ -185,21 +185,32 @@ export function Header() {
           )}
         </div>
 
-        {/* Mobile menu toggle */}
-        <button
-          type="button"
-          className="lg:hidden -mr-2 inline-flex h-11 w-11 items-center justify-center rounded-lg cursor-pointer"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          aria-expanded={mobileOpen}
-          aria-controls="mobile-menu"
-        >
-          {mobileOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <Menu className="h-5 w-5" />
+        {/* Phones: Get Pro stays in reach next to the menu for anyone without Pro */}
+        <div className="lg:hidden flex items-center gap-1">
+          {!(status === "loading" && !session) && !isPro && pathname !== "/pricing" && (
+            <Link
+              href="/pricing"
+              aria-label="Get Pro $14.99 one-time"
+              className="inline-flex min-h-9 items-center whitespace-nowrap px-3 text-xs font-bold rounded-lg gradient-gold text-gold-foreground shadow-sm"
+            >
+              Pro $14.99
+            </Link>
           )}
-        </button>
+          <button
+            type="button"
+            className="lg:hidden -mr-2 inline-flex h-11 w-11 items-center justify-center rounded-lg cursor-pointer"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
+          >
+            {mobileOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu — max-height transition for smooth animation */}

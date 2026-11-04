@@ -10,7 +10,7 @@ import { sanitizePlannerData, type BudgetItem, type ChecklistItem, type HuntStat
 import { countdown, cycleInfo, huntSteps, huntTimeline, nextForHunt, upcomingDeadlines, type TimelineItem } from "@/lib/planner-timeline";
 import { usePlannerSync } from "@/components/planner/usePlannerSync";
 import { downloadCalendar, usePlannerRefresh } from "@/components/planner/actions";
-import { BUDGET_CATEGORIES, CHECKLIST_CATEGORIES, generateId } from "@/components/planner/defaults";
+import { BUDGET_CATEGORIES, CHECKLIST_CATEGORIES, PLANNER_GATE, generateId } from "@/components/planner/defaults";
 import { CycleBadge, STATUS_LABELS, STATUS_PILL, SourceLink, SyncBadge, TONE_CLASS, UpcomingStrip, dateRange, huntTitle } from "@/components/planner/PlannerParts";
 
 const inputCls =
@@ -207,7 +207,7 @@ export default function PlannerPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <DemoGate feature="the Hunt Planner" preview={plannerPreview}>
+      <DemoGate feature="the Hunt Planner" description={PLANNER_GATE} preview={plannerPreview}>
         {/* Header */}
         <section className="bg-gradient-to-br from-[#1a3a1a] via-[#0f2a0f] to-[#1c1917] text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
@@ -217,7 +217,7 @@ export default function PlannerPage() {
                 <p className="text-white/60 max-w-xl">
                   {account
                     ? "Saved to your HuntScout account, so it's on every device you sign in on. A copy stays on this device for when you're offline."
-                    : "Organize your applications and hunts in one place. Everything saves automatically to your browser."}
+                    : "Organize your applications and hunts in one place. Saved in this browser only; with Pro it's saved to your account and on every device you sign in on."}
                 </p>
                 <div className="mt-3">
                   <SyncBadge status={status} onRetry={retry} />

@@ -2,28 +2,23 @@ import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { hasAgencyData, readTable, readTableGzip, type TableKind } from "@/lib/agency";
 import { SPECIES_LABELS, type Species } from "@/data/types";
+import type { DrawRecord, HarvestRecord } from "@/data/agency/schema";
+import { drawPreview, harvestPreview, type TablePreview } from "@/lib/agency-preview";
 
 export const dynamic = "force-dynamic";
 
-/** Rows a signed-out or non-member visitor gets to preview (blurred behind the paywall). */
-const PREVIEW_ROWS = 8;
 const NO_STORE = { "Cache-Control": "private, no-store" };
 
-interface TablePreview<T = unknown> {
-  preview: true;
-  rows: T[];
-  total: number;
-}
+const previewCache = new Map<string, TablePreview<unknown>>();
 
-const previewCache = new Map<string, TablePreview>();
-
-async function preview(state: string, kind: TableKind, species: Species): Promise<TablePreview> {
+async function preview(state: string, kind: TableKind, species: Species): Promise<TablePreview<unknown>> {
   const key = `${state}/${kind}/${species}`;
   const hit = previewCache.get(key);
   if (hit) return hit;
-  const rows = await readTable<{ year: number }>(state, kind, species);
-  const latest = rows.reduce((m, r) => Math.max(m, r.year), 0);
-  const p: TablePreview = { preview: true, rows: rows.filter((r) => r.year === latest).slice(0, PREVIEW_ROWS), total: rows.length };
+  const p =
+    kind === "draw"
+      ? drawPreview(await readTable<DrawRecord>(state, kind, species))
+      : harvestPreview(await readTable<HarvestRecord>(state, kind, species));
   previewCache.set(key, p);
   return p;
 }
@@ -31,7 +26,7 @@ async function preview(state: string, kind: TableKind, species: Species): Promis
 /**
  * One agency table (?kind=draw|harvest) for a state and species.
  * Pro members get the full JSON array, sent as the pre-built gzip so even the largest
- * tables stay small on the wire; everyone else gets a short preview object.
+ * tables stay small on the wire; everyone else gets a short, legible preview object (src/lib/agency-preview.ts).
  */
 export async function GET(req: NextRequest, ctx: { params: Promise<{ state: string; species: string }> }) {
   const { state, species } = await ctx.params;

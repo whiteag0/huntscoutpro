@@ -65,7 +65,7 @@ export function SyncBadge({ status, onRetry }: { status: SyncStatus; onRetry: ()
   let body: React.ReactNode;
   switch (status.kind) {
     case "browser":
-      body = <span className={`${base} border-white/20 text-white/70`}>Saved in this browser</span>;
+      body = <span className={`${base} border-white/20 text-white/70`}>Saved in this browser only</span>;
       break;
     case "loading":
       body = (

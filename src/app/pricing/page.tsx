@@ -15,7 +15,7 @@ import {
   Calendar,
   TrendingUp,
 } from "lucide-react";
-import { CheckoutButton } from "@/components/CheckoutButton";
+import { AutoCheckout, CheckoutButton } from "@/components/CheckoutButton";
 import { PRICE } from "@/lib/promo";
 import { LIVE_STATES } from "@/lib/agency-format";
 
@@ -60,7 +60,7 @@ const FEATURE_CATEGORIES = [
       "Agency license and application fees",
       "Hunt planner with application timeline",
       "Hunt budget tracker and gear checklist",
-      "Export/import your plan (saved in your browser)",
+      "Plans saved to your account, on every device you sign in on (export/import as a file too)",
     ],
   },
   {
@@ -122,7 +122,7 @@ const BILLING_FAQS = [
   },
   {
     q: "Is there a free trial?",
-    a: "You can see a short preview of each state's tables before buying, and the 30-day money-back guarantee covers your purchase.",
+    a: "There's no trial, but every state page shows real rows for free: the 8 busiest hunt codes from the latest draw (most applicants, or largest quota where applicant counts aren't published) and the 8 busiest lines from the latest harvest report, along with the state's dates, fees and statewide summary. The 30-day money-back guarantee covers your purchase.",
   },
   {
     q: "Do you offer group or family pricing?",
@@ -256,6 +256,8 @@ export default function PricingPage() {
 
   return (
     <div className={pending ? "invisible" : undefined} aria-busy={pending || undefined}>
+      {/* Sign-in sends buyers back here with ?checkout=1; carry on to checkout. */}
+      <AutoCheckout />
       <PricingMarketing />
     </div>
   );
@@ -328,6 +330,7 @@ function PricingMarketing() {
 
               {/* CTA */}
               <CheckoutButton
+                source="pricing_card"
                 className="inline-flex items-center justify-center w-full px-6 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300 mb-3 cursor-pointer disabled:opacity-50"
               >
                 Get Pro Access &mdash; ${PRICE.amount}
@@ -482,6 +485,7 @@ function PricingMarketing() {
             {PRICE.summary}.
           </p>
           <CheckoutButton
+            source="pricing_bottom"
             className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-bold gradient-gold text-gold-foreground shadow-lg hover:shadow-2xl hover:brightness-110 hover:scale-[1.02] transition-all duration-300 cursor-pointer disabled:opacity-50"
           >
             Get Pro Access

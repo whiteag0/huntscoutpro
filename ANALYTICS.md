@@ -26,7 +26,7 @@ In Clarity, filter recordings by **Custom events** (event names below) or **Cust
 | `trends_view` | /trends opens or changes state/species | `state`, `species` |
 | `unit_view` | A unit page opens | `state`, `unit`, `species` |
 | `shortlist_run` | "Where can I draw" results load | `species`, `home_state`, `stretch` |
-| `checkout_start` | Upgrade/checkout button clicked | `signed_in` (Meta: `InitiateCheckout`) |
+| `checkout_start` | Upgrade/checkout button clicked, or checkout auto-started after sign-in | `signed_in`, `from` (Meta: `InitiateCheckout`) |
 | `purchase` | /success after the server confirms the Stripe session was paid; once per session id | Google Ads conversion: value 14.99 USD, `transaction_id` = Stripe session id. Meta: `Purchase`, `eventID` = session id |
 | `sign_in_click` | Google sign-in or admin sign-in pressed | `method`, `from` |
 | `request_state_submit` | Request-a-state form sent successfully | `state`, `species_count`, `notify`, `signed_in` |
