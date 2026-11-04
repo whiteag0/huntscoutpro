@@ -35,6 +35,9 @@ export default function PrivacyPage() {
               If you&apos;re a Pro member and answer our hunting-preferences questions, we use your answers (states, residency, home state, species, methods, units and points) to build a personal scouting report from our state agency data, and email it to you as a PDF through Resend, our email provider (our team may receive a copy). We send a new report when you first answer and when you change those answers (at most once a day), and we note when the last report was sent on your purchase record at Stripe.
             </p>
             <p>
+              When you reply to one of our emails, we may use an AI model (Anthropic&apos;s Claude, through Vercel&apos;s AI Gateway) to draft an answer from your message, your membership status, your hunting-preferences answers and our state agency data. Your email address isn&apos;t sent to the model. A person reviews every draft, and nothing is sent to you until they approve it. Your messages and the drafts are kept in our private file storage at Vercel so we can follow the conversation.
+            </p>
+            <p>
               State requests are emailed to our team through Resend, our email provider. We use them only to follow up with you about your request and to decide which states to add next. We don&apos;t add you to a mailing list or share your request with anyone else.
             </p>
             <p>
@@ -58,7 +61,7 @@ export default function PrivacyPage() {
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-foreground">4. Third-Party Services</h2>
             <p>
-              We use third-party services including Stripe for payment processing, Google for sign-in, Resend to send email, and Vercel to host the website. The analytics and advertising services we use are described in the next section. These services have their own privacy policies governing how they handle your data.
+              We use third-party services including Stripe for payment processing, Google for sign-in, Resend to send and receive email, Vercel to host the website and store files, and Anthropic (through Vercel) to draft replies to your emails. The analytics and advertising services we use are described in the next section. These services have their own privacy policies governing how they handle your data.
             </p>
           </section>
 
