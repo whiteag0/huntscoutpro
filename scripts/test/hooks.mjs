@@ -1,6 +1,6 @@
 // Node module hooks for `npm test` only: resolve the "@/..." path alias to src/
-// (trying .ts, .tsx and /index.ts like the bundler does) and stub "server-only",
-// which throws outside Next's server build.
+// and extensionless relative imports (trying .ts, .tsx and /index.ts like the
+// bundler does), and stub "server-only", which throws outside Next's server build.
 import { statSync } from "node:fs";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -19,6 +19,12 @@ export async function resolve(specifier, context, next) {
   if (specifier.startsWith("@/")) {
     const base = SRC + specifier.slice(2);
     for (const candidate of [base, `${base}.ts`, `${base}.tsx`, `${base}/index.ts`]) {
+      if (isFile(candidate)) return { url: pathToFileURL(candidate).href, shortCircuit: true };
+    }
+  }
+  if ((specifier.startsWith("./") || specifier.startsWith("../")) && !/\.[cm]?[jt]sx?$|\.json$/.test(specifier) && context.parentURL) {
+    const base = fileURLToPath(new URL(specifier, context.parentURL));
+    for (const candidate of [`${base}.ts`, `${base}.tsx`, `${base}/index.ts`]) {
       if (isFile(candidate)) return { url: pathToFileURL(candidate).href, shortCircuit: true };
     }
   }

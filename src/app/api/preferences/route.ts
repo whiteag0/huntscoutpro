@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import { auth } from "@/lib/auth";
 import { getEntitlement } from "@/lib/entitlement";
 import { sanitizePreferences, METHOD_OPTIONS, GOAL_OPTIONS, type HuntingPreferences } from "@/lib/preferences-schema";
@@ -6,8 +6,14 @@ import { readPreferences, writePreferences, PREFS_EMAIL_ID_KEY } from "@/lib/pre
 import { sendEmail, cancelScheduledEmail } from "@/lib/onboarding";
 import { preferencesNotification } from "@/lib/emails/onboarding";
 import { SPECIES_LABELS } from "@/data/types";
+import { pointsFromMetadata } from "@/lib/points";
+import { sendMemberReport } from "@/lib/report";
+import { reportDecision, reportInputHash, type ReportDecision } from "@/lib/report-trigger";
 
 export const dynamic = "force-dynamic";
+// The personal scouting report is built and emailed after the response (next/server after()),
+// within this function's time budget: typically a few seconds, most of it rendering the PDF.
+export const maxDuration = 60;
 
 const NOTIFY_TO = process.env.PREFERENCES_NOTIFY_TO || "adam@huntscoutpro.com";
 
@@ -67,9 +73,11 @@ export async function POST(req: NextRequest) {
 
   // Durable copy on the purchase's PaymentIntent (when we have one).
   let reminderId: string | undefined;
+  let before: Record<string, string> = {};
   if (m.ent.paymentIntentId) {
     try {
       const current = await readPreferences(m.ent.paymentIntentId);
+      before = current.metadata;
       reminderId = current.metadata[PREFS_EMAIL_ID_KEY];
       await writePreferences(m.ent.paymentIntentId, prefs);
     } catch (err) {
@@ -89,5 +97,21 @@ export async function POST(req: NextRequest) {
     if (reminderId) await cancelScheduledEmail(reminderId).catch(() => {});
   }
 
-  return NextResponse.json({ ok: true });
+  // The member's personal scouting report: built and emailed in the background so saving
+  // stays fast. First save sends it; later saves only when the answers that shape it change,
+  // at most once a day (members without a purchase record are covered by the send's
+  // idempotency key instead).
+  const savedPoints = pointsFromMetadata(before);
+  const hash = prefs ? reportInputHash(prefs, savedPoints) : "";
+  const report: ReportDecision = reportDecision({ prefs, metadata: before, hash, nowMs: Date.now() });
+  if (prefs && report === "send") {
+    const to = m.email;
+    const name = m.session!.user.name;
+    const paymentIntentId = m.ent.paymentIntentId ?? null;
+    after(async () => {
+      await sendMemberReport({ to, name, prefs, savedPoints, paymentIntentId, previousMetadata: before });
+    });
+  }
+
+  return NextResponse.json({ ok: true, report: report === "send" ? "queued" : report });
 }

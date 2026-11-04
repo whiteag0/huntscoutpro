@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
     "/api/planner/entries": ["./.agency-gz/**/*"],
     "/api/planner/refresh": ["./.agency-gz/**/*"],
     "/api/planner/hunts": ["./.agency-gz/**/*"],
+    // The personal scouting report reads the tables and embeds its fonts from disk.
+    "/api/preferences": ["./.agency-gz/**/*", "./src/assets/report-fonts/**/*"],
+    "/api/admin/report": ["./.agency-gz/**/*", "./src/assets/report-fonts/**/*"],
   },
   async redirects() {
     // The old /unit page showed generated data; unit pages now live under each state.

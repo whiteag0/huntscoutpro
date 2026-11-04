@@ -10,7 +10,7 @@ export default function PrivacyPage() {
 
         <div className="prose prose-sm text-muted-foreground space-y-6">
           <p className="text-sm text-muted-foreground">
-            Last updated: October 31, 2026
+            Last updated: November 4, 2026
           </p>
 
           <section className="space-y-3">
@@ -30,6 +30,9 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-semibold text-foreground">2. How We Use Your Information</h2>
             <p>
               We use your information to provide and improve HuntScout Pro, confirm your Pro access, answer your support requests, and contact you about your purchase or important service updates. Payment receipts are sent by Stripe.
+            </p>
+            <p>
+              If you&apos;re a Pro member and answer our hunting-preferences questions, we use your answers (states, residency, home state, species, methods, units and points) to build a personal scouting report from our state agency data, and email it to you as a PDF through Resend, our email provider (our team may receive a copy). We send a new report when you first answer and when you change those answers (at most once a day), and we note when the last report was sent on your purchase record at Stripe.
             </p>
             <p>
               State requests are emailed to our team through Resend, our email provider. We use them only to follow up with you about your request and to decide which states to add next. We don&apos;t add you to a mailing list or share your request with anyone else.
