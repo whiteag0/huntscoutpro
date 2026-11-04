@@ -266,19 +266,42 @@ export default function AccountPage() {
             <>
               <p className="text-foreground font-medium">Free account</p>
               <p className="text-sm text-muted-foreground mt-2">
-                Already paid? Make sure you&apos;re signed in with the same Google account
-                you used at checkout, then re-check below. If it still doesn&apos;t show,
-                email us and we&apos;ll unlock it right away.
+                You&apos;re signed in as{" "}
+                <span className="font-medium text-foreground break-all" data-clarity-mask="true">
+                  {email}
+                </span>
+                , and there&apos;s no HuntScout Pro purchase on this account.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 mt-5">
-                <button
-                  onClick={recheck}
-                  disabled={refreshing}
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold border border-border hover:bg-muted transition-all cursor-pointer disabled:opacity-50"
-                >
-                  <RefreshCw className={`w-4 h-4 ${refreshing ? "animate-spin" : ""}`} />
-                  Re-check membership
-                </button>
+              {/* A buyer signed in with the wrong Google account must not be steered into paying twice. */}
+              <div className="mt-4 rounded-xl border border-border bg-muted/50 p-4">
+                <p className="text-sm font-semibold text-foreground">Paid with another Google account?</p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Your membership is linked to the account you used at checkout. Switch to that one and
+                  it unlocks right away. Still missing? Re-check, or email us and we&apos;ll unlock it.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                  <button
+                    onClick={() => {
+                      track("sign_in_click", { method: "google", from: "account_switch" });
+                      signIn("google", { callbackUrl: "/account" }, { prompt: "select_account" });
+                    }}
+                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold border border-border bg-background hover:bg-muted transition-all cursor-pointer"
+                  >
+                    <User className="w-4 h-4" aria-hidden="true" />
+                    Switch account
+                  </button>
+                  <button
+                    onClick={recheck}
+                    disabled={refreshing}
+                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold border border-border bg-background hover:bg-muted transition-all cursor-pointer disabled:opacity-50"
+                  >
+                    <RefreshCw className={`w-4 h-4 ${refreshing ? "animate-spin" : ""}`} aria-hidden="true" />
+                    Re-check membership
+                  </button>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mt-5">Haven&apos;t bought it yet?</p>
+              <div className="flex flex-col sm:flex-row gap-3 mt-2">
                 <Link
                   href="/pricing"
                   className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
@@ -428,7 +451,7 @@ export default function AccountPage() {
           <section className="bg-card border border-border rounded-2xl p-6">
             <h2 className="text-lg font-bold mb-2">Admin: onboarding emails</h2>
             <p className="text-sm text-muted-foreground">
-              New buyers automatically get the sign-in email right away and the hunting-preferences
+              New buyers automatically get the welcome email right away and the hunting-preferences
               email 24 hours later. Send yourself both now to check how they look.
             </p>
             <button

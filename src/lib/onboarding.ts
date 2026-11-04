@@ -1,8 +1,10 @@
 import type Stripe from "stripe";
 import { stripe } from "@/lib/stripe";
-import { PREFS_EMAIL_ID_KEY } from "@/lib/preferences";
+import { PREFS_EMAIL_ID_KEY, preferencesFromMetadata } from "@/lib/preferences";
 import { isHuntScoutSession, sessionAccessEnd } from "@/lib/entitlement";
 import { welcomeEmail, preferencesEmail, type RenderedEmail } from "@/lib/emails/onboarding";
+import { purchaseNotification } from "@/lib/emails/lifecycle";
+import { ONBOARDING_SENT_KEY, ONBOARDING_SINCE, PURCHASE_ALERT_KEY } from "@/lib/lifecycle";
 import { inboundAddress, isInboundConfigured, resendApiBase } from "@/lib/inbound/config";
 
 const FROM = process.env.EMAIL_FROM || "Adam White, HuntScout Pro <adam@huntscoutpro.com>";
@@ -11,14 +13,14 @@ const FROM = process.env.EMAIL_FROM || "Adam White, HuntScout Pro <adam@huntscou
 const REPLY_TO = (isInboundConfigured() && inboundAddress()) || process.env.EMAIL_REPLY_TO || "adam@huntscoutpro.com";
 // Optional comma-separated BCC so the owner sees every onboarding email.
 const BCC = (process.env.ONBOARDING_BCC || "").split(",").map((s) => s.trim()).filter(Boolean);
+/** Where owner alerts go: each new purchase, and the daily onboarding check. */
+export const OWNER_ALERTS_TO = process.env.OWNER_ALERTS_TO || "adam@huntscoutpro.com";
 
-// Purchases before this were onboarded by hand; never email them automatically.
-const ONBOARDING_SINCE = Date.parse("2026-10-08T00:00:00Z");
 // Only act on recent payments. Must stay under Resend's 24 h idempotency-key
 // window so a late retry can never produce a second copy.
 const MAX_PAYMENT_AGE_MS = 20 * 60 * 60 * 1000;
 // Stamped on the PaymentIntent once both emails are accepted: the durable guard.
-const SENT_KEY = "hs_onboarding_sent_at";
+const SENT_KEY = ONBOARDING_SENT_KEY;
 // Email 2 goes out this long after purchase.
 const PREFERENCES_DELAY_MS = 24 * 60 * 60 * 1000;
 
@@ -126,9 +128,12 @@ function buyerEmail(s: Stripe.Checkout.Session): string | null {
 
 /**
  * Send the two onboarding emails for a paid HuntScout checkout:
- * 1) sign-in instructions now, 2) hunting-preferences intake 24 h after payment.
- * Safe to call repeatedly (webhook retries, /success reloads): a marker on the
- * PaymentIntent stops repeats for good, and Resend idempotency keys cover races.
+ * 1) welcome now, 2) hunting-preferences intake 24 h after payment,
+ * plus the owner's "New HuntScout Pro purchase" alert.
+ * Safe to call repeatedly (webhook retries, /success reloads): markers on the
+ * PaymentIntent stop repeats for good, and Resend idempotency keys cover races.
+ * Throws when anything wasn't sent, so the webhook answers 500 and Stripe retries
+ * (whatever did go out is already marked and won't repeat).
  */
 export async function sendOnboardingEmails(s: Stripe.Checkout.Session): Promise<"sent" | "skipped"> {
   if (!stripe || !isHuntScoutSession(s) || s.payment_status !== "paid") return "skipped";
@@ -138,7 +143,9 @@ export async function sendOnboardingEmails(s: Stripe.Checkout.Session): Promise<
   if (!to || !piId) return "skipped";
 
   const pi = await stripe.paymentIntents.retrieve(piId);
-  if (pi.metadata?.[SENT_KEY]) return "skipped";
+  const onboarded = !!pi.metadata?.[SENT_KEY];
+  const alerted = !!pi.metadata?.[PURCHASE_ALERT_KEY];
+  if (onboarded && alerted) return "skipped";
   const paidMs = pi.created * 1000;
   if (Date.now() - paidMs > MAX_PAYMENT_AGE_MS) return "skipped";
   if (!process.env.RESEND_API_KEY) {
@@ -147,31 +154,64 @@ export async function sendOnboardingEmails(s: Stripe.Checkout.Session): Promise<
   }
 
   const name = s.metadata?.userName || s.customer_details?.name || null;
-  await sendEmail({
-    to,
-    email: welcomeEmail({ name, email: to, accessUntil: sessionAccessEnd(s) }),
-    idempotencyKey: `hs-welcome-${s.id}`,
-  });
+  const stamps: Record<string, string> = {};
+  let alertError: unknown = null;
+  try {
+    // The owner's alert first: a failure here never holds up the buyer's welcome email.
+    if (!alerted) {
+      try {
+        await sendEmail({
+          to: OWNER_ALERTS_TO,
+          replyTo: to,
+          bcc: false,
+          email: purchaseNotification({
+            name,
+            email: to,
+            amountCents: s.amount_total ?? pi.amount ?? null,
+            currency: s.currency ?? pi.currency ?? null,
+            paidAtMs: paidMs,
+            accessUntil: sessionAccessEnd(s),
+            states: preferencesFromMetadata(pi.metadata)?.states,
+            paymentIntentId: piId,
+          }),
+          idempotencyKey: `hs-sale-${s.id}`,
+        });
+        stamps[PURCHASE_ALERT_KEY] = new Date().toISOString();
+      } catch (err) {
+        alertError = err;
+        console.error(`Purchase alert failed for checkout ${s.id}:`, err);
+      }
+    }
 
-  const prefsId = await sendEmail({
-    to,
-    email: preferencesEmail({ name }),
-    idempotencyKey: `hs-prefs-${s.id}`,
-    // Derived from the payment, so every trigger sends an identical payload.
-    scheduledAt: new Date(paidMs + PREFERENCES_DELAY_MS).toISOString(),
-  });
+    if (!onboarded) {
+      await sendEmail({
+        to,
+        email: welcomeEmail({ name, email: to, accessUntil: sessionAccessEnd(s) }),
+        idempotencyKey: `hs-welcome-${s.id}`,
+      });
 
-  // Mark done, and keep the scheduled email's id so it can be cancelled if the
-  // member fills in /welcome first or is refunded.
-  await stripe.paymentIntents
-    .update(piId, {
-      metadata: {
-        [SENT_KEY]: new Date().toISOString(),
-        ...(prefsId && prefsId !== "sent" ? { [PREFS_EMAIL_ID_KEY]: prefsId } : {}),
-      },
-    })
-    .catch((err) => console.error(`Could not mark onboarding sent on ${piId}:`, err));
-  return "sent";
+      const prefsId = await sendEmail({
+        to,
+        email: preferencesEmail({ name }),
+        idempotencyKey: `hs-prefs-${s.id}`,
+        // Derived from the payment, so every trigger sends an identical payload.
+        scheduledAt: new Date(paidMs + PREFERENCES_DELAY_MS).toISOString(),
+      });
+
+      // Mark done, and keep the scheduled email's id so it can be cancelled if the
+      // member fills in /welcome first or is refunded.
+      stamps[SENT_KEY] = new Date().toISOString();
+      if (prefsId && prefsId !== "sent") stamps[PREFS_EMAIL_ID_KEY] = prefsId;
+    }
+  } finally {
+    if (Object.keys(stamps).length) {
+      await stripe.paymentIntents
+        .update(piId, { metadata: stamps })
+        .catch((err) => console.error(`Could not mark onboarding sent on ${piId}:`, err));
+    }
+  }
+  if (alertError) throw new Error(`Purchase alert not sent: ${alertError instanceof Error ? alertError.message : String(alertError)}`);
+  return onboarded ? "skipped" : "sent";
 }
 
 /** On refund/dispute: cancel the not-yet-sent intake email for that payment. */

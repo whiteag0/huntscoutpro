@@ -100,6 +100,35 @@ function SummaryRow({ label, children }: { label: string; children: React.ReactN
   );
 }
 
+/**
+ * Shown while the member's profile has no states: deadline reminders only cover the
+ * states in it (src/lib/members.ts), and the 3- and 7-day nudge emails ask for the same.
+ */
+function FinishProfileBanner({ hasSpecies }: { hasSpecies: boolean }) {
+  return (
+    <section
+      aria-labelledby="finish-profile-heading"
+      className="mb-8 flex flex-col sm:flex-row sm:items-center gap-4 rounded-2xl border border-gold/60 bg-gold/10 p-4 sm:p-5"
+    >
+      <div className="min-w-0 flex-1">
+        <h2 id="finish-profile-heading" className="font-semibold text-foreground">
+          Finish your hunting profile
+        </h2>
+        <p className="text-sm text-muted-foreground mt-1">
+          {hasSpecies ? "You've picked your species but no states yet. " : "You haven't told us where you hunt yet. "}
+          Deadline reminders only cover the states in your profile, and your personal scouting report is built from it. About 2 minutes.
+        </p>
+      </div>
+      <Link
+        href="/welcome"
+        className="inline-flex items-center justify-center gap-2 shrink-0 px-5 py-2.5 rounded-xl text-sm font-semibold gradient-gold text-gold-foreground hover:brightness-110 transition-all"
+      >
+        Add my states <ArrowRight className="w-4 h-4" aria-hidden="true" />
+      </Link>
+    </section>
+  );
+}
+
 function YourHuntsCard({ load }: { load: PrefsLoad }) {
   const prefs = load.state === "ready" ? load.preferences : null;
   const filled = hasAnswers(prefs);
@@ -246,6 +275,7 @@ export function MemberHome({
 }) {
   const prefs = usePreferences(true);
   const until = formatLongDate(proExpiresAt);
+  const noStates = prefs.state === "ready" && !prefs.preferences?.states.length;
 
   return (
     <div className="min-h-screen gradient-subtle">
@@ -263,6 +293,8 @@ export function MemberHome({
             Pick up your research where you left off.
           </p>
         </div>
+
+        {noStates && <FinishProfileBanner hasSpecies={!!prefs.preferences?.species.length} />}
 
         {/* Quick launch */}
         <nav aria-label="Pro tools" className="mb-8">

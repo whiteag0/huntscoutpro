@@ -196,7 +196,7 @@ function SuccessContent() {
                 <p className="text-sm text-muted-foreground mb-2">
                   {onboarded
                     ? "Done. You can update your states, species, units and points anytime."
-                    : "Six quick questions (about 2 minutes) on your states, species, units and points, so HuntScout opens on what matters to you."}
+                    : "Four quick steps (about 2 minutes) on your states, species, units and points. When you save, we email you a personal scouting report built from your answers."}
                 </p>
                 <Link
                   href="/welcome"

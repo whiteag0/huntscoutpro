@@ -25,8 +25,11 @@ export function esc(s: string): string {
 const DEFAULT_FOOTER = `You're receiving this because you purchased HuntScout Pro at huntscoutpro.com.<br>
 HuntScout Pro &middot; <a href="${SITE}" style="color:#8a8a8a;">www.huntscoutpro.com</a>`;
 
-/** Branded shell: dark header, white card with signature, small grey footer (HTML, already escaped). */
-export function layout(preheader: string, body: string, footerHtml: string = DEFAULT_FOOTER): string {
+/**
+ * Branded shell: dark header, white card with signature, small grey footer (HTML, already escaped).
+ * `signature: false` drops Adam's signature (internal emails to the owner).
+ */
+export function layout(preheader: string, body: string, footerHtml: string = DEFAULT_FOOTER, signature = true): string {
   return `<!doctype html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HuntScout Pro</title></head>
 <body style="margin:0;padding:0;background:#f4f2ee;">
@@ -40,7 +43,7 @@ export function layout(preheader: string, body: string, footerHtml: string = DEF
 </td></tr>
 <tr><td style="background:#ffffff;border:1px solid #e3e3e3;border-top:3px solid ${GOLD};padding:26px 28px;">
 ${body}
-${signatureHtml()}
+${signature ? signatureHtml() : ""}
 </td></tr>
 <tr><td style="padding:16px 28px;font-size:12px;color:#8a8a8a;text-align:center;">
 ${footerHtml}
@@ -80,55 +83,37 @@ function formatDate(d: Date): string {
   return d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
 }
 
-/** Email 1: sent right after purchase. How to sign in and where to start. */
+/**
+ * Email 1: sent right after purchase. Buyers are signed in by then (checkout needs a
+ * Google sign-in), so it skips sign-in steps and points at the one thing to do next:
+ * the /welcome form, which emails them their personal scouting report.
+ */
 export function welcomeEmail(opts: { name?: string | null; email: string; accessUntil: Date | null }): RenderedEmail {
   const first = firstNameOf(opts.name);
   const until = opts.accessUntil ? formatDate(opts.accessUntil) : null;
-  const subject = "Welcome to HuntScout Pro: how to sign in";
-  const step = (n: number, html: string) =>
-    `<tr><td valign="top" style="padding:0 12px 12px 0;"><span style="display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;border-radius:13px;background:${GOLD};color:${DARK};font-weight:bold;font-size:13px;">${n}</span></td><td style="padding:0 0 12px 0;">${html}</td></tr>`;
+  const subject = "You're in \u2014 2 minutes to get your personal scouting report";
 
   const html = layout(
-    "Your membership is active. Here's how to sign in.",
+    "Answer a few questions and we'll email you a scouting report built from agency data.",
     `<p>Hi ${esc(first)},</p>
-<p>Thank you for joining HuntScout Pro. Your payment went through and your membership is active${until ? ` through <b>${until}</b>` : ""}.</p>
-<p style="margin-top:22px;"><b style="color:${DARK};font-size:16px;">How to sign in</b></p>
-<table role="presentation" cellpadding="0" cellspacing="0">
-${step(1, `Go to <a href="${SITE}/signin" style="color:${LINK};">huntscoutpro.com/signin</a>.`)}
-${step(2, `Click <b>Continue with Google</b> using <b>${esc(opts.email)}</b>, the account you checked out with. There's no password to create.`)}
-${step(3, `Click your name at the top right to open <b>My Account</b>. It shows your HuntScout Pro membership as active.`)}
-</table>
-${button(`${SITE}/signin?callbackUrl=%2Fstates`, "Sign in to HuntScout Pro")}
-<p style="margin-top:22px;"><b style="color:${DARK};font-size:16px;">Where to start</b></p>
-<ul style="padding-left:20px;margin:8px 0;">
-<li style="margin:0 0 8px 0;"><a href="${SITE}/states" style="color:${LINK};">Explore states</a> and pick the ones you plan to apply in.</li>
-<li style="margin:0 0 8px 0;">Pick a species on a state page and enter your points to see how applicants at your level did in past draws, where the agency publishes results by point level.</li>
-<li style="margin:0 0 8px 0;"><a href="${SITE}/compare" style="color:${LINK};">Compare units</a> side by side, and plan your season in the <a href="${SITE}/planner" style="color:${LINK};">Hunt Planner</a>.</li>
-</ul>
-<p>It's a one-time payment, so nothing renews and you won't be charged again. If HuntScout Pro isn't what you expected, you can get a full refund within 30 days. Just reply to this email.</p>
-<p style="background:#faf7ef;border-left:3px solid ${GOLD};padding:10px 14px;font-size:14px;">A tip as you research: every number on HuntScout Pro comes from the state wildlife agency's own reports, and each table links to its source. Draw results describe past draws, so please confirm dates and rules with the agency before you apply.</p>
-<p>Questions, or anything still locked? Reply here and I'll take care of it personally.</p>`
+<p>Thanks for joining HuntScout Pro. Your membership is active${until ? ` through <b>${until}</b>` : ""} and linked to <b>${esc(opts.email)}</b>, the Google account you checked out with.</p>
+<p>One step left, and it takes about 2 minutes: tell us which states and species you're after, your points, and the units you're looking at. When you save, we email you a <b>personal scouting report</b> (PDF) built from the state agencies' own draw, harvest, date and fee data for your answers.</p>
+${button(`${SITE}/welcome`, "Get my scouting report")}
+<p>One favor: please reply <b>&ldquo;got it&rdquo;</b> to this email. It tells your inbox you want mail from us, so your report and deadline reminders don't land in spam or Promotions.</p>
+<p>It's a one-time payment, so nothing renews. If HuntScout Pro isn't what you expected, reply within 30 days for a full refund. Questions? Reply here and I'll take care of it personally.</p>`
   );
 
   const text = `Hi ${first},
 
-Thank you for joining HuntScout Pro. Your payment went through and your membership is active${until ? ` through ${until}` : ""}.
+Thanks for joining HuntScout Pro. Your membership is active${until ? ` through ${until}` : ""} and linked to ${opts.email}, the Google account you checked out with.
 
-HOW TO SIGN IN
-1. Go to ${SITE}/signin
-2. Click "Continue with Google" using ${opts.email}, the account you checked out with. There's no password to create.
-3. Click your name at the top right to open My Account. It shows your HuntScout Pro membership as active.
+One step left, and it takes about 2 minutes: tell us which states and species you're after, your points, and the units you're looking at. When you save, we email you a personal scouting report (PDF) built from the state agencies' own draw, harvest, date and fee data for your answers.
 
-WHERE TO START
-- Explore states: ${SITE}/states
-- Pick a species on a state page and enter your points to see how applicants at your level did in past draws, where the agency publishes results by point level.
-- Compare units: ${SITE}/compare  |  Hunt Planner: ${SITE}/planner
+Get my scouting report: ${SITE}/welcome
 
-It's a one-time payment, so nothing renews and you won't be charged again. If HuntScout Pro isn't what you expected, you can get a full refund within 30 days. Just reply to this email.
+One favor: please reply "got it" to this email. It tells your inbox you want mail from us, so your report and deadline reminders don't land in spam or Promotions.
 
-A tip as you research: every number on HuntScout Pro comes from the state wildlife agency's own reports, and each table links to its source. Draw results describe past draws, so please confirm dates and rules with the agency before you apply.
-
-Questions, or anything still locked? Reply here and I'll take care of it personally.
+It's a one-time payment, so nothing renews. If HuntScout Pro isn't what you expected, reply within 30 days for a full refund. Questions? Reply here and I'll take care of it personally.
 
 ${SIGNATURE_TEXT}`;
 
@@ -152,7 +137,7 @@ export function preferencesEmail(opts: { name?: string | null }): RenderedEmail 
     "Tell us where and what you hunt. Short answers are perfect.",
     `<p>Dear ${esc(first)},</p>
 <p>Thank you again for joining the HuntScout Pro community. As one of our early members, you get something we don't offer the general public: <b>one-on-one attention from our team</b>. Our goal is for HuntScout Pro to be a hands-on, genuinely powerful resource for your hunting, not just a website you log in to.</p>
-<p style="margin-top:22px;"><b style="color:${DARK};font-size:16px;">Help us tailor HuntScout Pro to your hunts</b><br>Answer six quick questions on the site (about 2 minutes), or just reply to this email with whatever you know. Short answers are perfect.</p>
+<p style="margin-top:22px;"><b style="color:${DARK};font-size:16px;">Help us tailor HuntScout Pro to your hunts</b><br>Answer a few quick questions on the site (four short steps, about 2 minutes), or just reply to this email with whatever you know. Short answers are perfect.</p>
 ${button(`${SITE}/welcome`, "Tell us about your hunts")}
 <ol style="padding-left:20px;margin:12px 0;">
 ${QUESTIONS.map(([q, d]) => `<li style="margin:0 0 8px 0;"><b>${q}</b> ${d}</li>`).join("\n")}
@@ -168,7 +153,7 @@ ${QUESTIONS.map(([q, d]) => `<li style="margin:0 0 8px 0;"><b>${q}</b> ${d}</li>
 Thank you again for joining the HuntScout Pro community. As one of our early members, you get something we don't offer the general public: one-on-one attention from our team. Our goal is for HuntScout Pro to be a hands-on, genuinely powerful resource for your hunting, not just a website you log in to.
 
 HELP US TAILOR HUNTSCOUT PRO TO YOUR HUNTS
-Answer six quick questions at ${SITE}/welcome (about 2 minutes), or just reply to this email with whatever you know. Short answers are perfect.
+Answer a few quick questions at ${SITE}/welcome (four short steps, about 2 minutes), or just reply to this email with whatever you know. Short answers are perfect.
 
 ${QUESTIONS.map(([q, d], i) => `${i + 1}. ${q} ${d}`).join("\n")}
 
