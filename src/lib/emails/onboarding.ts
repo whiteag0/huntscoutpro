@@ -40,7 +40,7 @@ export function layout(preheader: string, body: string, footerHtml: string = DEF
 </td></tr>
 <tr><td style="background:#ffffff;border:1px solid #e3e3e3;border-top:3px solid ${GOLD};padding:26px 28px;">
 ${body}
-${signature()}
+${signatureHtml()}
 </td></tr>
 <tr><td style="padding:16px 28px;font-size:12px;color:#8a8a8a;text-align:center;">
 ${footerHtml}
@@ -50,7 +50,8 @@ ${footerHtml}
 </body></html>`;
 }
 
-function signature(): string {
+/** Adam's signature block (HTML). */
+export function signatureHtml(): string {
   return `<table role="presentation" cellpadding="0" cellspacing="0" style="border-top:2px solid ${GOLD};margin-top:24px;"><tr><td style="padding-top:10px;">
 <div style="font-size:16px;font-weight:bold;color:${DARK};">Adam White</div>
 <div style="color:#555;">CEO &amp; Founder</div>

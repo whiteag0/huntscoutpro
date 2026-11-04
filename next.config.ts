@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
     "/api/planner/entries": ["./.agency-gz/**/*"],
     "/api/planner/refresh": ["./.agency-gz/**/*"],
     "/api/planner/hunts": ["./.agency-gz/**/*"],
+    // Reply drafts quote draw results for units a customer mentions.
+    "/api/inbound/email": ["./.agency-gz/**/*"],
+    "/admin/replies/[id]": ["./.agency-gz/**/*"],
   },
   async redirects() {
     // The old /unit page showed generated data; unit pages now live under each state.
