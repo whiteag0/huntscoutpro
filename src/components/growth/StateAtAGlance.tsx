@@ -2,10 +2,11 @@ import { CalendarDays, ExternalLink, FileText } from "lucide-react";
 import type { StateData } from "@/lib/agency";
 import { fmtNum, fmtPct, formatDate } from "@/lib/agency-format";
 import { spanLabel, type GlanceSpecies, type StateGlance } from "@/components/growth/state-glance";
+import { ShowMore } from "@/components/agency/mobile";
 
 // Server-rendered public summary of a live state: draw system, next agency
 // dates, the agency's statewide harvest totals, years covered and sources.
-// The per-hunt and per-unit tables stay behind Pro in the explorer above.
+// The per-hunt and per-unit tables stay behind Pro in the explorer, which places this block.
 
 function StatewideLine({ s }: { s: NonNullable<GlanceSpecies["statewide"]> }) {
   return (
@@ -95,7 +96,7 @@ function SpeciesCard({ s }: { s: GlanceSpecies }) {
 
 export function StateAtAGlance({ state, glance }: { state: StateData; glance: StateGlance }) {
   return (
-    <section aria-labelledby="at-a-glance" className="max-w-7xl mx-auto px-4 pb-8">
+    <section aria-labelledby="at-a-glance" className="my-8">
       <div className="border-t border-border pt-8">
         <div className="flex items-center gap-2 text-primary mb-1">
           <CalendarDays className="w-4 h-4" aria-hidden />
@@ -108,9 +109,11 @@ export function StateAtAGlance({ state, glance }: { state: StateData; glance: St
           From {state.agency.name}&apos;s published reports and schedules
           {glance.drawYears && <>: draw results {spanLabel(glance.drawYears)}</>}
           {glance.harvestYears && <>, harvest {spanLabel(glance.harvestYears)}</>}. Checked against the agency on {formatDate(state.lastReviewed)}.
-          Statewide totals are the agency&apos;s own figures; results for each hunt code and {state.unitTerm} are in the tables above.
+          Statewide totals are the agency&apos;s own figures; results for each hunt code and {state.unitTerm} are in the draw and harvest tables.
         </p>
 
+        {/* Phones: it sits above the tables for non-members, so it starts short (the full text stays in the page). */}
+        <ShowMore until="sm" collapsed={640} onBackground moreLabel={`Show the full ${state.name} summary`} lessLabel="Show less">
         <div className="mt-5 grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {glance.species.map((s) => (
             <SpeciesCard key={s.species} s={s} />
@@ -142,6 +145,7 @@ export function StateAtAGlance({ state, glance }: { state: StateData; glance: St
             ))}
           </ul>
         </div>
+        </ShowMore>
       </div>
     </section>
   );

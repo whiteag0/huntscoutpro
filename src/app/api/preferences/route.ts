@@ -7,7 +7,10 @@ import { sendEmail, cancelScheduledEmail } from "@/lib/onboarding";
 import { preferencesNotification } from "@/lib/emails/onboarding";
 import { SPECIES_LABELS } from "@/data/types";
 import { pointsFromMetadata } from "@/lib/points";
-import { REPORT_PENDING_KEY, reportDecision, reportInputHash, type ReportDecision } from "@/lib/report-trigger";
+import { REPORT_PENDING_KEY, reportDecision, reportInputHash, reportStatus, type ReportDecision } from "@/lib/report-trigger";
+import { getAllStateData } from "@/lib/agency";
+import { todayIso } from "@/lib/agency-format";
+import { nextDeadlines } from "@/lib/reminders";
 
 export const dynamic = "force-dynamic";
 // The personal scouting report is built and emailed after the response (next/server after()),
@@ -25,16 +28,22 @@ async function member() {
   return { session, email, ent };
 }
 
-/** The signed-in member's saved hunting preferences. */
+/**
+ * The signed-in member's saved hunting preferences, plus what member home shows from them:
+ * the next agency deadlines for their states and species, and their scouting report's status.
+ */
 export async function GET() {
   const m = await member();
   if ("error" in m) return m.error;
   if (!m.ent.paymentIntentId) {
-    return NextResponse.json({ preferences: null, onboarded: m.session!.user.onboarded === true });
+    return NextResponse.json({ preferences: null, onboarded: m.session!.user.onboarded === true, upcoming: [], report: null });
   }
   try {
-    const { preferences, onboarded } = await readPreferences(m.ent.paymentIntentId);
-    return NextResponse.json({ preferences, onboarded });
+    const { preferences, onboarded, metadata } = await readPreferences(m.ent.paymentIntentId);
+    const upcoming = preferences
+      ? nextDeadlines({ email: m.email, ...preferences }, await getAllStateData(), todayIso())
+      : [];
+    return NextResponse.json({ preferences, onboarded, upcoming, report: reportStatus(metadata, Date.now()) });
   } catch (err) {
     console.error("Preferences read failed:", err);
     return NextResponse.json({ error: "Couldn't load your preferences." }, { status: 502 });

@@ -29,15 +29,18 @@ async function loadTable<T>(state: string, species: string, kind: "draw" | "harv
   return { rows, total, preview: true, meta: { years, year, yearTotal, rankedBy } };
 }
 
-/** Loads one state's species tables. Members get everything; others get a small preview. */
-export function useSpeciesData(state: string, species: string) {
+/**
+ * Loads one state's species tables. Members get everything; others get a small preview.
+ * `enabled: false` holds the request (e.g. until the member's saved species is known).
+ */
+export function useSpeciesData(state: string, species: string, enabled = true) {
   const { data: session, status } = useSession();
   const isPro = !!session?.user?.isPro;
   const key = `${state}/${species}/${isPro ? "pro" : "free"}`;
   const [result, setResult] = useState<{ key: string; data: SpeciesPayload | null; error: string | null } | null>(null);
 
   useEffect(() => {
-    if (status === "loading") return;
+    if (status === "loading" || !enabled) return;
     const ctrl = new AbortController();
     Promise.all([loadTable<DrawRecord>(state, species, "draw", ctrl.signal), loadTable<HarvestRecord>(state, species, "harvest", ctrl.signal)])
       .then(([draw, harvest]) =>
@@ -57,7 +60,7 @@ export function useSpeciesData(state: string, species: string) {
         if (e.name !== "AbortError") setResult({ key, data: null, error: e.message });
       });
     return () => ctrl.abort();
-  }, [state, species, status, key]);
+  }, [state, species, status, key, enabled]);
 
   const current = result?.key === key ? result : null;
   return { data: current?.data ?? null, error: current?.error ?? null, loading: !current };

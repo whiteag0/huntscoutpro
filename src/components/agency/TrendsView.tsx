@@ -13,6 +13,8 @@ import { useSpeciesData } from "@/components/agency/useSpeciesData";
 import { SourceNotes, footnoteIndex } from "@/components/agency/SourceNotes";
 import { pill } from "@/components/agency/mobile";
 import { track } from "@/lib/analytics";
+import { profileOf, useMemberProfile } from "@/components/useMemberProfile";
+import { profileStart, residencyIn } from "@/lib/member-defaults";
 
 // First column stays put while the year columns scroll sideways on a phone.
 const stickyTh = "sticky left-0 z-10 bg-muted text-left px-3 py-2.5 shadow-[1px_0_0_var(--border)]";
@@ -40,11 +42,36 @@ function Delta({ v, invert, suffix = "" }: { v: number | null; invert?: boolean;
   );
 }
 
-export function TrendsView({ options, slug, species, pointsMatter, sources }: { options: Option[]; slug: string; species: Species; pointsMatter: boolean; sources: SourceRef[] }) {
+export function TrendsView({
+  options,
+  slug,
+  species,
+  pointsMatter,
+  sources,
+  fromUrl,
+}: {
+  options: Option[];
+  slug: string;
+  species: Species;
+  pointsMatter: boolean;
+  sources: SourceRef[];
+  /** The state or species came from the URL; otherwise a member starts from their saved state and species. */
+  fromUrl: boolean;
+}) {
   const router = useRouter();
   const opt = options.find((o) => o.slug === slug)!;
-  const { data, loading, error } = useSpeciesData(slug, species);
-  const [residency, setResidency] = useState<DrawResidency>("resident");
+  const profileLoad = useMemberProfile();
+  const profile = profileOf(profileLoad);
+  const start = fromUrl ? null : profileStart(profile?.preferences, options.map((o) => ({ slug: o.slug, species: o.species.map((s) => s.species) })));
+  const moving = !!start && (start.state !== slug || (!!start.species && start.species !== species));
+  const target = moving && start ? `/trends?state=${start.state}${start.species ? `&species=${start.species}` : ""}` : null;
+  useEffect(() => {
+    if (target) router.replace(target);
+  }, [target, router]);
+  // Hold the tables until we know where a member starts, so the default state's data isn't fetched for nothing.
+  const { data, loading, error } = useSpeciesData(slug, species, fromUrl || (profileLoad.status !== "loading" && !moving));
+  const [residencyChoice, setResidency] = useState<DrawResidency | null>(null);
+  const residency: DrawResidency = residencyChoice ?? residencyIn(profile?.preferences, slug) ?? "resident";
   useEffect(() => track("trends_view", { state: slug, species }), [slug, species]);
 
   const go = (s: string, spc?: Species) => {
@@ -140,7 +167,7 @@ export function TrendsView({ options, slug, species, pointsMatter, sources }: { 
         </Link>
       </div>
 
-      {loading && !data ? (
+      {(loading && !data) || profileLoad.status === "loading" ? (
         <div className="flex items-center justify-center py-16 text-muted-foreground">
           <Loader2 className="w-5 h-5 animate-spin mr-2" aria-hidden /> Loading…
         </div>

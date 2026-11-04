@@ -20,6 +20,8 @@ import { huntSteps } from "@/lib/planner-timeline";
 import { PLANNER_GATE, US_STATES, generateId } from "@/components/planner/defaults";
 import { usePlannerSync } from "@/components/planner/usePlannerSync";
 import { CycleNotice, DateList, DrawFacts, FeeList, SeasonBlock, SourceLink, huntTitle } from "@/components/planner/PlannerParts";
+import { profileOf, useMemberProfile } from "@/components/useMemberProfile";
+import { pointsIn, profileSpecies, profileStart, profileStates, residencyIn } from "@/lib/member-defaults";
 
 export interface FlowSpecies {
   species: Species;
@@ -158,10 +160,17 @@ function FlowBody({ states, initial }: { states: FlowState[]; initial: FlowIniti
   const initSpecies = initState?.species.find((s) => s.species === initial.species);
   const startStep: Step = !initState ? "state" : !initSpecies ? "species" : !initial.residency ? "residency" : initial.hunt || initial.kind ? "review" : "hunt";
 
+  // What the link says wins; otherwise the member's saved state, species and residency are preselected.
+  const prefs = profileOf(useMemberProfile())?.preferences;
   const [step, setStep] = useState<Step>(startStep);
-  const [slug, setSlug] = useState(initState?.slug || "");
-  const [species, setSpecies] = useState<Species | "">(initSpecies?.species || "");
-  const [residency, setResidency] = useState<PlannerResidency | "">(initial.residency || "");
+  const [slugChoice, setSlug] = useState<string | null>(initState?.slug ?? null);
+  const [speciesChoice, setSpecies] = useState<Species | null>(initSpecies?.species ?? null);
+  const [residencyChoice, setResidency] = useState<PlannerResidency | null>(initial.residency ?? null);
+  const slug =
+    slugChoice ?? (initial.state ? "" : profileStart(prefs, states.map((s) => ({ slug: s.slug, species: s.species.map((x) => x.species) })))?.state) ?? "";
+  const stDefault = states.find((s) => s.slug === slug);
+  const species: Species | "" = speciesChoice ?? (stDefault ? profileSpecies(prefs, stDefault.species.map((x) => x.species)) : undefined) ?? "";
+  const residency: PlannerResidency | "" = residencyChoice ?? (slug ? residencyIn(prefs, slug) : null) ?? "";
   const [kind, setKind] = useState<PlanKind>(initial.kind || "draw");
   const [huntCode, setHuntCode] = useState(initial.hunt || "");
   const [drawYear, setDrawYear] = useState<number | undefined>(initial.year);
@@ -192,11 +201,13 @@ function FlowBody({ states, initial }: { states: FlowState[]; initial: FlowIniti
   const go = (s: Step) => setStep(s);
   const idx = STEPS.indexOf(step);
 
+  // A preselected answer from the profile shows as a chip only once its step is behind the member.
+  const settled = (s: Step, choice: unknown) => choice !== null || STEPS.indexOf(s) < idx;
   const summary: { step: Step; label: string }[] = [];
   if (slug === OTHER_STATE) summary.push({ step: "state", label: "Another state" });
-  else if (st) summary.push({ step: "state", label: st.name });
-  if (sp) summary.push({ step: "species", label: sp.label });
-  if (residency) summary.push({ step: "residency", label: residency === "resident" ? "Resident" : "Nonresident" });
+  else if (st && settled("state", slugChoice)) summary.push({ step: "state", label: st.name });
+  if (sp && settled("species", speciesChoice)) summary.push({ step: "species", label: sp.label });
+  if (residency && settled("residency", residencyChoice)) summary.push({ step: "residency", label: residency === "resident" ? "Resident" : "Nonresident" });
   if (step === "review") summary.push({ step: "hunt", label: kind === "draw" ? huntCode : kind === "otc" ? "General / OTC" : "Your own hunt" });
 
   if (slug === OTHER_STATE) {
@@ -205,7 +216,7 @@ function FlowBody({ states, initial }: { states: FlowState[]; initial: FlowIniti
         <ManualHunt
           ready={!!sync.data}
           covered={states.map((s) => s.name)}
-          onBack={() => setSlug("")}
+          onBack={() => setSlug(null)}
           onSave={(h) => {
             sync.update((prev) => ({ ...prev, hunts: [...prev.hunts, h] }));
             track("plan_save", { state: h.state, species: h.species, kind: "custom", storage: sync.account ? "account" : "browser" });
@@ -221,10 +232,12 @@ function FlowBody({ states, initial }: { states: FlowState[]; initial: FlowIniti
       {step === "state" && (
         <StatePick
           states={states}
+          mine={profileStates(prefs, states.map((s) => s.slug))}
           value={slug}
           onPick={(s, advance) => {
             if (s !== slug) {
-              setSpecies("");
+              // The member's saved species for the new state (if it has one) is preselected again.
+              setSpecies(null);
               setHuntCode("");
             }
             setSlug(s);
@@ -236,6 +249,7 @@ function FlowBody({ states, initial }: { states: FlowState[]; initial: FlowIniti
       {step === "species" && st && (
         <SpeciesPick
           st={st}
+          mine={prefs?.species || []}
           value={species}
           onBack={() => go("state")}
           onPick={(s, advance) => {
@@ -249,6 +263,7 @@ function FlowBody({ states, initial }: { states: FlowState[]; initial: FlowIniti
       {step === "residency" && st && sp && (
         <ResidencyPick
           st={st}
+          fromProfile={residencyChoice === null && !!residency}
           value={residency}
           onBack={() => go("species")}
           onPick={(r, advance) => {
@@ -412,7 +427,12 @@ function ContinueButton({ disabled, onClick }: { disabled: boolean; onClick: () 
   );
 }
 
-function StatePick({ states, value, onPick, onNext }: { states: FlowState[]; value: string; onPick: (slug: string, advance: boolean) => void; onNext: () => void }) {
+/** "In your profile" mark on the options the member saved. */
+function Mine() {
+  return <span className="ml-1.5 inline-block rounded-full bg-gold/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-foreground align-middle">In your profile</span>;
+}
+
+function StatePick({ states, mine, value, onPick, onNext }: { states: FlowState[]; mine: string[]; value: string; onPick: (slug: string, advance: boolean) => void; onNext: () => void }) {
   const name = useId();
   const guard = useArrowGuard();
   return (
@@ -424,7 +444,10 @@ function StatePick({ states, value, onPick, onNext }: { states: FlowState[]; val
             <input type="radio" name={name} value={s.slug} checked={value === s.slug} onChange={() => onPick(s.slug, guard.advance())} className="mt-1 accent-[var(--primary)]" />
             <span className="min-w-0">
               <span className="block font-semibold text-foreground">{s.name}</span>
-              <span className="block text-xs text-muted-foreground">{s.agency}</span>
+              <span className="block text-xs text-muted-foreground">
+                {s.agency}
+                {mine.includes(s.slug) && <Mine />}
+              </span>
             </span>
           </label>
         ))}
@@ -439,7 +462,7 @@ function StatePick({ states, value, onPick, onNext }: { states: FlowState[]; val
   );
 }
 
-function SpeciesPick({ st, value, onPick, onBack, onNext }: { st: FlowState; value: string; onPick: (s: Species, advance: boolean) => void; onBack: () => void; onNext: () => void }) {
+function SpeciesPick({ st, mine, value, onPick, onBack, onNext }: { st: FlowState; mine: string[]; value: string; onPick: (s: Species, advance: boolean) => void; onBack: () => void; onNext: () => void }) {
   const name = useId();
   const guard = useArrowGuard();
   return (
@@ -450,7 +473,10 @@ function SpeciesPick({ st, value, onPick, onBack, onNext }: { st: FlowState; val
           <label key={s.species} className={choiceCls}>
             <input type="radio" name={name} value={s.species} checked={value === s.species} onChange={() => onPick(s.species, guard.advance())} className="mt-1 accent-[var(--primary)]" />
             <span className="min-w-0">
-              <span className="block font-semibold text-foreground">{s.label}</span>
+              <span className="block font-semibold text-foreground">
+                {s.label}
+                {mine.includes(s.species) && <Mine />}
+              </span>
               <span className="block text-xs text-muted-foreground">
                 {s.drawSystem}
                 {s.otc ? " · general/OTC licenses too" : ""}
@@ -467,7 +493,21 @@ function SpeciesPick({ st, value, onPick, onBack, onNext }: { st: FlowState; val
   );
 }
 
-function ResidencyPick({ st, value, onPick, onBack, onNext }: { st: FlowState; value: string; onPick: (r: PlannerResidency, advance: boolean) => void; onBack: () => void; onNext: () => void }) {
+function ResidencyPick({
+  st,
+  fromProfile,
+  value,
+  onPick,
+  onBack,
+  onNext,
+}: {
+  st: FlowState;
+  fromProfile: boolean;
+  value: string;
+  onPick: (r: PlannerResidency, advance: boolean) => void;
+  onBack: () => void;
+  onNext: () => void;
+}) {
   const name = useId();
   const guard = useArrowGuard();
   return (
@@ -478,7 +518,10 @@ function ResidencyPick({ st, value, onPick, onBack, onNext }: { st: FlowState; v
           <label key={r} className={choiceCls}>
             <input type="radio" name={name} value={r} checked={value === r} onChange={() => onPick(r, guard.advance())} className="mt-1 accent-[var(--primary)]" />
             <span>
-              <span className="block font-semibold text-foreground">{r === "resident" ? `${st.name} resident` : "Nonresident"}</span>
+              <span className="block font-semibold text-foreground">
+                {r === "resident" ? `${st.name} resident` : "Nonresident"}
+                {fromProfile && value === r && <Mine />}
+              </span>
               <span className="block text-xs text-muted-foreground">Dates, fees and draw odds are shown for {r}s.</span>
             </span>
           </label>
@@ -708,8 +751,13 @@ function Review({
   const [askDrawing, setAskDrawing] = useState(false);
   const [err, setErr] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
-  const [points, setPoints] = useState<number | null>(null);
-  const [pointsFromProfile, setPointsFromProfile] = useState(false);
+  // Starts at the member's saved points for this state + species (profile first, then their planner).
+  const profileLoad = useMemberProfile({ planner: true });
+  const profile = profileOf(profileLoad);
+  const saved = profile ? pointsIn(profile.points, profile.planner, st.slug, sp.species) : null;
+  // undefined = untouched (use the saved value); null = the member cleared it (unknown, "not given").
+  const [pointsChoice, setPoints] = useState<number | null | undefined>(undefined);
+  const points = pointsChoice !== undefined ? pointsChoice : profileLoad.status === "loading" ? null : (saved?.points ?? null);
   const [notes, setNotes] = useState("");
   const today = todayIso();
   const drawingName = useId();
@@ -752,26 +800,6 @@ function Review({
       live = false;
     };
   }, [body]);
-
-  // The member's saved points for this state + species (Pro profile), as the starting value.
-  useEffect(() => {
-    let live = true;
-    fetch("/api/points", { cache: "no-store" })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((b: { points?: Record<string, number> } | null) => {
-        if (!live) return;
-        const v = b?.points?.[`${st.slug}.${sp.species}`];
-        // No saved value stays unknown (null), shown as "not given" rather than 0.
-        if (typeof v === "number") {
-          setPoints((p) => (p === null ? v : p));
-          setPointsFromProfile(true);
-        }
-      })
-      .catch(() => {});
-    return () => {
-      live = false;
-    };
-  }, [st.slug, sp.species]);
 
   async function save() {
     setSaving(true);
@@ -886,7 +914,15 @@ function Review({
                   onChange={(e) => setPoints(e.target.value.trim() === "" ? null : Math.max(0, Math.min(99, parseInt(e.target.value) || 0)))}
                   className="w-20 min-h-11 px-2 border border-border rounded-lg bg-background text-base"
                 />
-                <span className="text-xs text-muted-foreground">{pointsFromProfile ? "From your saved points" : "Not in your saved points; enter yours"}</span>
+                <span className="text-xs text-muted-foreground">
+                  {!saved
+                    ? "Not in your saved points; enter yours"
+                    : pointsChoice !== undefined && pointsChoice !== saved.points
+                      ? `Your saved points: ${saved.points}`
+                      : saved.from === "planner"
+                        ? "From a hunt in your planner"
+                        : "From your saved points"}
+                </span>
               </label>
             )}
             <DrawFacts hunt={h} pointsOwned={points} />
