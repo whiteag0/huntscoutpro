@@ -29,8 +29,8 @@ R = "2026-10-31"
 W = "https://wildlife.utah.gov"
 UDWR = "Utah Division of Wildlife Resources"
 API = "https://www.utahdraws.com/internetsales/Home/DrawOddsData"
-NOT_2027 = "2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below)"
-NOT_2027_BEAR = "2027 black bear draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below)"
+NOT_2027 = "UDWR hasn't published 2027 big game draw dates yet, so these are the 2026 dates. The 2027 sportsman permit drawing is a separate draw"
+NOT_2027_BEAR = "UDWR hasn't published 2027 black bear draw dates yet, so these are the 2026 dates. The 2027 sportsman permit drawing is a separate draw"
 SPORT = "d-news-sportsman-2027"
 SPORT_PAGE = "d-sportsman-page-2027"
 FIELD = "d-field-regs-2026"
@@ -135,30 +135,30 @@ def kd(label, cycle, sid, date=None, start=None, end=None, status="confirmed", n
 
 BG_DATES = [
     kd("Big game draw application period (permits and bonus/preference points)", 2026, "d-bg-guide-2026", start="2026-03-19", end="2026-04-23",
-       note="Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. " + NOT_2027 + ".", kind="application"),
-    kd("Big game draw results available", 2026, "d-bg-guide-2026", date="2026-05-31", note="Results by email on or by May 31, 2026.", kind="results"),
+       note="Opened 8 a.m. MDT March 19 and closed 11 p.m. MDT April 23. " + NOT_2027 + ".", kind="application"),
+    kd("Big game draw results available", 2026, "d-bg-guide-2026", date="2026-05-31", note="Results are emailed by May 31, 2026.", kind="results"),
     kd("Second chance to apply for big game bonus/preference points only", 2026, "d-bg-guide-2026", start="2026-06-09", end="2026-06-23",
        note="Held during the antlerless application period.", kind="points"),
     kd("Antlerless draw application period", 2026, "d-antlerless-guide-2026", start="2026-06-09", end="2026-06-23", kind="application"),
-    kd("Antlerless draw results available", 2026, "d-antlerless-guide-2026", date="2026-07-08", note="Results by email on or by July 8, 2026.", kind="results"),
+    kd("Antlerless draw results available", 2026, "d-antlerless-guide-2026", date="2026-07-08", note="Results are emailed by July 8, 2026.", kind="results"),
 ]
 
 
 # d-news-sportsman-2027 (UDWR release, Oct. 13, 2026)
-SPORT_NOTE = ("Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per "
-              "species; no bonus points are earned or used in the sportsman drawing.")
+SPORT_NOTE = ("Utah residents only. One sportsman permit is offered for each species. The application fee is $10 per species "
+              "and is non-refundable. No bonus points are earned or used in the sportsman drawing.")
 
 
 def sportsman_dates(what):
     return [
         kd(f"2027 sportsman permit drawing application period ({what})", 2027, SPORT, start="2026-10-20", end="2026-11-10",
-           note="Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). " + SPORT_NOTE,
+           note="Opens 8 a.m. MDT Oct. 20 and closes 11 p.m. MST Nov. 10, 2026, which is also the withdrawal deadline. " + SPORT_NOTE,
            kind="application", residency="resident"),
         kd(f"2027 sportsman permit application withdrawal deadline ({what})", 2027, SPORT_PAGE, date="2026-11-10",
-           note="Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+           note="You can withdraw an online application until 11 p.m. MST Nov. 10, 2026. Withdrawing costs nothing extra, but the application fee is not refunded.",
            kind="application-change", residency="resident"),
         kd(f"2027 sportsman permit drawing results available ({what})", 2027, SPORT, date="2026-11-19",
-           note="Results by email on Thursday, Nov. 19, 2026.", kind="results", residency="resident"),
+           note="Results are emailed Thursday, Nov. 19, 2026.", kind="results", residency="resident"),
     ]
 
 
@@ -191,7 +191,7 @@ def species():
             "residentNote": "Applicants may apply for a general-season buck permit/point or a Dedicated Hunter COR/point, not both; limited-entry buck deer waiting period is five years.",
             "nonresidentNote": "Nonresidents may apply for general-season and limited-entry buck deer but not for CWMU permits through the big game drawing.",
             "otcSummary": "Remaining general-season deer permits (if any) went on sale July 7, 2026; buying one forfeits general-season deer preference points.",
-            "keyDates": BG_DATES + [kd("Remaining general-season deer permits on sale", 2026, "d-bg-guide-2026", date="2026-07-07", note="If available.", kind="leftover")]
+            "keyDates": BG_DATES + [kd("Remaining general-season deer permits on sale", 2026, "d-bg-guide-2026", date="2026-07-07", note="Only if permits remain.", kind="leftover")]
                         + sportsman_dates("buck deer"),
             "sourceIds": bg_src + [SPORT, SPORT_PAGE],
         },
@@ -243,8 +243,8 @@ def species():
             "keyDates": [
                 kd("Black bear draw application period", 2026, "d-bear-guide-2026", start="2026-02-10", end="2026-02-24", note="Closed 11 p.m. MST Feb. 24. " + NOT_2027_BEAR + ".", kind="application"),
                 kd("Black bear draw results available", 2026, "d-bear-guide-2026", date="2026-03-05", kind="results"),
-                kd("Harvest-objective bear permits on sale (OTC)", 2026, "d-bear-guide-2026", date="2026-03-10", note="8 a.m. MDT.", kind="license-sale"),
-                kd("Remaining limited-entry bear permits on sale, if available", 2026, "d-bear-guide-2026", date="2026-03-10", note="8 a.m. MDT.", kind="leftover"),
+                kd("Harvest-objective bear permits on sale (OTC)", 2026, "d-bear-guide-2026", date="2026-03-10", note="Sales start at 8 a.m. MDT.", kind="license-sale"),
+                kd("Remaining limited-entry bear permits on sale, if available", 2026, "d-bear-guide-2026", date="2026-03-10", note="Sales start at 8 a.m. MDT.", kind="leftover"),
             ] + sportsman_dates("black bear"),
             "sourceIds": ["d-bear-guide-2026", "d-rule-r657-62", "d-fees", SPORT, SPORT_PAGE],
         },
@@ -264,14 +264,14 @@ def species():
             "pointsMatter": True, "pointName": "bonus point",
             "otcSummary": "Spring general-season turkey permits go on sale March 11, 2027 (spring general season May 3-31, 2027); fall management harvest permits went on sale Sept. 10, 2026. Buying a general-season permit does not cost bonus points.",
             "keyDates": [
-                kd("Fall management harvest turkey permits on sale (OTC)", 2026, "d-turkey-guide-2026-27", date="2026-09-10", note="8 a.m. MDT; fall hunts Oct. 1, 2026 - Feb. 28, 2027.", kind="license-sale"),
+                kd("Fall management harvest turkey permits on sale (OTC)", 2026, "d-turkey-guide-2026-27", date="2026-09-10", note="Sales start at 8 a.m. MDT. Fall hunts run Oct. 1, 2026 to Feb. 28, 2027.", kind="license-sale"),
                 kd("Limited-entry turkey draw application period (permits and bonus points)", 2027, "d-turkey-guide-2026-27", start="2026-12-15", end="2026-12-29",
-                   note="Opens 8 a.m. MDT Dec. 15, closes 11 p.m. MDT Dec. 29, 2026 (times as printed by UDWR). Residents and nonresidents.", kind="application"),
+                   note="Opens 8 a.m. MDT Dec. 15 and closes 11 p.m. MDT Dec. 29, 2026. Open to residents and nonresidents.", kind="application"),
                 kd("Limited-entry turkey application edit/withdrawal deadline", 2027, "d-turkey-guide-2026-27", date="2026-12-29",
-                   note="Deadline to withdraw or edit your application: Dec. 29, 11 p.m.", kind="application-change"),
+                   note="You can edit or withdraw your application until 11 p.m. Dec. 29.", kind="application-change"),
                 kd("Limited-entry turkey draw results available", 2027, "d-turkey-guide-2026-27", date="2027-01-07", kind="results"),
-                kd("Remaining limited-entry turkey permits on sale", 2027, "d-turkey-guide-2026-27", date="2027-03-11", note="Sale time not printed for remaining limited-entry permits.", kind="leftover"),
-                kd("Spring general-season turkey permits on sale (OTC)", 2027, "d-turkey-guide-2026-27", date="2027-03-11", note="8 a.m. MDT.", kind="license-sale"),
+                kd("Remaining limited-entry turkey permits on sale", 2027, "d-turkey-guide-2026-27", date="2027-03-11", note="UDWR hasn't announced what time sales of remaining limited-entry permits start.", kind="leftover"),
+                kd("Spring general-season turkey permits on sale (OTC)", 2027, "d-turkey-guide-2026-27", date="2027-03-11", note="Sales start at 8 a.m. MDT.", kind="license-sale"),
             ] + sportsman_dates("wild turkey, a two-bird permit"),
             "sourceIds": ["d-turkey-guide-2026-27", "d-fees", SPORT, SPORT_PAGE],
         },

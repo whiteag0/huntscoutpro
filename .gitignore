@@ -45,3 +45,6 @@ next-env.d.ts
 
 # agency freshness monitor snapshot/report (scripts/agency/freshness.mjs)
 /.agency-freshness/
+
+# Python bytecode from the agency data scripts
+__pycache__/

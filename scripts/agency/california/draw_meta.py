@@ -25,7 +25,7 @@ PUB = "California Department of Fish and Wildlife"
 STATS_PAGE = "https://wildlife.ca.gov/Licensing/Statistics/Big-Game-Drawing"
 DIGEST_PAGE = "https://wildlife.ca.gov/Publications/Hunting-Digest"
 FH = "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID="
-NOT_2027 = "2027 dates not yet published by CDFW as of 2026-10-31."
+NOT_2027 = "CDFW hasn't published 2027 dates yet, so these are the 2026 dates."
 
 DIGESTS = {
     2026: ("200602", "Updated 4/17/2026 (some pages 4/1/2026). Prints the 2025 deer drawing summary (pp. 29-31)."),
@@ -37,7 +37,7 @@ DIGESTS = {
 CCR_NOTE = ("Standing Big Game Drawing deadlines (\"by June 2 each year\"; tag fees \"by 5:00 p.m. on July 15 each year\") used for the "
             "tentative 2027 key dates. Text read from Cornell LII's copy of the California Code of Regulations; the official "
             "OAL/Westlaw site (govt.westlaw.com/calregs) refused automated access on 2026-10-31.")
-NOT_ANNOUNCED = "CDFW hasn't announced the 2027 dates yet."
+NOT_ANNOUNCED = "CDFW hasn't announced the 2027 dates yet. These dates are based on its standing annual schedule."
 
 BASE_SOURCES = [
     {"id": "d-bgd-page", "title": "Big Game Hunting Tags (Big Game Drawing, preference points, tag quota splits FAQ)",
@@ -78,7 +78,8 @@ APP = {"label": "Big Game Drawing application period (premium deer, elk, prongho
        "start": "2026-04-15", "end": "2026-06-02", "cycle": 2026, "status": "confirmed",
        "note": "Applications must be completed before midnight June 2. " + NOT_2027, "sourceId": "d-digest-2026"}
 RESULTS = {"label": "Drawing results available online", "kind": "results", "date": "2026-06-15", "cycle": 2026, "status": "confirmed",
-           "note": "CDFW: 'on or around June 15, 2026'; the drawing is run within 10 business days of the deadline. " + NOT_2027,
+           "note": ("CDFW posts results on or around June 15, 2026. The drawing runs within 10 business days of the application "
+                     "deadline. " + NOT_2027),
            "sourceId": "d-digest-2026"}
 
 
@@ -87,18 +88,16 @@ RESULTS = {"label": "Drawing results available online", "kind": "results", "date
 # Results are not added: the rules say only "within 10 business days following the application deadline".
 APP_2027 = {"label": "Big Game Drawing application period (premium deer, elk, pronghorn, bighorn sheep)", "kind": "application",
             "start": "2027-04-15", "end": "2027-06-02", "cycle": 2027, "status": "tentative",
-            "note": ("Set by CDFW's Big Game Drawing page (\"Applications for the big game drawing are available each year on April 15 "
-                     "through June 2\"; \"The Big Game Drawing deadline is midnight on June 2 of each year\") and Title 14 CCR "
-                     "§708.14(a)(4)(E) (applicants shall apply \"by June 2 each year\"); " + NOT_ANNOUNCED),
+            "note": ("Big Game Drawing applications are available each year from April 15 through June 2. "
+                     "The application deadline is midnight on June 2 every year. " + NOT_ANNOUNCED),
             "sourceId": "d-bgd-page"}
-FEE_RULE = ("\"The tag fee shall be received by the department by 5:00 p.m. on July 15 each year. If the deadline to submit the fee "
-            "falls on a weekend or holiday payment will be accepted until the close of business on the first state business day "
-            "following the deadline to submit payment.\"")
+FEE_RULE = ("CDFW must receive the tag fee by 5:00 p.m. on July 15 each year. If July 15 falls on a weekend or holiday, "
+            "payment is accepted until close of business the next state business day.")
 
 
 def pay_2027(label, sec):
     return {"label": label, "kind": "payment", "date": "2027-07-15", "cycle": 2027, "status": "tentative",
-            "note": f"Set by Title 14 CCR §{sec} ({FEE_RULE}); {NOT_ANNOUNCED}",
+            "note": f"{FEE_RULE} {NOT_ANNOUNCED}",
             "sourceId": "d-ccr-" + sec.split("(")[0].replace(".", "-")}
 
 
@@ -132,12 +131,12 @@ SPECIES = [
         "keyDates": [
             APP, RESULTS,
             kd("Deer: drawn tags and unsuccessful-applicant notices expected by mail", "other", "2026-07-02",
-               "Unsuccessful notices list deer tags still available; contact CDFW if a drawn tag has not arrived by this date."),
+               "Unsuccessful-applicant notices list the deer tags still available. Contact CDFW if a drawn tag hasn't arrived by this date."),
             kd("Leftover premium deer tags go on sale (8:00 a.m., first-come first-served)", "leftover", "2026-07-02",
-               "CDFW FAQ: 'If available, leftover premium deer tags will be issued on July 2 at 8:00 a.m.'", "d-bgd-page"),
+               "Any leftover premium deer tags go on sale July 2 at 8:00 a.m.", "d-bgd-page"),
             {"label": "Deadline to report deer tags (2026 tags)", "kind": "other", "date": "2027-01-31", "cycle": 2026, "status": "confirmed",
-             "note": "All deer tag holders must report by January 31 of the license year, hunted or not; late or missing reports "
-                     "carry a $21.60 non-reporting fee.", "sourceId": "d-bgd-page"},
+             "note": "All deer tag holders must report their tags by January 31 of the license year, whether or not they hunted. "
+                     "Late or missing reports carry a $21.60 non-reporting fee.", "sourceId": "d-bgd-page"},
             APP_2027,
         ],
         "sourceIds": ["d-digest-2026", "d-bgd-page", "d-fees-2026", "d-ccr-708-14"],
@@ -160,7 +159,7 @@ SPECIES = [
         "keyDates": [
             APP, RESULTS,
             kd("Successful elk applicants' payment notices mailed by", "other", "2026-07-02", "Unsuccessful applicants are not notified by mail."),
-            kd("Elk tag fee payment deadline (5:00 p.m.)", "payment", "2026-07-15", "Unclaimed tags then go to alternates in the order drawn."),
+            kd("Elk tag fee payment deadline (5:00 p.m.)", "payment", "2026-07-15", "Tags not claimed by the deadline go to alternates in the order drawn."),
             APP_2027,
             pay_2027("Elk tag fee payment deadline (5:00 p.m.)", "708.11(b)(9)"),
         ],
@@ -183,7 +182,7 @@ SPECIES = [
         "keyDates": [
             APP, RESULTS,
             kd("Successful pronghorn applicants' payment notices mailed by", "other", "2026-07-02", "Unsuccessful applicants are not notified by mail."),
-            kd("Pronghorn tag fee payment deadline (5:00 p.m.)", "payment", "2026-07-15", "Unclaimed tags then go to alternates in the order drawn."),
+            kd("Pronghorn tag fee payment deadline (5:00 p.m.)", "payment", "2026-07-15", "Tags not claimed by the deadline go to alternates in the order drawn."),
             APP_2027,
             pay_2027("Pronghorn tag fee payment deadline (5:00 p.m.)", "708.10(b)(9)"),
         ],
@@ -206,8 +205,8 @@ SPECIES = [
         "keyDates": [
             APP, RESULTS,
             kd("Bighorn sheep tag fee payment deadline (5:00 p.m., received by the License and Revenue Branch, Sacramento)", "payment", "2026-07-15",
-               "Unclaimed tags then go to alternates in the order drawn."),
-            kd("Mandatory bighorn sheep hunter orientation (in person)", "other", "2026-07-18", "Location to be announced by CDFW."),
+               "Tags not claimed by the deadline go to alternates in the order drawn."),
+            kd("Mandatory bighorn sheep hunter orientation (in person)", "other", "2026-07-18", "CDFW will announce the location."),
             APP_2027,
             pay_2027("Bighorn sheep tag fee payment deadline (5:00 p.m., received by the License and Revenue Branch, Sacramento)",
                      "708.9(b)(11)"),
@@ -227,7 +226,7 @@ SPECIES = [
                        "daily bag one bear."),
         "keyDates": [
             {"label": "Unsuccessful 2026 bear tag report card due", "kind": "other", "date": "2027-02-01", "cycle": 2026, "status": "confirmed",
-             "note": "Report cards for unsuccessful tags are due February 1 of the license year; successful hunters report immediately.",
+             "note": "Report cards for unsuccessful tags are due February 1 of the license year. Successful hunters must report right away.",
              "sourceId": "d-digest-2026"},
         ],
         "sourceIds": ["d-bear-page", "d-digest-2026", "d-fees-2026"],

@@ -66,7 +66,7 @@ STATIC_SOURCES = [
      "url": RB + "2026/2026-upgbrd-final-for-web.pdf", "pageUrl": REGS_PAGE, "dataYear": 2026},
 ]
 
-NO27 = "2027 dates not yet published by Montana FWP as of 2026-10-31."
+NO27 = "FWP hasn't published 2027 dates yet, so these are the 2026 dates."
 
 
 def kd(label, start, end, sid, note=None, cycle=2026):
@@ -78,7 +78,7 @@ def kd(label, start, end, sid, note=None, cycle=2026):
 BP_BUY = kd("Bonus point purchase without applying (one per species/license type)", "2026-07-01", "2026-09-30",
             "d-fwp-regs-dea-2026", "Only for license types you did not apply for in 2026.")
 PP_BUY = kd("Nonresident preference point purchase without applying for a combination license", "2026-07-01", "2026-12-31",
-            "d-fwp-regs-dea-2026", "$100; applicants who applied for a combination license could only buy it at application.")
+            "d-fwp-regs-dea-2026", "A preference point costs $100. If you applied for a combination license, you could only buy the point with your application.")
 
 SQUARED = ("FWP squares bonus points before the drawing: an applicant gets (points x points) + 1 chances, "
            "and bonus points apply to first-choice applications only.")
@@ -101,9 +101,9 @@ SPECIES = [
                    "beginning June 15 in specific districts.",
      "keyDates": [
          kd("Elk permit and nonresident combination application period", "2026-03-01", "2026-04-01", "d-fwp-dates-2026",
-            "Deadline 11:45 pm MST; FWP lists the drawing as mid-April."),
+            "Applications are due by 11:45 p.m. MST. FWP runs the drawing in mid-April."),
          kd("Elk B license application period", "2026-03-01", "2026-06-01", "d-fwp-dates-2026",
-            "Deadline 11:45 pm MST; FWP lists the drawing as mid-June."),
+            "Applications are due by 11:45 p.m. MST. FWP runs the drawing in mid-June."),
          BP_BUY, PP_BUY],
      "sourceIds": ["d-fwp-dates-2026", "d-fwp-bonus-points", "d-fwp-bp-faq", "d-fwp-regs-dea-2026"]},
     {"species": "mule-deer", "displayName": "Mule deer",
@@ -116,9 +116,9 @@ SPECIES = [
      "otcSummary": "Resident General Deer License over the counter ($16); some Deer B licenses are sold over the counter beginning June 15.",
      "keyDates": [
          kd("Deer permit and nonresident combination application period", "2026-03-01", "2026-04-01", "d-fwp-dates-2026",
-            "Deadline 11:45 pm MST; FWP lists the drawing as mid-April."),
+            "Applications are due by 11:45 p.m. MST. FWP runs the drawing in mid-April."),
          kd("Deer B license application period", "2026-03-01", "2026-06-01", "d-fwp-dates-2026",
-            "Deadline 11:45 pm MST; FWP lists the drawing as mid-June."),
+            "Applications are due by 11:45 p.m. MST. FWP runs the drawing in mid-June."),
          BP_BUY, PP_BUY],
      "sourceIds": ["d-fwp-dates-2026", "d-fwp-bonus-points", "d-fwp-regs-dea-2026"]},
     {"species": "whitetail", "displayName": "White-tailed deer",
@@ -132,8 +132,8 @@ SPECIES = [
      "otcSummary": "Resident General Deer License over the counter ($16); some white-tailed Deer B licenses are sold over the counter beginning June 15.",
      "keyDates": [
          kd("Deer permit and nonresident combination application period", "2026-03-01", "2026-04-01", "d-fwp-dates-2026",
-            "Deadline 11:45 pm MST."),
-         kd("Deer B license application period", "2026-03-01", "2026-06-01", "d-fwp-dates-2026", "Deadline 11:45 pm MST."),
+            "Applications are due by 11:45 p.m. MST."),
+         kd("Deer B license application period", "2026-03-01", "2026-06-01", "d-fwp-dates-2026", "Applications are due by 11:45 p.m. MST."),
          BP_BUY],
      "sourceIds": ["d-fwp-dates-2026", "d-fwp-bonus-points", "d-fwp-regs-dea-2026"]},
     {"species": "pronghorn", "displayName": "Pronghorn (antelope)",
@@ -146,7 +146,7 @@ SPECIES = [
      "otcSummary": "None; surplus licenses may be offered after the drawing.",
      "keyDates": [
          kd("Antelope, Antelope B and archery antelope application period", "2026-03-01", "2026-06-01", "d-fwp-dates-2026",
-            "Deadline 11:45 pm MST; FWP lists the drawing as early August (archery 900-20 results mid-June per the 2026 regulations)."),
+            "Applications are due by 11:45 p.m. MST. FWP runs the drawing in early August. Archery-only antelope (900-20) results come out in mid-June."),
          BP_BUY],
      "sourceIds": ["d-fwp-dates-2026", "d-fwp-regs-dea-2026", "d-fwp-bonus-points"]},
     {"species": "moose", "displayName": "Moose",
@@ -159,7 +159,7 @@ SPECIES = [
      "otcSummary": "None.",
      "keyDates": [
          kd("Moose, sheep, goat and bison application period", "2026-03-01", "2026-05-01", "d-fwp-dates-2026",
-            "Deadline 11:45 pm MST; FWP lists the drawing as mid-May. Successful applicants must buy the license by Aug. 1."),
+            "Applications are due by 11:45 p.m. MST. FWP runs the drawing in mid-May. If you draw, you must buy the license by Aug. 1."),
          BP_BUY],
      "sourceIds": ["d-fwp-dates-2026", "d-fwp-regs-msgb-2026"]},
     {"species": "sheep", "displayName": "Bighorn sheep",
@@ -175,7 +175,7 @@ SPECIES = [
                    "license providers). Unlimited licenses are not subject to the Aug. 1 purchase deadline.",
      "keyDates": [
          kd("Moose, sheep, goat and bison application period", "2026-03-01", "2026-05-01", "d-fwp-dates-2026",
-            "Deadline 11:45 pm MST; FWP lists the drawing as mid-May."),
+            "Applications are due by 11:45 p.m. MST. FWP runs the drawing in mid-May."),
          BP_BUY],
      "sourceIds": ["d-fwp-dates-2026", "d-fwp-regs-msgb-2026"]},
     {"species": "goat", "displayName": "Mountain goat",
@@ -188,7 +188,7 @@ SPECIES = [
      "otcSummary": "None.",
      "keyDates": [
          kd("Moose, sheep, goat and bison application period", "2026-03-01", "2026-05-01", "d-fwp-dates-2026",
-            "Deadline 11:45 pm MST; FWP lists the drawing as mid-May."),
+            "Applications are due by 11:45 p.m. MST. FWP runs the drawing in mid-May."),
          BP_BUY],
      "sourceIds": ["d-fwp-dates-2026", "d-fwp-regs-msgb-2026"]},
     {"species": "bear", "displayName": "Black bear",
@@ -200,7 +200,7 @@ SPECIES = [
      "residentNote": "Black Bear License $19; permit application $5. First-time buyers must pass the Black Bear Identification Test.",
      "nonresidentNote": "Black Bear License $350; permit application $5.",
      "otcSummary": "Black Bear License over the counter (either-sex, all BMUs, subject to BMU harvest quotas).",
-     "keyDates": [kd("Black bear permit application period", "2026-03-01", "2026-04-01", "d-fwp-dates-2026", "Deadline 11:45 pm MST.")],
+     "keyDates": [kd("Black bear permit application period", "2026-03-01", "2026-04-01", "d-fwp-dates-2026", "Applications are due by 11:45 p.m. MST.")],
      "sourceIds": ["d-fwp-regs-bear-2026", "d-fwp-dates-2026"]},
     {"species": "lion", "displayName": "Mountain lion",
      "drawSystem": "otc", "pastDrawSystem": "bonus-squared",

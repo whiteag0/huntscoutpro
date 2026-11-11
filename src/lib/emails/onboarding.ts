@@ -137,7 +137,7 @@ export function preferencesEmail(opts: { name?: string | null }): RenderedEmail 
     "Tell us where and what you hunt. Short answers are perfect.",
     `<p>Dear ${esc(first)},</p>
 <p>Thank you again for joining the HuntScout Pro community. As one of our early members, you get something we don't offer the general public: <b>one-on-one attention from our team</b>. Our goal is for HuntScout Pro to be a hands-on, genuinely powerful resource for your hunting, not just a website you log in to.</p>
-<p style="margin-top:22px;"><b style="color:${DARK};font-size:16px;">Help us tailor HuntScout Pro to your hunts</b><br>Answer a few quick questions on the site (four short steps, about 2 minutes), or just reply to this email with whatever you know. Short answers are perfect.</p>
+<p style="margin-top:22px;"><b style="color:${DARK};font-size:16px;">Help us tailor HuntScout Pro to your hunts</b><br>Answer a few quick questions on the site (five short steps, about 2 minutes), or just reply to this email with whatever you know. Short answers are perfect.</p>
 ${button(`${SITE}/welcome`, "Tell us about your hunts")}
 <ol style="padding-left:20px;margin:12px 0;">
 ${QUESTIONS.map(([q, d]) => `<li style="margin:0 0 8px 0;"><b>${q}</b> ${d}</li>`).join("\n")}
@@ -153,7 +153,7 @@ ${QUESTIONS.map(([q, d]) => `<li style="margin:0 0 8px 0;"><b>${q}</b> ${d}</li>
 Thank you again for joining the HuntScout Pro community. As one of our early members, you get something we don't offer the general public: one-on-one attention from our team. Our goal is for HuntScout Pro to be a hands-on, genuinely powerful resource for your hunting, not just a website you log in to.
 
 HELP US TAILOR HUNTSCOUT PRO TO YOUR HUNTS
-Answer a few quick questions at ${SITE}/welcome (four short steps, about 2 minutes), or just reply to this email with whatever you know. Short answers are perfect.
+Answer a few quick questions at ${SITE}/welcome (five short steps, about 2 minutes), or just reply to this email with whatever you know. Short answers are perfect.
 
 ${QUESTIONS.map(([q, d], i) => `${i + 1}. ${q} ${d}`).join("\n")}
 

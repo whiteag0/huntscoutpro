@@ -56,7 +56,7 @@ META_SOURCES = [
 
 B, DP, FEE = "d-wy-2026-application-booklet", "d-wy-application-dates-page", "d-wy-license-fee-list"
 PP27 = "d-wy-2027-nr-preference-point-prices"
-NO27 = "2027 dates not yet published by WGFD as of 2026-10-31"
+NO27 = "WGFD hasn't announced the 2027 dates yet. These are the 2026 dates."
 
 
 def _kind(d, kind, res):
@@ -70,13 +70,13 @@ def _kind(d, kind, res):
 
 def win(label, start, end, note=None, status="confirmed", cycle=2026, kind="application", res=None):
     d = {"label": label, "start": start, "end": end, "cycle": cycle, "status": status, "sourceId": B}
-    d["note"] = NO27 + ("; " + note if note else "")
+    d["note"] = NO27 + (" " + note if note else "")
     return _kind(d, kind, res)
 
 
 def day(label, date, note=None, status="confirmed", cycle=2026, kind="other", res=None):
     d = {"label": label, "date": date, "cycle": cycle, "status": status, "sourceId": B}
-    d["note"] = NO27 + ("; " + note if note else "")
+    d["note"] = NO27 + (" " + note if note else "")
     return _kind(d, kind, res)
 
 
@@ -99,15 +99,14 @@ def super_tag():
     return [
         {"label": "2027 Super Tag and Super Tag Trifecta raffle ticket sales", "kind": "other", "start": "2026-02-17",
          "end": "2027-02-01", "cycle": 2027, "status": "confirmed",
-         "note": ("Competitive raffle for one license per species (bighorn sheep, moose, mountain goat, wild bison, elk, deer, antelope, "
-                  "black bear, mountain lion, gray wolf) for the 2027 hunt season, separate from the drawings; $10 Super Tag and $30 "
-                  "Trifecta tickets, residents and nonresidents, unlimited entries. The raffle page FAQ gives a generic January 31 "
-                  "ticket deadline; the 2026 application booklet and the raffle page list February 1, 2027."),
+         "note": ("This raffle, separate from the drawings, awards one 2027 license per species: bighorn sheep, moose, mountain goat, "
+                  "wild bison, elk, deer, antelope, black bear, mountain lion and gray wolf. Super Tag tickets are $10 and Trifecta "
+                  "tickets are $30. Residents and nonresidents can buy unlimited entries. WGFD lists February 1, 2027 as the ticket "
+                  "deadline, but some of its materials say January 31, so buy by January 31 to be safe."),
          "sourceId": ST},
         {"label": "2027 Super Tag and Super Tag Trifecta raffle results", "kind": "results", "date": "2027-02-16", "cycle": 2027,
          "status": "tentative",
-         "note": ("2026 application booklet column 'Tentative Results Available'; the raffle page FAQ says winners are announced on or "
-                  "before March 1."),
+         "note": "This is WGFD's tentative results date. WGFD says winners are announced on or before March 1.",
          "sourceId": B},
     ]
 
@@ -119,7 +118,7 @@ LEFTOVER = [win("Leftover elk/deer/antelope drawing application period", "2026-0
 DEER_DATES = [win("Initial drawing application period (resident and nonresident)", "2026-01-02", "2026-06-01"),
               day("Modify/withdraw deadline", "2026-06-01", kind="application-change"),
               tent("Initial drawing results", "2026-06-18"),
-              win(*PP_WINDOW, note="Nonresident full-price deer points only", kind="points", res="nonresident")] + LEFTOVER
+              win(*PP_WINDOW, note="For nonresident full-price deer points only.", kind="points", res="nonresident")] + LEFTOVER
 
 GUIDE = ("Nonresidents may not hunt big or trophy game in designated wilderness areas unless accompanied by a "
          "licensed professional guide or a resident guide (one guide per two nonresident hunters).")
@@ -143,7 +142,7 @@ SPECIES = [
                   # booklet resident chart: "Elk Jan. 2 - June 1 | June 1 | June 18"
                   day("Resident modify/withdraw deadline", "2026-06-01", kind="application-change", res="resident"),
                   tent("Resident drawing results", "2026-06-18", res="resident"),
-                  win(*PP_WINDOW, note="Nonresident full-price elk points only", kind="points", res="nonresident")] + LEFTOVER,
+                  win(*PP_WINDOW, note="For nonresident full-price elk points only.", kind="points", res="nonresident")] + LEFTOVER,
      "sourceIds": [B, DP, "d-wy-draw-odds-index", "d-wy-2026-black-bear-brochure", PP27]},
     {"species": "mule-deer", "displayName": "Mule deer (Wyoming deer licenses)", "drawSystem": "hybrid", "pointsMatter": True,
      "pointName": "preference point",
@@ -177,7 +176,7 @@ SPECIES = [
      "keyDates": [win("Initial drawing application period (resident and nonresident)", "2026-01-02", "2026-06-01"),
                   day("Modify/withdraw deadline", "2026-06-01", kind="application-change"),
                   tent("Initial drawing results", "2026-06-18"),
-                  win(*PP_WINDOW, note="Nonresident full-price antelope points only", kind="points", res="nonresident")] + LEFTOVER,
+                  win(*PP_WINDOW, note="For nonresident full-price antelope points only.", kind="points", res="nonresident")] + LEFTOVER,
      "sourceIds": [B, DP, "d-wy-draw-odds-index", "d-wy-2026-black-bear-brochure", PP27]},
     {"species": "moose", "displayName": "Moose", "drawSystem": "hybrid", "pointsMatter": True, "pointName": "preference point",
      "drawSystemSummary": ("Resident and nonresident moose licenses are drawn 75% by preference points and 25% at random. An applicant may "
@@ -188,7 +187,7 @@ SPECIES = [
      "keyDates": [win("Application period (resident and nonresident)", "2026-01-02", "2026-04-30"),
                   day("Modify/withdraw deadline", "2026-04-30", kind="application-change"),
                   tent("Drawing results", "2026-05-21"),
-                  win(*PP_WINDOW, note="Resident and nonresident moose points", kind="points")],
+                  win(*PP_WINDOW, note="For moose preference points, open to residents and nonresidents.", kind="points")],
      "sourceIds": [B, DP, "d-wy-draw-odds-index", "d-wy-2026-black-bear-brochure"]},
     {"species": "sheep", "displayName": "Bighorn sheep", "drawSystem": "hybrid", "pointsMatter": True, "pointName": "preference point",
      "drawSystemSummary": ("Full-price (Type 1/2) bighorn sheep licenses are drawn 75% by preference points and 25% at random for residents "
@@ -200,7 +199,7 @@ SPECIES = [
      "keyDates": [win("Application period (resident and nonresident)", "2026-01-02", "2026-04-30"),
                   day("Modify/withdraw deadline", "2026-04-30", kind="application-change"),
                   tent("Drawing results", "2026-05-21"),
-                  win(*PP_WINDOW, note="Full-price bighorn sheep points, residents and nonresidents", kind="points")],
+                  win(*PP_WINDOW, note="For full-price bighorn sheep points, open to residents and nonresidents.", kind="points")],
      "sourceIds": [B, DP, "d-wy-draw-odds-index", "d-wy-2026-black-bear-brochure"]},
     {"species": "goat", "displayName": "Mountain goat", "drawSystem": "random", "pointsMatter": False,
      "drawSystemSummary": ("Mountain goat licenses are drawn by random draw for a specific hunt area; there are no mountain goat preference "
@@ -364,19 +363,19 @@ NOTES = {
 # a weekend or holiday (nonresident elk May 8 is a Saturday; May 31 and January 31) because Section 18(b)'s
 # next-business-day shift is written for application deadlines and the rule does not say whether it moves those.
 CH44 = "d-wy-ch44-license-issuance"
-R18 = ("Set by WGFD Commission Chapter 44, Section 18 (applications accepted from 8:00 a.m. on the first business day of {open_month} "
-       "through {close}; a deadline on a day Headquarters is closed for license sales moves to the next business day); "
+R18 = ("Under WGFD's standing rule, {what} open at 8:00 a.m. on the first business day of {open_month} and close {close}. "
+       "If a deadline falls on a day WGFD Headquarters is closed for license sales, it moves to the next business day. "
        "WGFD hasn't announced the 2027 dates yet.")
 
 
-def rule27(label, start, end, open_month, close, kind="application", res=None, extra=None):
-    note = R18.format(open_month=open_month, close=close) + (" " + extra if extra else "")
+def rule27(label, start, end, open_month, close, kind="application", res=None, extra=None, what="applications"):
+    note = R18.format(what=what, open_month=open_month, close=close) + (" " + extra if extra else "")
     return _kind({"label": label, "start": start, "end": end, "cycle": 2027, "status": "tentative", "note": note,
                   "sourceId": CH44}, kind, res)
 
 
 def mod27(label, date, rule_date):
-    note = (f"Set by WGFD Commission Chapter 44, Section 18(d)-(e) (last date to modify/withdraw: {rule_date}); "
+    note = (f"Under WGFD's standing rule, {rule_date} is the last day to modify or withdraw your application. "
             "WGFD hasn't announced the 2027 dates yet.")
     return _kind({"label": label, "date": date, "cycle": 2027, "status": "tentative", "note": note, "sourceId": CH44},
                  "application-change", None)
@@ -391,7 +390,7 @@ INITIAL27 = rule27("Initial drawing application period (resident and nonresident
 
 def pp27(note, res=None):
     return rule27("Preference point only purchase period", "2027-07-01", "2027-11-01", "July", "October 31", kind="points", res=res,
-                  extra=PP27_NOTE + " " + note)
+                  extra=PP27_NOTE + " " + note, what="preference point purchases")
 
 
 RULE27 = {
@@ -399,17 +398,16 @@ RULE27 = {
                    extra=JAN + " January 31, 2027 is a Sunday, so the deadline moves to Monday, February 1, 2027."),
             rule27("Resident application period", "2027-01-04", "2027-06-01", "January", "May 31", res="resident",
                    extra=JAN + " " + MAY31),
-            pp27("Nonresident full-price elk points only.", res="nonresident")],
-    "mule-deer": [INITIAL27, pp27("Nonresident full-price deer points only.", res="nonresident")],
-    "whitetail": [INITIAL27, pp27("Nonresident full-price deer points only.", res="nonresident")],
-    "pronghorn": [INITIAL27, pp27("Nonresident full-price antelope points only (Section 18(e) 'Preference Point Only - Nonresident').",
-                                  res="nonresident")],
+            pp27("For nonresident full-price elk points only.", res="nonresident")],
+    "mule-deer": [INITIAL27, pp27("For nonresident full-price deer points only.", res="nonresident")],
+    "whitetail": [INITIAL27, pp27("For nonresident full-price deer points only.", res="nonresident")],
+    "pronghorn": [INITIAL27, pp27("For nonresident full-price antelope points only.", res="nonresident")],
     "moose": [rule27("Application period (resident and nonresident)", "2027-01-04", "2027-04-30", "January", "April 30", extra=JAN),
               mod27("Modify/withdraw deadline", "2027-04-30", "April 30"),
-              pp27("Resident and nonresident moose points.")],
+              pp27("For moose preference points, open to residents and nonresidents.")],
     "sheep": [rule27("Application period (resident and nonresident)", "2027-01-04", "2027-04-30", "January", "April 30", extra=JAN),
               mod27("Modify/withdraw deadline", "2027-04-30", "April 30"),
-              pp27("Full-price bighorn sheep points, residents and nonresidents.")],
+              pp27("For full-price bighorn sheep points, open to residents and nonresidents.")],
     "goat": [rule27("Application period (resident and nonresident)", "2027-01-04", "2027-04-30", "January", "April 30", extra=JAN),
              mod27("Modify/withdraw deadline", "2027-04-30", "April 30")],
     "turkey": [rule27("Spring turkey application period", "2027-01-04", "2027-02-01", "January", "January 31",

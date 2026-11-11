@@ -71,19 +71,23 @@ CSD_SOURCES = [
               "Gould's turkey hunt. AZGFD's July 29 and Aug. 3, 2026 releases also give the Aug. 4 close; its Aug. 11, 2026 "
               "release says 'The deadline to submit applications was Aug. 5.' Read in a browser on 2026-10-31."},
 ]
-CSD_NOTE = ("Copper State Draw: separate from the annual draws; no bonus points used or earned; apply individually (no groups); "
-            "$13 resident / $15 nonresident application fee per hunt number; a hunting license is needed only if drawn. ")
-CSD_A_NOTE = (CSD_NOTE + "Hunts: any elk Aug. 1 - Oct. 15, 2026 (Units 1-4B; Units 5A-20A), antlered mule deer Aug. 15 - Sep. 25, 2026 "
-              "(Units 3A-4B, 28, 31, 32, 37A, 37B) and Aug. 22 - Oct. 2, 2026 (13A, 13B), antlered white-tailed deer Aug. 15 - Sep. 25, 2026 "
-              "(Units 21-36C), buck pronghorn Aug. 1 - Oct. 15, 2026; six permit-tags in all. AZGFD says drawn applicants are contacted "
-              "'during the week of April 13' and must pay then (within 24 hours of contact per the program page); no exact date is given.")
-CSD_B_NOTE = (CSD_NOTE + "Hunts: mule deer + elk dual tag Dec. 1, 2026 - Jan. 31, 2027 (Units 22, 23); antlered mule deer Dec. 1, 2026 - "
-              "Jan. 31, 2027 (Units 28, 31, 32, 37A, 37B) and Dec. 15, 2026 - Feb. 15, 2027 (Units 10, 17A, 17B, 19A, 19B, 20A); antlered "
-              "white-tailed deer Jan. 1 - Feb. 28, 2027 (three unit groups); any elk Dec. 15, 2026 - Feb. 15, 2027 (Units 1, 27; Units 9, 10); "
-              "Gould's turkey Apr. 1 - May 31, 2027. AZGFD says drawn applicants are contacted 'during the week of August 10' and must "
-              "pay then (within 24 hours of contact per the program page); no exact date is given. AZGFD's Aug. 11, 2026 release gives "
-              "the deadline as Aug. 5; its July 24, July 29 and Aug. 3 releases say 5 p.m. Tuesday, Aug. 4. No later Copper State Draw "
-              "announced as of 2026-10-31.")
+CSD_NOTE = ("The Copper State Draw is separate from the annual draws. No bonus points are used or earned. "
+            "Apply individually. Group applications are not accepted. "
+            "The application fee is $13 for residents and $15 for nonresidents per hunt number. "
+            "You only need a hunting license if you draw. ")
+CSD_A_NOTE = (CSD_NOTE + "Hunts: any elk Aug. 1 - Oct. 15, 2026, one hunt in Units 1-4B. A second any-elk hunt in Units 5A-20A runs "
+              "the same dates. Antlered mule deer Aug. 15 - Sep. 25, 2026 (Units 3A-4B, 28, 31, 32, 37A, 37B) and Aug. 22 - Oct. 2, 2026 "
+              "(Units 13A, 13B), antlered white-tailed deer Aug. 15 - Sep. 25, 2026 (Units 21-36C), buck pronghorn Aug. 1 - Oct. 15, 2026. "
+              "Six permit-tags are offered in all. Drawn applicants are contacted during the week of April 13 and must pay within 24 hours "
+              "of contact. AZGFD gives no exact contact date.")
+CSD_B_NOTE = (CSD_NOTE + "Hunts: mule deer and elk dual tag Dec. 1, 2026 - Jan. 31, 2027 (Units 22, 23). Antlered mule deer Dec. 1, 2026 - "
+              "Jan. 31, 2027 (Units 28, 31, 32, 37A, 37B) and Dec. 15, 2026 - Feb. 15, 2027 (Units 10, 17A, 17B, 19A, 19B, 20A). Antlered "
+              "white-tailed deer Jan. 1 - Feb. 28, 2027 (three unit groups). Any elk Dec. 15, 2026 - Feb. 15, 2027, one hunt in Units 1 and 27. "
+              "A second any-elk hunt in Units 9 and 10 runs the same dates. "
+              "Gould's turkey Apr. 1 - May 31, 2027. Drawn applicants are contacted during the week of August 10 and must "
+              "pay within 24 hours of contact. AZGFD gives no exact contact date. A later AZGFD announcement listed "
+              "the deadline as Aug. 5. AZGFD's earlier announcements said 5 p.m. Tuesday, Aug. 4. AZGFD hasn't announced a later "
+              "Copper State Draw yet.")
 
 
 def csd_window(start, end, cycle, sid, label, note):
@@ -101,7 +105,7 @@ CSD_B_TURKEY = [csd_window("2026-07-29", "2026-08-04", 2027, CSD_B,
 CSD_SUMMARY = (" AZGFD also offers a few extra permit-tags in its separate Copper State Draw, a random draw held outside the annual "
                "draws in which bonus points are neither used nor earned.")
 
-NOT_2027 = "2027 dates not yet published by AZGFD as of 2026-10-31"
+NOT_2027 = "AZGFD hasn't published 2027 dates yet. These are the 2026 dates."
 
 BONUS_SUMMARY = (
     "Bonus-point draw: up to 20% of each hunt number's permits are reserved for 1st/2nd-choice applicants with the most "
@@ -132,13 +136,13 @@ def kd(label, date, cycle, sid, note=None, kind=None, residency=None):
 
 
 MIDWINTER_DATES = [
-    kd("Pronghorn & elk draw application deadline (11:59 p.m. Arizona time)", "2026-02-03", 2026, PE, NOT_2027 + " (AZGFD's draw page: pronghorn and elk regulations are available in early January); applications are accepted from early to mid-January.", "application"),
+    kd("Pronghorn & elk draw application deadline (11:59 p.m. Arizona time)", "2026-02-03", 2026, PE, NOT_2027 + " Pronghorn and elk regulations usually come out in early January. Applications are accepted from early to mid-January.", "application"),
     kd("Pronghorn & elk hunt permit-tags mailed out by", "2026-04-01", 2026, PE, NOT_2027, "other"),
     kd("Leftover (first-come) pronghorn & elk applications accepted by mail", "2026-03-16", 2026, PE, NOT_2027, "leftover"),
     kd("Leftover (first-come) pronghorn & elk permits at Department offices", "2026-03-23", 2026, PE, NOT_2027, "leftover"),
 ]
 FALL_DATES = [
-    kd("Fall draw application deadline (deer, fall turkey, fall javelina, bighorn sheep, fall bison, sandhill crane; 11:59 p.m. Arizona time)", "2026-06-02", 2026, HR, NOT_2027 + " (AZGFD's draw page: fall regulations are available in early May); applications are accepted from early to mid-May.", "application"),
+    kd("Fall draw application deadline (deer, fall turkey, fall javelina, bighorn sheep, fall bison, sandhill crane; 11:59 p.m. Arizona time)", "2026-06-02", 2026, HR, NOT_2027 + " Fall regulations usually come out in early May. Applications are accepted from early to mid-May.", "application"),
     kd("Fall draw hunt permit-tags mailed out by", "2026-07-24", 2026, HR, NOT_2027, "other"),
     kd("Leftover (first-come) fall applications accepted by mail", "2026-07-06", 2026, HR, NOT_2027, "leftover"),
     kd("Leftover (first-come) fall permits at Department offices", "2026-07-13", 2026, HR, NOT_2027, "leftover"),
@@ -150,29 +154,29 @@ SPRING_DATES = [
     kd("Leftover (first-come) spring permits at Department offices", "2025-11-10", 2026, SP, "For 2026 spring hunts.", "leftover"),
     # 2027 spring booklet, "Hunt Permit-tag Application Schedule – Spring 2027" (SP27)
     kd("Spring draw application deadline (spring turkey, spring javelina, spring bison, raptor capture; 11:59 p.m. Arizona time)", "2026-10-06", 2027, SP27,
-       "For 2027 spring hunts; online applications only, accepted from early to mid-September 2026. Draw results are posted to "
-       "the applicant's AZGFD portal account; the booklet gives no separate results date.", "application"),
+       "For 2027 spring hunts. Online applications only, accepted from early to mid-September 2026. Draw results are posted to "
+       "your AZGFD portal account. AZGFD gives no separate results date.", "application"),
     kd("Spring draw results released (AZGFD portal account)", "2026-10-23", 2027, NEWS27S,
-       "For 2027 spring hunts; AZGFD news release of Oct. 23, 2026. Results are shown only in the applicant's AZGFD portal account.", "results"),
+       "For 2027 spring hunts. Results are shown only in your AZGFD portal account.", "results"),
     kd("Arizona E-Tag app opt-in deadline to receive spring hunt permit-tags electronically", "2026-10-19", 2027, NEWS27S,
-       "For 2027 spring hunts; customers who opted in after this date receive their hunt permit-tag by mail (AZGFD news release, Oct. 23, 2026).", "other"),
+       "For 2027 spring hunts. If you opt in after this date, your hunt permit-tag comes by mail.", "other"),
     kd("Spring draw hunt permit-tags mailed out by", "2026-11-25", 2027, SP27, "For 2027 spring hunts.", "other"),
     kd("Leftover (first-come) spring applications accepted by mail (after 8:00 a.m. Arizona time)", "2026-11-02", 2027, SP27,
-       "For 2027 spring hunts; first-come results are not posted. AZGFD's 2027 Spring Draw left-over permit list (d-az-2027s-leftover-list) is dated Oct. 26, 2026.", "leftover"),
+       "For 2027 spring hunts. First-come results are not posted. AZGFD's leftover permit list for the 2027 spring draw is dated Oct. 26, 2026.", "leftover"),
     kd("Leftover (first-come) spring permits at Department offices (after 8:00 a.m. Arizona time)", "2026-11-09", 2027, SP27, "For 2027 spring hunts.", "leftover"),
 ]
 
 # 'Nonpermit-Tag First-Come Schedule' table, 2026-2027 Arizona Hunting Regulations (Deer: Commission Order 2)
 ARCHERY_DEER_SALE = [
     kd("Resident archery-only deer nonpermit-tags on sale at AZGFD offices", "2026-11-02", 2026, HR,
-       "Nonpermit-Tag First-Come Schedule; available immediately upon purchase.", "license-sale", "resident"),
+       "Sold first-come, first-served. You get the tag immediately at purchase.", "license-sale", "resident"),
     kd("Resident archery-only deer nonpermit-tags on sale at authorized license dealers", "2026-11-23", 2026, HR,
-       "Nonpermit-Tag First-Come Schedule.", "license-sale", "resident"),
+       "Sold first-come, first-served.", "license-sale", "resident"),
     kd("Nonresident archery-only deer nonpermit-tags on sale online only at otcarchery.azgfd.com (8:00 a.m. Arizona time)", "2026-11-02", 2026, HR,
-       "For nonresidents with an annual Arizona nonresident combination hunt/fish license; tags not taken electronically are mailed by Dec. 1.",
+       "For nonresidents who hold an annual Arizona nonresident combination hunt/fish license. Tags not taken electronically are mailed by Dec. 1.",
        "license-sale", "nonresident"),
     kd("Nonresident archery-only deer nonpermit-tags on sale at AZGFD offices or by mail (Pioneer, Lifetime or Benefactor license holders)", "2026-11-02", 2026, HR,
-       "Nonpermit-Tag First-Come Schedule.", "license-sale", "nonresident"),
+       "Sold first-come, first-served.", "license-sale", "nonresident"),
 ]
 
 SPECIES = [

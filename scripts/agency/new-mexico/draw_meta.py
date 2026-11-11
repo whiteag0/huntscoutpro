@@ -76,8 +76,7 @@ SOURCES = [
          url="https://wildlife.dgf.nm.gov/youth-encouragement-elk-license-sale-begins-july-22-2026/", dataYear=2026, retrieved=RET),
 ]
 
-NOT_2027 = ("2027 dates not yet published by NMDOW as of 2026-10-31: the Important Dates page still lists 2026-27 dates and "
-            "the 2027-2028 Hunting Rules and Information booklet has not been released (only the 2027-28 fee sheets, posted 2026-10-22).")
+NOT_2027 = "NMDOW hasn't published 2027 dates yet. These are the 2026 dates."
 BIG_DATES = [
     dict(label="Draw application deadline (5 p.m. MDT)", kind="application", date="2026-03-18", cycle=2026, status="confirmed",
          note=NOT_2027, sourceId="d-nm-dates-2026"),
@@ -86,12 +85,12 @@ BIG_DATES = [
 ]
 HARVEST_REPORT = [
     dict(label="2025-26 harvest report deadline (free; late fee after this date)", kind="other", date="2026-02-15", cycle=2026, status="confirmed",
-         note="Deer, elk, pronghorn and turkey license holders. " + NOT_2027, sourceId="d-nm-dates-2026"),
+         note="Applies to deer, elk, pronghorn and turkey license holders. " + NOT_2027, sourceId="d-nm-dates-2026"),
     dict(label="Last day for late 2025-26 harvest reports ($8 late fee); unreported hunters' 2026-27 draw applications are rejected", kind="other",
-         date="2026-03-18", cycle=2026, status="confirmed", note="Deer, elk, pronghorn and turkey license holders. " + NOT_2027, sourceId="d-nm-dates-2026"),
+         date="2026-03-18", cycle=2026, status="confirmed", note="Applies to deer, elk, pronghorn and turkey license holders. " + NOT_2027, sourceId="d-nm-dates-2026"),
 ]
 OTC_SALE = dict(label="2026-27 over-the-counter licenses on sale (online, phone, NMDOW offices, vendors)", kind="license-sale", date="2026-03-25",
-                cycle=2026, status="confirmed", note="License year begins April 1, 2026. " + NOT_2027, sourceId="d-nm-dates-2026")
+                cycle=2026, status="confirmed", note="The license year begins April 1, 2026. " + NOT_2027, sourceId="d-nm-dates-2026")
 DEER_LEFTOVER = [
     dict(label="Leftover deer draw licenses on sale online (10 a.m., residents only for the first 24 hours)", kind="leftover", residency="resident",
          date="2026-07-08", cycle=2026, status="confirmed", note="537 leftover deer licenses from the 2026-27 draw.", sourceId="d-nm-leftover-2026"),

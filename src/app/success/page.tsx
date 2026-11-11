@@ -195,8 +195,8 @@ function SuccessContent() {
                 </h3>
                 <p className="text-sm text-muted-foreground mb-2">
                   {onboarded
-                    ? "Done. You can update your states, species, units and points anytime."
-                    : "Four quick steps (about 2 minutes) on your states, species, units and points. When you save, we email you a personal scouting report built from your answers."}
+                    ? "Done. You can update your states, species, points, units and reminders anytime."
+                    : "Five quick steps (about 2 minutes) on your states, species, points, units and deadline reminders. When you save, we email you a personal scouting report built from your answers."}
                 </p>
                 <Link
                   href="/welcome"

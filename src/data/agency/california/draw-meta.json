@@ -29,7 +29,7 @@
      "end": "2026-06-02",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Applications must be completed before midnight June 2. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "Applications must be completed before midnight June 2. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -38,7 +38,7 @@
      "date": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "CDFW: 'on or around June 15, 2026'; the drawing is run within 10 business days of the deadline. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "CDFW posts results on or around June 15, 2026. The drawing runs within 10 business days of the application deadline. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -47,7 +47,7 @@
      "date": "2026-07-02",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Unsuccessful notices list deer tags still available; contact CDFW if a drawn tag has not arrived by this date. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "Unsuccessful-applicant notices list the deer tags still available. Contact CDFW if a drawn tag hasn't arrived by this date. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -56,7 +56,7 @@
      "date": "2026-07-02",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "CDFW FAQ: 'If available, leftover premium deer tags will be issued on July 2 at 8:00 a.m.' 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "Any leftover premium deer tags go on sale July 2 at 8:00 a.m. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-bgd-page"
     },
     {
@@ -65,7 +65,7 @@
      "date": "2027-01-31",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "All deer tag holders must report by January 31 of the license year, hunted or not; late or missing reports carry a $21.60 non-reporting fee.",
+     "note": "All deer tag holders must report their tags by January 31 of the license year, whether or not they hunted. Late or missing reports carry a $21.60 non-reporting fee.",
      "sourceId": "d-bgd-page"
     },
     {
@@ -75,7 +75,7 @@
      "end": "2027-06-02",
      "cycle": 2027,
      "status": "tentative",
-     "note": "Set by CDFW's Big Game Drawing page (\"Applications for the big game drawing are available each year on April 15 through June 2\"; \"The Big Game Drawing deadline is midnight on June 2 of each year\") and Title 14 CCR §708.14(a)(4)(E) (applicants shall apply \"by June 2 each year\"); CDFW hasn't announced the 2027 dates yet.",
+     "note": "Big Game Drawing applications are available each year from April 15 through June 2. The application deadline is midnight on June 2 every year. CDFW hasn't announced the 2027 dates yet. These dates are based on its standing annual schedule.",
      "sourceId": "d-bgd-page"
     }
    ],
@@ -104,7 +104,7 @@
      "end": "2026-06-02",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Applications must be completed before midnight June 2. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "Applications must be completed before midnight June 2. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -113,7 +113,7 @@
      "date": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "CDFW: 'on or around June 15, 2026'; the drawing is run within 10 business days of the deadline. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "CDFW posts results on or around June 15, 2026. The drawing runs within 10 business days of the application deadline. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -122,7 +122,7 @@
      "date": "2026-07-02",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Unsuccessful applicants are not notified by mail. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "Unsuccessful applicants are not notified by mail. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -131,7 +131,7 @@
      "date": "2026-07-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Unclaimed tags then go to alternates in the order drawn. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "Tags not claimed by the deadline go to alternates in the order drawn. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -141,7 +141,7 @@
      "end": "2027-06-02",
      "cycle": 2027,
      "status": "tentative",
-     "note": "Set by CDFW's Big Game Drawing page (\"Applications for the big game drawing are available each year on April 15 through June 2\"; \"The Big Game Drawing deadline is midnight on June 2 of each year\") and Title 14 CCR §708.14(a)(4)(E) (applicants shall apply \"by June 2 each year\"); CDFW hasn't announced the 2027 dates yet.",
+     "note": "Big Game Drawing applications are available each year from April 15 through June 2. The application deadline is midnight on June 2 every year. CDFW hasn't announced the 2027 dates yet. These dates are based on its standing annual schedule.",
      "sourceId": "d-bgd-page"
     },
     {
@@ -150,7 +150,7 @@
      "date": "2027-07-15",
      "cycle": 2027,
      "status": "tentative",
-     "note": "Set by Title 14 CCR §708.11(b)(9) (\"The tag fee shall be received by the department by 5:00 p.m. on July 15 each year. If the deadline to submit the fee falls on a weekend or holiday payment will be accepted until the close of business on the first state business day following the deadline to submit payment.\"); CDFW hasn't announced the 2027 dates yet.",
+     "note": "CDFW must receive the tag fee by 5:00 p.m. on July 15 each year. If July 15 falls on a weekend or holiday, payment is accepted until close of business the next state business day. CDFW hasn't announced the 2027 dates yet. These dates are based on its standing annual schedule.",
      "sourceId": "d-ccr-708-11"
     }
    ],
@@ -180,7 +180,7 @@
      "end": "2026-06-02",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Applications must be completed before midnight June 2. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "Applications must be completed before midnight June 2. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -189,7 +189,7 @@
      "date": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "CDFW: 'on or around June 15, 2026'; the drawing is run within 10 business days of the deadline. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "CDFW posts results on or around June 15, 2026. The drawing runs within 10 business days of the application deadline. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -198,7 +198,7 @@
      "date": "2026-07-02",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Unsuccessful applicants are not notified by mail. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "Unsuccessful applicants are not notified by mail. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -207,7 +207,7 @@
      "date": "2026-07-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Unclaimed tags then go to alternates in the order drawn. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "Tags not claimed by the deadline go to alternates in the order drawn. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -217,7 +217,7 @@
      "end": "2027-06-02",
      "cycle": 2027,
      "status": "tentative",
-     "note": "Set by CDFW's Big Game Drawing page (\"Applications for the big game drawing are available each year on April 15 through June 2\"; \"The Big Game Drawing deadline is midnight on June 2 of each year\") and Title 14 CCR §708.14(a)(4)(E) (applicants shall apply \"by June 2 each year\"); CDFW hasn't announced the 2027 dates yet.",
+     "note": "Big Game Drawing applications are available each year from April 15 through June 2. The application deadline is midnight on June 2 every year. CDFW hasn't announced the 2027 dates yet. These dates are based on its standing annual schedule.",
      "sourceId": "d-bgd-page"
     },
     {
@@ -226,7 +226,7 @@
      "date": "2027-07-15",
      "cycle": 2027,
      "status": "tentative",
-     "note": "Set by Title 14 CCR §708.10(b)(9) (\"The tag fee shall be received by the department by 5:00 p.m. on July 15 each year. If the deadline to submit the fee falls on a weekend or holiday payment will be accepted until the close of business on the first state business day following the deadline to submit payment.\"); CDFW hasn't announced the 2027 dates yet.",
+     "note": "CDFW must receive the tag fee by 5:00 p.m. on July 15 each year. If July 15 falls on a weekend or holiday, payment is accepted until close of business the next state business day. CDFW hasn't announced the 2027 dates yet. These dates are based on its standing annual schedule.",
      "sourceId": "d-ccr-708-10"
     }
    ],
@@ -256,7 +256,7 @@
      "end": "2026-06-02",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Applications must be completed before midnight June 2. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "Applications must be completed before midnight June 2. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -265,7 +265,7 @@
      "date": "2026-06-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "CDFW: 'on or around June 15, 2026'; the drawing is run within 10 business days of the deadline. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "CDFW posts results on or around June 15, 2026. The drawing runs within 10 business days of the application deadline. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -274,7 +274,7 @@
      "date": "2026-07-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Unclaimed tags then go to alternates in the order drawn. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "Tags not claimed by the deadline go to alternates in the order drawn. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -283,7 +283,7 @@
      "date": "2026-07-18",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Location to be announced by CDFW. 2027 dates not yet published by CDFW as of 2026-10-31.",
+     "note": "CDFW will announce the location. CDFW hasn't published 2027 dates yet, so these are the 2026 dates.",
      "sourceId": "d-digest-2026"
     },
     {
@@ -293,7 +293,7 @@
      "end": "2027-06-02",
      "cycle": 2027,
      "status": "tentative",
-     "note": "Set by CDFW's Big Game Drawing page (\"Applications for the big game drawing are available each year on April 15 through June 2\"; \"The Big Game Drawing deadline is midnight on June 2 of each year\") and Title 14 CCR §708.14(a)(4)(E) (applicants shall apply \"by June 2 each year\"); CDFW hasn't announced the 2027 dates yet.",
+     "note": "Big Game Drawing applications are available each year from April 15 through June 2. The application deadline is midnight on June 2 every year. CDFW hasn't announced the 2027 dates yet. These dates are based on its standing annual schedule.",
      "sourceId": "d-bgd-page"
     },
     {
@@ -302,7 +302,7 @@
      "date": "2027-07-15",
      "cycle": 2027,
      "status": "tentative",
-     "note": "Set by Title 14 CCR §708.9(b)(11) (\"The tag fee shall be received by the department by 5:00 p.m. on July 15 each year. If the deadline to submit the fee falls on a weekend or holiday payment will be accepted until the close of business on the first state business day following the deadline to submit payment.\"); CDFW hasn't announced the 2027 dates yet.",
+     "note": "CDFW must receive the tag fee by 5:00 p.m. on July 15 each year. If July 15 falls on a weekend or holiday, payment is accepted until close of business the next state business day. CDFW hasn't announced the 2027 dates yet. These dates are based on its standing annual schedule.",
      "sourceId": "d-ccr-708-9"
     }
    ],
@@ -328,7 +328,7 @@
      "date": "2027-02-01",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Report cards for unsuccessful tags are due February 1 of the license year; successful hunters report immediately.",
+     "note": "Report cards for unsuccessful tags are due February 1 of the license year. Successful hunters must report right away.",
      "sourceId": "d-digest-2026"
     }
    ],

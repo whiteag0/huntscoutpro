@@ -55,8 +55,7 @@ DOC_SOURCES = [
               + U + "2021/12/CR-21-06-2021-22-and-2022-23-NR-Guided-Seasons-and-Quotas-ADA-FINAL1.pdf"},
 ]
 
-NOT_2027 = ("2027 big game dates not yet published by NDOW as of 2026-10-31 (no 2027 application-deadline Commission regulation; "
-            "the Apply & Buy page still shows the 2026 Big Game Application Calendar); these are the 2026 dates.")
+NOT_2027 = "NDOW hasn't published 2027 big game dates yet. These are the 2026 dates."
 POINT_FACT_IDS = ["d-faq-2026", "d-nac-502", "d-ndow-apply-hunting"]
 
 
@@ -66,16 +65,16 @@ def big_game_dates(include_guided=False):
          "status": "confirmed", "note": NOT_2027, "sourceId": "d-ndow-apply-hunting"},
         {"label": "Big Game Main Draw results posted on or before", "kind": "results", "date": "2026-05-29", "cycle": 2026, "status": "confirmed", "note": NOT_2027, "sourceId": "d-cr-26-01-a1"},
         {"label": "Bonus point only applications (sold during the standard big game application periods)", "kind": "points", "start": "2026-03-23", "end": "2026-05-13", "cycle": 2026,
-         "status": "confirmed", "note": "CR 26-01 A-1: bonus points for big game can be purchased during any standard big game application period. NDOW's 2026 Big Game FAQ adds that bonus points are offered again in the second draw, only to applicants who did not apply and earn a point or draw a tag in the main draw. " + NOT_2027,
+         "status": "confirmed", "note": "Big game bonus points can be bought during any standard big game application period. They are offered again in the second draw, but only to hunters who did not apply and earn a point or draw a tag in the main draw. " + NOT_2027,
          "sourceId": "d-cr-26-01-a1"},
         {"label": "Big Game Second Draw application period", "kind": "leftover", "start": "2026-06-08", "end": "2026-06-15", "cycle": 2026, "status": "confirmed",
-         "note": "Dates from NDOW's 2026 Big Game Application Calendar; CR 26-01 A-1 text reads 'Monday, June 16, 2026' (June 15, 2026 is the Monday). " + NOT_2027,
+         "note": "NDOW's application calendar closes this period June 15, 2026. The regulation lists Monday, June 16, but June 15 was the Monday, so apply by June 15. " + NOT_2027,
          "sourceId": "d-ndow-apply-hunting"},
         {"label": "Big Game Second Draw results released on or before", "kind": "results", "date": "2026-06-26", "cycle": 2026, "status": "confirmed", "note": NOT_2027, "sourceId": "d-cr-26-01-a1"},
     ]
     d.append({"label": "Big game harvest questionnaire due (5:00 pm PT) for 2026 tags", "kind": "other", "date": "2027-01-31", "cycle": 2026, "status": "confirmed",
-              "note": ("CR 26-01 A-1 / NAC 502.405: every 2026 big game tag holder must submit the online harvest questionnaire, hunted or not, by "
-                       "January 31 following the close of the season; hunts that end on or after January 31 are due February 28 instead."),
+              "note": ("Every 2026 big game tag holder must complete the online harvest questionnaire, whether or not they hunted, by "
+                       "January 31 following the close of the season. For hunts that end on or after January 31, the questionnaire is due February 28 instead."),
               "sourceId": "d-cr-26-01-a1"})
     if include_guided:
         d = [
@@ -140,7 +139,7 @@ def species():
          "otcSummary": "No over-the-counter bear tags.",
          "keyDates": big_game_dates() + [
              {"label": "Mandatory black bear indoctrination course (6-9 pm, Reno and Zoom)", "kind": "other", "date": "2026-07-16", "cycle": 2026, "status": "confirmed",
-              "note": "CR 26-12: tags are issued only after the tag holder (and any guide or sub-guide) completes one indoctrination course; second course July 25, 2026.", "sourceId": "d-cr-26-12"},
+              "note": "Bear tags are issued only after the tag holder, and any guide or sub-guide, completes one indoctrination course. A second course is offered July 25, 2026.", "sourceId": "d-cr-26-12"},
              {"label": "Mandatory black bear indoctrination course (1-4 pm, Reno and Zoom)", "kind": "other", "date": "2026-07-25", "cycle": 2026, "status": "confirmed", "sourceId": "d-cr-26-12"},
          ], "sourceIds": common_ids + ["d-cr-26-12"]},
         {"species": "turkey", "displayName": "Wild turkey", "drawSystem": "bonus-squared",
@@ -150,18 +149,18 @@ def species():
          "otcSummary": "No over-the-counter turkey tags.",
          "keyDates": [
              {"label": "2026 Spring Wild Turkey draw application period (deadline 11:00 pm PT)", "kind": "application", "start": "2026-01-12", "end": "2026-01-26", "cycle": 2026,
-              "status": "confirmed", "note": "Opening date from NDOW's 2026 Small Game Application Calendar; deadline also in CR 25-01 A-1.", "sourceId": "d-ndow-apply-hunting"},
+              "status": "confirmed", "sourceId": "d-ndow-apply-hunting"},
              {"label": "2026 Spring Wild Turkey bonus point only deadline (11:00 pm PT)", "kind": "points", "date": "2026-02-02", "cycle": 2026, "status": "confirmed", "sourceId": "d-cr-25-01-a1"},
              {"label": "2026 Spring Wild Turkey draw results on or before", "kind": "results", "date": "2026-02-13", "cycle": 2026, "status": "confirmed", "sourceId": "d-cr-25-01-a1"},
              {"label": "2026 Fall Wild Turkey draw application deadline (11:00 pm PT)", "kind": "application", "date": "2026-08-10", "cycle": 2026, "status": "confirmed",
-              "note": "Fall limited-entry hunts 0131/0132 (Pershing and Lincoln counties); opening date not stated in CR 26-01 A-1.", "sourceId": "d-cr-26-01-a1"},
+              "note": "This draw covers fall limited-entry hunts 0131 and 0132 in Pershing and Lincoln counties. Only the application deadline is set by regulation. Check NDOW for when applications open.", "sourceId": "d-cr-26-01-a1"},
              {"label": "2026 Fall Wild Turkey draw results on or before", "kind": "results", "date": "2026-08-21", "cycle": 2026, "status": "confirmed", "sourceId": "d-cr-26-01-a1"},
              {"label": "2027 Spring Wild Turkey draw application deadline (11:00 pm PT)", "kind": "application", "date": "2027-01-25", "cycle": 2027, "status": "confirmed",
-              "note": "Opening date for 2027 not stated in CR 26-01 A-1; the 2026 spring application period opened Jan 12, 2026.", "sourceId": "d-cr-26-01-a1"},
+              "note": "NDOW hasn't announced when the 2027 application period opens. The 2026 spring application period opened January 12, 2026.", "sourceId": "d-cr-26-01-a1"},
              {"label": "2027 Spring Wild Turkey bonus point only deadline (11:00 pm PT)", "kind": "points", "date": "2027-02-01", "cycle": 2027, "status": "confirmed", "sourceId": "d-cr-26-01-a1"},
              {"label": "2027 Spring Wild Turkey draw results on or before", "kind": "results", "date": "2027-02-12", "cycle": 2027, "status": "confirmed", "sourceId": "d-cr-26-01-a1"},
              {"label": "Spring wild turkey harvest questionnaire due (5:00 pm PT) for 2027 spring tags", "kind": "other", "date": "2027-05-31", "cycle": 2027, "status": "confirmed",
-              "note": "CR 26-01 A-1 / NAC 502.407: spring wild turkey harvest questionnaires are due May 31 following the close of the season.", "sourceId": "d-cr-26-01-a1"},
+              "note": "Spring wild turkey harvest questionnaires are due May 31 following the close of the season.", "sourceId": "d-cr-26-01-a1"},
          ],
          "sourceIds": ["d-cr-26-01-a1", "d-cr-25-01-a1", "d-cr-26-13", "d-nac-502", "d-ndow-apply-hunting"]},
         {"species": "lion", "displayName": "Mountain lion", "drawSystem": "otc", "pointsMatter": False,

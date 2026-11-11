@@ -33,10 +33,11 @@ test("welcome email escapes the buyer's name and email", () => {
   assert.doesNotMatch(e.html, /active through/);
 });
 
-test("intake email no longer promises six questions on a four-step form", () => {
+test("intake email matches the five-step /welcome form", () => {
   const e = preferencesEmail({ name: "Jo" });
   assert.doesNotMatch(e.html + e.text, /six quick questions/i);
-  assert.match(e.text, /four short steps/);
+  assert.match(e.text, /five short steps/);
+  assert.doesNotMatch(e.html + e.text, /four short steps/i);
 });
 
 test("purchase alert: buyer, amount, time and states; no signature; escaped", () => {

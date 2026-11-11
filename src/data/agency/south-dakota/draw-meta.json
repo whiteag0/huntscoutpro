@@ -30,7 +30,7 @@
      "end": "2026-05-19",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Closes 8:00 AM CDT. GFP's Key Dates page lists Apr 22 - May 19, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Applications close at 8:00 a.m. CDT. GFP also lists the period as April 22 to May 19, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-elk-2026"
     },
     {
@@ -40,7 +40,7 @@
      "date": "2026-05-27",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-elk-2026"
     },
     {
@@ -51,7 +51,7 @@
      "end": "2026-06-11",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-06-15. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted June 15, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-elk-2026"
     },
     {
@@ -62,7 +62,7 @@
      "end": "2026-04-02",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-keydates"
     },
     {
@@ -72,7 +72,7 @@
      "date": "2026-08-01",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "$10 return fee. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP charges a $10 fee to return a license. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-elk-2026"
     }
    ],
@@ -125,7 +125,7 @@
      "end": "2026-06-23",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Closes 8:00 AM CDT. GFP's Key Dates page lists Jun 3 - Jun 23, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Applications close at 8:00 a.m. CDT. GFP also lists the period as June 3 to June 23, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-wrdeer-2026"
     },
     {
@@ -134,7 +134,7 @@
      "date": "2026-07-02",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-wrdeer-2026"
     },
     {
@@ -144,7 +144,7 @@
      "end": "2026-07-22",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-07-27. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted July 27, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-wrdeer-2026"
     },
     {
@@ -154,7 +154,7 @@
      "end": "2026-08-12",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-08-14. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted August 14, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-wrdeer-2026"
     },
     {
@@ -164,7 +164,7 @@
      "end": "2026-09-01",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-09-04. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted September 4, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-wrdeer-2026"
     },
     {
@@ -174,7 +174,7 @@
      "end": "2026-11-29",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-wrdeer-2026"
     },
     {
@@ -184,7 +184,7 @@
      "end": "2026-04-14",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-04-15. GFP's Key Dates page lists Mar 18/19 - Apr 14, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted April 15, 2026. GFP also lists the period as March 18 or 19 to April 14, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-specialbuck-2026"
     },
     {
@@ -195,7 +195,7 @@
      "end": "2026-06-09",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-06-12. GFP's Key Dates page lists May 20 - Jun 9, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted June 12, 2026. GFP also lists the period as May 20 to June 9, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-nrarchdeer-2026"
     },
     {
@@ -205,7 +205,7 @@
      "end": "2026-07-01",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-07-03. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted July 3, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-resarchdeer-2026"
     },
     {
@@ -215,7 +215,7 @@
      "end": "2026-12-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "GFP lists September 15 - December 15 without a year; shown for the 2026 window. Some limited-license seasons only (not elk, sheep or goat, which award points automatically). 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP lists this window as September 15 to December 15 without naming a year. These are the 2026 dates. Only some limited-license seasons qualify. Elk, bighorn sheep and mountain goat award points automatically. GFP hasn't published 2027 dates yet.",
      "sourceId": "d-sd-prefpoints"
     }
    ]
@@ -256,7 +256,7 @@
      "end": "2026-06-23",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Closes 8:00 AM CDT. GFP's Key Dates page lists Jun 3 - Jun 23, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Applications close at 8:00 a.m. CDT. GFP also lists the period as June 3 to June 23, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-wrdeer-2026"
     },
     {
@@ -265,7 +265,7 @@
      "date": "2026-07-02",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-wrdeer-2026"
     },
     {
@@ -275,7 +275,7 @@
      "end": "2026-07-22",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-07-27. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted July 27, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-wrdeer-2026"
     },
     {
@@ -285,7 +285,7 @@
      "end": "2026-08-12",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-08-14. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted August 14, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-wrdeer-2026"
     },
     {
@@ -295,7 +295,7 @@
      "end": "2026-09-01",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-09-04. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted September 4, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-wrdeer-2026"
     },
     {
@@ -305,7 +305,7 @@
      "end": "2026-11-29",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-wrdeer-2026"
     },
     {
@@ -315,7 +315,7 @@
      "end": "2026-04-14",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-04-15. GFP's Key Dates page lists Mar 18/19 - Apr 14, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted April 15, 2026. GFP also lists the period as March 18 or 19 to April 14, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-specialbuck-2026"
     },
     {
@@ -326,7 +326,7 @@
      "end": "2026-06-09",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-06-12. GFP's Key Dates page lists May 20 - Jun 9, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted June 12, 2026. GFP also lists the period as May 20 to June 9, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-nrarchdeer-2026"
     },
     {
@@ -336,7 +336,7 @@
      "end": "2026-07-01",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-07-03. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted July 3, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-resarchdeer-2026"
     },
     {
@@ -346,7 +346,7 @@
      "end": "2026-12-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "GFP lists September 15 - December 15 without a year; shown for the 2026 window. Some limited-license seasons only (not elk, sheep or goat, which award points automatically). 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP lists this window as September 15 to December 15 without naming a year. These are the 2026 dates. Only some limited-license seasons qualify. Elk, bighorn sheep and mountain goat award points automatically. GFP hasn't published 2027 dates yet.",
      "sourceId": "d-sd-prefpoints"
     }
    ]
@@ -369,7 +369,7 @@
      "end": "2026-07-07",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Closes 8:00 AM CDT; results 2026-07-08. GFP's Key Dates page lists Jun 23 - Jul 7, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Applications close at 8:00 a.m. Central time. Results were posted July 8, 2026. GFP also lists the period as June 23 to July 7, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-antelope-2026"
     },
     {
@@ -379,7 +379,7 @@
      "end": "2026-07-23",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-07-27. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted July 27, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-antelope-2026"
     },
     {
@@ -390,7 +390,7 @@
      "end": "2026-07-07",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-keydates"
     },
     {
@@ -400,7 +400,7 @@
      "end": "2026-12-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "GFP lists September 15 - December 15 without a year; shown for the 2026 window. Some limited-license seasons only (not elk, sheep or goat, which award points automatically). 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP lists this window as September 15 to December 15 without naming a year. These are the 2026 dates. Only some limited-license seasons qualify. Elk, bighorn sheep and mountain goat award points automatically. GFP hasn't published 2027 dates yet.",
      "sourceId": "d-sd-prefpoints"
     }
    ],
@@ -436,7 +436,7 @@
      "end": "2026-05-19",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Closes 8:00 AM CDT. GFP's Key Dates page lists Apr 22 - May 19, 2026. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Applications close at 8:00 a.m. CDT. GFP also lists the period as April 22 to May 19, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-sheep-2026"
     },
     {
@@ -446,7 +446,7 @@
      "date": "2026-05-27",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-sheep-2026"
     }
    ],
@@ -494,7 +494,7 @@
      "end": "2025-12-03",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Closes 8:00 AM CDT; results 2025-12-05. The 2027-season (Dec 2026) access permit dates were not found on GFP's site as of 2026-10-31. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Applications close at 8:00 a.m. Central time. Results were posted December 5, 2025. GFP hasn't announced access permit dates for the 2027 season (starting December 2026) yet. These are last cycle's dates, for the 2026 season.",
      "sourceId": "d-sd-lion-2026"
     }
    ],
@@ -525,7 +525,7 @@
      "end": "2026-02-11",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Closes 8:00 AM CDT; results 2026-02-13. GFP's Key Dates page also lists Jan 14 - Feb 11, 2026 for Spring Prairie. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Applications close at 8:00 a.m. Central time. Results were posted February 13, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-springturkey-prairie-2026"
     },
     {
@@ -535,7 +535,7 @@
      "end": "2026-03-04",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-03-06. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted March 6, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-springturkey-prairie-2026"
     },
     {
@@ -545,7 +545,7 @@
      "end": "2026-03-24",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-03-26. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted March 26, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-springturkey-prairie-2026"
     },
     {
@@ -555,7 +555,7 @@
      "end": "2026-02-11",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Closes 8:00 AM CDT; results 2026-02-13. GFP's Key Dates page lists Jan 21 - Feb 11, 2026 for these seasons; the 2026 application PDF date is used. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Applications close at 8:00 a.m. Central time. Results were posted February 13, 2026. GFP also lists the period for these seasons as January 21 to February 11, 2026. The dates shown follow GFP's 2026 application. GFP hasn't published 2027 dates yet.",
      "sourceId": "d-sd-springturkey-bh-2026"
     },
     {
@@ -565,7 +565,7 @@
      "end": "2026-09-02",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Closes 8:00 AM CDT; results 2026-09-09. GFP's Key Dates page lists Aug 18 - Sep 2, 2026; the 2026 application PDF date is used. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Applications close at 8:00 a.m. Central time. Results were posted September 9, 2026. GFP also lists the period as August 18 to September 2, 2026. The dates shown follow GFP's 2026 application. GFP hasn't published 2027 dates yet.",
      "sourceId": "d-sd-fallturkey-2026"
     },
     {
@@ -575,7 +575,7 @@
      "end": "2026-09-22",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-09-25. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted September 25, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-fallturkey-2026"
     },
     {
@@ -585,7 +585,7 @@
      "end": "2026-10-13",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "Results 2026-10-14. 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "Results were posted October 14, 2026. GFP hasn't published 2027 dates yet. These are the 2026 dates.",
      "sourceId": "d-sd-fallturkey-2026"
     },
     {
@@ -595,7 +595,7 @@
      "end": "2026-12-15",
      "cycle": 2026,
      "status": "confirmed",
-     "note": "GFP lists September 15 - December 15 without a year; shown for the 2026 window. Some limited-license seasons only (not elk, sheep or goat, which award points automatically). 2027 dates not yet published by SD GFP as of 2026-10-31.",
+     "note": "GFP lists this window as September 15 to December 15 without naming a year. These are the 2026 dates. Only some limited-license seasons qualify. Elk, bighorn sheep and mountain goat award points automatically. GFP hasn't published 2027 dates yet.",
      "sourceId": "d-sd-prefpoints"
     }
    ],

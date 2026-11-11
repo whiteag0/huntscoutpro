@@ -91,6 +91,15 @@ a new harvest report, or 2027 application dates.
    cycle, add the new cycle's dates there. Keep the old cycle's dates until they pass,
    and set `lastReviewed` to today.
 
+   Key-date `note`s go to members word for word: reminder emails, the calendar, the PDF
+   report and .ics files. Write them for a hunter, in full sentences: keep every date,
+   cut-off time and time zone, fee, eligibility rule and "not published yet / these are
+   last cycle's dates" caveat. Leave out research residue: "as of" and retrieved dates,
+   page names, quoted web copy, rule citations (say "Based on ODFW's standing rule"), and
+   notes about our own process. Those belong in `sources`. Join sentences with a space;
+   use "; " only after a fragment. Put a caveat shared by every date first, worded the
+   same each time, so the state page can show it once.
+
 4. **Validate:** `node scripts/agency/validate.mjs <state>`. Fix every error. Read the
    warnings; most need a row `note` that explains the agency's quirk.
 

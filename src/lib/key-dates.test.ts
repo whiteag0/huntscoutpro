@@ -16,6 +16,27 @@ test("sharedNote: the caveat every date starts with, by '; ' part", () => {
   assert.equal(sharedNote([]), "");
 });
 
+test("sharedNote and ownNote: sentence parts, without splitting times, dates or abbreviations", () => {
+  const C = "CPW hasn't published 2027 dates yet. These are the 2026 dates.";
+  const a = `${C} For nonresident elk points only.`;
+  const b = `${C} Applications close at 8 p.m. MT. Apply online.`;
+  assert.equal(sharedNote([{ note: a }, { note: b }, { note: C }]), C);
+  assert.equal(ownNote(a, C), "For nonresident elk points only.");
+  assert.equal(ownNote(b, C), "Applications close at 8 p.m. MT. Apply online.");
+  assert.equal(ownNote(C, C), "");
+  // "a.m. AKST", "Aug. 1", "U.S. Postal" are not sentence ends.
+  const t1 = "Opens 8 a.m. AKST on Aug. 1. Mailed applications need a U.S. Postal Service postmark.";
+  const t2 = "Opens 8 a.m. AKST on Aug. 1. Online only.";
+  assert.equal(sharedNote([{ note: t1 }, { note: t2 }]), "Opens 8 a.m. AKST on Aug. 1.");
+  assert.equal(sharedNote([{ note: "Opens 8 a.m. AKST. Online only." }, { note: "Opens 8 a.m. MDT. Online only." }]), "");
+  assert.equal(sharedNote([{ note: "Hunt area near St. Johns. Draw only." }, { note: "Hunt area near St. Johns. Over the counter." }]), "Hunt area near St. Johns.");
+  // A part shared only as a prefix of a longer sentence doesn't count.
+  assert.equal(sharedNote([{ note: "Results in June. Apply early." }, { note: "Results in June and July." }]), "");
+  // Either separator can follow the shared part.
+  assert.equal(sharedNote([{ note: "Rule A applies. Apply early." }, { note: "Rule A applies.; apply early" }]), "Rule A applies.");
+  assert.equal(ownNote("Rule A applies.; apply early", "Rule A applies."), "apply early");
+});
+
 test("ownNote: what's left after the shared caveat", () => {
   assert.equal(ownNote(CAVEAT, CAVEAT), "");
   assert.equal(ownNote("Not yet published; Nonresident only", "Not yet published"), "Nonresident only");

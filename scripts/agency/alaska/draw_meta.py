@@ -91,30 +91,30 @@ DRAW_DATES = [
      "status": "confirmed", "sourceId": "d-supp-2027",
      "note": "Opens 8 a.m., closes 5 p.m. AKST. Hunts take place in 2027 unless designated as 2028. Paper applications are not accepted."},
     {"label": "Deadline to ask ADF&G for an alternative to applying online", "kind": "other", "date": "2026-11-20", "cycle": 2027,
-     "status": "confirmed", "sourceId": "d-supp-2027", "note": "5 p.m. AKST, through the local ADF&G office."},
+     "status": "confirmed", "sourceId": "d-supp-2027", "note": "Make your request by 5 p.m. AKST through your local ADF&G office."},
     {"label": "Drawing results announced", "kind": "results", "date": "2027-02-19", "cycle": 2027, "status": "tentative", "sourceId": "d-supp-2027",
-     "note": "The 2027-2028 supplement says results are announced on the third Friday of February, which is February 19, 2027. ADF&G's Draw Results page (retrieved 2026-10-31) says 'Friday, February 20'."},
+     "note": "ADF&G announces results on the third Friday of February, which is February 19, 2027. Its website gives Friday, February 20 instead, so confirm closer to the date."},
     {"label": "Undersubscribed drawing permits posted", "kind": "leftover", "date": "2027-03-05", "cycle": 2027, "status": "tentative", "sourceId": "d-supp-2027",
-     "note": "Supplement: information on any undersubscribed permits is posted at hunt.alaska.gov on the first Friday in March (March 5, 2027)."},
+     "note": "Information on any undersubscribed permits is posted at hunt.alaska.gov on the first Friday in March (March 5, 2027)."},
 ]
 TIER_DATES = [
     {"label": "Tier II subsistence permit application period (residents only)", "kind": "application", "residency": "resident",
      "start": "2026-11-01", "end": "2026-12-15", "cycle": 2027,
      "status": "confirmed", "sourceId": "d-subs-2027",
-     "note": "Online by 5 p.m. AKST December 15; paper applications must be postmarked November 1-30 and received by December 15."},
+     "note": "Apply online by 5 p.m. AKST December 15. Paper applications must be postmarked November 1-30 and received by December 15."},
     {"label": "Tier II paper applications: postmark window (must also be received by December 15)", "kind": "application",
      "residency": "resident", "start": "2026-11-01", "end": "2026-11-30", "cycle": 2027, "status": "confirmed", "sourceId": "d-subs-2027",
-     "note": "Mailed Tier II applications must be postmarked between November 1 and November 30 (U.S. Postal Service postmark) and "
-             "received by 5 p.m. AKST December 15; not accepted over the counter."},
+     "note": "Mailed Tier II applications need a U.S. Postal Service postmark between November 1 and November 30 and "
+             "must be received by 5 p.m. AKST December 15. Applications are not accepted over the counter."},
     {"label": "Copper Basin Community Subsistence Harvest moose hunt CM300: group coordinator applications", "kind": "application",
      "residency": "resident", "start": "2026-10-01", "end": "2026-12-15", "cycle": 2027, "status": "confirmed", "sourceId": "d-subs-2027",
-     "note": "Online only, closes 5 p.m. AKST December 15. Groups need at least 25 members; Alaska residents only."},
+     "note": "Online only, closes 5 p.m. AKST December 15. Groups need at least 25 members. Alaska residents only."},
     {"label": "Copper Basin Community Subsistence Harvest moose hunt CM300: household applications", "kind": "application",
      "residency": "resident", "start": "2026-11-01", "end": "2026-12-15", "cycle": 2027, "status": "confirmed", "sourceId": "d-subs-2027",
-     "note": "Online only, closes 5 p.m. AKST December 15. Households commit for two years; no member may hold other state moose permits or general-season moose harvest tickets."},
+     "note": "Online only, closes 5 p.m. AKST December 15. Households commit for two years. No household member may hold other state moose permits or general-season moose harvest tickets."},
     {"label": "Tier II and Community Subsistence Harvest results announced", "kind": "results", "residency": "resident",
      "date": "2027-02-19", "cycle": 2027, "status": "tentative", "sourceId": "d-subs-2027",
-     "note": "The 2027-2028 subsistence supplement says results are announced on the third Friday of February (February 19, 2027). ADF&G's Draw Results page (retrieved 2026-10-31) says 'Friday, February 20' for the Draw, Tier I/II and Community Subsistence Harvest period."},
+     "note": "ADF&G announces Tier I/II and Community Subsistence Harvest results on the third Friday of February, which is February 19, 2027. Its website gives Friday, February 20 instead, so confirm closer to the date."},
 ]
 
 
