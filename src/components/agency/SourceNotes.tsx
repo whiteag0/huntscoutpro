@@ -33,7 +33,8 @@ export function SourceNotes({ sources, index, title = "Sources", prefix = "src" 
         {list.map(({ n, s }) => (
           <li key={s.id} id={`${prefix}-${n}`} className="flex gap-2 scroll-mt-24">
             <span className="font-semibold text-gold shrink-0">[{n}]</span>
-            <span>
+            {/* Source notes can carry long URLs; let them wrap instead of widening the page on phones. */}
+            <span className="min-w-0 [overflow-wrap:anywhere]">
               <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-foreground hover:underline inline-flex items-center gap-1">
                 {sourceLabel(s)}
                 <ExternalLink className="w-3 h-3" aria-hidden />
