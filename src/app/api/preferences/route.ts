@@ -8,6 +8,8 @@ import { sendEmail, cancelScheduledEmail } from "@/lib/onboarding";
 import { preferencesNotification } from "@/lib/emails/onboarding";
 import { SPECIES_LABELS } from "@/data/types";
 import { pointsFromMetadata } from "@/lib/points";
+import { POINTS_KEY, POINTS_MAX_CHARS, sanitizePointsUpdate, serializePoints, type PointsMap } from "@/lib/points-schema";
+import { setRemindersOff } from "@/lib/members";
 import { stripe } from "@/lib/stripe";
 import { REPORT_PENDING_KEY, reportDecision, reportInputHash, reportStatus, type ReportDecision } from "@/lib/report-trigger";
 import { getAllStateData } from "@/lib/agency";
@@ -53,18 +55,18 @@ export async function GET() {
   }
 }
 
-function labelLines(p: HuntingPreferences): [string, string][] {
+function labelLines(p: HuntingPreferences, points: PointsMap = {}): [string, string][] {
   const label = (ids: string[], opts: readonly { id: string; label: string }[]) =>
     ids.map((id) => opts.find((o) => o.id === id)?.label || id).join(", ");
   const species = p.species.map((id) => (SPECIES_LABELS as Record<string, string>)[id] || id).join(", ");
   return [
-    ["States", p.states.join(", ")],
+    ["States", p.states.map((st, i) => (i === 0 && p.states.length > 1 ? `${st} (top)` : st)).join(", ")],
     ["Residency", p.residency],
     ["Home state", p.homeState],
     ["Species", species],
     ["Units / GMUs", p.units],
     ["Method of take", label(p.methods, METHOD_OPTIONS)],
-    ["Points", p.points],
+    ["Points", [serializePoints(points).replace(/;/g, ", "), p.points].filter(Boolean).join(" | ")],
     ["Success looks like", label(p.goals, GOAL_OPTIONS)],
     ["Notes / feedback", p.notes],
   ];
@@ -76,8 +78,8 @@ function labelLines(p: HuntingPreferences): [string, string][] {
  * save that sends clears the stamp. The idempotency key makes the retry safe when the
  * first attempt was delivered but its response was lost.
  */
-async function notifyOwner(opts: { email: string; name?: string | null; prefs: HuntingPreferences; paymentIntentId: string | null; hadError: boolean }) {
-  const email = preferencesNotification({ name: opts.name, email: opts.email, lines: labelLines(opts.prefs) });
+async function notifyOwner(opts: { email: string; name?: string | null; prefs: HuntingPreferences; points: PointsMap; paymentIntentId: string | null; hadError: boolean }) {
+  const email = preferencesNotification({ name: opts.name, email: opts.email, lines: labelLines(opts.prefs, opts.points) });
   const key = `hs-prefs-notify-${createHash("sha256").update(`${NOTIFY_TO}|${email.subject}|${email.text}`).digest("hex").slice(0, 40)}`;
   let error: string | null = null;
   for (let attempt = 0; attempt < 2; attempt++) {
@@ -98,7 +100,12 @@ async function notifyOwner(opts: { email: string; name?: string | null; prefs: H
     .catch((err) => console.error(`Could not record the preferences notification status on ${opts.paymentIntentId}:`, err));
 }
 
-/** Save the /welcome form ({preferences}) or record a skip ({skip: true}). */
+/**
+ * Save the /welcome form ({preferences}) or record a skip ({skip: true}).
+ * With the form, optionally: points — balances from the form's points question, merged into the
+ * saved ones ({"colorado.elk": 4, "utah.elk": null}; null removes) and written in the same update;
+ * reminders — turn deadline reminder emails on or off.
+ */
 export async function POST(req: NextRequest) {
   const m = await member();
   if ("error" in m) return m.error;
@@ -109,6 +116,11 @@ export async function POST(req: NextRequest) {
   if (!skip && (!prefs || (prefs.states.length === 0 && prefs.species.length === 0))) {
     return NextResponse.json({ error: "Pick at least one state or species." }, { status: 400 });
   }
+  const pointsUpdate = !skip && body?.points != null ? sanitizePointsUpdate(body.points) : null;
+  if (pointsUpdate?.invalid.length) {
+    return NextResponse.json({ error: `Points must be whole numbers from 0 to 40. Not accepted: ${pointsUpdate.invalid.join(", ")}` }, { status: 400 });
+  }
+  const reminders = !skip && typeof body?.reminders === "boolean" ? (body.reminders as boolean) : null;
 
   // Durable copy on the purchase's PaymentIntent (when we have one). Whether this save sends the
   // member's personal scouting report is decided against the record as it was before the save: the
@@ -124,23 +136,45 @@ export async function POST(req: NextRequest) {
       const current = await readPreferences(m.ent.paymentIntentId);
       before = current.metadata;
       reminderId = current.metadata[PREFS_EMAIL_ID_KEY];
-      savedPoints = pointsFromMetadata(before);
+      const previousPoints = pointsFromMetadata(before);
+      savedPoints = pointsUpdate ? mergePoints(previousPoints, pointsUpdate) : previousPoints;
+      const pts = serializePoints(savedPoints);
+      if (pts.length > POINTS_MAX_CHARS) {
+        return NextResponse.json({ error: "That's more point balances than we can store. Remove a few and try again." }, { status: 400 });
+      }
       if (prefs) {
         report = reportDecision({
           prefs,
           metadata: before,
           hash: reportInputHash(prefs, savedPoints),
-          previousHash: current.preferences ? reportInputHash(current.preferences, savedPoints) : null,
+          previousHash: current.preferences ? reportInputHash(current.preferences, previousPoints) : null,
           nowMs: Date.now(),
         });
       }
-      await writePreferences(m.ent.paymentIntentId, prefs, report === "send" ? { [REPORT_PENDING_KEY]: new Date().toISOString() } : {});
+      await writePreferences(m.ent.paymentIntentId, prefs, {
+        ...(pointsUpdate ? { [POINTS_KEY]: pts } : {}),
+        ...(report === "send" ? { [REPORT_PENDING_KEY]: new Date().toISOString() } : {}),
+      });
     } catch (err) {
       console.error("Preferences save failed:", err);
       return NextResponse.json({ error: "Couldn't save right now. Please try again." }, { status: 502 });
     }
   } else if (prefs) {
-    report = reportDecision({ prefs, metadata: {}, hash: reportInputHash(prefs), nowMs: Date.now() });
+    if (pointsUpdate) savedPoints = mergePoints({}, pointsUpdate);
+    report = reportDecision({ prefs, metadata: {}, hash: reportInputHash(prefs, savedPoints), nowMs: Date.now() });
+  }
+
+  // The reminder choice from the form's last step. It's stored on every purchase of the member's
+  // (as on My Account), so a failure here is reported without failing the save above.
+  let remindersSaved: boolean | null = null;
+  if (reminders !== null && m.ent.paymentIntentId) {
+    try {
+      await setRemindersOff(m.email, !reminders);
+      remindersSaved = true;
+    } catch (err) {
+      console.error("Reminder setting save failed:", err);
+      remindersSaved = false;
+    }
   }
 
   if (prefs) {
@@ -151,6 +185,7 @@ export async function POST(req: NextRequest) {
       email: m.email,
       name: m.session!.user.name,
       prefs,
+      points: savedPoints,
       paymentIntentId: m.ent.paymentIntentId ?? null,
       hadError: !!before[PREFS_NOTIFY_ERROR_KEY],
     };
@@ -170,5 +205,11 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  return NextResponse.json({ ok: true, report: report === "send" ? "queued" : report });
+  return NextResponse.json({ ok: true, report: report === "send" ? "queued" : report, ...(remindersSaved === false ? { remindersSaved } : {}) });
+}
+
+function mergePoints(saved: PointsMap, update: { set: PointsMap; remove: string[] }): PointsMap {
+  const out: PointsMap = { ...saved, ...update.set };
+  for (const k of update.remove) delete out[k];
+  return out;
 }

@@ -6,6 +6,7 @@ import {
   daysBetween,
   groupReminders,
   labelResidency,
+  labelMethod,
   memberResidencyIn,
   nextDeadlines,
   nextReminderDates,
@@ -268,4 +269,36 @@ test("nextDeadlines: soonest open dates across the member's states, a shared dat
   // States not in the member's list, and members with no states, get nothing.
   assert.deepEqual(nextDeadlines(member({ states: [] }), [UTAH], "2026-10-28"), []);
   assert.equal(nextDeadlines(member({ states: ["idaho"] }), [UTAH, IDAHO], "2026-10-28")[0].sourceUrl, "https://idfg.idaho.gov");
+});
+
+test("labelMethod: archery-only and firearm-only labels; lists and asides cover everyone", () => {
+  assert.equal(labelMethod("Nonresident archery deer (public/private land, ADNP-ST1) application period"), "archery");
+  assert.equal(labelMethod("Resident firearm/muzzleloader antelope application deadline"), "firearm");
+  assert.equal(labelMethod("Firearms antelope first draw application period"), "firearm");
+  assert.equal(labelMethod("Antelope, Antelope B and archery antelope application deadline"), "any");
+  assert.equal(labelMethod("West River, East River, Black Hills & CSP, Muzzleloader and Refuge deer - first draw application period"), "any");
+  assert.equal(labelMethod("Limited-entry application period"), "any");
+  assert.equal(labelMethod("Elbow Creek application deadline"), "any");
+});
+
+test("method filter: archery-only dates skip rifle hunters, firearm dates skip archers, no methods keeps all", () => {
+  const st: ReminderState = {
+    ...UTAH,
+    species: [
+      {
+        ...UTAH.species[0],
+        keyDates: [
+          kd({ label: "Archery deer access permit application deadline", date: "2026-11-10" }),
+          kd({ label: "Firearms elk application deadline", date: "2026-11-10" }),
+          kd({ label: "Limited-entry application deadline", date: "2026-11-10" }),
+        ],
+      },
+    ],
+  };
+  const got = (methods?: string[]) => labels(member({ residency: "both", methods }), "2026-11-07", [st]).map((l) => l.split("|")[0]);
+  assert.deepEqual(got(["rifle"]), ["Firearms elk application deadline", "Limited-entry application deadline"]);
+  assert.deepEqual(got(["archery"]), ["Archery deer access permit application deadline", "Limited-entry application deadline"]);
+  assert.equal(got(["archery", "muzzleloader"]).length, 3);
+  assert.equal(got([]).length, 3);
+  assert.equal(got(undefined).length, 3);
 });

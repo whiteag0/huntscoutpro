@@ -26,7 +26,7 @@ export async function GET() {
   const m = await member();
   if ("error" in m) return m.error;
   if (!m.ent.paymentIntentId) {
-    return NextResponse.json({ available: false, enabled: false, states: [], species: [], residency: "", homeState: "", upcoming: [] });
+    return NextResponse.json({ available: false, enabled: false, states: [], species: [], methods: [], residency: "", homeState: "", upcoming: [] });
   }
   try {
     // Off when any purchase carries the flag, exactly like the daily job decides.
@@ -34,6 +34,7 @@ export async function GET() {
     const prefs = {
       states: preferences?.states ?? [],
       species: preferences?.species ?? [],
+      methods: preferences?.methods ?? [],
       residency: preferences?.residency ?? "",
       homeState: preferences?.homeState ?? "",
     };
