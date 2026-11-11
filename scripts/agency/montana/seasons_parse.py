@@ -104,24 +104,24 @@ KEYDATE_TAGS = {
 # Dec. 31 = Fri. None of these rules moves a date that falls on a weekend or holiday.
 # Rules checked and NOT used: black bear permit (Apr. 1) and limited lion license deadlines are not in
 # ARM 12.3.6 / 12.9 or MCA Title 87 ch. 2; drawing-result dates are not fixed by any rule.
-NOT_ANNOUNCED = "; FWP hasn't announced the 2027 dates yet."
+NOT_ANNOUNCED = " FWP hasn't announced the 2027 dates yet."
 ARM601 = "d-arm-12-3-601"
-R601_12 = ("Set by ARM 12.3.601(1) and (2) (\"The application deadline for B-10 and B-11 license drawings is April 1.\" "
-           "\"The application deadline for elk and deer permit drawings is April 1.\")" + NOT_ANNOUNCED)
-R601_3 = "Set by ARM 12.3.601(3) (\"The application deadline for moose, sheep, goat, and bison drawings is May 1.\")" + NOT_ANNOUNCED
-R601_4 = ("Set by ARM 12.3.601(4) (\"The application deadline for elk B, deer B, antelope, and antelope B license drawings is "
-          "June 1.\")" + NOT_ANNOUNCED)
-R621 = ("Set by ARM 12.3.621(1) (\"Applicants who are successful in drawing a moose, sheep, or goat license must finalize their "
-        "purchase on or before August 1 of the current license year, except licenses that have an unlimited quota.\")" + NOT_ANNOUNCED)
+R601_12 = ("Based on Montana's standing rule: applications for nonresident combination (B-10 and B-11) licenses and elk and "
+           "deer permits are due April 1 each year." + NOT_ANNOUNCED)
+R601_3 = "Based on Montana's standing rule: moose, sheep, goat and bison applications are due May 1 each year." + NOT_ANNOUNCED
+R601_4 = ("Based on Montana's standing rule: applications for elk B, deer B, antelope and antelope B licenses are due "
+          "June 1 each year." + NOT_ANNOUNCED)
+R621 = ("Based on Montana's standing rule: if you draw a moose, sheep or goat license, you must buy it by Aug. 1 of that "
+        "license year. Unlimited-quota licenses are exempt." + NOT_ANNOUNCED)
 BP_LABEL = "Bonus point purchase without applying (one per species/license type)"
 PP_LABEL = "Nonresident preference point purchase without applying for a combination license"
 BP_2027 = {"label": BP_LABEL, "start": "2027-07-01", "end": "2027-09-30", "cycle": 2027, "status": "tentative",
-           "note": "Set by MCA 87-2-117(2)(b) (\"An applicant not applying for a license, tag, or permit may purchase a bonus point "
-                   "only between July 1 and September 30 in the current license year.\")" + NOT_ANNOUNCED,
+           "note": "Based on Montana law: if you don't apply for a license, tag or permit, you can buy a bonus point only "
+                   "between July 1 and Sept. 30 of that license year." + NOT_ANNOUNCED,
            "sourceId": "d-mca-87-2-117"}
 PP_2027 = {"label": PP_LABEL, "start": "2027-07-01", "end": "2027-12-31", "cycle": 2027, "status": "tentative",
-           "note": "Set by MCA 87-2-115(3)(b) (\"An applicant not applying for a Class B-10 or Class B-11 license may purchase a "
-                   "preference point only between July 1 and December 31 of that license year.\")" + NOT_ANNOUNCED,
+           "note": "Based on Montana law: if you don't apply for a B-10 or B-11 combination license, you can buy a preference "
+                   "point only between July 1 and Dec. 31 of that license year." + NOT_ANNOUNCED,
            "sourceId": "d-mca-87-2-115"}
 
 
@@ -166,15 +166,15 @@ RULE_SOURCES = [
 # 2026-cycle date FWP prints that a hunter still has to act on (lion is over the counter in 2026).
 EXTRA_2026 = {"lion": [{"label": "Mountain Lion License purchase deadline (2026 license)", "kind": "other", "date": "2027-02-28",
                         "cycle": 2026, "status": "confirmed",
-                        "note": "FWP: \"Even though the 2026 mountain lion season extends into the 2027 license year, the deadline to purchase 2026 licenses is February 28, 2027.\"",
+                        "note": "The 2026 mountain lion season runs into the 2027 license year, but you must buy your 2026 license by Feb. 28, 2027.",
                         "sourceId": "d-fwp-regs-lion-2026"}],
               # The B-11 deer combination covers white-tailed deer too; draw_meta.py only lists this on elk/mule deer.
               "whitetail": [{"label": PP_LABEL, "start": "2026-07-01", "end": "2026-12-31", "cycle": 2026, "status": "confirmed",
                              "sourceId": "d-fwp-regs-dea-2026",
-                             "note": "$100; applicants who applied for a combination license could only buy it at application."}]}
+                             "note": "A preference point costs $100. If you applied for a combination license, you could only buy the point with your application."}]}
 # 2026 notes: point to the statute that sets the same window every year (the 2027 entry).
-NOTE_2026 = {BP_LABEL: "MCA 87-2-117(2)(b) sets the same July 1 - Sept. 30 window every license year (see the 2027 entry).",
-             PP_LABEL: "MCA 87-2-115(3)(b) sets the same July 1 - Dec. 31 window every license year (see the 2027 entry)."}
+NOTE_2026 = {BP_LABEL: "Montana law sets the same July 1 to Sept. 30 window every license year.",
+             PP_LABEL: "Montana law sets the same July 1 to Dec. 31 window every license year."}
 
 D = "d-fwp-regs-dea-2026"
 M = "d-fwp-regs-msgb-2026"
@@ -619,7 +619,7 @@ def main():
             else:
                 d.pop("residency", None)
             if d["cycle"] == 2026 and d["label"] in NOTE_2026:
-                base_note = re.sub(r" (2027 dates not yet published by Montana FWP as of 2026-10-31\.|FWP's Bonus Points FAQ .*|MCA 87-2-11[57].*)$",
+                base_note = re.sub(r" (FWP hasn't published 2027 dates yet, so these are the 2026 dates\.|FWP's Bonus Points FAQ .*|Montana law sets the same .*)$",
                                    "", d.get("note", ""))
                 d["note"] = (base_note + " " + NOTE_2026[d["label"]]).strip()
         # label, kind, residency first; the other keys keep draw_meta.py's order

@@ -18,7 +18,9 @@ import sys
 R = "2026-10-31"
 PUB = "South Dakota Game, Fish and Parks"
 DS = "https://license.gooutdoorssouthdakota.com/License/DrawStatistics"
-NOT27 = "2027 dates not yet published by SD GFP as of 2026-10-31."
+NOT27 = "GFP hasn't published 2027 dates yet."
+Y26 = "These are the 2026 dates."
+TAIL = f"{NOT27} {Y26}"
 
 SOURCES = [
     *[{"id": f"d-sd-drawstats-{y}", "title": f"Draw Statistics ({y}): Draw Results and Draw Preference Breakdown by season, application period and license",
@@ -59,7 +61,7 @@ SOURCES = [
 DRAWSTATS = [f"d-sd-drawstats-{y}" for y in (2022, 2023, 2024, 2025, 2026)]
 
 
-def kd(label, cycle, sid, start=None, end=None, date=None, note=None, status="confirmed", kind=None, res=None):
+def kd(label, cycle, sid, start=None, end=None, date=None, note=None, status="confirmed", kind=None, res=None, tail=TAIL):
     # kind / residency: KeyDate.kind and KeyDate.residency in src/data/agency/schema.ts
     d = {"label": label}
     if kind:
@@ -72,13 +74,15 @@ def kd(label, cycle, sid, start=None, end=None, date=None, note=None, status="co
         d["start"], d["end"] = start, end
     d["cycle"] = cycle
     d["status"] = status
-    d["note"] = (note + " " if note else "") + NOT27
+    # tail: closing sentence(s) appended to every note (TAIL by default; "" for none)
+    d["note"] = " ".join(x for x in (note, tail) if x)
     d["sourceId"] = sid
     return d
 
 
 PREF_BUY = lambda: kd("Preference point purchase period (in lieu of an application)", 2026, "d-sd-prefpoints", "2026-09-15", "2026-12-15",
-                      note="GFP lists September 15 - December 15 without a year; shown for the 2026 window. Some limited-license seasons only (not elk, sheep or goat, which award points automatically).", kind="points")
+                      note=("GFP lists this window as September 15 to December 15 without naming a year. " + Y26 + " Only some limited-license seasons qualify. "
+                            "Elk, bighorn sheep and mountain goat award points automatically."), tail=NOT27, kind="points")
 
 DEER_SUMMARY = ("Deer licenses are drawn season by season (West River, East River, Black Hills, Custer State Park, Muzzleloader, National Wildlife Refuge, "
                 "Special Buck and others) in a combined deer draw that limits how many applications a person may submit. In the first draw, 50% of a unit's "
@@ -87,17 +91,17 @@ DEER_SUMMARY = ("Deer licenses are drawn season by season (West River, East Rive
                 "applicant's name is entered, which improves but does not guarantee odds.")
 DEER_KEYDATES = lambda: [
     kd("West River, East River, Black Hills & CSP, Muzzleloader and Refuge deer - first draw application period", 2026, "d-sd-wrdeer-2026", "2026-05-27", "2026-06-23",
-       note="Closes 8:00 AM CDT. GFP's Key Dates page lists Jun 3 - Jun 23, 2026.", kind="application"),
+       note="Applications close at 8:00 a.m. CDT. GFP also lists the period as June 3 to June 23, 2026.", kind="application"),
     kd("Deer first draw results available", 2026, "d-sd-wrdeer-2026", date="2026-07-02", kind="results"),
-    kd("Deer second draw application period", 2026, "d-sd-wrdeer-2026", "2026-07-08", "2026-07-22", note="Results 2026-07-27.", kind="leftover"),
-    kd("Deer third draw application period", 2026, "d-sd-wrdeer-2026", "2026-07-29", "2026-08-12", note="Results 2026-08-14.", kind="leftover"),
-    kd("Deer fourth draw application period", 2026, "d-sd-wrdeer-2026", "2026-08-18", "2026-09-01", note="Results 2026-09-04.", kind="leftover"),
+    kd("Deer second draw application period", 2026, "d-sd-wrdeer-2026", "2026-07-08", "2026-07-22", note="Results were posted July 27, 2026.", kind="leftover"),
+    kd("Deer third draw application period", 2026, "d-sd-wrdeer-2026", "2026-07-29", "2026-08-12", note="Results were posted August 14, 2026.", kind="leftover"),
+    kd("Deer fourth draw application period", 2026, "d-sd-wrdeer-2026", "2026-08-18", "2026-09-01", note="Results were posted September 4, 2026.", kind="leftover"),
     kd("West River deer leftover licenses (first-come, first-served)", 2026, "d-sd-wrdeer-2026", "2026-09-09", "2026-11-29", kind="leftover"),
     kd("Special Buck first draw application period (East River ESD, West River WSD)", 2026, "d-sd-specialbuck-2026", "2026-03-11", "2026-04-14",
-       note="Results 2026-04-15. GFP's Key Dates page lists Mar 18/19 - Apr 14, 2026.", kind="application"),
+       note="Results were posted April 15, 2026. GFP also lists the period as March 18 or 19 to April 14, 2026.", kind="application"),
     kd("Nonresident archery deer (public/private land, ADNP-ST1) application period", 2026, "d-sd-nrarchdeer-2026", "2026-05-13", "2026-06-09",
-       note="Results 2026-06-12. GFP's Key Dates page lists May 20 - Jun 9, 2026.", kind="application", res="nonresident"),
-    kd("Archery deer access permit application period", 2026, "d-sd-resarchdeer-2026", "2026-06-10", "2026-07-01", note="Results 2026-07-03.", kind="application"),
+       note="Results were posted June 12, 2026. GFP also lists the period as May 20 to June 9, 2026.", kind="application", res="nonresident"),
+    kd("Archery deer access permit application period", 2026, "d-sd-resarchdeer-2026", "2026-06-10", "2026-07-01", note="Results were posted July 3, 2026.", kind="application"),
     PREF_BUY(),
 ]
 DEER_COMMON = {
@@ -137,11 +141,11 @@ SPECIES = [
                        "Prairie Elk landowner-own-land license is applied for separately (2026: Jul 14 - Dec 31)."),
         "keyDates": [
             kd("Elk first draw application period", 2026, "d-sd-elk-2026", "2026-04-15", "2026-05-19",
-               note="Closes 8:00 AM CDT. GFP's Key Dates page lists Apr 22 - May 19, 2026.", kind="application", res="resident"),
+               note="Applications close at 8:00 a.m. CDT. GFP also lists the period as April 22 to May 19, 2026.", kind="application", res="resident"),
             kd("Elk first draw results available", 2026, "d-sd-elk-2026", date="2026-05-27", kind="results", res="resident"),
-            kd("Elk second draw application period", 2026, "d-sd-elk-2026", "2026-05-28", "2026-06-11", note="Results 2026-06-15.", kind="leftover", res="resident"),
+            kd("Elk second draw application period", 2026, "d-sd-elk-2026", "2026-05-28", "2026-06-11", note="Results were posted June 15, 2026.", kind="leftover", res="resident"),
             kd("Elk landowner preference application period", 2026, "d-sd-keydates", "2026-03-12", "2026-04-02", kind="application", res="resident"),
-            kd("Elk license return deadline", 2026, "d-sd-elk-2026", date="2026-08-01", note="$10 return fee.", kind="surrender", res="resident"),
+            kd("Elk license return deadline", 2026, "d-sd-elk-2026", date="2026-08-01", note="GFP charges a $10 fee to return a license.", kind="surrender", res="resident"),
         ],
         "sourceIds": DRAWSTATS + ["d-sd-prefpoints", "d-sd-prefpoints-fees", "d-sd-elk-2026", "d-sd-elk-page", "d-sd-keydates"],
     },
@@ -162,8 +166,8 @@ SPECIES = [
                        "window as Jul 22 - Oct 31, 2026. Eligible nonresident landowners may buy a landowner-own-land firearm antelope license."),
         "keyDates": [
             kd("Firearms antelope first draw application period", 2026, "d-sd-antelope-2026", "2026-06-16", "2026-07-07",
-               note="Closes 8:00 AM CDT; results 2026-07-08. GFP's Key Dates page lists Jun 23 - Jul 7, 2026.", kind="application"),
-            kd("Firearms antelope second draw application period", 2026, "d-sd-antelope-2026", "2026-07-09", "2026-07-23", note="Results 2026-07-27.", kind="leftover"),
+               note="Applications close at 8:00 a.m. Central time. Results were posted July 8, 2026. GFP also lists the period as June 23 to July 7, 2026.", kind="application"),
+            kd("Firearms antelope second draw application period", 2026, "d-sd-antelope-2026", "2026-07-09", "2026-07-23", note="Results were posted July 27, 2026.", kind="leftover"),
             kd("Nonresident archery antelope (public/private land) application period", 2026, "d-sd-keydates", "2026-06-23", "2026-07-07", kind="application", res="nonresident"),
             PREF_BUY(),
         ],
@@ -181,7 +185,7 @@ SPECIES = [
         "otcSummary": "None.",
         "keyDates": [
             kd("Bighorn sheep application period", 2026, "d-sd-sheep-2026", "2026-04-15", "2026-05-19",
-               note="Closes 8:00 AM CDT. GFP's Key Dates page lists Apr 22 - May 19, 2026.", kind="application", res="resident"),
+               note="Applications close at 8:00 a.m. CDT. GFP also lists the period as April 22 to May 19, 2026.", kind="application", res="resident"),
             kd("Bighorn sheep draw results available", 2026, "d-sd-sheep-2026", date="2026-05-27", kind="results", res="resident"),
         ],
         "sourceIds": DRAWSTATS + ["d-sd-sheep-2026", "d-sd-prefpoints-fees", "d-sd-applicant-info"],
@@ -209,7 +213,8 @@ SPECIES = [
         "otcSummary": "Resident license over the counter, unlimited: 2026 season purchases opened 2025-11-26.",
         "keyDates": [
             kd("Mountain lion dog-hunting access permit application period (2026 season)", 2026, "d-sd-lion-2026", "2025-11-06", "2025-12-03",
-               note="Closes 8:00 AM CDT; results 2025-12-05. The 2027-season (Dec 2026) access permit dates were not found on GFP's site as of 2026-10-31.", kind="application", res="resident"),
+               note=("Applications close at 8:00 a.m. Central time. Results were posted December 5, 2025. GFP hasn't announced access permit dates for the 2027 season "
+                     "(starting December 2026) yet. These are last cycle's dates, for the 2026 season."), tail="", kind="application", res="resident"),
         ],
         "sourceIds": DRAWSTATS[1:] + ["d-sd-lion-2026", "d-sd-license-types"],
     },
@@ -226,14 +231,16 @@ SPECIES = [
         "otcSummary": "Spring archery (statewide except CSP), resident Black Hills spring and mentored licenses over the counter; leftover prairie licenses first-come, first-served.",
         "keyDates": [
             kd("Prairie spring turkey first draw application period", 2026, "d-sd-springturkey-prairie-2026", "2026-01-14", "2026-02-11",
-               note="Closes 8:00 AM CDT; results 2026-02-13. GFP's Key Dates page also lists Jan 14 - Feb 11, 2026 for Spring Prairie.", kind="application"),
-            kd("Prairie spring turkey second draw application period", 2026, "d-sd-springturkey-prairie-2026", "2026-02-18", "2026-03-04", note="Results 2026-03-06.", kind="leftover"),
-            kd("Prairie spring turkey third draw application period", 2026, "d-sd-springturkey-prairie-2026", "2026-03-10", "2026-03-24", note="Results 2026-03-26.", kind="leftover"),
+               note="Applications close at 8:00 a.m. Central time. Results were posted February 13, 2026.", kind="application"),
+            kd("Prairie spring turkey second draw application period", 2026, "d-sd-springturkey-prairie-2026", "2026-02-18", "2026-03-04", note="Results were posted March 6, 2026.", kind="leftover"),
+            kd("Prairie spring turkey third draw application period", 2026, "d-sd-springturkey-prairie-2026", "2026-03-10", "2026-03-24", note="Results were posted March 26, 2026.", kind="leftover"),
             kd("Nonresident Black Hills and Custer State Park spring turkey application period", 2026, "d-sd-springturkey-bh-2026", "2026-01-14", "2026-02-11",
-               note="Closes 8:00 AM CDT; results 2026-02-13. GFP's Key Dates page lists Jan 21 - Feb 11, 2026 for these seasons; the 2026 application PDF date is used.", kind="application"),
-            kd("Fall turkey first draw application period", 2026, "d-sd-fallturkey-2026", "2026-08-11", "2026-09-02", note="Closes 8:00 AM CDT; results 2026-09-09. GFP's Key Dates page lists Aug 18 - Sep 2, 2026; the 2026 application PDF date is used.", kind="application"),
-            kd("Fall turkey second draw application period", 2026, "d-sd-fallturkey-2026", "2026-09-11", "2026-09-22", note="Results 2026-09-25.", kind="leftover"),
-            kd("Fall turkey third draw application period", 2026, "d-sd-fallturkey-2026", "2026-09-29", "2026-10-13", note="Results 2026-10-14.", kind="leftover"),
+               note=("Applications close at 8:00 a.m. Central time. Results were posted February 13, 2026. GFP also lists the period for these seasons as January 21 to February 11, 2026. "
+                     "The dates shown follow GFP's 2026 application."), tail=NOT27, kind="application"),
+            kd("Fall turkey first draw application period", 2026, "d-sd-fallturkey-2026", "2026-08-11", "2026-09-02", note=("Applications close at 8:00 a.m. Central time. Results were posted September 9, 2026. GFP also lists the period as August 18 to September 2, 2026. "
+                  "The dates shown follow GFP's 2026 application."), tail=NOT27, kind="application"),
+            kd("Fall turkey second draw application period", 2026, "d-sd-fallturkey-2026", "2026-09-11", "2026-09-22", note="Results were posted September 25, 2026.", kind="leftover"),
+            kd("Fall turkey third draw application period", 2026, "d-sd-fallturkey-2026", "2026-09-29", "2026-10-13", note="Results were posted October 14, 2026.", kind="leftover"),
             PREF_BUY(),
         ],
         "sourceIds": DRAWSTATS + ["d-sd-prefpoints", "d-sd-springturkey-prairie-2026", "d-sd-springturkey-bh-2026", "d-sd-fallturkey-2026", "d-sd-keydates"],

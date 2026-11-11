@@ -29,7 +29,7 @@
           "end": "2026-04-23",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. 2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "note": "Opened 8 a.m. MDT March 19 and closed 11 p.m. MDT April 23. UDWR hasn't published 2027 big game draw dates yet, so these are the 2026 dates. The 2027 sportsman permit drawing is a separate draw.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -38,7 +38,7 @@
           "date": "2026-05-31",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Results by email on or by May 31, 2026.",
+          "note": "Results are emailed by May 31, 2026.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -66,7 +66,7 @@
           "date": "2026-07-08",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Results by email on or by July 8, 2026.",
+          "note": "Results are emailed by July 8, 2026.",
           "sourceId": "d-antlerless-guide-2026"
         },
         {
@@ -101,7 +101,7 @@
           "end": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "note": "Opens 8 a.m. MDT Oct. 20 and closes 11 p.m. MST Nov. 10, 2026, which is also the withdrawal deadline. Utah residents only. One sportsman permit is offered for each species. The application fee is $10 per species and is non-refundable. No bonus points are earned or used in the sportsman drawing.",
           "sourceId": "d-news-sportsman-2027"
         },
         {
@@ -111,7 +111,7 @@
           "date": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "note": "You can withdraw an online application until 11 p.m. MST Nov. 10, 2026. Withdrawing costs nothing extra, but the application fee is not refunded.",
           "sourceId": "d-sportsman-page-2027"
         },
         {
@@ -121,7 +121,7 @@
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Results by email on Thursday, Nov. 19, 2026.",
+          "note": "Results are emailed Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -154,7 +154,7 @@
           "end": "2026-04-23",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. 2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "note": "Opened 8 a.m. MDT March 19 and closed 11 p.m. MDT April 23. UDWR hasn't published 2027 big game draw dates yet, so these are the 2026 dates. The 2027 sportsman permit drawing is a separate draw.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -163,7 +163,7 @@
           "date": "2026-05-31",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Results by email on or by May 31, 2026.",
+          "note": "Results are emailed by May 31, 2026.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -191,7 +191,7 @@
           "date": "2026-07-08",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Results by email on or by July 8, 2026.",
+          "note": "Results are emailed by July 8, 2026.",
           "sourceId": "d-antlerless-guide-2026"
         },
         {
@@ -200,7 +200,7 @@
           "date": "2026-07-07",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "If available.",
+          "note": "Only if permits remain.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -211,7 +211,7 @@
           "end": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "note": "Opens 8 a.m. MDT Oct. 20 and closes 11 p.m. MST Nov. 10, 2026, which is also the withdrawal deadline. Utah residents only. One sportsman permit is offered for each species. The application fee is $10 per species and is non-refundable. No bonus points are earned or used in the sportsman drawing.",
           "sourceId": "d-news-sportsman-2027"
         },
         {
@@ -221,7 +221,7 @@
           "date": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "note": "You can withdraw an online application until 11 p.m. MST Nov. 10, 2026. Withdrawing costs nothing extra, but the application fee is not refunded.",
           "sourceId": "d-sportsman-page-2027"
         },
         {
@@ -231,7 +231,7 @@
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Results by email on Thursday, Nov. 19, 2026.",
+          "note": "Results are emailed Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -264,7 +264,7 @@
           "end": "2026-04-23",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. 2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "note": "Opened 8 a.m. MDT March 19 and closed 11 p.m. MDT April 23. UDWR hasn't published 2027 big game draw dates yet, so these are the 2026 dates. The 2027 sportsman permit drawing is a separate draw.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -273,7 +273,7 @@
           "date": "2026-05-31",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Results by email on or by May 31, 2026.",
+          "note": "Results are emailed by May 31, 2026.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -301,7 +301,7 @@
           "date": "2026-07-08",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Results by email on or by July 8, 2026.",
+          "note": "Results are emailed by July 8, 2026.",
           "sourceId": "d-antlerless-guide-2026"
         },
         {
@@ -312,7 +312,7 @@
           "end": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "note": "Opens 8 a.m. MDT Oct. 20 and closes 11 p.m. MST Nov. 10, 2026, which is also the withdrawal deadline. Utah residents only. One sportsman permit is offered for each species. The application fee is $10 per species and is non-refundable. No bonus points are earned or used in the sportsman drawing.",
           "sourceId": "d-news-sportsman-2027"
         },
         {
@@ -322,7 +322,7 @@
           "date": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "note": "You can withdraw an online application until 11 p.m. MST Nov. 10, 2026. Withdrawing costs nothing extra, but the application fee is not refunded.",
           "sourceId": "d-sportsman-page-2027"
         },
         {
@@ -332,7 +332,7 @@
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Results by email on Thursday, Nov. 19, 2026.",
+          "note": "Results are emailed Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -364,7 +364,7 @@
           "end": "2026-04-23",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. 2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "note": "Opened 8 a.m. MDT March 19 and closed 11 p.m. MDT April 23. UDWR hasn't published 2027 big game draw dates yet, so these are the 2026 dates. The 2027 sportsman permit drawing is a separate draw.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -373,7 +373,7 @@
           "date": "2026-05-31",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Results by email on or by May 31, 2026.",
+          "note": "Results are emailed by May 31, 2026.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -401,7 +401,7 @@
           "date": "2026-07-08",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Results by email on or by July 8, 2026.",
+          "note": "Results are emailed by July 8, 2026.",
           "sourceId": "d-antlerless-guide-2026"
         },
         {
@@ -412,7 +412,7 @@
           "end": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "note": "Opens 8 a.m. MDT Oct. 20 and closes 11 p.m. MST Nov. 10, 2026, which is also the withdrawal deadline. Utah residents only. One sportsman permit is offered for each species. The application fee is $10 per species and is non-refundable. No bonus points are earned or used in the sportsman drawing.",
           "sourceId": "d-news-sportsman-2027"
         },
         {
@@ -422,7 +422,7 @@
           "date": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "note": "You can withdraw an online application until 11 p.m. MST Nov. 10, 2026. Withdrawing costs nothing extra, but the application fee is not refunded.",
           "sourceId": "d-sportsman-page-2027"
         },
         {
@@ -432,7 +432,7 @@
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Results by email on Thursday, Nov. 19, 2026.",
+          "note": "Results are emailed Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -463,7 +463,7 @@
           "end": "2026-04-23",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. 2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "note": "Opened 8 a.m. MDT March 19 and closed 11 p.m. MDT April 23. UDWR hasn't published 2027 big game draw dates yet, so these are the 2026 dates. The 2027 sportsman permit drawing is a separate draw.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -472,7 +472,7 @@
           "date": "2026-05-31",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Results by email on or by May 31, 2026.",
+          "note": "Results are emailed by May 31, 2026.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -500,7 +500,7 @@
           "date": "2026-07-08",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Results by email on or by July 8, 2026.",
+          "note": "Results are emailed by July 8, 2026.",
           "sourceId": "d-antlerless-guide-2026"
         },
         {
@@ -511,7 +511,7 @@
           "end": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "note": "Opens 8 a.m. MDT Oct. 20 and closes 11 p.m. MST Nov. 10, 2026, which is also the withdrawal deadline. Utah residents only. One sportsman permit is offered for each species. The application fee is $10 per species and is non-refundable. No bonus points are earned or used in the sportsman drawing.",
           "sourceId": "d-news-sportsman-2027"
         },
         {
@@ -521,7 +521,7 @@
           "date": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "note": "You can withdraw an online application until 11 p.m. MST Nov. 10, 2026. Withdrawing costs nothing extra, but the application fee is not refunded.",
           "sourceId": "d-sportsman-page-2027"
         },
         {
@@ -531,7 +531,7 @@
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Results by email on Thursday, Nov. 19, 2026.",
+          "note": "Results are emailed Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -562,7 +562,7 @@
           "end": "2026-04-23",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Opened 8 a.m. MDT March 19, closed 11 p.m. MDT April 23. 2027 main big game draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "note": "Opened 8 a.m. MDT March 19 and closed 11 p.m. MDT April 23. UDWR hasn't published 2027 big game draw dates yet, so these are the 2026 dates. The 2027 sportsman permit drawing is a separate draw.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -571,7 +571,7 @@
           "date": "2026-05-31",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Results by email on or by May 31, 2026.",
+          "note": "Results are emailed by May 31, 2026.",
           "sourceId": "d-bg-guide-2026"
         },
         {
@@ -592,7 +592,7 @@
           "end": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "note": "Opens 8 a.m. MDT Oct. 20 and closes 11 p.m. MST Nov. 10, 2026, which is also the withdrawal deadline. Utah residents only. One sportsman permit is offered for each species. The application fee is $10 per species and is non-refundable. No bonus points are earned or used in the sportsman drawing.",
           "sourceId": "d-news-sportsman-2027"
         },
         {
@@ -602,7 +602,7 @@
           "date": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "note": "You can withdraw an online application until 11 p.m. MST Nov. 10, 2026. Withdrawing costs nothing extra, but the application fee is not refunded.",
           "sourceId": "d-sportsman-page-2027"
         },
         {
@@ -612,7 +612,7 @@
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Results by email on Thursday, Nov. 19, 2026.",
+          "note": "Results are emailed Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -641,7 +641,7 @@
           "end": "2026-02-24",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "Closed 11 p.m. MST Feb. 24. 2027 black bear draw dates not yet published by UDWR as of 2026-10-31 (the separate 2027 sportsman permit drawing is listed below).",
+          "note": "Closed 11 p.m. MST Feb. 24. UDWR hasn't published 2027 black bear draw dates yet, so these are the 2026 dates. The 2027 sportsman permit drawing is a separate draw.",
           "sourceId": "d-bear-guide-2026"
         },
         {
@@ -658,7 +658,7 @@
           "date": "2026-03-10",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "8 a.m. MDT.",
+          "note": "Sales start at 8 a.m. MDT.",
           "sourceId": "d-bear-guide-2026"
         },
         {
@@ -667,7 +667,7 @@
           "date": "2026-03-10",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "8 a.m. MDT.",
+          "note": "Sales start at 8 a.m. MDT.",
           "sourceId": "d-bear-guide-2026"
         },
         {
@@ -678,7 +678,7 @@
           "end": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "note": "Opens 8 a.m. MDT Oct. 20 and closes 11 p.m. MST Nov. 10, 2026, which is also the withdrawal deadline. Utah residents only. One sportsman permit is offered for each species. The application fee is $10 per species and is non-refundable. No bonus points are earned or used in the sportsman drawing.",
           "sourceId": "d-news-sportsman-2027"
         },
         {
@@ -688,7 +688,7 @@
           "date": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "note": "You can withdraw an online application until 11 p.m. MST Nov. 10, 2026. Withdrawing costs nothing extra, but the application fee is not refunded.",
           "sourceId": "d-sportsman-page-2027"
         },
         {
@@ -698,7 +698,7 @@
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Results by email on Thursday, Nov. 19, 2026.",
+          "note": "Results are emailed Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],
@@ -739,7 +739,7 @@
           "date": "2026-09-10",
           "cycle": 2026,
           "status": "confirmed",
-          "note": "8 a.m. MDT; fall hunts Oct. 1, 2026 - Feb. 28, 2027.",
+          "note": "Sales start at 8 a.m. MDT. Fall hunts run Oct. 1, 2026 to Feb. 28, 2027.",
           "sourceId": "d-turkey-guide-2026-27"
         },
         {
@@ -749,7 +749,7 @@
           "end": "2026-12-29",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Opens 8 a.m. MDT Dec. 15, closes 11 p.m. MDT Dec. 29, 2026 (times as printed by UDWR). Residents and nonresidents.",
+          "note": "Opens 8 a.m. MDT Dec. 15 and closes 11 p.m. MDT Dec. 29, 2026. Open to residents and nonresidents.",
           "sourceId": "d-turkey-guide-2026-27"
         },
         {
@@ -758,7 +758,7 @@
           "date": "2026-12-29",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Deadline to withdraw or edit your application: Dec. 29, 11 p.m.",
+          "note": "You can edit or withdraw your application until 11 p.m. Dec. 29.",
           "sourceId": "d-turkey-guide-2026-27"
         },
         {
@@ -775,7 +775,7 @@
           "date": "2027-03-11",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Sale time not printed for remaining limited-entry permits.",
+          "note": "UDWR hasn't announced what time sales of remaining limited-entry permits start.",
           "sourceId": "d-turkey-guide-2026-27"
         },
         {
@@ -784,7 +784,7 @@
           "date": "2027-03-11",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "8 a.m. MDT.",
+          "note": "Sales start at 8 a.m. MDT.",
           "sourceId": "d-turkey-guide-2026-27"
         },
         {
@@ -795,7 +795,7 @@
           "end": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Opens 8 a.m. MDT Oct. 20, closes 11 p.m. MST Nov. 10, 2026 (also the withdrawal deadline). Utah residents only; one sportsman permit is offered for the species; $10 non-refundable application fee per species; no bonus points are earned or used in the sportsman drawing.",
+          "note": "Opens 8 a.m. MDT Oct. 20 and closes 11 p.m. MST Nov. 10, 2026, which is also the withdrawal deadline. Utah residents only. One sportsman permit is offered for each species. The application fee is $10 per species and is non-refundable. No bonus points are earned or used in the sportsman drawing.",
           "sourceId": "d-news-sportsman-2027"
         },
         {
@@ -805,7 +805,7 @@
           "date": "2026-11-10",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Withdraw an online application at no cost until 11 p.m. MST Nov. 10, 2026 (fees are not refunded).",
+          "note": "You can withdraw an online application until 11 p.m. MST Nov. 10, 2026. Withdrawing costs nothing extra, but the application fee is not refunded.",
           "sourceId": "d-sportsman-page-2027"
         },
         {
@@ -815,7 +815,7 @@
           "date": "2026-11-19",
           "cycle": 2027,
           "status": "confirmed",
-          "note": "Results by email on Thursday, Nov. 19, 2026.",
+          "note": "Results are emailed Thursday, Nov. 19, 2026.",
           "sourceId": "d-news-sportsman-2027"
         }
       ],

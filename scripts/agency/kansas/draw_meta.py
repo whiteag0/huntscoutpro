@@ -86,7 +86,7 @@ SOURCES = [
      "url": "https://www.ksoutdoors.gov/outdoor-activities/hunting-in-kansas/when-to-hunt", "dataYear": 2026, "retrieved": R},
 ]
 
-NOT_2027 = "2027 dates not yet published by KDWP as of 2026-10-31"
+NOT_2027 = "KDWP hasn't published 2027 dates yet. These are the 2026 dates."
 
 
 def kd(label, start, end, src, note=NOT_2027, cycle=2026):
@@ -112,7 +112,7 @@ SPECIES = [
                    "(Aug. 5-Dec. 31), in addition to any permit drawn.",
      "keyDates": [kd("Nonresident deer application period", "2026-04-01", "2026-04-24", "d-ks-fees-page"),
                   kd("Nonresident preference point purchase period", "2026-04-01", "2026-04-24", "d-ks-fees-page",
-                     note=NOT_2027 + "; points can only be bought during the application period")],
+                     note=NOT_2027 + " Points can only be bought during the application period.")],
      "sourceIds": ["d-ks-deer-page", "d-ks-deer-quotas-draw-stats-page", "d-ks-fees-page"]},
     {"species": "mule-deer", "displayName": "Mule deer (resident Either-Species/Either-Sex firearm permit; nonresident Mule Deer Stamp)",
      "drawSystem": "preference", "pointsMatter": True, "pointName": "preference point",

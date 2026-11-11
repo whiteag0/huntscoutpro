@@ -398,9 +398,9 @@ KEYDATE_TAGS = {
     "Nonresident and Unit 4 spring turkey application deadline": ("application", None),
 }
 OTC_DEER = {"label": "Over-the-counter deer permits on sale", "start": "2026-08-05", "end": "2026-12-31", "cycle": 2026, "status": "confirmed",
-            "note": "KDWP Deer page: resident any-season white-tailed, archery and muzzleloader either-species permits, and nonresident "
-                    "white-tailed antlerless-only (WAO) permits are available Aug. 5 - Dec. 31 (the page gives no sale window for resident WAO "
-                    "permits). 2027 dates not yet published by KDWP as of 2026-10-31.",
+            "note": "Resident any-season whitetail, archery and muzzleloader either-species permits, plus nonresident whitetail "
+                    "antlerless-only permits, are sold Aug. 5 to Dec. 31. KDWP doesn't list a sale window for resident whitetail "
+                    "antlerless-only permits. KDWP hasn't published 2027 dates yet. These are the 2026 dates.",
             "sourceId": "d-ks-deer-page"}
 # 2027 draw deadlines from K.A.R. 115-4-11 (tentative: KDWP hasn't announced 2027 dates). Calendar:
 # last Friday of April 2027 = Apr. 30; second Friday of June 2027 = Jun. 11; second Friday of
@@ -408,30 +408,24 @@ OTC_DEER = {"label": "Over-the-counter deer permits on sale", "start": "2026-08-
 # The rule states no weekend/holiday shift (all three are Fridays). Opening dates ("the earliest date that
 # applications are available") and results are not fixed by any rule and are not added.
 KAR = "d-ks-kar-115-4-11"
-KDWP_TAIL = "; KDWP hasn't announced the 2027 dates yet."
+KDWP_TAIL = " KDWP hasn't announced the 2027 dates yet."
 APR = "through the last Friday of April each year"
-B4 = ("Set by K.A.R. 115-4-11(b)(4) (\"Applications for nonresident limited-quota antlered deer permits shall be accepted in the Pratt "
-      "office from the earliest date that applications are available " + APR + ".\")" + KDWP_TAIL)
-B4P = ("Set by K.A.R. 115-4-11(b)(2)(E) and (b)(4) (a preference point is bought by \"submitting an application during the application "
-       "period specified in this regulation\"; nonresident deer applications are accepted \"" + APR + "\")" + KDWP_TAIL)
-B5 = ("Set by K.A.R. 115-4-11(b)(5) (\"Applications for resident firearms either species, either-sex permits shall be accepted at "
-      "designated locations from the earliest date that applications are available through the second Friday of June.\")" + KDWP_TAIL)
-B5P = ("Set by K.A.R. 115-4-11(b)(2)(E) and (b)(5) (a preference point is bought by \"submitting an application during the application "
-       "period specified in this regulation\"; resident firearms either-species, either-sex applications are accepted \"through the second "
-       "Friday of June\")" + KDWP_TAIL)
-C6 = ("Set by K.A.R. 115-4-11(c)(6) (\"Applications for resident permits shall be accepted in the Pratt office from the earliest date that "
-      "applications are available through the second Friday of June.\")" + KDWP_TAIL)
-C5 = ("Set by K.A.R. 115-4-11(c)(5) and (c)(6) (an antelope preference point is bought by \"submitting an application within the "
-      "application period outlined in this regulation\"; resident antelope applications are accepted \"through the second Friday of "
-      "June\")" + KDWP_TAIL)
-D3 = ("Set by K.A.R. 115-4-11(d)(3) (\"Applications for limited-quota antlerless-only elk permits and limited-quota either-sex elk permits "
-      "shall be accepted at designated locations from the earliest date that applications are available through the second Friday in "
-      "June.\")" + KDWP_TAIL)
-D3P = ("Set by K.A.R. 115-4-11(d)(1)(C)(iv) and (d)(3) (an elk bonus point is bought by \"submitting an application during the "
-       "application period specified in this regulation\"; limited-quota elk applications are accepted \"through the second Friday in "
-       "June\")" + KDWP_TAIL)
-E46 = ("Set by K.A.R. 115-4-11(e)(4) and (e)(6) (unit 4 and nonresident spring wild turkey applications are accepted \"until midnight on "
-       "the second Friday of February\")" + KDWP_TAIL)
+B4 = ("Based on Kansas regulations, nonresident limited-quota antlered deer applications are accepted " + APR + "." + KDWP_TAIL)
+B4P = ("Under Kansas regulations, you buy a preference point by submitting an application during the application period."
+       " Nonresident deer applications are accepted " + APR + "." + KDWP_TAIL)
+B5 = ("Based on Kansas regulations, resident firearm either-species, either-sex deer applications are accepted through the second "
+      "Friday of June each year." + KDWP_TAIL)
+B5P = ("Under Kansas regulations, you buy a preference point by submitting an application during the application period."
+       " Resident firearm either-species, either-sex deer applications are accepted through the second Friday of June." + KDWP_TAIL)
+C6 = ("Based on Kansas regulations, resident antelope applications are accepted through the second Friday of June each year." + KDWP_TAIL)
+C5 = ("Under Kansas regulations, you buy an antelope preference point by submitting an application during the application period."
+      " Resident antelope applications are accepted through the second Friday of June." + KDWP_TAIL)
+D3 = ("Based on Kansas regulations, limited-quota antlerless-only and either-sex elk applications are accepted through the second "
+      "Friday in June each year." + KDWP_TAIL)
+D3P = ("Under Kansas regulations, you buy an elk bonus point by submitting an application during the application period."
+       " Limited-quota elk applications are accepted through the second Friday in June." + KDWP_TAIL)
+E46 = ("Based on Kansas regulations, Unit 4 and nonresident spring turkey applications are accepted until midnight on the second "
+       "Friday of February each year." + KDWP_TAIL)
 
 
 def _k(label, date, note):
@@ -466,7 +460,8 @@ RULE_SOURCES = [
 ]
 EXTRA = {
     "turkey": [{"label": "Fall turkey permits go on sale (residents)", "date": "2026-10-01", "cycle": 2026, "status": "confirmed",
-                "note": "KDWP Turkey page: 'Permits will go on sale October 1, 2026.' Fall season reopened in 2026 for Kansas residents only (over the counter).",
+                "note": "Fall turkey permits go on sale October 1, 2026. The fall season reopened in 2026 for Kansas residents only, "
+                        "with permits sold over the counter.",
                 "sourceId": "d-ks-turkey-page"}],
     "whitetail": [OTC_DEER],
     "mule-deer": [OTC_DEER],

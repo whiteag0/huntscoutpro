@@ -20,8 +20,7 @@ REGS_PAGE = "https://myodfw.com/articles/oregon-fishing-hunting-regulations-and-
 REGS27 = "d-or-news-2027-regs-adopted"
 # REGS27 (ODFW news release, Sept. 18, 2026): "The Commission adopted the 2027 Big Game Regulations at their meeting in La Grande
 # today ... Printed regulations will be available in late November."
-NOTE27 = ("2027 dates not yet published by ODFW as of 2026-10-31. The Commission adopted the 2027 Big Game Regulations on "
-          "Sept. 18, 2026; the printed booklet is due in late November 2026.")
+NOTE27 = "ODFW hasn't published 2027 dates yet. These are the 2026 dates."
 
 # draw report sources (title as linked/printed by ODFW; url = XLSX parsed; PDF used for spot checks)
 NAMES = {"buck": "Buck Deer", "elk": "Elk", "pronghorn": "Pronghorn Antelope", "antlerless": "Antlerless Deer",
@@ -119,30 +118,29 @@ main_dates = [
     kd("Online application changes allowed through", "application-change", 2026, R26, date="2026-05-25"),
 ]
 point_saver = kd("Point Saver purchase period (after the draw)", "points", 2026, R26, start="2026-07-01", end="2026-11-30",
-                 note=("ODFW also sells Point Savers Dec. 1 - May 15 (with the draw application; ODFW preference points page, d-or-points: "
-                       "\"Points can be purchased Dec. 1-May 15 and from July 1-Nov. 30\"). " + NOTE27))
+                 note="ODFW also sells Point Savers Dec. 1 to May 15, alongside the draw application. " + NOTE27)
 leftover = kd("Leftover controlled tags on sale online (10 a.m. PT)", "leftover", 2026, R26, date="2026-07-01")
 
 # 2027 dates fixed by standing rule (OAR 635-060, read 2026-10-31). Tentative until ODFW publishes the 2027 booklet.
 # Results (booklet: June 12 in 2026, June 20 in 2022), the change deadline and leftover sales are not fixed by rule, so none are added;
 # 635-060-0009(2) only says other-species tag sales begin "no later than June 20", so no payment date is added for them either.
 app27 = kd("Controlled hunt application deadline", "application", 2027, OAR, date="2027-05-15", status="tentative",
-           note=("Set by OAR 635-060-0008(2) (\"The application deadline for pronghorn antelope, bighorn sheep, Rocky Mountain goat, "
-                 "deer and elk controlled hunts is May 15, each year.\"; 635-060-0005(5): \"no later than midnight of the deadline "
-                 "dates\"); " + NOTE_OAR + " May 15, 2027 is a Saturday; the rule has no weekend shift."))
+           note=("Based on ODFW's standing rule, controlled hunt applications for deer, elk, pronghorn, bighorn sheep and mountain "
+                 "goat are due May 15 each year. Applications must be in by midnight on the deadline date. ODFW hasn't announced "
+                 "the 2027 date yet. May 15, 2027 falls on a Saturday. The deadline does not move for weekends."))
 point_saver27 = kd("Point Saver purchase period (after the draw)", "points", 2027, OAR, start="2027-07-01", end="2027-11-30",
                    status="tentative",
-                   note=("Set by OAR 635-060-0023(12)(a) (\"a hunter may purchase one preference point for the current year, for each "
-                         "series (100, 200, 400, 600, and 700) from July 1 through November 30 if they did not apply during the "
-                         "controlled hunt drawing for that series\"); " + NOTE_OAR))
+                   note=("Based on ODFW's standing rule, if you didn't apply in the controlled hunt draw for a series (100, 200, "
+                         "400, 600 or 700), you can buy one preference point for that series for the current year, July 1 through "
+                         "November 30. " + NOTE_OAR))
 bear27 = [
     kd("Spring bear controlled hunt application deadline", "application", 2027, OAR, date="2027-02-10", status="tentative",
-       note=("Set by OAR 635-060-0008(1) (\"The application deadline for spring black bear controlled hunts is February 10, each "
-             "year.\"; 635-060-0005(5): \"no later than midnight of the deadline dates\"); " + NOTE_OAR)),
+       note=("Based on ODFW's standing rule, spring black bear controlled hunt applications are due February 10 each year. "
+             "Applications must be in by midnight on the deadline date. " + NOTE_OAR)),
     kd("Spring bear controlled tag sales begin (successful applicants)", "payment", 2027, OAR, date="2027-02-20", status="tentative",
-       note=("Set by OAR 635-060-0009(1) (\"Spring black bear controlled hunts tag sales begin February 20, each year and end at "
-             "11:59 pm, Pacific Time, the day before the season start date for which the tag is valid.\"); " + NOTE_OAR +
-             " The end date depends on the 2027 season opener, which is not yet published.")),
+       note=("Based on ODFW's standing rule, spring bear controlled tag sales open February 20 each year and close at 11:59 p.m. "
+             "PT the day before the tag's season opens. " + NOTE_OAR +
+             " Sales close the day before the 2027 season opener, which isn't published yet.")),
 ]
 
 NR_DEER_ELK = ("A maximum of 5% of tags in controlled deer, elk and bear hunts can go to nonresidents; nonresidents get no preference "

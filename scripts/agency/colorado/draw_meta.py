@@ -13,7 +13,7 @@ import sys
 
 RET = "2026-10-31"
 PUB = "Colorado Parks and Wildlife"
-NOT_2027 = "2027 dates not yet published by Colorado Parks and Wildlife as of 2026-10-31; these are the 2026 dates."
+NOT_2027 = "CPW hasn't published 2027 dates yet. These are the 2026 dates."
 
 BG = "d-brochure-biggame-2026"
 SG = "d-brochure-sheepgoat-2026"
@@ -178,7 +178,7 @@ SPECIES = [
      "nonresidentNote": "Nonresident license $845.16.",
      "otcSummary": "Annual licenses went on sale March 25, 2026; season Nov. 23, 2026–March 31, 2027 (no April season in 2027); one lion per license year.",
      "keyDates": [window("Annual mountain lion licenses on sale", "2026-03-25", "2026-03-25", 2026, LN,
-                         "2026–27 license year; the 2027–28 brochure was not yet published by Colorado Parks and Wildlife as of 2026-10-31.",
+                         "These dates are for the 2026–27 license year. CPW hasn't published 2027–28 dates yet.",
                          kind="license-sale")],
      "sourceIds": [LN]},
     {"species": "turkey", "displayName": "Wild turkey (spring & fall)", "drawSystem": "preference", "pointsMatter": True, "pointName": "preference point",

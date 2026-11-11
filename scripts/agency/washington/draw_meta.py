@@ -33,7 +33,6 @@ _spec.loader.exec_module(seasons_ranges)
 R = "2026-10-31"
 P26 = "d-pamphlet-2026"
 FEES = "d-fees-2026"
-NOT_2027 = "2027 dates not yet published by WDFW as of 2026-10-31."
 
 
 def extra_sources():
@@ -94,32 +93,33 @@ SPECIAL_SUMMARY = ("WDFW issues special hunt permits through a weighted-point dr
                    "category (two in Quality deer and elk).")
 APP_2027 = {"label": "2027 special hunt permit applications go on sale", "kind": "application", "date": "2026-12-01", "cycle": 2027,
             "status": "confirmed", "sourceId": "d-mywdfw",
-            "note": "myWDFW: 'Applications for 2027 will be available starting on Dec. 1, 2026.' The 2027 submission window is not yet published."}
+            "note": "WDFW says 2027 applications will be available starting December 1, 2026. The 2027 submission window hasn't been published yet."}
 SUBMIT_2026 = {"label": "Special permit application submission period (deer, elk, mountain goat, moose, bighorn sheep, turkey)",
                "kind": "application", "start": "2026-04-20", "end": "2026-05-27", "cycle": 2026, "status": "confirmed",
                "sourceId": "d-news-submit-2026",
-               "note": "The 2026 pamphlet printed April 20 - midnight May 20, 2026; on May 14 WDFW extended submission by one week "
-                       "to May 27, 2026 because printed pamphlets shipped late (also on myWDFW: 'Submit applications by May 27'). "
-                       "Results posted in June (no exact date published). " + NOT_2027}
+               "note": "The 2026 submission window originally ran April 20 to midnight May 20, 2026. On May 14, WDFW extended the 2026 "
+                       "deadline one week to May 27 because printed pamphlets shipped late. Results were posted in June, with no exact "
+                       "date announced. WDFW hasn't published 2027 dates yet, so these are the 2026 dates."}
 MS_2027 = [
     {"label": "2027 multi-season tag applications on sale", "kind": "application", "start": "2026-12-01", "end": "2027-03-31", "cycle": 2027,
      "status": "confirmed", "sourceId": P26,
-     "note": "Drawing results posted in April 2027 (no exact date published); 8,500 deer and 1,000 elk multi-season tags. "
-             "myWDFW (re-checked 2026-10-31) gives the same window."},
+     "note": "Drawing results will be posted in April 2027. WDFW hasn't published an exact date. "
+             "WDFW offers 8,500 deer and 1,000 elk multi-season tags for 2027."},
     {"label": "Deadline to buy a drawn 2027 multi-season tag", "kind": "payment", "date": "2027-07-31", "cycle": 2027, "status": "confirmed",
-     "sourceId": P26, "note": "Midnight July 31, 2027."},
+     "sourceId": P26, "note": "Buy your tag by midnight July 31, 2027."},
 ]
 OIL_LICENSE = {"label": "Deadline to pay for a drawn moose, sheep or goat license", "kind": "payment", "date": "2026-07-31", "cycle": 2026,
                "status": "confirmed", "sourceId": P26,
-               "note": "Pamphlet p. 18 gives July 31 of each year; the species pages say 'by the deadline established by the Department (15 day minimum)'. " + NOT_2027}
+               "note": "WDFW's standing rule sets the payment deadline at July 31 each year. WDFW may instead set its own deadline, "
+                       "with at least 15 days to pay. WDFW hasn't published 2027 dates yet, so this is the 2026 date."}
 
 SURPLUS_MS = {
     "elk": {"label": "Surplus 2026 multi-season elk tags on sale (10 a.m., first come, first served)", "kind": "leftover", "date": "2026-08-25",
             "cycle": 2026, "status": "confirmed", "sourceId": "d-news-surplus-ms-2026",
-            "note": "Only for hunters who bought a 2026 multi-season application; 187 tags; in person at WDFW offices and license dealers."},
+            "note": "Only for hunters who bought a 2026 multi-season application. 187 surplus tags were offered. Sold in person at WDFW offices and license dealers."},
     "deer": {"label": "Surplus 2026 multi-season deer tags on sale (10 a.m., first come, first served)", "kind": "leftover", "date": "2026-08-27",
              "cycle": 2026, "status": "confirmed", "sourceId": "d-news-surplus-ms-2026",
-             "note": "Only for hunters who bought a 2026 multi-season application; 3,137 tags; online, by phone or in person."},
+             "note": "Only for hunters who bought a 2026 multi-season application. 3,137 surplus tags were offered. Sold online, by phone or in person."},
 }
 
 DEER_RES = "Residents and nonresidents enter the same drawing; WDFW publishes one combined count per hunt (no resident/nonresident split)."
