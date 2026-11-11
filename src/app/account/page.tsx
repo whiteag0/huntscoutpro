@@ -62,7 +62,8 @@ function labelFor(options: readonly { id: string; label: string }[], id: string)
 function preferenceRows(p: HuntingPreferences | null): { label: string; value: string }[] {
   if (!p) return [];
   const rows: { label: string; value: string }[] = [];
-  if (p.states.length) rows.push({ label: "States", value: p.states.map(stateName).join(", ") });
+  if (p.states.length)
+    rows.push({ label: "States", value: p.states.map((s, i) => (i === 0 && p.states.length > 1 ? `${stateName(s)} (top)` : stateName(s))).join(", ") });
   if (p.species.length)
     rows.push({ label: "Species", value: p.species.map((id) => SPECIES_LABELS[id as Species] ?? id).join(", ") });
   if (p.methods.length)
@@ -71,7 +72,7 @@ function preferenceRows(p: HuntingPreferences | null): { label: string; value: s
   if (applying) rows.push({ label: "Applying as", value: applying });
   if (p.goals.length) rows.push({ label: "Goals", value: p.goals.map((id) => labelFor(GOAL_OPTIONS, id)).join(", ") });
   if (p.units) rows.push({ label: "Units", value: p.units });
-  if (p.points) rows.push({ label: "Points", value: p.points });
+  if (p.points) rows.push({ label: "Hunts to apply for", value: p.points });
   if (p.notes) rows.push({ label: "Notes", value: p.notes });
   return rows;
 }

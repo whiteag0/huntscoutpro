@@ -18,6 +18,8 @@ export interface ReminderMember {
   residency: "resident" | "nonresident" | "both" | "";
   /** Two-letter home state, e.g. "CO"; "" when unknown. */
   homeState: string;
+  /** Methods of take (rifle, archery, muzzleloader, shotgun); empty or missing means every method. */
+  methods?: string[];
 }
 
 /** The parts of a state's agency data reminders need (StateData from src/lib/agency.ts fits). */
@@ -98,6 +100,36 @@ export function memberResidencyIn(member: Pick<ReminderMember, "residency" | "ho
   return member.residency === "resident" || member.residency === "nonresident" ? member.residency : "both";
 }
 
+// Weapon words in key-date labels: "archery" alone is archery; "firearm(s)", rifle, muzzleloader and
+// shotgun are the firearm seasons. A "rifle or archery" member keeps every label.
+const ARCHERY_WORD = /\b(?:archery|bow(?:hunt\w*)?)\b/i;
+const FIREARM_WORD = /\b(?:firearms?|rifle|muzzleloader|shotgun)\b/i;
+const FIREARM_METHODS = ["rifle", "muzzleloader", "shotgun"];
+
+/**
+ * Which methods a key-date label is limited to, if it says so: "archery", "firearm" or "any".
+ * A label that lists the weapon season with others ("Antelope, Antelope B and archery antelope",
+ * "West River, ..., Muzzleloader and Refuge deer") covers everyone. Parenthetical asides
+ * ("(public/private land, ADNP-ST1)") are ignored for that test.
+ */
+export function labelMethod(label: string): "archery" | "firearm" | "any" {
+  const bare = label.replace(/\([^)]*\)/g, " ");
+  const archery = ARCHERY_WORD.test(bare);
+  const firearm = FIREARM_WORD.test(bare);
+  if (archery === firearm) return "any";
+  if (/,|\band\b|&/i.test(bare)) return "any";
+  return archery ? "archery" : "firearm";
+}
+
+/** Whether a key date limited to one weapon (per its label) applies to someone hunting with `methods`. */
+export function labelFitsMethods(label: string, methods: readonly string[] | undefined): boolean {
+  if (!methods || methods.length === 0) return true;
+  const only = labelMethod(label);
+  if (only === "archery") return methods.includes("archery");
+  if (only === "firearm") return methods.some((m) => FIREARM_METHODS.includes(m));
+  return true;
+}
+
 /** The window end or the single date. A start-only date has no deadline to remind about. */
 export function keyEnd(k: KeyDate): string {
   return k.end || k.date || "";
@@ -141,6 +173,7 @@ function openKeyDates(member: ReminderMember, st: ReminderState, today: string) 
     if (wanted.size > 0 && !wanted.has(info.species)) continue;
     for (const k of info.keyDates) {
       if (!ACTIONABLE_LABEL.test(k.label) || isNotificationLabel(k.label)) continue;
+      if (!labelFitsMethods(k.label, member.methods)) continue;
       const end = openKeyDateEnd(k, residency, today);
       if (!end) continue;
       out.push({ species: info.species, k, end });

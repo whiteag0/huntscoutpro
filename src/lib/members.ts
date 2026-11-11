@@ -107,6 +107,7 @@ export async function listMembersWithPreferences(
       name: s.metadata?.userName || s.customer_details?.name || null,
       states: prefs.states,
       species: prefs.species,
+      methods: prefs.methods,
       residency: prefs.residency,
       homeState: prefs.homeState,
       paymentIntentId: pi.id,
